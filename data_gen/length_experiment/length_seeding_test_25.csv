@@ -1,0 +1,128 @@
+table_info,nl,sql,actual_sql,ans,example_length
+"{'header': ['Aircraft', 'Description', 'Max Gross Weight', 'Total disk area', 'Max disk Loading'], 'page_title': 'Disk loading', 'types': ['text', 'text', 'text', 'text', 'text'], 'id': 'table_1_10006830_1', 'section_title': 'Examples', 'caption': 'Disk loading comparison', 'rows': [['Robinson R-22', 'Light utility helicopter', '1,370 lb (635 kg)', '497 ft² (46.2 m²)', '2.6 lb/ft² (14 kg/m²)'], ['Bell 206B3 JetRanger', 'Turboshaft utility helicopter', '3,200 lb (1,451 kg)', '872 ft² (81.1 m²)', '3.7 lb/ft² (18 kg/m²)'], ['CH-47D Chinook', 'Tandem rotor helicopter', '50,000 lb (22,680 kg)', '5,655 ft² (526 m²)', '8.8 lb/ft² (43 kg/m²)'], ['Mil Mi-26', 'Heavy-lift helicopter', '123,500 lb (56,000 kg)', '8,495 ft² (789 m²)', '14.5 lb/ft² (71 kg/m²)'], ['CH-53E Super Stallion', 'Heavy-lift helicopter', '73,500 lb (33,300 kg)', '4,900 ft² (460 m²)', '15 lb/ft² (72 kg/m²)']], 'name': 'table_1_10006830_1'}","
+    Which aircraft have the highest disk loading, including their maximum gross weight, total disk area, and disk loading?
+    ","
+SELECT `Aircraft`, `Max Gross Weight`, `Total disk area`, `Max disk Loading`
+FROM table_1_10006830_1
+WHERE `Max disk Loading` = (
+    SELECT MAX(`Max disk Loading`)
+    FROM table_1_10006830_1
+)
+ORDER BY `Max Gross Weight` DESC;
+","
+SELECT col0, col2, col3, col4
+FROM table_1_10006830_1
+WHERE col4 = (
+    SELECT MAX(col4)
+    FROM table_1_10006830_1
+)
+ORDER BY col2 DESC;
+","[('ch-47d chinook', '50,000 lb (22,680 kg)', '5,655 ft² (526 m²)', '8.8 lb/ft² (43 kg/m²)')]",8
+"{'header': ['Player', 'No.', 'Nationality', 'Position', 'Years in Toronto', 'School/Club Team'], 'page_title': 'Toronto Raptors all-time roster', 'types': ['text', 'text', 'text', 'text', 'text', 'text'], 'id': 'table_1_10015132_1', 'section_title': 'A', 'caption': 'A', 'rows': [['Quincy Acy', '4', 'United States', 'Forward', '2012-present', 'Baylor'], ['Hassan Adams', '3', 'United States', 'Guard-Forward', '2008-09', 'Arizona'], ['Alexis Ajinça', '42', 'France', 'Center', '2011', 'Hyères-Toulon ( France )'], ['Solomon Alabi', '50', 'Nigeria', 'Center', '2010-2012', 'Florida State'], ['Rafer Alston', '11, 12', 'United States', 'Guard', '2002-03, 2004-05', 'Fresno State'], ['David Andersen', '13', 'Australia', 'Center', '2010', 'Virtus Bologna ( Italy )'], ['Alan Anderson', '6', 'United States', 'Guard-Forward', '2012-2013', 'Michigan State'], ['Willie Anderson', '40', 'United States', 'Guard-Forward', '1995-96', 'Georgia'], ['Rafael Araújo', '55', 'Brazil', 'Center', '2004-06', 'BYU'], ['Robert Archibald', '34', 'Scotland', 'Center', '2004', 'Illinois'], ['Carlos Arroyo', '21', 'Puerto Rico', 'Guard', '2001', 'Florida International']], 'name': 'table_1_10015132_1'}","
+    How many players are there in each position category, and how many have recently left for the years 2010-2012?
+    ","
+    SELECT `Position`, COUNT(*) AS PlayerCount, SUM(CASE WHEN `Years in Toronto` = '2010-2012' THEN 1 ELSE 0 END) AS RecentDepartures 
+    FROM `table_1_10015132_1` 
+    GROUP BY `Position` 
+    ORDER BY RecentDepartures DESC, PlayerCount DESC;  
+    ","
+    SELECT col3, COUNT(*) AS PlayerCount, SUM(CASE WHEN col4 = '2010-2012' THEN 1 ELSE 0 END) AS RecentDepartures 
+    FROM `table_1_10015132_1` 
+    GROUP BY col3 
+    ORDER BY RecentDepartures DESC, PlayerCount DESC;  
+    ","[('center', 5, 1), ('guard-forward', 3, 0), ('guard', 2, 0), ('forward', 1, 0)]",16
+"{'header': ['Year', 'Tournaments played', 'Cuts made*', 'Wins', '2nd', 'Top 10s', 'Best finish', 'Earnings ($)', 'Money list rank', 'Scoring average', 'Scoring rank'], 'page_title': 'Meaghan Francella', 'types': ['real', 'real', 'real', 'real', 'real', 'real', 'text', 'real', 'text', 'text', 'text'], 'id': 'table_1_10021158_3', 'section_title': 'LPGA Tour career summary', 'caption': 'LPGA Tour career summary', 'rows': [[2005, 1, 1, 0, 0, 0, 'T69', 2525, 'n/a', '75.00', 'n/a'], [2006, 3, 1, 0, 0, 0, 'T39', 55554, '183', '73.75', 'n/a'], [2007, 25, 18, 1, 0, 4, '1', 507292, '29', '73.09', '66'], [2008, 24, 11, 0, 0, 0, 'T13', 117682, '88', '73.75', '131'], [2009, 22, 16, 0, 0, 2, 'T5', 292266, '48', '72.51', '63'], [2010, 21, 17, 0, 0, 1, 'T7', 168016, '57', '73.04', '77'], [2011, 15, 8, 0, 0, 0, 'T22', 66813, '84', '74.23', '117'], [2012, 15, 4, 0, 0, 0, 'T24', 28935, '116', '74.37', '121']], 'name': 'table_1_10021158_3'}","
+     What were the average earnings for seasons where Meaghan Francella achieved at least one win, finished in second place, or reached the top ten?
+     ","
+SELECT `Year`, `Tournaments played`, `Cuts made*`, AVG(`Earnings ($)`) AS Average_Earnings
+FROM `table_1_10021158_3` t1
+WHERE `Wins` > 0 OR `2nd` > 0 OR `Top 10s` > 0
+GROUP BY `Year`
+ORDER BY `Year` DESC;
+","
+SELECT col0, col1, col2, AVG(col7) AS Average_Earnings
+FROM `table_1_10021158_3` t1
+WHERE col3 > 0 OR col4 > 0 OR col5 > 0
+GROUP BY col0
+ORDER BY col0 DESC;
+","[(2010.0, 21.0, 17.0, 168016.0), (2009.0, 22.0, 16.0, 292266.0), (2007.0, 25.0, 18.0, 507292.0)]",12
+"{'header': ['Player', 'Years Played', 'Total W-L', 'Singles W-L', 'Doubles W-L'], 'page_title': 'South Korea Davis Cup team', 'types': ['text', 'text', 'text', 'text', 'text'], 'id': 'table_1_10023387_1', 'section_title': 'Squad members', 'caption': 'Squad members', 'rows': [['Cho Soong-Jae (630)', '1 (2011)', '2–0', '1–0', '1–0'], ['Chung Hong (717)', '1 (2011)', '0–0', '0–0', '0–0'], ['Im Kyu-tae (492)', '8 (2003–2005, 2007–2011)', '6–9', '5–7', '1–2'], ['Jeong Suk-Young (793)', '2 (2010–2011)', '1–2', '1–2', '0–0'], ['Kim Hyun-Joon (908)', '2 (2010–2011)', '3–4', '2–1', '1–3'], ['Kim Young-Jun (474)', '4 (2003–2004, 2010–2011)', '6–4', '6–3', '0–1'], ['Lim Yong-Kyu (288)', '3 (2009–2011)', '7–6', '5–6', '2–0'], ['Seol Jae-Min (none)', '2 (2010-2011)', '2–2', '0–0', '2–2'], ['An Jae-Sung', '3 (2005, 2007–2008)', '4–3', '3–2', '1–1'], ['Bae Nam-Ju', '2 (1988, 1990)', '1–3', '0–2', '1–1'], ['Baek Se-Hyun', '1 (1965)', '0–1', '0–1', '0–0'], ['Baek Seung-Bok', '2 (2001–2002)', '0–4', '0–3', '0–1'], ['Chang Eui-jong', '6 (1991–1996)', '13–11', '8–7', '5–4'], ['Choi Boo-Kil', '4 (1974–1977)', '2–4', '2–1', '0–3'], ['Chung Hee-seok', '5 (2002–2006)', '14–8', '7–3', '7–5'], ['Chung Hee-Sung', '3 (2000, 2002–2003)', '2–3', '0–1', '2–2'], ['Chung Yong-Ho', '8 (1962, 1965, 1968–1969, 1971–1974)', '1–18', '1–11', '0–7'], ['Im Chung-Yang', '4 (1964–1967)', '2–9', '2–5', '0–4'], ['Jeon Chang-Dae', '3 (1979–1981)', '5–5', '5–4', '0–1'], ['Jeon Young-Dai', '7 (1979–1983, 1985–1986)', '14–10', '11–4', '3–6'], ['Ji Seung-Ho', '2 (1991–1992)', '3–3', '2–2', '1–1'], ['Ju Chang-Nam', '4 (1975–1978)', '4–8', '2–5', '2–3'], ['Jun Woong-sun', '5 (2004–2008)', '12–8', '9–5', '3–3'], ['Kim Bong-Soo', '7 (1984–1990)', '18–9', '13–8', '5–1'], ['Kim Bong-Suk', '5 (1977–1981)', '2–6', '1–3', '1–3'], ['Kim Chi-Wan', '4 (1992–1995)', '6–4', '1–1', '5–3'], ['Kim Choon-Ho', '6 (1979–1984)', '8–11', '7–8', '1–3'], ['Kim Dong-Hyun', '7 (1997–1999, 2001–2003, 2005)', '5–7', '3–4', '2–3'], ['Kim Doo-Hwan', '8 (1962–1967, 1969, 1971)', '2–15', '2–11', '0–4'], ['Kim Jae-Sik', '3 (1989–1990, 1992)', '5–4', '4–2', '1–2'], ['Kim Ke-Hwan', '1 (1960)', '0–1', '0–0', '0–1'], ['Kim Moon-Il', '6 (1968, 1972–1975, 1977)', '3–13', '2–8', '1–5'], ['Kim Nam-Hoon', '1 (1998)', '1–0', '0–0', '0–1'], ['Kim Sun-Yong', '2 (2005, 2007)', '3–1', '3–1', '0–0'], ['Kim Sung-Bae', '5 (1971–1975)', '4–8', '4–6', '0–2'], ['Kwon Oh-Hee', '3 (2002, 2005–2006)', '3–1', '1–0', '2–1'], ['Lee Ek-Son', '1 (1968)', '0–1', '0–1', '0–0'], ['Lee Hyung-taik', '14 (1995–2002, 2004–2009)', '51–23', '41–9', '10–14'], ['Lee Jeong-Min', '1 (1996)', '0–1', '0–0', '0–1'], ['Lee Sang-Yoon', '3 (1960, 1962–1963)', '0–8', '0–5', '0–3'], ['Lee Tong-Won', '1 (1962)', '0–1', '0–1', '0–0'], ['Lee Woo-Ryong', '2 (1981, 1983)', '1–3', '0–3', '1–0'], ['Lee Seung-Hoon', '2 (2000–2001)', '0–3', '0–3', '0–0'], ['Nam Hyun-Woo', '1 (2004)', '1–0', '1–0', '0–0'], ['Park Do-Sung', '1 (1963)', '0–1', '0–0', '0–1'], ['Roh Gap-Taik', '3 (1985–1986, 1988)', '7–1', '7–1', '0–0'], ['Shin Han-Cheol', '3 (1992–1994)', '3–7', '2–7', '1–0'], ['Song Dong-Wook', '8 (1981–1984, 1986–1989)', '13–12', '7–7', '6–5'], ['Song Hyeong-Keun', '1 (1999)', '0–2', '0–2', '0–0'], ['Suk Hyun-Jun', '1 (2005)', '0–2', '0–2', '0–0'], ['Um Hwa-Yong', '1 (1960)', '0–2', '0–2', '0–0'], ['Yoo Jin-Sun', '7 (1984–1990)', '18–11', '8–5', '10–6']], 'name': 'table_1_10023387_1'}","
+    Which players have won more singles matches and doubles matches combined?
+    ","
+    SELECT `Player`, `Years Played`, SUM(CASE WHEN `Singles W-L` LIKE '%-%' THEN 1 ELSE 0 END) AS Singles_Win_Loss_Count, SUM(CASE WHEN `Doubles W-L` LIKE '%-%' THEN 1 ELSE 0 END) AS Doubles_Win_Loss_Count
+    FROM table_1_10023387_1
+    GROUP BY `Player`
+    ORDER BY Singles_Win_Loss_Count + Doubles_Win_Loss_Count DESC;
+    ","
+    SELECT col0, col1, SUM(CASE WHEN col3 LIKE '%-%' THEN 1 ELSE 0 END) AS Singles_Win_Loss_Count, SUM(CASE WHEN col4 LIKE '%-%' THEN 1 ELSE 0 END) AS Doubles_Win_Loss_Count
+    FROM table_1_10023387_1
+    GROUP BY col0
+    ORDER BY Singles_Win_Loss_Count + Doubles_Win_Loss_Count DESC;
+    ","[('yoo jin-sun', '7 (1984–1990)', 0, 0), ('um hwa-yong', '1 (1960)', 0, 0), ('suk hyun-jun', '1 (2005)', 0, 0), ('song hyeong-keun', '1 (1999)', 0, 0), ('song dong-wook', '8 (1981–1984, 1986–1989)', 0, 0), ('shin han-cheol', '3 (1992–1994)', 0, 0), ('seol jae-min (none)', '2 (2010-2011)', 0, 0), ('roh gap-taik', '3 (1985–1986, 1988)', 0, 0), ('park do-sung', '1 (1963)', 0, 0), ('nam hyun-woo', '1 (2004)', 0, 0), ('lim yong-kyu (288)', '3 (2009–2011)', 0, 0), ('lee woo-ryong', '2 (1981, 1983)', 0, 0), ('lee tong-won', '1 (1962)', 0, 0), ('lee seung-hoon', '2 (2000–2001)', 0, 0), ('lee sang-yoon', '3 (1960, 1962–1963)', 0, 0), ('lee jeong-min', '1 (1996)', 0, 0), ('lee hyung-taik', '14 (1995–2002, 2004–2009)', 0, 0), ('lee ek-son', '1 (1968)', 0, 0), ('kwon oh-hee', '3 (2002, 2005–2006)', 0, 0), ('kim young-jun (474)', '4 (2003–2004, 2010–2011)', 0, 0), ('kim sung-bae', '5 (1971–1975)', 0, 0), ('kim sun-yong', '2 (2005, 2007)', 0, 0), ('kim nam-hoon', '1 (1998)', 0, 0), ('kim moon-il', '6 (1968, 1972–1975, 1977)', 0, 0), ('kim ke-hwan', '1 (1960)', 0, 0), ('kim jae-sik', '3 (1989–1990, 1992)', 0, 0), ('kim hyun-joon (908)', '2 (2010–2011)', 0, 0), ('kim doo-hwan', '8 (1962–1967, 1969, 1971)', 0, 0), ('kim dong-hyun', '7 (1997–1999, 2001–2003, 2005)', 0, 0), ('kim choon-ho', '6 (1979–1984)', 0, 0), ('kim chi-wan', '4 (1992–1995)', 0, 0), ('kim bong-suk', '5 (1977–1981)', 0, 0), ('kim bong-soo', '7 (1984–1990)', 0, 0), ('jun woong-sun', '5 (2004–2008)', 0, 0), ('ju chang-nam', '4 (1975–1978)', 0, 0), ('ji seung-ho', '2 (1991–1992)', 0, 0), ('jeong suk-young (793)', '2 (2010–2011)', 0, 0), ('jeon young-dai', '7 (1979–1983, 1985–1986)', 0, 0), ('jeon chang-dae', '3 (1979–1981)', 0, 0), ('im kyu-tae (492)', '8 (2003–2005, 2007–2011)', 0, 0), ('im chung-yang', '4 (1964–1967)', 0, 0), ('chung yong-ho', '8 (1962, 1965, 1968–1969, 1971–1974)', 0, 0), ('chung hong (717)', '1 (2011)', 0, 0), ('chung hee-sung', '3 (2000, 2002–2003)', 0, 0), ('chung hee-seok', '5 (2002–2006)', 0, 0), ('choi boo-kil', '4 (1974–1977)', 0, 0), ('cho soong-jae (630)', '1 (2011)', 0, 0), ('chang eui-jong', '6 (1991–1996)', 0, 0), ('baek seung-bok', '2 (2001–2002)', 0, 0), ('baek se-hyun', '1 (1965)', 0, 0), ('bae nam-ju', '2 (1988, 1990)', 0, 0), ('an jae-sung', '3 (2005, 2007–2008)', 0, 0)]",13
+"{'header': ['Member', 'Headquarters', 'Classification', 'Chapters', 'Founded', 'UCCFS'], 'page_title': 'United Council of Christian Fraternities & Sororities', 'types': ['text', 'text', 'text', 'real', 'text', 'real'], 'id': 'table_1_10054296_1', 'section_title': 'Members', 'caption': 'Members', 'rows': [['Alpha Nu Omega', 'Baltimore, Maryland', 'Fraternity & Sorority', 26, '1988 at Morgan State University', 2006], ['Men of God', 'San Antonio, Texas', 'Fraternity', 5, '1999 at Texas Tech University', 2006], ['Delta Psi Epsilon', 'Washington, D.C.', 'Sorority', 12, '1999 in Huntsville, Alabama', 2006], ['Zeta Phi Zeta', 'Chicago, Illinois', 'Fraternity & Sorority', 7, '2001 at X-STREAM TEENS Ministries', 2007], ['Gamma Phi Delta', 'Austin, Texas', 'Fraternity', 16, '1988 at The University of Texas at Austin', 2011]], 'name': 'table_1_10054296_1'}","
+    What is the oldest founded organization and its classification, along with the count of chapters for each classification?
+    ","
+    SELECT `Classification`, COUNT(`Chapters`) AS ChapterCount, MAX(`Founded`) AS OldestFounded, MIN(`Founded`) AS NewestFounded
+    FROM `table_1_10054296_1`
+    GROUP BY `Classification`
+    ORDER BY `OldestFounded` DESC
+    LIMIT 1;
+    ","
+    SELECT col2, COUNT(col3) AS ChapterCount, MAX(col4) AS OldestFounded, MIN(col4) AS NewestFounded
+    FROM `table_1_10054296_1`
+    GROUP BY col2
+    ORDER BY `OldestFounded` DESC
+    LIMIT 1;
+    ","[('fraternity & sorority', 2, '2001 at x-stream teens ministries', '1988 at morgan state university')]",12
+"{'id': 'table_1_1008653_9', 'header': ['Country ( exonym )', 'Capital ( exonym )', 'Country ( endonym )', 'Capital ( endonym )', 'Official or native language(s) (alphabet/script)'], 'types': ['text', 'text', 'text', 'text', 'text'], 'rows': [['Iceland', 'Reykjavík', 'Ísland', 'Reykjavík', 'Icelandic'], ['Indonesia', 'Jakarta', 'Indonesia', 'Jakarta', 'Bahasa Indonesia'], ['Iran', 'Tehran', 'Īrān ایران', 'Tehrān تهران', 'Persian ( Arabic script )'], ['Iraq', 'Baghdad', ""Al-'Iraq العراق Îraq"", 'Baghdad بغداد Bexda', 'Arabic ( Arabic script ) Kurdish'], ['Ireland', 'Dublin', 'Éire Ireland', 'Baile Átha Cliath Dublin', 'Irish English'], ['Isle of Man', 'Douglas', 'Isle of Man Ellan Vannin', 'Douglas Doolish', 'English Manx']], 'name': 'table_1_1008653_9'}","
+Which countries have both their official or native language exonym and endonym capital cities listed?
+","
+SELECT 
+    `Country ( exonym )`, 
+    `Capital ( exonym )`, 
+    `Country ( endonym )`, 
+    `Capital ( endonym )`, 
+    `Official or native language(s) (alphabet/script)` 
+FROM 
+    `table_1_1008653_9`
+WHERE 
+    `Country ( exonym )` IS NOT NULL 
+    AND `Capital ( exonym )` IS NOT NULL 
+    AND `Country ( endonym )` IS NOT NULL 
+    AND `Capital ( endonym )` IS NOT NULL
+","
+SELECT 
+    col0, 
+    col1, 
+    col2, 
+    col3, 
+    col4 
+FROM 
+    `table_1_1008653_9`
+WHERE 
+    col0 IS NOT NULL 
+    AND col1 IS NOT NULL 
+    AND col2 IS NOT NULL 
+    AND col3 IS NOT NULL
+","[('iceland', 'reykjavík', 'ísland', 'reykjavík', 'icelandic'), ('indonesia', 'jakarta', 'indonesia', 'jakarta', 'bahasa indonesia'), ('iran', 'tehran', 'īrān ایران', 'tehrān تهران', 'persian ( arabic script )'), ('iraq', 'baghdad', ""al-'iraq العراق îraq"", 'baghdad بغداد bexda', 'arabic ( arabic script ) kurdish'), ('ireland', 'dublin', 'éire ireland', 'baile átha cliath dublin', 'irish english'), ('isle of man', 'douglas', 'isle of man ellan vannin', 'douglas doolish', 'english manx')]",11
+"{'header': ['County', 'English name', 'Irish name', 'Population', 'Irish speakers'], 'page_title': 'Gaeltacht', 'types': ['text', 'text', 'text', 'real', 'text'], 'id': 'table_1_101196_1', 'section_title': 'Habitual Irish speakers', 'caption': 'Habitual Irish speakers', 'rows': [['County Donegal', 'Altnapeaste', 'Alt na Péiste', 188, '55%'], ['County Donegal', 'Annagry', 'Anagaire', 2235, '55%'], ['County Donegal', 'Arranmore', 'Árainn Mhór', 529, '62%'], ['County Donegal', 'Crovehy', 'Cró Beithe', 161, '53%'], ['County Donegal', 'Cloghan', 'An Clochán', 514, '41%'], ['County Donegal', 'Bloody Foreland', 'Cnoc Fola', 1326, '83%'], ['County Donegal', 'Dunlewey', 'Dún Lúiche', 695, '76%'], ['County Donegal', 'Falcarragh', 'An Fál Carrach', 2168, '44%'], ['County Donegal', 'Fintown', 'Baile na Finne', 316, '57%'], ['County Donegal', 'Gortahork', ""Gort a' Choirce"", 1599, '81%'], ['County Donegal', 'Graffy', 'An Grafadh', 209, '52%'], ['County Donegal', 'Gweedore', 'Gaoth Dobhair', 2651, '77%'], ['County Donegal', 'Teelin', 'Teileann', 726, '41%'], ['County Mayo', 'Aughleam', 'Eachléim', 921, '46%'], ['County Mayo', 'Carrowteige', 'Ceathrú Thaidhg', 356, '64%'], ['County Mayo', 'Finny', 'Fionnaithe', 248, '44%'], ['County Galway', 'Aran Islands', 'Oileáin Árann', 1225, '79%'], ['County Galway', 'Bothúna', 'Bothúna', 963, '74%'], ['County Galway', 'Camus', 'Camus', 367, '90%'], ['County Galway', 'Carna', 'Carna', 798, '81%'], ['County Galway', 'Carraroe', 'An Cheathrú Rua', 2294, '83%'], ['County Galway', 'Cornamona', 'Corr na Móna', 573, '45%'], ['County Galway', 'Furbo', 'Na Forbacha', 1239, '43%'], ['County Galway', 'Derryrush', 'Doire Iorrais', 313, '76%'], ['County Galway', 'Glantrasna', 'Gleann Trasna', 122, '61%'], ['County Galway', 'Inverin', 'Indreabhán', 1362, '83%'], ['County Galway', 'Kilkieran', 'Cill Chiaráin', 619, '87%'], ['County Galway', 'Lettermore', 'Leitir Móir', 875, '84%'], ['County Galway', 'Lettermullen', 'Leitir Mealláin', 1288, '89%'], ['County Galway', 'Rossaveal', 'Ros an Mhíl', 1304, '84%'], ['County Galway', 'Rosmuc', 'Ros Muc', 557, '87%'], ['County Galway', 'Spiddal', 'An Spidéal', 1357, '66%'], ['County Kerry', 'Ballyferriter', 'Baile an Fheirtéaraigh', 455, '77%'], ['County Kerry', 'Ballynagall /Ballydavid', 'Baile na nGall', 508, '75%'], ['County Kerry', 'Brandon', 'Cé Bhréannain', 168, '48%'], ['County Kerry', 'Cinnáird', 'Cinnáird', 318, '45%'], ['County Kerry', 'Cloghane', 'An Clochán', 273, '46%'], ['County Kerry', 'Dunquin', 'Dún Chaoin', 159, '72%'], ['County Kerry', 'Feohanagh', 'An Fheothanach', 462, '78%'], ['County Kerry', 'Glin', 'Na Gleannta', 1496, '44%'], ['County Kerry', 'Marhin', 'Márthain', 276, '56%'], ['County Kerry', 'Mináird', 'Mináird', 387, '53%'], ['County Kerry', 'Ventry', 'Ceann Trá', 413, '59%'], ['County Cork', 'Ballingeary', 'Béal Átha an Ghaorthaidh', 542, '46%'], ['County Cork', 'Ballyvourney', 'Baile Bhuirne', 816, '42%'], ['County Cork', 'Cape Clear Island', 'Oileán Chléire', 125, '41%'], ['County Cork', 'Coolea', 'Cúil Aodha', 420, '53%'], ['County Waterford', 'Ring', 'An Rinn', 1176, '51%']], 'name': 'table_1_101196_1'}","
+What is the county with the highest population where more than half of the inhabitants speak Irish?
+","
+SELECT `County`, `English name` AS English_name, `Irish name` AS Irish_name, `Population` AS Population,
+       CASE 
+           WHEN `Irish speakers` = 100 THEN '100%'
+           ELSE CAST(`Irish speakers` AS REAL) * 100 / `Population`
+       END AS `Irish speakers`
+FROM `table_1_101196_1`
+WHERE `County` IS NOT NULL AND `County`!= ''
+ORDER BY `Population` DESC LIMIT 14;
+","
+SELECT col0, col1 AS English_name, col2 AS Irish_name, col3 AS Population,
+       CASE 
+           WHEN col4 = 100 THEN '100%'
+           ELSE CAST(col4 AS REAL) * 100 / col3
+       END AS col4
+FROM `table_1_101196_1`
+WHERE col0 IS NOT NULL AND col0!= ''
+ORDER BY col3 DESC LIMIT 14;
+","[('county donegal', 'gweedore', 'gaoth dobhair', 2651.0, 2.904564315352697), ('county galway', 'carraroe', 'an cheathrú rua', 2294.0, 3.6181342632955538), ('county donegal', 'annagry', 'anagaire', 2235.0, 2.460850111856823), ('county donegal', 'falcarragh', 'an fál carrach', 2168.0, 2.029520295202952), ('county donegal', 'gortahork', ""gort a' choirce"", 1599.0, 5.065666041275797), ('county kerry', 'glin', 'na gleannta', 1496.0, 2.9411764705882355), ('county galway', 'inverin', 'indreabhán', 1362.0, 6.093979441997063), ('county galway', 'spiddal', 'an spidéal', 1357.0, 4.8636698599852615), ('county donegal', 'bloody foreland', 'cnoc fola', 1326.0, 6.259426847662142), ('county galway', 'rossaveal', 'ros an mhíl', 1304.0, 6.441717791411043), ('county galway', 'lettermullen', 'leitir mealláin', 1288.0, 6.909937888198757), ('county galway', 'furbo', 'na forbacha', 1239.0, 3.4705407586763517), ('county galway', 'aran islands', 'oileáin árann', 1225.0, 6.448979591836735), ('county waterford', 'ring', 'an rinn', 1176.0, 4.336734693877551)]",14
