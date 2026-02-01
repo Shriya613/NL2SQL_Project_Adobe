@@ -1,0 +1,22 @@
+{
+  "model_name": "answerdotai/ModernBERT-base",
+  "dataset_size": 7633,
+  "train_size": 5724,
+  "eval_size": 954,
+  "final_metrics": {
+    "eval_loss": 1.9653230905532837,
+    "eval_mse": 0.019653232768177986,
+    "eval_mae": 0.11283420026302338,
+    "eval_rmse": 0.14018998811676242,
+    "eval_runtime": 33.1653,
+    "eval_samples_per_second": 28.765,
+    "eval_steps_per_second": 2.412,
+    "epoch": 6.670859538784067
+  },
+  "similarity_stats": {
+    "mean": 0.6859510855925787,
+    "std": 0.21510133377049181,
+    "min": 0.0237428345244379,
+    "max": 1.0
+  }
+}

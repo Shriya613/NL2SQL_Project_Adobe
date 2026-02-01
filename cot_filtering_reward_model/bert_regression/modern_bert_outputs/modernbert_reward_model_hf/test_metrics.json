@@ -1,0 +1,14 @@
+{
+  "test_size": 955,
+  "mse": 0.0203,
+  "mae": 0.1129,
+  "rmse": 0.1425,
+  "ground_truth_mean": 0.673,
+  "ground_truth_std": 0.215,
+  "prediction_mean": 0.691,
+  "prediction_std": 0.17,
+  "ground_truth_min": 0.024,
+  "ground_truth_max": 0.999,
+  "prediction_min": 0.173,
+  "prediction_max": 0.962
+}
