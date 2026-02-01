@@ -1,1 +1,0 @@
-# NL2SQL_Project_Adobe
