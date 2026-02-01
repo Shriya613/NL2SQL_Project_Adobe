@@ -1,0 +1,68 @@
+======================================================================
+MACHINE TRANSLATION EVALUATION REPORT
+======================================================================
+
+BASIC STATISTICS:
+  Total translations: 498
+  Successful translations: 497 (99.8%)
+  Failed/Empty translations: 1 (0.2%)
+
+LENGTH METRICS:
+  Average length ratio: 0.906
+  Min length ratio: 0.385
+  Max length ratio: 1.542
+  Std deviation: 0.143
+
+WORD COUNT METRICS:
+  Average word count ratio: 0.762
+  Average original words: 21.91
+  Average translation words: 16.65
+
+FUZZY SIMILARITY METRICS:
+  Average fuzzy similarity: 0.289
+  Min similarity: 0.050
+  Max similarity: 0.690
+
+LANGUAGE DETECTION:
+  tr: 496 (99.8%)
+  ro: 1 (0.2%)
+
+======================================================================
+
+Translation Statistics tr
+
+Total translations: 498
+2025-11-20 09:28:32,995 - INFO - Successful: 478 (96.0%)
+2025-11-20 09:28:32,995 - INFO - Failed: 0 (0.0%)
+2025-11-20 09:28:32,995 - INFO - Filtered out (low quality): 20 (4.0%)
+2025-11-20 09:28:32,995 - INFO -   Heuristic rejections: 1
+2025-11-20 09:28:32,995 - INFO -   Semantic/back-trans rejections: 19
+2025-11-20 09:28:32,995 - INFO - Entities found: 364
+2025-11-20 09:28:32,995 - INFO - Unique entities translated: 279
+2025-11-20 09:28:32,995 - INFO - Output saved to: final_data/tr_translations_nllb_improved_ner_semantic.csv
+
+Translation Statistics ru
+
+2025-11-20 12:41:58,585 - INFO - Total translations: 498
+2025-11-20 12:41:58,585 - INFO - Successful: 487 (97.8%)
+2025-11-20 12:41:58,585 - INFO - Failed: 0 (0.0%)
+2025-11-20 12:41:58,585 - INFO - Filtered out (low quality): 11 (2.2%)
+2025-11-20 12:41:58,585 - INFO -   Heuristic rejections: 1
+2025-11-20 12:41:58,585 - INFO -   Semantic/back-trans rejections: 10
+2025-11-20 12:41:58,585 - INFO - Entities found: 364
+2025-11-20 12:41:58,585 - INFO - Unique entities translated: 279
+2025-11-20 12:41:58,585 - INFO - Output saved to: final_data/ru_translations_nllb_improved_ner_semantic.csv
+2025-11-20 12:41:58,585 - INFO - Filtered translations saved to: final_data/ru_translations_nllb_improved_ner_semantic_FILTERED.csv
+
+Translation Statistics entities
+
+2025-11-20 12:59:18,634 - INFO - Total translations: 498
+2025-11-20 12:59:18,634 - INFO - Successful: 493 (99.0%)
+2025-11-20 12:59:18,634 - INFO - Failed: 0 (0.0%)
+2025-11-20 12:59:18,634 - INFO - Filtered out (low quality): 5 (1.0%)
+2025-11-20 12:59:18,634 - INFO -   Heuristic rejections: 0
+2025-11-20 12:59:18,634 - INFO -   Semantic/back-trans rejections: 5
+2025-11-20 12:59:18,634 - INFO - Entities found: 364
+2025-11-20 12:59:18,634 - INFO - Unique entities translated: 279
+2025-11-20 12:59:18,634 - INFO - Output saved to: final_data/es_translations_nllb_improved_ner_semantic.csv
+2025-11-20 12:59:18,634 - INFO - Filtered translations saved to: final_data/es_translations_nllb_improved_ner_semantic_FILTERED.csv
