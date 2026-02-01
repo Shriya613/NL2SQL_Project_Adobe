@@ -1,0 +1,9 @@
+[
+    {
+        "question": "Show action movies and adventure movies with Leonardo DiCaprio.",
+        "sql_query1": "SELECT Action_Movies.title\r\nFROM Action_Movies\r\nWHERE Action_Movies.Stars = \"Leonardo DiCaprio\"\r\nUNION\r\nSELECT Adventure_Movies.title\r\nFROM Adventure_Movies\r\nWHERE Adventure_Movies.Stars = \"Leonardo DiCaprio\"",
+        "sql_query2": "SELECT Action_Movies.title\r\nFROM Action_Movies\r\nUNION\r\nSELECT Adventure_Movies.title\r\nFROM Adventure_Movies\r\nWHERE Adventure_Movies.Stars = \"Leonardo DiCaprio\"",
+        "interpretation1": "What action movies is Leonardo DiCaprio in and what adventure movies have the same star?",
+        "interpretation2": "Provide a list of all action movies and also list adventure movies that star Leonardo DiCaprio."
+    }
+]

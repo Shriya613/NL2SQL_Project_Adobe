@@ -1,0 +1,9 @@
+[
+    {
+        "question": "Show me the goals every sales position has.",
+        "sql_query1": "SELECT Goals.goal_type  from Sales_Positions_Goals join Goals on Sales_Positions_Goals.goal_id = Goals.id join Sales_Positions on Sales_Positions_Goals.sales_position_id = Sales_Positions.id   GROUP BY Sales_Positions_Goals.goal_id HAVING COUNT(DISTINCT Sales_Positions_Goals.sales_position_id) = (SELECT COUNT(*) FROM  Sales_Positions)",
+        "sql_query2": "select sales_positions.position_name , goals.goal_type from Sales_Positions_Goals join Goals on Sales_Positions_Goals.goal_id = Goals.id join Sales_Positions on Sales_Positions_Goals.sales_position_id = Sales_Positions.id",
+        "interpretation1": "What are the goals all sales positions have in common?",
+        "interpretation2": "For each sales position, list the goals they have."
+    }
+]

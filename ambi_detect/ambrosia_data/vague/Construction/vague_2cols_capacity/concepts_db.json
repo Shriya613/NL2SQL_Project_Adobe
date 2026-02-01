@@ -1,0 +1,25 @@
+{
+    "template": "Question: What is the capacity of this stadium? Subject of Inquiry: Stadium\nFocus: Capacity Possible answer types: 1. Seating Capacity 2. Maximum Occupancy",
+    "general_category1": {
+        "tab_name": "Stadiums",
+        "col_name": "Seating_Capacity",
+        "value": null,
+        "scope_id": null,
+        "db_type": "column"
+    },
+    "general_category2": {
+        "tab_name": "Stadiums",
+        "col_name": "Maximum_Occupancy",
+        "value": null,
+        "scope_id": null,
+        "db_type": "column"
+    },
+    "subject": {
+        "tab_name": "Stadiums",
+        "col_name": "Type_of_Stadium",
+        "value": null,
+        "scope_id": null,
+        "db_type": "column"
+    },
+    "type": "2cols"
+}

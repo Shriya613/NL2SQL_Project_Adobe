@@ -1,0 +1,8 @@
+{
+    "template": "Nurse and Physician's Assistant are subclasses of Medical Professionals. All Nurses and Physician's assistants have property \"Patients\". There might be a Nurse and a Physician's Assistant that both have \"Patients\" equal to \"Anne Buche\".",
+    "general_class": "Medical Professionals",
+    "class1": "Nurse",
+    "class2": "Physician's Assistant",
+    "common_property": "Patients",
+    "common_value": "Anne Buche"
+}

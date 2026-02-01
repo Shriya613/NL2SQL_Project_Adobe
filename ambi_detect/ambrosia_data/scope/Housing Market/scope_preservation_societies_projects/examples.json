@@ -1,0 +1,37 @@
+[
+    {
+        "question": "Tell me the type, cost and description of projects that each preservation society has.",
+        "sql_query1": "SELECT Projects.Type, Projects.Description, Projects.Cost  from Preservation_Societies_Projects join Projects on Preservation_Societies_Projects.Projects_ID = Projects.ID join Preservation_Societies on Preservation_Societies_Projects.Societies_ID = Preservation_Societies.ID   GROUP BY Preservation_Societies_Projects.Projects_ID HAVING COUNT(DISTINCT Preservation_Societies_Projects.Societies_ID) = (SELECT COUNT(*) FROM  Preservation_Societies)",
+        "sql_query2": "select preservation_societies.name , projects.type , projects.description , projects.cost from Preservation_Societies_Projects join Projects on Preservation_Societies_Projects.Projects_ID = Projects.ID join Preservation_Societies on Preservation_Societies_Projects.Societies_ID = Preservation_Societies.ID",
+        "interpretation1": "What types, descriptions and costs of projects are common to all preservation societies?",
+        "interpretation2": "For each preservation society, show me the project types, descriptions and costs."
+    },
+    {
+        "question": "Provide the types of projects associated with each preservation society.",
+        "sql_query1": "SELECT Projects.Type  from Preservation_Societies_Projects join Projects on Preservation_Societies_Projects.Projects_ID = Projects.ID join Preservation_Societies on Preservation_Societies_Projects.Societies_ID = Preservation_Societies.ID   GROUP BY Preservation_Societies_Projects.Projects_ID HAVING COUNT(DISTINCT Preservation_Societies_Projects.Societies_ID) = (SELECT COUNT(*) FROM  Preservation_Societies)",
+        "sql_query2": "select preservation_societies.name , projects.type from Preservation_Societies_Projects join Projects on Preservation_Societies_Projects.Projects_ID = Projects.ID join Preservation_Societies on Preservation_Societies_Projects.Societies_ID = Preservation_Societies.ID",
+        "interpretation1": "What type of projects is common for all preservation societies?",
+        "interpretation2": "For every preservation society, what are the corresponding types of projects?"
+    },
+    {
+        "question": "which project types and costs are associated with each preservation society?",
+        "sql_query1": "SELECT Projects.Type, Projects.Cost  from Preservation_Societies_Projects join Projects on Preservation_Societies_Projects.Projects_ID = Projects.ID join Preservation_Societies on Preservation_Societies_Projects.Societies_ID = Preservation_Societies.ID   GROUP BY Preservation_Societies_Projects.Projects_ID HAVING COUNT(DISTINCT Preservation_Societies_Projects.Societies_ID) = (SELECT COUNT(*) FROM  Preservation_Societies)",
+        "sql_query2": "select preservation_societies.name , projects.type , projects.cost from Preservation_Societies_Projects join Projects on Preservation_Societies_Projects.Projects_ID = Projects.ID join Preservation_Societies on Preservation_Societies_Projects.Societies_ID = Preservation_Societies.ID",
+        "interpretation1": "provide me with the project type and cost that is common for all preservation societies.",
+        "interpretation2": "For each preservation society, list the corresponding project types and costs."
+    },
+    {
+        "question": "Show me the cost of projects every society has.",
+        "sql_query1": "SELECT Projects.Cost  from Preservation_Societies_Projects join Projects on Preservation_Societies_Projects.Projects_ID = Projects.ID join Preservation_Societies on Preservation_Societies_Projects.Societies_ID = Preservation_Societies.ID   GROUP BY Preservation_Societies_Projects.Projects_ID HAVING COUNT(DISTINCT Preservation_Societies_Projects.Societies_ID) = (SELECT COUNT(*) FROM  Preservation_Societies)",
+        "sql_query2": "select preservation_societies.name , projects.cost from Preservation_Societies_Projects join Projects on Preservation_Societies_Projects.Projects_ID = Projects.ID join Preservation_Societies on Preservation_Societies_Projects.Societies_ID = Preservation_Societies.ID",
+        "interpretation1": "What is the cost of projects all societies have in common?",
+        "interpretation2": "For each society, list the cost of projects they have."
+    },
+    {
+        "question": "Give me the descriptions of the projects that every preservation society has.",
+        "sql_query1": "SELECT Projects.Description  from Preservation_Societies_Projects join Projects on Preservation_Societies_Projects.Projects_ID = Projects.ID join Preservation_Societies on Preservation_Societies_Projects.Societies_ID = Preservation_Societies.ID   GROUP BY Preservation_Societies_Projects.Projects_ID HAVING COUNT(DISTINCT Preservation_Societies_Projects.Societies_ID) = (SELECT COUNT(*) FROM  Preservation_Societies)",
+        "sql_query2": "select preservation_societies.name , projects.description from Preservation_Societies_Projects join Projects on Preservation_Societies_Projects.Projects_ID = Projects.ID join Preservation_Societies on Preservation_Societies_Projects.Societies_ID = Preservation_Societies.ID",
+        "interpretation1": "What are the descriptions of the projects that all preservation societies have in common?",
+        "interpretation2": "For every preservation society, show the descriptions of the projects that they have."
+    }
+]

@@ -1,0 +1,7 @@
+{
+    "template": "Question: When was this financial institution established? Subject of Inquiry: Financial Institutions\nFocus: Founding Date Possible answer types: 1. Founding Year 2. Founding Decade",
+    "subject": "Financial Institutions",
+    "focus": "Founding Date",
+    "general_category1": "Founding Year",
+    "general_category2": "Founding Decade"
+}

@@ -1,0 +1,6 @@
+{
+    "template": "Each Marketing Agencies has many different Creative Positions. Among them, Graphic Designer is common to many Marketing Agencies.",
+    "specific_component": "Graphic Designer",
+    "components": "Creative Positions",
+    "entities": "Marketing Agencies"
+}

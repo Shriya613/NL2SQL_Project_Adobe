@@ -1,0 +1,6 @@
+{
+    "template": "Each Hotels has many different Services. Among them, Housekeeping is common to many Hotels.",
+    "specific_component": "Housekeeping",
+    "components": "Services",
+    "entities": "Hotels"
+}

@@ -1,0 +1,31 @@
+{
+    "template": "Each Cultural Centers has many different Performances. Among them, Dance Performances is common to many Cultural Centers.",
+    "entities": {
+        "tab_name": "Cultural_Centers",
+        "col_name": null,
+        "value": null,
+        "scope_id": null,
+        "db_type": "table"
+    },
+    "components": {
+        "tab_name": "Performances",
+        "col_name": null,
+        "value": null,
+        "scope_id": null,
+        "db_type": "table"
+    },
+    "specific_component": {
+        "tab_name": "Performances",
+        "col_name": "type",
+        "value": "Dance_Performances",
+        "scope_id": 0,
+        "db_type": "value"
+    },
+    "entities_components": {
+        "tab_name": "Cultural_Centers_Performances",
+        "col_name": null,
+        "value": null,
+        "scope_id": null,
+        "db_type": "table"
+    }
+}

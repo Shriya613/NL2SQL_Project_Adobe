@@ -1,0 +1,23 @@
+[
+    {
+        "question": "What is the tech job description of each tech startup?",
+        "sql_query1": "SELECT Tech_Jobs.description  from Tech_Startups_Tech_Jobs join Tech_Jobs on Tech_Startups_Tech_Jobs.tech_job_id = Tech_Jobs.id join Tech_Startups on Tech_Startups_Tech_Jobs.tech_startup_id = Tech_Startups.id   GROUP BY Tech_Startups_Tech_Jobs.tech_job_id HAVING COUNT(DISTINCT Tech_Startups_Tech_Jobs.tech_startup_id) = (SELECT COUNT(*) FROM  Tech_Startups)",
+        "sql_query2": "select tech_startups.name , tech_jobs.description from Tech_Startups_Tech_Jobs join Tech_Jobs on Tech_Startups_Tech_Jobs.tech_job_id = Tech_Jobs.id join Tech_Startups on Tech_Startups_Tech_Jobs.tech_startup_id = Tech_Startups.id",
+        "interpretation1": "What tech job description is common to all tech startups?",
+        "interpretation2": "For each tech startup, what is the corresponding tech job description?"
+    },
+    {
+        "question": "Show me the jobs each startup has.",
+        "sql_query1": "SELECT Tech_Jobs.job_title  from Tech_Startups_Tech_Jobs join Tech_Jobs on Tech_Startups_Tech_Jobs.tech_job_id = Tech_Jobs.id join Tech_Startups on Tech_Startups_Tech_Jobs.tech_startup_id = Tech_Startups.id   GROUP BY Tech_Startups_Tech_Jobs.tech_job_id HAVING COUNT(DISTINCT Tech_Startups_Tech_Jobs.tech_startup_id) = (SELECT COUNT(*) FROM  Tech_Startups)",
+        "sql_query2": "select tech_startups.name , tech_jobs.job_title from Tech_Startups_Tech_Jobs join Tech_Jobs on Tech_Startups_Tech_Jobs.tech_job_id = Tech_Jobs.id join Tech_Startups on Tech_Startups_Tech_Jobs.tech_startup_id = Tech_Startups.id",
+        "interpretation1": "What are jobs that all startups have in common?",
+        "interpretation2": "For every startup, list the jobs they have."
+    },
+    {
+        "question": "Give me the titles and descriptions of the jobs that every tech startup has.",
+        "sql_query1": "SELECT Tech_Jobs.job_title, Tech_Jobs.description  from Tech_Startups_Tech_Jobs join Tech_Jobs on Tech_Startups_Tech_Jobs.tech_job_id = Tech_Jobs.id join Tech_Startups on Tech_Startups_Tech_Jobs.tech_startup_id = Tech_Startups.id   GROUP BY Tech_Startups_Tech_Jobs.tech_job_id HAVING COUNT(DISTINCT Tech_Startups_Tech_Jobs.tech_startup_id) = (SELECT COUNT(*) FROM  Tech_Startups)",
+        "sql_query2": "select tech_startups.name , tech_jobs.job_title , tech_jobs.description from Tech_Startups_Tech_Jobs join Tech_Jobs on Tech_Startups_Tech_Jobs.tech_job_id = Tech_Jobs.id join Tech_Startups on Tech_Startups_Tech_Jobs.tech_startup_id = Tech_Startups.id",
+        "interpretation1": "What information is there about the jobs all tech startups have in common?",
+        "interpretation2": "For each tech startup, list information about the jobs they have."
+    }
+]

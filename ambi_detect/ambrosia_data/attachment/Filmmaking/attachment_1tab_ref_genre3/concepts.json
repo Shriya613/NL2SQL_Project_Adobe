@@ -1,0 +1,8 @@
+{
+    "template": "Horror and Thriller are subclasses of Genre. All Horror and Thriller films have a property \"Budget\". There might be a Horror and a Thriller film that both have \"Budget\" equal to \"20 million USD\".",
+    "general_class": "Genre",
+    "class1": "Horror",
+    "class2": "Thriller",
+    "common_property": "Budget",
+    "common_value": "20 million USD"
+}

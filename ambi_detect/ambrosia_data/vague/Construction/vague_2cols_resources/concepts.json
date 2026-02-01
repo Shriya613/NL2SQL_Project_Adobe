@@ -1,0 +1,7 @@
+{
+    "template": "Question: What resources were allocated for the maintenance and upkeep of this public works project? Subject of Inquiry: Project\nFocus: Resources Possible answer types: 1. Budget 2. Staff",
+    "subject": "Project",
+    "focus": "Resources",
+    "general_category1": "Budget",
+    "general_category2": "Staff"
+}

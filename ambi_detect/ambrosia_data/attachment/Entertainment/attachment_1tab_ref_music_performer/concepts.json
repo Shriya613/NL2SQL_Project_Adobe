@@ -1,0 +1,8 @@
+{
+    "template": "Jazz Musicians and Rock Guitarists are subclasses of Music Performers. All Jazz Musicians and Rock Guitarists have the property \"Years of Experience\". There might be a Jazz Musician and a Rock Guitarist that both have \"Years of Experience\" equal to \"10 Years\".",
+    "general_class": "Music Performer",
+    "class1": "Jazz Musician",
+    "class2": "Rock Guitarist",
+    "common_property": "Years in Industry",
+    "common_value": "10"
+}

@@ -1,0 +1,6 @@
+{
+    "template": "Each Banks has many different Financial Roles. Among them, Financial Analyst is common to many Banks.",
+    "specific_component": "Financial Analyst",
+    "components": "Financial Roles",
+    "entities": "Banks"
+}

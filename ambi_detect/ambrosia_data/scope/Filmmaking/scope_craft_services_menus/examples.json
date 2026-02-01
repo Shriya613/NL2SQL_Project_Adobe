@@ -1,0 +1,9 @@
+[
+    {
+        "question": "What menu does each craft service have?",
+        "sql_query1": "SELECT Menus.Name  from Craft_Services_Menus join Menus on Craft_Services_Menus.MenuID = Menus.MenuID join Craft_Services on Craft_Services_Menus.ServiceID = Craft_Services.ServiceID   GROUP BY Craft_Services_Menus.MenuID HAVING COUNT(DISTINCT Craft_Services_Menus.ServiceID) = (SELECT COUNT(*) FROM  Craft_Services)",
+        "sql_query2": "select craft_services.description , menus.name from Craft_Services_Menus join Menus on Craft_Services_Menus.MenuID = Menus.MenuID join Craft_Services on Craft_Services_Menus.ServiceID = Craft_Services.ServiceID",
+        "interpretation1": "Provide me all the menus that are common to all craft services",
+        "interpretation2": "For all craft services, list their menus"
+    }
+]

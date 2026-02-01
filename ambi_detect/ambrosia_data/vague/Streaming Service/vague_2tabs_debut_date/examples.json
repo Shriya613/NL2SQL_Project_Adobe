@@ -1,0 +1,12 @@
+[
+    {
+        "question": "Could you provide me with the debut date of each podcast?",
+        "sql_query1": "SELECT p.Podcast_Name, d.Day, d.Month\r\nFROM Podcast p\r\nJOIN Debut_Day d ON p.Debut_Day_ID = d.ID;",
+        "sql_query2": "SELECT p.Podcast_Name, d.year\r\nFROM Podcast p\r\nJOIN Debut_Year d ON p.Debut_year_ID = d.ID;",
+        "sql_query3": "SELECT p.Podcast_Name, d.Day, d.Month, y.year\r\nFROM Podcast p\r\nJOIN Debut_Day d ON p.Debut_Day_ID = d.ID JOIN Debut_Year y ON p.Debut_year_ID = y.ID;",
+        "interpretation1": "Provide the debut day of each podcast.",
+        "interpretation2": "Provide the debut year of each podcast.",
+        "interpretation3": "Provide the debut day and year of each podcast.",
+        "sql_query_general": "SELECT p.Podcast_Name, d.Day, d.Month\r\nFROM Podcast p\r\nJOIN Debut_Date d ON p.Debut_Day_ID = d.ID;"
+    }
+]

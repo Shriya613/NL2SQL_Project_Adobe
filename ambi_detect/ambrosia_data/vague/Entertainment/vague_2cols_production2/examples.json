@@ -1,0 +1,22 @@
+[
+    {
+        "question": "Who produced drama films?",
+        "sql_query1": "SELECT ProducerName FROM Producers JOIN Movies ON Producers.id = Movies.ProducerId WHERE Genre LIKE '%Drama%' ;",
+        "sql_query2": "SELECT Company FROM Producers JOIN Movies ON Producers.id = Movies.ProducerId WHERE Genre LIKE '%Drama%' ;",
+        "sql_query3": "SELECT ProducerName, Company FROM Producers JOIN Movies ON Producers.id = Movies.ProducerId WHERE Genre LIKE '%Drama%' ;",
+        "interpretation1": "Which producers worked on drama films?",
+        "interpretation2": "Which companies have produced drama films?",
+        "interpretation3": "Which companies produced drama films and who acted as producer?",
+        "sql_query_general": "SELECT Production FROM Producers JOIN Movies ON Producers.id = Movies.ProducerId WHERE Genre LIKE '%Drama%' ;"
+    },
+    {
+        "question": "Who produced the films with a general rating?",
+        "sql_query1": "SELECT ProducerName FROM Producers JOIN Movies ON Producers.id = Movies.ProducerId JOIN MovieRatings ON MovieRatings.MovieId = Movies.id JOIN FilmRatings ON MovieRatings.RatingId = FilmRatings.id WHERE Rating = 'G' ;",
+        "sql_query2": "SELECT Company FROM Producers JOIN Movies ON Producers.id = Movies.ProducerId JOIN MovieRatings ON MovieRatings.MovieId = Movies.id JOIN FilmRatings ON MovieRatings.RatingId = FilmRatings.id WHERE Rating = 'G' ;",
+        "sql_query3": "SELECT ProducerName, Company FROM Producers JOIN Movies ON Producers.id = Movies.ProducerId JOIN MovieRatings ON MovieRatings.MovieId = Movies.id JOIN FilmRatings ON MovieRatings.RatingId = FilmRatings.id WHERE Rating = 'G' ;",
+        "interpretation1": "What is the name of the producer that made the films with a G rating?",
+        "interpretation2": "What company made the films with a G rating?",
+        "interpretation3": "What is the name of the producer and company that made the films with a G rating?",
+        "sql_query_general": "SELECT Production FROM Producers JOIN Movies ON Producers.id = Movies.ProducerId JOIN MovieRatings ON MovieRatings.MovieId = Movies.id JOIN FilmRatings ON MovieRatings.RatingId = FilmRatings.id WHERE Rating = 'G' ;"
+    }
+]

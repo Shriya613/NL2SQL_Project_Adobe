@@ -1,0 +1,31 @@
+{
+    "template": "Each Retail Stores has many different Staff Roles. Among them, Sales Associate is common to many Retail Stores.",
+    "entities": {
+        "tab_name": "Retail_Stores",
+        "col_name": null,
+        "value": null,
+        "scope_id": null,
+        "db_type": "table"
+    },
+    "components": {
+        "tab_name": "Staff_Roles",
+        "col_name": null,
+        "value": null,
+        "scope_id": null,
+        "db_type": "table"
+    },
+    "specific_component": {
+        "tab_name": "Staff_Roles",
+        "col_name": "role_title",
+        "value": "Sales Associate",
+        "scope_id": 0,
+        "db_type": "value"
+    },
+    "entities_components": {
+        "tab_name": "Retail_Stores_Staff_Roles",
+        "col_name": null,
+        "value": null,
+        "scope_id": null,
+        "db_type": "table"
+    }
+}

@@ -1,0 +1,33 @@
+{
+    "domain": "Authors",
+    "template": "Fiction Book and Non-fiction Book are subclasses of Literature. All Fiction Books and Non-fiction Books have property \"Rating\". There might be a Fiction Book and a Non-fiction Book that both have \"Rating\" equal to \"5 stars\".",
+    "type": "1tab_val",
+    "general_class": {
+        "tab_name": "Books",
+        "col_name": "Literature",
+        "value": null,
+        "scope_id": null,
+        "db_type": "column"
+    },
+    "class1": {
+        "tab_name": "Books",
+        "col_name": "Literature",
+        "value": "Fiction Book",
+        "scope_id": null,
+        "db_type": "value"
+    },
+    "class2": {
+        "tab_name": "Books",
+        "col_name": "Literature",
+        "value": "Non-fiction Book",
+        "scope_id": null,
+        "db_type": "value"
+    },
+    "common_property": {
+        "tab_name": "Books",
+        "col_name": "Rating",
+        "value": 2.5,
+        "scope_id": null,
+        "db_type": "value"
+    }
+}

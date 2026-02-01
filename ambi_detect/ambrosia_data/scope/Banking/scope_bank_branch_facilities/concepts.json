@@ -1,0 +1,6 @@
+{
+    "template": "Each Bank Branch has many different Facilities. Among them, Drive-Thru Window is common to many Bank Branch.",
+    "specific_component": "Drive-Thru Window",
+    "components": "Facilities",
+    "entities": "Bank Branch"
+}

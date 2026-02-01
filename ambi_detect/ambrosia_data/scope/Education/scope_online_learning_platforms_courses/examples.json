@@ -1,0 +1,23 @@
+[
+    {
+        "question": "What course titles do we have for every online learning platform",
+        "sql_query1": "SELECT Courses.title  from Online_Learning_Platforms_Courses join Courses on Online_Learning_Platforms_Courses.courseID = Courses.courseID join Online_Learning_Platforms on Online_Learning_Platforms_Courses.platformID = Online_Learning_Platforms.platformID   GROUP BY Online_Learning_Platforms_Courses.courseID HAVING COUNT(DISTINCT Online_Learning_Platforms_Courses.platformID) = (SELECT COUNT(*) FROM  Online_Learning_Platforms)",
+        "sql_query2": "select online_learning_platforms.name , courses.title from Online_Learning_Platforms_Courses join Courses on Online_Learning_Platforms_Courses.courseID = Courses.courseID join Online_Learning_Platforms on Online_Learning_Platforms_Courses.platformID = Online_Learning_Platforms.platformID",
+        "interpretation1": "Show me the course titles that all online learning platforms have in common",
+        "interpretation2": "For each online learning platform, show me the titles of the courses they provide"
+    },
+    {
+        "question": "What course descriptions do we have for every learning platform",
+        "sql_query1": "SELECT Courses.description  from Online_Learning_Platforms_Courses join Courses on Online_Learning_Platforms_Courses.courseID = Courses.courseID join Online_Learning_Platforms on Online_Learning_Platforms_Courses.platformID = Online_Learning_Platforms.platformID   GROUP BY Online_Learning_Platforms_Courses.courseID HAVING COUNT(DISTINCT Online_Learning_Platforms_Courses.platformID) = (SELECT COUNT(*) FROM  Online_Learning_Platforms)",
+        "sql_query2": "select online_learning_platforms.name , courses.description from Online_Learning_Platforms_Courses join Courses on Online_Learning_Platforms_Courses.courseID = Courses.courseID join Online_Learning_Platforms on Online_Learning_Platforms_Courses.platformID = Online_Learning_Platforms.platformID",
+        "interpretation1": "Give me the descriptions for courses which are common to all learning platforms",
+        "interpretation2": "For each learning platform, give me the description of the courses it offers"
+    },
+    {
+        "question": "Give me the course titles and descriptions for each online learning platform.",
+        "sql_query1": "SELECT Courses.title, Courses.description  from Online_Learning_Platforms_Courses join Courses on Online_Learning_Platforms_Courses.courseID = Courses.courseID join Online_Learning_Platforms on Online_Learning_Platforms_Courses.platformID = Online_Learning_Platforms.platformID   GROUP BY Online_Learning_Platforms_Courses.courseID HAVING COUNT(DISTINCT Online_Learning_Platforms_Courses.platformID) = (SELECT COUNT(*) FROM  Online_Learning_Platforms)",
+        "sql_query2": "select online_learning_platforms.name , courses.title , courses.description from Online_Learning_Platforms_Courses join Courses on Online_Learning_Platforms_Courses.courseID = Courses.courseID join Online_Learning_Platforms on Online_Learning_Platforms_Courses.platformID = Online_Learning_Platforms.platformID",
+        "interpretation1": "What course title and description are common to all online learning platforms?",
+        "interpretation2": "For each online learning platform, what is the corresponding course title and description?"
+    }
+]

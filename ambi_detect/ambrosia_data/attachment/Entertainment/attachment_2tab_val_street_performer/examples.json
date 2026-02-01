@@ -1,0 +1,9 @@
+[
+    {
+        "question": "Show magicians and mimes who perform in Times Square, New York.",
+        "sql_query1": "SELECT Magicians.name\r\nFROM Magicians\r\nWHERE Magicians.Street_Location = \"Times Square, New York\"\r\nUNION\r\nSELECT Mimes.name\r\nFROM Mimes\r\nWHERE Mimes.Street_Location = \"Times Square, New York\"",
+        "sql_query2": "SELECT Magicians.name\r\nFROM Magicians\r\nUNION\r\nSELECT Mimes.name\r\nFROM Mimes\r\nWHERE Mimes.Street_Location = \"Times Square, New York\"",
+        "interpretation1": "Show both magicians who perform in Times Square, New York and mimes who perform there.",
+        "interpretation2": "Show all magicians and also show mimes who perform in Times Square, New York."
+    }
+]

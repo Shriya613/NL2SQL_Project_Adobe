@@ -1,0 +1,9 @@
+[
+    {
+        "question": "Display documentaries and short films with a budget of $500,000.",
+        "sql_query1": "SELECT Documentaries.title\r\nFROM Documentaries\r\nWHERE Documentaries.Budget = \"500000\"\r\nUNION\r\nSELECT ShortFilms.title\r\nFROM ShortFilms\r\nWHERE ShortFilms.Budget = \"500000\"",
+        "sql_query2": "SELECT Documentaries.title\r\nFROM Documentaries\r\nUNION\r\nSELECT ShortFilms.title\r\nFROM ShortFilms\r\nWHERE ShortFilms.Budget = \"500000\"",
+        "interpretation1": "What documentaries and short films have a budget of $500,000?",
+        "interpretation2": "List all documentaries and also display short films with a budget of $500,000."
+    }
+]

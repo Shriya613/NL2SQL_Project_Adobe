@@ -1,0 +1,33 @@
+{
+    "domain": "AnimationStudios",
+    "template": "Pixar and DreamWorks are subclasses of Animation Studio. All films produced by these studios have a property \"Awards\". There might be a Pixar and a DreamWorks film that both won the \"Academy Award for Best Animated Feature\".",
+    "type": "1tab_ref",
+    "general_class": {
+        "tab_name": "AnimationStudios",
+        "col_name": "studioName",
+        "value": null,
+        "scope_id": null,
+        "db_type": "column"
+    },
+    "class1": {
+        "tab_name": "AnimationStudios",
+        "col_name": "studioName",
+        "value": "Pixar",
+        "scope_id": null,
+        "db_type": "value"
+    },
+    "class2": {
+        "tab_name": "AnimationStudios",
+        "col_name": "studioName",
+        "value": "DreamWorks",
+        "scope_id": null,
+        "db_type": "value"
+    },
+    "common_property": {
+        "tab_name": "Awards",
+        "col_name": "awardName",
+        "value": "Oscar",
+        "scope_id": null,
+        "db_type": "value"
+    }
+}

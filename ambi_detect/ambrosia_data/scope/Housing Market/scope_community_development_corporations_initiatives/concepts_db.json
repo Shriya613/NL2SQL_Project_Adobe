@@ -1,0 +1,31 @@
+{
+    "template": "Each Community Development Corporations has many different Initiatives. Among them, Homeless Shelter is common to many Community Development Corporations.",
+    "entities": {
+        "tab_name": "Community_Development_Corporations",
+        "col_name": null,
+        "value": null,
+        "scope_id": null,
+        "db_type": "table"
+    },
+    "components": {
+        "tab_name": "Initiatives",
+        "col_name": null,
+        "value": null,
+        "scope_id": null,
+        "db_type": "table"
+    },
+    "specific_component": {
+        "tab_name": "Initiatives",
+        "col_name": "initiative_name",
+        "value": "Homeless_Shelter",
+        "scope_id": 0,
+        "db_type": "value"
+    },
+    "entities_components": {
+        "tab_name": "Community_Development_Corporations_Initiatives",
+        "col_name": null,
+        "value": null,
+        "scope_id": null,
+        "db_type": "table"
+    }
+}

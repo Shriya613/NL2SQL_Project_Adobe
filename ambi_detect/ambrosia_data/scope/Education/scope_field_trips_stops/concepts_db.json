@@ -1,0 +1,31 @@
+{
+    "template": "Each Field Trips has many different Stops. Among them, Zoo is common to many Field Trips.",
+    "entities": {
+        "tab_name": "Field_Trips",
+        "col_name": null,
+        "value": null,
+        "scope_id": null,
+        "db_type": "table"
+    },
+    "components": {
+        "tab_name": "Stops",
+        "col_name": null,
+        "value": null,
+        "scope_id": null,
+        "db_type": "table"
+    },
+    "specific_component": {
+        "tab_name": "Stops",
+        "col_name": "stopLocation",
+        "value": "Zoo",
+        "scope_id": 0,
+        "db_type": "value"
+    },
+    "entities_components": {
+        "tab_name": "Field_Trips_Stops",
+        "col_name": null,
+        "value": null,
+        "scope_id": null,
+        "db_type": "table"
+    }
+}

@@ -1,0 +1,22 @@
+[
+    {
+        "question": "Who produced all the dramas?",
+        "sql_query1": "SELECT theater_company FROM \"Stage_Play\" WHERE genre = 'Drama';",
+        "sql_query2": "SELECT producer FROM \"Stage_Play\" WHERE genre = 'Drama';",
+        "sql_query3": "SELECT theater_company, producer FROM \"Stage_Play\" WHERE genre = 'Drama';",
+        "interpretation1": "What theater companies made all the dramas?",
+        "interpretation2": "What producers made all the dramas?",
+        "interpretation3": "What theater companies and producers made all the dramas?",
+        "sql_query_general": "SELECT Production FROM \"Stage_Play\" WHERE genre = 'Drama';"
+    },
+    {
+        "question": "Show me who staged all the performances and arrange them by premiere date in ascending order.",
+        "sql_query1": "SELECT theater_company FROM Stage_Play ORDER BY year_premiered ASC;",
+        "sql_query2": "SELECT producer FROM Stage_Play ORDER BY year_premiered ASC;",
+        "sql_query3": "SELECT theater_company, producer FROM Stage_Play ORDER BY year_premiered ASC;",
+        "interpretation1": "List the theater company for all plays and arrange them by ascending premiere date.",
+        "interpretation2": "List the producer for all plays and arrange them by ascending premiere date.",
+        "interpretation3": "List the theater company and producers for all plays and arrange them by ascending premiere date.",
+        "sql_query_general": "SELECT Production FROM Stage_Play ORDER BY year_premiered ASC;"
+    }
+]

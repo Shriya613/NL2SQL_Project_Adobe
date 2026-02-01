@@ -1,0 +1,8 @@
+{
+    "template": "Textbook and Online Course are subclasses of Learning Materials. All Textbooks and Online Courses have the property \"Difficulty Level\". There might be a Textbook and an Online Course that both have \"Difficulty Level\" equal to \"Intermediate\".",
+    "general_class": "Learning Materials",
+    "class1": "Textbook",
+    "class2": "Online Course",
+    "common_property": "Difficulty Level",
+    "common_value": "Intermediate"
+}

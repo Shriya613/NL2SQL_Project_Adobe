@@ -1,0 +1,9 @@
+[
+    {
+        "question": "Give me the science labs and art studios that have computers.",
+        "sql_query1": "SELECT Learning_Spaces.Name \r\nFROM Learning_Spaces\r\nWHERE (Learning_Spaces.Type = \"Science Lab\" OR Learning_Spaces.Type = \"Art Studio\") AND Learning_Spaces.AvailableResources = \"Computers\"",
+        "sql_query2": "SELECT Learning_Spaces.Name \r\nFROM Learning_Spaces\r\nWHERE Learning_Spaces.Type = \"Science Lab\" OR Learning_Spaces.Type = \"Art Studio\" AND Learning_Spaces.AvailableResources = \"Computers\"",
+        "interpretation1": "What science labs have computers and what art studios have the same resource?",
+        "interpretation2": "List all science labs and also list art studios that have computers."
+    }
+]

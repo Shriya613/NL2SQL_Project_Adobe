@@ -1,0 +1,31 @@
+{
+    "template": "Each Magazines has many different Categories. Among them, Lifestyle is common to many Magazines.",
+    "entities": {
+        "tab_name": "Magazines",
+        "col_name": null,
+        "value": null,
+        "scope_id": null,
+        "db_type": "table"
+    },
+    "components": {
+        "tab_name": "Categories",
+        "col_name": null,
+        "value": null,
+        "scope_id": null,
+        "db_type": "table"
+    },
+    "specific_component": {
+        "tab_name": "Categories",
+        "col_name": "categoryName",
+        "value": "Lifestyle",
+        "scope_id": 0,
+        "db_type": "value"
+    },
+    "entities_components": {
+        "tab_name": "Magazines_Categories",
+        "col_name": null,
+        "value": null,
+        "scope_id": null,
+        "db_type": "table"
+    }
+}

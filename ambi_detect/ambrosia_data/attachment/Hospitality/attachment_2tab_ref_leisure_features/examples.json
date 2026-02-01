@@ -1,0 +1,9 @@
+[
+    {
+        "question": "What size are all swimming pools and hot tubs in Miami?",
+        "sql_query1": "SELECT SwimmingPool.Size\r\nFROM City JOIN Hotel ON City.ID = Hotel.ID JOIN SwimmingPool ON Hotel.ID = SwimmingPool.ID\r\nWHERE City.Name = 'Miami'\r\nUNION\r\nSELECT HotTub.Capacity\r\nFROM City JOIN Hotel ON City.ID = Hotel.ID JOIN HotTub ON Hotel.ID = HotTub.ID\r\nWHERE City.Name = 'Miami'",
+        "sql_query2": "SELECT SwimmingPool.Size\r\nFROM City JOIN Hotel ON City.ID = Hotel.ID JOIN SwimmingPool ON Hotel.ID = SwimmingPool.ID\r\nUNION\r\nSELECT HotTub.Capacity\r\nFROM City JOIN Hotel ON City.ID = Hotel.ID JOIN HotTub ON Hotel.ID = HotTub.ID\r\nWHERE City.Name = 'Miami'",
+        "interpretation1": "What size are the swimming pools in Miami and what size are the hot tubs there?",
+        "interpretation2": "Can you show me the sizes of all hot tubs in Miami along with the sizes of all swimming pools in any given location?"
+    }
+]

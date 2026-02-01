@@ -1,0 +1,31 @@
+{
+    "template": "Each Spa has many different Treatments. Among them, Massage is common to many Spa.",
+    "entities": {
+        "tab_name": "Spa",
+        "col_name": null,
+        "value": null,
+        "scope_id": null,
+        "db_type": "table"
+    },
+    "components": {
+        "tab_name": "Treatments",
+        "col_name": null,
+        "value": null,
+        "scope_id": null,
+        "db_type": "table"
+    },
+    "specific_component": {
+        "tab_name": "Treatments",
+        "col_name": "name",
+        "value": "Massage",
+        "scope_id": 0,
+        "db_type": "value"
+    },
+    "entities_components": {
+        "tab_name": "Spa_Treatments",
+        "col_name": null,
+        "value": null,
+        "scope_id": null,
+        "db_type": "table"
+    }
+}

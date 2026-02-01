@@ -1,0 +1,33 @@
+{
+    "domain": "Students",
+    "template": "Field Trip and Study Group are subclasses of Learning Activities. All Field Trips and Study Groups have the property \"Purpose\". There might be a Field Trip and a Study Group that both have \"Purpose\" equal to \"Real-world Application\".",
+    "type": "1tab_val",
+    "general_class": {
+        "tab_name": "LearningActivities",
+        "col_name": "ActivityType",
+        "value": null,
+        "scope_id": null,
+        "db_type": "column"
+    },
+    "class1": {
+        "tab_name": "LearningActivities",
+        "col_name": "ActivityType",
+        "value": "Field Trip",
+        "scope_id": null,
+        "db_type": "value"
+    },
+    "class2": {
+        "tab_name": "LearningActivities",
+        "col_name": "ActivityType",
+        "value": "Study Group",
+        "scope_id": null,
+        "db_type": "value"
+    },
+    "common_property": {
+        "tab_name": "LearningActivities",
+        "col_name": "Purpose",
+        "value": "Real-world Application",
+        "scope_id": null,
+        "db_type": "value"
+    }
+}

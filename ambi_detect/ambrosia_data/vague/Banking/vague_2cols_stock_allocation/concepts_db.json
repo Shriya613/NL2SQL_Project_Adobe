@@ -1,0 +1,25 @@
+{
+    "template": "Question: What part of this portfolio is allocated to stocks? Subject of Inquiry: Investment Portfolios\nFocus: Stock Allocation Possible answer types: 1. Stock Percentage 2. Stock Value",
+    "general_category1": {
+        "tab_name": "PortfolioPerformance",
+        "col_name": "Stock_Percentage",
+        "value": null,
+        "scope_id": null,
+        "db_type": "column"
+    },
+    "general_category2": {
+        "tab_name": "PortfolioPerformance",
+        "col_name": "Stock_Value",
+        "value": null,
+        "scope_id": null,
+        "db_type": "column"
+    },
+    "subject": {
+        "tab_name": "PortfolioPerformance",
+        "col_name": "Investment_Portfolios",
+        "value": null,
+        "scope_id": null,
+        "db_type": "column"
+    },
+    "type": "2cols"
+}

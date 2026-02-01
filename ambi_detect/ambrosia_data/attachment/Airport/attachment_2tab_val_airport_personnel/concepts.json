@@ -1,0 +1,8 @@
+{
+    "template": "Air Traffic Controller and Ground Staff are subclasses of Airport Personnel. All Air Traffic Controllers and Ground Staff have the property \"Salary\". There might be an Air Traffic Controller and a member of Ground Staff that both have \"Salary\" equal to \"$60,000 per year\".",
+    "general_class": "Airport Personnel",
+    "class1": "Air Traffic Controller",
+    "class2": "Ground Staff",
+    "common_property": "Salary",
+    "common_value": "$60,000 per year"
+}

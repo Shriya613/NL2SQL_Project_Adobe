@@ -1,0 +1,9 @@
+[
+    {
+        "question": "Show hotels and youth hostels with a price of 50.",
+        "sql_query1": "SELECT Accommodations.Name \r\nFROM Accommodations\r\nWHERE (Accommodations.Type_of_Accommodation = \"Hotel\" OR Accommodations.Type_of_Accommodation = \"Youth Hostel\") AND Accommodations.Price = 50.0",
+        "sql_query2": "SELECT Accommodations.Name \r\nFROM Accommodations\r\nWHERE Accommodations.Type_of_Accommodation = \"Hotel\" OR Accommodations.Type_of_Accommodation = \"Youth Hostel\" AND Accommodations.Price = 50.0",
+        "interpretation1": "What hotels have a price of 50 and what youth hostels have the same price?",
+        "interpretation2": "Provide a list of all hotels and also provide a list of youth hostels with a price of 50."
+    }
+]

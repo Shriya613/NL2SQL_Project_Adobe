@@ -1,0 +1,9 @@
+[
+    {
+        "question": "Show me unaccompanied minor and tailored assisted passengers that were assisted by Clare Allen.",
+        "sql_query1": "SELECT Passengers.FullName\r\nFROM Requirements JOIN Passengers ON Passengers.PassengerID = Requirements.PassengerID \r\nWHERE (Requirements.description = \"Unaccompanied minor\" OR Requirements.description = \"Tailored assistance request\") AND Requirements.assistant = \"Clare Allen\"",
+        "sql_query2": "SELECT Passengers.FullName\r\nFROM Requirements JOIN Passengers ON Passengers.PassengerID = Requirements.PassengerID \r\nWHERE Requirements.description = \"Unaccompanied minor\" OR Requirements.description = \"Tailored assistance request\" AND Requirements.assistant = \"Clare Allen\"",
+        "interpretation1": "What unaccompanied minors did Clare Allen assist and what tailored assisted passengers did she also assist?",
+        "interpretation2": "List all unaccompanied minor passengers and also list tailored assisted passengers that were assisted by Clare Allen."
+    }
+]

@@ -1,0 +1,33 @@
+{
+    "domain": "Company",
+    "template": "Graphic Designer and Web Developer are subclasses of Creative Industry Professions. All Graphic designers and Web developers have property \"Office\". There might be a Graphic Designer and a Web Developer that both have \"Office\" equal to \"2/7 London Street\".",
+    "type": "1tab_val",
+    "general_class": {
+        "tab_name": "Position",
+        "col_name": "creative_industry_profession",
+        "value": null,
+        "scope_id": null,
+        "db_type": "column"
+    },
+    "class1": {
+        "tab_name": "Position",
+        "col_name": "creative_industry_profession",
+        "value": "Graphic Designer",
+        "scope_id": null,
+        "db_type": "value"
+    },
+    "class2": {
+        "tab_name": "Position",
+        "col_name": "creative_industry_profession",
+        "value": "Web Developer",
+        "scope_id": null,
+        "db_type": "value"
+    },
+    "common_property": {
+        "tab_name": "Position",
+        "col_name": "office",
+        "value": "2/7 London Street",
+        "scope_id": null,
+        "db_type": "value"
+    }
+}

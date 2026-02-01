@@ -1,0 +1,33 @@
+{
+    "domain": "Accomodations",
+    "template": "Chalet and Cabin are subclasses of Accommodation. All Chalets and Cabins have property \"Price Per Night\". There might be a Chalet and a Cabin that both have \"Price Per Night\" equal to \"200\".",
+    "type": "1tab_ref_like",
+    "general_class": {
+        "tab_name": "Accomodations",
+        "col_name": "type",
+        "value": null,
+        "scope_id": null,
+        "db_type": "column"
+    },
+    "class1": {
+        "tab_name": "Accomodations",
+        "col_name": "type",
+        "value": "Chalet",
+        "scope_id": null,
+        "db_type": "value"
+    },
+    "class2": {
+        "tab_name": "Accomodations",
+        "col_name": "type",
+        "value": "Cabin",
+        "scope_id": null,
+        "db_type": "value"
+    },
+    "common_property": {
+        "tab_name": "Prices",
+        "col_name": "price_per_night",
+        "value": 300.0,
+        "scope_id": null,
+        "db_type": "value"
+    }
+}

@@ -1,0 +1,31 @@
+{
+    "template": "Each Streaming Services has many different Revenue Streams. Among them, Advertising Revenue is common to many Streaming Services.",
+    "entities": {
+        "tab_name": "Streaming_Services",
+        "col_name": null,
+        "value": null,
+        "scope_id": null,
+        "db_type": "table"
+    },
+    "components": {
+        "tab_name": "Revenue_Streams",
+        "col_name": null,
+        "value": null,
+        "scope_id": null,
+        "db_type": "table"
+    },
+    "specific_component": {
+        "tab_name": "Revenue_Streams",
+        "col_name": "name",
+        "value": "Advertising_Revenue",
+        "scope_id": 0,
+        "db_type": "value"
+    },
+    "entities_components": {
+        "tab_name": "Streaming_Service_Revenue",
+        "col_name": null,
+        "value": null,
+        "scope_id": null,
+        "db_type": "table"
+    }
+}

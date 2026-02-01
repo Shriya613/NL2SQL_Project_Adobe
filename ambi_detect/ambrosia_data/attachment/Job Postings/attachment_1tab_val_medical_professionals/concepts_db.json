@@ -1,0 +1,33 @@
+{
+    "domain": "Hospitals",
+    "template": "Nurse and Physician's Assistant are subclasses of Medical Professionals. All Nurses and Physician's assistants have property \"Patients\". There might be a Nurse and a Physician's Assistant that both have \"Patients\" equal to \"Anne Buche\".",
+    "type": "1tab_val",
+    "general_class": {
+        "tab_name": "Employees",
+        "col_name": "MedicalProfession",
+        "value": null,
+        "scope_id": null,
+        "db_type": "column"
+    },
+    "class1": {
+        "tab_name": "Employees",
+        "col_name": "MedicalProfession",
+        "value": "Nurse",
+        "scope_id": null,
+        "db_type": "value"
+    },
+    "class2": {
+        "tab_name": "Employees",
+        "col_name": "MedicalProfession",
+        "value": "Physician's Assistant",
+        "scope_id": null,
+        "db_type": "value"
+    },
+    "common_property": {
+        "tab_name": "Employees",
+        "col_name": "Patient",
+        "value": "Anne Buche",
+        "scope_id": null,
+        "db_type": "value"
+    }
+}

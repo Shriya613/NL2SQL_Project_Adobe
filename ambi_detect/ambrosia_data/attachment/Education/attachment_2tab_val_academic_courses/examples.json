@@ -1,0 +1,9 @@
+[
+    {
+        "question": "Display engineering classes and design classes with projects related to sustainability.",
+        "sql_query1": "SELECT Engineering_Class.name\r\nFROM Engineering_Class\r\nWHERE Engineering_Class.Projects = \"Sustainability Project\"\r\nUNION\r\nSELECT Design_Class.name\r\nFROM Design_Class\r\nWHERE Design_Class.Projects = \"Sustainability Project\"",
+        "sql_query2": "SELECT Engineering_Class.name\r\nFROM Engineering_Class\r\nUNION\r\nSELECT Design_Class.name\r\nFROM Design_Class\r\nWHERE Design_Class.Projects = \"Sustainability Project\"",
+        "interpretation1": "What engineering classes and design classes are currently working on sustainability projects?",
+        "interpretation2": "List all engineering classes and also show design classes focusing on the sustainability project."
+    }
+]

@@ -1,0 +1,6 @@
+{
+    "template": "Each Online Learning Platforms has many different Courses. Among them, English as a Second Language is common to many Online Learning Platforms.",
+    "specific_component": "English as a Second Language",
+    "components": "Courses",
+    "entities": "Online Learning Platforms"
+}

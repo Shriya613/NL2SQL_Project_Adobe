@@ -1,0 +1,9 @@
+[
+    {
+        "question": "Provide all the unaccompanied minors and people requiring tailored assistance that Claire Allen helps.",
+        "sql_query1": "SELECT Passengers.FullName\r\nFROM PassengerAssistanceRequests JOIN Assistants ON PassengerAssistanceRequests.AssistantID = Assistants.AssistantID JOIN Passengers ON Passengers.PassengerID = PassengerAssistanceRequests.PassengerID\r\nWHERE (PassengerAssistanceRequests.Type = \"Unaccompanied Minor\" OR PassengerAssistanceRequests.Type = \"Tailored Assistance\") AND Assistants.Name = \"Claire Allen\"",
+        "sql_query2": "SELECT Passengers.FullName\r\nFROM PassengerAssistanceRequests JOIN Assistants ON PassengerAssistanceRequests.AssistantID = Assistants.AssistantID JOIN Passengers ON Passengers.PassengerID = PassengerAssistanceRequests.PassengerID\r\nWHERE PassengerAssistanceRequests.Type = \"Unaccompanied Minor\" OR PassengerAssistanceRequests.Type = \"Tailored Assistance\" AND Assistants.Name = \"Claire Allen\"",
+        "interpretation1": "Out of the unaccompanied minors and passengers requiring tailored assistance, show all of those assisted by Claire Allen.",
+        "interpretation2": "Show all the unaccompanied minors and only those passengers requiring tailored assistance that Claire Allen helps."
+    }
+]

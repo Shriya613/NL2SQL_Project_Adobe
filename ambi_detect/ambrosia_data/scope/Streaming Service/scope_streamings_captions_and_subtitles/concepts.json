@@ -1,0 +1,6 @@
+{
+    "template": "Each Streamings has many different Captions and Subtitles. Among them, Auto-Generated Subtitles is common to many Streamings.",
+    "specific_component": "Auto-Generated Subtitles",
+    "components": "Captions and Subtitles",
+    "entities": "Streamings"
+}

@@ -1,0 +1,6 @@
+{
+    "template": "Each National Parks has many different Trails. Among them, Beginner Trail is common to many National Parks.",
+    "specific_component": "Beginner Trail",
+    "components": "Trails",
+    "entities": "National Parks"
+}

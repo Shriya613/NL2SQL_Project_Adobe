@@ -1,0 +1,6 @@
+{
+    "template": "Each Travel Agency has many different Service. Among them, Cruise Booking is common to many Travel Agency.",
+    "specific_component": "Cruise Booking",
+    "components": "Service",
+    "entities": "Travel Agency"
+}

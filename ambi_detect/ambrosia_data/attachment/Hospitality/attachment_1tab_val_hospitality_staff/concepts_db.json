@@ -1,0 +1,33 @@
+{
+    "domain": "RoomTypes",
+    "template": "Chef and Server are subclasses of Hospitality Staff. All Chefs and Servers have property \"Language\". There might be a Chef and a Server that both have \"Language\" equal to \"Spanish\".",
+    "type": "1tab_val",
+    "general_class": {
+        "tab_name": "Staff",
+        "col_name": "Role",
+        "value": null,
+        "scope_id": null,
+        "db_type": "column"
+    },
+    "class1": {
+        "tab_name": "Staff",
+        "col_name": "Role",
+        "value": "Chef",
+        "scope_id": null,
+        "db_type": "value"
+    },
+    "class2": {
+        "tab_name": "Staff",
+        "col_name": "Role",
+        "value": "Server",
+        "scope_id": null,
+        "db_type": "value"
+    },
+    "common_property": {
+        "tab_name": "Staff",
+        "col_name": "Language",
+        "value": "English",
+        "scope_id": null,
+        "db_type": "value"
+    }
+}

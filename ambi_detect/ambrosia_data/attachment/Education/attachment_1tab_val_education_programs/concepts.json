@@ -1,0 +1,8 @@
+{
+    "template": "International Baccalaureate Program and Advanced Placement Program are subclasses of Education Programs. All International Baccalaureate Programs and Advanced Placement Programs have property \"Credits\". There might be an International Baccalaureate Program and an Advanced Placement Program that both have \"Credits\" equal to a specific value.",
+    "general_class": "Education Programs",
+    "class1": "International Baccalaureate Program",
+    "class2": "Advanced Placement Program",
+    "common_property": "Credits",
+    "common_value": "30"
+}

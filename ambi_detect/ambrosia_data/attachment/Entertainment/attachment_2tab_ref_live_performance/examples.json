@@ -1,0 +1,9 @@
+[
+    {
+        "question": "Please display concerts and theater plays held at a venue with a capacity of 700.",
+        "sql_query1": "SELECT Concert.title\r\nFROM Venue JOIN Concert ON Venue.id = Concert.venue_id\r\nWHERE Venue.venue_capacity = 700\r\nUNION\r\nSELECT Theater_Play.title\r\nFROM Venue JOIN Theater_Play ON Venue.id = Theater_Play.venue_id\r\nWHERE Venue.venue_capacity = 700",
+        "sql_query2": "SELECT Concert.title\r\nFROM Venue JOIN Concert ON Venue.id = Concert.venue_id\r\nUNION\r\nSELECT Theater_Play.title\r\nFROM Venue JOIN Theater_Play ON Venue.id = Theater_Play.venue_id\r\nWHERE Venue.venue_capacity = 700",
+        "interpretation1": "Can you show me the concerts that take place at a venue with a capacity of 700 and the theater plays that take place at a venue with a capacity of 700?",
+        "interpretation2": "Show the titles of the concerts and also show the titles of theater plays, but only if they are held at a venue with a capacity of 700."
+    }
+]

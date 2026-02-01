@@ -1,0 +1,9 @@
+[
+    {
+        "question": "Display patios and verandas with 50 seats.",
+        "sql_query1": "SELECT Patios.name\r\nFROM Patios\r\nWHERE Patios.Number_of_Seats = 50\r\nUNION\r\nSELECT Verandas.name\r\nFROM Verandas\r\nWHERE Verandas.Number_of_Seats = 50",
+        "sql_query2": "SELECT Patios.name\r\nFROM Patios\r\nUNION\r\nSELECT Verandas.name\r\nFROM Verandas\r\nWHERE Verandas.Number_of_Seats = 50",
+        "interpretation1": "Can you show both patios and verandas each with 50 seats?",
+        "interpretation2": "List all patios and also display verandas with 50 seats."
+    }
+]

@@ -1,0 +1,8 @@
+{
+    "template": "Press Conference and Interview are subclasses of Information Gathering Methods. All Press conferences and Interviews have property \"Participant Type\". There might be a Press Conference and a Interview that both have \"Participant Type\" equal to \"Politician\".",
+    "general_class": "Information Gathering Methods",
+    "class1": "Press Conference",
+    "class2": "Interview",
+    "common_property": "Participant Type",
+    "common_value": "Politician"
+}

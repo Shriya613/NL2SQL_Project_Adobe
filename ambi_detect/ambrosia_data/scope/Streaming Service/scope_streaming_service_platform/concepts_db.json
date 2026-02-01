@@ -1,0 +1,31 @@
+{
+    "template": "Each Streaming Service has many different Platform. Among them, Web Browser is common to many Streaming Service.",
+    "entities": {
+        "tab_name": "Streaming_Service",
+        "col_name": null,
+        "value": null,
+        "scope_id": null,
+        "db_type": "table"
+    },
+    "components": {
+        "tab_name": "Platform",
+        "col_name": null,
+        "value": null,
+        "scope_id": null,
+        "db_type": "table"
+    },
+    "specific_component": {
+        "tab_name": "Platform",
+        "col_name": "name",
+        "value": "Web_Browser",
+        "scope_id": 0,
+        "db_type": "value"
+    },
+    "entities_components": {
+        "tab_name": "Streaming_Service_Platform",
+        "col_name": null,
+        "value": null,
+        "scope_id": null,
+        "db_type": "table"
+    }
+}

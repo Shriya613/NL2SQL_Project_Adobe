@@ -1,0 +1,22 @@
+[
+    {
+        "question": "what are Lisa's qualifications",
+        "sql_query1": "select title, major from Degree join  Investigative_Journalist on Investigative_Journalist.degreeID = Degree.degreeID where firstName = 'Lisa'",
+        "sql_query2": "select name, issueDate from Certificate join  Investigative_Journalist on Investigative_Journalist.CertificateID = Certificate.CertificateID where firstName = 'Lisa'",
+        "sql_query3": "select title, major, name, issueDate from Degree join  Investigative_Journalist on Investigative_Journalist.degreeID = Degree.degreeID join  Certificate on Investigative_Journalist.CertificateID = Certificate.CertificateID where firstName = 'Lisa'",
+        "interpretation1": "What is Lisa's degree?",
+        "interpretation2": "What certificate qualification does Lisa have?",
+        "interpretation3": "What certificate and degree does Lisa have?",
+        "sql_query_general": "select title, major from qualification join  Investigative_Journalist on Investigative_Journalist.degreeID = Qualification.degreeID where firstName = 'Lisa'"
+    },
+    {
+        "question": "what are the qualifications of the journalist who wrote the last article",
+        "sql_query1": "select title, major from Degree join  Investigative_Journalist on Investigative_Journalist.degreeID = Degree.degreeID join Article \r\n on  Article.journalistID  = Investigative_Journalist.journalistID order by publishedDate desc limit 1",
+        "sql_query2": "select name, issueDate from Certificate join  Investigative_Journalist on Investigative_Journalist.CertificateID = Certificate.CertificateID join Article \r\n on  Article.journalistID  = Investigative_Journalist.journalistID order by publishedDate desc limit 1",
+        "sql_query3": "select title, major, name, issueDate from Degree join  Investigative_Journalist on Investigative_Journalist.degreeID = Degree.degreeID join Article \r\n on  Article.journalistID  = Investigative_Journalist.journalistID join  Certificate on Investigative_Journalist.CertificateID = Certificate.CertificateID order by publishedDate desc limit 1",
+        "interpretation1": "What is the degree of the journalist who wrote the last article?",
+        "interpretation2": "What is the certificate of the journalist who wrote the last article?",
+        "interpretation3": "What is the degree and certificate of the journalist who wrote the last article?",
+        "sql_query_general": "select title, major from qualification join  Investigative_Journalist on Investigative_Journalist.degreeID = Qualification.degreeID join Article \r\n on  Article.journalistID  = Investigative_Journalist.journalistID order by publishedDate desc limit 1"
+    }
+]

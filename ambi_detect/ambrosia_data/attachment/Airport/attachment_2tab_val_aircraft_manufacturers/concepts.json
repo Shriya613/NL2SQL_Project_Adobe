@@ -1,0 +1,8 @@
+{
+    "template": "Boeing and Airbus are subclasses of Aircraft Manufacturers. All Boeing and Airbus aircraft have the property \"Number of Seats\". There might be a Boeing aircraft and an Airbus aircraft that both have \"Number of Seats\" equal to \"180\".",
+    "general_class": "Aircraft Manufacturers",
+    "class1": "Boeing",
+    "class2": "Airbus",
+    "common_property": "Number of Seats",
+    "common_value": "180"
+}

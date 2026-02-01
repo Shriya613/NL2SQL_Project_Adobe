@@ -1,0 +1,9 @@
+[
+    {
+        "question": "Show me the style each photographer uses.",
+        "sql_query1": "SELECT Styles.styleName  from Photographers_Styles join Styles on Photographers_Styles.styleId = Styles.id join Photographers on Photographers_Styles.photographerId = Photographers.id   GROUP BY Photographers_Styles.styleId HAVING COUNT(DISTINCT Photographers_Styles.photographerId) = (SELECT COUNT(*) FROM  Photographers)",
+        "sql_query2": "select photographers.name , styles.stylename from Photographers_Styles join Styles on Photographers_Styles.styleId = Styles.id join Photographers on Photographers_Styles.photographerId = Photographers.id",
+        "interpretation1": "What styles are common to all photographers?",
+        "interpretation2": "For every photographer, list the styles they use."
+    }
+]

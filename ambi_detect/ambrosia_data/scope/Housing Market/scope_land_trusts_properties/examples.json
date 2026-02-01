@@ -1,0 +1,9 @@
+[
+    {
+        "question": "Give me the type of property that every land trust has.",
+        "sql_query1": "SELECT Properties.typeOfProperty  from Land_Trusts_Properties join Properties on Land_Trusts_Properties.propertyId = Properties.propertyId join Land_Trusts on Land_Trusts_Properties.landTrustId = Land_Trusts.id   GROUP BY Land_Trusts_Properties.propertyId HAVING COUNT(DISTINCT Land_Trusts_Properties.landTrustId) = (SELECT COUNT(*) FROM  Land_Trusts)",
+        "sql_query2": "select land_trusts.trustname , properties.typeofproperty from Land_Trusts_Properties join Properties on Land_Trusts_Properties.propertyId = Properties.propertyId join Land_Trusts on Land_Trusts_Properties.landTrustId = Land_Trusts.id",
+        "interpretation1": "What type of property is common to all land trusts?",
+        "interpretation2": "For each land trust, give me the type of property it offers."
+    }
+]

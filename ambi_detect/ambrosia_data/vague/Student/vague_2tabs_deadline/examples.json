@@ -1,0 +1,12 @@
+[
+    {
+        "question": "Can you show me the description of each assignment along with its deadline?",
+        "sql_query1": "SELECT a.Description, d.Year, d.Month, d.Day\r\nFROM Assignments a\r\nJOIN Date d ON a.Due_Date = d.Date_ID;",
+        "sql_query2": "SELECT a.Description, d.hour, d.minute, d.second \r\nFROM Assignments a\r\nJOIN Time d ON a.Due_time = d.time_ID;",
+        "sql_query3": "SELECT a.Description, d.Year, d.Month, d.Day,  t.hour, t.minute, t.second\r\nFROM Assignments a\r\nJOIN Date d ON a.Due_Date = d.Date_ID\r\nJOIN Time t ON a.Due_time = t.time_ID;",
+        "interpretation1": "For each assignment list the description and deadline date.",
+        "interpretation2": "For each assignment list the description and deadline time.",
+        "interpretation3": "For each assignment list the description and deadline date and time.",
+        "sql_query_general": "SELECT a.Description, d.Year, d.Month, d.Day\r\nFROM Assignments a\r\nJOIN Deadline d ON a.Due_Date = d.Date_ID;"
+    }
+]

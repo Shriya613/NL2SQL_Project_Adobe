@@ -1,0 +1,7 @@
+{
+    "template": "Question: What technology is used to produce this online news platform? Subject of Inquiry: Online News Platform\nFocus: Technology Possible answer types: 1. Content Management System 2. Web Framework",
+    "subject": "Online News Platform",
+    "focus": "Technology",
+    "general_category1": "Content Management System",
+    "general_category2": "Web Framework"
+}

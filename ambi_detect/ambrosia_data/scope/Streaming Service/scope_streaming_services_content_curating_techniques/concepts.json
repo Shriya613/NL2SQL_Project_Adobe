@@ -1,0 +1,6 @@
+{
+    "template": "Each Streaming Services has many different Content Curating Techniques. Among them, Algorithmic Recommendations is common to many Streaming Services.",
+    "specific_component": "Algorithmic Recommendations",
+    "components": "Content Curating Techniques",
+    "entities": "Streaming Services"
+}

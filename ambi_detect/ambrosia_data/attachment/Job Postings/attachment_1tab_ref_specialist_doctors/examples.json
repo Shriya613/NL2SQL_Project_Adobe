@@ -1,0 +1,9 @@
+[
+    {
+        "question": "Show all radiologists and ultrasound technicians at Western Medical Centre.",
+        "sql_query1": "SELECT Doctors.name \r\nFROM Doctors JOIN Hospitals ON Doctors.hospital_id = Hospitals.id\r\nWHERE (Doctors.specialist_doctor = \"Radiologist\" OR Doctors.specialist_doctor = \"Ultrasound Technician\") AND Hospitals.name = \"Western Medical Center\"",
+        "sql_query2": "SELECT Doctors.name \r\nFROM Doctors JOIN Hospitals ON Doctors.hospital_id = Hospitals.id\r\nWHERE Doctors.specialist_doctor = \"Radiologist\" OR Doctors.specialist_doctor = \"Ultrasound Technician\" AND Hospitals.name = \"Western Medical Center\"",
+        "interpretation1": "Show the staff from Wester Medical Centre who work as radiologists or ultrasound technicians.",
+        "interpretation2": "Give me all radiologists across all hospitals and just the ultrasound technicians who work at Western Medical Centre."
+    }
+]

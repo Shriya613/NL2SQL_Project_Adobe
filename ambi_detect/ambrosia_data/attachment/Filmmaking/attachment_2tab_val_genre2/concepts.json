@@ -1,0 +1,8 @@
+{
+    "template": "Sci-Fi and Fantasy are subclasses of Genre. All Sci-Fi and Fantasy films have a property \"Filming Locations\". There might be a Sci-Fi and a Fantasy film that were both filmed in \"New Zealand\".",
+    "general_class": "Genre",
+    "class1": "Sci-Fi",
+    "class2": "Fantasy",
+    "common_property": "Filming Locations",
+    "common_value": "New Zealand"
+}

@@ -1,0 +1,9 @@
+[
+    {
+        "question": "What techniques do we have for every photography workshop?",
+        "sql_query1": "SELECT Techniques.technique_name  from Photography_Workshops_Techniques join Techniques on Photography_Workshops_Techniques.technique_id = Techniques.technique_id join Photography_Workshops on Photography_Workshops_Techniques.photography_workshop_id = Photography_Workshops.workshop_id   GROUP BY Photography_Workshops_Techniques.technique_id HAVING COUNT(DISTINCT Photography_Workshops_Techniques.photography_workshop_id) = (SELECT COUNT(*) FROM  Photography_Workshops)",
+        "sql_query2": "select photography_workshops.workshop_id , techniques.technique_name from Photography_Workshops_Techniques join Techniques on Photography_Workshops_Techniques.technique_id = Techniques.technique_id join Photography_Workshops on Photography_Workshops_Techniques.photography_workshop_id = Photography_Workshops.workshop_id",
+        "interpretation1": "What techniques do we have in common for every photography workshop?",
+        "interpretation2": "For every photography workshop, what are the corresponding techniques?"
+    }
+]

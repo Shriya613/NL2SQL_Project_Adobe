@@ -1,0 +1,6 @@
+{
+    "template": "Each Land Trusts has many different Properties. Among them, Conservation Easement is common to many Land Trusts.",
+    "specific_component": "Conservation Easement",
+    "components": "Properties",
+    "entities": "Land Trusts"
+}

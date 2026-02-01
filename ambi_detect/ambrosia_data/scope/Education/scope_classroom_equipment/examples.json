@@ -1,0 +1,23 @@
+[
+    {
+        "question": "List the quantity of equipment available in every classroom.",
+        "sql_query1": "SELECT Equipment.quantity  from Classroom_Equipment join Equipment on Classroom_Equipment.equipmentId = Equipment.id join Classroom on Classroom_Equipment.classroomId = Classroom.id   GROUP BY Classroom_Equipment.equipmentId HAVING COUNT(DISTINCT Classroom_Equipment.classroomId) = (SELECT COUNT(*) FROM  Classroom)",
+        "sql_query2": "select classroom.name , equipment.quantity from Classroom_Equipment join Equipment on Classroom_Equipment.equipmentId = Equipment.id join Classroom on Classroom_Equipment.classroomId = Classroom.id",
+        "interpretation1": "List the quantity of equipment that is common for all classrooms.",
+        "interpretation2": "For each classroom, List the quantity of equipment."
+    },
+    {
+        "question": "Show me information on equipment each classroom uses including their quantity.",
+        "sql_query1": "SELECT Equipment.equipmentName, Equipment.quantity  from Classroom_Equipment join Equipment on Classroom_Equipment.equipmentId = Equipment.id join Classroom on Classroom_Equipment.classroomId = Classroom.id   GROUP BY Classroom_Equipment.equipmentId HAVING COUNT(DISTINCT Classroom_Equipment.classroomId) = (SELECT COUNT(*) FROM  Classroom)",
+        "sql_query2": "select classroom.name , equipment.equipmentname , equipment.quantity from Classroom_Equipment join Equipment on Classroom_Equipment.equipmentId = Equipment.id join Classroom on Classroom_Equipment.classroomId = Classroom.id",
+        "interpretation1": "What information is there on equipment including their quantity that is common to all classrooms?",
+        "interpretation2": "For every classroom, list information on equipment used including their quantity."
+    },
+    {
+        "question": "What equipment names do we have in every class?",
+        "sql_query1": "SELECT Equipment.equipmentName  from Classroom_Equipment join Equipment on Classroom_Equipment.equipmentId = Equipment.id join Classroom on Classroom_Equipment.classroomId = Classroom.id   GROUP BY Classroom_Equipment.equipmentId HAVING COUNT(DISTINCT Classroom_Equipment.classroomId) = (SELECT COUNT(*) FROM  Classroom)",
+        "sql_query2": "select classroom.name , equipment.equipmentname from Classroom_Equipment join Equipment on Classroom_Equipment.equipmentId = Equipment.id join Classroom on Classroom_Equipment.classroomId = Classroom.id",
+        "interpretation1": "Show me the equipment names that are common to all classes",
+        "interpretation2": "For each classroom, show me the names of the equipment it contains"
+    }
+]

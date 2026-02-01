@@ -1,0 +1,31 @@
+{
+    "template": "Each Urban Planners has many different Elements. Among them, Green Space is common to many Urban Planners.",
+    "entities": {
+        "tab_name": "Urban_Planners",
+        "col_name": null,
+        "value": null,
+        "scope_id": null,
+        "db_type": "table"
+    },
+    "components": {
+        "tab_name": "Elements",
+        "col_name": null,
+        "value": null,
+        "scope_id": null,
+        "db_type": "table"
+    },
+    "specific_component": {
+        "tab_name": "Elements",
+        "col_name": "element_name",
+        "value": "Green_Space",
+        "scope_id": 0,
+        "db_type": "value"
+    },
+    "entities_components": {
+        "tab_name": "Urban_Planners_Elements",
+        "col_name": null,
+        "value": null,
+        "scope_id": null,
+        "db_type": "table"
+    }
+}

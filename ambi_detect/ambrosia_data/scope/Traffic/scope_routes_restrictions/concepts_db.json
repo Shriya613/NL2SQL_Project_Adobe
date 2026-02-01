@@ -1,0 +1,31 @@
+{
+    "template": "Each Routes has many different Restrictions. Among them, Weight Limit is common to many Routes.",
+    "entities": {
+        "tab_name": "Routes",
+        "col_name": null,
+        "value": null,
+        "scope_id": null,
+        "db_type": "table"
+    },
+    "components": {
+        "tab_name": "Restrictions",
+        "col_name": null,
+        "value": null,
+        "scope_id": null,
+        "db_type": "table"
+    },
+    "specific_component": {
+        "tab_name": "Restrictions",
+        "col_name": "restrictionType",
+        "value": "Weight Limit",
+        "scope_id": 0,
+        "db_type": "value"
+    },
+    "entities_components": {
+        "tab_name": "Routes_Restrictions",
+        "col_name": null,
+        "value": null,
+        "scope_id": null,
+        "db_type": "table"
+    }
+}

@@ -1,0 +1,31 @@
+{
+    "template": "Each Maritime Villages has many different Boat Tours. Among them, Whale Watching is common to many Maritime Villages.",
+    "entities": {
+        "tab_name": "Maritime_Villages",
+        "col_name": null,
+        "value": null,
+        "scope_id": null,
+        "db_type": "table"
+    },
+    "components": {
+        "tab_name": "Boat_Tours",
+        "col_name": null,
+        "value": null,
+        "scope_id": null,
+        "db_type": "table"
+    },
+    "specific_component": {
+        "tab_name": "Boat_Tours",
+        "col_name": "tour_name",
+        "value": "Whale Watching",
+        "scope_id": 0,
+        "db_type": "value"
+    },
+    "entities_components": {
+        "tab_name": "Maritime_Villages_Boat_Tours",
+        "col_name": null,
+        "value": null,
+        "scope_id": null,
+        "db_type": "table"
+    }
+}

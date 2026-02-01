@@ -1,0 +1,8 @@
+{
+    "template": "Navigation System and Communication System are subclasses of Airport Systems. All Navigation Systems and Communication Systems have the property \"Airport\". There might be a Navigation System and a Communication System that both have \"Airport\" equal to \"Airport C\".",
+    "general_class": "Airport Systems",
+    "class1": "Navigation System",
+    "class2": "Communication System",
+    "common_property": "Airport",
+    "common_value": "Heathrow"
+}

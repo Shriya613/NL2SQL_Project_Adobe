@@ -1,0 +1,31 @@
+{
+    "template": "Each Healthcare Centers has many different Programs. Among them, Wellness Initiatives is common to many Healthcare Centers.",
+    "entities": {
+        "tab_name": "Healthcare_Centers",
+        "col_name": null,
+        "value": null,
+        "scope_id": null,
+        "db_type": "table"
+    },
+    "components": {
+        "tab_name": "Programs",
+        "col_name": null,
+        "value": null,
+        "scope_id": null,
+        "db_type": "table"
+    },
+    "specific_component": {
+        "tab_name": "Programs",
+        "col_name": "ProgramType",
+        "value": "Wellness_Initiatives",
+        "scope_id": 0,
+        "db_type": "value"
+    },
+    "entities_components": {
+        "tab_name": "Healthcare_Centers_Programs",
+        "col_name": null,
+        "value": null,
+        "scope_id": null,
+        "db_type": "table"
+    }
+}

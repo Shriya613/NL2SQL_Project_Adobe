@@ -1,0 +1,8 @@
+{
+    "template": "Espresso Machine and Blender are subclasses of Commercial Appliances. All Espresso machines and Blenders have property \"Apartments\". There might be a Espresso Machine and a Blender that both have \"Apartments\" equal to \"High-end Residential\".",
+    "general_class": "Commercial Appliances",
+    "class1": "Espresso Machine",
+    "class2": "Blender",
+    "common_property": "Apartments",
+    "common_value": "High-end Residential"
+}

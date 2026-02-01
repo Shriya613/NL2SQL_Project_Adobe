@@ -1,0 +1,9 @@
+[
+    {
+        "question": "Show me the categories that every award has.",
+        "sql_query1": "SELECT Categories.categoryName  from Awards_Categories join Categories on Awards_Categories.categoriesID = Categories.categoryId join Awards on Awards_Categories.awardsID = Awards.id   GROUP BY Awards_Categories.categoriesID HAVING COUNT(DISTINCT Awards_Categories.awardsID) = (SELECT COUNT(*) FROM  Awards)",
+        "sql_query2": "select awards.awardname , categories.categoryname from Awards_Categories join Categories on Awards_Categories.categoriesID = Categories.categoryId join Awards on Awards_Categories.awardsID = Awards.id",
+        "interpretation1": "What categories do all awards have in common?",
+        "interpretation2": "For each award, list the categories they have."
+    }
+]

@@ -1,0 +1,31 @@
+{
+    "template": "Each Guest Houses has many different Suites. Among them, Family Suite is common to many Guest Houses.",
+    "entities": {
+        "tab_name": "GuestHouses",
+        "col_name": null,
+        "value": null,
+        "scope_id": null,
+        "db_type": "table"
+    },
+    "components": {
+        "tab_name": "Suites",
+        "col_name": null,
+        "value": null,
+        "scope_id": null,
+        "db_type": "table"
+    },
+    "specific_component": {
+        "tab_name": "Suites",
+        "col_name": "suiteType",
+        "value": "Family Suite",
+        "scope_id": 2,
+        "db_type": "value"
+    },
+    "entities_components": {
+        "tab_name": "GuestHouseSuites",
+        "col_name": null,
+        "value": null,
+        "scope_id": null,
+        "db_type": "table"
+    }
+}

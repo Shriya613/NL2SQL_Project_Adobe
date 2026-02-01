@@ -1,0 +1,8 @@
+{
+    "template": "Hotel and Youth Hostel are subclasses of Accommodation. All Hotels and Youth hostels have property \"Price\". There might be a Hotel and a Youth Hostel that both have \"Price\" equal to \"50\".",
+    "general_class": "Accommodation",
+    "class1": "Hotel",
+    "class2": "Youth Hostel",
+    "common_property": "Price",
+    "common_value": "50"
+}

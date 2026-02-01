@@ -1,0 +1,22 @@
+[
+    {
+        "question": "How many ships are docked at each docking location",
+        "sql_query1": "SELECT \r\n    name AS docking_location,\r\n    COUNT(*) AS total_ships\r\nFROM \r\n    Ports\r\nLEFT JOIN \r\n    CruiseShips ON CruiseShips.port =  Ports.name \r\nGROUP BY \r\n    name;",
+        "sql_query2": "SELECT \r\n    name AS docking_location,\r\n    COUNT(*) AS total_ships\r\nFROM \r\n    Cities\r\nLEFT JOIN \r\n    CruiseShips ON CruiseShips.city =  Cities.name \r\nGROUP BY \r\n    name;",
+        "sql_query3": "SELECT \r\n    Cities.name, Ports.name,\r\n    COUNT(*) AS total_ships\r\nFROM \r\n    Ports\r\nLEFT JOIN \r\n    CruiseShips ON CruiseShips.port =  Ports.name  JOIN Cities ON CruiseShips.city =  Cities.name  \r\nGROUP BY \r\n    Cities.name, Ports.name;",
+        "interpretation1": "How many ships are docked at each port?",
+        "interpretation2": "How may ships are docked at each city?",
+        "interpretation3": "How many ships are docked at each port and city?",
+        "sql_query_general": "SELECT \r\n    name AS docking_location,\r\n    COUNT(*) AS total_ships\r\nFROM \r\n    Docking_Location\r\nLEFT JOIN \r\n    CruiseShips ON CruiseShips.port =  Docking_Location.name \r\nGROUP BY \r\n    name;"
+    },
+    {
+        "question": "What are the names of ships docked at each docking location, along with their maximum capacities",
+        "sql_query1": "SELECT \r\n    d.name AS docking_location,\r\n    shipName AS ship_name,\r\n    maxCapacity AS max_capacity\r\nFROM \r\n    Ports d\r\nJOIN \r\n     CruiseShips c ON c.port =  d.name;",
+        "sql_query2": "SELECT \r\n    d.name AS docking_location,\r\n    shipName AS ship_name,\r\n    maxCapacity AS max_capacity\r\nFROM \r\n    Cities d\r\nJOIN \r\n     CruiseShips c ON c.city =  d.name;",
+        "sql_query3": "SELECT \r\n     ct.name, d.name,\r\n    shipName AS ship_name,\r\n    maxCapacity AS max_capacity\r\nFROM \r\n    Ports d\r\nJOIN \r\n     CruiseShips c ON c.port =  d.name JOIN Cities ct ON c.city =  ct.name ;",
+        "interpretation1": "List the ports, the names of the ships docked in those ports, and the maximum capacities of each ship.",
+        "interpretation2": "List the cities, the names of the ships docked in those cities, and the maximum capacities of each ship.",
+        "interpretation3": "For each port and its associated city, list the names of the ships docked, and the maximum capacities of each ship.",
+        "sql_query_general": "SELECT \r\n    d.name AS docking_location,\r\n    shipName AS ship_name,\r\n    maxCapacity AS max_capacity\r\nFROM \r\n    Docking_Location d\r\nJOIN \r\n     CruiseShips c ON c.port =  d.name;"
+    }
+]

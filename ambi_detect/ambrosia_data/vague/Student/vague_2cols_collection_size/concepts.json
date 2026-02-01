@@ -1,0 +1,7 @@
+{
+    "template": "Question: What is the size of this library's collection? Subject of Inquiry: Library\nFocus: Collection Size Possible answer types: 1. Number of Volumes 2. Shelving Space",
+    "subject": "Library",
+    "focus": "Collection Size",
+    "general_category1": "Number of Volumes",
+    "general_category2": "Shelving Space"
+}

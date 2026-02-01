@@ -1,0 +1,9 @@
+[
+    {
+        "question": "Display all headlines and ledes written by Adam Gopnik.",
+        "sql_query1": "SELECT Headlines.headline as content \r\nFROM Headlines\r\nWHERE Headlines.Author = \"Adam Gopnik\"\r\nUNION\r\nSELECT Ledes.lede as content\r\nFROM Ledes\r\nWHERE Ledes.Author = \"Adam Gopnik\"",
+        "sql_query2": "SELECT Headlines.headline as content\r\nFROM Headlines\r\nUNION\r\nSELECT Ledes.lede as content\r\nFROM Ledes\r\nWHERE Ledes.Author = \"Adam Gopnik\"",
+        "interpretation1": "What headlines and ledes are written by Adam Gopnik?",
+        "interpretation2": "List all headlines and also show Adam Gopnik's ledes."
+    }
+]

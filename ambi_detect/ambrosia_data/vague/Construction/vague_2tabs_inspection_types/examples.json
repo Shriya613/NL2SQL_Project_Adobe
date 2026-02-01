@@ -1,0 +1,22 @@
+[
+    {
+        "question": "Create a list of inspections dates in order of most recent first.",
+        "sql_query1": "SELECT date FROM Structural_Inspection ORDER BY date DESC",
+        "sql_query2": "SELECT date FROM Safety_Inspection ORDER BY date DESC",
+        "sql_query3": "SELECT Structural_Inspection.date, Safety_Inspection.date  FROM Structural_Inspection JOIN Project ON Project.StructuralInspectionId = Structural_Inspection.inspectionID JOIN Safety_Inspection ON Project.SafetyInspectionId = Safety_Inspection.inspectionID  ORDER BY Structural_Inspection.date, Safety_Inspection.date DESC",
+        "interpretation1": "Give me the list of structural inspections in descending order of recency i.e. most recent first.",
+        "interpretation2": "Give me the list of safety inspections in descending order of recency i.e. most recent first.",
+        "interpretation3": "Give me the list of safety and structural inspections in descending order of recency i.e. most recent first.",
+        "sql_query_general": "SELECT date FROM Inspection_Types ORDER BY date DESC"
+    },
+    {
+        "question": "Show me all details of the inspections carried out by the site supervisor.",
+        "sql_query1": "SELECT Structural_Inspection.* FROM Structural_Inspection JOIN Employee ON Structural_Inspection.inspectorEmployeeID = Employee.supervisorID WHERE Employee.role = 'Site Supervisor';",
+        "sql_query2": "SELECT Safety_Inspection.* FROM Safety_Inspection JOIN Employee ON Safety_Inspection.inspectorEmployeeID = Employee.supervisorID WHERE Employee.role = 'Site Supervisor';",
+        "sql_query3": "SELECT Structural_Inspection.*, Safety_Inspection.* FROM Structural_Inspection JOIN Employee ON Structural_Inspection.inspectorEmployeeID = Employee.supervisorID JOIN Safety_Inspection ON Safety_Inspection.inspectorEmployeeID = Employee.supervisorID  WHERE Employee.role = 'Site Supervisor';",
+        "interpretation1": "Show me all details of the structural inspections carried out by the site supervisor.",
+        "interpretation2": "Show me all details of the safety inspections carried out by the site supervisor.",
+        "interpretation3": "Show me all details of the structural and safety inspections carried out by the site supervisor.",
+        "sql_query_general": "SELECT Inspection_Types.* FROM Inspection_Types JOIN Employee ON Inspection_Types.inspectorEmployeeID = Employee.supervisorID WHERE Employee.role = 'Site Supervisor';"
+    }
+]

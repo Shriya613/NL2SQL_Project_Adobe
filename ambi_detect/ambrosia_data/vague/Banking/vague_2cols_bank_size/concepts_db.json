@@ -1,0 +1,25 @@
+{
+    "template": "Question: How large is this bank? Subject of Inquiry: Bank\nFocus: Bank Size Possible answer types: 1. Number of Branches 2. Countries Served",
+    "general_category1": {
+        "tab_name": "Banks",
+        "col_name": "Number_of_Branches",
+        "value": null,
+        "scope_id": null,
+        "db_type": "column"
+    },
+    "general_category2": {
+        "tab_name": "Banks",
+        "col_name": "Countries_served",
+        "value": null,
+        "scope_id": null,
+        "db_type": "column"
+    },
+    "subject": {
+        "tab_name": "Banks",
+        "col_name": "Bank",
+        "value": null,
+        "scope_id": null,
+        "db_type": "column"
+    },
+    "type": "2cols"
+}

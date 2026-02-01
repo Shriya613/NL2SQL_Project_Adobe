@@ -1,0 +1,7 @@
+{
+    "template": "Question: Where is this bank headquartered? Subject of Inquiry: Banks\nFocus: Location Possible answer types: 1. City 2. Country",
+    "subject": "Banks",
+    "focus": "Location",
+    "general_category1": "City",
+    "general_category2": "Country"
+}

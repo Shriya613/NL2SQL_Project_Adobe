@@ -1,0 +1,25 @@
+{
+    "template": "Question: What topics are covered in this subject? Subject of Inquiry: School Subjects\nFocus: Curriculum Topics Possible answer types: 1. Core Concepts 2. Advanced Topics",
+    "general_category1": {
+        "tab_name": "Core_Concepts",
+        "col_name": null,
+        "value": null,
+        "scope_id": null,
+        "db_type": "table"
+    },
+    "general_category2": {
+        "tab_name": "Advanced_Topics",
+        "col_name": null,
+        "value": null,
+        "scope_id": null,
+        "db_type": "table"
+    },
+    "subject": {
+        "tab_name": "School_Subjects",
+        "col_name": null,
+        "value": null,
+        "scope_id": null,
+        "db_type": "table"
+    },
+    "type": "2tabs"
+}

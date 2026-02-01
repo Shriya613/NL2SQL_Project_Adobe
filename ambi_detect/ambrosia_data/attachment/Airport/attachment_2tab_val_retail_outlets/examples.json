@@ -1,0 +1,9 @@
+[
+    {
+        "question": "Display duty-free shops and souvenir stores in terminal 3.",
+        "sql_query1": "SELECT DutyFreeShops.name\r\nFROM DutyFreeShops\r\nWHERE DutyFreeShops.Location = \"Terminal 3\"\r\nUNION\r\nSELECT SouvenirStores.name\r\nFROM SouvenirStores\r\nWHERE SouvenirStores.Location = \"Terminal 3\"",
+        "sql_query2": "SELECT DutyFreeShops.name\r\nFROM DutyFreeShops\r\nUNION\r\nSELECT SouvenirStores.name\r\nFROM SouvenirStores\r\nWHERE SouvenirStores.Location = \"Terminal 3\"",
+        "interpretation1": "What duty-free shops and souvenir stores are in Terminal 3?",
+        "interpretation2": "List all duty-free shops and also show souvenir stores in terminal 3."
+    }
+]

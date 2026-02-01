@@ -1,0 +1,31 @@
+{
+    "template": "Each Greenhouses has many different Plants. Among them, Tomatoes is common to many Greenhouses.",
+    "entities": {
+        "tab_name": "Greenhouse",
+        "col_name": null,
+        "value": null,
+        "scope_id": null,
+        "db_type": "table"
+    },
+    "components": {
+        "tab_name": "Plant",
+        "col_name": null,
+        "value": null,
+        "scope_id": null,
+        "db_type": "table"
+    },
+    "specific_component": {
+        "tab_name": "Plant",
+        "col_name": "name",
+        "value": "Tomato",
+        "scope_id": 0,
+        "db_type": "value"
+    },
+    "entities_components": {
+        "tab_name": "Greenhouse_Plant",
+        "col_name": null,
+        "value": null,
+        "scope_id": null,
+        "db_type": "table"
+    }
+}

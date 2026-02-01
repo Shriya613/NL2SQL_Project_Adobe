@@ -1,0 +1,9 @@
+[
+    {
+        "question": "Display clubs and leadership programs with 30 participants.",
+        "sql_query1": "SELECT Clubs.name\r\nFROM Clubs\r\nWHERE Clubs.Participants = 30\r\nUNION\r\nSELECT LeadershipPrograms.name\r\nFROM LeadershipPrograms\r\nWHERE LeadershipPrograms.Participants = 30",
+        "sql_query2": "SELECT Clubs.name\r\nFROM Clubs\r\nUNION\r\nSELECT LeadershipPrograms.name\r\nFROM LeadershipPrograms\r\nWHERE LeadershipPrograms.Participants = 30",
+        "interpretation1": "What clubs and leadership programs have 30 participants?",
+        "interpretation2": "List all clubs and also display leadership programs with 30 participants."
+    }
+]

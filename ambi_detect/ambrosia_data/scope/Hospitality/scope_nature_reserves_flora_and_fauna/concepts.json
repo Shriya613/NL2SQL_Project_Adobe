@@ -1,0 +1,6 @@
+{
+    "template": "Each Nature Reserves has many different Flora and Fauna. Among them, Deer is common to many Nature Reserves.",
+    "specific_component": "Deer",
+    "components": "Flora and Fauna",
+    "entities": "Nature Reserves"
+}

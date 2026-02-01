@@ -1,0 +1,9 @@
+[
+    {
+        "question": "What is the purchase amount of hedge funds and mutual funds where the market share is 2%?",
+        "sql_query1": "SELECT Investments.purchaseAmount \r\nFROM Investments\r\nWHERE (Investments.FundStructure = \"Hedge Fund\" OR Investments.FundStructure = \"Mutual Fund\") AND Investments.MarketShare = \"2%\"",
+        "sql_query2": "SELECT Investments.purchaseAmount \r\nFROM Investments\r\nWHERE Investments.FundStructure = \"Hedge Fund\" OR Investments.FundStructure = \"Mutual Fund\" AND Investments.MarketShare = \"2%\"",
+        "interpretation1": "Which hedge fund purchase amounts has a market share of 2% and which mutual fund purchase amounts have the same market share.",
+        "interpretation2": "Provide a list of all hedge fund purchase amounts combined with a list of mutual fund purchase amounts where the market share is 2%."
+    }
+]

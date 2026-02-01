@@ -1,0 +1,7 @@
+{
+    "template": "Question: Who reported this story? Subject of Inquiry: Story\nFocus: Reporter Possible answer types: 1. Journalist 2. News Agency",
+    "subject": "Story",
+    "focus": "Reporter",
+    "general_category1": "Journalist",
+    "general_category2": "News Agency"
+}

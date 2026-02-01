@@ -1,0 +1,9 @@
+[
+    {
+        "question": "Give me the name of the gates at each boarding area.",
+        "sql_query1": "SELECT Gates.gateName  from Boarding_Areas_Gates join Gates on Boarding_Areas_Gates.gateId = Gates.gateId join Boarding_Areas on Boarding_Areas_Gates.areaId = Boarding_Areas.areaId   GROUP BY Boarding_Areas_Gates.gateId HAVING COUNT(DISTINCT Boarding_Areas_Gates.areaId) = (SELECT COUNT(*) FROM  Boarding_Areas)",
+        "sql_query2": "select boarding_areas.areaid , gates.gatename from Boarding_Areas_Gates join Gates on Boarding_Areas_Gates.gateId = Gates.gateId join Boarding_Areas on Boarding_Areas_Gates.areaId = Boarding_Areas.areaId",
+        "interpretation1": "Which gates are present at all boarding areas?",
+        "interpretation2": "Give me a list of all gates at each boarding area."
+    }
+]

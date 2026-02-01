@@ -1,0 +1,9 @@
+[
+    {
+        "question": "Show me all sommeliers and bartenders called Alex",
+        "sql_query1": "SELECT Professionals.FullName\r\nFROM Professionals\r\nWHERE (Professionals.Position = \"Sommelier\" OR Professionals.Position = \"Bartender\") AND Professionals.FullName LIKE \"Alex %\"",
+        "sql_query2": "SELECT Professionals.FullName\r\nFROM Professionals\r\nWHERE Professionals.Position = \"Sommelier\" OR Professionals.Position = \"Bartender\" AND Professionals.FullName LIKE \"Alex %\"",
+        "interpretation1": "List all sommeliers with the first name of Alex and all bartenders with first name of Alex",
+        "interpretation2": "Show all sommeliers and also show all bartenders with first name of Alex."
+    }
+]

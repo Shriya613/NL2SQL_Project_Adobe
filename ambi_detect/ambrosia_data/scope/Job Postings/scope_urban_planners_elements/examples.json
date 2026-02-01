@@ -1,0 +1,9 @@
+[
+    {
+        "question": "Tell me the elements each planner uses.",
+        "sql_query1": "SELECT Elements.element_name  from Urban_Planners_Elements join Elements on Urban_Planners_Elements.element_id = Elements.id join Urban_Planners on Urban_Planners_Elements.urban_planner_id = Urban_Planners.id   GROUP BY Urban_Planners_Elements.element_id HAVING COUNT(DISTINCT Urban_Planners_Elements.urban_planner_id) = (SELECT COUNT(*) FROM  Urban_Planners)",
+        "sql_query2": "select urban_planners.name , elements.element_name from Urban_Planners_Elements join Elements on Urban_Planners_Elements.element_id = Elements.id join Urban_Planners on Urban_Planners_Elements.urban_planner_id = Urban_Planners.id",
+        "interpretation1": "What elements do all planners use equally?",
+        "interpretation2": "For every planner, list the elements used."
+    }
+]

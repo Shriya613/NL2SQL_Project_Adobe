@@ -1,0 +1,25 @@
+{
+    "template": "Question: What is the mortality rate in this province? Subject of Inquiry: Province\nFocus: Mortality Trends Possible answer types: 1. Number of Deaths 2. Crude Death Rate",
+    "general_category1": {
+        "tab_name": "Number_Of_Deaths",
+        "col_name": null,
+        "value": null,
+        "scope_id": null,
+        "db_type": "table"
+    },
+    "general_category2": {
+        "tab_name": "Crude_Death_Rate",
+        "col_name": null,
+        "value": null,
+        "scope_id": null,
+        "db_type": "table"
+    },
+    "subject": {
+        "tab_name": "Province",
+        "col_name": null,
+        "value": null,
+        "scope_id": null,
+        "db_type": "table"
+    },
+    "type": "2tabs"
+}

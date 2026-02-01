@@ -1,0 +1,9 @@
+[
+    {
+        "question": "What financial roles are there for every bank?",
+        "sql_query1": "SELECT Financial_Roles.RoleName  from Banks_Financial_Roles join Financial_Roles on Banks_Financial_Roles.RoleID = Financial_Roles.RoleID join Banks on Banks_Financial_Roles.BankID = Banks.BankID   GROUP BY Banks_Financial_Roles.RoleID HAVING COUNT(DISTINCT Banks_Financial_Roles.BankID) = (SELECT COUNT(*) FROM  Banks)",
+        "sql_query2": "select banks.name , financial_roles.rolename from Banks_Financial_Roles join Financial_Roles on Banks_Financial_Roles.RoleID = Financial_Roles.RoleID join Banks on Banks_Financial_Roles.BankID = Banks.BankID",
+        "interpretation1": "What financial roles are present at every bank at the same time?",
+        "interpretation2": "For every bank list all of the financial roles available."
+    }
+]

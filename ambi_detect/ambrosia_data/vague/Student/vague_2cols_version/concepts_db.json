@@ -1,0 +1,25 @@
+{
+    "template": "Question: What is the version of this textbook? Subject of Inquiry: Textbooks\nFocus: Version Possible answer types: 1. Edition Number 2. Year Published",
+    "general_category1": {
+        "tab_name": "TextbookEditions",
+        "col_name": "EditionNumber",
+        "value": null,
+        "scope_id": null,
+        "db_type": "column"
+    },
+    "general_category2": {
+        "tab_name": "TextbookEditions",
+        "col_name": "YearPublished",
+        "value": null,
+        "scope_id": null,
+        "db_type": "column"
+    },
+    "subject": {
+        "tab_name": "TextbookEditions",
+        "col_name": "Textbooks",
+        "value": null,
+        "scope_id": null,
+        "db_type": "column"
+    },
+    "type": "2cols"
+}

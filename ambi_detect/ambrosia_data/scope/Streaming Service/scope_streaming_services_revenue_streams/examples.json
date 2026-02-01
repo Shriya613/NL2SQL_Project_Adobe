@@ -1,0 +1,23 @@
+[
+    {
+        "question": "Show me the revenue streams of every streaming service.",
+        "sql_query1": "SELECT Revenue_Streams.name  from Streaming_Service_Revenue join Revenue_Streams on Streaming_Service_Revenue.stream_id = Revenue_Streams.id join Streaming_Services on Streaming_Service_Revenue.service_id = Streaming_Services.id   GROUP BY Streaming_Service_Revenue.stream_id HAVING COUNT(DISTINCT Streaming_Service_Revenue.service_id) = (SELECT COUNT(*) FROM  Streaming_Services)",
+        "sql_query2": "select streaming_services.name , revenue_streams.name from Streaming_Service_Revenue join Revenue_Streams on Streaming_Service_Revenue.stream_id = Revenue_Streams.id join Streaming_Services on Streaming_Service_Revenue.service_id = Streaming_Services.id",
+        "interpretation1": "What revenue streams are the same for all streaming services?",
+        "interpretation2": "For every streaming service, list the revenue streams they have."
+    },
+    {
+        "question": "Show me revenue streams each streaming service has and their descriptions.",
+        "sql_query1": "SELECT Revenue_Streams.name, Revenue_Streams.description  from Streaming_Service_Revenue join Revenue_Streams on Streaming_Service_Revenue.stream_id = Revenue_Streams.id join Streaming_Services on Streaming_Service_Revenue.service_id = Streaming_Services.id   GROUP BY Streaming_Service_Revenue.stream_id HAVING COUNT(DISTINCT Streaming_Service_Revenue.service_id) = (SELECT COUNT(*) FROM  Streaming_Services)",
+        "sql_query2": "select streaming_services.name , revenue_streams.name , revenue_streams.description from Streaming_Service_Revenue join Revenue_Streams on Streaming_Service_Revenue.stream_id = Revenue_Streams.id join Streaming_Services on Streaming_Service_Revenue.service_id = Streaming_Services.id",
+        "interpretation1": "What revenue streams do all streaming services have in common and what are their descriptions?",
+        "interpretation2": "For each streaming service, list the revenue streams they have and their descriptions."
+    },
+    {
+        "question": "Give me a description of revenue streams each streaming service uses.",
+        "sql_query1": "SELECT Revenue_Streams.description  from Streaming_Service_Revenue join Revenue_Streams on Streaming_Service_Revenue.stream_id = Revenue_Streams.id join Streaming_Services on Streaming_Service_Revenue.service_id = Streaming_Services.id   GROUP BY Streaming_Service_Revenue.stream_id HAVING COUNT(DISTINCT Streaming_Service_Revenue.service_id) = (SELECT COUNT(*) FROM  Streaming_Services)",
+        "sql_query2": "select streaming_services.name , revenue_streams.description from Streaming_Service_Revenue join Revenue_Streams on Streaming_Service_Revenue.stream_id = Revenue_Streams.id join Streaming_Services on Streaming_Service_Revenue.service_id = Streaming_Services.id",
+        "interpretation1": "What are descriptions of revenue streams all streaming services have in common?",
+        "interpretation2": "For every streaming service, list descriptions of revenue streams used."
+    }
+]

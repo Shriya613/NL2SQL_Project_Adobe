@@ -1,0 +1,7 @@
+{
+    "template": "Question: How many people speak this language? Subject of Inquiry: Language\nFocus: Speakers Possible answer types: 1. Number of Speakers 2. Percentage of Population",
+    "subject": "Language",
+    "focus": "Speakers",
+    "general_category1": "Number of Speakers",
+    "general_category2": "Percentage of Population"
+}

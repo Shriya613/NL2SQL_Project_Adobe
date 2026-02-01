@@ -1,0 +1,9 @@
+[
+    {
+        "question": "List all university students and college students studying Business Administration.",
+        "sql_query1": "SELECT Students.FullName\r\nFROM Students\r\nWHERE (Students.HigherEducationInstitution = \"University\" OR Students.HigherEducationInstitution = \"College\") AND Students.AcademicProgram = \"Business Administration\"",
+        "sql_query2": "SELECT Students.FullName\r\nFROM Students\r\nWHERE Students.HigherEducationInstitution = \"University\" OR Students.HigherEducationInstitution = \"College\" AND Students.AcademicProgram = \"Business Administration\"",
+        "interpretation1": "Which university students study Business Administration and which college students have the same academic program?",
+        "interpretation2": "Provide a list of all university students and also provide a list of college students studying Business Administration."
+    }
+]

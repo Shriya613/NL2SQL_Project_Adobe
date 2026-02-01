@@ -1,0 +1,9 @@
+[
+    {
+        "question": "List all central banks and commercial banks that operate in the USA.",
+        "sql_query1": "SELECT Central_Bank.central_bank_name AS bank_name\r\nFROM Country JOIN Central_Bank ON Country.id = Central_Bank.country_id\r\nWHERE Country.name = \"USA\"\r\nUNION\r\nSELECT Commercial_Bank.commercial_bank_name AS bank_name\r\nFROM Country JOIN Commercial_Bank ON Country.id = Commercial_Bank.country_id\r\nWHERE Country.name = \"USA\"",
+        "sql_query2": "SELECT Central_Bank.central_bank_name AS bank_name\r\nFROM Country JOIN Central_Bank ON Country.id = Central_Bank.country_id\r\nUNION\r\nSELECT Commercial_Bank.commercial_bank_name AS bank_name\r\nFROM Country JOIN Commercial_Bank ON Country.id = Commercial_Bank.country_id\r\nWHERE Country.name = \"USA\"",
+        "interpretation1": "Show all central banks and commercial banks either of which operate in the USA.",
+        "interpretation2": "Show all central banks and only those commercial banks which operate in the USA."
+    }
+]

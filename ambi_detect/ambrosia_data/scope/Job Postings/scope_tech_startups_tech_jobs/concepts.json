@@ -1,0 +1,6 @@
+{
+    "template": "Each Tech Startups has many different Tech Jobs. Among them, Product Manager is common to many Tech Startups.",
+    "specific_component": "Product Manager",
+    "components": "Tech Jobs",
+    "entities": "Tech Startups"
+}

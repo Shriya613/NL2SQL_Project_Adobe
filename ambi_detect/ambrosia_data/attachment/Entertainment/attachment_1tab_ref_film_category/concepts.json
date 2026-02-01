@@ -1,0 +1,8 @@
+{
+    "template": "Fantasy and Horror are subclasses of Film Category. All Fantasies and Horrors have property \"Budget\". There might be a Fantasy and a Horror that both have \"Budget\" equal to \"20000000\".",
+    "general_class": "Film Category",
+    "class1": "Fantasy",
+    "class2": "Horror",
+    "common_property": "Budget",
+    "common_value": "20000000"
+}

@@ -1,0 +1,22 @@
+[
+    {
+        "question": "Where did Carol Williams receive medical care and what is the history of this place?",
+        "sql_query1": "SELECT Doctors.Healthcare_Facility, Doctors.Founding_Year FROM Doctors JOIN Appointments ON Appointments.DoctorID = Doctors.DoctorID JOIN Patients On Patients.PatientID = Appointments.PatientID WHERE Patients.FirstName = 'Carol' AND Patients.LastName = 'Williams'",
+        "sql_query2": "SELECT Doctors.Healthcare_Facility, Doctors.Past_Owners FROM Doctors JOIN Appointments ON Appointments.DoctorID = Doctors.DoctorID JOIN Patients On Patients.PatientID = Appointments.PatientID WHERE Patients.FirstName = 'Carol' AND Patients.LastName = 'Williams'",
+        "sql_query3": "SELECT Doctors.Healthcare_Facility, Doctors.Founding_Year, Past_Owners FROM Doctors JOIN Appointments ON Appointments.DoctorID = Doctors.DoctorID JOIN Patients On Patients.PatientID = Appointments.PatientID WHERE Patients.FirstName = 'Carol' AND Patients.LastName = 'Williams'",
+        "interpretation1": "In what year was the hospital where Carol Williams received her care founded? Also show that hospital.",
+        "interpretation2": "Who were the past owners of the hospital where Carol Williams received her medical care? Also show that hospital.",
+        "interpretation3": "In what year was the hospital where Carol Williams received her care founded? Also, show that hospital and who were the past owners.",
+        "sql_query_general": "SELECT Doctors.Healthcare_Facility, Doctors.Hospital_History FROM Doctors JOIN Appointments ON Appointments.DoctorID = Doctors.DoctorID JOIN Patients On Patients.PatientID = Appointments.PatientID WHERE Patients.FirstName = 'Carol' AND Patients.LastName = 'Williams'"
+    },
+    {
+        "question": "Where was the last doctor's appointment and what is the history of this place?",
+        "sql_query1": "SELECT Doctors.Healthcare_Facility, Doctors.Founding_Year FROM Doctors JOIN Appointments ON Appointments.DoctorID = Doctors.DoctorID ORDER BY Appointments.Date DESC, Appointments.Time DESC LIMIT 1",
+        "sql_query2": "SELECT Doctors.Healthcare_Facility, Doctors.Past_Owners FROM Doctors JOIN Appointments ON Appointments.DoctorID = Doctors.DoctorID ORDER BY Appointments.Date DESC, Appointments.Time DESC LIMIT 1",
+        "sql_query3": "SELECT Doctors.Healthcare_Facility, Doctors.Founding_Year, Past_Owners FROM Doctors JOIN Appointments ON Appointments.DoctorID = Doctors.DoctorID ORDER BY Appointments.Date DESC, Appointments.Time DESC LIMIT 1",
+        "interpretation1": "Where did each doctor have their last appointment and when was that place founded?",
+        "interpretation2": "Where did each doctor have their last appointment and who owned it?",
+        "interpretation3": "Where did each doctor have their last appointment, who owned it and when was it founded?",
+        "sql_query_general": "SELECT Doctors.Healthcare_Facility, Doctors.Hospital_History FROM Doctors JOIN Appointments ON Appointments.DoctorID = Doctors.DoctorID ORDER BY Appointments.Date DESC, Appointments.Time DESC LIMIT 1"
+    }
+]

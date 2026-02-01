@@ -1,0 +1,23 @@
+[
+    {
+        "question": "what player types and versions are associated with each streaming service?",
+        "sql_query1": "SELECT Video_Players.player_type, Video_Players.version  from Streaming_Services_Video_Players join Video_Players on Streaming_Services_Video_Players.video_player_id = Video_Players.id join Streaming_Services on Streaming_Services_Video_Players.streaming_service_id = Streaming_Services.id   GROUP BY Streaming_Services_Video_Players.video_player_id HAVING COUNT(DISTINCT Streaming_Services_Video_Players.streaming_service_id) = (SELECT COUNT(*) FROM  Streaming_Services)",
+        "sql_query2": "select streaming_services.service_name , video_players.player_type , video_players.version from Streaming_Services_Video_Players join Video_Players on Streaming_Services_Video_Players.video_player_id = Video_Players.id join Streaming_Services on Streaming_Services_Video_Players.streaming_service_id = Streaming_Services.id",
+        "interpretation1": "Provide me with the player type and version that is common for all streaming services.",
+        "interpretation2": "For every streaming service, list the corresponding player types and versions."
+    },
+    {
+        "question": "Give me the video player versions that are supported by each streaming service.",
+        "sql_query1": "SELECT Video_Players.version  from Streaming_Services_Video_Players join Video_Players on Streaming_Services_Video_Players.video_player_id = Video_Players.id join Streaming_Services on Streaming_Services_Video_Players.streaming_service_id = Streaming_Services.id   GROUP BY Streaming_Services_Video_Players.video_player_id HAVING COUNT(DISTINCT Streaming_Services_Video_Players.streaming_service_id) = (SELECT COUNT(*) FROM  Streaming_Services)",
+        "sql_query2": "select streaming_services.service_name , video_players.version from Streaming_Services_Video_Players join Video_Players on Streaming_Services_Video_Players.video_player_id = Video_Players.id join Streaming_Services on Streaming_Services_Video_Players.streaming_service_id = Streaming_Services.id",
+        "interpretation1": "Which video player versions are equally supported by all streaming services?",
+        "interpretation2": "For each streaming service, show the video player versions that they support."
+    },
+    {
+        "question": "Show me video players every streaming service uses.",
+        "sql_query1": "SELECT Video_Players.player_type  from Streaming_Services_Video_Players join Video_Players on Streaming_Services_Video_Players.video_player_id = Video_Players.id join Streaming_Services on Streaming_Services_Video_Players.streaming_service_id = Streaming_Services.id   GROUP BY Streaming_Services_Video_Players.video_player_id HAVING COUNT(DISTINCT Streaming_Services_Video_Players.streaming_service_id) = (SELECT COUNT(*) FROM  Streaming_Services)",
+        "sql_query2": "select streaming_services.service_name , video_players.player_type from Streaming_Services_Video_Players join Video_Players on Streaming_Services_Video_Players.video_player_id = Video_Players.id join Streaming_Services on Streaming_Services_Video_Players.streaming_service_id = Streaming_Services.id",
+        "interpretation1": "What are video players all streaming services have in common?",
+        "interpretation2": "For each streaming service, list video players used."
+    }
+]

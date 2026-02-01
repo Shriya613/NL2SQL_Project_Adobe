@@ -1,0 +1,8 @@
+{
+    "template": "University and College are subclasses of Higher Education Institutions. All Universities and Colleges have property \"Academic Program\". There might be a University and a College that both have \"Academic Program\" equal to \"Business Administration\".",
+    "general_class": "Higher Education Institutions",
+    "class1": "University",
+    "class2": "College",
+    "common_property": "Academic Program",
+    "common_value": "Business Administration"
+}

@@ -1,0 +1,7 @@
+{
+    "template": "Question: Who stars in this movie? Subject of Inquiry: Movie\nFocus: Actor Possible answer types: 1. Lead Role 2. Supporting Role",
+    "subject": "Movie",
+    "focus": "Actor",
+    "general_category1": "Lead Role",
+    "general_category2": "Supporting Role"
+}

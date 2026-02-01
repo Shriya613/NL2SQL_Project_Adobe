@@ -1,0 +1,27 @@
+{
+    "domain": "Students",
+    "template": "Lab Equipment and Safety Gear are subclasses of Laboratory Essentials. All Lab Equipment and Safety Gear have property \"Date of Purchase\". There might be Lab Equipment and Safety Gear that both have \"Date of Purchase\" equal to \"January 2023\".",
+    "type": "2tab_val",
+    "general_class": "Laboratory Essentials",
+    "class1": {
+        "tab_name": "Lab_Equipments",
+        "col_name": null,
+        "value": null,
+        "scope_id": null,
+        "db_type": "table"
+    },
+    "class2": {
+        "tab_name": "Safety_Gears",
+        "col_name": null,
+        "value": null,
+        "scope_id": null,
+        "db_type": "table"
+    },
+    "common_property": {
+        "tab_name": "Lab_Equipments",
+        "col_name": "dateOfPurchase",
+        "value": "January 2023",
+        "scope_id": null,
+        "db_type": "value"
+    }
+}

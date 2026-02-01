@@ -1,0 +1,9 @@
+[
+    {
+        "question": "What are the passing marks of exams and quiz assessed by Professor Smith?",
+        "sql_query1": "SELECT Assessments.PassingMark \r\nFROM Assessments \r\nWHERE (Assessments.AssessmentMethod = 'Exam' OR Assessments.AssessmentMethod = 'Quiz') AND Assessments.Assessor = 'Professor Smith'",
+        "sql_query2": "SELECT Assessments.PassingMark \r\nFROM Assessments \r\nWHERE Assessments.AssessmentMethod = 'Exam' OR Assessments.AssessmentMethod = 'Quiz' AND Assessments.Assessor = 'Professor Smith'",
+        "interpretation1": "What are the passing marks on exams assessed by Professor Smith and on quizzes assessed by the same professor?",
+        "interpretation2": "List the passing marks of all exams and also passing marks of quiz's assessed by Professor Smith."
+    }
+]

@@ -1,0 +1,8 @@
+{
+    "template": "Graphic Design Tool and Web Design Tool are subclasses of Digital Art Tool. All Graphic design tools and Web design tools have property \"Access\". There might be a Graphic Design Tool and a Web Design Tool that both have \"Access\" equal to \"Subscription\".",
+    "general_class": "Digital Art Tool",
+    "class1": "Graphic Design Tool",
+    "class2": "Web Design Tool",
+    "common_property": "Access",
+    "common_value": "Subscription"
+}

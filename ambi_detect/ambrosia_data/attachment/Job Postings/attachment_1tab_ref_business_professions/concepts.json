@@ -1,0 +1,8 @@
+{
+    "template": "Sales Manager and Marketing Specialist are subclasses of Business Professions. All Sales managers and Marketing specialists have property \"Working Arrangements\". There might be a Sales Manager and a Marketing Specialist that both have \"Working Arrangements\" equal to \"Hybrid\".",
+    "general_class": "Business Professions",
+    "class1": "Sales Manager",
+    "class2": "Marketing Specialist",
+    "common_property": "Working Arrangements",
+    "common_value": "Hybrid"
+}

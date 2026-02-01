@@ -1,0 +1,6 @@
+{
+    "template": "Each Housing Finance Agencies has many different Loan Programs. Among them, First-time Homebuyer Program is common to many Housing Finance Agencies.",
+    "specific_component": "First-time Homebuyer Program",
+    "components": "Loan Programs",
+    "entities": "Housing Finance Agencies"
+}

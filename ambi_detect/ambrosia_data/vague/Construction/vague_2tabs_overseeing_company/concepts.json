@@ -1,0 +1,7 @@
+{
+    "template": "Question: Which company is responsible for overseeing this development project? Subject of Inquiry: Development Project\nFocus: Overseeing Company Possible answer types: 1. Real Estate Developer 2. Contractor",
+    "subject": "Development Project",
+    "focus": "Overseeing Company",
+    "general_category1": "Real Estate Developer",
+    "general_category2": "Contractor"
+}

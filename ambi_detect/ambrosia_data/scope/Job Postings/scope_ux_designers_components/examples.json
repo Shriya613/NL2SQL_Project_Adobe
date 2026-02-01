@@ -1,0 +1,23 @@
+[
+    {
+        "question": "Give me the names and descriptions of the components every UX designer uses.",
+        "sql_query1": "SELECT Components.component_name, Components.description  from Ux_Designers_Components join Components on Ux_Designers_Components.component_id = Components.id join Ux_Designers on Ux_Designers_Components.ux_designer_id = Ux_Designers.id   GROUP BY Ux_Designers_Components.component_id HAVING COUNT(DISTINCT Ux_Designers_Components.ux_designer_id) = (SELECT COUNT(*) FROM  Ux_Designers)",
+        "sql_query2": "select ux_designers.name , components.component_name , components.description from Ux_Designers_Components join Components on Ux_Designers_Components.component_id = Components.id join Ux_Designers on Ux_Designers_Components.ux_designer_id = Ux_Designers.id",
+        "interpretation1": "What are the names and descriptions of the components common to all UX designers?",
+        "interpretation2": "For every UX designer, list the names and descriptions of the components used."
+    },
+    {
+        "question": "Give me the descriptions of the components corresponding to each UX designer.",
+        "sql_query1": "SELECT Components.description  from Ux_Designers_Components join Components on Ux_Designers_Components.component_id = Components.id join Ux_Designers on Ux_Designers_Components.ux_designer_id = Ux_Designers.id   GROUP BY Ux_Designers_Components.component_id HAVING COUNT(DISTINCT Ux_Designers_Components.ux_designer_id) = (SELECT COUNT(*) FROM  Ux_Designers)",
+        "sql_query2": "select ux_designers.name , components.description from Ux_Designers_Components join Components on Ux_Designers_Components.component_id = Components.id join Ux_Designers on Ux_Designers_Components.ux_designer_id = Ux_Designers.id",
+        "interpretation1": "What is the component description that all UX designers have in common?",
+        "interpretation2": "For each UX designer, show me the component descriptions."
+    },
+    {
+        "question": "Give me the components that every UX designer designs.",
+        "sql_query1": "SELECT Components.component_name  from Ux_Designers_Components join Components on Ux_Designers_Components.component_id = Components.id join Ux_Designers on Ux_Designers_Components.ux_designer_id = Ux_Designers.id   GROUP BY Ux_Designers_Components.component_id HAVING COUNT(DISTINCT Ux_Designers_Components.ux_designer_id) = (SELECT COUNT(*) FROM  Ux_Designers)",
+        "sql_query2": "select ux_designers.name , components.component_name from Ux_Designers_Components join Components on Ux_Designers_Components.component_id = Components.id join Ux_Designers on Ux_Designers_Components.ux_designer_id = Ux_Designers.id",
+        "interpretation1": "Which components are the same for all UX designers?",
+        "interpretation2": "For every UX designer, show the components that they design."
+    }
+]

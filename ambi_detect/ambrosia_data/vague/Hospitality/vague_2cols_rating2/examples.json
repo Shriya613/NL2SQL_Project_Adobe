@@ -1,0 +1,22 @@
+[
+    {
+        "question": "What hikes do we have and what are their ratings?",
+        "sql_query1": "Select Reviews.Hikes, Reviews.customer_review From Reviews",
+        "sql_query2": "Select Reviews.Hikes, Reviews.difficulty_level From Reviews",
+        "sql_query3": "Select Reviews.Hikes, Reviews.customer_review, difficulty_level From Reviews",
+        "interpretation1": "What hikes do we have and what are their customer ratings?",
+        "interpretation2": "What hikes do we have and what are their difficulty ratings?",
+        "interpretation3": "What hikes do we have and what are their customer ratings and their difficulty ratings?",
+        "sql_query_general": "Select Reviews.Hikes, Reviews.Rating From Reviews"
+    },
+    {
+        "question": "How is the waterfall loop rated?",
+        "sql_query1": "Select Reviews.customer_review From Reviews Where Reviews.Hikes = 'Waterfall loop'",
+        "sql_query2": "Select Reviews.difficulty_level From Reviews Where Reviews.Hikes = 'Waterfall loop'",
+        "sql_query3": "Select Reviews.customer_review, difficulty_level From Reviews Where Reviews.Hikes = 'Waterfall loop'",
+        "interpretation1": "What are the customer reviews of the waterfall loop?",
+        "interpretation2": "What is the difficulty level of the waterfall loop?",
+        "interpretation3": "What are the customer reviews of the waterfall loop and its difficulty level?",
+        "sql_query_general": "Select Reviews.Rating From Reviews Where Reviews.Hikes = 'Waterfall loop'"
+    }
+]

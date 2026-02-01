@@ -1,0 +1,9 @@
+[
+    {
+        "question": "Give me the name of the platform for every streaming service.",
+        "sql_query1": "SELECT Platform.name  from Streaming_Service_Platform join Platform on Streaming_Service_Platform.platform_id = Platform.id join Streaming_Service on Streaming_Service_Platform.streaming_id = Streaming_Service.id   GROUP BY Streaming_Service_Platform.platform_id HAVING COUNT(DISTINCT Streaming_Service_Platform.streaming_id) = (SELECT COUNT(*) FROM  Streaming_Service)",
+        "sql_query2": "select streaming_service.service_name , platform.name from Streaming_Service_Platform join Platform on Streaming_Service_Platform.platform_id = Platform.id join Streaming_Service on Streaming_Service_Platform.streaming_id = Streaming_Service.id",
+        "interpretation1": "What is the platform name common for all streaming services?",
+        "interpretation2": "For each streaming service, what is the name of the corresponding platform?"
+    }
+]

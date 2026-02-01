@@ -1,0 +1,9 @@
+[
+    {
+        "question": "Show sommeliers and bartenders working at The Rooftop Lounge.",
+        "sql_query1": "SELECT Sommeliers.FullName\r\nFROM Restaurants JOIN Sommeliers ON Restaurants.id = Sommeliers.restaurantId\r\nWHERE Restaurants.name = \"The Rooftop Lounge\"\r\nUNION\r\nSELECT Bartenders.FullName\r\nFROM Restaurants JOIN Bartenders ON Restaurants.id = Bartenders.restaurantId\r\nWHERE Restaurants.name = \"The Rooftop Lounge\"",
+        "sql_query2": "SELECT Sommeliers.FullName\r\nFROM Restaurants JOIN Sommeliers ON Restaurants.id = Sommeliers.restaurantId\r\nUNION\r\nSELECT Bartenders.FullName\r\nFROM Restaurants JOIN Bartenders ON Restaurants.id = Bartenders.restaurantId\r\nWHERE Restaurants.name = \"The Rooftop Lounge\"",
+        "interpretation1": "Give me both sommeliers working at The Rooftop Lounge and bartenders working at The Rooftop Lounge.",
+        "interpretation2": "Show all sommeliers and also show the bartenders working at The Rooftop Lounge."
+    }
+]

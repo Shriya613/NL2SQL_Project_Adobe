@@ -1,0 +1,8 @@
+{
+    "template": "Photography and Painting are subclasses of Visual Art. All Photographies and Paintings have property \"Gallery\". There might be a Photography and a Painting that both have \"Gallery\" equal to \"MoMA\".",
+    "general_class": "Visual Art",
+    "class1": "Photography",
+    "class2": "Painting",
+    "common_property": "Gallery",
+    "common_value": "MoMA"
+}

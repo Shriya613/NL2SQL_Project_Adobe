@@ -1,0 +1,6 @@
+{
+    "template": "Each Production Designers has many different Elements. Among them, Set Design is common to many Production Designers.",
+    "specific_component": "Set Design",
+    "components": "Elements",
+    "entities": "Production Designers"
+}

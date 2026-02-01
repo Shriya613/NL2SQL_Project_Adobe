@@ -1,0 +1,8 @@
+{
+    "template": "Chalet and Cabin are subclasses of Accommodation. All Chalets and Cabins have property \"Price Per Night\". There might be a Chalet and a Cabin that both have \"Price Per Night\" equal to \"200\".",
+    "general_class": "Accommodation",
+    "class1": "Chalet",
+    "class2": "Cabin",
+    "common_property": "Price Per Night",
+    "common_value": "200"
+}

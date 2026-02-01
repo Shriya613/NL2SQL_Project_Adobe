@@ -1,0 +1,9 @@
+[
+    {
+        "question": "What languages does each software engineer know?",
+        "sql_query1": "SELECT Languages.LanguageName  from Software_Engineers_Languages join Software_Engineers on Software_Engineers_Languages.SE_Id = Software_Engineers.EngineerID join Languages on Software_Engineers_Languages.SE_LanguageID = Languages.LanguageID   GROUP BY Software_Engineers_Languages.SE_LanguageID HAVING COUNT(DISTINCT Software_Engineers_Languages.SE_Id) = (SELECT COUNT(*) FROM  Software_Engineers)",
+        "sql_query2": "select software_engineers.name , languages.languagename from Software_Engineers_Languages join Software_Engineers on Software_Engineers_Languages.SE_Id = Software_Engineers.EngineerID join Languages on Software_Engineers_Languages.SE_LanguageID = Languages.LanguageID",
+        "interpretation1": "What is the language that is common between all software engineers?",
+        "interpretation2": "For every software engineer, list the corresponding language."
+    }
+]

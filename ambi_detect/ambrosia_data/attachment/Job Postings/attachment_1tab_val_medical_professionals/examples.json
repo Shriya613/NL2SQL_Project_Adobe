@@ -1,0 +1,9 @@
+[
+    {
+        "question": "Provide me with all nurses and physician assistants for Anne Buche.",
+        "sql_query1": "SELECT Employees.FullName\r\nFROM Employees\r\nWHERE (Employees.MedicalProfession = \"Nurse\" OR Employees.MedicalProfession = \"Physician's Assistant\") AND Employees.Patient = \"Anne Buche\"",
+        "sql_query2": "SELECT Employees.FullName\r\nFROM Employees\r\nWHERE Employees.MedicalProfession = \"Nurse\" OR Employees.MedicalProfession = \"Physician's Assistant\" AND Employees.Patient = \"Anne Buche\"",
+        "interpretation1": "Provide me with both nurses for Anne Buche and her physician assistants.",
+        "interpretation2": "Provide me with all nurses and also with all physician assistants who work with Anne Buche."
+    }
+]

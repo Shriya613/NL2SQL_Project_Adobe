@@ -1,0 +1,6 @@
+{
+    "template": "Each Lessons has many different Activities. Among them, Group Work is common to many Lessons.",
+    "specific_component": "Group Work",
+    "components": "Activities",
+    "entities": "Lessons"
+}

@@ -1,0 +1,31 @@
+{
+    "template": "Each Real Estate Reporters has many different Markets. Among them, Luxury Homes is common to many Real Estate Reporters.",
+    "entities": {
+        "tab_name": "Real_Estate_Reporters",
+        "col_name": null,
+        "value": null,
+        "scope_id": null,
+        "db_type": "table"
+    },
+    "components": {
+        "tab_name": "Markets",
+        "col_name": null,
+        "value": null,
+        "scope_id": null,
+        "db_type": "table"
+    },
+    "specific_component": {
+        "tab_name": "Markets",
+        "col_name": "market_name",
+        "value": "Luxury Homes",
+        "scope_id": 0,
+        "db_type": "value"
+    },
+    "entities_components": {
+        "tab_name": "Real_Estate_Reporters_Markets",
+        "col_name": null,
+        "value": null,
+        "scope_id": null,
+        "db_type": "table"
+    }
+}

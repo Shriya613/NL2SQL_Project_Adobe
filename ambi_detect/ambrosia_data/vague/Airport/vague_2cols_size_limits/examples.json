@@ -1,0 +1,22 @@
+[
+    {
+        "question": "Which airline uses the plane PlaneModel3 and what are the corresponding size limits?",
+        "sql_query1": "select A.name, P.linear_dimensions from Airlines A inner join Planes P on P.airline_id = A.id where P.model = 'PlaneModel3'",
+        "sql_query2": "select A.name, P.weight_restriction from Airlines A inner join Planes P on P.airline_id = A.id where P.model = 'PlaneModel3'",
+        "sql_query3": "select A.name, P.linear_dimensions, weight_restriction from Airlines A inner join Planes P on P.airline_id = A.id where P.model = 'PlaneModel3'",
+        "interpretation1": "Which airline uses the plane PlaneModel3 and what are the linear dimensions of that plane?",
+        "interpretation2": "Which airline uses the plane PlaneModel3 and what are the weight restrictions of that plane?",
+        "interpretation3": "Which airline uses the plane PlaneModel3 and what are the linear dimensions and weight restrictions of that plane?",
+        "sql_query_general": "select A.name, P.Size_Limits from Airlines A inner join Planes P on P.airline_id = A.id where P.model = 'PlaneModel3'"
+    },
+    {
+        "question": "What is the size limit for the plane departing from the runway with length 5000 at 11:00 on the 4th of January?",
+        "sql_query1": "select P.linear_dimensions from Planes P inner join Flights F on P.model = F.plane_model inner join Runways R on R.id = F.runway_id where R.length = 5000 and F.departure_time = '2022-01-04 11:00:00'",
+        "sql_query2": "select P.weight_restriction from Planes P inner join Flights F on P.model = F.plane_model inner join Runways R on R.id = F.runway_id where R.length = 5000 and F.departure_time = '2022-01-04 11:00:00'",
+        "sql_query3": "select P.linear_dimensions, weight_restriction from Planes P inner join Flights F on P.model = F.plane_model inner join Runways R on R.id = F.runway_id where R.length = 5000 and F.departure_time = '2022-01-04 11:00:00'",
+        "interpretation1": "What are the linear dimensions for the plane departing the runway with length 5000 at 11:00 on the 4th January?",
+        "interpretation2": "What is the weight restriction for the plane departing the runway with length 5000 at 11:00 on the 4th January?",
+        "interpretation3": "What is the weight restriction and linear dimensions for the plane departing the runway with length 5000 at 11:00 on the 4th January?",
+        "sql_query_general": "select P.Size_Limits from Planes P inner join Flights F on P.model = F.plane_model inner join Runways R on R.id = F.runway_id where R.length = 5000 and F.departure_time = '2022-01-04 11:00:00'"
+    }
+]

@@ -1,0 +1,7 @@
+{
+    "template": "Question: What safety measures are implemented during construction activities? Subject of Inquiry: Construction Worker\nFocus: Safety Measures Possible answer types: 1. Personal Protective Equipment 2. Training Programs",
+    "subject": "Construction Worker",
+    "focus": "Safety Measures",
+    "general_category1": "Personal Protective Equipment",
+    "general_category2": "Training Programs"
+}

@@ -1,0 +1,6 @@
+{
+    "template": "Each Banks has many different Services. Among them, Savings Account is common to many Banks.",
+    "specific_component": "Savings Account",
+    "components": "Services",
+    "entities": "Banks"
+}

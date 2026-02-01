@@ -1,0 +1,6 @@
+{
+    "template": "Each Streaming Services has many different Audio Formats. Among them, Dolby Atmos is common to many Streaming Services.",
+    "specific_component": "Dolby Atmos",
+    "components": "Audio Formats",
+    "entities": "Streaming Services"
+}

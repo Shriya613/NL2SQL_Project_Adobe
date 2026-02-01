@@ -1,0 +1,33 @@
+{
+    "domain": "Musician",
+    "template": "Country Singer and Bluegrass Singer are subclasses of Musician. All Country singers and Bluegrass singers have property \"Instrument\". There might be a Country Singer and a Bluegrass Singer that both have \"Instrument\" equal to \"Guitar\".",
+    "type": "1tab_val",
+    "general_class": {
+        "tab_name": "Musician",
+        "col_name": "Genre",
+        "value": null,
+        "scope_id": null,
+        "db_type": "column"
+    },
+    "class1": {
+        "tab_name": "Musician",
+        "col_name": "Genre",
+        "value": "Country Singer",
+        "scope_id": null,
+        "db_type": "value"
+    },
+    "class2": {
+        "tab_name": "Musician",
+        "col_name": "Genre",
+        "value": "Bluegrass Singer",
+        "scope_id": null,
+        "db_type": "value"
+    },
+    "common_property": {
+        "tab_name": "Musician",
+        "col_name": "Instrument",
+        "value": "Guitar",
+        "scope_id": null,
+        "db_type": "value"
+    }
+}

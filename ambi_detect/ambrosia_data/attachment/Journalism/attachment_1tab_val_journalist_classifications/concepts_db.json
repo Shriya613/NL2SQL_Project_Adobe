@@ -1,0 +1,33 @@
+{
+    "domain": "Articles",
+    "template": "Stringer and Editor are subclasses of Journalist Classifications. All Stringers and Editors have property \"Payment\". There might be a Stringer and a Editor that both have \"Payment\" equal to \"2000\".",
+    "type": "1tab_val",
+    "general_class": {
+        "tab_name": "Authors",
+        "col_name": "Classification",
+        "value": null,
+        "scope_id": null,
+        "db_type": "column"
+    },
+    "class1": {
+        "tab_name": "Authors",
+        "col_name": "Classification",
+        "value": "Stringer",
+        "scope_id": null,
+        "db_type": "value"
+    },
+    "class2": {
+        "tab_name": "Authors",
+        "col_name": "Classification",
+        "value": "Editor",
+        "scope_id": null,
+        "db_type": "value"
+    },
+    "common_property": {
+        "tab_name": "Authors",
+        "col_name": "Payment",
+        "value": 2000,
+        "scope_id": null,
+        "db_type": "value"
+    }
+}

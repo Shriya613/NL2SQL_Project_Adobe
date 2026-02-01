@@ -1,0 +1,6 @@
+{
+    "template": "Each Construction Companies has many different Projects. Among them, Foundation is common to many Construction Companies.",
+    "specific_component": "Foundation",
+    "components": "Projects",
+    "entities": "Construction Companies"
+}

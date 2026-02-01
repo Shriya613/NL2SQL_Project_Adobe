@@ -1,0 +1,27 @@
+{
+    "domain": "Agency",
+    "template": "Tour Guide and Travel Agent are subclasses of Hospitality Jobs. All Tour guides and Travel agents have property \"Agency\". There might be a Tour Guide and a Travel Agent that both have \"Agency\" equal to \"Expedia\".",
+    "type": "2tab_val",
+    "general_class": "Hospitality Jobs",
+    "class1": {
+        "tab_name": "Tour_Guide",
+        "col_name": null,
+        "value": null,
+        "scope_id": null,
+        "db_type": "table"
+    },
+    "class2": {
+        "tab_name": "Travel_Agent",
+        "col_name": null,
+        "value": null,
+        "scope_id": null,
+        "db_type": "table"
+    },
+    "common_property": {
+        "tab_name": "Tour_Guide",
+        "col_name": "agencyId",
+        "value": 1,
+        "scope_id": null,
+        "db_type": "value"
+    }
+}

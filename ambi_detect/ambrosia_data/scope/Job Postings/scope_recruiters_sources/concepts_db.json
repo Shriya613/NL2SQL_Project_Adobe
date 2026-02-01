@@ -1,0 +1,31 @@
+{
+    "template": "Each Recruiters has many different Sources. Among them, LinkedIn is common to many Recruiters.",
+    "entities": {
+        "tab_name": "Recruiters",
+        "col_name": null,
+        "value": null,
+        "scope_id": null,
+        "db_type": "table"
+    },
+    "components": {
+        "tab_name": "Sources",
+        "col_name": null,
+        "value": null,
+        "scope_id": null,
+        "db_type": "table"
+    },
+    "specific_component": {
+        "tab_name": "Sources",
+        "col_name": "source_name",
+        "value": "LinkedIn",
+        "scope_id": 0,
+        "db_type": "value"
+    },
+    "entities_components": {
+        "tab_name": "Recruiters_Sources",
+        "col_name": null,
+        "value": null,
+        "scope_id": null,
+        "db_type": "table"
+    }
+}

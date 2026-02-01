@@ -1,0 +1,31 @@
+{
+    "template": "Each Job Postings has many different Requirements. Among them, Education is common to many Job Postings.",
+    "entities": {
+        "tab_name": "Job_Postings",
+        "col_name": null,
+        "value": null,
+        "scope_id": null,
+        "db_type": "table"
+    },
+    "components": {
+        "tab_name": "Requirements",
+        "col_name": null,
+        "value": null,
+        "scope_id": null,
+        "db_type": "table"
+    },
+    "specific_component": {
+        "tab_name": "Requirements",
+        "col_name": "requirement_type",
+        "value": "Education",
+        "scope_id": 0,
+        "db_type": "value"
+    },
+    "entities_components": {
+        "tab_name": "Job_Postings_Requirements",
+        "col_name": null,
+        "value": null,
+        "scope_id": null,
+        "db_type": "table"
+    }
+}

@@ -1,0 +1,6 @@
+{
+    "template": "Each Agricultural Machinery Stores has many different Brands. Among them, John Deere is common to many Agricultural Machinery Stores.",
+    "specific_component": "John Deere",
+    "components": "Brands",
+    "entities": "Agricultural Machinery Stores"
+}

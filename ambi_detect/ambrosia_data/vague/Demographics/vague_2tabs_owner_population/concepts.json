@@ -1,0 +1,7 @@
+{
+    "template": "Question: What percent of the population owns their home? Subject of Inquiry: Homeownership\nFocus: Owner Population Possible answer types: 1. Owner Percentage 2. Numbers of Owners",
+    "subject": "Homeownership",
+    "focus": "Owner Population",
+    "general_category1": "Owner Percentage",
+    "general_category2": "Numbers of Owners"
+}

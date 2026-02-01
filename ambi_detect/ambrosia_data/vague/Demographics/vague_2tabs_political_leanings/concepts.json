@@ -1,0 +1,7 @@
+{
+    "template": "Question: What is the political affiliation of the majority of voters in this electoral district? Subject of Inquiry: District\nFocus: Political Leanings Possible answer types: 1. Dominating Party 2. Prevalent Ideology",
+    "subject": "District",
+    "focus": "Political Leanings",
+    "general_category1": "Dominating Party",
+    "general_category2": "Prevalent Ideology"
+}

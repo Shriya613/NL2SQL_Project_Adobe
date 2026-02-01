@@ -1,0 +1,22 @@
+[
+    {
+        "question": "Show how many students have achieved each developmental milestone",
+        "sql_query1": "SELECT MilestoneRecords.physicalMilestones, Count(*) as Pupil_Count FROM MileStoneRecords",
+        "sql_query2": "SELECT MilestoneRecords.cognitiveMilestones, Count(*) as Pupil_Count FROM MileStoneRecords",
+        "sql_query3": "SELECT MilestoneRecords.physicalMilestones, cognitiveMilestones, Count(*) as Pupil_Count FROM MileStoneRecords",
+        "interpretation1": "List the physical milestones and the number of students that have achieved it.",
+        "interpretation2": "List the cognitive milestones and the number of students that have achieved it.",
+        "interpretation3": "List the physical and cognitive milestones and the number of students that have achieved it.",
+        "sql_query_general": "SELECT MilestoneRecords.Developmental_Milestones, Count(*) as Pupil_Count FROM MileStoneRecords"
+    },
+    {
+        "question": "Show developmental milestones and child's age in order of the age",
+        "sql_query1": "SELECT MilestoneRecords.physicalMilestones, MilestoneRecords.childAge FROM MileStoneRecords ORDER BY MilestoneRecords.childAge",
+        "sql_query2": "SELECT MilestoneRecords.cognitiveMilestones, MilestoneRecords.childAge FROM MileStoneRecords ORDER BY MilestoneRecords.childAge",
+        "sql_query3": "SELECT MilestoneRecords.physicalMilestones, cognitiveMilestones, MilestoneRecords.childAge FROM MileStoneRecords ORDER BY MilestoneRecords.childAge",
+        "interpretation1": "show physical milestones and child age in age ascending order",
+        "interpretation2": "show cognitive milestones and child age in age ascending order",
+        "interpretation3": "show physical and cognitive milestones and child age in age ascending order",
+        "sql_query_general": "SELECT MilestoneRecords.Developmental_Milestones, MilestoneRecords.childAge FROM MileStoneRecords ORDER BY MilestoneRecords.childAge"
+    }
+]

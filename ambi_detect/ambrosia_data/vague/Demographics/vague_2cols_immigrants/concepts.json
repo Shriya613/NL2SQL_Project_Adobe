@@ -1,0 +1,7 @@
+{
+    "template": "Question: How many immigrants arrived last year from this top-source country? Subject of Inquiry: Country\nFocus: Immigrants Possible answer types: 1. Number of Immigrants 2. Immigrant Percentage",
+    "subject": "Country",
+    "focus": "Immigrants",
+    "general_category1": "Number of Immigrants",
+    "general_category2": "Immigrant Percentage"
+}

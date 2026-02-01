@@ -1,0 +1,6 @@
+{
+    "template": "Each Loan Applications has many different Requirements. Among them, Employment Verification is common to many Loan Applications.",
+    "specific_component": "Employment Verification",
+    "components": "Requirements",
+    "entities": "Loan Applications"
+}

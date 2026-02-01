@@ -1,0 +1,12 @@
+[
+    {
+        "question": "Display a list of approving authorities and their related engineering projects",
+        "sql_query1": "select GovernmentAgency, EngineeringProject from Boards",
+        "sql_query2": "select RegulatoryBoard, EngineeringProject from Boards",
+        "sql_query3": "select GovernmentAgency, RegulatoryBoard, EngineeringProject from Boards",
+        "interpretation1": "List all the government agencies and the associated engineering projects.",
+        "interpretation2": "Return all the regulatory boards and the engineering projects they've worked on.",
+        "interpretation3": "Show both the government agencies and regulatory boards and the related engineering projects.",
+        "sql_query_general": "select Approving_Authority, EngineeringProject from Boards"
+    }
+]

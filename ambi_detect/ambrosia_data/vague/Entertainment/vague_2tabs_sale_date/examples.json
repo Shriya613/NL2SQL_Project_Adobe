@@ -1,0 +1,22 @@
+[
+    {
+        "question": "When did the latest sale begin for the pop concerts?",
+        "sql_query1": "SELECT MAX(start_time) FROM On_Sale_Date JOIN Events ON Events.event_id = On_Sale_Date.event_id JOIN Artists ON Artists.artist_id = Events.artist_id WHERE genre = \"Pop\";",
+        "sql_query2": "SELECT MAX(start_time) FROM Pre_sale_Date JOIN Events ON Events.event_id = Pre_sale_Date.event_id JOIN Artists ON Artists.artist_id = Events.artist_id WHERE genre = \"Pop\";",
+        "sql_query3": "SELECT MAX(Pre_sale_Date.start_time), MAX(On_Sale_Date.start_time) FROM On_Sale_Date JOIN Events ON Events.event_id = On_Sale_Date.event_id JOIN Pre_sale_Date ON Events.event_id = Pre_sale_Date.event_id JOIN Artists ON Artists.artist_id = Events.artist_id WHERE genre = \"Pop\";",
+        "interpretation1": "What's the latest on sale date for pop concerts?",
+        "interpretation2": "What's the latest pre sale date for pop concerts?",
+        "interpretation3": "What are the latest on sale and pre sale dates for pop concerts?",
+        "sql_query_general": "SELECT MAX(start_time) FROM Sale_Date JOIN Events ON Events.event_id = Sale_Date.event_id JOIN Artists ON Artists.artist_id = Events.artist_id WHERE genre = \"Pop\";"
+    },
+    {
+        "question": "Calculate the average duration of sales for seat A1.",
+        "sql_query1": "SELECT AVG(end_time - start_time) FROM On_Sale_Date JOIN Tickets ON Tickets.ON_SALE_DATE_ID = On_Sale_Date.sale_id WHERE seat_number = \"A1\";",
+        "sql_query2": "SELECT AVG(end_time - start_time) FROM Pre_sale_Date JOIN Tickets ON Tickets.Presale_Date_ID = Pre_sale_Date.presale_id WHERE seat_number = \"A1\";",
+        "sql_query3": "SELECT AVG(Pre_sale_Date.end_time - Pre_sale_Date.start_time), AVG(On_Sale_Date.end_time - On_Sale_Date.start_time) FROM On_Sale_Date JOIN Tickets ON Tickets.ON_SALE_DATE_ID = On_Sale_Date.sale_id JOIN Pre_sale_Date ON Pre_sale_Date.presale_id = Tickets.Presale_Date_ID WHERE seat_number = \"A1\";",
+        "interpretation1": "Show the average sale duration for seat A1 based on the on sale date.",
+        "interpretation2": "Show the average sale duration for seat A1 based on the pre-sale date.",
+        "interpretation3": "Show the average sale durations for seat A1 based on both the on sale date and pre-sale dates.",
+        "sql_query_general": "SELECT AVG(end_time - start_time) FROM Sale_Date JOIN Tickets ON Tickets.ON_SALE_DATE_ID = Sale_Date.sale_id WHERE seat_number = \"A1\";"
+    }
+]

@@ -1,0 +1,9 @@
+[
+    {
+        "question": "What jobs are available for economists and statisticians working with demographic data?",
+        "sql_query1": "SELECT JobPostings.title \r\nFROM JobPostings\r\nWHERE (JobPostings.Roles = \"Economist\" OR JobPostings.Roles = \"Statistician\") AND JobPostings.Data = \"Demographics\"",
+        "sql_query2": "SELECT JobPostings.title \r\nFROM JobPostings\r\nWHERE JobPostings.Roles = \"Economist\" OR JobPostings.Roles = \"Statistician\" AND JobPostings.Data = \"Demographics\"",
+        "interpretation1": "Show job posts of economists who work with demographic data and job posts of statisticians who work with the same data type.",
+        "interpretation2": "What jobs are available for economists and what jobs are available for statisticians working with demographic data?"
+    }
+]

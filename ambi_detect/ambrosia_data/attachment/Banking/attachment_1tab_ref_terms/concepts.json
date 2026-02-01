@@ -1,0 +1,8 @@
+{
+    "template": "Monthly Interest Rate and Annual Percentage Rate are subclasses of Terms. All Monthly interest rates and Annual percentage rates have property \"Bank Account\". There might be a Monthly Interest Rate and a Annual Percentage Rate that both have \"Bank Account\" equal to \"1834293214\".",
+    "general_class": "Terms",
+    "class1": "Monthly Interest Rate",
+    "class2": "Annual Percentage Rate",
+    "common_property": "Bank Account",
+    "common_value": "1834293214"
+}

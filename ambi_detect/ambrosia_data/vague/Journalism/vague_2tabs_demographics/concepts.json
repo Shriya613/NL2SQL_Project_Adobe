@@ -1,0 +1,7 @@
+{
+    "template": "Question: What is the demographic composition of the readers of this newspaper? Subject of Inquiry: Readers\nFocus: Demographics Possible answer types: 1. Age Range 2. Socioeconomic Status",
+    "subject": "Readers",
+    "focus": "Demographics",
+    "general_category1": "Age Range",
+    "general_category2": "Socioeconomic Status"
+}

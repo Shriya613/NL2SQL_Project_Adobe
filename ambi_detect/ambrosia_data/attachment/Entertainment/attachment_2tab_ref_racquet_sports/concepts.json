@@ -1,0 +1,8 @@
+{
+    "template": "Tennis Tournament and Golf Tournament are subclasses of Racquet Sports. All Tennis tournaments and Golf tournaments have property \"Sponsor\". There might be a Tennis Tournament and a Golf Tournament that both have \"Sponsor\" equal to \"Nike\".",
+    "general_class": "Racquet Sports",
+    "class1": "Tennis Tournament",
+    "class2": "Golf Tournament",
+    "common_property": "Sponsor",
+    "common_value": "Nike"
+}

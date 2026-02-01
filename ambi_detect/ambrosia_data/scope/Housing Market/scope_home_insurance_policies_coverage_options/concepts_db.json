@@ -1,0 +1,31 @@
+{
+    "template": "Each Home Insurance Policies has many different Coverage Options. Among them, Fire Damage is common to many Home Insurance Policies.",
+    "entities": {
+        "tab_name": "Home_Insurance_Policies",
+        "col_name": null,
+        "value": null,
+        "scope_id": null,
+        "db_type": "table"
+    },
+    "components": {
+        "tab_name": "Coverage_Options",
+        "col_name": null,
+        "value": null,
+        "scope_id": null,
+        "db_type": "table"
+    },
+    "specific_component": {
+        "tab_name": "Coverage_Options",
+        "col_name": "Description",
+        "value": "Fire Damage",
+        "scope_id": 0,
+        "db_type": "value"
+    },
+    "entities_components": {
+        "tab_name": "Home_Insurance_Policies_Coverage_Options",
+        "col_name": null,
+        "value": null,
+        "scope_id": null,
+        "db_type": "table"
+    }
+}

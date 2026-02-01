@@ -1,0 +1,6 @@
+{
+    "template": "Each Laboratory has many different Equipment. Among them, Microscope is common to many Laboratory.",
+    "specific_component": "Microscope",
+    "components": "Equipment",
+    "entities": "Laboratory"
+}

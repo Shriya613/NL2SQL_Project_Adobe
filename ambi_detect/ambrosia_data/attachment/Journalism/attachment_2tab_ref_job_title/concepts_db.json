@@ -1,0 +1,27 @@
+{
+    "domain": "Public_Relations",
+    "template": "Public Relations and Government Communications are subclasses of Job Title. All Public relationss and Government communicationss have property \"Contacts\". There might be a Public Relations and a Government Communications that both have \"Contacts\" equal to \"BBC\".",
+    "type": "2tab_ref",
+    "general_class": "Job Title",
+    "class1": {
+        "tab_name": "Public_Relations",
+        "col_name": null,
+        "value": null,
+        "scope_id": null,
+        "db_type": "table"
+    },
+    "class2": {
+        "tab_name": "Government_Communications",
+        "col_name": null,
+        "value": null,
+        "scope_id": null,
+        "db_type": "table"
+    },
+    "common_property": {
+        "tab_name": "Contacts",
+        "col_name": "organization",
+        "value": "Fox News",
+        "scope_id": null,
+        "db_type": "value"
+    }
+}

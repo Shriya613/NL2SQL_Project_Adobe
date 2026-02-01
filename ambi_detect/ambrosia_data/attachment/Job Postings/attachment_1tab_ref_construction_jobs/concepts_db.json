@@ -1,0 +1,33 @@
+{
+    "domain": "Employers",
+    "template": "Civil Engineer and Architect are subclasses of Construction Jobs. All Civil Engineers and Architects have property \"Design Software Expertise\". There might be a Civil Engineer and an Architect that both have \"Design Software Expertise\" equal to \"AutoCAD\".",
+    "type": "1tab_ref",
+    "general_class": {
+        "tab_name": "Construction_Jobs",
+        "col_name": "ConstructionJobType",
+        "value": null,
+        "scope_id": null,
+        "db_type": "column"
+    },
+    "class1": {
+        "tab_name": "Construction_Jobs",
+        "col_name": "ConstructionJobType",
+        "value": "Civil Engineering",
+        "scope_id": null,
+        "db_type": "value"
+    },
+    "class2": {
+        "tab_name": "Construction_Jobs",
+        "col_name": "ConstructionJobType",
+        "value": "Architecture",
+        "scope_id": null,
+        "db_type": "value"
+    },
+    "common_property": {
+        "tab_name": "Design_Software_Expertise",
+        "col_name": "softwareName",
+        "value": "AutoCAD",
+        "scope_id": null,
+        "db_type": "value"
+    }
+}

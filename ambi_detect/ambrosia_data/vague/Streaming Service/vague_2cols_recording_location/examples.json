@@ -1,0 +1,22 @@
+[
+    {
+        "question": "Show the ids and recording locations of studios",
+        "sql_query1": "SELECT id, studio_name FROM Studio",
+        "sql_query2": "SELECT id, address FROM Studio",
+        "sql_query3": "SELECT id, studio_name, address FROM Studio",
+        "interpretation1": "Show the ids and names of all studios.",
+        "interpretation2": "Show the ids and addresses of all studios.",
+        "interpretation3": "Show the ids, names and addresses of all studios.",
+        "sql_query_general": "SELECT id, Recording_Location FROM Studio"
+    },
+    {
+        "question": "Where is the comedy podcast recorded?",
+        "sql_query1": "SELECT studio_name FROM Studio WHERE genre = 'Comedy'",
+        "sql_query2": "SELECT address FROM Studio WHERE genre = 'Comedy'",
+        "sql_query3": "SELECT studio_name, address FROM Studio WHERE genre = 'Comedy'",
+        "interpretation1": "In what studio is the comedy podcast recorded?",
+        "interpretation2": "What's the address where the comedy podcast is recorded?",
+        "interpretation3": "What's the address and city where the comedy podcast is recorded?",
+        "sql_query_general": "SELECT Recording_Location FROM Studio WHERE genre = 'Comedy'"
+    }
+]

@@ -1,0 +1,33 @@
+{
+    "domain": "Employers",
+    "template": "Nurse and Physical Therapist are subclasses of Healthcare Jobs. All Nurses and Physical Therapists have property \"Shift Hours\". There might be a Nurse and a Physical Therapist that both have \"Shift Hours\" equal to \"Night Shift\".",
+    "type": "1tab_val_like",
+    "general_class": {
+        "tab_name": "JobPostings",
+        "col_name": "healthcare",
+        "value": null,
+        "scope_id": null,
+        "db_type": "column"
+    },
+    "class1": {
+        "tab_name": "JobPostings",
+        "col_name": "healthcare",
+        "value": "Nurse",
+        "scope_id": null,
+        "db_type": "value"
+    },
+    "class2": {
+        "tab_name": "JobPostings",
+        "col_name": "healthcare",
+        "value": "Physical Therapist",
+        "scope_id": null,
+        "db_type": "value"
+    },
+    "common_property": {
+        "tab_name": "JobPostings",
+        "col_name": "shift",
+        "value": "Day Shift",
+        "scope_id": null,
+        "db_type": "value"
+    }
+}

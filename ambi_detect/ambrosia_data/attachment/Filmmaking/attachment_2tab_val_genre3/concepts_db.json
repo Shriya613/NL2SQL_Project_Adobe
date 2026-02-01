@@ -1,0 +1,27 @@
+{
+    "domain": "Action_Movies",
+    "template": "Action Movie and Romantic Comedy are subclasses of Genre. All Action Movies and Romantic Comedies have a property \"Duration\". There might be an Action Movie and a Romantic Comedy both with a duration of \"120 minutes\".",
+    "type": "2tab_val",
+    "general_class": "Genre",
+    "class1": {
+        "tab_name": "Action_Movies",
+        "col_name": null,
+        "value": null,
+        "scope_id": null,
+        "db_type": "table"
+    },
+    "class2": {
+        "tab_name": "Romantic_Comedies",
+        "col_name": null,
+        "value": null,
+        "scope_id": null,
+        "db_type": "table"
+    },
+    "common_property": {
+        "tab_name": "Action_Movies",
+        "col_name": "Duration",
+        "value": 120,
+        "scope_id": null,
+        "db_type": "value"
+    }
+}

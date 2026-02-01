@@ -1,0 +1,9 @@
+[
+    {
+        "question": "List arrival halls and baggage reclaims with a maximum capacity of 500.",
+        "sql_query1": "SELECT arrival_hall.Arrival_Hall as name\r\nFROM arrival_hall\r\nWHERE arrival_hall.Maximum_Capacity = 500\r\nUNION\r\nSELECT baggage_reclaim.Baggage_Reclaim as name\r\nFROM baggage_reclaim\r\nWHERE baggage_reclaim.Maximum_Capacity = 500",
+        "sql_query2": "SELECT arrival_hall.Arrival_Hall as name\r\nFROM arrival_hall\r\nUNION\r\nSELECT baggage_reclaim.Baggage_Reclaim as name\r\nFROM baggage_reclaim\r\nWHERE baggage_reclaim.Maximum_Capacity = 500",
+        "interpretation1": "Which arrival halls have a maximum capacity of 500 and which baggage reclaims have the same capacity?",
+        "interpretation2": "Show a list of all arrival halls and also provide a list of baggage reclaims with a maximum capacity of 500."
+    }
+]

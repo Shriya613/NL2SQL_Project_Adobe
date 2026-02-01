@@ -1,0 +1,9 @@
+[
+    {
+        "question": "Show me all hybrid marketing specialists and sales managers.",
+        "sql_query1": "SELECT JobPostings.Title \r\nFROM JobPostings\r\nWHERE (JobPostings.Business_Profession = \"Sales Manager\" OR JobPostings.Business_Profession = \"Marketing Specialist\") AND JobPostings.Working_Arrangement = \"Hybrid\"",
+        "sql_query2": "SELECT JobPostings.Title \r\nFROM JobPostings\r\nWHERE JobPostings.Business_Profession = \"Sales Manager\" OR JobPostings.Business_Profession = \"Marketing Specialist\" AND JobPostings.Working_Arrangement = \"Hybrid\"",
+        "interpretation1": "Which sales managers work hybrid and which marketing specialists have the same work arrangement?",
+        "interpretation2": "Provide a list of all sales managers and also provide a list of marketing specialists that work hybrid."
+    }
+]

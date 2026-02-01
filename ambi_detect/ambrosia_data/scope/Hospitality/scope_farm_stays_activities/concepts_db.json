@@ -1,0 +1,31 @@
+{
+    "template": "Each Farm Stays has many different Activities. Among them, Milking Cows is common to many Farm Stays.",
+    "entities": {
+        "tab_name": "Farm_Stays",
+        "col_name": null,
+        "value": null,
+        "scope_id": null,
+        "db_type": "table"
+    },
+    "components": {
+        "tab_name": "Activities",
+        "col_name": null,
+        "value": null,
+        "scope_id": null,
+        "db_type": "table"
+    },
+    "specific_component": {
+        "tab_name": "Activities",
+        "col_name": "description",
+        "value": "Milking cows",
+        "scope_id": 0,
+        "db_type": "value"
+    },
+    "entities_components": {
+        "tab_name": "Farm_Stays_Activities",
+        "col_name": null,
+        "value": null,
+        "scope_id": null,
+        "db_type": "table"
+    }
+}

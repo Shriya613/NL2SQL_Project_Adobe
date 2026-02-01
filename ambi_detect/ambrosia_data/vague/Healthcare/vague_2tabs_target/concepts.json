@@ -1,0 +1,7 @@
+{
+    "template": "Question: When should this vaccine be administered? Subject of Inquiry: Vaccine\nFocus: Target Possible answer types: 1. Age Group 2. Health Condition",
+    "subject": "Vaccine",
+    "focus": "Target",
+    "general_category1": "Age Group",
+    "general_category2": "Health Condition"
+}

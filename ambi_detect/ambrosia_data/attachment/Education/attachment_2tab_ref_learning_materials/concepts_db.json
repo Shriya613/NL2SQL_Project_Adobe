@@ -1,0 +1,27 @@
+{
+    "domain": "Difficulty_Level",
+    "template": "Textbook and Online Course are subclasses of Learning Materials. All Textbooks and Online Courses have the property \"Difficulty Level\". There might be a Textbook and an Online Course that both have \"Difficulty Level\" equal to \"Intermediate\".",
+    "type": "2tab_ref",
+    "general_class": "Learning Materials",
+    "class1": {
+        "tab_name": "Textbooks",
+        "col_name": null,
+        "value": null,
+        "scope_id": null,
+        "db_type": "table"
+    },
+    "class2": {
+        "tab_name": "Online_Courses",
+        "col_name": null,
+        "value": null,
+        "scope_id": null,
+        "db_type": "table"
+    },
+    "common_property": {
+        "tab_name": "Difficulty_Level",
+        "col_name": "Level",
+        "value": "Advanced",
+        "scope_id": null,
+        "db_type": "value"
+    }
+}

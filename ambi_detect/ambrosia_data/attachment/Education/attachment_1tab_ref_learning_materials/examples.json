@@ -1,0 +1,9 @@
+[
+    {
+        "question": "Show me all textbooks and online courses for students who understand the basics.",
+        "sql_query1": "SELECT Learning_Materials.title \r\nFROM Learning_Materials JOIN Difficulty_levels ON Learning_Materials.difficultyLevel = Difficulty_levels.difficultyLevel\r\nWHERE (Learning_Materials.typeOfMaterial = \"Textbook\" OR Learning_Materials.typeOfMaterial = \"Online Course\") AND Difficulty_levels.levelDescription = \"For those who have a good understanding of the basics.\"",
+        "sql_query2": "SELECT Learning_Materials.title \r\nFROM Learning_Materials JOIN Difficulty_levels ON Learning_Materials.difficultyLevel = Difficulty_levels.difficultyLevel\r\nWHERE Learning_Materials.typeOfMaterial = \"Textbook\" OR Learning_Materials.typeOfMaterial = \"Online Course\" AND Difficulty_levels.levelDescription = \"For those who have a good understanding of the basics.\"",
+        "interpretation1": "List both the textbooks for students who understand the basics and online courses for audiences at the same level.",
+        "interpretation2": "List all of the textbooks and only those online courses that are suitable for those who understand the basics."
+    }
+]

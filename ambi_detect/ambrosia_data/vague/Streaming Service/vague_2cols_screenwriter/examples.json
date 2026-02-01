@@ -1,0 +1,22 @@
+[
+    {
+        "question": "List the movies along with their release years, sorted by writer",
+        "sql_query1": "SELECT novelist, title, release_year\r\nFROM Movies\r\nORDER BY novelist, release_year;",
+        "sql_query2": "SELECT playwright, title, release_year\r\nFROM Movies\r\nORDER BY playwright, release_year;",
+        "sql_query3": "SELECT novelist, playwright, title, release_year\r\nFROM Movies\r\nORDER BY novelist, playwright, release_year;",
+        "interpretation1": "List the movies and their release years, sort by their novelist.",
+        "interpretation2": "List the movies and their release years, sort by their playwright.",
+        "interpretation3": "List the movies and their release years, sort by their novelist, then playwright.",
+        "sql_query_general": "SELECT Screenwriter, title, release_year\r\nFROM Movies\r\nORDER BY Screenwriter, release_year;"
+    },
+    {
+        "question": "Provide a count of movies for each writer",
+        "sql_query1": "SELECT novelist, COUNT(*) AS Movie_Count\r\nFROM Movies\r\nGROUP BY novelist;",
+        "sql_query2": "SELECT playwright, COUNT(*) AS Movie_Count\r\nFROM Movies\r\nGROUP BY playwright;",
+        "sql_query3": "SELECT novelist, playwright, COUNT(*) AS Movie_Count\r\nFROM Movies\r\nGROUP BY novelist, playwright;",
+        "interpretation1": "Provide a count of movies for each novelist.",
+        "interpretation2": "Provide a count of movies for each playwright.",
+        "interpretation3": "Provide a count of movies for each novelist and playwright.",
+        "sql_query_general": "SELECT Screenwriter, COUNT(*) AS Movie_Count\r\nFROM Movies\r\nGROUP BY Screenwriter;"
+    }
+]

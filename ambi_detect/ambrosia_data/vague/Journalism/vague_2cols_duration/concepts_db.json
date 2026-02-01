@@ -1,0 +1,25 @@
+{
+    "template": "Question: How long has this media outlet been in operation? Subject of Inquiry: Media Outlet\nFocus: Duration Possible answer types: 1. Operation Years 2. Operation Months",
+    "general_category1": {
+        "tab_name": "Operations",
+        "col_name": "OperationYears",
+        "value": null,
+        "scope_id": null,
+        "db_type": "column"
+    },
+    "general_category2": {
+        "tab_name": "Operations",
+        "col_name": "OperationMonths",
+        "value": null,
+        "scope_id": null,
+        "db_type": "column"
+    },
+    "subject": {
+        "tab_name": "Operations",
+        "col_name": "MediaOutlet",
+        "value": null,
+        "scope_id": null,
+        "db_type": "column"
+    },
+    "type": "2cols"
+}

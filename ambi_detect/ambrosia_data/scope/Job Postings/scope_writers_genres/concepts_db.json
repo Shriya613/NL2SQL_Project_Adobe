@@ -1,0 +1,31 @@
+{
+    "template": "Each Writers has many different Genres. Among them, Blog Post is common to many Writers.",
+    "entities": {
+        "tab_name": "Writers",
+        "col_name": null,
+        "value": null,
+        "scope_id": null,
+        "db_type": "table"
+    },
+    "components": {
+        "tab_name": "Genres",
+        "col_name": null,
+        "value": null,
+        "scope_id": null,
+        "db_type": "table"
+    },
+    "specific_component": {
+        "tab_name": "Genres",
+        "col_name": "name",
+        "value": "Blog_Post",
+        "scope_id": 0,
+        "db_type": "value"
+    },
+    "entities_components": {
+        "tab_name": "Writers_Genres",
+        "col_name": null,
+        "value": null,
+        "scope_id": null,
+        "db_type": "table"
+    }
+}

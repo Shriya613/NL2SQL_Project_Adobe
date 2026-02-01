@@ -1,0 +1,22 @@
+[
+    {
+        "question": "show me the creators for all documentaries in the category 'Current Affairs'",
+        "sql_query1": "SELECT\r\n    Producer.name FROM Producer JOIN Documentary ON Producer.id = Documentary.producer_id JOIN Category ON Documentary.category_id = Category.id WHERE Category.category_name = 'Current Affairs'",
+        "sql_query2": "SELECT\r\n    Director.name FROM Director JOIN Documentary ON Director.id = Documentary.Director_id JOIN Category ON Documentary.category_id = Category.id WHERE Category.category_name = 'Current Affairs'",
+        "sql_query3": "SELECT\r\n    Producer.name,  Director.name  FROM Producer JOIN Documentary ON Producer.id = Documentary.producer_id JOIN Director ON Documentary.Director_id = Director.id JOIN Category ON Documentary.category_id = Category.id WHERE Category.category_name = 'Current Affairs'",
+        "interpretation1": "Who is the producer of the documentary on current affairs?",
+        "interpretation2": "Who is the director of the documentary on current affairs?",
+        "interpretation3": "Who is the producer and director of the documentary on current affairs?",
+        "sql_query_general": "SELECT\r\n    Creator.name FROM Creator JOIN Documentary ON Creator.id = Documentary.producer_id JOIN Category ON Documentary.category_id = Category.id WHERE Category.category_name = 'Current Affairs'"
+    },
+    {
+        "question": "show me the creator name and title of all documentaries released in 2020",
+        "sql_query1": "SELECT Producer.name, Documentary.title FROM Documentary JOIN Producer ON Documentary.producer_id = Producer.id WHERE Documentary.release_year = 2020",
+        "sql_query2": "SELECT Director.name, Documentary.title FROM Documentary JOIN Director ON Documentary.Director_id = Director.id WHERE Documentary.release_year = 2020",
+        "sql_query3": "SELECT Producer.name,  Director.name, Documentary.title FROM Documentary JOIN Producer ON Documentary.producer_id = Producer.id JOIN Director ON Documentary.Director_id = Director.id  WHERE Documentary.release_year = 2020",
+        "interpretation1": "What documentaries were released in 2020 and who produced them?",
+        "interpretation2": "What documentaries were released in 2020 and who directed them?",
+        "interpretation3": "What documentaries were released in 2020 and who were their producers and directors?",
+        "sql_query_general": "SELECT Creator.name, Documentary.title FROM Documentary JOIN Creator ON Documentary.producer_id = Creator.id WHERE Documentary.release_year = 2020"
+    }
+]

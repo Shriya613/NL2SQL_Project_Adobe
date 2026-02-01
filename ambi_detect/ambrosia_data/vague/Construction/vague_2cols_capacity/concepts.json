@@ -1,0 +1,7 @@
+{
+    "template": "Question: What is the capacity of this stadium? Subject of Inquiry: Stadium\nFocus: Capacity Possible answer types: 1. Seating Capacity 2. Maximum Occupancy",
+    "subject": "Stadium",
+    "focus": "Capacity",
+    "general_category1": "Seating Capacity",
+    "general_category2": "Maximum Occupancy"
+}

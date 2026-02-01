@@ -1,0 +1,6 @@
+{
+    "template": "Each Restaurants has many different Kitchen Roles. Among them, Chef is common to many Restaurants.",
+    "specific_component": "Chef",
+    "components": "Kitchen Roles",
+    "entities": "Restaurants"
+}

@@ -1,0 +1,6 @@
+{
+    "template": "Each Retail Stores has many different Staff Roles. Among them, Sales Associate is common to many Retail Stores.",
+    "specific_component": "Sales Associate",
+    "components": "Staff Roles",
+    "entities": "Retail Stores"
+}

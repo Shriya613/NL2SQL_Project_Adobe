@@ -1,0 +1,23 @@
+[
+    {
+        "question": "Tell me the subject of each textbook chapter.",
+        "sql_query1": "SELECT Chapters.subject  from Textbooks_Chapters join Chapters on Textbooks_Chapters.chapterName = Chapters.chapterName join Textbooks on Textbooks_Chapters.textbookId = Textbooks.id   GROUP BY Textbooks_Chapters.chapterName HAVING COUNT(DISTINCT Textbooks_Chapters.textbookId) = (SELECT COUNT(*) FROM  Textbooks)",
+        "sql_query2": "select textbooks.title , chapters.subject from Textbooks_Chapters join Chapters on Textbooks_Chapters.chapterName = Chapters.chapterName join Textbooks on Textbooks_Chapters.textbookId = Textbooks.id",
+        "interpretation1": "What subjects do all textbook chapters have in common?",
+        "interpretation2": "For each textbook chapter, list the subjects."
+    },
+    {
+        "question": "What are the subjects and names of chapters that correspond to every textbook?",
+        "sql_query1": "SELECT Chapters.chapterName, Chapters.subject  from Textbooks_Chapters join Chapters on Textbooks_Chapters.chapterName = Chapters.chapterName join Textbooks on Textbooks_Chapters.textbookId = Textbooks.id   GROUP BY Textbooks_Chapters.chapterName HAVING COUNT(DISTINCT Textbooks_Chapters.textbookId) = (SELECT COUNT(*) FROM  Textbooks)",
+        "sql_query2": "select textbooks.title , chapters.chaptername , chapters.subject from Textbooks_Chapters join Chapters on Textbooks_Chapters.chapterName = Chapters.chapterName join Textbooks on Textbooks_Chapters.textbookId = Textbooks.id",
+        "interpretation1": "What is the subject and name of the chapter common across all textbooks?",
+        "interpretation2": "For each textbook, what is the subject and name of the corresponding chapter?"
+    },
+    {
+        "question": "Show me chapters each textbook has.",
+        "sql_query1": "SELECT Chapters.chapterName  from Textbooks_Chapters join Chapters on Textbooks_Chapters.chapterName = Chapters.chapterName join Textbooks on Textbooks_Chapters.textbookId = Textbooks.id   GROUP BY Textbooks_Chapters.chapterName HAVING COUNT(DISTINCT Textbooks_Chapters.textbookId) = (SELECT COUNT(*) FROM  Textbooks)",
+        "sql_query2": "select textbooks.title , chapters.chaptername from Textbooks_Chapters join Chapters on Textbooks_Chapters.chapterName = Chapters.chapterName join Textbooks on Textbooks_Chapters.textbookId = Textbooks.id",
+        "interpretation1": "What chapters do all textbooks have in common?",
+        "interpretation2": "For every textbook, list the chapters they have."
+    }
+]

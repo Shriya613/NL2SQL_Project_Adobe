@@ -1,0 +1,7 @@
+{
+    "template": "Question: What is the divorce rate for couples married less than five years? Subject of Inquiry: Village\nFocus: Divorce Rate Possible answer types: 1. Divorced Percentage 2. Divorced Count",
+    "subject": "Village",
+    "focus": "Divorce Rate",
+    "general_category1": "Divorced Percentage",
+    "general_category2": "Divorced Count"
+}

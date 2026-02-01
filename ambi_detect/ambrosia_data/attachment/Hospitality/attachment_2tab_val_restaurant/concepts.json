@@ -1,0 +1,8 @@
+{
+    "template": "Steakhouse and Seafood Restaurant are subclasses of Restaurant. All Steakhouses and Seafood restaurants have property \"Year of Establishment\". There might be a Steakhouse and a Seafood Restaurant that both have \"Year of Establishment\" equal to \"1980\".",
+    "general_class": "Restaurant",
+    "class1": "Steakhouse",
+    "class2": "Seafood Restaurant",
+    "common_property": "Year of Establishment",
+    "common_value": "1980"
+}

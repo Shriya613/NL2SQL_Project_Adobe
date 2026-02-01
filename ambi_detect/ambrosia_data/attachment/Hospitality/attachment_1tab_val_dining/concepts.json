@@ -1,0 +1,8 @@
+{
+    "template": "Prepared Meal and Takeaway are subclasses of Dining. All Prepared meals and Takeaways have property \"Best Before\". There might be a Prepared Meal and a Takeaway that both have \"Best Before\" equal to \"10.11.2018\".",
+    "general_class": "Dining",
+    "class1": "Prepared Meal",
+    "class2": "Takeaway",
+    "common_property": "Best Before",
+    "common_value": "10.11.2018"
+}

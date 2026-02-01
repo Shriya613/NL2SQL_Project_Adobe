@@ -1,0 +1,9 @@
+[
+    {
+        "question": "Show me the features every banking app has.",
+        "sql_query1": "SELECT Features.feature_value  from Mobile_Banking_App_Features join Mobile_Banking_App on Mobile_Banking_App_Features.mobile_banking_app_id = Mobile_Banking_App.app_id join Features on Mobile_Banking_App_Features.feature_id = Features.feature_id   GROUP BY Mobile_Banking_App_Features.feature_id HAVING COUNT(DISTINCT Mobile_Banking_App_Features.mobile_banking_app_id) = (SELECT COUNT(*) FROM  Mobile_Banking_App)",
+        "sql_query2": "select mobile_banking_app.app_version , features.feature_value from Mobile_Banking_App_Features join Mobile_Banking_App on Mobile_Banking_App_Features.mobile_banking_app_id = Mobile_Banking_App.app_id join Features on Mobile_Banking_App_Features.feature_id = Features.feature_id",
+        "interpretation1": "What features do all banking apps have in common?",
+        "interpretation2": "For each banking app, list the features they have."
+    }
+]

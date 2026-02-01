@@ -1,0 +1,25 @@
+{
+    "template": "Question: Who funded the construction of this public park? Subject of Inquiry: Public Park\nFocus: Funding Possible answer types: 1. Government Agency 2. Private Donors",
+    "general_category1": {
+        "tab_name": "Funding",
+        "col_name": "governmentAgency",
+        "value": null,
+        "scope_id": null,
+        "db_type": "column"
+    },
+    "general_category2": {
+        "tab_name": "Funding",
+        "col_name": "privateDonors",
+        "value": null,
+        "scope_id": null,
+        "db_type": "column"
+    },
+    "subject": {
+        "tab_name": "Funding",
+        "col_name": "publicPark",
+        "value": null,
+        "scope_id": null,
+        "db_type": "column"
+    },
+    "type": "2cols"
+}

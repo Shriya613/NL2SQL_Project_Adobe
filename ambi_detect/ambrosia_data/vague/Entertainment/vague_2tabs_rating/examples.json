@@ -1,0 +1,22 @@
+[
+    {
+        "question": "What is the rating of Breaking Bad?",
+        "sql_query1": "SELECT Age_Rating.ageMinimum FROM Age_Rating JOIN Tv_Show ON Tv_Show.AgeRatingId = Age_Rating.ratingId WHERE Tv_Show.title = 'Breaking Bad';",
+        "sql_query2": "SELECT Critical_Rating.score FROM Critical_Rating JOIN Tv_Show ON Tv_Show.CriticalScoreId = Critical_Rating.ratingId WHERE Tv_Show.title = 'Breaking Bad';",
+        "sql_query3": "SELECT Age_Rating.ageMinimum FROM Age_Rating JOIN Tv_Show ON Tv_Show.AgeRatingId = Age_Rating.ratingId WHERE Tv_Show.title = 'Breaking Bad' UNION SELECT Critical_Rating.score FROM Critical_Rating JOIN Tv_Show ON Tv_Show.CriticalScoreId = Critical_Rating.ratingId WHERE Tv_Show.title = 'Breaking Bad';",
+        "interpretation1": "What is the age restriction for breaking bad?",
+        "interpretation2": "What is the critical rating for breaking bad?",
+        "interpretation3": "What is the age restriction and critical rating for breaking bad?",
+        "sql_query_general": "SELECT Rating.ageMinimum FROM Rating JOIN Tv_Show ON Tv_Show.ageRatingId = Rating.ratingId WHERE Tv_Show.title = 'Breaking Bad';"
+    },
+    {
+        "question": "What is the minimum rating?",
+        "sql_query1": "SELECT MIN(ageMinimum) FROM Age_Rating;",
+        "sql_query2": "SELECT MIN(score) FROM Critical_Rating;",
+        "sql_query3": "SELECT MIN(ageMinimum) FROM Age_Rating UNION SELECT MIN(score) FROM Critical_Rating",
+        "interpretation1": "What is the lowest age rating?",
+        "interpretation2": "What is the lowest critical rating?",
+        "interpretation3": "What are the lowest age and critical ratings?",
+        "sql_query_general": "SELECT MIN(ageMinimum) FROM Rating;"
+    }
+]

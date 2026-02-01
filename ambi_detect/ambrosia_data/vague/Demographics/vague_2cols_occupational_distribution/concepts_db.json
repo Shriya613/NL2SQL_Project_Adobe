@@ -1,0 +1,25 @@
+{
+    "template": "Question: What is the most common occupation among workers in this region? Subject of Inquiry: Region\nFocus: Occupational Distribution Possible answer types: 1. Primary Industry 2. Most Common Job",
+    "general_category1": {
+        "tab_name": "Industries",
+        "col_name": "Primary_Industry",
+        "value": null,
+        "scope_id": null,
+        "db_type": "column"
+    },
+    "general_category2": {
+        "tab_name": "Industries",
+        "col_name": "Most_Common_Job",
+        "value": null,
+        "scope_id": null,
+        "db_type": "column"
+    },
+    "subject": {
+        "tab_name": "Industries",
+        "col_name": "Region",
+        "value": null,
+        "scope_id": null,
+        "db_type": "column"
+    },
+    "type": "2cols"
+}

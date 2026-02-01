@@ -1,0 +1,7 @@
+{
+    "template": "Question: Where was this podcast recorded? Subject of Inquiry: Podcast\nFocus: Recording Location Possible answer types: 1. Studio 2. Address",
+    "subject": "Podcast",
+    "focus": "Recording Location",
+    "general_category1": "Studio",
+    "general_category2": "Address"
+}

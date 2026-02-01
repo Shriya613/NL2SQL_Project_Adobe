@@ -1,0 +1,22 @@
+[
+    {
+        "question": "Describe a denim jacket.",
+        "sql_query1": "SELECT color_name FROM Color_Palette JOIN Fashion_Design ON Fashion_Design.color_id = Color_Palette.color_id WHERE design_name = 'Denim Jacket';",
+        "sql_query2": "SELECT fabric_type FROM Fabric_Choice JOIN Fashion_Design ON Fashion_Design.fabric_id = Fabric_Choice.fabric_id WHERE design_name = 'Denim Jacket';",
+        "sql_query3": "SELECT color_name, fabric_type FROM Color_Palette JOIN Fashion_Design ON Fashion_Design.color_id = Color_Palette.color_id JOIN Fabric_Choice ON Fashion_Design.fabric_id = Fabric_Choice.fabric_id WHERE design_name = 'Denim Jacket';",
+        "interpretation1": "Describe the color palette of a denim jacket",
+        "interpretation2": "describe the fabric choice of a denim jacket",
+        "interpretation3": "describe the color palette of a denim jacket and the choice of fabric for it",
+        "sql_query_general": "SELECT color_name FROM Key_Elements JOIN Fashion_Design ON Fashion_Design.color_id = Key_Elements.color_id WHERE design_name = 'Denim Jacket';"
+    },
+    {
+        "question": "Describe the different designs.",
+        "sql_query1": "SELECT design_name, color_name FROM Color_Palette JOIN Fashion_Design ON Fashion_Design.color_id = Color_Palette.color_id;",
+        "sql_query2": "SELECT design_name, fabric_type FROM Fabric_Choice JOIN Fashion_Design ON Fashion_Design.fabric_id = Fabric_Choice.fabric_id;",
+        "sql_query3": "SELECT design_name, color_name, fabric_type FROM Color_Palette JOIN Fashion_Design ON Fashion_Design.color_id = Color_Palette.color_id JOIN Fabric_Choice ON Fashion_Design.fabric_id = Fabric_Choice.fabric_id;",
+        "interpretation1": "Show me the different designs and their color palettes.",
+        "interpretation2": "Show me the different designs and their fabric choices.",
+        "interpretation3": "Show me the different designs and their fabric choices and color palettes.",
+        "sql_query_general": "SELECT design_name, color_name FROM Key_Elements JOIN Fashion_Design ON Fashion_Design.color_id = Key_Elements.color_id;"
+    }
+]

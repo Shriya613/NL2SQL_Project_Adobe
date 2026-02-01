@@ -1,0 +1,7 @@
+{
+    "template": "Question: How much does tuition cost for this program? Subject of Inquiry: Program\nFocus: Tuition Cost Possible answer types: 1. Amount per semester 2. Annual Cost",
+    "subject": "Program",
+    "focus": "Tuition Cost",
+    "general_category1": "Amount per semester",
+    "general_category2": "Annual Cost"
+}

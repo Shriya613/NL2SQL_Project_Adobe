@@ -1,0 +1,6 @@
+{
+    "template": "Each Films has many different Crew Members. Among them, Director is common to many Films.",
+    "specific_component": "Director",
+    "components": "Crew Members",
+    "entities": "Films"
+}

@@ -1,0 +1,9 @@
+[
+    {
+        "question": "What film categories does each film festival offer?",
+        "sql_query1": "SELECT Categories.categoryName  from Film_Festival_Categories join Categories on Film_Festival_Categories.categoryId = Categories.id join Film_Festivals on Film_Festival_Categories.festivalId = Film_Festivals.id   GROUP BY Film_Festival_Categories.categoryId HAVING COUNT(DISTINCT Film_Festival_Categories.festivalId) = (SELECT COUNT(*) FROM  Film_Festivals)",
+        "sql_query2": "select film_festivals.name , categories.categoryname from Film_Festival_Categories join Categories on Film_Festival_Categories.categoryId = Categories.id join Film_Festivals on Film_Festival_Categories.festivalId = Film_Festivals.id",
+        "interpretation1": "Show me the categories that are the same for all film festivals.",
+        "interpretation2": "List all  film festivals and their categories."
+    }
+]

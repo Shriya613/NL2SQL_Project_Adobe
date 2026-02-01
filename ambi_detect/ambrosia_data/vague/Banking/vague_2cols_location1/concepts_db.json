@@ -1,0 +1,25 @@
+{
+    "template": "Question: Where is this branch located? Subject of Inquiry: Branches\nFocus: Location Possible answer types: 1. Street Name 2. Neighborhood",
+    "general_category1": {
+        "tab_name": "branches",
+        "col_name": "street_name",
+        "value": null,
+        "scope_id": null,
+        "db_type": "column"
+    },
+    "general_category2": {
+        "tab_name": "branches",
+        "col_name": "neighborhood",
+        "value": null,
+        "scope_id": null,
+        "db_type": "column"
+    },
+    "subject": {
+        "tab_name": "branches",
+        "col_name": "branch_id",
+        "value": null,
+        "scope_id": null,
+        "db_type": "column"
+    },
+    "type": "2cols"
+}

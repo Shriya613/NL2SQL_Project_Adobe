@@ -1,0 +1,9 @@
+[
+    {
+        "question": "Show steak houses and sea food restaurants established in 1980.",
+        "sql_query1": "SELECT SteakHouses.name\r\nFROM SteakHouses\r\nWHERE SteakHouses.Year_of_establishment = 1980\r\nUNION\r\nSELECT SeaFoodRestaurants.name\r\nFROM SeaFoodRestaurants\r\nWHERE SeaFoodRestaurants.Year_of_establishment = 1980",
+        "sql_query2": "SELECT SteakHouses.name\r\nFROM SteakHouses\r\nUNION\r\nSELECT SeaFoodRestaurants.name\r\nFROM SeaFoodRestaurants\r\nWHERE SeaFoodRestaurants.Year_of_establishment = 1980",
+        "interpretation1": "Which steak houses were established in 1980 and which sea food restaurants were established in the same year.",
+        "interpretation2": "Provide a list of all steak houses and also provide a list of sea food restaurants established in 1980."
+    }
+]

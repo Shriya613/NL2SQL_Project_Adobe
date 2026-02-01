@@ -1,0 +1,27 @@
+{
+    "domain": "Real_Estate_Agents",
+    "template": "Real Estate Agent and Property Manager are subclasses of Real Estate Jobs. All Real estate agents and Property managers have property \"Commission\". There might be a Real Estate Agent and a Property Manager that both have \"Commission\" equal to \"5%\".",
+    "type": "2tab_val",
+    "general_class": "Real Estate Jobs",
+    "class1": {
+        "tab_name": "Real_Estate_Agents",
+        "col_name": null,
+        "value": null,
+        "scope_id": null,
+        "db_type": "table"
+    },
+    "class2": {
+        "tab_name": "Property_Managers",
+        "col_name": null,
+        "value": null,
+        "scope_id": null,
+        "db_type": "table"
+    },
+    "common_property": {
+        "tab_name": "Real_Estate_Agents",
+        "col_name": "commission",
+        "value": "5%",
+        "scope_id": null,
+        "db_type": "value"
+    }
+}

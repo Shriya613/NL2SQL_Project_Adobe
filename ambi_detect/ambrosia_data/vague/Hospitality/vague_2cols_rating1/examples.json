@@ -1,0 +1,22 @@
+[
+    {
+        "question": "return the rating of each hotel",
+        "sql_query1": "select h.name, r.Customer_Reviews from reviews r inner join hotels h on h.hotelid=r.hotelid",
+        "sql_query2": "select h.name, r.Number_Of_Stars from reviews r inner join hotels h on h.hotelid=r.hotelid",
+        "sql_query3": "select h.name, r.Customer_Reviews, Number_Of_Stars from reviews r inner join hotels h on h.hotelid=r.hotelid",
+        "interpretation1": "How did the customers review each hotel?",
+        "interpretation2": "How many stars were assigned to each hotel?",
+        "interpretation3": "What reviews did the customers leave for each hotel and how many stars were assigned to these hotels?",
+        "sql_query_general": "select h.name, r.rating from reviews r inner join hotels h on h.hotelid=r.hotelid"
+    },
+    {
+        "question": "return ratings and customers",
+        "sql_query1": "select c.fullname, r.Customer_Reviews from reviews r inner join Customers c on c.CustomerID =r. CustomerID",
+        "sql_query2": "select c.fullname, r.Number_Of_Stars from reviews r inner join Customers c on c.CustomerID =r. CustomerID",
+        "sql_query3": "select c.fullname, r.Customer_Reviews, Number_Of_Stars from reviews r inner join Customers c on c.CustomerID =r. CustomerID",
+        "interpretation1": "return customer reviews and customers",
+        "interpretation2": "How many stars did each customer give?",
+        "interpretation3": "return customer reviews, number of stars and customers",
+        "sql_query_general": "select c.fullname, r.rating from reviews r inner join Customers c on c.CustomerID =r. CustomerID"
+    }
+]

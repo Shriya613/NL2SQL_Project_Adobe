@@ -1,0 +1,8 @@
+{
+    "template": "Payment and Remittance Transfer are subclasses of Transaction Types. All Payments and Remittance transfers have property \"Bank Account\". There might be a Payment and a Remittance Transfer that both have \"Bank Account\" equal to \"1234567\".",
+    "general_class": "Transaction Types",
+    "class1": "Payment",
+    "class2": "Remittance Transfer",
+    "common_property": "Bank Account",
+    "common_value": "1234567"
+}

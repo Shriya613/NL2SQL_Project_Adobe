@@ -1,0 +1,31 @@
+{
+    "template": "Each Photojournalism Pieces has many different Images. Among them, Candid Shots is common to many Photojournalism Pieces.",
+    "entities": {
+        "tab_name": "Photojournalism_Pieces",
+        "col_name": null,
+        "value": null,
+        "scope_id": null,
+        "db_type": "table"
+    },
+    "components": {
+        "tab_name": "Images",
+        "col_name": null,
+        "value": null,
+        "scope_id": null,
+        "db_type": "table"
+    },
+    "specific_component": {
+        "tab_name": "Images",
+        "col_name": "image_name",
+        "value": "Portrait of a Politician",
+        "scope_id": 0,
+        "db_type": "value"
+    },
+    "entities_components": {
+        "tab_name": "Photojournalism_Pieces_Images",
+        "col_name": null,
+        "value": null,
+        "scope_id": null,
+        "db_type": "table"
+    }
+}

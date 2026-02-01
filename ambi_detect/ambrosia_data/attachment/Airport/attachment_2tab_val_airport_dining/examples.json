@@ -1,0 +1,9 @@
+[
+    {
+        "question": "Show all the restaurants and bars which open from 9AM to 11PM.",
+        "sql_query1": "SELECT Restaurant.name\r\nFROM Restaurant\r\nWHERE Restaurant.openingHours = \"9 AM to 11 PM\"\r\nUNION\r\nSELECT Bar.name\r\nFROM Bar\r\nWHERE Bar.openingHours = \"9 AM to 11 PM\"",
+        "sql_query2": "SELECT Restaurant.name\r\nFROM Restaurant\r\nUNION\r\nSELECT Bar.name\r\nFROM Bar\r\nWHERE Bar.openingHours = \"9 AM to 11 PM\"",
+        "interpretation1": "Show both restaurants and bars any of which is open between 9AM and 11PM.",
+        "interpretation2": "Show all the restaurants regardless of opening hours and just those bars open from 9AM to 11PM."
+    }
+]

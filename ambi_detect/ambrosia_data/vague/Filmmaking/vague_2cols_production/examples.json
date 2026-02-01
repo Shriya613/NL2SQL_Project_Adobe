@@ -1,0 +1,22 @@
+[
+    {
+        "question": "What were the comments split by movies and their productions?",
+        "sql_query1": "SELECT a.title, b.comments, c.name FROM Movie a JOIN Review b ON a.id = b.movie_id JOIN Studio c ON c.id = a.studio_id",
+        "sql_query2": "SELECT a.title, b.comments, c.Full_name FROM Movie a JOIN Review b ON a.id = b.movie_id JOIN Producer c ON c.id = a.producer_id",
+        "sql_query3": "SELECT a.title, b.comments, c.name, p.full_name FROM Movie a JOIN Review b ON a.id = b.movie_id JOIN Studio c ON c.id = a.studio_id JOIN Producer p ON p.id = a.producer_id",
+        "interpretation1": "List the comments, split by movies and their studio id.",
+        "interpretation2": "List the comments, split by movies and their producer id.",
+        "interpretation3": "List the comments, split by movies and their studio and producer id.",
+        "sql_query_general": "SELECT a.title, b.comments, c.name FROM Movie a JOIN Review b ON a.id = b.movie_id JOIN Studio c ON c.id = a.Production"
+    },
+    {
+        "question": "Who made each production? Split by movie",
+        "sql_query1": "SELECT a.title, b.name FROM Movie a JOIN Studio b ON a.studio_id = b.id",
+        "sql_query2": "SELECT a.title, c.Full_name FROM Movie a JOIN Producer c ON a.producer_id = c.id",
+        "sql_query3": "SELECT a.title, c.name, p.full_name FROM Movie a JOIN Studio c ON a.studio_id = c.id JOIN Producer p ON p.id = a.producer_id",
+        "interpretation1": "Which studio made each production? Split by movie",
+        "interpretation2": "Which producer made each production? Split by movie",
+        "interpretation3": "Which studio and producer made each production? Split by movie",
+        "sql_query_general": "SELECT a.title, b.name FROM Movie a JOIN Studio b ON a.Production = b.id"
+    }
+]

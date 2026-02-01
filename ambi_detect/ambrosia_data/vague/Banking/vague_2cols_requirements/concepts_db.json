@@ -1,0 +1,25 @@
+{
+    "template": "Question: What do I need to apply for a business loan? Subject of Inquiry: Business Loan Applications\nFocus: Requirements Possible answer types: 1. Eligibility Criteria 2. Documentation Requirements",
+    "general_category1": {
+        "tab_name": "EligibilityAndDocuments",
+        "col_name": "Eligibility_Criteria",
+        "value": null,
+        "scope_id": null,
+        "db_type": "column"
+    },
+    "general_category2": {
+        "tab_name": "EligibilityAndDocuments",
+        "col_name": "Documentation_Requirements",
+        "value": null,
+        "scope_id": null,
+        "db_type": "column"
+    },
+    "subject": {
+        "tab_name": "EligibilityAndDocuments",
+        "col_name": "Business_Loan_Application",
+        "value": null,
+        "scope_id": null,
+        "db_type": "column"
+    },
+    "type": "2cols"
+}

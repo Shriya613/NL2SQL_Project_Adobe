@@ -1,0 +1,22 @@
+[
+    {
+        "question": "What compensation is offered to software developers?",
+        "sql_query1": "select s.Salary_Range \r\nfrom position as p \r\njoin salarydetails as s \r\non p.id=s.positionid \r\nwhere p.title = 'Software Developer'",
+        "sql_query2": "select s.Hourly_Rate \r\nfrom position as p \r\njoin salarydetails as s \r\non p.id=s.positionid \r\nwhere p.title = 'Software Developer'",
+        "sql_query3": "select s.Salary_Range, Hourly_Rate \r\nfrom position as p \r\njoin salarydetails as s \r\non p.id=s.positionid \r\nwhere p.title = 'Software Developer'",
+        "interpretation1": "What's the salary range available for software developers?",
+        "interpretation2": "How much might a software developer expect to get paid per hour?",
+        "interpretation3": "What are the pay rates for software developers both per hour and as an annual salary?",
+        "sql_query_general": "select s.compensation \r\nfrom position as p \r\njoin salarydetails as s \r\non p.id=s.positionid \r\nwhere p.title = 'Software Developer'"
+    },
+    {
+        "question": "Show me all the positions and compensation offered.",
+        "sql_query1": "select p.title, s.Salary_Range \r\nfrom position as p \r\njoin salarydetails as s \r\non p.id=s.positionid",
+        "sql_query2": "select p.title, s.Hourly_Rate \r\nfrom position as p \r\njoin salarydetails as s \r\non p.id=s.positionid",
+        "sql_query3": "select p.title, s.Salary_Range, Hourly_Rate \r\nfrom position as p \r\njoin salarydetails as s \r\non p.id=s.positionid",
+        "interpretation1": "List all the job positions and the associated salary range.",
+        "interpretation2": "Show me all the positions and their hourly rates.",
+        "interpretation3": "Show all the job positions and, for each, list the hourly rate and salary range.",
+        "sql_query_general": "select p.title, s.compensation \r\nfrom position as p \r\njoin salarydetails as s \r\non p.id=s.positionid"
+    }
+]

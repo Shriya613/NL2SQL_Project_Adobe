@@ -1,0 +1,31 @@
+{
+    "template": "Each Marketing Campaigns has many different Approaches. Among them, Direct Mail is common to many Marketing Campaigns.",
+    "entities": {
+        "tab_name": "Marketing_Campaigns",
+        "col_name": null,
+        "value": null,
+        "scope_id": null,
+        "db_type": "table"
+    },
+    "components": {
+        "tab_name": "Approaches",
+        "col_name": null,
+        "value": null,
+        "scope_id": null,
+        "db_type": "table"
+    },
+    "specific_component": {
+        "tab_name": "Approaches",
+        "col_name": "approach_value",
+        "value": "Direct Mail",
+        "scope_id": 0,
+        "db_type": "value"
+    },
+    "entities_components": {
+        "tab_name": "Marketing_Campaigns_Approaches",
+        "col_name": null,
+        "value": null,
+        "scope_id": null,
+        "db_type": "table"
+    }
+}

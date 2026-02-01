@@ -1,0 +1,12 @@
+[
+    {
+        "question": "Show me minimum requirements for savings accounts along with the account numbers",
+        "sql_query1": "SELECT \r\nm.minimum_balance,\r\na.account_number\r\n\r\nFROM minimum_requirements m\r\nJOIN Accounts a\r\n        ON a.account_number = m.account_number\r\n        WHERE a.account_type = 'Savings'",
+        "sql_query2": "SELECT \r\nm.minimum_age,\r\na.account_number\r\n\r\nFROM minimum_requirements m\r\nJOIN Accounts a\r\n        ON a.account_number = m.account_number\r\n        WHERE a.account_type = 'Savings'",
+        "sql_query3": "SELECT \r\nm.minimum_balance, minimum_age,\r\na.account_number\r\n\r\nFROM minimum_requirements m\r\nJOIN Accounts a\r\n        ON a.account_number = m.account_number\r\n        WHERE a.account_type = 'Savings'",
+        "interpretation1": "List each savings account number, along with minimum balances.",
+        "interpretation2": "List each savings account number, along with minimum ages.",
+        "interpretation3": "List each savings account number, along with minimum balances and ages.",
+        "sql_query_general": "SELECT \r\nm.Minimum_Requirement,\r\na.account_number\r\n\r\nFROM minimum_requirements m\r\nJOIN Accounts a\r\n        ON a.account_number = m.account_number\r\n        WHERE a.account_type = 'Savings'"
+    }
+]

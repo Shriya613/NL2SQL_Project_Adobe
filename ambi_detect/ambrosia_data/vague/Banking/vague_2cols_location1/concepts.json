@@ -1,0 +1,7 @@
+{
+    "template": "Question: Where is this branch located? Subject of Inquiry: Branches\nFocus: Location Possible answer types: 1. Street Name 2. Neighborhood",
+    "subject": "Branches",
+    "focus": "Location",
+    "general_category1": "Street Name",
+    "general_category2": "Neighborhood"
+}

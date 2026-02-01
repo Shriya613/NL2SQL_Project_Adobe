@@ -1,0 +1,25 @@
+{
+    "template": "Question: How many years of experience are needed for this job? Subject of Inquiry: Job\nFocus: Experience Possible answer types: 1. Minimum Years 2. Preferred Years",
+    "general_category1": {
+        "tab_name": "Jobs",
+        "col_name": "Minimum_Years",
+        "value": null,
+        "scope_id": null,
+        "db_type": "column"
+    },
+    "general_category2": {
+        "tab_name": "Jobs",
+        "col_name": "Preferred_Years",
+        "value": null,
+        "scope_id": null,
+        "db_type": "column"
+    },
+    "subject": {
+        "tab_name": "Jobs",
+        "col_name": "JobID",
+        "value": null,
+        "scope_id": null,
+        "db_type": "column"
+    },
+    "type": "2cols"
+}

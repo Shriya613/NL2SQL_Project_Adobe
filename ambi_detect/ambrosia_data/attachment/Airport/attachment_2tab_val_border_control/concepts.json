@@ -1,0 +1,8 @@
+{
+    "template": "Customs and Immigration are subclasses of Border Control. All Customs and Immigration staff have the property \"Employee\". There might be a Customs Officer and an Immigration Officer that both are classified as \"Federal Employees\".",
+    "general_class": "Border Control",
+    "class1": "Customs",
+    "class2": "Immigration",
+    "common_property": "Airport",
+    "common_value": "Gatwick"
+}

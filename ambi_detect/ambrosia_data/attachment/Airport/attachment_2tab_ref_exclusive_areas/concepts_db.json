@@ -1,0 +1,27 @@
+{
+    "domain": "Airports",
+    "template": "Frequent Flyer Lounge and VIP Lounge are subclasses of Exclusive Areas. All Frequent Flyer Lounges and VIP Lounges have the property \"Amenities\". There might be a Frequent Flyer Lounge and a VIP Lounge that both offer \"Complimentary Wi-Fi\".",
+    "type": "2tab_ref",
+    "general_class": "Exclusive Areas",
+    "class1": {
+        "tab_name": "FrequentFlyerLounges",
+        "col_name": null,
+        "value": null,
+        "scope_id": null,
+        "db_type": "table"
+    },
+    "class2": {
+        "tab_name": "VIPLounges",
+        "col_name": null,
+        "value": null,
+        "scope_id": null,
+        "db_type": "table"
+    },
+    "common_property": {
+        "tab_name": "Amenities",
+        "col_name": "description",
+        "value": "Power outlets at every seat",
+        "scope_id": null,
+        "db_type": "value"
+    }
+}

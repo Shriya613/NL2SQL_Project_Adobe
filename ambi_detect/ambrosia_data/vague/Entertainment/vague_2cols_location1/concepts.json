@@ -1,0 +1,7 @@
+{
+    "template": "Question: Where is this festival celebrated? Subject of Inquiry: Festival\nFocus: Location Possible answer types: 1. Country 2. City",
+    "subject": "Festival",
+    "focus": "Location",
+    "general_category1": "Country",
+    "general_category2": "City"
+}

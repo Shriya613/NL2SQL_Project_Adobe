@@ -1,0 +1,31 @@
+{
+    "template": "Each Cars has many different Safety Features. Among them, Airbags is common to many Cars.",
+    "entities": {
+        "tab_name": "Cars",
+        "col_name": null,
+        "value": null,
+        "scope_id": null,
+        "db_type": "table"
+    },
+    "components": {
+        "tab_name": "Safety_Features",
+        "col_name": null,
+        "value": null,
+        "scope_id": null,
+        "db_type": "table"
+    },
+    "specific_component": {
+        "tab_name": "Safety_Features",
+        "col_name": "name",
+        "value": "Airbags",
+        "scope_id": 0,
+        "db_type": "value"
+    },
+    "entities_components": {
+        "tab_name": "Cars_Safety_Features",
+        "col_name": null,
+        "value": null,
+        "scope_id": null,
+        "db_type": "table"
+    }
+}

@@ -1,0 +1,9 @@
+[
+    {
+        "question": "Show documentaries and mini-series that have 7 episodes.",
+        "sql_query1": "SELECT TvShow.title \r\nFROM TvShow\r\nWHERE (TvShow.tv = \"Documentary Series\" OR TvShow.tv = \"Mini-Series\") AND TvShow.number_of_episodes = 7",
+        "sql_query2": "SELECT TvShow.title \r\nFROM TvShow\r\nWHERE TvShow.tv = \"Documentary Series\" OR TvShow.tv = \"Mini-Series\" AND TvShow.number_of_episodes = 7",
+        "interpretation1": "What documentaries have 7 episodes and what mini-series has the same number of episodes?",
+        "interpretation2": "List all documentaries and also list mini-series that have 7 episodes."
+    }
+]

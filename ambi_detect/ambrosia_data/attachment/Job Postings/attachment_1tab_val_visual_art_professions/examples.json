@@ -1,0 +1,9 @@
+[
+    {
+        "question": "Tell me the specializations of all photographers and videographers who charge 500.",
+        "sql_query1": "SELECT Visual_Art_Profession.Specialization \r\nFROM Visual_Art_Profession\r\nWHERE (Visual_Art_Profession.Profession = \"Photographer\" OR Visual_Art_Profession.Profession = \"Videographer\") AND Visual_Art_Profession.Price = 500.0",
+        "sql_query2": "SELECT Visual_Art_Profession.Specialization \r\nFROM Visual_Art_Profession\r\nWHERE Visual_Art_Profession.Profession = \"Photographer\" OR Visual_Art_Profession.Profession = \"Videographer\" AND Visual_Art_Profession.Price = 500.0",
+        "interpretation1": "List both the photographer and videographer specializations where either charge 500.",
+        "interpretation2": "Show all of the photographer specializations and also show the videographer specializations but only the ones that charge 500."
+    }
+]

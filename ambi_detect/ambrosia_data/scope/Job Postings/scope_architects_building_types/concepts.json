@@ -1,0 +1,6 @@
+{
+    "template": "Each Architects has many different Building Types. Among them, Residential is common to many Architects.",
+    "specific_component": "Residential",
+    "components": "Building Types",
+    "entities": "Architects"
+}

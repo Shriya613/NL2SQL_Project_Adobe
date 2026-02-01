@@ -1,0 +1,7 @@
+{
+    "template": "Question: What is the duration of this theater play? Subject of Inquiry: Theater Play\nFocus: Duration Possible answer types: 1. Total Length 2. Number of Acts",
+    "subject": "Theater Play",
+    "focus": "Duration",
+    "general_category1": "Total Length",
+    "general_category2": "Number of Acts"
+}

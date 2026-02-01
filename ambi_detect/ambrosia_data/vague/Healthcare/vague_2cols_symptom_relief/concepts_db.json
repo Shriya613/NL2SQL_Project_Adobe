@@ -1,0 +1,25 @@
+{
+    "template": "Question: What symptoms does this medication treat? Subject of Inquiry: Medication\nFocus: Symptom Relief Possible answer types: 1. Condition Name 2. Body Part Affected",
+    "general_category1": {
+        "tab_name": "Conditions",
+        "col_name": "ConditionName",
+        "value": null,
+        "scope_id": null,
+        "db_type": "column"
+    },
+    "general_category2": {
+        "tab_name": "Conditions",
+        "col_name": "BodyPartAffected",
+        "value": null,
+        "scope_id": null,
+        "db_type": "column"
+    },
+    "subject": {
+        "tab_name": "Prescriptions",
+        "col_name": "Medication",
+        "value": null,
+        "scope_id": null,
+        "db_type": "column"
+    },
+    "type": "2cols"
+}

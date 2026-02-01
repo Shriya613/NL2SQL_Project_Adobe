@@ -1,0 +1,9 @@
+[
+    {
+        "question": "What stops were visited during each field trip?",
+        "sql_query1": "SELECT Stops.stopLocation  from Field_Trips_Stops join Stops on Field_Trips_Stops.stopID = Stops.stopID join Field_Trips on Field_Trips_Stops.tripID = Field_Trips.tripID   GROUP BY Field_Trips_Stops.stopID HAVING COUNT(DISTINCT Field_Trips_Stops.tripID) = (SELECT COUNT(*) FROM  Field_Trips)",
+        "sql_query2": "select field_trips.fieldtripname , stops.stoplocation from Field_Trips_Stops join Stops on Field_Trips_Stops.stopID = Stops.stopID join Field_Trips on Field_Trips_Stops.tripID = Field_Trips.tripID",
+        "interpretation1": "Show me the stop location that is common for all field trips.",
+        "interpretation2": "For every field trip, provide the corresponding stop locations."
+    }
+]

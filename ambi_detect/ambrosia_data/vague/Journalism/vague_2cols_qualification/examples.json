@@ -1,0 +1,22 @@
+[
+    {
+        "question": "show me the name, qualification and title for all authors and articles",
+        "sql_query1": "Select name, Degree, title From journalists Join articles on articles.authorId = journalists.id",
+        "sql_query2": "Select name, Certificate, title From journalists Join articles on articles.authorId = journalists.id",
+        "sql_query3": "Select name, Degree, Certificate, title From journalists Join articles on articles.authorId = journalists.id",
+        "interpretation1": "For each author, list their name, degree and article titles.",
+        "interpretation2": "For each author, list their name, certificate and article titles.",
+        "interpretation3": "For each author, list their name, degree, certificate and article titles.",
+        "sql_query_general": "Select name, Qualification, title From journalists Join articles on articles.authorId = journalists.id"
+    },
+    {
+        "question": "Give me a list of all investigative journalists, their qualifications and their article titles",
+        "sql_query1": "Select name, Degree, title From journalists Join articles on articles.authorId = journalists.id Where Investigative_Journalist=1",
+        "sql_query2": "Select name, Certificate, title From journalists Join articles on articles.authorId = journalists.id Where Investigative_Journalist=1",
+        "sql_query3": "Select name, Degree, Certificate, title From journalists Join articles on articles.authorId = journalists.id Where Investigative_Journalist=1",
+        "interpretation1": "Give me a list of all investigative journalists, their degrees and their article titles",
+        "interpretation2": "Give me a list of all investigative journalists, their certificates and their article titles",
+        "interpretation3": "Give me a list of all investigative journalists, their degrees, their certificates and their article titles",
+        "sql_query_general": "Select name, Qualification, title From journalists Join articles on articles.authorId = journalists.id Where Investigative_Journalist=1"
+    }
+]

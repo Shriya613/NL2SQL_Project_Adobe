@@ -1,0 +1,37 @@
+[
+    {
+        "question": "Show me the projects for each construction company.",
+        "sql_query1": "SELECT Projects.project_type  from Construction_Companies_Projects join Projects on Construction_Companies_Projects.project_id = Projects.id join Construction_Companies on Construction_Companies_Projects.construction_company_id = Construction_Companies.id   GROUP BY Construction_Companies_Projects.project_id HAVING COUNT(DISTINCT Construction_Companies_Projects.construction_company_id) = (SELECT COUNT(*) FROM  Construction_Companies)",
+        "sql_query2": "select construction_companies.company_name , projects.project_type from Construction_Companies_Projects join Projects on Construction_Companies_Projects.project_id = Projects.id join Construction_Companies on Construction_Companies_Projects.construction_company_id = Construction_Companies.id",
+        "interpretation1": "What projects do all construction companies have in common?",
+        "interpretation2": "For every construction company, list their projects."
+    },
+    {
+        "question": "Show me the schedule of each construction company's projects.",
+        "sql_query1": "SELECT Projects.start_date, Projects.end_date  from Construction_Companies_Projects join Projects on Construction_Companies_Projects.project_id = Projects.id join Construction_Companies on Construction_Companies_Projects.construction_company_id = Construction_Companies.id   GROUP BY Construction_Companies_Projects.project_id HAVING COUNT(DISTINCT Construction_Companies_Projects.construction_company_id) = (SELECT COUNT(*) FROM  Construction_Companies)",
+        "sql_query2": "select construction_companies.company_name , projects.start_date , projects.end_date from Construction_Companies_Projects join Projects on Construction_Companies_Projects.project_id = Projects.id join Construction_Companies on Construction_Companies_Projects.construction_company_id = Construction_Companies.id",
+        "interpretation1": "What schedule for projects is the same for all construction companies?",
+        "interpretation2": "For every construction company, list the schedule for their projects."
+    },
+    {
+        "question": "What is the end date of the project each company is working on?",
+        "sql_query1": "SELECT Projects.end_date  from Construction_Companies_Projects join Projects on Construction_Companies_Projects.project_id = Projects.id join Construction_Companies on Construction_Companies_Projects.construction_company_id = Construction_Companies.id   GROUP BY Construction_Companies_Projects.project_id HAVING COUNT(DISTINCT Construction_Companies_Projects.construction_company_id) = (SELECT COUNT(*) FROM  Construction_Companies)",
+        "sql_query2": "select construction_companies.company_name , projects.end_date from Construction_Companies_Projects join Projects on Construction_Companies_Projects.project_id = Projects.id join Construction_Companies on Construction_Companies_Projects.construction_company_id = Construction_Companies.id",
+        "interpretation1": "What is the end date of the project where all the companies are involved?",
+        "interpretation2": "Show me the project end dates listed by company"
+    },
+    {
+        "question": "Give the type and start date of the project that each construction company is working on.",
+        "sql_query1": "SELECT Projects.project_type, Projects.start_date  from Construction_Companies_Projects join Projects on Construction_Companies_Projects.project_id = Projects.id join Construction_Companies on Construction_Companies_Projects.construction_company_id = Construction_Companies.id   GROUP BY Construction_Companies_Projects.project_id HAVING COUNT(DISTINCT Construction_Companies_Projects.construction_company_id) = (SELECT COUNT(*) FROM  Construction_Companies)",
+        "sql_query2": "select construction_companies.company_name , projects.project_type , projects.start_date from Construction_Companies_Projects join Projects on Construction_Companies_Projects.project_id = Projects.id join Construction_Companies on Construction_Companies_Projects.construction_company_id = Construction_Companies.id",
+        "interpretation1": "What project type and start date are the same for all construction companies?",
+        "interpretation2": "For each construction company, list the project type and start date."
+    },
+    {
+        "question": "Give me the project start dates for each construction company.",
+        "sql_query1": "SELECT Projects.start_date  from Construction_Companies_Projects join Projects on Construction_Companies_Projects.project_id = Projects.id join Construction_Companies on Construction_Companies_Projects.construction_company_id = Construction_Companies.id   GROUP BY Construction_Companies_Projects.project_id HAVING COUNT(DISTINCT Construction_Companies_Projects.construction_company_id) = (SELECT COUNT(*) FROM  Construction_Companies)",
+        "sql_query2": "select construction_companies.company_name , projects.start_date from Construction_Companies_Projects join Projects on Construction_Companies_Projects.project_id = Projects.id join Construction_Companies on Construction_Companies_Projects.construction_company_id = Construction_Companies.id",
+        "interpretation1": "Which project start dates do all construction companies have in common?",
+        "interpretation2": "For every construction company, show the project start dates."
+    }
+]

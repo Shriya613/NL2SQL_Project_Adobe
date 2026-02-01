@@ -1,0 +1,9 @@
+[
+    {
+        "question": "Provide football players and rugby players with an intermediate fitness level.",
+        "sql_query1": "SELECT Football_Players.PlayerName\r\nFROM Fitness_Level JOIN Football_Players ON Fitness_Level.ID = Football_Players.Fitness_ID\r\nWHERE Fitness_Level.Level = \"Intermediate\"\r\nUNION\r\nSELECT Rugby_Players.PlayerName\r\nFROM Fitness_Level JOIN Rugby_Players ON Fitness_Level.ID = Rugby_Players.Fitness_ID\r\nWHERE Fitness_Level.Level = \"Intermediate\"",
+        "sql_query2": "SELECT Football_Players.PlayerName\r\nFROM Fitness_Level JOIN Football_Players ON Fitness_Level.ID = Football_Players.Fitness_ID\r\nUNION\r\nSELECT Rugby_Players.PlayerName\r\nFROM Fitness_Level JOIN Rugby_Players ON Fitness_Level.ID = Rugby_Players.Fitness_ID\r\nWHERE Fitness_Level.Level = \"Intermediate\"",
+        "interpretation1": "What are the football players with an intermediate fitness level and the rugby players with an intermediate fitness level?",
+        "interpretation2": "Provide a list of all football players and a list of all intermediate-level rugby players."
+    }
+]

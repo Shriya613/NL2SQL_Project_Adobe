@@ -1,0 +1,25 @@
+{
+    "template": "Question: Who is hiring for this position? Subject of Inquiry: Position\nFocus: Recruiter Possible answer types: 1. Company 2. Recruitment Agency",
+    "general_category1": {
+        "tab_name": "Company",
+        "col_name": null,
+        "value": null,
+        "scope_id": null,
+        "db_type": "table"
+    },
+    "general_category2": {
+        "tab_name": "Recruitment_Agency",
+        "col_name": null,
+        "value": null,
+        "scope_id": null,
+        "db_type": "table"
+    },
+    "subject": {
+        "tab_name": "Position",
+        "col_name": null,
+        "value": null,
+        "scope_id": null,
+        "db_type": "table"
+    },
+    "type": "2tabs"
+}

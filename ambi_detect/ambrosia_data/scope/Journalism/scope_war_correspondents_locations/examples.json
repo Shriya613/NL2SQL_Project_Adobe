@@ -1,0 +1,9 @@
+[
+    {
+        "question": "Give me the locations that each war correspondent reports from.",
+        "sql_query1": "SELECT Locations.locationName  from War_Correspondents_Locations join Locations on War_Correspondents_Locations.locationId = Locations.id join War_Correspondents on War_Correspondents_Locations.warCorrespondentId = War_Correspondents.id   GROUP BY War_Correspondents_Locations.locationId HAVING COUNT(DISTINCT War_Correspondents_Locations.warCorrespondentId) = (SELECT COUNT(*) FROM  War_Correspondents)",
+        "sql_query2": "select war_correspondents.name , locations.locationname from War_Correspondents_Locations join Locations on War_Correspondents_Locations.locationId = Locations.id join War_Correspondents on War_Correspondents_Locations.warCorrespondentId = War_Correspondents.id",
+        "interpretation1": "Which locations are the same for all the war correspondents?",
+        "interpretation2": "For every war correspondent, show the locations that they report from."
+    }
+]

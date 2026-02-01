@@ -1,0 +1,9 @@
+[
+    {
+        "question": "Display Boeing aircrafts and Airbus aircrafts with 180 seats.",
+        "sql_query1": "SELECT Boeing.Model\r\nFROM Boeing\r\nWHERE Boeing.Number_of_seats = 180\r\nUNION\r\nSELECT Airbus.Model\r\nFROM Airbus\r\nWHERE Airbus.Number_of_seats = 180",
+        "sql_query2": "SELECT Boeing.Model\r\nFROM Boeing\r\nUNION\r\nSELECT Airbus.Model\r\nFROM Airbus\r\nWHERE Airbus.Number_of_seats = 180",
+        "interpretation1": "Can you show both Boeing and Airbus aircraft models that have 180 seats?",
+        "interpretation2": "Provide a list of Boeing aircraft and also display airbus aircraft with 180 seats."
+    }
+]

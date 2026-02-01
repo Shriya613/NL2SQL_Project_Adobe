@@ -1,0 +1,6 @@
+{
+    "template": "Each Freelance Journalists has many different Assignments. Among them, Feature Stories is common to many Freelance Journalists.",
+    "specific_component": "Feature Stories",
+    "components": "Assignments",
+    "entities": "Freelance Journalists"
+}

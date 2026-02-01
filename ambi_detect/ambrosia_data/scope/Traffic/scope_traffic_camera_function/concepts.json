@@ -1,0 +1,6 @@
+{
+    "template": "Each Traffic Camera has many different Function. Among them, Speeding is common to many Traffic Camera.",
+    "specific_component": "Speeding",
+    "components": "Function",
+    "entities": "Traffic Camera"
+}

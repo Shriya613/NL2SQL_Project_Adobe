@@ -1,0 +1,12 @@
+[
+    {
+        "question": "What are the surgical procedures listed in descending order of cost?",
+        "sql_query1": "SELECT Description, InsuranceCovered\r\nFROM SurgicalProcedures\r\nORDER BY InsuranceCovered DESC;",
+        "sql_query2": "SELECT Description, OutOfPocketExpense\r\nFROM SurgicalProcedures\r\nORDER BY OutOfPocketExpense DESC;",
+        "sql_query3": "SELECT Description, InsuranceCovered, OutOfPocketExpense\r\nFROM SurgicalProcedures\r\nORDER BY InsuranceCovered, OutOfPocketExpense DESC;",
+        "interpretation1": "In descending order of the cost of insurance covered, list the surgical procedures.",
+        "interpretation2": "In descending order of out of pocket expenses, list the surgical procedures.",
+        "interpretation3": "In descending order of out of pocket expenses and insurance covered, list the surgical procedures.",
+        "sql_query_general": "SELECT Description, Cost\r\nFROM SurgicalProcedures\r\nORDER BY Cost DESC;"
+    }
+]

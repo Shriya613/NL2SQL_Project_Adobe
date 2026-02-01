@@ -1,0 +1,6 @@
+{
+    "template": "Each Streamings has many different Content Promotions. Among them, Cross-Promotional Partnerships is common to many Streamings.",
+    "specific_component": "Cross-Promotional Partnerships",
+    "components": "Content Promotions",
+    "entities": "Streamings"
+}

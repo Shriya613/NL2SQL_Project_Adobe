@@ -1,0 +1,9 @@
+[
+    {
+        "question": "Show frequent flyer lounges and VIP lounges with complementary Wi-Fi.",
+        "sql_query1": "SELECT Frequent_Flyer_Lounges.name\r\nFROM Frequent_Flyer_Lounges\r\nWHERE Frequent_Flyer_Lounges.Amenities = \"Complimentary Wi-Fi\"\r\nUNION\r\nSELECT VIP_Lounges.name\r\nFROM VIP_Lounges\r\nWHERE VIP_Lounges.Amenities = \"Complimentary Wi-Fi\"",
+        "sql_query2": "SELECT Frequent_Flyer_Lounges.name\r\nFROM Frequent_Flyer_Lounges\r\nUNION\r\nSELECT VIP_Lounges.name\r\nFROM VIP_Lounges\r\nWHERE VIP_Lounges.Amenities = \"Complimentary Wi-Fi\"",
+        "interpretation1": "What frequent flyer lounges have complementary Wi-Fi and what VIP lounges also offer it?",
+        "interpretation2": "List all frequent flyer lounges and also list VIP lounges that offer complementary Wi-Fi."
+    }
+]

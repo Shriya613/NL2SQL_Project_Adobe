@@ -1,0 +1,9 @@
+[
+    {
+        "question": "Show housekeepers and laundry attendants who work at the hotel located at 789 River Road.",
+        "sql_query1": "SELECT HouseKeepers.FullName\r\nFROM Hotels JOIN HouseKeepers ON Hotels.id = HouseKeepers.hotelId\r\nWHERE Hotels.address = \"789 River Rd\"\r\nUNION\r\nSELECT LaundryAttendants.FullName\r\nFROM Hotels JOIN LaundryAttendants ON Hotels.id = LaundryAttendants.hotelId\r\nWHERE Hotels.address = \"789 River Rd\"",
+        "sql_query2": "SELECT HouseKeepers.FullName\r\nFROM Hotels JOIN HouseKeepers ON Hotels.id = HouseKeepers.hotelId\r\nUNION\r\nSELECT LaundryAttendants.FullName\r\nFROM Hotels JOIN LaundryAttendants ON Hotels.id = LaundryAttendants.hotelId\r\nWHERE Hotels.address = \"789 River Rd\"",
+        "interpretation1": "Show both housekeepers and laundry attendants who work at the hotel located at 789 River Road.",
+        "interpretation2": "List every housekeeper and also show the laundry attendants who work at the hotel located at 789 River Road."
+    }
+]

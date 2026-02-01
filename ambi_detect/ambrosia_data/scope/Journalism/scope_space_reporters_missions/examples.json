@@ -1,0 +1,9 @@
+[
+    {
+        "question": "Give me the missions each reporter has written about.",
+        "sql_query1": "SELECT Missions.mission_name  from Space_Reporters_Missions join Missions on Space_Reporters_Missions.mission_id = Missions.mission_id join Space_Reporters on Space_Reporters_Missions.space_reporter_id = Space_Reporters.reporter_id   GROUP BY Space_Reporters_Missions.mission_id HAVING COUNT(DISTINCT Space_Reporters_Missions.space_reporter_id) = (SELECT COUNT(*) FROM  Space_Reporters)",
+        "sql_query2": "select space_reporters.full_name , missions.mission_name from Space_Reporters_Missions join Missions on Space_Reporters_Missions.mission_id = Missions.mission_id join Space_Reporters on Space_Reporters_Missions.space_reporter_id = Space_Reporters.reporter_id",
+        "interpretation1": "Which missions do all reporters cover together?",
+        "interpretation2": "Give me a list of reporters and missions they have written about."
+    }
+]

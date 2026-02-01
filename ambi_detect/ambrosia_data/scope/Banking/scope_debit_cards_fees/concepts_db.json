@@ -1,0 +1,31 @@
+{
+    "template": "Each Debit Cards has many different Fees. Among them, Overdraft Fee is common to many Debit Cards.",
+    "entities": {
+        "tab_name": "Debit_Cards",
+        "col_name": null,
+        "value": null,
+        "scope_id": null,
+        "db_type": "table"
+    },
+    "components": {
+        "tab_name": "Fees",
+        "col_name": null,
+        "value": null,
+        "scope_id": null,
+        "db_type": "table"
+    },
+    "specific_component": {
+        "tab_name": "Fees",
+        "col_name": "FeeType",
+        "value": "Overdraft_Fee",
+        "scope_id": 3,
+        "db_type": "value"
+    },
+    "entities_components": {
+        "tab_name": "Debit_Card_Fees",
+        "col_name": null,
+        "value": null,
+        "scope_id": null,
+        "db_type": "table"
+    }
+}

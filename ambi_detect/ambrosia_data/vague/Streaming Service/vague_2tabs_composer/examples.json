@@ -1,0 +1,22 @@
+[
+    {
+        "question": "Give me all the songs and their composers.",
+        "sql_query1": "SELECT song.title, Musician.name FROM  Musician JOIN Soundtrack on Soundtrack.Musician_id=Musician.id JOIN Song ON Song.soundtrack_id = Soundtrack.id",
+        "sql_query2": "SELECT song.title, Band.name FROM  Band JOIN Soundtrack on Soundtrack.Band_id=Band.id JOIN Song ON Song.soundtrack_id = Soundtrack.id",
+        "sql_query3": "SELECT song.title, Band.name, Musician.name FROM  Musician JOIN Soundtrack on Soundtrack.id=Musician.id JOIN Song ON Song.soundtrack_id = Soundtrack.id JOIN Band on Soundtrack.Band_id=Band.id",
+        "interpretation1": "show me the titles of all songs and their musicians",
+        "interpretation2": "show me the titles of all songs and their bands",
+        "interpretation3": "show me the musician name, band name and title of all songs",
+        "sql_query_general": "SELECT song.title, composer.name FROM  Composer JOIN Soundtrack on Soundtrack.id=Composer.id JOIN Song ON Song.soundtrack_id = Soundtrack.id"
+    },
+    {
+        "question": "Who wrote the music for the music festival?",
+        "sql_query1": "SELECT Musician.name  FROM Soundtrack JOIN Musician on Soundtrack.Musician_id=Musician.id WHERE Soundtrack.title= 'Music Festival'",
+        "sql_query2": "SELECT Band.name  FROM Soundtrack JOIN Band on Soundtrack.Band_id=Band.id WHERE Soundtrack.title= 'Music Festival'",
+        "sql_query3": "SELECT Band.name, Musician.name  FROM Soundtrack JOIN Musician on Soundtrack.id=Musician.id JOIN Band on Soundtrack.Band_id=Band.id  WHERE Soundtrack.title= 'Music Festival'",
+        "interpretation1": "What band wrote the songs for the music festival?",
+        "interpretation2": "Which musician composed the songs played at the music festival?",
+        "interpretation3": "Show the band and musicians responsible for composing the music festival's program.",
+        "sql_query_general": "SELECT composer.name  FROM Soundtrack JOIN Composer on Soundtrack.id=Composer.id WHERE Soundtrack.title= 'Music Festival'"
+    }
+]

@@ -1,0 +1,7 @@
+{
+    "template": "Question: How much experience is needed for this job? Subject of Inquiry: Job\nFocus: Experience Level Possible answer types: 1. Years of Experience 2. Number of Completed Projects",
+    "subject": "Job",
+    "focus": "Experience Level",
+    "general_category1": "Years of Experience",
+    "general_category2": "Number of Completed Projects"
+}

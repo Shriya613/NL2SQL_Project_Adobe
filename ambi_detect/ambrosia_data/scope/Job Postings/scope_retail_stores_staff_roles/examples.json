@@ -1,0 +1,9 @@
+[
+    {
+        "question": "Show me the roles every retail store has.",
+        "sql_query1": "SELECT Staff_Roles.role_title  from Retail_Stores_Staff_Roles join Staff_Roles on Retail_Stores_Staff_Roles.staff_role_id = Staff_Roles.role_id join Retail_Stores on Retail_Stores_Staff_Roles.retail_store_id = Retail_Stores.store_id   GROUP BY Retail_Stores_Staff_Roles.staff_role_id HAVING COUNT(DISTINCT Retail_Stores_Staff_Roles.retail_store_id) = (SELECT COUNT(*) FROM  Retail_Stores)",
+        "sql_query2": "select retail_stores.store_name , staff_roles.role_title from Retail_Stores_Staff_Roles join Staff_Roles on Retail_Stores_Staff_Roles.staff_role_id = Staff_Roles.role_id join Retail_Stores on Retail_Stores_Staff_Roles.retail_store_id = Retail_Stores.store_id",
+        "interpretation1": "What roles do all retail stores have in common?",
+        "interpretation2": "For each retail store, list the roles they have."
+    }
+]

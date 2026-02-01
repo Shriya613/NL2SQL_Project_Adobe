@@ -1,0 +1,12 @@
+[
+    {
+        "question": "Show me the model and operator of the camera that was last purchased.",
+        "sql_query1": "SELECT Brand_Name, Cinematographer FROM Camera ORDER BY Purchase_Year DESC LIMIT 1",
+        "sql_query2": "SELECT Camera_Type, Cinematographer FROM Camera ORDER BY Purchase_Year DESC LIMIT 1",
+        "sql_query3": "SELECT Brand_Name, Camera_Type, Cinematographer FROM Camera ORDER BY Purchase_Year DESC LIMIT 1",
+        "interpretation1": "Show me the brand name and operator of the camera that was last purchased?",
+        "interpretation2": "Show me the camera type and operator of the camera that was last purchased?",
+        "interpretation3": "Show me the brand name, camera type and operator of the camera that was last purchased?",
+        "sql_query_general": "SELECT Camera_Model, Cinematographer FROM Camera ORDER BY Purchase_Year DESC LIMIT 1"
+    }
+]

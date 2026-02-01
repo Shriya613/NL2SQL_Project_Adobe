@@ -1,0 +1,9 @@
+[
+    {
+        "question": "What are the capacities of frequent flyer lounges and VIP lounges with power outlets at every seat?",
+        "sql_query1": "SELECT FrequentFlyerLounges.capacity\r\nFROM Amenities JOIN FrequentFlyerLounges ON Amenities.amenityID = FrequentFlyerLounges.amenityID\r\nWHERE Amenities.description = \"Power outlets at every seat\"\r\nUNION\r\nSELECT VIPLounges.capacity\r\nFROM Amenities JOIN VIPLounges ON Amenities.amenityID = VIPLounges.amenityID\r\nWHERE Amenities.description = \"Power outlets at every seat\"",
+        "sql_query2": "SELECT FrequentFlyerLounges.capacity\r\nFROM Amenities JOIN FrequentFlyerLounges ON Amenities.amenityID = FrequentFlyerLounges.amenityID\r\nUNION\r\nSELECT VIPLounges.capacity\r\nFROM Amenities JOIN VIPLounges ON Amenities.amenityID = VIPLounges.amenityID\r\nWHERE Amenities.description = \"Power outlets at every seat\"",
+        "interpretation1": "What are the capacities of frequent flyer lounges with power outlets at every seat and what are the capacities of VIP lounges with the same amenity?",
+        "interpretation2": "Provide the frequent flyer lounge capacities and also provide the capacities of VIP lounges that have power outlets at every seat."
+    }
+]

@@ -1,0 +1,9 @@
+[
+    {
+        "question": "List singers and editors who received 2000.0.",
+        "sql_query1": "SELECT Stringers.name\r\nFROM Stringers\r\nWHERE Stringers.Payment = 2000.0\r\nUNION\r\nSELECT Editors.name\r\nFROM Editors\r\nWHERE Editors.Payment = 2000.0",
+        "sql_query2": "SELECT Stringers.name\r\nFROM Stringers\r\nUNION\r\nSELECT Editors.name\r\nFROM Editors\r\nWHERE Editors.Payment = 2000.0",
+        "interpretation1": "Which singers received 2000.0 and which editors received the same payment?",
+        "interpretation2": "Provide a list of all singers and also provide a list of editors with a payment of 2000.0."
+    }
+]

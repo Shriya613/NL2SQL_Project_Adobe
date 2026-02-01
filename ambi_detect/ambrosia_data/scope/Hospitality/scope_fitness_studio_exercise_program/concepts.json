@@ -1,0 +1,6 @@
+{
+    "template": "Each Fitness Studios has many different Exercise Programs. Among them, Yoga is common to many Fitness Studios.",
+    "specific_component": "Yoga",
+    "components": "Exercise Programs",
+    "entities": "Fitness Studios"
+}

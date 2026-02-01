@@ -1,0 +1,9 @@
+[
+    {
+        "question": "List blockbusters and indie films which played at Sundance film festival.",
+        "sql_query1": "SELECT Blockbusters.title\r\nFROM Festivals JOIN Blockbusters ON Festivals.id = Blockbusters.film_festival_id\r\nWHERE Festivals.name = \"Sundance Film Festival\"\r\nUNION\r\nSELECT Indies.title\r\nFROM Festivals JOIN Indies ON Festivals.id = Indies.film_festival_id\r\nWHERE Festivals.name = \"Sundance Film Festival\"",
+        "sql_query2": "SELECT Blockbusters.title\r\nFROM Festivals JOIN Blockbusters ON Festivals.id = Blockbusters.film_festival_id\r\nUNION\r\nSELECT Indies.title\r\nFROM Festivals JOIN Indies ON Festivals.id = Indies.film_festival_id\r\nWHERE Festivals.name = \"Sundance Film Festival\"",
+        "interpretation1": "Show blockbusters and indie films where either played at Sundance film festival.",
+        "interpretation2": "Show all the blockbuster films and only those indie films which played at Sundance film festival."
+    }
+]

@@ -1,0 +1,7 @@
+{
+    "template": "Question: Are there any restrictions on carry-on luggage? Subject of Inquiry: Airlines\nFocus: Restrictions Possible answer types: 1. Size Limits 2. Prohibited Items",
+    "subject": "Airlines",
+    "focus": "Restrictions",
+    "general_category1": "Size Limits",
+    "general_category2": "Prohibited Items"
+}

@@ -1,0 +1,9 @@
+[
+    {
+        "question": "Show all awards and festivals where Gerardo Prat was on the committee.",
+        "sql_query1": "SELECT Festival.name \r\nFROM Festival\r\nWHERE (Festival.event = \"Film Festival\" OR Festival.event = \"Award\") AND Festival.committee_members = \"Gerardo Prat\"",
+        "sql_query2": "SELECT Festival.name \r\nFROM Festival\r\nWHERE Festival.event = \"Film Festival\" OR Festival.event = \"Award\" AND Festival.committee_members = \"Gerardo Prat\"",
+        "interpretation1": "Show all awards where Gerardo Prat was on the awarding committee along with the festivals in which Gerardo Prat also participated.",
+        "interpretation2": "Show all festivals and also show all awards where Gerardo Prat was on the committee."
+    }
+]

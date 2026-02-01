@@ -1,0 +1,9 @@
+[
+    {
+        "question": "Display all housekeepers and laundry attendants who work for The Grand Hotel.",
+        "sql_query1": "SELECT Cleaning_Professionals.Name \r\nFROM Cleaning_Professionals JOIN Hotels ON Cleaning_Professionals.Hotel_ID = Hotels.ID\r\nWHERE (Cleaning_Professionals.Position = \"Housekeeper\" OR Cleaning_Professionals.Position = \"Laundry Attendant\") AND Hotels.Name = 'The Grand Hotel'",
+        "sql_query2": "SELECT Cleaning_Professionals.Name \r\nFROM Cleaning_Professionals JOIN Hotels ON Cleaning_Professionals.Hotel_ID = Hotels.ID\r\nWHERE Cleaning_Professionals.Position = \"Housekeeper\" OR Cleaning_Professionals.Position = \"Laundry Attendant\" AND Hotels.Name = 'The Grand Hotel'",
+        "interpretation1": "Which housekeepers work for The Grand Hotel and which laundry attendants work for the same hotel?",
+        "interpretation2": "Provide a list of all housekeepers and also provide a list of laundry attendants who work for The Grand Hotel."
+    }
+]

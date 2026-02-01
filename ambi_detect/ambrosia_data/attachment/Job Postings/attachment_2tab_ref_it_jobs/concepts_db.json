@@ -1,0 +1,27 @@
+{
+    "domain": "Operating_System_Knowledge",
+    "template": "IT Support Technician and Network Administrator are subclasses of IT Jobs. All It support technicians and Network administrators have property \"Operating System Knowledge\". There might be a IT Support Technician and a Network Administrator that both have \"Operating System Knowledge\" equal to \"Windows\".",
+    "type": "2tab_ref",
+    "general_class": "IT Jobs",
+    "class1": {
+        "tab_name": "IT_Support_Technician",
+        "col_name": null,
+        "value": null,
+        "scope_id": null,
+        "db_type": "table"
+    },
+    "class2": {
+        "tab_name": "Network_Administrator",
+        "col_name": null,
+        "value": null,
+        "scope_id": null,
+        "db_type": "table"
+    },
+    "common_property": {
+        "tab_name": "Operating_System_Knowledge",
+        "col_name": "OS_Name",
+        "value": "Windows",
+        "scope_id": null,
+        "db_type": "value"
+    }
+}

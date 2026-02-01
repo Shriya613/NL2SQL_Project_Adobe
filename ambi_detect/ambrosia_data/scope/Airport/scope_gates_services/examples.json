@@ -1,0 +1,9 @@
+[
+    {
+        "question": "Show me the service that each gate offers.",
+        "sql_query1": "SELECT Services.serviceName  from Gates_Services join Services on Gates_Services.serviceId = Services.id join Gates on Gates_Services.gateId = Gates.id   GROUP BY Gates_Services.serviceId HAVING COUNT(DISTINCT Gates_Services.gateId) = (SELECT COUNT(*) FROM  Gates)",
+        "sql_query2": "select gates.gatenumber , services.servicename from Gates_Services join Services on Gates_Services.serviceId = Services.id join Gates on Gates_Services.gateId = Gates.id",
+        "interpretation1": "What services are common to all gates?",
+        "interpretation2": "For every gate, list the services offered."
+    }
+]

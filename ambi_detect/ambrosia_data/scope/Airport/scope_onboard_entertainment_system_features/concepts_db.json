@@ -1,0 +1,31 @@
+{
+    "template": "Each Onboard Entertainment System has many different Features. Among them, Movies is common to many Onboard Entertainment System.",
+    "entities": {
+        "tab_name": "Onboard_Entertainment_System",
+        "col_name": null,
+        "value": null,
+        "scope_id": null,
+        "db_type": "table"
+    },
+    "components": {
+        "tab_name": "Features",
+        "col_name": null,
+        "value": null,
+        "scope_id": null,
+        "db_type": "table"
+    },
+    "specific_component": {
+        "tab_name": "Features",
+        "col_name": "feature_name",
+        "value": "Movies",
+        "scope_id": 0,
+        "db_type": "value"
+    },
+    "entities_components": {
+        "tab_name": "Onboard_Entertainment_System_Features",
+        "col_name": null,
+        "value": null,
+        "scope_id": null,
+        "db_type": "table"
+    }
+}

@@ -1,0 +1,25 @@
+{
+    "template": "Question: How is waste managed at this construction site? Subject of Inquiry: Construction Site\nFocus: Waste Management Possible answer types: 1. Waste Disposal Method 2. Recycling Program",
+    "general_category1": {
+        "tab_name": "Waste_Disposal_Method",
+        "col_name": null,
+        "value": null,
+        "scope_id": null,
+        "db_type": "table"
+    },
+    "general_category2": {
+        "tab_name": "Recycling_Program",
+        "col_name": null,
+        "value": null,
+        "scope_id": null,
+        "db_type": "table"
+    },
+    "subject": {
+        "tab_name": "Construction_Site",
+        "col_name": null,
+        "value": null,
+        "scope_id": null,
+        "db_type": "table"
+    },
+    "type": "2tabs"
+}

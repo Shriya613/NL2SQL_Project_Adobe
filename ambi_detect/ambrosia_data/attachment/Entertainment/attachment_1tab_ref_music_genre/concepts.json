@@ -1,0 +1,8 @@
+{
+    "template": "Pop Song and Hip Hop Song are subclasses of Music Genre. All Pop songs and Hip hop songs have property \"Venue\". There might be a Pop Song and a Hip Hop Song that both have \"Venue\" equal to \"Madison Square Garden\".",
+    "general_class": "Music Genre",
+    "class1": "Pop Song",
+    "class2": "Hip Hop Song",
+    "common_property": "Venue",
+    "common_value": "Madison Square Garden"
+}

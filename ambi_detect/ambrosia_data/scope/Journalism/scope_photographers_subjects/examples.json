@@ -1,0 +1,9 @@
+[
+    {
+        "question": "Show me the subjects every photographer studies.",
+        "sql_query1": "SELECT Subjects.subject_name  from Photographers_Subjects join Subjects on Photographers_Subjects.subject_id = Subjects.id join Photographers on Photographers_Subjects.photographer_id = Photographers.id   GROUP BY Photographers_Subjects.subject_id HAVING COUNT(DISTINCT Photographers_Subjects.photographer_id) = (SELECT COUNT(*) FROM  Photographers)",
+        "sql_query2": "select photographers.name , subjects.subject_name from Photographers_Subjects join Subjects on Photographers_Subjects.subject_id = Subjects.id join Photographers on Photographers_Subjects.photographer_id = Photographers.id",
+        "interpretation1": "What subjects are common to all photographers?",
+        "interpretation2": "For each photographer, list the subjects they are studying."
+    }
+]

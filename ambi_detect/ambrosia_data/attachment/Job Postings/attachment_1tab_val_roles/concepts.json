@@ -1,0 +1,8 @@
+{
+    "template": "Economist and Statistician are subclasses of Roles. All Economists and Statisticians have property \"Data\". There might be a Economist and a Statistician that both have \"Data\" equal to \"Demographics\".",
+    "general_class": "Roles",
+    "class1": "Economist",
+    "class2": "Statistician",
+    "common_property": "Data",
+    "common_value": "Demographics"
+}

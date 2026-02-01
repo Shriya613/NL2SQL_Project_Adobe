@@ -1,0 +1,9 @@
+[
+    {
+        "question": "Show customs officers and immigration officers at Gatwick airport.",
+        "sql_query1": "SELECT Customs.CustomOfficerName as name\r\nFROM Customs\r\nWHERE Customs.Airport = \"Gatwick\"\r\nUNION\r\nSELECT Immigration.ImmigrationOfficerName as name\r\nFROM Immigration\r\nWHERE Immigration.Airport = \"Gatwick\"",
+        "sql_query2": "SELECT Customs.CustomOfficerName as name\r\nFROM Customs\r\nUNION\r\nSELECT Immigration.ImmigrationOfficerName as name\r\nFROM Immigration\r\nWHERE Immigration.Airport = \"Gatwick\"",
+        "interpretation1": "What customs officers are there at Gatwick airport and what immigration officers are there at the same airport?",
+        "interpretation2": "List all customs officers and also list immigration officers at Gatwick airport."
+    }
+]

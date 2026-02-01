@@ -1,0 +1,27 @@
+{
+    "domain": "Amusement_Parks",
+    "template": "Amusement Park and Water Park are subclasses of Family Entertainment. All Amusement parks and Water parks have property \"Location\". There might be a Amusement Park and a Water Park that both have \"Location\" equal to \"Orlando, Florida\".",
+    "type": "2tab_val",
+    "general_class": "Family Entertainment",
+    "class1": {
+        "tab_name": "Amusement_Parks",
+        "col_name": null,
+        "value": null,
+        "scope_id": null,
+        "db_type": "table"
+    },
+    "class2": {
+        "tab_name": "Water_Parks",
+        "col_name": null,
+        "value": null,
+        "scope_id": null,
+        "db_type": "table"
+    },
+    "common_property": {
+        "tab_name": "Amusement_Parks",
+        "col_name": "Location",
+        "value": "Orlando, Florida",
+        "scope_id": null,
+        "db_type": "value"
+    }
+}

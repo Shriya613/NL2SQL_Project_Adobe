@@ -1,0 +1,23 @@
+[
+    {
+        "question": "which names and types of locations are associated with every production?",
+        "sql_query1": "SELECT Locations.Name, Locations.Type  from Productions_Locations join Locations on Productions_Locations.LocationID = Locations.LocationID join Productions on Productions_Locations.ProductionID = Productions.ProductionID   GROUP BY Productions_Locations.LocationID HAVING COUNT(DISTINCT Productions_Locations.ProductionID) = (SELECT COUNT(*) FROM  Productions)",
+        "sql_query2": "select productions.title , locations.name , locations.type from Productions_Locations join Locations on Productions_Locations.LocationID = Locations.LocationID join Productions on Productions_Locations.ProductionID = Productions.ProductionID",
+        "interpretation1": "Show me the name and type of location that is common for all productions.",
+        "interpretation2": "For each production, show me the corresponding names and types of locations."
+    },
+    {
+        "question": "which locations are associated with each production?",
+        "sql_query1": "SELECT Locations.Name  from Productions_Locations join Locations on Productions_Locations.LocationID = Locations.LocationID join Productions on Productions_Locations.ProductionID = Productions.ProductionID   GROUP BY Productions_Locations.LocationID HAVING COUNT(DISTINCT Productions_Locations.ProductionID) = (SELECT COUNT(*) FROM  Productions)",
+        "sql_query2": "select productions.title , locations.name from Productions_Locations join Locations on Productions_Locations.LocationID = Locations.LocationID join Productions on Productions_Locations.ProductionID = Productions.ProductionID",
+        "interpretation1": "provide the locations that are common for all productions.",
+        "interpretation2": "for each production, what are the corresponding location names?"
+    },
+    {
+        "question": "Provide the type of locations associated with each production.",
+        "sql_query1": "SELECT Locations.Type  from Productions_Locations join Locations on Productions_Locations.LocationID = Locations.LocationID join Productions on Productions_Locations.ProductionID = Productions.ProductionID   GROUP BY Productions_Locations.LocationID HAVING COUNT(DISTINCT Productions_Locations.ProductionID) = (SELECT COUNT(*) FROM  Productions)",
+        "sql_query2": "select productions.title , locations.type from Productions_Locations join Locations on Productions_Locations.LocationID = Locations.LocationID join Productions on Productions_Locations.ProductionID = Productions.ProductionID",
+        "interpretation1": "What type of locations is common for all productions?",
+        "interpretation2": "For each production, what are the corresponding types of locations?"
+    }
+]

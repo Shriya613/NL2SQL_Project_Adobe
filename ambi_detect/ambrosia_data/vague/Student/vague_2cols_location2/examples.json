@@ -1,0 +1,22 @@
+[
+    {
+        "question": "Where is Human Biology studied?",
+        "sql_query1": "SELECT Building FROM Courses WHERE CourseTitle = 'Human Biology'",
+        "sql_query2": "SELECT RoomNumber FROM Courses WHERE CourseTitle = 'Human Biology'",
+        "sql_query3": "SELECT Building, RoomNumber FROM Courses WHERE CourseTitle = 'Human Biology'",
+        "interpretation1": "What building is Human Biology studied in?",
+        "interpretation2": "What room number is Human Biology studied in?",
+        "interpretation3": "What building and room number is Human Biology studied in?",
+        "sql_query_general": "SELECT Location FROM Courses WHERE CourseTitle = 'Human Biology'"
+    },
+    {
+        "question": "Show all courses and where they take place",
+        "sql_query1": "SELECT CourseTitle , Building FROM Courses",
+        "sql_query2": "SELECT CourseTitle , RoomNumber FROM Courses",
+        "sql_query3": "SELECT CourseTitle , Building, RoomNumber FROM Courses",
+        "interpretation1": "Show all courses and the buildings where they take place.",
+        "interpretation2": "Show all the courses and the room numbers where they take place.",
+        "interpretation3": "Show all courses and the buildings and room numbers where they take place.",
+        "sql_query_general": "SELECT CourseTitle , Location FROM Courses"
+    }
+]

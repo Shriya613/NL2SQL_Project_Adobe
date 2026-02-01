@@ -1,0 +1,9 @@
+[
+    {
+        "question": "What value of topics is associated with each bank training?",
+        "sql_query1": "SELECT Topics.value  from Bank_Training_Topics join Topics on Bank_Training_Topics.topic_id = Topics.id join Bank_Training on Bank_Training_Topics.bank_training_id = Bank_Training.training_id   GROUP BY Bank_Training_Topics.topic_id HAVING COUNT(DISTINCT Bank_Training_Topics.bank_training_id) = (SELECT COUNT(*) FROM  Bank_Training)",
+        "sql_query2": "select bank_training.training_id , topics.value from Bank_Training_Topics join Topics on Bank_Training_Topics.topic_id = Topics.id join Bank_Training on Bank_Training_Topics.bank_training_id = Bank_Training.training_id",
+        "interpretation1": "What value of topics is common across all bank training sessions?",
+        "interpretation2": "For each bank training session, provide the corresponding value of topics."
+    }
+]

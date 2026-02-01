@@ -1,0 +1,9 @@
+[
+    {
+        "question": "Show all the press conferences and interviews where a politician was participating.",
+        "sql_query1": "SELECT Press_Conferences.Title\r\nFROM Press_Conferences\r\nWHERE Press_Conferences.Participant_Type = \"Politician\"\r\nUNION\r\nSELECT Interviews.Title\r\nFROM Interviews\r\nWHERE Interviews.Participant_Type = \"Politician\"",
+        "sql_query2": "SELECT Press_Conferences.Title\r\nFROM Press_Conferences\r\nUNION\r\nSELECT Interviews.Title\r\nFROM Interviews\r\nWHERE Interviews.Participant_Type = \"Politician\"",
+        "interpretation1": "Show all the press conferences where a politician was participating and then the same for all interviews.",
+        "interpretation2": "Show all of the press conferences and then just the interviews with politicians."
+    }
+]

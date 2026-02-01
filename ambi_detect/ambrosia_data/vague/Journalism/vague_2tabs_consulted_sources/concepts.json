@@ -1,0 +1,7 @@
+{
+    "template": "Question: What sources were consulted during the preparation of this documentary? Subject of Inquiry: Documentary\nFocus: Consulted Sources Possible answer types: 1. Experts 2. Archival Footage",
+    "subject": "Documentary",
+    "focus": "Consulted Sources",
+    "general_category1": "Experts",
+    "general_category2": "Archival Footage"
+}

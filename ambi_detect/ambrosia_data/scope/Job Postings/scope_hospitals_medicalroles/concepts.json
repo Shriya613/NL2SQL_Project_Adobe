@@ -1,0 +1,6 @@
+{
+    "template": "Each Hospitals has many different Medical Roles. Among them, Registered Nurse is common to many Hospitals.",
+    "specific_component": "Registered Nurse",
+    "components": "Medical Roles",
+    "entities": "Hospitals"
+}

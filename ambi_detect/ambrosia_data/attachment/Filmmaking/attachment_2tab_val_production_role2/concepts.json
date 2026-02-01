@@ -1,0 +1,8 @@
+{
+    "template": "Casting Director and Location Scout are production roles in filmmaking. All Casting Directors and Location Scouts have a property \"Salary\". There might be a Casting Director and a Location Scout both earning a salary of \"$80,000 per year\" while others in these roles have different salaries.",
+    "general_class": "Production Role",
+    "class1": "Casting Director",
+    "class2": "Location Scout",
+    "common_property": "Salary",
+    "common_value": "80000"
+}

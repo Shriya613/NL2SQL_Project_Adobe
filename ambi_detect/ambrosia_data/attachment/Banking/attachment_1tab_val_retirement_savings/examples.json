@@ -1,0 +1,9 @@
+[
+    {
+        "question": "Give me all pension plan clients and brokerage account clients getting a return of 5%.",
+        "sql_query1": "SELECT Clients.FullName\r\nFROM Pensions JOIN Clients ON Clients.ClientID = Pensions.ClientID\r\nWHERE (Pensions.Retirement_Savings = \"Pension Plan\" OR Pensions.Retirement_Savings = \"Brokerage Account\") AND Pensions.Rate_of_return = \"5%\"",
+        "sql_query2": "SELECT Clients.FullName\r\nFROM Pensions JOIN Clients ON Clients.ClientID = Pensions.ClientID\r\nWHERE Pensions.Retirement_Savings = \"Pension Plan\" OR Pensions.Retirement_Savings = \"Brokerage Account\" AND Pensions.Rate_of_return = \"5%\"",
+        "interpretation1": "Show all clients with either pension plans getting 5% returns or brokerage accounts getting the same.",
+        "interpretation2": "Show all the pension plan clients, also show the brokerage account clients earning 5%."
+    }
+]

@@ -1,0 +1,8 @@
+{
+    "template": "Life Insurance and Annuity are subclasses of Insurance Product. All Life insurances and Annuities have property \"Payout\". There might be a Life Insurance and a Annuity that both have \"Payout\" equal to \"100000\".",
+    "general_class": "Insurance Product",
+    "class1": "Life Insurance",
+    "class2": "Annuity",
+    "common_property": "Payout",
+    "common_value": "100000"
+}

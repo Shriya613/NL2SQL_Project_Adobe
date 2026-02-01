@@ -1,0 +1,22 @@
+[
+    {
+        "question": "Show me the name and location of the students with a major in mathematics",
+        "sql_query1": "SELECT FullName, City from Students WHERE Major = 'Mathematics'",
+        "sql_query2": "SELECT FullName, Campus from Students WHERE Major = 'Mathematics'",
+        "sql_query3": "SELECT FullName, City, Campus from Students WHERE Major = 'Mathematics'",
+        "interpretation1": "List the students who have a major in mathematics and the city where they are located",
+        "interpretation2": "List the students who have a major in mathematics and the campus where they are located",
+        "interpretation3": "List the students who have a major in mathematics and the city and campus where they are located",
+        "sql_query_general": "SELECT FullName, Location from Students WHERE Major = 'Mathematics'"
+    },
+    {
+        "question": "Show me the majors and cities of students with the last name Smith.",
+        "sql_query1": "SELECT Major, City from Students where FullName LIKE '% Smith'",
+        "sql_query2": "SELECT Major, Campus from Students where FullName LIKE '% Smith'",
+        "sql_query3": "SELECT Major, City, Campus from Students where FullName LIKE '% Smith'",
+        "interpretation1": "Show me the majors and cities of students with the last name of Smith.",
+        "interpretation2": "Show me the majors and campuses of students with the last name Smith.",
+        "interpretation3": "What are the majors, cities and campuses of students with the last name of Smith?",
+        "sql_query_general": "SELECT Major, Location from Students where FullName LIKE '% Smith'"
+    }
+]

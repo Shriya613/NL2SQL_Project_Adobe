@@ -1,0 +1,22 @@
+[
+    {
+        "question": "What are the demographics of Economic Recovery Strategies readers?",
+        "sql_query1": "Select max_age, min_age from Age_Range JOIN Readers ON Readers.age_range_id = Age_Range.id JOIN Article_Readers ON Article_Readers.reader_id = Readers.id JOIN Articles ON Article_Readers.article_id = Articles.id WHERE title = 'Economic Recovery Strategies'",
+        "sql_query2": "Select status, description from Socioeconomic_Status JOIN Readers ON Readers.Socioeconomic_Status_id = Socioeconomic_Status.id JOIN Article_Readers ON Article_Readers.reader_id = Readers.id JOIN Articles ON Article_Readers.article_id = Articles.id WHERE title = 'Economic Recovery Strategies'",
+        "sql_query3": "Select max_age, min_age, status, description from Age_Range JOIN Readers ON Readers.age_range_id = Age_Range.id JOIN Article_Readers ON Article_Readers.reader_id = Readers.id JOIN Articles ON Article_Readers.article_id = Articles.id JOIN Socioeconomic_Status ON Readers.Socioeconomic_Status_id = Socioeconomic_Status.id WHERE title = 'Economic Recovery Strategies'",
+        "interpretation1": "give me the min and max age for the demographic of readers of the article titled Economic Recovery Strategies",
+        "interpretation2": "give me the socioeconomic status for the demographic of readers of the article titled Economic Recovery Strategies",
+        "interpretation3": "give me the min and max age, and socioeconomic status for the demographic of readers of the article titled Economic Recovery Strategies",
+        "sql_query_general": "Select max_age, min_age from Age_Range JOIN Readers ON Readers.age_range_id = Age_Range.id JOIN Article_Readers ON Article_Readers.reader_id = Readers.id JOIN Articles ON Article_Readers.article_id = Articles.id WHERE title = 'Economic Recovery Strategies'"
+    },
+    {
+        "question": "What are the demographics of Author B's readers?",
+        "sql_query1": "Select max_age, min_age from Age_Range JOIN Readers ON Readers.age_range_id = Age_Range.id JOIN Article_Readers ON Article_Readers.reader_id = Readers.id JOIN Articles ON Article_Readers.article_id = Articles.id JOIN Authors ON Articles.author_id = Authors.id WHERE author_name = 'Author B'",
+        "sql_query2": "Select status, description from Socioeconomic_Status JOIN Readers ON Readers.Socioeconomic_Status_id = Socioeconomic_Status.id JOIN Article_Readers ON Article_Readers.reader_id = Readers.id JOIN Articles ON Article_Readers.article_id = Articles.id JOIN Authors ON Articles.author_id = Authors.id WHERE author_name = 'Author B'",
+        "sql_query3": "Select max_age, min_age, status, description from Age_Range JOIN Readers ON Readers.age_range_id = Age_Range.id JOIN Article_Readers ON Article_Readers.reader_id = Readers.id JOIN Articles ON Article_Readers.article_id = Articles.id JOIN Authors ON Articles.author_id = Authors.id JOIN Socioeconomic_Status ON Readers.Socioeconomic_Status_id = Socioeconomic_Status.id WHERE author_name = 'Author B'",
+        "interpretation1": "what are min age and max age for readers of articles published by Author B?",
+        "interpretation2": "what is the socioeconomic status of readers of articles published by Author B?",
+        "interpretation3": "what are min and max ages, and the socioeconomic status of readers of articles published by Author B?",
+        "sql_query_general": "Select max_age, min_age from Age_Range JOIN Readers ON Readers.age_range_id = Age_Range.id JOIN Article_Readers ON Article_Readers.reader_id = Readers.id JOIN Articles ON Article_Readers.article_id = Articles.id JOIN Authors ON Articles.author_id = Authors.id WHERE author_name = 'Author B'"
+    }
+]

@@ -1,0 +1,22 @@
+[
+    {
+        "question": "Find how many students from each offering department are enrolled in Calculus I.",
+        "sql_query1": "SELECT college, COUNT(student_id) AS Num_Students\r\nFROM Students S\r\nLEFT JOIN CourseEnrollments E ON S.id = E.student_id\r\nLEFT JOIN Courses C ON C.id = E.course_id AND title = 'Calculus I'",
+        "sql_query2": "SELECT university, COUNT(student_id) AS Num_Students\r\nFROM Students S\r\nLEFT JOIN CourseEnrollments E ON S.id = E.student_id\r\nLEFT JOIN Courses C ON C.id = E.course_id AND title = 'Calculus I'",
+        "sql_query3": "SELECT college, university, COUNT(student_id) AS Num_Students\r\nFROM Students S\r\nLEFT JOIN CourseEnrollments E ON S.id = E.student_id\r\nLEFT JOIN Courses C ON C.id = E.course_id AND title = 'Calculus I'",
+        "interpretation1": "How many students from each college are enrolled in Calculus I?",
+        "interpretation2": "How many students from each university are enrolled in Calculus I?",
+        "interpretation3": "How many students from each college and university are enrolled in Calculus I?",
+        "sql_query_general": "SELECT Offering_Department, COUNT(student_id) AS Num_Students\r\nFROM Students S\r\nLEFT JOIN CourseEnrollments E ON S.id = E.student_id\r\nLEFT JOIN Courses C ON C.id = E.course_id AND title = 'Calculus I'"
+    },
+    {
+        "question": "Show the number of credits that students from each offering department completed and did not fail for the year 2021.",
+        "sql_query1": "SELECT college, SUM(C.credits) as Num_Credits\r\nFROM Students S\r\nLEFT JOIN CourseEnrollments E ON S.id = E.student_id\r\nLEFT JOIN Courses C ON C.id = E.course_id\r\nWHERE E.year = 2021\r\nAND E.grade not like '%F%'",
+        "sql_query2": "SELECT university, SUM(C.credits) as Num_Credits\r\nFROM Students S\r\nLEFT JOIN CourseEnrollments E ON S.id = E.student_id\r\nLEFT JOIN Courses C ON C.id = E.course_id\r\nWHERE E.year = 2021\r\nAND E.grade not like '%F%'",
+        "sql_query3": "SELECT college, university, SUM(C.credits) as Num_Credits\r\nFROM Students S\r\nLEFT JOIN CourseEnrollments E ON S.id = E.student_id\r\nLEFT JOIN Courses C ON C.id = E.course_id\r\nWHERE E.year = 2021\r\nAND E.grade not like '%F%'",
+        "interpretation1": "Show the number of credits that students from each college completed and did not fail for the year 2021",
+        "interpretation2": "Show the number of credits that students from each university completed and did not fail for the year 2021",
+        "interpretation3": "Show the number of credits that students from each college and university completed and did not fail for the year 2021",
+        "sql_query_general": "SELECT Offering_Department, SUM(C.credits) as Num_Credits\r\nFROM Students S\r\nLEFT JOIN CourseEnrollments E ON S.id = E.student_id\r\nLEFT JOIN Courses C ON C.id = E.course_id\r\nWHERE E.year = 2021\r\nAND E.grade not like '%F%'"
+    }
+]

@@ -1,0 +1,9 @@
+[
+    {
+        "question": "Give me all engineer jobs and architect jobs that have a salary of 80000",
+        "sql_query1": "SELECT Jobs.title \r\nFROM Jobs\r\nWHERE (Jobs.technicalProfession = \"Engineer\" OR Jobs.technicalProfession = \"Architect\") AND Jobs.salary = 80000",
+        "sql_query2": "SELECT Jobs.title \r\nFROM Jobs\r\nWHERE Jobs.technicalProfession = \"Engineer\" OR Jobs.technicalProfession = \"Architect\" AND Jobs.salary = 80000",
+        "interpretation1": "Show all engineer and architect jobs that have a salary equal to 80000",
+        "interpretation2": "Show all engineer jobs and also provide all architect jobs that have a salary equal to 80000."
+    }
+]

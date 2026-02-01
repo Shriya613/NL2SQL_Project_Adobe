@@ -1,0 +1,9 @@
+[
+    {
+        "question": "Which passengers use priority boarding and family boarding on United Airlines flights?",
+        "sql_query1": "SELECT Passengers.Name \r\nFROM Passengers JOIN Flights ON Passengers.FlightID = Flights.FlightID JOIN Airlines ON Flights.AirlineID = Airlines.AirlineID\r\nWHERE (Passengers.BoardingType = \"Priority Boarding\" OR Passengers.BoardingType = \"Family Boarding\") AND Airlines.Name = \"United Airlines\"",
+        "sql_query2": "SELECT Passengers.Name \r\nFROM Passengers JOIN Flights ON Passengers.FlightID = Flights.FlightID JOIN Airlines ON Flights.AirlineID = Airlines.AirlineID\r\nWHERE Passengers.BoardingType = \"Priority Boarding\" OR Passengers.BoardingType = \"Family Boarding\" AND Airlines.Name = \"United Airlines\"",
+        "interpretation1": "Show passengers who used priority boarding on United Airlines flights and family boarding on the same airline.",
+        "interpretation2": "Display all passengers who used priority boarding and also show passengers who used family boarding on United Airlines flights."
+    }
+]

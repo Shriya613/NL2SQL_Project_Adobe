@@ -1,0 +1,31 @@
+{
+    "template": "Each Online Banking Platforms has many different Features. Among them, Bill Pay is common to many Online Banking Platforms.",
+    "entities": {
+        "tab_name": "Online_Banking_Platforms",
+        "col_name": null,
+        "value": null,
+        "scope_id": null,
+        "db_type": "table"
+    },
+    "components": {
+        "tab_name": "Features",
+        "col_name": null,
+        "value": null,
+        "scope_id": null,
+        "db_type": "table"
+    },
+    "specific_component": {
+        "tab_name": "Features",
+        "col_name": "feature_value",
+        "value": "Bill Pay",
+        "scope_id": 0,
+        "db_type": "value"
+    },
+    "entities_components": {
+        "tab_name": "Online_Banking_Platforms_Features",
+        "col_name": null,
+        "value": null,
+        "scope_id": null,
+        "db_type": "table"
+    }
+}

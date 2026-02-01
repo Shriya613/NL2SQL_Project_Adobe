@@ -1,0 +1,31 @@
+{
+    "template": "Each Craft Services has many different Menus. Among them, Vegan is common to many Craft Services.",
+    "entities": {
+        "tab_name": "Craft_Services",
+        "col_name": null,
+        "value": null,
+        "scope_id": null,
+        "db_type": "table"
+    },
+    "components": {
+        "tab_name": "Menus",
+        "col_name": null,
+        "value": null,
+        "scope_id": null,
+        "db_type": "table"
+    },
+    "specific_component": {
+        "tab_name": "Menus",
+        "col_name": "Name",
+        "value": "Vegan",
+        "scope_id": 0,
+        "db_type": "value"
+    },
+    "entities_components": {
+        "tab_name": "Craft_Services_Menus",
+        "col_name": null,
+        "value": null,
+        "scope_id": null,
+        "db_type": "table"
+    }
+}

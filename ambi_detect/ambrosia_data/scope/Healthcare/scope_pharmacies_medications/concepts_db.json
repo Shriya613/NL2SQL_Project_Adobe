@@ -1,0 +1,31 @@
+{
+    "template": "Each Pharmacy has many different Medications. Among them, Pain Relievers is common to many Pharmacy.",
+    "entities": {
+        "tab_name": "Pharmacies",
+        "col_name": null,
+        "value": null,
+        "scope_id": null,
+        "db_type": "table"
+    },
+    "components": {
+        "tab_name": "Medications",
+        "col_name": null,
+        "value": null,
+        "scope_id": null,
+        "db_type": "table"
+    },
+    "specific_component": {
+        "tab_name": "Medications",
+        "col_name": "type",
+        "value": "Pain Relievers",
+        "scope_id": 0,
+        "db_type": "value"
+    },
+    "entities_components": {
+        "tab_name": "Pharmacy_Medications",
+        "col_name": null,
+        "value": null,
+        "scope_id": null,
+        "db_type": "table"
+    }
+}

@@ -1,0 +1,7 @@
+{
+    "template": "Question: What technology platform do journalists use to distribute their content? Subject of Inquiry: News Agency\nFocus: Platform Possible answer types: 1. Website 2. Mobile App",
+    "subject": "News Agency",
+    "focus": "Platform",
+    "general_category1": "Website",
+    "general_category2": "Mobile App"
+}

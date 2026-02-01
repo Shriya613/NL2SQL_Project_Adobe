@@ -1,0 +1,9 @@
+[
+    {
+        "question": "Show family rooms and single rooms that cost 150.",
+        "sql_query1": "SELECT FamilySuites.Room\r\nFROM FamilySuites\r\nWHERE FamilySuites.Price_per_night = 150.0\r\nUNION\r\nSELECT SingleRooms.Room\r\nFROM SingleRooms\r\nWHERE SingleRooms.Price_per_night = 150.0",
+        "sql_query2": "SELECT FamilySuites.Room\r\nFROM FamilySuites\r\nUNION\r\nSELECT SingleRooms.Room\r\nFROM SingleRooms\r\nWHERE SingleRooms.Price_per_night = 150.0",
+        "interpretation1": "What family suites are priced at 150 and what single rooms cost the same?",
+        "interpretation2": "Provide a list of all family suites and also provide a list of single rooms that cost 150."
+    }
+]

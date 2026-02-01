@@ -1,0 +1,9 @@
+[
+    {
+        "question": "Display exchange-traded products and unit investment trusts with an exit fee of 0.01.",
+        "sql_query1": "SELECT Exchange_traded_Products.ProductName as name\r\nFROM Exchange_traded_Products\r\nWHERE Exchange_traded_Products.ExitFee = 0.01\r\nUNION\r\nSELECT Unit_investment_Trusts.TrustName as name\r\nFROM Unit_investment_Trusts\r\nWHERE Unit_investment_Trusts.ExitFee = 0.01",
+        "sql_query2": "SELECT Exchange_traded_Products.ProductName as name\r\nFROM Exchange_traded_Products\r\nUNION\r\nSELECT Unit_investment_Trusts.TrustName as name\r\nFROM Unit_investment_Trusts\r\nWHERE Unit_investment_Trusts.ExitFee = 0.01",
+        "interpretation1": "What exchange-traded products and unit investment trusts have an exit fee of 0.01?",
+        "interpretation2": "List all exchange-traded products and also display unit investment trusts with an exit fee of 0.01."
+    }
+]

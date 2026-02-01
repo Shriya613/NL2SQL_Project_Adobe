@@ -1,0 +1,7 @@
+{
+    "template": "Question: When were these learning materials published? Subject of Inquiry: Materials\nFocus: Timeline Possible answer types: 1. Month 2. Year",
+    "subject": "Materials",
+    "focus": "Timeline",
+    "general_category1": "Month",
+    "general_category2": "Year"
+}

@@ -1,0 +1,22 @@
+[
+    {
+        "question": "Show me the film starring the oldest lead actor",
+        "sql_query1": "Select Title, Fullname FROM Movie JOIN Actor on Actor.id = Movie.LeadActorId ORDER BY DateOfBirth ASC LIMIT 1",
+        "sql_query2": "Select Title, Fullname FROM Movie JOIN Actress on Actress.id = Movie.LeadActressId ORDER BY DateOfBirth ASC LIMIT 1",
+        "sql_query3": "Select Title, Actor.Fullname, Actress.Fullname FROM Movie JOIN Actor on Actor.id = Movie.LeadActorId JOIN Actress on Actress.id = Movie.LeadActressId ORDER BY Actor.DateOfBirth, Actress.DateOfBirth ASC LIMIT 1",
+        "interpretation1": "Give me the name of a film with the oldest lead actor.",
+        "interpretation2": "What film has the oldest lead actress?",
+        "interpretation3": "Give me the name of a film with the oldest lead actor. What film has the oldest lead actress?",
+        "sql_query_general": "Select Title, Fullname FROM Movie JOIN Actor on Actor.id = Movie.Lead ORDER BY DateOfBirth ASC LIMIT 1"
+    },
+    {
+        "question": "Show me the name and id of the lead actor with the most films",
+        "sql_query1": "SELECT Actor.id, Actor.Fullname FROM Actor JOIN Movie ON Actor.id = Movie.LeadActorId GROUP BY Actor.id, Actor.Fullname HAVING COUNT(Movie.id) = (SELECT MAX(MovieCount) FROm (SELECT Count(Movie.id) AS MovieCount FROM Actor JOIN Movie ON Actor.id = Movie.LeadActorId GROUP BY Actor.id, Actor.Fullname))",
+        "sql_query2": "SELECT Actress.id, Actress.Fullname FROM Actress JOIN Movie ON Actress.id = Movie.LeadActressId GROUP BY Actress.id, Actress.Fullname HAVING COUNT(Movie.id) = (SELECT MAX(MovieCount) FROm (SELECT Count(Movie.id) AS MovieCount FROM Actress JOIN Movie ON Actress.id = Movie.LeadActressId GROUP BY Actress.id, Actress.Fullname))",
+        "sql_query3": "SELECT Actor.id, Actor.Fullname FROM Actor JOIN Movie ON Actor.id = Movie.LeadActorId GROUP BY Actor.id, Actor.Fullname HAVING COUNT(Movie.id) = (SELECT MAX(MovieCount) FROm (SELECT Count(Movie.id) AS MovieCount FROM Actor JOIN Movie ON Actor.id = Movie.LeadActorId GROUP BY Actor.id, Actor.Fullname)) UNION SELECT Actress.id, Actress.Fullname FROM Actress JOIN Movie ON Actress.id = Movie.LeadActressId GROUP BY Actress.id, Actress.Fullname HAVING COUNT(Movie.id) = (SELECT MAX(MovieCount) FROm (SELECT Count(Movie.id) AS MovieCount FROM Actress JOIN Movie ON Actress.id = Movie.LeadActressId GROUP BY Actress.id, Actress.Fullname))",
+        "interpretation1": "Can you show the name and id of the main actor with the most films?",
+        "interpretation2": "Can you show the name and id of the main actress with the most films?",
+        "interpretation3": "Can you show the name and id of the main actor with the most films and also the name and id of the actress with the most films?",
+        "sql_query_general": "SELECT Actor.id, Actor.Fullname FROM Actor JOIN Movie ON Actor.id = Movie.Lead GROUP BY Actor.id, Actor.Fullname HAVING COUNT(Movie.id) = (SELECT MAX(MovieCount) FROm (SELECT Count(Movie.id) AS MovieCount FROM Actor JOIN Movie ON Actor.id = Movie.Lead GROUP BY Actor.id, Actor.Fullname))"
+    }
+]

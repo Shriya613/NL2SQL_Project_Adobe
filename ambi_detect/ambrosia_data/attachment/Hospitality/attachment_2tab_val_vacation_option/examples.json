@@ -1,0 +1,9 @@
+[
+    {
+        "question": "Show cruise ships and resorts that offer a dance class.",
+        "sql_query1": "SELECT Cruise_Ship.name\r\nFROM Cruise_Ship\r\nWHERE Cruise_Ship.activities = \"Dance Class\"\r\nUNION\r\nSELECT All_Inclusive_Resort.name\r\nFROM All_Inclusive_Resort\r\nWHERE All_Inclusive_Resort.activities = \"Dance Class\"",
+        "sql_query2": "SELECT Cruise_Ship.name\r\nFROM Cruise_Ship\r\nUNION\r\nSELECT All_Inclusive_Resort.name\r\nFROM All_Inclusive_Resort\r\nWHERE All_Inclusive_Resort.activities = \"Dance Class\"",
+        "interpretation1": "Show any cruise ships and resorts where either offer a dance class.",
+        "interpretation2": "Display all the cruise ships but only the resorts that offer a dance class."
+    }
+]

@@ -1,0 +1,9 @@
+[
+    {
+        "question": "Show me chefs and servers who speak English.",
+        "sql_query1": "SELECT Staff.Name \r\nFROM Staff\r\nWHERE (Staff.Role = \"Chef\" OR Staff.Role = \"Server\") AND Staff.Language = \"English\"",
+        "sql_query2": "SELECT Staff.Name \r\nFROM Staff\r\nWHERE Staff.Role = \"Chef\" OR Staff.Role = \"Server\" AND Staff.Language = \"English\"",
+        "interpretation1": "Which chefs speak English and which servers speak the same language?",
+        "interpretation2": "Provide a list of all chefs and also provide a list of servers who speak English."
+    }
+]

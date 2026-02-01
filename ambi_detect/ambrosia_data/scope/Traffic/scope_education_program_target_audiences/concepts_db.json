@@ -1,0 +1,31 @@
+{
+    "template": "Each Education Program has many different Target Audiences. Among them, Teen Driver Education is common to many Education Program.",
+    "entities": {
+        "tab_name": "Education_Program",
+        "col_name": null,
+        "value": null,
+        "scope_id": null,
+        "db_type": "table"
+    },
+    "components": {
+        "tab_name": "Target_Audiences",
+        "col_name": null,
+        "value": null,
+        "scope_id": null,
+        "db_type": "table"
+    },
+    "specific_component": {
+        "tab_name": "Target_Audiences",
+        "col_name": "audience_name",
+        "value": "Tdult Driver Refresher Course",
+        "scope_id": 0,
+        "db_type": "value"
+    },
+    "entities_components": {
+        "tab_name": "Education_Program_Target_Audiences",
+        "col_name": null,
+        "value": null,
+        "scope_id": null,
+        "db_type": "table"
+    }
+}

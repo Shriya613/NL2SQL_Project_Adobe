@@ -1,0 +1,27 @@
+{
+    "domain": "Tourist_Attractions",
+    "template": "Tourist Attraction and Local Market are subclasses of Activity. All Tourist attractions and Local markets have property \"Location\". There might be a Tourist Attraction and a Local Market that both have \"Location\" equal to \"Portobello\".",
+    "type": "2tab_val",
+    "general_class": "Activity",
+    "class1": {
+        "tab_name": "Tourist_Attractions",
+        "col_name": null,
+        "value": null,
+        "scope_id": null,
+        "db_type": "table"
+    },
+    "class2": {
+        "tab_name": "Local_Markets",
+        "col_name": null,
+        "value": null,
+        "scope_id": null,
+        "db_type": "table"
+    },
+    "common_property": {
+        "tab_name": "Tourist_Attractions",
+        "col_name": "Location",
+        "value": "London",
+        "scope_id": null,
+        "db_type": "value"
+    }
+}

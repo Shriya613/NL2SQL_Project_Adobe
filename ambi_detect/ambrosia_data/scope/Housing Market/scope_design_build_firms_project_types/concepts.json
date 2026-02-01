@@ -1,0 +1,6 @@
+{
+    "template": "Each Design-Build Firms has many different Project Types. Among them, Custom Home is common to many Design-Build Firms.",
+    "specific_component": "Custom Home",
+    "components": "Project Types",
+    "entities": "Design-Build Firms"
+}

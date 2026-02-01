@@ -1,0 +1,9 @@
+[
+    {
+        "question": "Give me the features for each green building.",
+        "sql_query1": "SELECT Features.name  from Green_Buildings_Features join Features on Green_Buildings_Features.feature_id = Features.feature_id join Green_Buildings on Green_Buildings_Features.green_building_id = Green_Buildings.id   GROUP BY Green_Buildings_Features.feature_id HAVING COUNT(DISTINCT Green_Buildings_Features.green_building_id) = (SELECT COUNT(*) FROM  Green_Buildings)",
+        "sql_query2": "select green_buildings.address , features.name from Green_Buildings_Features join Features on Green_Buildings_Features.feature_id = Features.feature_id join Green_Buildings on Green_Buildings_Features.green_building_id = Green_Buildings.id",
+        "interpretation1": "Which features do all green buildings have in common?",
+        "interpretation2": "For every green building, show the features that they have."
+    }
+]

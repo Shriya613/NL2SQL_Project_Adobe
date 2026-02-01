@@ -1,0 +1,9 @@
+[
+    {
+        "question": "Which films are listed with sound design and music score composed by John Williams?",
+        "sql_query1": "SELECT Movie_Elements.movie_title \r\nFROM Movie_Elements JOIN Composer ON Movie_Elements.composer_id = Composer.id\r\nWHERE (Movie_Elements.element_type = \"Sound Design\" OR Movie_Elements.element_type = \"Music Score\") AND Composer.creator = \"John Williams\"",
+        "sql_query2": "SELECT Movie_Elements.movie_title \r\nFROM Movie_Elements JOIN Composer ON Movie_Elements.composer_id = Composer.id\r\nWHERE Movie_Elements.element_type = \"Sound Design\" OR Movie_Elements.element_type = \"Music Score\" AND Composer.creator = \"John Williams\"",
+        "interpretation1": "Display the films where John Williams composed the sound design or music score.",
+        "interpretation2": "Provide films listed with sound design and also show films where John Williams composed the music score."
+    }
+]

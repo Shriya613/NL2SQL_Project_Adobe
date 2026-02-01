@@ -1,0 +1,6 @@
+{
+    "template": "Each Scholarship has many different Criteria. Among them, Academic Achievement is common to many Scholarship.",
+    "specific_component": "Academic Achievement",
+    "components": "Criteria",
+    "entities": "Scholarship"
+}

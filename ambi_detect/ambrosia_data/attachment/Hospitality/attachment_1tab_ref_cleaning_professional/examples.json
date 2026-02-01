@@ -1,0 +1,9 @@
+[
+    {
+        "question": "Give me housekeepers and laundry attendants that work in Park View Inn hotel.",
+        "sql_query1": "SELECT CleaningProfessionals.name \r\nFROM CleaningProfessionals JOIN Hotels ON CleaningProfessionals.hotel_id = Hotels.id\r\nWHERE (CleaningProfessionals.type = \"Housekeeper\" OR CleaningProfessionals.type = \"Laundry Attendant\") AND Hotels.name = \"Park View Inn\"",
+        "sql_query2": "SELECT CleaningProfessionals.name \r\nFROM CleaningProfessionals JOIN Hotels ON CleaningProfessionals.hotel_id = Hotels.id\r\nWHERE CleaningProfessionals.type = \"Housekeeper\" OR CleaningProfessionals.type = \"Laundry Attendant\" AND Hotels.name = \"Park View Inn\"",
+        "interpretation1": "Which housekeepers work in Park View Inn hotel and which laundry attendants work in the same hotel?",
+        "interpretation2": "Provide a list of all the housekeepers and also provide a list of laundry attendants that work in Park View Inn hotel."
+    }
+]

@@ -1,0 +1,9 @@
+[
+    {
+        "question": "Which jurisdiction names are associated with each legal affairs reporter?",
+        "sql_query1": "SELECT Jurisdictions.jurisdiction_name  from Legal_Affairs_Reporters_Jurisdictions join Jurisdictions on Legal_Affairs_Reporters_Jurisdictions.jurisdiction_id = Jurisdictions.jurisdiction_id join Legal_Affairs_Reporters on Legal_Affairs_Reporters_Jurisdictions.legal_affairs_reporter_id = Legal_Affairs_Reporters.reporter_id   GROUP BY Legal_Affairs_Reporters_Jurisdictions.jurisdiction_id HAVING COUNT(DISTINCT Legal_Affairs_Reporters_Jurisdictions.legal_affairs_reporter_id) = (SELECT COUNT(*) FROM  Legal_Affairs_Reporters)",
+        "sql_query2": "select legal_affairs_reporters.name , jurisdictions.jurisdiction_name from Legal_Affairs_Reporters_Jurisdictions join Jurisdictions on Legal_Affairs_Reporters_Jurisdictions.jurisdiction_id = Jurisdictions.jurisdiction_id join Legal_Affairs_Reporters on Legal_Affairs_Reporters_Jurisdictions.legal_affairs_reporter_id = Legal_Affairs_Reporters.reporter_id",
+        "interpretation1": "Provide me with the jurisdiction name that is common for all legal affairs reporters.",
+        "interpretation2": "For each legal affairs reporter, give me the corresponding jurisdiction names."
+    }
+]

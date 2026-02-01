@@ -1,0 +1,6 @@
+{
+    "template": "Each Immigration Reporters has many different Countries. Among them, Mexico is common to many Immigration Reporters.",
+    "specific_component": "Mexico",
+    "components": "Countries",
+    "entities": "Immigration Reporters"
+}

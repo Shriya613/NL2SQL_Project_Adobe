@@ -1,0 +1,8 @@
+{
+    "template": "Novel and Short Story are subclasses of Literary Works. All Novels and Short Stories have property \"Character\". There might be a Novel and a Short Story that both have \"Character\" equal to \"John Smith\".",
+    "general_class": "Literary Works",
+    "class1": "Novel",
+    "class2": "Short Story",
+    "common_property": "Character",
+    "common_value": "John Smith"
+}

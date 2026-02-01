@@ -1,0 +1,9 @@
+[
+    {
+        "question": "Show non-fiction books and fiction books with review rating higher than 4.",
+        "sql_query1": "SELECT Books.title \r\nFROM Books JOIN reviews ON Books.id = reviews.book_id\r\nWHERE (Books.literature = \"Non-fiction Book\" OR Books.literature = \"Fiction Book\") AND reviews.rating > 4",
+        "sql_query2": "SELECT Books.title \r\nFROM Books JOIN reviews ON Books.id = reviews.book_id\r\nWHERE Books.literature = \"Non-fiction Book\" OR Books.literature = \"Fiction Book\" AND reviews.rating > 4",
+        "interpretation1": "What non-fiction books have a review rating higher than 4 and what fiction books are also rated higher than 4?",
+        "interpretation2": "List all non-fiction books and also list fiction books with a review rating higher than 4."
+    }
+]

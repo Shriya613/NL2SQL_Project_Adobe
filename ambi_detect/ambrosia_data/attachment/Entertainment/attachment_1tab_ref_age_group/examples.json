@@ -1,0 +1,9 @@
+[
+    {
+        "question": "Display the young adult books and children books illustrated by Jane Smith.",
+        "sql_query1": "SELECT Books.Title \r\nFROM AgeGroup JOIN Books ON AgeGroup.ID = Books.AgeGroupID JOIN Illustrator ON Books.IllustratorID = Illustrator.ID\r\nWHERE (AgeGroup.GroupName = \"Young Adult Book\" OR AgeGroup.GroupName = \"Children's Book\") AND Illustrator.Fullname = \"Jane Smith\"",
+        "sql_query2": "SELECT Books.Title \r\nFROM AgeGroup JOIN Books ON AgeGroup.ID = Books.AgeGroupID JOIN Illustrator ON Books.IllustratorID = Illustrator.ID\r\nWHERE AgeGroup.GroupName = \"Young Adult Book\" OR AgeGroup.GroupName = \"Children's Book\" AND Illustrator.Fullname = \"Jane Smith\"",
+        "interpretation1": "Show the books illustrated by Jane Smith that are either in the young adult or children's age groups.",
+        "interpretation2": "Show all the young adult book details, also show the children's books illustrated by Jane Smith."
+    }
+]

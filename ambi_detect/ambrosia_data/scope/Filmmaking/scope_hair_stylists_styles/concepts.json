@@ -1,0 +1,6 @@
+{
+    "template": "Each Hair Stylists has many different Styles. Among them, Period Hairstyles is common to many Hair Stylists.",
+    "specific_component": "Period Hairstyles",
+    "components": "Styles",
+    "entities": "Hair Stylists"
+}

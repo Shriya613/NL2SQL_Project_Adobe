@@ -1,0 +1,9 @@
+[
+    {
+        "question": "List photographs and paintings being shown at the Museum of Modern Art.",
+        "sql_query1": "SELECT Photography.title\r\nFROM Gallery JOIN Photography ON Gallery.GalleryId = Photography.GalleryId\r\nWHERE Gallery.Name = \"MoMA - Museum of Modern Art\"\r\nUNION\r\nSELECT Painting.title\r\nFROM Gallery JOIN Painting ON Gallery.GalleryId = Painting.GalleryId\r\nWHERE Gallery.Name = \"MoMA - Museum of Modern Art\"",
+        "sql_query2": "SELECT Photography.title\r\nFROM Gallery JOIN Photography ON Gallery.GalleryId = Photography.GalleryId\r\nUNION\r\nSELECT Painting.title\r\nFROM Gallery JOIN Painting ON Gallery.GalleryId = Painting.GalleryId\r\nWHERE Gallery.Name = \"MoMA - Museum of Modern Art\"",
+        "interpretation1": "What photography is being shown at the Museum of Modern Art and what paintings are also being shown there?",
+        "interpretation2": "Provide a list of all photographs and also provide a list of paintings being show at the Museum of Modern Art."
+    }
+]

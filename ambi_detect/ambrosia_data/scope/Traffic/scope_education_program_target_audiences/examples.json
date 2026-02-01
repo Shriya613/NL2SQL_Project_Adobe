@@ -1,0 +1,9 @@
+[
+    {
+        "question": "Show me the audience each education program is targeting.",
+        "sql_query1": "SELECT Target_Audiences.audience_name  from Education_Program_Target_Audiences join Target_Audiences on Education_Program_Target_Audiences.target_audience_id = Target_Audiences.id join Education_Program on Education_Program_Target_Audiences.education_program_id = Education_Program.id   GROUP BY Education_Program_Target_Audiences.target_audience_id HAVING COUNT(DISTINCT Education_Program_Target_Audiences.education_program_id) = (SELECT COUNT(*) FROM  Education_Program)",
+        "sql_query2": "select education_program.name , target_audiences.audience_name from Education_Program_Target_Audiences join Target_Audiences on Education_Program_Target_Audiences.target_audience_id = Target_Audiences.id join Education_Program on Education_Program_Target_Audiences.education_program_id = Education_Program.id",
+        "interpretation1": "What audiences are common to all education programs?",
+        "interpretation2": "For each education program, list the audience being targeted."
+    }
+]

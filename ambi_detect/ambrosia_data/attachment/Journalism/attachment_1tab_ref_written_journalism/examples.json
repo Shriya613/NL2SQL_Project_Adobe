@@ -1,0 +1,9 @@
+[
+    {
+        "question": "Show me news articles and feature articles of 1,000 words.",
+        "sql_query1": "SELECT Articles.Title \r\nFROM Articles JOIN WordCounts ON Articles.word_count = WordCounts.column\r\nWHERE (Articles.Written_journalism = \"News Article\" OR Articles.Written_journalism = \"Feature Article\") AND WordCounts.column = \"1,000 words\"",
+        "sql_query2": "SELECT Articles.Title \r\nFROM Articles JOIN WordCounts ON Articles.word_count = WordCounts.column\r\nWHERE Articles.Written_journalism = \"News Article\" OR Articles.Written_journalism = \"Feature Article\" AND WordCounts.column = \"1,000 words\"",
+        "interpretation1": "Which news articles have 1,000 words and which feature articles have the same number of words?",
+        "interpretation2": "Provide a list of all news articles and also provide a list of feature articles of 1,000 words."
+    }
+]

@@ -1,0 +1,7 @@
+{
+    "template": "Question: What is the gender pay gap for full-time workers in this occupation? Subject of Inquiry: Occupation\nFocus: Pay Gap Possible answer types: 1. Percentage Gap 2. Difference in Salaries",
+    "subject": "Occupation",
+    "focus": "Pay Gap",
+    "general_category1": "Percentage Gap",
+    "general_category2": "Difference in Salaries"
+}

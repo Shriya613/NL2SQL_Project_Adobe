@@ -1,0 +1,33 @@
+{
+    "domain": "Education",
+    "template": "Orthodontist and Periodontist are subclasses of Dental Careers. All Orthodontists and Periodontists have property \"Education\". There might be a Orthodontist and a Periodontist that both have \"Education\" equal to \"Doctor of Dental Surgery\".",
+    "type": "1tab_ref",
+    "general_class": {
+        "tab_name": "Dentists",
+        "col_name": "DentalSpecialty",
+        "value": null,
+        "scope_id": null,
+        "db_type": "column"
+    },
+    "class1": {
+        "tab_name": "Dentists",
+        "col_name": "DentalSpecialty",
+        "value": "Orthodontist",
+        "scope_id": null,
+        "db_type": "value"
+    },
+    "class2": {
+        "tab_name": "Dentists",
+        "col_name": "DentalSpecialty",
+        "value": "Periodontist",
+        "scope_id": null,
+        "db_type": "value"
+    },
+    "common_property": {
+        "tab_name": "Education",
+        "col_name": "Degree",
+        "value": "Master of Science in Dentistry",
+        "scope_id": null,
+        "db_type": "value"
+    }
+}

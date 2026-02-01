@@ -1,0 +1,8 @@
+{
+    "template": "Photograph and Illustration are subclasses of Visual Arts. All Photographs and Illustrations have property \"Subject\". There might be a Photograph and an Illustration that both have \"Subject\" equal to \"Nature\".",
+    "general_class": "Visual Arts",
+    "class1": "Photograph",
+    "class2": "Illustration",
+    "common_property": "Subject",
+    "common_value": "Nature"
+}

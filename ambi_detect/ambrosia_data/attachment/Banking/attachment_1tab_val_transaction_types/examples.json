@@ -1,0 +1,9 @@
+[
+    {
+        "question": "Give me the amounts of all payments and remittance transfers from bank account 1234567.",
+        "sql_query1": "SELECT Transaction_Type.amount \r\nFROM Transaction_Type\r\nWHERE (Transaction_Type.transaction_type = \"Payment\" OR Transaction_Type.transaction_type = \"Remittance Transfer\") AND Transaction_Type.bank_account = \"1234567\"",
+        "sql_query2": "SELECT Transaction_Type.amount \r\nFROM Transaction_Type\r\nWHERE Transaction_Type.transaction_type = \"Payment\" OR Transaction_Type.transaction_type = \"Remittance Transfer\" AND Transaction_Type.bank_account = \"1234567\"",
+        "interpretation1": "What amounts of payments are from bank account 1234567 and what amounts of remittance transfers are from the same account?",
+        "interpretation2": "List all payment amounts combined with a list of the amounts of remittance transfers from bank account 1234567."
+    }
+]

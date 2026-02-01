@@ -1,0 +1,33 @@
+{
+    "domain": "Team_Type",
+    "template": "Football Player and Rugby Player are subclasses of Team Sports. All Football players and Rugby players have property \"Fitness Level\". There might be a Football Player and a Rugby Player that both have \"Fitness Level\" equal to \"Elite\".",
+    "type": "1tab_ref",
+    "general_class": {
+        "tab_name": "Sports",
+        "col_name": "SportName",
+        "value": null,
+        "scope_id": null,
+        "db_type": "column"
+    },
+    "class1": {
+        "tab_name": "Sports",
+        "col_name": "SportName",
+        "value": "Football",
+        "scope_id": null,
+        "db_type": "value"
+    },
+    "class2": {
+        "tab_name": "Sports",
+        "col_name": "SportName",
+        "value": "Rugby",
+        "scope_id": null,
+        "db_type": "value"
+    },
+    "common_property": {
+        "tab_name": "FitnessLevels",
+        "col_name": "LevelName",
+        "value": "Intermediate",
+        "scope_id": null,
+        "db_type": "value"
+    }
+}

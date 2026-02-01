@@ -1,0 +1,23 @@
+[
+    {
+        "question": "What program does each visual effects artist have?",
+        "sql_query1": "SELECT Programs.name  from Visual_Effects_Artists_Programs join Programs on Visual_Effects_Artists_Programs.program_id = Programs.program_id join Visual_Effects_Artists on Visual_Effects_Artists_Programs.visual_effects_artist_id = Visual_Effects_Artists.artist_id   GROUP BY Visual_Effects_Artists_Programs.program_id HAVING COUNT(DISTINCT Visual_Effects_Artists_Programs.visual_effects_artist_id) = (SELECT COUNT(*) FROM  Visual_Effects_Artists)",
+        "sql_query2": "select visual_effects_artists.name , programs.name from Visual_Effects_Artists_Programs join Programs on Visual_Effects_Artists_Programs.program_id = Programs.program_id join Visual_Effects_Artists on Visual_Effects_Artists_Programs.visual_effects_artist_id = Visual_Effects_Artists.artist_id",
+        "interpretation1": "What program do all visual effects artists have in common?",
+        "interpretation2": "What visual effects artists are there and what programs do they use?"
+    },
+    {
+        "question": "Tell me the programs every visual effects artist uses and their versions.",
+        "sql_query1": "SELECT Programs.name, Programs.version  from Visual_Effects_Artists_Programs join Programs on Visual_Effects_Artists_Programs.program_id = Programs.program_id join Visual_Effects_Artists on Visual_Effects_Artists_Programs.visual_effects_artist_id = Visual_Effects_Artists.artist_id   GROUP BY Visual_Effects_Artists_Programs.program_id HAVING COUNT(DISTINCT Visual_Effects_Artists_Programs.visual_effects_artist_id) = (SELECT COUNT(*) FROM  Visual_Effects_Artists)",
+        "sql_query2": "select visual_effects_artists.name , programs.name , programs.version from Visual_Effects_Artists_Programs join Programs on Visual_Effects_Artists_Programs.program_id = Programs.program_id join Visual_Effects_Artists on Visual_Effects_Artists_Programs.visual_effects_artist_id = Visual_Effects_Artists.artist_id",
+        "interpretation1": "What information is there about programs including their versions that are popular among all visual effects artists?",
+        "interpretation2": "For each visual effects artist, list information about programs that are used including their versions."
+    },
+    {
+        "question": "What are the versions of programs associated with each visual effects artists?",
+        "sql_query1": "SELECT Programs.version  from Visual_Effects_Artists_Programs join Programs on Visual_Effects_Artists_Programs.program_id = Programs.program_id join Visual_Effects_Artists on Visual_Effects_Artists_Programs.visual_effects_artist_id = Visual_Effects_Artists.artist_id   GROUP BY Visual_Effects_Artists_Programs.program_id HAVING COUNT(DISTINCT Visual_Effects_Artists_Programs.visual_effects_artist_id) = (SELECT COUNT(*) FROM  Visual_Effects_Artists)",
+        "sql_query2": "select visual_effects_artists.name , programs.version from Visual_Effects_Artists_Programs join Programs on Visual_Effects_Artists_Programs.program_id = Programs.program_id join Visual_Effects_Artists on Visual_Effects_Artists_Programs.visual_effects_artist_id = Visual_Effects_Artists.artist_id",
+        "interpretation1": "What is the version of program common for all visual effects artists?",
+        "interpretation2": "For each visual effects artist, provide the corresponding version of program they use."
+    }
+]

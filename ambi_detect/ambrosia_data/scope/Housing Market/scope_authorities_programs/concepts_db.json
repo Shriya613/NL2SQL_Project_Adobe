@@ -1,0 +1,31 @@
+{
+    "template": "Each Authorities has many different Programs. Among them, Public Housing is common to many Authorities.",
+    "entities": {
+        "tab_name": "Authorities",
+        "col_name": null,
+        "value": null,
+        "scope_id": null,
+        "db_type": "table"
+    },
+    "components": {
+        "tab_name": "Programs",
+        "col_name": null,
+        "value": null,
+        "scope_id": null,
+        "db_type": "table"
+    },
+    "specific_component": {
+        "tab_name": "Programs",
+        "col_name": "program_name",
+        "value": "Public_Housing",
+        "scope_id": 0,
+        "db_type": "value"
+    },
+    "entities_components": {
+        "tab_name": "Authorities_Programs",
+        "col_name": null,
+        "value": null,
+        "scope_id": null,
+        "db_type": "table"
+    }
+}

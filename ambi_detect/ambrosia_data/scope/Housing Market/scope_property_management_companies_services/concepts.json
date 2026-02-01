@@ -1,0 +1,6 @@
+{
+    "template": "Each Property Management Companies has many different Services. Among them, Lease Agreement is common to many Property Management Companies.",
+    "specific_component": "Lease Agreement",
+    "components": "Services",
+    "entities": "Property Management Companies"
+}

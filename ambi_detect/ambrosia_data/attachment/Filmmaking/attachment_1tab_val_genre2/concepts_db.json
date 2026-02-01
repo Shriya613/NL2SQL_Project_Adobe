@@ -1,0 +1,33 @@
+{
+    "domain": "Directors",
+    "template": "Animation and Comedy are subclasses of Genre. All Animation and Comedy films have a property \"Release Year\". There might be an Animation and a Comedy film both released in \"2021\".",
+    "type": "1tab_val",
+    "general_class": {
+        "tab_name": "Films",
+        "col_name": "Genre",
+        "value": null,
+        "scope_id": null,
+        "db_type": "column"
+    },
+    "class1": {
+        "tab_name": "Films",
+        "col_name": "Genre",
+        "value": "Animation",
+        "scope_id": null,
+        "db_type": "value"
+    },
+    "class2": {
+        "tab_name": "Films",
+        "col_name": "Genre",
+        "value": "Comedy",
+        "scope_id": null,
+        "db_type": "value"
+    },
+    "common_property": {
+        "tab_name": "Films",
+        "col_name": "Release_Year",
+        "value": 2021,
+        "scope_id": null,
+        "db_type": "value"
+    }
+}

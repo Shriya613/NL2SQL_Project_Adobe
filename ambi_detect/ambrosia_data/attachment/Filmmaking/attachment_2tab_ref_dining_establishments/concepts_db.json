@@ -1,0 +1,27 @@
+{
+    "domain": "Restaurants",
+    "template": "Restaurant and Cafe are subclasses of Dining Establishments. All Restaurants and Cafes have a property \"Menu Options\". There might be a Restaurant and a Cafe both offering \"Vegetarian\" menu options while others offer different options such as \"Gluten-Free\".",
+    "type": "2tab_ref",
+    "general_class": "Dining Establishments",
+    "class1": {
+        "tab_name": "Restaurants",
+        "col_name": null,
+        "value": null,
+        "scope_id": null,
+        "db_type": "table"
+    },
+    "class2": {
+        "tab_name": "Cafe",
+        "col_name": null,
+        "value": null,
+        "scope_id": null,
+        "db_type": "table"
+    },
+    "common_property": {
+        "tab_name": "Menu_Options",
+        "col_name": "option_name",
+        "value": "Lasagna",
+        "scope_id": null,
+        "db_type": "value"
+    }
+}

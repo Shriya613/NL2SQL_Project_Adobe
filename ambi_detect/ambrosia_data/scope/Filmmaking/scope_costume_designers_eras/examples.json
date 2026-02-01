@@ -1,0 +1,9 @@
+[
+    {
+        "question": "Give me the eras for which every costume designer has created costumes.",
+        "sql_query1": "SELECT Eras.era_name  from Costume_Designers_Eras join Eras on Costume_Designers_Eras.eras_id = Eras.id join Costume_Designers on Costume_Designers_Eras.costume_designer_id = Costume_Designers.id   GROUP BY Costume_Designers_Eras.eras_id HAVING COUNT(DISTINCT Costume_Designers_Eras.costume_designer_id) = (SELECT COUNT(*) FROM  Costume_Designers)",
+        "sql_query2": "select costume_designers.name , eras.era_name from Costume_Designers_Eras join Eras on Costume_Designers_Eras.eras_id = Eras.id join Costume_Designers on Costume_Designers_Eras.costume_designer_id = Costume_Designers.id",
+        "interpretation1": "Which era is common to all costume designers?",
+        "interpretation2": "For every costume designer, show the eras for which they have created."
+    }
+]

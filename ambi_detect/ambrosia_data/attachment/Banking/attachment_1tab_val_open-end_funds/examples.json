@@ -1,0 +1,9 @@
+[
+    {
+        "question": "Show money market customers and bond fund customers from February.",
+        "sql_query1": "SELECT Customers.Name \r\nFROM InvestmentPortfolios JOIN Customers ON Customers.CustomerID = InvestmentPortfolios.CustomerID\r\nWHERE (InvestmentPortfolios.OpenEndFunds = \"Money Market Fund\" OR InvestmentPortfolios.OpenEndFunds = \"Bond Fund\") AND InvestmentPortfolios.Month = \"February\"",
+        "sql_query2": "SELECT Customers.Name \r\nFROM InvestmentPortfolios JOIN Customers ON Customers.CustomerID = InvestmentPortfolios.CustomerID\r\nWHERE InvestmentPortfolios.OpenEndFunds = \"Money Market Fund\" OR InvestmentPortfolios.OpenEndFunds = \"Bond Fund\" AND InvestmentPortfolios.Month = \"February\"",
+        "interpretation1": "What money market fund customers are from February and what bond fund customers are from the same time?",
+        "interpretation2": "List all money market fund customers and also list bond fund customers from February."
+    }
+]

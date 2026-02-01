@@ -1,0 +1,23 @@
+[
+    {
+        "question": "What are the restriction types and values for each route?",
+        "sql_query1": "SELECT Restrictions.restrictionType, Restrictions.value  from routes_restrictions join routes ON routes_restrictions.routesId = Routes.id join restrictions ON routes_restrictions.restrictionsType = Restrictions.restrictionType GROUP BY Routes_Restrictions.restrictionsType HAVING COUNT(DISTINCT Routes_Restrictions.routesId) = (SELECT COUNT(*) FROM  Routes)",
+        "sql_query2": "select routes.routename , restrictions.restrictiontype , restrictions.value from routes_restrictions join routes ON routes_restrictions.routesId = Routes.id join restrictions ON routes_restrictions.restrictionsType = Restrictions.restrictionType",
+        "interpretation1": "What restriction types and values are common to all routes?",
+        "interpretation2": "For each of the routes, give me a list of restriction types and values."
+    },
+    {
+        "question": "Show me the restriction limits every route has.",
+        "sql_query1": "SELECT Restrictions.value  from routes_restrictions join routes ON routes_restrictions.routesId = Routes.id join restrictions ON routes_restrictions.restrictionsType = Restrictions.restrictionType GROUP BY Routes_Restrictions.restrictionsType HAVING COUNT(DISTINCT Routes_Restrictions.routesId) = (SELECT COUNT(*) FROM  Routes)",
+        "sql_query2": "select routes.routename , restrictions.value from routes_restrictions join routes ON routes_restrictions.routesId = Routes.id join restrictions ON routes_restrictions.restrictionsType = Restrictions.restrictionType",
+        "interpretation1": "What restriction limits do all routes have in common?",
+        "interpretation2": "For each route, list the restriction limits they have."
+    },
+    {
+        "question": "Show me the restriction types for each route.",
+        "sql_query1": "SELECT Restrictions.restrictionType  from routes_restrictions join routes ON routes_restrictions.routesId = Routes.id join restrictions ON routes_restrictions.restrictionsType = Restrictions.restrictionType GROUP BY Routes_Restrictions.restrictionsType HAVING COUNT(DISTINCT Routes_Restrictions.routesId) = (SELECT COUNT(*) FROM  Routes)",
+        "sql_query2": "select routes.routename , restrictions.restrictiontype from routes_restrictions join routes ON routes_restrictions.routesId = Routes.id join restrictions ON routes_restrictions.restrictionsType = Restrictions.restrictionType",
+        "interpretation1": "Give me the restriction type that is in common for all routes.",
+        "interpretation2": "Show me the restriction types corresponding to each route respectively."
+    }
+]

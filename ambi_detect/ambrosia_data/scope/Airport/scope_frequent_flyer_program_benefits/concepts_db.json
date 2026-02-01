@@ -1,0 +1,31 @@
+{
+    "template": "Each Frequent Flyer Program has many different Benefits. Among them, Elite Status is common to many Frequent Flyer Program.",
+    "entities": {
+        "tab_name": "Frequent_Flyer_Program",
+        "col_name": null,
+        "value": null,
+        "scope_id": null,
+        "db_type": "table"
+    },
+    "components": {
+        "tab_name": "Benefits",
+        "col_name": null,
+        "value": null,
+        "scope_id": null,
+        "db_type": "table"
+    },
+    "specific_component": {
+        "tab_name": "Benefits",
+        "col_name": "Description",
+        "value": "Elite Status",
+        "scope_id": 0,
+        "db_type": "value"
+    },
+    "entities_components": {
+        "tab_name": "Frequent_Flyer_Program_Benefits",
+        "col_name": null,
+        "value": null,
+        "scope_id": null,
+        "db_type": "table"
+    }
+}

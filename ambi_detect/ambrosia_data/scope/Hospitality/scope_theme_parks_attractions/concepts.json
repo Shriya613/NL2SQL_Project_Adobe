@@ -1,0 +1,6 @@
+{
+    "template": "Each Theme Parks has many different Attractions. Among them, Roller Coaster is common to many Theme Parks.",
+    "specific_component": "Roller Coaster",
+    "components": "Attractions",
+    "entities": "Theme Parks"
+}

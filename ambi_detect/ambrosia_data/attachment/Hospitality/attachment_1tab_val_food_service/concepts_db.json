@@ -1,0 +1,33 @@
+{
+    "domain": "Restaurants",
+    "template": "Restaurant and Caf\u00e9 are subclasses of Food Service. All Restaurants and Caf\u00e9s have property \"Cuisine\". There might be a Restaurant and a Caf\u00e9 that both have \"Cuisine\" equal to \"Italian\".",
+    "type": "1tab_val",
+    "general_class": {
+        "tab_name": "Restaurants",
+        "col_name": "Food_Service",
+        "value": null,
+        "scope_id": null,
+        "db_type": "column"
+    },
+    "class1": {
+        "tab_name": "Restaurants",
+        "col_name": "Food_Service",
+        "value": "Restaurant",
+        "scope_id": null,
+        "db_type": "value"
+    },
+    "class2": {
+        "tab_name": "Restaurants",
+        "col_name": "Food_Service",
+        "value": "Caf\u00e9",
+        "scope_id": null,
+        "db_type": "value"
+    },
+    "common_property": {
+        "tab_name": "Restaurants",
+        "col_name": "Cuisine",
+        "value": "Italian",
+        "scope_id": null,
+        "db_type": "value"
+    }
+}

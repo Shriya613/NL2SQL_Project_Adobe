@@ -1,0 +1,33 @@
+{
+    "domain": "Play",
+    "template": "Comedy and Tragedy are subclasses of Theatrical Form. All Comedies and Tragedies have property \"Author\". There might be a Comedy and a Tragedy that both have \"Author\" equal to \"William Shakespeare\".",
+    "type": "1tab_val",
+    "general_class": {
+        "tab_name": "Play",
+        "col_name": "Theatrical_Form",
+        "value": null,
+        "scope_id": null,
+        "db_type": "column"
+    },
+    "class1": {
+        "tab_name": "Play",
+        "col_name": "Theatrical_Form",
+        "value": "Comedy",
+        "scope_id": null,
+        "db_type": "value"
+    },
+    "class2": {
+        "tab_name": "Play",
+        "col_name": "Theatrical_Form",
+        "value": "Tragedy",
+        "scope_id": null,
+        "db_type": "value"
+    },
+    "common_property": {
+        "tab_name": "Play",
+        "col_name": "Author",
+        "value": "William Shakespeare",
+        "scope_id": null,
+        "db_type": "value"
+    }
+}

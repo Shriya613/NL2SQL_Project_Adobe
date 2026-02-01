@@ -1,0 +1,9 @@
+[
+    {
+        "question": "Show me the characters that every screenplay has.",
+        "sql_query1": "SELECT Characters.roleType  from Screenplays_Characters join Characters on Screenplays_Characters.characterID = Characters.characterID join Screenplays on Screenplays_Characters.screenplayID = Screenplays.screenplayID   GROUP BY Screenplays_Characters.characterID HAVING COUNT(DISTINCT Screenplays_Characters.screenplayID) = (SELECT COUNT(*) FROM  Screenplays)",
+        "sql_query2": "select screenplays.title , characters.roletype from Screenplays_Characters join Characters on Screenplays_Characters.characterID = Characters.characterID join Screenplays on Screenplays_Characters.screenplayID = Screenplays.screenplayID",
+        "interpretation1": "What characters do all screenplays have in common?",
+        "interpretation2": "For each screenplay, list the characters it has."
+    }
+]

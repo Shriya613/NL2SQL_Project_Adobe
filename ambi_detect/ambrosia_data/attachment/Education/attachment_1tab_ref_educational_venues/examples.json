@@ -1,0 +1,9 @@
+[
+    {
+        "question": "Show museums and planetariums with a ticket price of 20.",
+        "sql_query1": "SELECT Educational_Venues.Name \r\nFROM Educational_Venues JOIN Venue_Tickets ON Educational_Venues.VenueID = Venue_Tickets.VenueID JOIN Tickets ON Venue_Tickets.TicketID = Tickets.TicketID\r\nWHERE Educational_Venues.Type = \"Museum\" AND Tickets.Price = 20.0\nUNION\nSELECT Educational_Venues.Name \r\nFROM Educational_Venues JOIN Venue_Tickets ON Educational_Venues.VenueID = Venue_Tickets.VenueID JOIN Tickets ON Venue_Tickets.TicketID = Tickets.TicketID\r\nWHERE Educational_Venues.Type = \"Planetarium\" AND Tickets.Price = 20.0",
+        "sql_query2": "SELECT Educational_Venues.Name \r\nFROM Educational_Venues WHERE Educational_Venues.Type = \"Museum\"\nUNION\nSELECT Educational_Venues.Name \r\nFROM Educational_Venues JOIN Venue_Tickets ON Educational_Venues.VenueID = Venue_Tickets.VenueID JOIN Tickets ON Venue_Tickets.TicketID = Tickets.TicketID\r\nWHERE Educational_Venues.Type = \"Planetarium\" AND Tickets.Price = 20.0",
+        "interpretation1": "What museums have a ticket price of 20 and what planetariums have the same ticket price?",
+        "interpretation2": "List all museums and also list planetariums with a ticket price of 20."
+    }
+]

@@ -1,0 +1,31 @@
+{
+    "template": "Each Business Reporters has many different Industries. Among them, Technology is common to many Business Reporters.",
+    "entities": {
+        "tab_name": "Business_Reporters",
+        "col_name": null,
+        "value": null,
+        "scope_id": null,
+        "db_type": "table"
+    },
+    "components": {
+        "tab_name": "Industries",
+        "col_name": null,
+        "value": null,
+        "scope_id": null,
+        "db_type": "table"
+    },
+    "specific_component": {
+        "tab_name": "Industries",
+        "col_name": "name",
+        "value": "Technology",
+        "scope_id": 0,
+        "db_type": "value"
+    },
+    "entities_components": {
+        "tab_name": "Business_Reporters_Industries",
+        "col_name": null,
+        "value": null,
+        "scope_id": null,
+        "db_type": "table"
+    }
+}

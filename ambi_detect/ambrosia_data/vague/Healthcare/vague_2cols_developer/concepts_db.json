@@ -1,0 +1,25 @@
+{
+    "template": "Question: Who developed this medical device? Subject of Inquiry: Medical Device\nFocus: Developer Possible answer types: 1. Scientist 2. Company",
+    "general_category1": {
+        "tab_name": "DeviceDevelopment",
+        "col_name": "scientistId",
+        "value": null,
+        "scope_id": null,
+        "db_type": "column"
+    },
+    "general_category2": {
+        "tab_name": "DeviceDevelopment",
+        "col_name": "companyId",
+        "value": null,
+        "scope_id": null,
+        "db_type": "column"
+    },
+    "subject": {
+        "tab_name": "DeviceDevelopment",
+        "col_name": "medicalDeviceId",
+        "value": null,
+        "scope_id": null,
+        "db_type": "column"
+    },
+    "type": "2cols"
+}

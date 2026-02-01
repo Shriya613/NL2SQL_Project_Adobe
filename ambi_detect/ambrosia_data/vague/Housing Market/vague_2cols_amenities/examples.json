@@ -1,0 +1,22 @@
+[
+    {
+        "question": "Provide a list of condo addresses and the amenities available in each condo building.",
+        "sql_query1": "SELECT c.address, f.facilities\r\nFROM CondoBuildings c\r\nJOIN FacilitiesAndServices f ON c.id = f.condos_id",
+        "sql_query2": "SELECT c.address, f.services\r\nFROM CondoBuildings c\r\nJOIN FacilitiesAndServices f ON c.id = f.condos_id",
+        "sql_query3": "SELECT c.address, f.facilities, services\r\nFROM CondoBuildings c\r\nJOIN FacilitiesAndServices f ON c.id = f.condos_id",
+        "interpretation1": "List each condo address and its available facilities.",
+        "interpretation2": "List each condo address and its available services.",
+        "interpretation3": "List each condo address and its available facilities and services.",
+        "sql_query_general": "SELECT c.address, f.Amenities\r\nFROM CondoBuildings c\r\nJOIN FacilitiesAndServices f ON c.id = f.condos_id"
+    },
+    {
+        "question": "In which city does the most senior person live and with what amenities?",
+        "sql_query1": "SELECT c.city, f.facilities\r\nFROM CondoBuildings c\r\nJOIN FacilitiesAndServices f ON c.id = f.condos_id\r\nJOIN Residents r ON r.building_id  = c.id\r\nORDER BY r. age DESC LIMIT 1",
+        "sql_query2": "SELECT c.city, f.services\r\nFROM CondoBuildings c\r\nJOIN FacilitiesAndServices f ON c.id = f.condos_id\r\nJOIN Residents r ON r.building_id  = c.id\r\nORDER BY r. age DESC LIMIT 1",
+        "sql_query3": "SELECT c.city, f.facilities, services\r\nFROM CondoBuildings c\r\nJOIN FacilitiesAndServices f ON c.id = f.condos_id\r\nJOIN Residents r ON r.building_id  = c.id\r\nORDER BY r. age DESC LIMIT 1",
+        "interpretation1": "In which city does the most senior person live and with what facilities?",
+        "interpretation2": "In which city does the most senior person live and with what services?",
+        "interpretation3": "In which city does the most senior person live and with what facilities and services?",
+        "sql_query_general": "SELECT c.city, f.Amenities\r\nFROM CondoBuildings c\r\nJOIN FacilitiesAndServices f ON c.id = f.condos_id\r\nJOIN Residents r ON r.building_id  = c.id\r\nORDER BY r. age DESC LIMIT 1"
+    }
+]

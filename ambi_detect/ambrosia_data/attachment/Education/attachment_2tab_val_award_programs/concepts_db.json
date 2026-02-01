@@ -1,0 +1,27 @@
+{
+    "domain": "Students",
+    "template": "Diploma and Certificate are subclasses of Award Programs. All Diplomas and Certificates have the property \"Completion Requirements\". There might be a Diploma and a Certificate that both have \"Completion Requirements\" equal to \"Passing Exam\".",
+    "type": "2tab_val",
+    "general_class": "Award Programs",
+    "class1": {
+        "tab_name": "Diplomas",
+        "col_name": null,
+        "value": null,
+        "scope_id": null,
+        "db_type": "table"
+    },
+    "class2": {
+        "tab_name": "Certificates",
+        "col_name": null,
+        "value": null,
+        "scope_id": null,
+        "db_type": "table"
+    },
+    "common_property": {
+        "tab_name": "Diplomas",
+        "col_name": "CompletionRequirements",
+        "value": "Passing Exam",
+        "scope_id": null,
+        "db_type": "value"
+    }
+}

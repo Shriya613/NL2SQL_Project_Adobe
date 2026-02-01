@@ -1,0 +1,9 @@
+[
+    {
+        "question": "Show me the equipment each photojournalist uses.",
+        "sql_query1": "SELECT Equipment.type  from Photojournalist_Equipment join Equipment on Photojournalist_Equipment.equipment_id = Equipment.equipment_id join Photojournalists on Photojournalist_Equipment.photojournalist_id = Photojournalists.id   GROUP BY Photojournalist_Equipment.equipment_id HAVING COUNT(DISTINCT Photojournalist_Equipment.photojournalist_id) = (SELECT COUNT(*) FROM  Photojournalists)",
+        "sql_query2": "select photojournalists.name , equipment.type from Photojournalist_Equipment join Equipment on Photojournalist_Equipment.equipment_id = Equipment.equipment_id join Photojournalists on Photojournalist_Equipment.photojournalist_id = Photojournalists.id",
+        "interpretation1": "What equipment is common for all photojournalists?",
+        "interpretation2": "For every photojournalist, list the equipment they use."
+    }
+]

@@ -1,0 +1,31 @@
+{
+    "template": "Each Health Apps has many different Functions. Among them, Activity Tracking is common to many Health Apps.",
+    "entities": {
+        "tab_name": "Health_Apps",
+        "col_name": null,
+        "value": null,
+        "scope_id": null,
+        "db_type": "table"
+    },
+    "components": {
+        "tab_name": "Functions",
+        "col_name": null,
+        "value": null,
+        "scope_id": null,
+        "db_type": "table"
+    },
+    "specific_component": {
+        "tab_name": "Functions",
+        "col_name": "value",
+        "value": "Activity_Tracking",
+        "scope_id": 0,
+        "db_type": "value"
+    },
+    "entities_components": {
+        "tab_name": "Health_Apps_Functions",
+        "col_name": null,
+        "value": null,
+        "scope_id": null,
+        "db_type": "table"
+    }
+}

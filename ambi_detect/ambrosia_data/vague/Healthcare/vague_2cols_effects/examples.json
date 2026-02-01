@@ -1,0 +1,22 @@
+[
+    {
+        "question": "List all drugs, their effects and manufacturers that are analgesic.",
+        "sql_query1": "SELECT Name, Manufacturer, Side_Effects FROM Medications WHERE Classification = 'Analgesic'",
+        "sql_query2": "SELECT Name, Manufacturer, Effectiveness FROM Medications WHERE Classification = 'Analgesic'",
+        "sql_query3": "SELECT Name, Manufacturer, Side_Effects, Effectiveness FROM Medications WHERE Classification = 'Analgesic'",
+        "interpretation1": "List all analgesic drugs, their side effects and manufacturers.",
+        "interpretation2": "List all analgesic drugs, their effectiveness and manufacturers.",
+        "interpretation3": "List all analgesic drugs, their effectiveness, side effects and manufacturers.",
+        "sql_query_general": "SELECT Name, Manufacturer, Effects FROM Medications WHERE Classification = 'Analgesic'"
+    },
+    {
+        "question": "Show all the drugs and their effects that are manufactured by 'Bayer'",
+        "sql_query1": "SELECT Name, Side_Effects FROM Medications WHERE Manufacturer = 'Bayer'",
+        "sql_query2": "SELECT Name, Effectiveness FROM Medications WHERE Manufacturer = 'Bayer'",
+        "sql_query3": "SELECT Name, Side_Effects, Effectiveness FROM Medications WHERE Manufacturer = 'Bayer'",
+        "interpretation1": "Show all the drugs manufactured by 'Bayer' and their side effects.",
+        "interpretation2": "Show all the drugs manufactured by 'Bayer' and their effectiveness.",
+        "interpretation3": "Show all the drugs manufactured by 'Bayer' along with their side effects and effectiveness.",
+        "sql_query_general": "SELECT Name, Effects FROM Medications WHERE Manufacturer = 'Bayer'"
+    }
+]

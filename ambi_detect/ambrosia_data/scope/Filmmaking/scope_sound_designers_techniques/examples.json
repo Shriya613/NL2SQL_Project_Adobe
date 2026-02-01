@@ -1,0 +1,9 @@
+[
+    {
+        "question": "Show me the techniques each sound designer uses.",
+        "sql_query1": "SELECT Techniques.MethodName  from Sound_Designer_Technique join Techniques on Sound_Designer_Technique.TechniqueID = Techniques.ID join Sound_Designers on Sound_Designer_Technique.SoundDesignerID = Sound_Designers.ID   GROUP BY Sound_Designer_Technique.TechniqueID HAVING COUNT(DISTINCT Sound_Designer_Technique.SoundDesignerID) = (SELECT COUNT(*) FROM  Sound_Designers)",
+        "sql_query2": "select sound_designers.name , techniques.methodname from Sound_Designer_Technique join Techniques on Sound_Designer_Technique.TechniqueID = Techniques.ID join Sound_Designers on Sound_Designer_Technique.SoundDesignerID = Sound_Designers.ID",
+        "interpretation1": "What techniques are common to all sound designers?",
+        "interpretation2": "For every sound designer, list the techniques they use."
+    }
+]

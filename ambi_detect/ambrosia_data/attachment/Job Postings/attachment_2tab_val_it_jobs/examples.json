@@ -1,0 +1,9 @@
+[
+    {
+        "question": "Display network admins and IT consultants whose salary is $70,000.",
+        "sql_query1": "SELECT Network_Admin.Position as Position\r\nFROM Network_Admin\r\nWHERE Network_Admin.Salary = \"$70,000\"\r\nUNION\r\nSELECT IT_Consultant.Type as Position\r\nFROM IT_Consultant\r\nWHERE IT_Consultant.Salary = \"$70,000\"",
+        "sql_query2": "SELECT Network_Admin.Position as Position\r\nFROM Network_Admin\r\nUNION\r\nSELECT IT_Consultant.Type as Position\r\nFROM IT_Consultant\r\nWHERE IT_Consultant.Salary = \"$70,000\"",
+        "interpretation1": "What network admins earn $70,000 and what IT consultants have the same salary?",
+        "interpretation2": "Provide a list of all network admins and also provide a list of IT consultants with a salary of $70,000."
+    }
+]

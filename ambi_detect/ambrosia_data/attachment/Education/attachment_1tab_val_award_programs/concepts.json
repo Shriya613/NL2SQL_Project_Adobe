@@ -1,0 +1,8 @@
+{
+    "template": "Diploma and Certificate are subclasses of Award Programs. All Diplomas and Certificates have the property \"Completion Requirements\". There might be a Diploma and a Certificate that both have \"Completion Requirements\" equal to \"Passing Exam\".",
+    "general_class": "Award Programs",
+    "class1": "Diploma",
+    "class2": "Certificate",
+    "common_property": "Completion Requirements",
+    "common_value": "Passing Exam"
+}

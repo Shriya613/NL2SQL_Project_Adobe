@@ -1,0 +1,6 @@
+{
+    "template": "Each Financial Analysts has many different Metrics. Among them, Earnings Per Share is common to many Financial Analysts.",
+    "specific_component": "Earnings Per Share",
+    "components": "Metrics",
+    "entities": "Financial Analysts"
+}

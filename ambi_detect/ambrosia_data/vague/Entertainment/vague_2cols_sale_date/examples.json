@@ -1,0 +1,12 @@
+[
+    {
+        "question": "What are the ticket prices and sale dates for the Lady Gaga concert?",
+        "sql_query1": "SELECT On_Sale_Date, Price FROM Tickets JOIN Events On Tickets.EventID = Events.EventID JOIN Performances on Performances.EventID = Events.EventID JOIN Artists On Performances.ArtistID = Artists.ArtistID WHERE artistname = 'Lady Gaga';",
+        "sql_query2": "SELECT Pre_sale_Date, Price FROM Tickets JOIN Events On Tickets.EventID = Events.EventID JOIN Performances on Performances.EventID = Events.EventID JOIN Artists On Performances.ArtistID = Artists.ArtistID WHERE artistname = 'Lady Gaga';",
+        "sql_query3": "SELECT On_Sale_Date, Pre_sale_Date, Price FROM Tickets JOIN Events On Tickets.EventID = Events.EventID JOIN Performances on Performances.EventID = Events.EventID JOIN Artists On Performances.ArtistID = Artists.ArtistID WHERE artistname = 'Lady Gaga';",
+        "interpretation1": "For the Lady Gaga concert, list the ticket prices and on sale dates.",
+        "interpretation2": "For the Lady Gaga concert, list the ticket prices and pre sale dates.",
+        "interpretation3": "For the Lady Gaga concert, list the ticket prices, on sale dates and pre sale dates.",
+        "sql_query_general": "SELECT Sale_Date, Price FROM Tickets JOIN Events On Tickets.EventID = Events.EventID JOIN Performances on Performances.EventID = Events.EventID JOIN Artists On Performances.ArtistID = Artists.ArtistID WHERE artistname = 'Lady Gaga';"
+    }
+]

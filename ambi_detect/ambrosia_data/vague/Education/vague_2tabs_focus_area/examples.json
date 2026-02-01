@@ -1,0 +1,22 @@
+[
+    {
+        "question": "What is the focus of Quantum Mechanics Experiment?",
+        "sql_query1": "SELECT \r\n   f.name\r\nFROM \r\n    Project p\r\n    INNER JOIN Topic f \r\nON p.topicId = f.id \r\nAND p.title = 'Quantum Mechanics Experiment';",
+        "sql_query2": "SELECT \r\n   f.name\r\nFROM \r\n    Project p\r\n    INNER JOIN Field_Of_Study f \r\nON p.FieldOfStudyId = f.id \r\nAND p.title = 'Quantum Mechanics Experiment';",
+        "sql_query3": "SELECT \r\n   f.name, fs.name\r\nFROM \r\n    Project p\r\n    INNER JOIN Topic f \r\nON p.topicId = f.id \r\n INNER JOIN Field_Of_Study fs \r\nON p.FieldOfStudyId = fs.id \r\nAND p.title = 'Quantum Mechanics Experiment';",
+        "interpretation1": "What is the topic of the Quantum Mechanics Experiment?",
+        "interpretation2": "What is the field of study of the Quantum Mechanics Experiment?",
+        "interpretation3": "What is the topic and field of study of the Quantum Mechanics Experiment?",
+        "sql_query_general": "SELECT \r\n   f.name AS Focus_Area\r\nFROM \r\n    Project p\r\n    INNER JOIN Focus_Area f \r\nON p.topicId = f.id \r\nAND p.title = 'Quantum Mechanics Experiment';"
+    },
+    {
+        "question": "What is the focus of projects that score more than 90 points?",
+        "sql_query1": "SELECT \r\n    f.name\r\nFROM \r\n    Enrollment e\r\n    INNER JOIN Project p ON e.projectId = p.id\r\n    INNER JOIN Topic f \r\nON p.topicId = f.id \r\nAND e.grade > 90;",
+        "sql_query2": "SELECT \r\n    f.name \r\nFROM \r\n    Enrollment e\r\n    INNER JOIN Project p ON e.projectId = p.id\r\n    INNER JOIN Field_Of_Study f \r\nON p.FieldOfStudyId = f.id \r\nAND e.grade > 90;",
+        "sql_query3": "SELECT \r\n    f.name, fs.name\r\nFROM \r\n    Enrollment e\r\n    INNER JOIN Project p ON e.projectId = p.id\r\n    INNER JOIN Topic f \r\nON p.topicId = f.id \r\n INNER JOIN Field_Of_Study fs \r\nON p.FieldOfStudyId = fs.id \r\nAND e.grade > 90;",
+        "interpretation1": "Which topic scored more than 90 points?",
+        "interpretation2": "Which field of study is the focus of project scoring more than 90 points?",
+        "interpretation3": "Which topic and field of study is the focus of project scoring more than 90 points?",
+        "sql_query_general": "SELECT \r\n    f.name AS Focus_Area\r\nFROM \r\n    Enrollment e\r\n    INNER JOIN Project p ON e.projectId = p.id\r\n    INNER JOIN Focus_Area f \r\nON p.topicId = f.id \r\nAND e.grade > 90;"
+    }
+]

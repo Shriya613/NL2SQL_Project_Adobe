@@ -1,0 +1,8 @@
+{
+    "template": "Magician and Mime are subclasses of Street Performer. All Magicians and Mimes have property \"Street Location\". There might be a Magician and a Mime that both have \"Street Location\" equal to \"Times Square, New York\".",
+    "general_class": "Street Performer",
+    "class1": "Magician",
+    "class2": "Mime",
+    "common_property": "Street Location",
+    "common_value": "Times Square, New York"
+}

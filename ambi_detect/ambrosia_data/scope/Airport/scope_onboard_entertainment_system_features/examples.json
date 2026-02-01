@@ -1,0 +1,9 @@
+[
+    {
+        "question": "What features are there for every onboard entertainment system?",
+        "sql_query1": "SELECT Features.feature_name  from Onboard_Entertainment_System_Features join Features on Onboard_Entertainment_System_Features.features_feature_id = Features.feature_id join Onboard_Entertainment_System on Onboard_Entertainment_System_Features.onboard_entertainment_system_id = Onboard_Entertainment_System.id   GROUP BY Onboard_Entertainment_System_Features.features_feature_id HAVING COUNT(DISTINCT Onboard_Entertainment_System_Features.onboard_entertainment_system_id) = (SELECT COUNT(*) FROM  Onboard_Entertainment_System)",
+        "sql_query2": "select onboard_entertainment_system.airline , features.feature_name from Onboard_Entertainment_System_Features join Features on Onboard_Entertainment_System_Features.features_feature_id = Features.feature_id join Onboard_Entertainment_System on Onboard_Entertainment_System_Features.onboard_entertainment_system_id = Onboard_Entertainment_System.id",
+        "interpretation1": "What features are there in common for every onboard entertainment system?",
+        "interpretation2": "For every onboard entertainment system list all of the features."
+    }
+]

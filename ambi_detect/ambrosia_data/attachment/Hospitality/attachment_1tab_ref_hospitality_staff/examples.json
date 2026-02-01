@@ -1,0 +1,9 @@
+[
+    {
+        "question": "Show Spanish-speaking servers and chefs.",
+        "sql_query1": "SELECT Staff.name \r\nFROM Staff JOIN Languages ON Staff.LanguageID = Languages.ID\r\nWHERE (Staff.Position = \"Chef\" OR Staff.Position = \"Server\") AND Languages.Language = \"Spanish\"",
+        "sql_query2": "SELECT Staff.name \r\nFROM Staff JOIN Languages ON Staff.LanguageID = Languages.ID\r\nWHERE Staff.Position = \"Chef\" OR Staff.Position = \"Server\" AND Languages.Language = \"Spanish\"",
+        "interpretation1": "What chefs speak Spanish and what servers also speak it?",
+        "interpretation2": "Provide a list of all chefs and also provide a list of all Spanish-speaking servers."
+    }
+]

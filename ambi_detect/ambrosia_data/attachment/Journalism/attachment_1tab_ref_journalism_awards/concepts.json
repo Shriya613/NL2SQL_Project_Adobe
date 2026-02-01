@@ -1,0 +1,8 @@
+{
+    "template": "Pulitzer Prize and George Polk Award are subclasses of Journalism Awards. All Pulitzer prizes and George polk awards have property \"Year\". There might be a Pulitzer Prize and a George Polk Award that both have \"Year\" equal to \"2010\".",
+    "general_class": "Journalism Awards",
+    "class1": "Pulitzer Prize",
+    "class2": "George Polk Award",
+    "common_property": "Year",
+    "common_value": "2010"
+}

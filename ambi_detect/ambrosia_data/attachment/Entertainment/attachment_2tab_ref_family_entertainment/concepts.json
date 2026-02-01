@@ -1,0 +1,8 @@
+{
+    "template": "Amusement Park and Water Park are subclasses of Family Entertainment. All Amusement parks and Water parks have property \"Location\". There might be a Amusement Park and a Water Park that both have \"Location\" equal to \"Orlando, Florida\".",
+    "general_class": "Family Entertainment",
+    "class1": "Amusement Park",
+    "class2": "Water Park",
+    "common_property": "Location",
+    "common_value": "Orlando, Florida"
+}

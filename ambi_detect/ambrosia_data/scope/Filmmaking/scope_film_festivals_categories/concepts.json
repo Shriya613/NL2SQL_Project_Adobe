@@ -1,0 +1,6 @@
+{
+    "template": "Each Film Festivals has many different Categories. Among them, Short Film is common to many Film Festivals.",
+    "specific_component": "Short Film",
+    "components": "Categories",
+    "entities": "Film Festivals"
+}

@@ -1,0 +1,6 @@
+{
+    "template": "Each Awards has many different Categories. Among them, Best Actor is common to many Awards.",
+    "specific_component": "Best Actor",
+    "components": "Categories",
+    "entities": "Awards"
+}

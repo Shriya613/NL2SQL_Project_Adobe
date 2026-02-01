@@ -1,0 +1,9 @@
+[
+    {
+        "question": "What jobs are available for sales managers and marketing specialists who have hybrid working arrangements?",
+        "sql_query1": "SELECT Job_Posting.title \r\nFROM Business_Profession JOIN Job_Posting ON Business_Profession.id = Job_Posting.business_profession_id JOIN Working_Arrangement ON Job_Posting.working_arrangement_id = Working_Arrangement.id\r\nWHERE (Business_Profession.profession = \"Sales Manager\" OR Business_Profession.profession = \"Marketing Specialist\") AND Working_Arrangement.arrangement = \"Hybrid\"",
+        "sql_query2": "SELECT Job_Posting.title \r\nFROM Business_Profession JOIN Job_Posting ON Business_Profession.id = Job_Posting.business_profession_id JOIN Working_Arrangement ON Job_Posting.working_arrangement_id = Working_Arrangement.id\r\nWHERE Business_Profession.profession = \"Sales Manager\" OR Business_Profession.profession = \"Marketing Specialist\" AND Working_Arrangement.arrangement = \"Hybrid\"",
+        "interpretation1": "Show the job postings that offer hybrid work for both the sales manager and marketing specialist positions.",
+        "interpretation2": "Show all the sales manager job posts and also show the marketing specialist job posts that allow hybrid working."
+    }
+]

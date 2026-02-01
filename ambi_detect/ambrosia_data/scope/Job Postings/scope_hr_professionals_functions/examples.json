@@ -1,0 +1,9 @@
+[
+    {
+        "question": "What functions are there performed by all the HR professionals?",
+        "sql_query1": "SELECT Functions.description  from Hr_Professionals_Functions join Functions on Hr_Professionals_Functions.functionId = Functions.functionId join Hr_Professionals on Hr_Professionals_Functions.hrProfessionalId = Hr_Professionals.id   GROUP BY Hr_Professionals_Functions.functionId HAVING COUNT(DISTINCT Hr_Professionals_Functions.hrProfessionalId) = (SELECT COUNT(*) FROM  Hr_Professionals)",
+        "sql_query2": "select hr_professionals.name , functions.description from Hr_Professionals_Functions join Functions on Hr_Professionals_Functions.functionId = Functions.functionId join Hr_Professionals on Hr_Professionals_Functions.hrProfessionalId = Hr_Professionals.id",
+        "interpretation1": "Which functions are common to every HR professional?",
+        "interpretation2": "For every HR professional, list every function they perform."
+    }
+]

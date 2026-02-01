@@ -1,0 +1,25 @@
+{
+    "template": "Question: Why was this drug discontinued? Subject of Inquiry: Drug\nFocus: Effects Possible answer types: 1. Side Effects 2. Effectiveness",
+    "general_category1": {
+        "tab_name": "Medications",
+        "col_name": "Side_Effects",
+        "value": null,
+        "scope_id": null,
+        "db_type": "column"
+    },
+    "general_category2": {
+        "tab_name": "Medications",
+        "col_name": "Effectiveness",
+        "value": null,
+        "scope_id": null,
+        "db_type": "column"
+    },
+    "subject": {
+        "tab_name": "Medications",
+        "col_name": "DrugID",
+        "value": null,
+        "scope_id": null,
+        "db_type": "column"
+    },
+    "type": "2cols"
+}

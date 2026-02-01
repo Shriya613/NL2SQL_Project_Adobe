@@ -1,0 +1,33 @@
+{
+    "domain": "Clients",
+    "template": "Credit Card and Debit Card are subclasses of  Bank Cards. All Credit cards and Debit cards have property \"Card Limit\". There might be a Credit Card and a Debit Card that both have \"Card Limit\" equal to \"10000\".",
+    "type": "1tab_ref_like",
+    "general_class": {
+        "tab_name": "_Bank_Cards",
+        "col_name": "_bank_card_type",
+        "value": null,
+        "scope_id": null,
+        "db_type": "column"
+    },
+    "class1": {
+        "tab_name": "_Bank_Cards",
+        "col_name": "_bank_card_type",
+        "value": "Credit Card",
+        "scope_id": null,
+        "db_type": "value"
+    },
+    "class2": {
+        "tab_name": "_Bank_Cards",
+        "col_name": "_bank_card_type",
+        "value": "Debit Card",
+        "scope_id": null,
+        "db_type": "value"
+    },
+    "common_property": {
+        "tab_name": "Limits",
+        "col_name": "card_limit",
+        "value": 5000.0,
+        "scope_id": null,
+        "db_type": "value"
+    }
+}

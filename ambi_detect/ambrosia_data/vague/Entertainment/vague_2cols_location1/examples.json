@@ -1,0 +1,12 @@
+[
+    {
+        "question": "Where is Coachella?",
+        "sql_query1": "SELECT Country FROM Festivals WHERE FestivalName = 'Coachella Music and Arts Festival';",
+        "sql_query2": "SELECT City FROM Festivals WHERE FestivalName = 'Coachella Music and Arts Festival';",
+        "sql_query3": "SELECT Country, City FROM Festivals WHERE FestivalName = 'Coachella Music and Arts Festival';",
+        "interpretation1": "In which country would you find Coachella located?",
+        "interpretation2": "In which city would you find Coachella located?",
+        "interpretation3": "In which country and city would you find Coachella located?",
+        "sql_query_general": "SELECT Location FROM Festivals WHERE FestivalName = 'Coachella Music and Arts Festival';"
+    }
+]

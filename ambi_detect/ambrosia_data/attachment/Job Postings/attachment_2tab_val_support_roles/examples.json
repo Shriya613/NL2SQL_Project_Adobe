@@ -1,0 +1,9 @@
+[
+    {
+        "question": "Display proactive call center agents and customer service representatives.",
+        "sql_query1": "SELECT Customer_Service_Representatives.FullName\r\nFROM Customer_Service_Representatives\r\nWHERE Customer_Service_Representatives.skills = \"Proactivity\"\r\nUNION\r\nSELECT Call_Center_Agents.FullName\r\nFROM Call_Center_Agents\r\nWHERE Call_Center_Agents.skills = \"Proactivity\"",
+        "sql_query2": "SELECT Customer_Service_Representatives.FullName\r\nFROM Customer_Service_Representatives\r\nUNION\r\nSELECT Call_Center_Agents.FullName\r\nFROM Call_Center_Agents\r\nWHERE Call_Center_Agents.skills = \"Proactivity\"",
+        "interpretation1": "Which customer service representatives and call center agents are proactive?",
+        "interpretation2": "List all customer service representatives and also display proactive call center agents."
+    }
+]

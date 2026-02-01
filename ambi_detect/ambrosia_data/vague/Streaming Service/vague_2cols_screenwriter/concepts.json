@@ -1,0 +1,7 @@
+{
+    "template": "Question: Who wrote the screenplay for this film? Subject of Inquiry: Film\nFocus: Screenwriter Possible answer types: 1. Novelist 2. Playwright",
+    "subject": "Film",
+    "focus": "Screenwriter",
+    "general_category1": "Novelist",
+    "general_category2": "Playwright"
+}

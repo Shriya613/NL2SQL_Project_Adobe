@@ -1,0 +1,9 @@
+[
+    {
+        "question": "What is the fee value for every debit card?",
+        "sql_query1": "SELECT Fees.FeeValue  from Debit_Card_Fees join Fees on Debit_Card_Fees.FeeType = Fees.FeeType join Debit_Cards on Debit_Card_Fees.CardID = Debit_Cards.CardID   GROUP BY Debit_Card_Fees.FeeType HAVING COUNT(DISTINCT Debit_Card_Fees.CardID) = (SELECT COUNT(*) FROM  Debit_Cards)",
+        "sql_query2": "select debit_cards.customername , fees.feevalue from Debit_Card_Fees join Fees on Debit_Card_Fees.FeeType = Fees.FeeType join Debit_Cards on Debit_Card_Fees.CardID = Debit_Cards.CardID",
+        "interpretation1": "Present to me the fee value that is most popular for all debit cards.",
+        "interpretation2": "For each debit card, give me the related fee value."
+    }
+]

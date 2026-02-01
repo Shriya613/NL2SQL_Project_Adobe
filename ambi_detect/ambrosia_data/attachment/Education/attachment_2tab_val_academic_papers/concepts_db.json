@@ -1,0 +1,27 @@
+{
+    "domain": "Research_Papers",
+    "template": "Research Paper and Review Article are subclasses of Academic Papers. All Research Papers and Review Articles have property \"Citation Style\". There might be a Research Paper and a Review Article that both have \"Citation Style\" equal to \"APA\".",
+    "type": "2tab_val",
+    "general_class": "Academic Papers",
+    "class1": {
+        "tab_name": "Research_Papers",
+        "col_name": null,
+        "value": null,
+        "scope_id": null,
+        "db_type": "table"
+    },
+    "class2": {
+        "tab_name": "Review_Articles",
+        "col_name": null,
+        "value": null,
+        "scope_id": null,
+        "db_type": "table"
+    },
+    "common_property": {
+        "tab_name": "Research_Papers",
+        "col_name": "citation_style",
+        "value": "APA",
+        "scope_id": null,
+        "db_type": "value"
+    }
+}

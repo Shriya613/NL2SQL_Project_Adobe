@@ -1,0 +1,6 @@
+{
+    "template": "Each Apartment Buildings has many different Units. Among them, Studio Apartment is common to many Apartment Buildings.",
+    "specific_component": "Studio Apartment",
+    "components": "Units",
+    "entities": "Apartment Buildings"
+}

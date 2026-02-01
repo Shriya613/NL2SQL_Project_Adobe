@@ -1,0 +1,8 @@
+{
+    "template": "Sommelier and Bartender are subclasses of Beverage Professional. All Sommeliers and Bartenders have property \"First Name\". There might be a Sommelier and a Bartender that both have \"First Name\" equal to \"Alex\".",
+    "general_class": "Beverage Professional",
+    "class1": "Sommelier",
+    "class2": "Bartender",
+    "common_property": "First Name",
+    "common_value": "Alex"
+}

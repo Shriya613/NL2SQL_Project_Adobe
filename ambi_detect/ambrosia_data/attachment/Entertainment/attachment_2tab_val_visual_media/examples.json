@@ -1,0 +1,9 @@
+[
+    {
+        "question": "Show all the movies and TV shows in the fantasy genre.",
+        "sql_query1": "SELECT Movie.title as title\r\nFROM Movie\r\nWHERE Movie.genre = \"Fantasy\"\r\nUNION\r\nSELECT Tv_Show.showName as title\r\nFROM Tv_Show\r\nWHERE Tv_Show.genre = \"Fantasy\"",
+        "sql_query2": "SELECT Movie.title as title\r\nFROM Movie\r\nUNION\r\nSELECT Tv_Show.showName as title\r\nFROM Tv_Show\r\nWHERE Tv_Show.genre = \"Fantasy\"",
+        "interpretation1": "Show all the fantasy movies and fantasy TV shows.",
+        "interpretation2": "Display all the movies of any genre and just the fantasy TV shows."
+    }
+]

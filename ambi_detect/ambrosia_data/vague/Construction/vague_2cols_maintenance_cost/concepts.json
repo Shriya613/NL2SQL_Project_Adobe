@@ -1,0 +1,7 @@
+{
+    "template": "Question: How much does it cost to maintain this infrastructure annually? Subject of Inquiry: Infrastructure\nFocus: Maintenance Cost Possible answer types: 1. Monetary Value 2. Percentage of Budget",
+    "subject": "Infrastructure",
+    "focus": "Maintenance Cost",
+    "general_category1": "Monetary Value",
+    "general_category2": "Percentage of Budget"
+}

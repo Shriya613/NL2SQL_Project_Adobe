@@ -1,0 +1,37 @@
+[
+    {
+        "question": "Show me the elections that every political reporter covers.",
+        "sql_query1": "SELECT Elections.election_type  from Political_Reporters_Elections join Elections on Political_Reporters_Elections.election_id = Elections.id join Political_Reporters on Political_Reporters_Elections.reporter_id = Political_Reporters.id   GROUP BY Political_Reporters_Elections.election_id HAVING COUNT(DISTINCT Political_Reporters_Elections.reporter_id) = (SELECT COUNT(*) FROM  Political_Reporters)",
+        "sql_query2": "select political_reporters.name , elections.election_type from Political_Reporters_Elections join Elections on Political_Reporters_Elections.election_id = Elections.id join Political_Reporters on Political_Reporters_Elections.reporter_id = Political_Reporters.id",
+        "interpretation1": "What elections do all political reporters cover together?",
+        "interpretation2": "For each political reporter, list the elections they cover."
+    },
+    {
+        "question": "What types of elections, including start and end dates, are there for every reporter?",
+        "sql_query1": "SELECT Elections.election_type, Elections.start_date, Elections.end_date  from Political_Reporters_Elections join Elections on Political_Reporters_Elections.election_id = Elections.id join Political_Reporters on Political_Reporters_Elections.reporter_id = Political_Reporters.id   GROUP BY Political_Reporters_Elections.election_id HAVING COUNT(DISTINCT Political_Reporters_Elections.reporter_id) = (SELECT COUNT(*) FROM  Political_Reporters)",
+        "sql_query2": "select political_reporters.name , elections.election_type , elections.start_date , elections.end_date from Political_Reporters_Elections join Elections on Political_Reporters_Elections.election_id = Elections.id join Political_Reporters on Political_Reporters_Elections.reporter_id = Political_Reporters.id",
+        "interpretation1": "Give me the election types, including start and end dates, that are common to all reporters",
+        "interpretation2": "For each reporter, give me a list of all the election types, plus the start and end dates."
+    },
+    {
+        "question": "What type of election and start date are associated with each political reporter?",
+        "sql_query1": "SELECT Elections.election_type, Elections.start_date  from Political_Reporters_Elections join Elections on Political_Reporters_Elections.election_id = Elections.id join Political_Reporters on Political_Reporters_Elections.reporter_id = Political_Reporters.id   GROUP BY Political_Reporters_Elections.election_id HAVING COUNT(DISTINCT Political_Reporters_Elections.reporter_id) = (SELECT COUNT(*) FROM  Political_Reporters)",
+        "sql_query2": "select political_reporters.name , elections.election_type , elections.start_date from Political_Reporters_Elections join Elections on Political_Reporters_Elections.election_id = Elections.id join Political_Reporters on Political_Reporters_Elections.reporter_id = Political_Reporters.id",
+        "interpretation1": "What election type and start date of elections are common for all political reporters?",
+        "interpretation2": "For each political reporter, provide the corresponding election type and start date of the elections."
+    },
+    {
+        "question": "Tell me the end dates of elections every reporter covers.",
+        "sql_query1": "SELECT Elections.end_date  from Political_Reporters_Elections join Elections on Political_Reporters_Elections.election_id = Elections.id join Political_Reporters on Political_Reporters_Elections.reporter_id = Political_Reporters.id   GROUP BY Political_Reporters_Elections.election_id HAVING COUNT(DISTINCT Political_Reporters_Elections.reporter_id) = (SELECT COUNT(*) FROM  Political_Reporters)",
+        "sql_query2": "select political_reporters.name , elections.end_date from Political_Reporters_Elections join Elections on Political_Reporters_Elections.election_id = Elections.id join Political_Reporters on Political_Reporters_Elections.reporter_id = Political_Reporters.id",
+        "interpretation1": "What are the end dates of elections all reporters equally cover?",
+        "interpretation2": "For each reporter, list the end date of elections they cover."
+    },
+    {
+        "question": "List all the election start dates for every political reporter.",
+        "sql_query1": "SELECT Elections.start_date  from Political_Reporters_Elections join Elections on Political_Reporters_Elections.election_id = Elections.id join Political_Reporters on Political_Reporters_Elections.reporter_id = Political_Reporters.id   GROUP BY Political_Reporters_Elections.election_id HAVING COUNT(DISTINCT Political_Reporters_Elections.reporter_id) = (SELECT COUNT(*) FROM  Political_Reporters)",
+        "sql_query2": "select political_reporters.name , elections.start_date from Political_Reporters_Elections join Elections on Political_Reporters_Elections.election_id = Elections.id join Political_Reporters on Political_Reporters_Elections.reporter_id = Political_Reporters.id",
+        "interpretation1": "List all the election start dates in common for every political reporter.",
+        "interpretation2": "For every political reporter list all of the election start dates."
+    }
+]

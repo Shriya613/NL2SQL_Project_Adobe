@@ -1,0 +1,9 @@
+[
+    {
+        "question": "Show hotels and sleep pod that cost 150.",
+        "sql_query1": "SELECT Hotel.Airport_Hotel as name\r\nFROM Hotel\r\nWHERE Hotel.Price = \"150\"\r\nUNION\r\nSELECT SleepPod.Sleep_Pod as name\r\nFROM SleepPod\r\nWHERE SleepPod.Price = \"150\"",
+        "sql_query2": "SELECT Hotel.Airport_Hotel as name\r\nFROM Hotel\r\nUNION\r\nSELECT SleepPod.Sleep_Pod as name\r\nFROM SleepPod\r\nWHERE SleepPod.Price = \"150\"",
+        "interpretation1": "Which hotels cost 150 and which sleep pods cost the same price?",
+        "interpretation2": "Provide a list of all hotels and also provide a list of all sleep pods that cost 150."
+    }
+]

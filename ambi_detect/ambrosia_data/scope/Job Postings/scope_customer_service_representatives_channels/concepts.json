@@ -1,0 +1,6 @@
+{
+    "template": "Each Customer Service Representatives has many different Channels. Among them, Email is common to many Customer Service Representatives.",
+    "specific_component": "Email",
+    "components": "Channels",
+    "entities": "Customer Service Representatives"
+}

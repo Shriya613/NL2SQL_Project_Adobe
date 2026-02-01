@@ -1,0 +1,22 @@
+[
+    {
+        "question": "Where is the marketing office located?",
+        "sql_query1": "SELECT Office_Address FROM Office JOIN Job_Posting On Job_Posting.Office_ID = Office.ID JOIN Department ON Job_Posting.Departments_ID =Department.ID WHERE Department.Name=\"Marketing\"",
+        "sql_query2": "SELECT City FROM Office JOIN Job_Posting On Job_Posting.Office_ID = Office.ID JOIN Department ON Job_Posting.Departments_ID =Department.ID WHERE Department.Name=\"Marketing\"",
+        "sql_query3": "SELECT Office_Address, City FROM Office JOIN Job_Posting On Job_Posting.Office_ID = Office.ID JOIN Department ON Job_Posting.Departments_ID =Department.ID WHERE Department.Name=\"Marketing\"",
+        "interpretation1": "What is the office address of the marketing office?",
+        "interpretation2": "In what city is the marketing office located?",
+        "interpretation3": "Where is the address and city of the marketing office?",
+        "sql_query_general": "SELECT Location FROM Office JOIN Job_Posting On Job_Posting.Office_ID = Office.ID JOIN Department ON Job_Posting.Departments_ID =Department.ID WHERE Department.Name=\"Marketing\""
+    },
+    {
+        "question": "Tell me the job with the lowest salary and where it is located.",
+        "sql_query1": "SELECT Title, Office_Address FROM Office JOIN Job_Posting On Job_Posting.Office_ID = Office.ID ORDER BY Salary ASC LIMIT 1",
+        "sql_query2": "SELECT Title, City FROM Office JOIN Job_Posting On Job_Posting.Office_ID = Office.ID ORDER BY Salary ASC LIMIT 1",
+        "sql_query3": "SELECT Title, Office_Address, City FROM Office JOIN Job_Posting On Job_Posting.Office_ID = Office.ID ORDER BY Salary ASC LIMIT 1",
+        "interpretation1": "Tell me the office address of the job with the lowest salary and that job.",
+        "interpretation2": "Tell me the city of the job with the lowest salary and that job.",
+        "interpretation3": "Tell me the office address and city of the job with the lowest salary and that job.",
+        "sql_query_general": "SELECT Title, Location FROM Office JOIN Job_Posting On Job_Posting.Office_ID = Office.ID ORDER BY Salary ASC LIMIT 1"
+    }
+]

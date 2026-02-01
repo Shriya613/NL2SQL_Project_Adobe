@@ -1,0 +1,9 @@
+[
+    {
+        "question": "What are the building roles for every construction company?",
+        "sql_query1": "SELECT Building_Roles.role_value  from Construction_Companies_Building_Roles join Building_Roles on Construction_Companies_Building_Roles.building_role_id = Building_Roles.role_id join Construction_Companies on Construction_Companies_Building_Roles.construction_company_id = Construction_Companies.id   GROUP BY Construction_Companies_Building_Roles.building_role_id HAVING COUNT(DISTINCT Construction_Companies_Building_Roles.construction_company_id) = (SELECT COUNT(*) FROM  Construction_Companies)",
+        "sql_query2": "select construction_companies.company_name , building_roles.role_value from Construction_Companies_Building_Roles join Building_Roles on Construction_Companies_Building_Roles.building_role_id = Building_Roles.role_id join Construction_Companies on Construction_Companies_Building_Roles.construction_company_id = Construction_Companies.id",
+        "interpretation1": "What building roles do all construction companies have in common?",
+        "interpretation2": "Show me the construction companies and the corresponding building roles."
+    }
+]

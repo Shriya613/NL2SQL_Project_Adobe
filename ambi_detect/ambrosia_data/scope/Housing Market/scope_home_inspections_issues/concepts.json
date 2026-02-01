@@ -1,0 +1,6 @@
+{
+    "template": "Each Home Inspection has many different Issues. Among them, Roof Damage is common to many Home Inspection.",
+    "specific_component": "Roof Damage",
+    "components": "Issues",
+    "entities": "Home Inspection"
+}

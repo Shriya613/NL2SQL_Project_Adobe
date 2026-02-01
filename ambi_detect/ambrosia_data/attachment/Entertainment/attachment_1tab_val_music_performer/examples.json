@@ -1,0 +1,9 @@
+[
+    {
+        "question": "Display jazz musicians and rock guitarists who have been in the industry for 10 years.",
+        "sql_query1": "SELECT MusicPerformer.Name \r\nFROM MusicPerformer\r\nWHERE (MusicPerformer.MusicPerformerType = \"Jazz Musician\" OR MusicPerformer.MusicPerformerType = \"Rock Guitarist\") AND MusicPerformer.YearsInIndustry = 10",
+        "sql_query2": "SELECT MusicPerformer.Name \r\nFROM MusicPerformer\r\nWHERE MusicPerformer.MusicPerformerType = \"Jazz Musician\" OR MusicPerformer.MusicPerformerType = \"Rock Guitarist\" AND MusicPerformer.YearsInIndustry = 10",
+        "interpretation1": "Which jazz musicians have been in the industry for 10 years and which rock guitarists have been in the industry for the same duration?",
+        "interpretation2": "Provide a list of all jazz musicians and also provide a list of rock guitarists who have been in the industry for 10 years."
+    }
+]

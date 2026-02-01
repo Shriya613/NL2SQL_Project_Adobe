@@ -1,0 +1,9 @@
+[
+    {
+        "question": "List names of blues songs and folk songs that are sung by Bessie Smith.",
+        "sql_query1": "SELECT Blues_Song.song_name\r\nFROM Singer JOIN Blues_Song ON Singer.id = Blues_Song.Singer_id\r\nWHERE Singer.Name = \"Bessie Smith\"\r\nUNION\r\nSELECT Folk_Song.song_name\r\nFROM Singer JOIN Folk_Song ON Singer.id = Folk_Song.Singer_id\r\nWHERE Singer.Name = \"Bessie Smith\"",
+        "sql_query2": "SELECT Blues_Song.song_name\r\nFROM Singer JOIN Blues_Song ON Singer.id = Blues_Song.Singer_id\r\nUNION\r\nSELECT Folk_Song.song_name\r\nFROM Singer JOIN Folk_Song ON Singer.id = Folk_Song.Singer_id\r\nWHERE Singer.Name = \"Bessie Smith\"",
+        "interpretation1": "What are names of blues songs sung by Bessie Smith and folk songs sung by her too?",
+        "interpretation2": "List names of blues songs and also list names of folk songs sung by Bessie Smith."
+    }
+]

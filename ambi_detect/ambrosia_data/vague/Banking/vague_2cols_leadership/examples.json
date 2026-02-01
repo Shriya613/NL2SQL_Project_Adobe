@@ -1,0 +1,22 @@
+[
+    {
+        "question": "What are the full names of customers with the highest total balance in their accounts and who runs the branches they use?",
+        "sql_query1": "SELECT \r\n    c.fullName,\r\n    SUM(a.balance) AS Total_Balance,\r\n    b.Ceo\r\nFROM Customers c\r\nJOIN Accounts a\r\n    ON c.customerId = a.customerId\r\nJOIN Banks b\r\n    ON c.bankID = b.id\r\nGROUP BY c.customerId\r\nORDER BY Total_Balance DESC",
+        "sql_query2": "SELECT \r\n    c.fullName,\r\n    SUM(a.balance) AS Total_Balance,\r\n    b.Management_Team\r\nFROM Customers c\r\nJOIN Accounts a\r\n    ON c.customerId = a.customerId\r\nJOIN Banks b\r\n    ON c.bankID = b.id\r\nGROUP BY c.customerId\r\nORDER BY Total_Balance DESC",
+        "sql_query3": "SELECT \r\n    c.fullName,\r\n    SUM(a.balance) AS Total_Balance,\r\n    b.Ceo, Management_Team\r\nFROM Customers c\r\nJOIN Accounts a\r\n    ON c.customerId = a.customerId\r\nJOIN Banks b\r\n    ON c.bankID = b.id\r\nGROUP BY c.customerId\r\nORDER BY Total_Balance DESC",
+        "interpretation1": "What are the full names of customers with the highest total balance in their accounts and who is the the CEO of the branches they use?",
+        "interpretation2": "What are the full names of customers with the highest total balance in their accounts and who are the management of the branches they use?",
+        "interpretation3": "What are the full names of customers with the highest total balance in their accounts and who is the CEO of the branches they use and the management there?",
+        "sql_query_general": "SELECT \r\n    c.fullName,\r\n    SUM(a.balance) AS Total_Balance,\r\n    b.Leadership\r\nFROM Customers c\r\nJOIN Accounts a\r\n    ON c.customerId = a.customerId\r\nJOIN Banks b\r\n    ON c.bankID = b.id\r\nGROUP BY c.customerId\r\nORDER BY Total_Balance DESC"
+    },
+    {
+        "question": "Who runs the bank that receives the greatest monthly payments each month?",
+        "sql_query1": "SELECT \r\n    b.Ceo AS Bank_Leader\r\nFROM Banks b\r\nJOIN Customers c\r\n    ON b.id = c.bankID\r\nJOIN Loans l\r\n    ON c.customerId = l.customerId\r\nGROUP BY \r\n    b.Ceo\r\nORDER BY \r\n    monthlyPayment DESC\r\nLIMIT 1;",
+        "sql_query2": "SELECT \r\n    b.Management_Team AS Bank_Leader\r\nFROM Banks b\r\nJOIN Customers c\r\n    ON b.id = c.bankID\r\nJOIN Loans l\r\n    ON c.customerId = l.customerId\r\nGROUP BY \r\n    b.Management_Team\r\nORDER BY \r\n    monthlyPayment DESC\r\nLIMIT 1;",
+        "sql_query3": "SELECT \r\n    b.Ceo, Management_Team AS Bank_Leader\r\nFROM Banks b\r\nJOIN Customers c\r\n    ON b.id = c.bankID\r\nJOIN Loans l\r\n    ON c.customerId = l.customerId\r\nGROUP BY \r\n    b.Ceo, Management_Team\r\nORDER BY \r\n    monthlyPayment DESC\r\nLIMIT 1;",
+        "interpretation1": "Find the CEO of the bank that receives the greatest monthly payment.",
+        "interpretation2": "List the management team members of the bank that receives the greatest monthly payment.",
+        "interpretation3": "List the CEO and management team members of the bank that receives the greatest monthly payment.",
+        "sql_query_general": "SELECT \r\n    b.Leadership AS Bank_Leader\r\nFROM Banks b\r\nJOIN Customers c\r\n    ON b.id = c.bankID\r\nJOIN Loans l\r\n    ON c.customerId = l.customerId\r\nGROUP BY \r\n    b.Leadership\r\nORDER BY \r\n    monthlyPayment DESC\r\nLIMIT 1;"
+    }
+]

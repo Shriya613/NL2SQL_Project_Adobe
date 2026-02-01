@@ -1,0 +1,9 @@
+[
+    {
+        "question": "What facilities do we have for every condominium?",
+        "sql_query1": "SELECT Facilities.facilityName  from Condominium_Complexes_Facilities join Facilities on Condominium_Complexes_Facilities.facilityId = Facilities.id join Condominium_Complexes on Condominium_Complexes_Facilities.condoId = Condominium_Complexes.id   GROUP BY Condominium_Complexes_Facilities.facilityId HAVING COUNT(DISTINCT Condominium_Complexes_Facilities.condoId) = (SELECT COUNT(*) FROM  Condominium_Complexes)",
+        "sql_query2": "select condominium_complexes.name , facilities.facilityname from Condominium_Complexes_Facilities join Facilities on Condominium_Complexes_Facilities.facilityId = Facilities.id join Condominium_Complexes on Condominium_Complexes_Facilities.condoId = Condominium_Complexes.id",
+        "interpretation1": "What facility is common for all condominium complexes?",
+        "interpretation2": "For every condominium, what facilities does it have?"
+    }
+]

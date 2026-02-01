@@ -1,0 +1,9 @@
+[
+    {
+        "question": "Show me all the Oscar-winning DreamWorks cartoons and Pixar cartoons.",
+        "sql_query1": "SELECT MovieDetails.movieTitle \r\nFROM AnimationStudios JOIN MovieDetails ON AnimationStudios.id = MovieDetails.animationStudioId JOIN MovieAwards ON MovieDetails.id = MovieAwards.movieId JOIN Awards ON MovieAwards.awardId = Awards.id\r\nWHERE AnimationStudios.studioName = \"Pixar\" AND Awards.awardName = \"Oscar\"\nUNION\nSELECT MovieDetails.movieTitle \r\nFROM AnimationStudios JOIN MovieDetails ON AnimationStudios.id = MovieDetails.animationStudioId JOIN MovieAwards ON MovieDetails.id = MovieAwards.movieId JOIN Awards ON MovieAwards.awardId = Awards.id\r\nWHERE AnimationStudios.studioName = \"DreamWorks\" AND Awards.awardName = \"Oscar\"",
+        "sql_query2": "SELECT MovieDetails.movieTitle \r\nFROM MovieDetails JOIN AnimationStudios ON MovieDetails.animationStudioId = AnimationStudios.id WHERE AnimationStudios.studioName = \"Pixar\"\nUNION\nSELECT MovieDetails.movieTitle \r\nFROM AnimationStudios JOIN MovieDetails ON AnimationStudios.id = MovieDetails.animationStudioId JOIN MovieAwards ON MovieDetails.id = MovieAwards.movieId JOIN Awards ON MovieAwards.awardId = Awards.id\r\nWHERE AnimationStudios.studioName = \"DreamWorks\" AND Awards.awardName = \"Oscar\"",
+        "interpretation1": "Show all of the Pixar and DreamWorks cartoons that have won an Oscar.",
+        "interpretation2": "Display all of the Pixar cartoons and also show all of the DreamWorks cartoons that have won an Oscar."
+    }
+]

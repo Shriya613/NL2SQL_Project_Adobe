@@ -1,0 +1,6 @@
+{
+    "template": "Each Music Festivals has many different Genres. Among them, Rock Music is common to many Music Festivals.",
+    "specific_component": "Rock Music",
+    "components": "Genres",
+    "entities": "Music Festivals"
+}

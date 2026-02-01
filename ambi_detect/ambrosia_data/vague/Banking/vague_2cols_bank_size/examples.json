@@ -1,0 +1,22 @@
+[
+    {
+        "question": "Display the position of the employee and the size of the bank that is called ABC Bank",
+        "sql_query1": "select employees.position, banks.Number_of_Branches from employees join banks on employees.bankid = banks.bankid where Bank = 'ABC Bank'",
+        "sql_query2": "select employees.position, banks.Countries_served from employees join banks on employees.bankid = banks.bankid where Bank = 'ABC Bank'",
+        "sql_query3": "select employees.position, banks.Number_of_Branches, Countries_served from employees join banks on employees.bankid = banks.bankid where Bank = 'ABC Bank'",
+        "interpretation1": "show the employee positions and number of branches for ABC Bank",
+        "interpretation2": "show the employee positions and countries served for ABC Bank",
+        "interpretation3": "show the employee positions, number of branches and countries served for ABC Bank",
+        "sql_query_general": "select employees.position, banks.bank_size from employees join banks on employees.bankid = banks.bankid where Bank = 'ABC Bank'"
+    },
+    {
+        "question": "Display the bank size where the employee position is a teller",
+        "sql_query1": "Select banks.Number_of_Branches from banks join employees on employees.bankid = banks.bankid where position = 'Teller'",
+        "sql_query2": "Select banks.Countries_served from banks join employees on employees.bankid = banks.bankid where position = 'Teller'",
+        "sql_query3": "Select banks.Number_of_Branches, Countries_served from banks join employees on employees.bankid = banks.bankid where position = 'Teller'",
+        "interpretation1": "What are the number of branches of the bank where the employee position is a teller?",
+        "interpretation2": "What countries are served by the bank where the employee position is a teller?",
+        "interpretation3": "What are the number of branches and countries served by the bank where the employee position is a teller?",
+        "sql_query_general": "Select banks.bank_size from banks join employees on employees.bankid = banks.bankid where position = 'Teller'"
+    }
+]

@@ -1,0 +1,31 @@
+{
+    "template": "Each Scuba Diving Centers has many different Dive Sites. Among them, Coral Reefs is common to many Scuba Diving Centers.",
+    "entities": {
+        "tab_name": "Scuba_Diving_Centers",
+        "col_name": null,
+        "value": null,
+        "scope_id": null,
+        "db_type": "table"
+    },
+    "components": {
+        "tab_name": "Dive_Sites",
+        "col_name": null,
+        "value": null,
+        "scope_id": null,
+        "db_type": "table"
+    },
+    "specific_component": {
+        "tab_name": "Dive_Sites",
+        "col_name": "type",
+        "value": "Coral_Reefs",
+        "scope_id": 0,
+        "db_type": "value"
+    },
+    "entities_components": {
+        "tab_name": "Bookings",
+        "col_name": null,
+        "value": null,
+        "scope_id": null,
+        "db_type": "table"
+    }
+}

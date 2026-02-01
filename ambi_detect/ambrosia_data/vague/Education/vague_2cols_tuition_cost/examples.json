@@ -1,0 +1,12 @@
+[
+    {
+        "question": "What is the cost of tuition for the Computer Science program?",
+        "sql_query1": "SELECT Amount_Per_Semester FROM Programs WHERE Name = 'Computer Science'",
+        "sql_query2": "SELECT Annual_Cost FROM Programs WHERE Name = 'Computer Science'",
+        "sql_query3": "SELECT Amount_Per_Semester, Annual_Cost FROM Programs WHERE Name = 'Computer Science'",
+        "interpretation1": "How much is the computer science programme per semester?",
+        "interpretation2": "What is the annual cost of the computer science programme?",
+        "interpretation3": "What is the semester and annual cost of the computer science programme?",
+        "sql_query_general": "SELECT Tuition_Cost FROM Programs WHERE Name = 'Computer Science'"
+    }
+]

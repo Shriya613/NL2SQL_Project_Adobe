@@ -1,0 +1,22 @@
+[
+    {
+        "question": "What is the background of the photojournalist in the table?",
+        "sql_query1": "SELECT education FROM Journalist WHERE photojournalist = 1",
+        "sql_query2": "SELECT experience FROM Journalist WHERE photojournalist = 1",
+        "sql_query3": "SELECT education, experience FROM Journalist WHERE photojournalist = 1",
+        "interpretation1": "What is the education of the photojournalist?",
+        "interpretation2": "What is the experience of the photojournalist?",
+        "interpretation3": "What is the education and experience of the photojournalist?",
+        "sql_query_general": "SELECT Background FROM Journalist WHERE photojournalist = 1"
+    },
+    {
+        "question": "What is the background of the journalist named Alice?",
+        "sql_query1": "SELECT education FROM Journalist WHERE name LIKE 'Alice%'",
+        "sql_query2": "SELECT experience FROM Journalist WHERE name LIKE 'Alice%'",
+        "sql_query3": "SELECT education, experience FROM Journalist WHERE name LIKE 'Alice%'",
+        "interpretation1": "What is the education of the journalist named Alice?",
+        "interpretation2": "What is the experience of the journalist named Alice?",
+        "interpretation3": "What is the educational and experience background of the journalist named Alice?",
+        "sql_query_general": "SELECT Background FROM Journalist WHERE name LIKE 'Alice%'"
+    }
+]

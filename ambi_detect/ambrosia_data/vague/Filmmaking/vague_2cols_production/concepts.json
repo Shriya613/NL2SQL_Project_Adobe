@@ -1,0 +1,7 @@
+{
+    "template": "Question: Who produced this film? Subject of Inquiry: Movies\nFocus: Production Possible answer types: 1. Studio 2. Producer",
+    "subject": "Movies",
+    "focus": "Production",
+    "general_category1": "Studio",
+    "general_category2": "Producer"
+}

@@ -1,0 +1,9 @@
+[
+    {
+        "question": "What format is used in each broadcast?",
+        "sql_query1": "SELECT Formats.format_name  from Broadcasts_Formats join Formats on Broadcasts_Formats.format_id = Formats.id join Broadcasts on Broadcasts_Formats.broadcast_id = Broadcasts.id   GROUP BY Broadcasts_Formats.format_id HAVING COUNT(DISTINCT Broadcasts_Formats.broadcast_id) = (SELECT COUNT(*) FROM  Broadcasts)",
+        "sql_query2": "select broadcasts.title , formats.format_name from Broadcasts_Formats join Formats on Broadcasts_Formats.format_id = Formats.id join Broadcasts on Broadcasts_Formats.broadcast_id = Broadcasts.id",
+        "interpretation1": "Provide me with the format names common to all broadcasts",
+        "interpretation2": "For all broadcasts, provide the format names associated with that broadcast"
+    }
+]

@@ -1,0 +1,8 @@
+{
+    "template": "Ballroom and Green Room are subclasses of Function Room. All Ballrooms and Green rooms have property \"Seating Capacity\". There might be a Ballroom and a Green Room that both have \"Seating Capacity\" equal to \"200\".",
+    "general_class": "Function Room",
+    "class1": "Ballroom",
+    "class2": "Green Room",
+    "common_property": "Seating Capacity",
+    "common_value": "200"
+}

@@ -1,0 +1,33 @@
+{
+    "domain": "Music_Genre",
+    "template": "Blues Song and Folk Song are subclasses of Music. All Blues songs and Folk songs have property \"Singer\". There might be a Blues Song and a Folk Song that both have \"Singer\" equal to \"John Hurt\".",
+    "type": "1tab_val_like",
+    "general_class": {
+        "tab_name": "Songs",
+        "col_name": "Music",
+        "value": null,
+        "scope_id": null,
+        "db_type": "column"
+    },
+    "class1": {
+        "tab_name": "Songs",
+        "col_name": "Music",
+        "value": "Blues Music",
+        "scope_id": null,
+        "db_type": "value"
+    },
+    "class2": {
+        "tab_name": "Songs",
+        "col_name": "Music",
+        "value": "Folk Music",
+        "scope_id": null,
+        "db_type": "value"
+    },
+    "common_property": {
+        "tab_name": "Songs",
+        "col_name": "Singer_id",
+        "value": 1,
+        "scope_id": null,
+        "db_type": "value"
+    }
+}

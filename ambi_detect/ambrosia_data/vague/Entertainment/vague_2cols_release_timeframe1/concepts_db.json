@@ -1,0 +1,25 @@
+{
+    "template": "Question: When was this album released? Subject of Inquiry: Album\nFocus: Release Timeframe Possible answer types: 1. Year 2. Month",
+    "general_category1": {
+        "tab_name": "Albums",
+        "col_name": "Year",
+        "value": null,
+        "scope_id": null,
+        "db_type": "column"
+    },
+    "general_category2": {
+        "tab_name": "Albums",
+        "col_name": "Month",
+        "value": null,
+        "scope_id": null,
+        "db_type": "column"
+    },
+    "subject": {
+        "tab_name": "Albums",
+        "col_name": "AlbumName",
+        "value": null,
+        "scope_id": null,
+        "db_type": "column"
+    },
+    "type": "2cols"
+}

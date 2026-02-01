@@ -1,0 +1,9 @@
+[
+    {
+        "question": "Give me the focus area of each agricultural research institute.",
+        "sql_query1": "SELECT Focus_Areas.area_name  from Agricultural_Research_Institutes_Focus_Areas join Focus_Areas on Agricultural_Research_Institutes_Focus_Areas.focus_area_id = Focus_Areas.id join Agricultural_Research_Institutes on Agricultural_Research_Institutes_Focus_Areas.institute_id = Agricultural_Research_Institutes.id   GROUP BY Agricultural_Research_Institutes_Focus_Areas.focus_area_id HAVING COUNT(DISTINCT Agricultural_Research_Institutes_Focus_Areas.institute_id) = (SELECT COUNT(*) FROM  Agricultural_Research_Institutes)",
+        "sql_query2": "select agricultural_research_institutes.name , focus_areas.area_name from Agricultural_Research_Institutes_Focus_Areas join Focus_Areas on Agricultural_Research_Institutes_Focus_Areas.focus_area_id = Focus_Areas.id join Agricultural_Research_Institutes on Agricultural_Research_Institutes_Focus_Areas.institute_id = Agricultural_Research_Institutes.id",
+        "interpretation1": "Give me the focus area in common for all agricultural research institutes.",
+        "interpretation2": "For each agricultural research institute, what is the corresponding focus area?"
+    }
+]

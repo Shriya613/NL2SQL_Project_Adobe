@@ -1,0 +1,9 @@
+[
+    {
+        "question": "List the amounts of all payments and remittance transfers from LMN Bank.",
+        "sql_query1": "SELECT Transactions.Amount \r\nFROM Transactions JOIN Accounts ON Transactions.ToAccountId = Accounts.AccountID JOIN Customers ON Accounts.CustomerID = Customers.CustomerID JOIN Banks ON Customers.BankID = Banks.BankID JOIN Transaction_Types ON Transaction_Types.Typeid = Transactions.Typeid\r\nWHERE (Transaction_Types.TypeName = 'Payment' OR Transaction_Types.TypeName = 'Remittance Transfer') AND Banks.Name = 'LMN Bank'",
+        "sql_query2": "SELECT Transactions.Amount \r\nFROM Transactions JOIN Accounts ON Transactions.ToAccountId = Accounts.AccountID JOIN Customers ON Accounts.CustomerID = Customers.CustomerID JOIN Banks ON Customers.BankID = Banks.BankID JOIN Transaction_Types ON Transaction_Types.Typeid = Transactions.Typeid\r\nWHERE Transaction_Types.TypeName = 'Payment' OR Transaction_Types.TypeName = 'Remittance Transfer' AND Banks.Name = 'LMN Bank'",
+        "interpretation1": "Show LMN Bank transaction amounts that are either payments or remittance transfers.",
+        "interpretation2": "Display the payment transaction amounts for all banks and the remittance transfer amounts just for LMN Bank."
+    }
+]

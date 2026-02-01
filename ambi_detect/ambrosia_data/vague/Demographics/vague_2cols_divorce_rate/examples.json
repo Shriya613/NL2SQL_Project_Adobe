@@ -1,0 +1,22 @@
+[
+    {
+        "question": "What is the divorce rate in villages with less than 300 people?",
+        "sql_query1": "SELECT Divorced_Percentage FROM VillageDemographics WHERE TotalPopulation < 300",
+        "sql_query2": "SELECT Divorced_Count FROM VillageDemographics WHERE TotalPopulation < 300",
+        "sql_query3": "SELECT Divorced_Percentage, Divorced_Count FROM VillageDemographics WHERE TotalPopulation < 300",
+        "interpretation1": "What is the percentage of divorces in villages with less than 300 people?",
+        "interpretation2": "What is the total number of divorces in villages with less than 300 people?",
+        "interpretation3": "What is the percentage and total of divorces in villages with less than 300 people?",
+        "sql_query_general": "SELECT Divorce_Rate FROM VillageDemographics WHERE TotalPopulation < 300"
+    },
+    {
+        "question": "What is the divorce rate in Village 1?",
+        "sql_query1": "SELECT Divorced_Percentage  FROM VillageDemographics  WHERE Village = 'Village1'",
+        "sql_query2": "SELECT Divorced_Count  FROM VillageDemographics  WHERE Village = 'Village1'",
+        "sql_query3": "SELECT Divorced_Percentage, Divorced_Count  FROM VillageDemographics  WHERE Village = 'Village1'",
+        "interpretation1": "Give the divorce percentage of Village 1.",
+        "interpretation2": "Give the divorce count of Village 1.",
+        "interpretation3": "Give the divorce percentage and count of Village 1.",
+        "sql_query_general": "SELECT Divorce_Rate  FROM VillageDemographics  WHERE Village = 'Village1'"
+    }
+]

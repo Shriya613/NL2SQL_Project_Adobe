@@ -1,0 +1,9 @@
+[
+    {
+        "question": "Display chalets and cabins that cost $200 per night.",
+        "sql_query1": "SELECT Chalets.chaletName as name\r\nFROM Chalets\r\nWHERE Chalets.pricePerNight = 200.0\r\nUNION\r\nSELECT Cabins.cabinName as name\r\nFROM Cabins\r\nWHERE Cabins.pricePerNight = 200.0",
+        "sql_query2": "SELECT Chalets.chaletName as name\r\nFROM Chalets\r\nUNION\r\nSELECT Cabins.cabinName as name\r\nFROM Cabins\r\nWHERE Cabins.pricePerNight = 200.0",
+        "interpretation1": "Can you show chalets and cabins that cost $200 per night?",
+        "interpretation2": "List all chalets and also display cabins that cost $200 per night."
+    }
+]

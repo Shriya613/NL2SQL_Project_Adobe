@@ -1,0 +1,22 @@
+[
+    {
+        "question": "What is the percentage distribution of annual revenue per occupational category?",
+        "sql_query1": "SELECT \r\n    Primary_Industry,\r\n    SUM(AnnualRevenue) AS RevenuePerOccupationalDistribution,\r\n    (SUM(AnnualRevenue) * 100.0) / SUM(SUM(AnnualRevenue)) OVER () AS PercentageOfTotalAnnualRevenue\r\nFROM \r\n    Industries\r\nGROUP BY \r\n    Primary_Industry;",
+        "sql_query2": "SELECT \r\n    Most_Common_Job,\r\n    SUM(AnnualRevenue) AS RevenuePerOccupationalDistribution,\r\n    (SUM(AnnualRevenue) * 100.0) / SUM(SUM(AnnualRevenue)) OVER () AS PercentageOfTotalAnnualRevenue\r\nFROM \r\n    Industries\r\nGROUP BY \r\n    Most_Common_Job;",
+        "sql_query3": "SELECT \r\n    Primary_Industry, Most_Common_Job,\r\n    SUM(AnnualRevenue) AS RevenuePerOccupationalDistribution,\r\n    (SUM(AnnualRevenue) * 100.0) / SUM(SUM(AnnualRevenue)) OVER () AS PercentageOfTotalAnnualRevenue\r\nFROM \r\n    Industries\r\nGROUP BY \r\n    Primary_Industry, Most_Common_Job;",
+        "interpretation1": "What is the distribution in percentage of the annual revenue per each industry category?",
+        "interpretation2": "What is the distribution of the annual revenue of each job?",
+        "interpretation3": "What is the distribution in percentage of the annual revenue per each industry category and job?",
+        "sql_query_general": "SELECT \r\n    Occupational_Distribution,\r\n    SUM(AnnualRevenue) AS RevenuePerOccupationalDistribution,\r\n    (SUM(AnnualRevenue) * 100.0) / SUM(SUM(AnnualRevenue)) OVER () AS PercentageOfTotalAnnualRevenue\r\nFROM \r\n    Industries\r\nGROUP BY \r\n    Occupational_Distribution;"
+    },
+    {
+        "question": "What is the average annual revenue per employee for each unique combination of industry ID and occupational distribution?",
+        "sql_query1": "SELECT \r\n    IndustryID, \r\n    Primary_Industry,\r\n    SUM(AnnualRevenue) / SUM(NumberOfEmployees) AS AnnualRevenuePerEmployee\r\nFROM \r\n    Industries\r\nGROUP BY \r\n    IndustryID, Primary_Industry;",
+        "sql_query2": "SELECT \r\n    IndustryID, \r\n    Most_Common_Job,\r\n    SUM(AnnualRevenue) / SUM(NumberOfEmployees) AS AnnualRevenuePerEmployee\r\nFROM \r\n    Industries\r\nGROUP BY \r\n    IndustryID, Most_Common_Job;",
+        "sql_query3": "SELECT \r\n    IndustryID, \r\n    Primary_Industry, Most_Common_Job,\r\n    SUM(AnnualRevenue) / SUM(NumberOfEmployees) AS AnnualRevenuePerEmployee\r\nFROM \r\n    Industries\r\nGROUP BY \r\n    IndustryID, Primary_Industry, Most_Common_Job;",
+        "interpretation1": "Show the yearly revenue per employee for unique combinations of industry ID and primary industry.",
+        "interpretation2": "List the annual revenue per employee for all unique groups of industry ID and the most common job role.",
+        "interpretation3": "Show the annual revenue per employee for all groups of industry ID,  primary industry and most common job.",
+        "sql_query_general": "SELECT \r\n    IndustryID, \r\n    Occupational_Distribution,\r\n    SUM(AnnualRevenue) / SUM(NumberOfEmployees) AS AnnualRevenuePerEmployee\r\nFROM \r\n    Industries\r\nGROUP BY \r\n    IndustryID, Occupational_Distribution;"
+    }
+]

@@ -1,0 +1,9 @@
+[
+    {
+        "question": "Show chalets and cabins that are 300.0 per night.",
+        "sql_query1": "SELECT Accomodations.name \r\nFROM Accomodations JOIN Prices ON Accomodations.id = Prices.accommodationId\r\nWHERE Accomodations.type = \"Chalet\" AND Prices.price_per_night = 300.0\nUNION\nSELECT Accomodations.name \r\nFROM Accomodations JOIN Prices ON Accomodations.id = Prices.accommodationId\r\nWHERE Accomodations.type = \"Cabin\" AND Prices.price_per_night = 300.0",
+        "sql_query2": "SELECT Accomodations.name \r\nFROM Accomodations WHERE Accomodations.type = \"Chalet\"\nUNION\nSELECT Accomodations.name \r\nFROM Accomodations JOIN Prices ON Accomodations.id = Prices.accommodationId\r\nWHERE Accomodations.type = \"Cabin\" AND Prices.price_per_night = 300.0",
+        "interpretation1": "Which chalets are 300.0 per night and which cabins are the same price per night?",
+        "interpretation2": "Provide a list of all chalets and also provide a list of cabins that are 300.0 per night."
+    }
+]

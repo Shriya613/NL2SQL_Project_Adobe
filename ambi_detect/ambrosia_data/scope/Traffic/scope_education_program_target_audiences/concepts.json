@@ -1,0 +1,6 @@
+{
+    "template": "Each Education Program has many different Target Audiences. Among them, Teen Driver Education is common to many Education Program.",
+    "specific_component": "Teen Driver Education",
+    "components": "Target Audiences",
+    "entities": "Education Program"
+}

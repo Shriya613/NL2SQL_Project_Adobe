@@ -1,0 +1,8 @@
+{
+    "template": "Press Release and Interview are subclasses of News Sources.",
+    "general_class": "News Sources",
+    "class1": "Press Release",
+    "class2": "Interview",
+    "common_property": "Article",
+    "common_value": "Britain Is Cutting Taxes Again. Why Now?"
+}

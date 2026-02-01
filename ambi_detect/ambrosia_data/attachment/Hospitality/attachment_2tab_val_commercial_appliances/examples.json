@@ -1,0 +1,9 @@
+[
+    {
+        "question": "Show me all espresso machines and blenders in high-end residential apartments.",
+        "sql_query1": "SELECT Espresso_Machine.model\r\nFROM Espresso_Machine JOIN Apartments ON Espresso_Machine.apartment_id = Apartments.id\r\nWHERE Apartments.name = \"High-end Residential\"\r\nUNION\r\nSELECT Blender.model\r\nFROM Blender JOIN Apartments ON Blender.apartment_id = Apartments.id\r\nWHERE Apartments.name = \"High-end Residential\"",
+        "sql_query2": "SELECT Espresso_Machine.model\r\nFROM Espresso_Machine JOIN Apartments ON Espresso_Machine.apartment_id = Apartments.id\r\nUNION\r\nSELECT Blender.model\r\nFROM Blender JOIN Apartments ON Blender.apartment_id = Apartments.id\r\nWHERE Apartments.name = \"High-end Residential\"",
+        "interpretation1": "Which espresso machines are in high-end residential apartments and which blenders are located there?",
+        "interpretation2": "Provide a list of all espresso machines and also provide a list of blenders in high-end residential apartment."
+    }
+]

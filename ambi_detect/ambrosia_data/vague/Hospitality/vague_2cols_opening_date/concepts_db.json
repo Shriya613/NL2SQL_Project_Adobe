@@ -1,0 +1,25 @@
+{
+    "template": "Question: When did this hotel open? Subject of Inquiry: Hotel\nFocus: Opening Date Possible answer types: 1. Opening Year 2. Opening Month",
+    "general_category1": {
+        "tab_name": "Hotels",
+        "col_name": "Opening_Year",
+        "value": null,
+        "scope_id": null,
+        "db_type": "column"
+    },
+    "general_category2": {
+        "tab_name": "Hotels",
+        "col_name": "Opening_Month",
+        "value": null,
+        "scope_id": null,
+        "db_type": "column"
+    },
+    "subject": {
+        "tab_name": "Hotels",
+        "col_name": "HotelID",
+        "value": null,
+        "scope_id": null,
+        "db_type": "column"
+    },
+    "type": "2cols"
+}

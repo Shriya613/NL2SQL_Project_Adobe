@@ -1,0 +1,33 @@
+{
+    "domain": "Flights",
+    "template": "Airport Hotel and Sleep Pod are subclasses of Airport Accommodations. All Airport Hotels and Sleep Pods have the property \"Price\". There might be an Airport Hotel and a Sleep Pod that both have a \"Price\" of \"$150 per night\".",
+    "type": "1tab_val",
+    "general_class": {
+        "tab_name": "Hotels",
+        "col_name": "AccomodationType",
+        "value": null,
+        "scope_id": null,
+        "db_type": "column"
+    },
+    "class1": {
+        "tab_name": "Hotels",
+        "col_name": "AccomodationType",
+        "value": "Hotel",
+        "scope_id": null,
+        "db_type": "value"
+    },
+    "class2": {
+        "tab_name": "Hotels",
+        "col_name": "AccomodationType",
+        "value": "Pod",
+        "scope_id": null,
+        "db_type": "value"
+    },
+    "common_property": {
+        "tab_name": "Hotels",
+        "col_name": "Price",
+        "value": 150,
+        "scope_id": null,
+        "db_type": "value"
+    }
+}

@@ -1,0 +1,25 @@
+{
+    "template": "Question: How is this hike rated? Subject of Inquiry: Hikes\nFocus: Rating Possible answer types: 1. Customer Reviews 2. Difficulty Level",
+    "general_category1": {
+        "tab_name": "reviews",
+        "col_name": "customer_review",
+        "value": null,
+        "scope_id": null,
+        "db_type": "column"
+    },
+    "general_category2": {
+        "tab_name": "reviews",
+        "col_name": "difficulty_level",
+        "value": null,
+        "scope_id": null,
+        "db_type": "column"
+    },
+    "subject": {
+        "tab_name": "reviews",
+        "col_name": "hikes",
+        "value": null,
+        "scope_id": null,
+        "db_type": "column"
+    },
+    "type": "2cols"
+}

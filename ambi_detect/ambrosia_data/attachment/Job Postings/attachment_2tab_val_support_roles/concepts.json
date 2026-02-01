@@ -1,0 +1,8 @@
+{
+    "template": "Customer Service Representative and Call Center Agent are subclasses of Support Roles. All Customer service representatives and Call center agents have property \"Skills\". There might be a Customer Service Representative and a Call Center Agent that both have \"Skills\" equal to \"Proactivity\".",
+    "general_class": "Support Roles",
+    "class1": "Customer Service Representative",
+    "class2": "Call Center Agent",
+    "common_property": "Skills",
+    "common_value": "Proactivity"
+}

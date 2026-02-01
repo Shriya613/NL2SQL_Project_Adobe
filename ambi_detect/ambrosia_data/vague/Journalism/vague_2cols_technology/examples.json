@@ -1,0 +1,22 @@
+[
+    {
+        "question": "What technology does the author with email 'davidwilson@example.com' use?",
+        "sql_query1": "SELECT DISTINCT CMS.Content_Management_System\r\nFROM Authors AS A\r\nJOIN Articles AS AR ON A.authorID = AR.authorID \r\nJOIN ContentManagementSystems AS CMS ON AR.articleID = CMS.cmsId\r\nWHERE A.email = 'davidwilson@example.com';",
+        "sql_query2": "SELECT DISTINCT CMS.Web_Framework\r\nFROM Authors AS A\r\nJOIN Articles AS AR ON A.authorID = AR.authorID \r\nJOIN ContentManagementSystems AS CMS ON AR.articleID = CMS.cmsId\r\nWHERE A.email = 'davidwilson@example.com';",
+        "sql_query3": "SELECT DISTINCT CMS.Content_Management_System, Web_Framework\r\nFROM Authors AS A\r\nJOIN Articles AS AR ON A.authorID = AR.authorID \r\nJOIN ContentManagementSystems AS CMS ON AR.articleID = CMS.cmsId\r\nWHERE A.email = 'davidwilson@example.com';",
+        "interpretation1": "What content managment system does the author with email 'davidwilson@example.com' use?",
+        "interpretation2": "What web framework does the author with email 'davidwilson@example.com' use?",
+        "interpretation3": "What web framework and content managment system does the author with email 'davidwilson@example.com' use?",
+        "sql_query_general": "SELECT DISTINCT CMS.Technology\r\nFROM Authors AS A\r\nJOIN Articles AS AR ON A.authorID = AR.authorID \r\nJOIN ContentManagementSystems AS CMS ON AR.articleID = CMS.cmsId\r\nWHERE A.email = 'davidwilson@example.com';"
+    },
+    {
+        "question": "What technology does Emily Brown use?",
+        "sql_query1": "SELECT CMS.Content_Management_System\r\nFROM ContentManagementSystems AS CMS\r\nJOIN Articles AS AR ON CMS.cmsId = AR.articleID\r\nJOIN Authors AS A ON AR.authorID = A.authorID\r\nWHERE A.name = 'Emily Brown';",
+        "sql_query2": "SELECT CMS.Web_Framework\r\nFROM ContentManagementSystems AS CMS\r\nJOIN Articles AS AR ON CMS.cmsId = AR.articleID\r\nJOIN Authors AS A ON AR.authorID = A.authorID\r\nWHERE A.name = 'Emily Brown';",
+        "sql_query3": "SELECT CMS.Content_Management_System, Web_Framework\r\nFROM ContentManagementSystems AS CMS\r\nJOIN Articles AS AR ON CMS.cmsId = AR.articleID\r\nJOIN Authors AS A ON AR.authorID = A.authorID\r\nWHERE A.name = 'Emily Brown';",
+        "interpretation1": "show me the content management system that emily brown uses to write her articles",
+        "interpretation2": "show me the web framework that emily brown uses to write her articles",
+        "interpretation3": "show me the content management system and web framework that emily brown uses to write her articles",
+        "sql_query_general": "SELECT CMS.Technology\r\nFROM ContentManagementSystems AS CMS\r\nJOIN Articles AS AR ON CMS.cmsId = AR.articleID\r\nJOIN Authors AS A ON AR.authorID = A.authorID\r\nWHERE A.name = 'Emily Brown';"
+    }
+]

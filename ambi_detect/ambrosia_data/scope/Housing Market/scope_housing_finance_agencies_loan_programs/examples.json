@@ -1,0 +1,23 @@
+[
+    {
+        "question": "Show me the descriptions of the loan programs that each finance agency offers.",
+        "sql_query1": "SELECT Loan_Programs.description  from Housing_Finance_Agencies_Loan_Programs join Loan_Programs on Housing_Finance_Agencies_Loan_Programs.loan_program_id = Loan_Programs.program_id join Housing_Finance_Agencies on Housing_Finance_Agencies_Loan_Programs.housing_finance_agency_id = Housing_Finance_Agencies.agency_id   GROUP BY Housing_Finance_Agencies_Loan_Programs.loan_program_id HAVING COUNT(DISTINCT Housing_Finance_Agencies_Loan_Programs.housing_finance_agency_id) = (SELECT COUNT(*) FROM  Housing_Finance_Agencies)",
+        "sql_query2": "select housing_finance_agencies.name , loan_programs.description from Housing_Finance_Agencies_Loan_Programs join Loan_Programs on Housing_Finance_Agencies_Loan_Programs.loan_program_id = Loan_Programs.program_id join Housing_Finance_Agencies on Housing_Finance_Agencies_Loan_Programs.housing_finance_agency_id = Housing_Finance_Agencies.agency_id",
+        "interpretation1": "What are the descriptions of the loan programs that are common to all finance agencies?",
+        "interpretation2": "For every finance agency, describe the loan programs that are offered."
+    },
+    {
+        "question": "Give me the loan program interest rate for each housing finance agency.",
+        "sql_query1": "SELECT Loan_Programs.interest_rate  from Housing_Finance_Agencies_Loan_Programs join Loan_Programs on Housing_Finance_Agencies_Loan_Programs.loan_program_id = Loan_Programs.program_id join Housing_Finance_Agencies on Housing_Finance_Agencies_Loan_Programs.housing_finance_agency_id = Housing_Finance_Agencies.agency_id   GROUP BY Housing_Finance_Agencies_Loan_Programs.loan_program_id HAVING COUNT(DISTINCT Housing_Finance_Agencies_Loan_Programs.housing_finance_agency_id) = (SELECT COUNT(*) FROM  Housing_Finance_Agencies)",
+        "sql_query2": "select housing_finance_agencies.name , loan_programs.interest_rate from Housing_Finance_Agencies_Loan_Programs join Loan_Programs on Housing_Finance_Agencies_Loan_Programs.loan_program_id = Loan_Programs.program_id join Housing_Finance_Agencies on Housing_Finance_Agencies_Loan_Programs.housing_finance_agency_id = Housing_Finance_Agencies.agency_id",
+        "interpretation1": "What loan program interest rate do all housing finance agencies have in common?",
+        "interpretation2": "Give me the loan program interest rate that corresponds to each housing finance agency respectively."
+    },
+    {
+        "question": "Show me the interest rates and descriptions of the loan programs every finance agency offers.",
+        "sql_query1": "SELECT Loan_Programs.description, Loan_Programs.interest_rate  from Housing_Finance_Agencies_Loan_Programs join Loan_Programs on Housing_Finance_Agencies_Loan_Programs.loan_program_id = Loan_Programs.program_id join Housing_Finance_Agencies on Housing_Finance_Agencies_Loan_Programs.housing_finance_agency_id = Housing_Finance_Agencies.agency_id   GROUP BY Housing_Finance_Agencies_Loan_Programs.loan_program_id HAVING COUNT(DISTINCT Housing_Finance_Agencies_Loan_Programs.housing_finance_agency_id) = (SELECT COUNT(*) FROM  Housing_Finance_Agencies)",
+        "sql_query2": "select housing_finance_agencies.name , loan_programs.description , loan_programs.interest_rate from Housing_Finance_Agencies_Loan_Programs join Loan_Programs on Housing_Finance_Agencies_Loan_Programs.loan_program_id = Loan_Programs.program_id join Housing_Finance_Agencies on Housing_Finance_Agencies_Loan_Programs.housing_finance_agency_id = Housing_Finance_Agencies.agency_id",
+        "interpretation1": "What are the interest rates and descriptions of the loan programs that are common to all finance agencies?",
+        "interpretation2": "For each finance agency, list the interest rates and descriptions of the loan programs offered."
+    }
+]

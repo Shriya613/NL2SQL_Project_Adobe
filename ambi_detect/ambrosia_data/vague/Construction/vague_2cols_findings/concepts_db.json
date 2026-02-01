@@ -1,0 +1,25 @@
+{
+    "template": "Question: What archaeological findings have been discovered during the excavation process of this site? Subject of Inquiry: Archaeological Site\nFocus: Findings Possible answer types: 1. Artifacts Uncovered 2. Ancient Remains",
+    "general_category1": {
+        "tab_name": "Artifacts",
+        "col_name": "Artifacts_Uncovered",
+        "value": null,
+        "scope_id": null,
+        "db_type": "column"
+    },
+    "general_category2": {
+        "tab_name": "Artifacts",
+        "col_name": "Ancient_Remains",
+        "value": null,
+        "scope_id": null,
+        "db_type": "column"
+    },
+    "subject": {
+        "tab_name": "Artifacts",
+        "col_name": "Archaeological_Site",
+        "value": null,
+        "scope_id": null,
+        "db_type": "column"
+    },
+    "type": "2cols"
+}

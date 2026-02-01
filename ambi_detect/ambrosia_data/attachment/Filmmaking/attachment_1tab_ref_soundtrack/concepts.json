@@ -1,0 +1,8 @@
+{
+    "template": "Sound Design and Music Score are subclasses of Soundtrack in filmmaking. All Sound Designs and Music Scores have a property \"Creator\". There might be a Sound Design and a Music Score both created by \"John Williams\".",
+    "general_class": "Soundtrack",
+    "class1": "Sound Design",
+    "class2": "Music Score",
+    "common_property": "Creator",
+    "common_value": "John Williams"
+}

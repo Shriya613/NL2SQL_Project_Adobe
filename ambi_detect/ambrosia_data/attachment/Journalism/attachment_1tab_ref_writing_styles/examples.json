@@ -1,0 +1,9 @@
+[
+    {
+        "question": "Show short stories and personal essays written by Evelyn O'Connor.",
+        "sql_query1": "SELECT Articles.Title \r\nFROM WritingStyles JOIN Articles ON WritingStyles.id = Articles.WritingStyleId JOIN Authors ON Articles.AuthorId = Authors.id\r\nWHERE (WritingStyles.StyleName = \"Short Story\" OR WritingStyles.StyleName = \"Personal Essay\") AND Authors.Name = \"Evelyn O'Connor\"",
+        "sql_query2": "SELECT Articles.Title \r\nFROM WritingStyles JOIN Articles ON WritingStyles.id = Articles.WritingStyleId JOIN Authors ON Articles.AuthorId = Authors.id\r\nWHERE WritingStyles.StyleName = \"Short Story\" OR WritingStyles.StyleName = \"Personal Essay\" AND Authors.Name = \"Evelyn O'Connor\"",
+        "interpretation1": "Which short stories are written by Evelyn O'Connor and which personal essays are written by the same author?",
+        "interpretation2": "Provide a list of all short stories and also provide a list of personal essays written by Evelyn O'Connor."
+    }
+]

@@ -1,0 +1,31 @@
+{
+    "template": "Each Art Galleries has many different Exhibitions. Among them, Painting Exhibitions is common to many Art Galleries.",
+    "entities": {
+        "tab_name": "Art_Galleries",
+        "col_name": null,
+        "value": null,
+        "scope_id": null,
+        "db_type": "table"
+    },
+    "components": {
+        "tab_name": "Exhibitions",
+        "col_name": null,
+        "value": null,
+        "scope_id": null,
+        "db_type": "table"
+    },
+    "specific_component": {
+        "tab_name": "Exhibitions",
+        "col_name": "Type",
+        "value": "Painting_Exhibitions",
+        "scope_id": 0,
+        "db_type": "value"
+    },
+    "entities_components": {
+        "tab_name": "Art_Galleries_Exhibitions",
+        "col_name": null,
+        "value": null,
+        "scope_id": null,
+        "db_type": "table"
+    }
+}

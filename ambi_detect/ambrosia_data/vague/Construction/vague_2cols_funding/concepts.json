@@ -1,0 +1,7 @@
+{
+    "template": "Question: Who funded the construction of this public park? Subject of Inquiry: Public Park\nFocus: Funding Possible answer types: 1. Government Agency 2. Private Donors",
+    "subject": "Public Park",
+    "focus": "Funding",
+    "general_category1": "Government Agency",
+    "general_category2": "Private Donors"
+}

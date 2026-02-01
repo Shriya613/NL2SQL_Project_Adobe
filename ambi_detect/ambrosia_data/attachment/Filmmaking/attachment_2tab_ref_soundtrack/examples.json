@@ -1,0 +1,9 @@
+[
+    {
+        "question": "Provide all sound designs and music scores created by Thomas Newman.",
+        "sql_query1": "SELECT SoundDesigns.description\r\nFROM Creators JOIN SoundDesigns ON Creators.id = SoundDesigns.creatorId\r\nWHERE Creators.name = \"Thomas Newman\"\r\nUNION\r\nSELECT MusicScores.description\r\nFROM Creators JOIN MusicScores ON Creators.id = MusicScores.creatorId\r\nWHERE Creators.name = \"Thomas Newman\"",
+        "sql_query2": "SELECT SoundDesigns.description\r\nFROM Creators JOIN SoundDesigns ON Creators.id = SoundDesigns.creatorId\r\nUNION\r\nSELECT MusicScores.description\r\nFROM Creators JOIN MusicScores ON Creators.id = MusicScores.creatorId\r\nWHERE Creators.name = \"Thomas Newman\"",
+        "interpretation1": "Show both sound designs and music scores created by Thomas Newman.",
+        "interpretation2": "Show all sound designs and also the film scores created by Thomas Newman."
+    }
+]

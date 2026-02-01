@@ -1,0 +1,22 @@
+[
+    {
+        "question": "How many people own homes?",
+        "sql_query1": "SELECT Percentage * TotalPopulation / 100 FROM OwnerPercentage",
+        "sql_query2": "SELECT NumberOfHouseholds FROM NumbersOfOwners",
+        "sql_query3": "SELECT O.Percentage * O.TotalPopulation/ 100, N.NumberOfHouseholds  FROM OwnerPercentage AS O LEFT JOIN NumbersOfOwners AS N on O.Year = N.Year",
+        "interpretation1": "How many homeowners are there in numbers?",
+        "interpretation2": "What percentage of people own homes?",
+        "interpretation3": "How many people own homes and what is this as a percentage of the total?",
+        "sql_query_general": "SELECT O.Percentage, O.TotalPopulation FROM Owner_Population AS O LEFT JOIN Homeownership AS H on O.Percentage = H.Percentage"
+    },
+    {
+        "question": "How many people owned homes in 2023?",
+        "sql_query1": "SELECT O.Percentage * O.TotalPopulation  / 100 FROM OwnerPercentage AS O WHERE O.Year = 2023",
+        "sql_query2": "SELECT O.NumberOfHouseholds FROM NumbersOfOwners AS O WHERE O.Year = 2023",
+        "sql_query3": "SELECT O.Percentage * O.TotalPopulation / 100, N.NumberOfHouseholds  FROM OwnerPercentage AS O LEFT JOIN NumbersOfOwners AS N on O.Year = N.Year WHERE O.Year = 2023",
+        "interpretation1": "What was the owner percentage of homes in 2023?",
+        "interpretation2": "What was the number of owners of homes in 2023?",
+        "interpretation3": "What was the owner percentage and number of owners of homes in 2023?",
+        "sql_query_general": "SELECT O.Percentage, O.TotalPopulation FROM Owner_Population AS O WHERE O.Year = 2023"
+    }
+]

@@ -1,0 +1,7 @@
+{
+    "template": "Question: What is the maximum amount I can deposit into my checking account each month? Subject of Inquiry: Checking Account\nFocus: Deposit Limit Possible answer types: 1. Maximum Deposit Amount 2. Monthly Cap",
+    "subject": "Checking Account",
+    "focus": "Deposit Limit",
+    "general_category1": "Maximum Deposit Amount",
+    "general_category2": "Monthly Cap"
+}

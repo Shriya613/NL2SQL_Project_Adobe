@@ -1,0 +1,9 @@
+[
+    {
+        "question": "Give me the departments corresponding to each news agency.",
+        "sql_query1": "SELECT Departments.department_name  from News_Agencies_Departments join Departments on News_Agencies_Departments.department_id = Departments.department_id join News_Agencies on News_Agencies_Departments.agency_id = News_Agencies.id   GROUP BY News_Agencies_Departments.department_id HAVING COUNT(DISTINCT News_Agencies_Departments.agency_id) = (SELECT COUNT(*) FROM  News_Agencies)",
+        "sql_query2": "select news_agencies.name , departments.department_name from News_Agencies_Departments join Departments on News_Agencies_Departments.department_id = Departments.department_id join News_Agencies on News_Agencies_Departments.agency_id = News_Agencies.id",
+        "interpretation1": "Show me the department that is in common for all news agencies.",
+        "interpretation2": "For each news agency, give me the corresponding department."
+    }
+]

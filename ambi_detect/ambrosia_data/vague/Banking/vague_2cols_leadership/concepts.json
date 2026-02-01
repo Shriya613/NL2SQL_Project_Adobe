@@ -1,0 +1,7 @@
+{
+    "template": "Question: Who leads this bank? Subject of Inquiry: Banks\nFocus: Leadership Possible answer types: 1. CEO 2. Management Team",
+    "subject": "Banks",
+    "focus": "Leadership",
+    "general_category1": "CEO",
+    "general_category2": "Management Team"
+}

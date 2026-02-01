@@ -1,0 +1,6 @@
+{
+    "template": "Each Streaming Services has many different Accessibility Features. Among them, Closed Captioning is common to many Streaming Services.",
+    "specific_component": "Closed Captioning",
+    "components": "Accessibility Features",
+    "entities": "Streaming Services"
+}

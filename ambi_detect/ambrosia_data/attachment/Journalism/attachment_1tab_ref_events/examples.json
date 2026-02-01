@@ -1,0 +1,9 @@
+[
+    {
+        "question": "Show press conferences and media scrums attended by John Doe.",
+        "sql_query1": "SELECT Events.EventName \r\nFROM Events JOIN Persons ON Events.PersonID = Persons.PersonID\r\nWHERE (Events.EventType = \"Press Conference\" OR Events.EventType = \"Media Scrum\") AND Persons.FullName = \"John Doe\"",
+        "sql_query2": "SELECT Events.EventName \r\nFROM Events JOIN Persons ON Events.PersonID = Persons.PersonID\r\nWHERE Events.EventType = \"Press Conference\" OR Events.EventType = \"Media Scrum\" AND Persons.FullName = \"John Doe\"",
+        "interpretation1": "What press conferences did John Doe attend and what media scrums did he also attend?",
+        "interpretation2": "List all press conferences and also list media scrums that John Doe attended."
+    }
+]

@@ -1,0 +1,31 @@
+{
+    "template": "Each Streaming Service has many different Video Quality. Among them, HD is common to many Streaming Service.",
+    "entities": {
+        "tab_name": "Streaming_Service",
+        "col_name": null,
+        "value": null,
+        "scope_id": null,
+        "db_type": "table"
+    },
+    "components": {
+        "tab_name": "Video_Quality",
+        "col_name": null,
+        "value": null,
+        "scope_id": null,
+        "db_type": "table"
+    },
+    "specific_component": {
+        "tab_name": "Video_Quality",
+        "col_name": "quality",
+        "value": "HD",
+        "scope_id": 0,
+        "db_type": "value"
+    },
+    "entities_components": {
+        "tab_name": "Streaming_Service_Video_Quality",
+        "col_name": null,
+        "value": null,
+        "scope_id": null,
+        "db_type": "table"
+    }
+}

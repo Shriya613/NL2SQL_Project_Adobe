@@ -1,0 +1,9 @@
+[
+    {
+        "question": "Please provide all opinion pieces and featured articles from volume 01.",
+        "sql_query1": "SELECT Article.title \r\nFROM Article\r\nWHERE (Article.news_content_type = \"Opinion Piece\" OR Article.news_content_type = \"Feature Article\") AND Article.volume = \"01\"",
+        "sql_query2": "SELECT Article.title \r\nFROM Article\r\nWHERE Article.news_content_type = \"Opinion Piece\" OR Article.news_content_type = \"Feature Article\" AND Article.volume = \"01\"",
+        "interpretation1": "Please provide both opinion pieces and featured articles where either was included in volume 01.",
+        "interpretation2": "Show all the opinion pieces, also show just the featured articles from volume 01."
+    }
+]

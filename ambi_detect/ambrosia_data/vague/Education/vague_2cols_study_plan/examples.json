@@ -1,0 +1,22 @@
+[
+    {
+        "question": "What are the study plans of all engineering programs?",
+        "sql_query1": "SELECT Core_Courses FROM Programs WHERE ProgramName LIKE '%Engineering%'",
+        "sql_query2": "SELECT Electives FROM Programs WHERE ProgramName LIKE '%Engineering%'",
+        "sql_query3": "SELECT Core_Courses, Electives FROM Programs WHERE ProgramName LIKE '%Engineering%'",
+        "interpretation1": "What are the core courses of all engineering programs?",
+        "interpretation2": "What are the electives of all engineering programs?",
+        "interpretation3": "What are the core courses and electives of all engineering programs?",
+        "sql_query_general": "SELECT Study_Plan FROM Programs WHERE ProgramName LIKE '%Engineering%'"
+    },
+    {
+        "question": "What are the study plans of computer science program?",
+        "sql_query1": "SELECT Core_Courses FROM Programs WHERE ProgramName = 'Computer Science'",
+        "sql_query2": "SELECT Electives FROM Programs WHERE ProgramName = 'Computer Science'",
+        "sql_query3": "SELECT Core_Courses, Electives FROM Programs WHERE ProgramName = 'Computer Science'",
+        "interpretation1": "What are the core courses in the Computer Science program?",
+        "interpretation2": "What are the electives in the Computer Science program?",
+        "interpretation3": "What are the core courses in the Computer Science program and electives in that program?",
+        "sql_query_general": "SELECT Study_Plan FROM Programs WHERE ProgramName = 'Computer Science'"
+    }
+]

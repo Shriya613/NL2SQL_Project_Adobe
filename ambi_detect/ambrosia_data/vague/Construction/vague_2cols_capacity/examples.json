@@ -1,0 +1,12 @@
+[
+    {
+        "question": "show me the capacity of each stadium",
+        "sql_query1": "select name, Seating_Capacity from stadiums",
+        "sql_query2": "select name, Maximum_Occupancy from stadiums",
+        "sql_query3": "select name, Seating_Capacity, Maximum_Occupancy from stadiums",
+        "interpretation1": "List each stadium and its seating capacity.",
+        "interpretation2": "List each stadium and its maximum occupancy.",
+        "interpretation3": "List each stadium and its seating capacity and maximum occupancy.",
+        "sql_query_general": "select name, capacity from stadiums"
+    }
+]

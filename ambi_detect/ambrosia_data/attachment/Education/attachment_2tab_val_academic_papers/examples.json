@@ -1,0 +1,9 @@
+[
+    {
+        "question": "Display research papers and review articles formatted in APA citation style.",
+        "sql_query1": "SELECT Research_Papers.title\r\nFROM Research_Papers\r\nWHERE Research_Papers.citation_style = \"APA\"\r\nUNION\r\nSELECT Review_Articles.title\r\nFROM Review_Articles\r\nWHERE Review_Articles.citation_style = \"APA\"",
+        "sql_query2": "SELECT Research_Papers.title\r\nFROM Research_Papers\r\nUNION\r\nSELECT Review_Articles.title\r\nFROM Review_Articles\r\nWHERE Review_Articles.citation_style = \"APA\"",
+        "interpretation1": "What research papers and review articles follow the APA citation style?",
+        "interpretation2": "List all research papers and also show review articles formatted according to APA citation style."
+    }
+]

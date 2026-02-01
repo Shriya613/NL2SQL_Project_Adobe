@@ -1,0 +1,33 @@
+{
+    "domain": "TerminalFacility",
+    "template": "Arrival Hall and Baggage Reclaim are subclasses of Arrival Facilities. All Arrival Halls and Baggage Reclaims have the property \"Maximum Capacity\". There might be an Arrival Hall and a Baggage Reclaim area that both have \"Maximum Capacity\" equal to \"500 passengers\".",
+    "type": "1tab_val",
+    "general_class": {
+        "tab_name": "TerminalFacility",
+        "col_name": "Arrival_Facilities",
+        "value": null,
+        "scope_id": null,
+        "db_type": "column"
+    },
+    "class1": {
+        "tab_name": "TerminalFacility",
+        "col_name": "Arrival_Facilities",
+        "value": "Arrival Hall",
+        "scope_id": null,
+        "db_type": "value"
+    },
+    "class2": {
+        "tab_name": "TerminalFacility",
+        "col_name": "Arrival_Facilities",
+        "value": "Baggage Reclaim",
+        "scope_id": null,
+        "db_type": "value"
+    },
+    "common_property": {
+        "tab_name": "TerminalFacility",
+        "col_name": "Maximum_Capacity",
+        "value": "500 passengers",
+        "scope_id": null,
+        "db_type": "value"
+    }
+}

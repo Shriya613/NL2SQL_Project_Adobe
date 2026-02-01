@@ -1,0 +1,6 @@
+{
+    "template": "Each Students has many different Courses. Among them, English is common to many Students.",
+    "specific_component": "English",
+    "components": "Courses",
+    "entities": "Students"
+}

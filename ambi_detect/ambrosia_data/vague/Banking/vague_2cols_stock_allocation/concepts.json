@@ -1,0 +1,7 @@
+{
+    "template": "Question: What part of this portfolio is allocated to stocks? Subject of Inquiry: Investment Portfolios\nFocus: Stock Allocation Possible answer types: 1. Stock Percentage 2. Stock Value",
+    "subject": "Investment Portfolios",
+    "focus": "Stock Allocation",
+    "general_category1": "Stock Percentage",
+    "general_category2": "Stock Value"
+}

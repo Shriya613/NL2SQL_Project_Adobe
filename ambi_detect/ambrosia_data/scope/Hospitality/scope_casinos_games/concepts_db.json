@@ -1,0 +1,31 @@
+{
+    "template": "Each Casinos has many different Games. Among them, Slot Machines is common to many Casinos.",
+    "entities": {
+        "tab_name": "Casinos",
+        "col_name": null,
+        "value": null,
+        "scope_id": null,
+        "db_type": "table"
+    },
+    "components": {
+        "tab_name": "Games",
+        "col_name": null,
+        "value": null,
+        "scope_id": null,
+        "db_type": "table"
+    },
+    "specific_component": {
+        "tab_name": "Games",
+        "col_name": "game_name",
+        "value": "Slot Machines",
+        "scope_id": 0,
+        "db_type": "value"
+    },
+    "entities_components": {
+        "tab_name": "Casinos_Games",
+        "col_name": null,
+        "value": null,
+        "scope_id": null,
+        "db_type": "table"
+    }
+}

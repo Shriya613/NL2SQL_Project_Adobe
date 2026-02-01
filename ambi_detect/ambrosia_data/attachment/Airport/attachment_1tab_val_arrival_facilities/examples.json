@@ -1,0 +1,9 @@
+[
+    {
+        "question": "When can the arrival halls and baggage claim areas with a capacity of 500 people be used?",
+        "sql_query1": "SELECT TerminalFacility.OpeningHours \r\nFROM TerminalFacility\r\nWHERE (TerminalFacility.Arrival_Facilities = \"Arrival Hall\" OR TerminalFacility.Arrival_Facilities = \"Baggage Reclaim\") AND TerminalFacility.Maximum_Capacity = \"500 passengers\"",
+        "sql_query2": "SELECT TerminalFacility.OpeningHours \r\nFROM TerminalFacility\r\nWHERE TerminalFacility.Arrival_Facilities = \"Arrival Hall\" OR TerminalFacility.Arrival_Facilities = \"Baggage Reclaim\" AND TerminalFacility.Maximum_Capacity = \"500 passengers\"",
+        "interpretation1": "What are the opening hours of arrival halls with 500-people capacity and opening hours of baggage reclaim facilities with same capacity?",
+        "interpretation2": "List opening hours of all arrival hall facilities and also list opening hours of baggage reclaim facilities with capacity of 500 people."
+    }
+]

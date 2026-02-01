@@ -1,0 +1,23 @@
+[
+    {
+        "question": "Tell me about educational jobs that each school offers.",
+        "sql_query1": "SELECT Educational_Jobs.description  from Jobs_at_School join Educational_Jobs on Jobs_at_School.job_id = Educational_Jobs.job_id join Schools on Jobs_at_School.school_id = Schools.id   GROUP BY Jobs_at_School.job_id HAVING COUNT(DISTINCT Jobs_at_School.school_id) = (SELECT COUNT(*) FROM  Schools)",
+        "sql_query2": "select schools.name , educational_jobs.description from Jobs_at_School join Educational_Jobs on Jobs_at_School.job_id = Educational_Jobs.job_id join Schools on Jobs_at_School.school_id = Schools.id",
+        "interpretation1": "Tell me about educational jobs common to all schools.",
+        "interpretation2": "For every school, tell me about the educational jobs offered."
+    },
+    {
+        "question": "What educational job is associated with each school?",
+        "sql_query1": "SELECT Educational_Jobs.title  from Jobs_at_School join Educational_Jobs on Jobs_at_School.job_id = Educational_Jobs.job_id join Schools on Jobs_at_School.school_id = Schools.id   GROUP BY Jobs_at_School.job_id HAVING COUNT(DISTINCT Jobs_at_School.school_id) = (SELECT COUNT(*) FROM  Schools)",
+        "sql_query2": "select schools.name , educational_jobs.title from Jobs_at_School join Educational_Jobs on Jobs_at_School.job_id = Educational_Jobs.job_id join Schools on Jobs_at_School.school_id = Schools.id",
+        "interpretation1": "What educational jobs are common across all schools?",
+        "interpretation2": "For each schools, provide the corresponding job titles."
+    },
+    {
+        "question": "Give me information about jobs every school has (their titles and descriptions).",
+        "sql_query1": "SELECT Educational_Jobs.title, Educational_Jobs.description  from Jobs_at_School join Educational_Jobs on Jobs_at_School.job_id = Educational_Jobs.job_id join Schools on Jobs_at_School.school_id = Schools.id   GROUP BY Jobs_at_School.job_id HAVING COUNT(DISTINCT Jobs_at_School.school_id) = (SELECT COUNT(*) FROM  Schools)",
+        "sql_query2": "select schools.name , educational_jobs.title , educational_jobs.description from Jobs_at_School join Educational_Jobs on Jobs_at_School.job_id = Educational_Jobs.job_id join Schools on Jobs_at_School.school_id = Schools.id",
+        "interpretation1": "What information is there about jobs all schools have in common (their titles and descriptions)?",
+        "interpretation2": "For each school, list information about jobs they have (their titles and descriptions)."
+    }
+]

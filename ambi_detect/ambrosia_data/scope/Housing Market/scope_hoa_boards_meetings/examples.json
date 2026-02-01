@@ -1,0 +1,9 @@
+[
+    {
+        "question": "what meeting types are associated with each HOA board?",
+        "sql_query1": "SELECT Meetings.meeting_type  from Hoa_Boards_Meetings join Meetings on Hoa_Boards_Meetings.meeting_id = Meetings.meeting_id join Hoa_Boards on Hoa_Boards_Meetings.hoa_board_id = Hoa_Boards.board_id   GROUP BY Hoa_Boards_Meetings.meeting_id HAVING COUNT(DISTINCT Hoa_Boards_Meetings.hoa_board_id) = (SELECT COUNT(*) FROM  Hoa_Boards)",
+        "sql_query2": "select hoa_boards.address , meetings.meeting_type from Hoa_Boards_Meetings join Meetings on Hoa_Boards_Meetings.meeting_id = Meetings.meeting_id join Hoa_Boards on Hoa_Boards_Meetings.hoa_board_id = Hoa_Boards.board_id",
+        "interpretation1": "what meeting type is common across all HOA boards?",
+        "interpretation2": "for each HOA board, what is the corresponding meeting type?"
+    }
+]

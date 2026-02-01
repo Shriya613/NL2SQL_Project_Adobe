@@ -1,0 +1,25 @@
+{
+    "template": "Question: Where does this flight depart from? Subject of Inquiry: Flight\nFocus: Airport Possible answer types: 1. Airport Code 2. Airport Name",
+    "general_category1": {
+        "tab_name": "Airports",
+        "col_name": "Airport_Code",
+        "value": null,
+        "scope_id": null,
+        "db_type": "column"
+    },
+    "general_category2": {
+        "tab_name": "Airports",
+        "col_name": "Airport_Name",
+        "value": null,
+        "scope_id": null,
+        "db_type": "column"
+    },
+    "subject": {
+        "tab_name": "Flights",
+        "col_name": "Flight_ID",
+        "value": null,
+        "scope_id": null,
+        "db_type": "column"
+    },
+    "type": "2cols"
+}

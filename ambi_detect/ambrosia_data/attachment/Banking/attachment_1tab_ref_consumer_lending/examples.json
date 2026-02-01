@@ -1,0 +1,9 @@
+[
+    {
+        "question": "Which customers have credit cards and personal loans with a 15% interest rate?",
+        "sql_query1": "SELECT customers.FullName\r\nFROM loans JOIN rates ON loans.interestRateId = rates.id JOIN customers ON customers.Id = loans.customerId\r\nWHERE (loans.loanType = \"Credit Card\" OR loans.loanType = \"Personal Loan\") AND rates.interestRate = 15.0",
+        "sql_query2": "SELECT customers.FullName\r\nFROM loans JOIN rates ON loans.interestRateId = rates.id JOIN customers ON customers.Id = loans.customerId\r\nWHERE loans.loanType = \"Credit Card\" OR loans.loanType = \"Personal Loan\" AND rates.interestRate = 15.0",
+        "interpretation1": "Show the customers where either the credit card or personal loan rate is 15%.",
+        "interpretation2": "Show all the customers with credit cards and also show only those customers with personal loads where the rate is 15%."
+    }
+]

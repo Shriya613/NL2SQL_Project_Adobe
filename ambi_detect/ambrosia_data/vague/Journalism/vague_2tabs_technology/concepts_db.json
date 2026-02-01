@@ -1,0 +1,25 @@
+{
+    "template": "Question: What technology is used to produce this online news platform? Subject of Inquiry: Online News Platform\nFocus: Technology Possible answer types: 1. Content Management System 2. Web Framework",
+    "general_category1": {
+        "tab_name": "Content_Management_System",
+        "col_name": null,
+        "value": null,
+        "scope_id": null,
+        "db_type": "table"
+    },
+    "general_category2": {
+        "tab_name": "Web_Framework",
+        "col_name": null,
+        "value": null,
+        "scope_id": null,
+        "db_type": "table"
+    },
+    "subject": {
+        "tab_name": "Online_News_Platform",
+        "col_name": null,
+        "value": null,
+        "scope_id": null,
+        "db_type": "table"
+    },
+    "type": "2tabs"
+}

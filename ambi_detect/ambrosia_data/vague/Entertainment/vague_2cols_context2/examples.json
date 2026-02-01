@@ -1,0 +1,22 @@
+[
+    {
+        "question": "What are the titles and context of the plays produced in London?",
+        "sql_query1": "SELECT title, epoch FROM Play JOIN Performance ON  Play.play_id = Performance.performance_id  JOIN Theatre On Theatre.theatre_id = Performance.theatre_id WHERE location = 'London';",
+        "sql_query2": "SELECT title, society FROM Play JOIN Performance ON  Play.play_id = Performance.performance_id  JOIN Theatre On Theatre.theatre_id = Performance.theatre_id WHERE location = 'London';",
+        "sql_query3": "SELECT title, epoch, society FROM Play JOIN Performance ON  Play.play_id = Performance.performance_id  JOIN Theatre On Theatre.theatre_id = Performance.theatre_id WHERE location = 'London';",
+        "interpretation1": "What were the plays produced in London, and in what epoch were they set in?",
+        "interpretation2": "What were the plays produced in London, and in what society were they set in?",
+        "interpretation3": "What were the plays produced in London, and in what context i.e. epoch and society were they set in?",
+        "sql_query_general": "SELECT title, Context FROM Play JOIN Performance ON  Play.play_id = Performance.performance_id  JOIN Theatre On Theatre.theatre_id = Performance.theatre_id WHERE location = 'London';"
+    },
+    {
+        "question": "Show me the title, context, and genre of Shakespeare's play.",
+        "sql_query1": "SELECT title, epoch, genre FROM Play WHERE author LIKE '%Shakespeare%';",
+        "sql_query2": "SELECT title, society, genre FROM Play WHERE author LIKE '%Shakespeare%';",
+        "sql_query3": "SELECT title, epoch, society, genre FROM Play WHERE author LIKE '%Shakespeare%';",
+        "interpretation1": "show me the title, epoch and genre of Shakespeare's play",
+        "interpretation2": "show me the title, society and genre of Shakespeare's play",
+        "interpretation3": "show me the title, epoch, society and genre of Shakespeare's play",
+        "sql_query_general": "SELECT title, Context, genre FROM Play WHERE author LIKE '%Shakespeare%';"
+    }
+]

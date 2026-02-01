@@ -1,0 +1,9 @@
+[
+    {
+        "question": "Show all steakhouses and seafood restaurants which were established in 1980.",
+        "sql_query1": "SELECT Restaurants.Name \r\nFROM Restaurants\r\nWHERE (Restaurants.Type = \"Steakhouse\" OR Restaurants.Type = \"Seafood Restaurant\") AND Restaurants.Year_of_Establishment = 1980",
+        "sql_query2": "SELECT Restaurants.Name \r\nFROM Restaurants\r\nWHERE Restaurants.Type = \"Steakhouse\" OR Restaurants.Type = \"Seafood Restaurant\" AND Restaurants.Year_of_Establishment = 1980",
+        "interpretation1": "Show all the restaurants that were established in 1980 that operate either as steakhouses or seafood restaurants.",
+        "interpretation2": "Show all the steakhouses, then show the seafood restaurants which have been open since 1980."
+    }
+]

@@ -1,0 +1,27 @@
+{
+    "domain": "Currency_Exchange_Service",
+    "template": "Currency Exchange Service and Commodity Trading Firm are subclasses of Organization. All Currency exchange services and Commodity trading firms have property \"Year of Establishment\". There might be a Currency Exchange Service and a Commodity Trading Firm that both have \"Year of Establishment\" equal to \"2000\".",
+    "type": "2tab_val",
+    "general_class": "Organization",
+    "class1": {
+        "tab_name": "Currency_Exchange_Service",
+        "col_name": null,
+        "value": null,
+        "scope_id": null,
+        "db_type": "table"
+    },
+    "class2": {
+        "tab_name": "Commodity_Trading_Firm",
+        "col_name": null,
+        "value": null,
+        "scope_id": null,
+        "db_type": "table"
+    },
+    "common_property": {
+        "tab_name": "Currency_Exchange_Service",
+        "col_name": "Year_of_establishment",
+        "value": 2000,
+        "scope_id": null,
+        "db_type": "value"
+    }
+}

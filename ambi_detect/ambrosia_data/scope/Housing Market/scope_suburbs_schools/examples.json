@@ -1,0 +1,9 @@
+[
+    {
+        "question": "Tell me the schools every suburb has.",
+        "sql_query1": "SELECT schools.school_type  from suburbs_schools join schools on suburbs_schools.school_id = schools.id join suburbs on suburbs_schools.suburb_id = suburbs.id   GROUP BY suburbs_schools.school_id HAVING COUNT(DISTINCT suburbs_schools.suburb_id) = (SELECT COUNT(*) FROM  suburbs)",
+        "sql_query2": "select suburbs.name , schools.school_type from suburbs_schools join schools on suburbs_schools.school_id = schools.id join suburbs on suburbs_schools.suburb_id = suburbs.id",
+        "interpretation1": "What school types do all suburbs have in common?",
+        "interpretation2": "For each suburb, list the schools they have."
+    }
+]

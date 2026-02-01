@@ -1,0 +1,6 @@
+{
+    "template": "Each Post-Production Sound Mixers has many different Recording Environments. Among them, Isolation Booths is common to many Post-Production Sound Mixers.",
+    "specific_component": "Isolation Booths",
+    "components": "Recording Environments",
+    "entities": "Post-Production Sound Mixers"
+}

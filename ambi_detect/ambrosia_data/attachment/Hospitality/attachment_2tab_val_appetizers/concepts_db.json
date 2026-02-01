@@ -1,0 +1,27 @@
+{
+    "domain": "Salads",
+    "template": "Salad and Soup are subclasses of Appetizers. All Salads and Soups have property \"Buffet\". There might be a Salad and a Soup that both have \"Buffet\" equal to \"Hilton\".",
+    "type": "2tab_val",
+    "general_class": "Appetizers",
+    "class1": {
+        "tab_name": "Salads",
+        "col_name": null,
+        "value": null,
+        "scope_id": null,
+        "db_type": "table"
+    },
+    "class2": {
+        "tab_name": "Soups",
+        "col_name": null,
+        "value": null,
+        "scope_id": null,
+        "db_type": "table"
+    },
+    "common_property": {
+        "tab_name": "Salads",
+        "col_name": "BuffetName",
+        "value": "Hilton",
+        "scope_id": null,
+        "db_type": "value"
+    }
+}

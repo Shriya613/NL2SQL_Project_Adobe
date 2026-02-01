@@ -1,0 +1,23 @@
+[
+    {
+        "question": "Give me the description of the facilities available at each terminal.",
+        "sql_query1": "SELECT Facilities.description  from Terminals_Facilities join Facilities on Terminals_Facilities.facilityId = Facilities.id join Terminals on Terminals_Facilities.terminalId = Terminals.id   GROUP BY Terminals_Facilities.facilityId HAVING COUNT(DISTINCT Terminals_Facilities.terminalId) = (SELECT COUNT(*) FROM  Terminals)",
+        "sql_query2": "select terminals.name , facilities.description from Terminals_Facilities join Facilities on Terminals_Facilities.facilityId = Facilities.id join Terminals on Terminals_Facilities.terminalId = Terminals.id",
+        "interpretation1": "I want to know what facilities can be found in every single terminal - tell me their descriptions",
+        "interpretation2": "I want to know all the descriptions for any facility in any terminal"
+    },
+    {
+        "question": "Tell me the names and descriptions of the facilities each terminal has.",
+        "sql_query1": "SELECT Facilities.facilityName, Facilities.description  from Terminals_Facilities join Facilities on Terminals_Facilities.facilityId = Facilities.id join Terminals on Terminals_Facilities.terminalId = Terminals.id   GROUP BY Terminals_Facilities.facilityId HAVING COUNT(DISTINCT Terminals_Facilities.terminalId) = (SELECT COUNT(*) FROM  Terminals)",
+        "sql_query2": "select terminals.name , facilities.facilityname , facilities.description from Terminals_Facilities join Facilities on Terminals_Facilities.facilityId = Facilities.id join Terminals on Terminals_Facilities.terminalId = Terminals.id",
+        "interpretation1": "What are the names and descriptions of the facilities common to all terminals?",
+        "interpretation2": "For every terminal, list the names and descriptions of the facilities they have."
+    },
+    {
+        "question": "Which facilities are present at all terminals?",
+        "sql_query1": "SELECT Facilities.facilityName  from Terminals_Facilities join Facilities on Terminals_Facilities.facilityId = Facilities.id join Terminals on Terminals_Facilities.terminalId = Terminals.id   GROUP BY Terminals_Facilities.facilityId HAVING COUNT(DISTINCT Terminals_Facilities.terminalId) = (SELECT COUNT(*) FROM  Terminals)",
+        "sql_query2": "select terminals.name , facilities.facilityname from Terminals_Facilities join Facilities on Terminals_Facilities.facilityId = Facilities.id join Terminals on Terminals_Facilities.terminalId = Terminals.id",
+        "interpretation1": "Which facilities are common to all terminals?",
+        "interpretation2": "For each terminal, list the facilities they offer."
+    }
+]

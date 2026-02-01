@@ -1,0 +1,9 @@
+[
+    {
+        "question": "Show me scripts and editors with a deadline of 21.04.03.",
+        "sql_query1": "SELECT Scripts.Title as Name\r\nFROM Scripts\r\nWHERE Scripts.Deadline = \"21.04.03\"\r\nUNION\r\nSELECT Editors.Name\r\nFROM Editors\r\nWHERE Editors.Deadline = \"21.04.03\"",
+        "sql_query2": "SELECT Scripts.Title as Name\r\nFROM Scripts\r\nUNION\r\nSELECT Editors.Name\r\nFROM Editors\r\nWHERE Editors.Deadline = \"21.04.03\"",
+        "interpretation1": "Show both scripts and editors where either has a deadline of 21.04.03.",
+        "interpretation2": "Give me all the scripts but just the editors with a deadline of 21.04.03."
+    }
+]

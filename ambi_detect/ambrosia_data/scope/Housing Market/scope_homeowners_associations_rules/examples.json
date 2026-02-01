@@ -1,0 +1,23 @@
+[
+    {
+        "question": "Show me the rules that each homeowners association has.",
+        "sql_query1": "SELECT Rules.rulename  from Homeowners_association_rules join Rules on Homeowners_association_rules.ruleid = Rules.ruleid join Homeowners_associations on Homeowners_association_rules.associd = Homeowners_associations.id   GROUP BY Homeowners_association_rules.ruleid HAVING COUNT(DISTINCT Homeowners_association_rules.associd) = (SELECT COUNT(*) FROM  Homeowners_associations)",
+        "sql_query2": "select homeowners_associations.name , rules.rulename from Homeowners_association_rules join Rules on Homeowners_association_rules.ruleid = Rules.ruleid join Homeowners_associations on Homeowners_association_rules.associd = Homeowners_associations.id",
+        "interpretation1": "What rules do all homeowners associations have in common?",
+        "interpretation2": "For each homeowners association, show the rules they have."
+    },
+    {
+        "question": "Give me the rule name and description for each homeowners association.",
+        "sql_query1": "SELECT Rules.rulename, Rules.description  from Homeowners_association_rules join Rules on Homeowners_association_rules.ruleid = Rules.ruleid join Homeowners_associations on Homeowners_association_rules.associd = Homeowners_associations.id   GROUP BY Homeowners_association_rules.ruleid HAVING COUNT(DISTINCT Homeowners_association_rules.associd) = (SELECT COUNT(*) FROM  Homeowners_associations)",
+        "sql_query2": "select homeowners_associations.name , rules.rulename , rules.description from Homeowners_association_rules join Rules on Homeowners_association_rules.ruleid = Rules.ruleid join Homeowners_associations on Homeowners_association_rules.associd = Homeowners_associations.id",
+        "interpretation1": "Give me the rule name and description that is in common for all homeowners associations.",
+        "interpretation2": "Show me the rule name and description corresponding to each homeowners association respectively."
+    },
+    {
+        "question": "What descriptions are associated with each homeowners association?",
+        "sql_query1": "SELECT Rules.description  from Homeowners_association_rules join Rules on Homeowners_association_rules.ruleid = Rules.ruleid join Homeowners_associations on Homeowners_association_rules.associd = Homeowners_associations.id   GROUP BY Homeowners_association_rules.ruleid HAVING COUNT(DISTINCT Homeowners_association_rules.associd) = (SELECT COUNT(*) FROM  Homeowners_associations)",
+        "sql_query2": "select homeowners_associations.name , rules.description from Homeowners_association_rules join Rules on Homeowners_association_rules.ruleid = Rules.ruleid join Homeowners_associations on Homeowners_association_rules.associd = Homeowners_associations.id",
+        "interpretation1": "Which description of rules is common across all homeowners associations?",
+        "interpretation2": "For each homeowners association, provide the corresponding descriptions of rules."
+    }
+]

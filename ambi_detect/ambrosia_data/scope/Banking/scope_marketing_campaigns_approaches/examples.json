@@ -1,0 +1,9 @@
+[
+    {
+        "question": "Show me the approach each marketing campaign uses.",
+        "sql_query1": "SELECT Approaches.approach_value  from Marketing_Campaigns_Approaches join Approaches on Marketing_Campaigns_Approaches.approach_id = Approaches.id join Marketing_Campaigns on Marketing_Campaigns_Approaches.marketing_campaign_id = Marketing_Campaigns.id   GROUP BY Marketing_Campaigns_Approaches.approach_id HAVING COUNT(DISTINCT Marketing_Campaigns_Approaches.marketing_campaign_id) = (SELECT COUNT(*) FROM  Marketing_Campaigns)",
+        "sql_query2": "select marketing_campaigns.campaign_name , approaches.approach_value from Marketing_Campaigns_Approaches join Approaches on Marketing_Campaigns_Approaches.approach_id = Approaches.id join Marketing_Campaigns on Marketing_Campaigns_Approaches.marketing_campaign_id = Marketing_Campaigns.id",
+        "interpretation1": "What approach do all marketing campaigns have in common?",
+        "interpretation2": "For every marketing campaign, list the approach used."
+    }
+]

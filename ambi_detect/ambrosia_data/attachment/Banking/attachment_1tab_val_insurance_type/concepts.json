@@ -1,0 +1,8 @@
+{
+    "template": "Pet Insurance and Disability Insurance are types of Specialty Insurance Products. They often share similar 'Payment Frequency' options, such as monthly or annually. For example, both might offer a monthly payment option.",
+    "general_class": "Insurance Type",
+    "class1": "Pet Insurance",
+    "class2": "Disability Insurance",
+    "common_property": "Payment Frequency",
+    "common_value": "Monthly"
+}

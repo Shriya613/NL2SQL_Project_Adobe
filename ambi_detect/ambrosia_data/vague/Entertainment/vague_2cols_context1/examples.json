@@ -1,0 +1,22 @@
+[
+    {
+        "question": "What's the name and background of the documentary created by the oldest filmmaker?",
+        "sql_query1": "SELECT Title, HistoricalEra FROM Documentary JOIN Director ON Documentary.DirectorID = Director.DirectorID ORDER BY BirthYear DESC LIMIT 1;",
+        "sql_query2": "SELECT Title, Event FROM Documentary JOIN Director ON Documentary.DirectorID = Director.DirectorID ORDER BY BirthYear DESC LIMIT 1;",
+        "sql_query3": "SELECT Title, HistoricalEra, Event FROM Documentary JOIN Director ON Documentary.DirectorID = Director.DirectorID ORDER BY BirthYear DESC LIMIT 1;",
+        "interpretation1": "What's the name and historical era of the documentary created by the oldest filmmaker?",
+        "interpretation2": "What's the name and event shown in the documentary created by the oldest filmmaker?",
+        "interpretation3": "What's the name, historical era and event shown in the documentary created by the oldest filmmaker?",
+        "sql_query_general": "SELECT Title, Context FROM Documentary JOIN Director ON Documentary.DirectorID = Director.DirectorID ORDER BY BirthYear DESC LIMIT 1;"
+    },
+    {
+        "question": "Display a list of documentaries and their contexts made by directors named Christopher.",
+        "sql_query1": "SELECT HistoricalEra FROM Documentary JOIN Director ON Documentary.DirectorID = Director.DirectorID WHERE fullname LIKE 'Christopher %'",
+        "sql_query2": "SELECT Event FROM Documentary JOIN Director ON Documentary.DirectorID = Director.DirectorID WHERE fullname LIKE 'Christopher %'",
+        "sql_query3": "SELECT HistoricalEra, Event FROM Documentary JOIN Director ON Documentary.DirectorID = Director.DirectorID WHERE fullname LIKE 'Christopher %'",
+        "interpretation1": "List the documentaries and their historical era setting made by directors named Christopher.",
+        "interpretation2": "List the documentaries, the events they describe, made by directors named Christopher.",
+        "interpretation3": "List the documentaries, their historical era setting and the events they describe, made by directors named Christopher.",
+        "sql_query_general": "SELECT Context FROM Documentary JOIN Director ON Documentary.DirectorID = Director.DirectorID WHERE fullname LIKE 'Christopher %'"
+    }
+]

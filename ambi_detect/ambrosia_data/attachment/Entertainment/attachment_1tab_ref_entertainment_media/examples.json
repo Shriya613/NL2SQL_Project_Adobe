@@ -1,0 +1,9 @@
+[
+    {
+        "question": "Show films and novels released in 2020.",
+        "sql_query1": "SELECT EntertainmentItem.title \r\nFROM MediaType JOIN EntertainmentItem ON MediaType.id = EntertainmentItem.mediaTypeId\r\nWHERE (MediaType.typeName = \"Film\" OR MediaType.typeName = \"Novel\") AND EntertainmentItem.releaseYear = 2020",
+        "sql_query2": "SELECT EntertainmentItem.title \r\nFROM MediaType JOIN EntertainmentItem ON MediaType.id = EntertainmentItem.mediaTypeId\r\nWHERE MediaType.typeName = \"Film\" OR MediaType.typeName = \"Novel\" AND EntertainmentItem.releaseYear = 2020",
+        "interpretation1": "Which films were released in 2020 and which novels were released in the same year?",
+        "interpretation2": "Provide a list of all films and also provide a list of novels released in 2020."
+    }
+]

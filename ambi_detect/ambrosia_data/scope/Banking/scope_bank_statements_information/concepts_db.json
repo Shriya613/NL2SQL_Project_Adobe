@@ -1,0 +1,31 @@
+{
+    "template": "Each Bank Statement has many different Information. Among them, Transaction History is common to many Bank Statement.",
+    "entities": {
+        "tab_name": "Bank_Statements",
+        "col_name": null,
+        "value": null,
+        "scope_id": null,
+        "db_type": "table"
+    },
+    "components": {
+        "tab_name": "Information",
+        "col_name": null,
+        "value": null,
+        "scope_id": null,
+        "db_type": "table"
+    },
+    "specific_component": {
+        "tab_name": "Information",
+        "col_name": "description",
+        "value": "Transaction History",
+        "scope_id": 0,
+        "db_type": "value"
+    },
+    "entities_components": {
+        "tab_name": "Bank_Statement_Information",
+        "col_name": null,
+        "value": null,
+        "scope_id": null,
+        "db_type": "table"
+    }
+}

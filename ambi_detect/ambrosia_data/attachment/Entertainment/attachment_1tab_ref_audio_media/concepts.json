@@ -1,0 +1,8 @@
+{
+    "template": "Podcasts and Radio Shows are subclasses of Audio Media. All Podcasts and Radio Shows have the property \"Average Episode Length\". There might be a Podcast and a Radio Show that both have \"Average Episode Length\" equal to \"45 Minutes\".",
+    "general_class": "Audio Media",
+    "class1": "Podcast",
+    "class2": "Radio Show",
+    "common_property": "Average Episode Length",
+    "common_value": "45"
+}

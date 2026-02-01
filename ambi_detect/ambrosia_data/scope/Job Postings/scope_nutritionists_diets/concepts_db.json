@@ -1,0 +1,31 @@
+{
+    "template": "Each Nutritionists has many different Diets. Among them, Vegan is common to many Nutritionists.",
+    "entities": {
+        "tab_name": "Nutritionists",
+        "col_name": null,
+        "value": null,
+        "scope_id": null,
+        "db_type": "table"
+    },
+    "components": {
+        "tab_name": "Diets",
+        "col_name": null,
+        "value": null,
+        "scope_id": null,
+        "db_type": "table"
+    },
+    "specific_component": {
+        "tab_name": "Diets",
+        "col_name": "diet_type_value",
+        "value": "Vegan",
+        "scope_id": 0,
+        "db_type": "value"
+    },
+    "entities_components": {
+        "tab_name": "Nutritionists_Diets",
+        "col_name": null,
+        "value": null,
+        "scope_id": null,
+        "db_type": "table"
+    }
+}

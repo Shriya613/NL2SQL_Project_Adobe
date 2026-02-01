@@ -1,0 +1,6 @@
+{
+    "template": "Each Agricultural Research Institutes has many different Focus Areas. Among them, Sustainability research is common to many Agricultural Research Institutes.",
+    "specific_component": "Sustainability research",
+    "components": "Focus Areas",
+    "entities": "Agricultural Research Institutes"
+}

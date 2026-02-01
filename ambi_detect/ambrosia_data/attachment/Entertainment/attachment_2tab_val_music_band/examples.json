@@ -1,0 +1,9 @@
+[
+    {
+        "question": "Show jazz bands and rock bands founded in 1970.",
+        "sql_query1": "SELECT Jazz_Bands.band\r\nFROM Jazz_Bands\r\nWHERE Jazz_Bands.Founding_Year = 1970\r\nUNION\r\nSELECT Rock_Bands.band\r\nFROM Rock_Bands\r\nWHERE Rock_Bands.Founding_Year = 1970",
+        "sql_query2": "SELECT Jazz_Bands.band\r\nFROM Jazz_Bands\r\nUNION\r\nSELECT Rock_Bands.band\r\nFROM Rock_Bands\r\nWHERE Rock_Bands.Founding_Year = 1970",
+        "interpretation1": "Which jazz bands are founded in 1970 and which rock bands are founded in the same year?",
+        "interpretation2": "Provide a list of all jazz bands and also provide a list of rock bands founded in 1970."
+    }
+]

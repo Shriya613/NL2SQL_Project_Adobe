@@ -1,0 +1,33 @@
+{
+    "domain": "ArtType",
+    "template": "Photography and Painting are subclasses of Visual Art. All Photographies and Paintings have property \"Gallery\". There might be a Photography and a Painting that both have \"Gallery\" equal to \"MoMA\".",
+    "type": "1tab_ref",
+    "general_class": {
+        "tab_name": "ArtType",
+        "col_name": "TypeName",
+        "value": null,
+        "scope_id": null,
+        "db_type": "column"
+    },
+    "class1": {
+        "tab_name": "ArtType",
+        "col_name": "TypeName",
+        "value": "Photography",
+        "scope_id": null,
+        "db_type": "value"
+    },
+    "class2": {
+        "tab_name": "ArtType",
+        "col_name": "TypeName",
+        "value": "Painting",
+        "scope_id": null,
+        "db_type": "value"
+    },
+    "common_property": {
+        "tab_name": "Gallery",
+        "col_name": "Name",
+        "value": "MoMA",
+        "scope_id": null,
+        "db_type": "value"
+    }
+}

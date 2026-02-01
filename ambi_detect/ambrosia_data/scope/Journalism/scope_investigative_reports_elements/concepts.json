@@ -1,0 +1,6 @@
+{
+    "template": "Each Investigative Reports has many different Elements. Among them, Interviews is common to many Investigative Reports.",
+    "specific_component": "Interviews",
+    "components": "Elements",
+    "entities": "Investigative Reports"
+}

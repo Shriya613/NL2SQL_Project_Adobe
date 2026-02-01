@@ -1,0 +1,33 @@
+{
+    "domain": "filmmaking",
+    "template": "Documentary and Short Film are subclasses of Film Type. All Documentaries and Short Films have a property \"Budget\". There might be a Documentary and a Short Film both produced with a budget of \"500,000 USD\" while others in these categories have different budgets.",
+    "type": "1tab_ref",
+    "general_class": {
+        "tab_name": "film_type",
+        "col_name": "type",
+        "value": null,
+        "scope_id": null,
+        "db_type": "column"
+    },
+    "class1": {
+        "tab_name": "film_type",
+        "col_name": "type",
+        "value": "Documentary",
+        "scope_id": null,
+        "db_type": "value"
+    },
+    "class2": {
+        "tab_name": "film_type",
+        "col_name": "type",
+        "value": "Short Film",
+        "scope_id": null,
+        "db_type": "value"
+    },
+    "common_property": {
+        "tab_name": "budget",
+        "col_name": "amount",
+        "value": 700000.0,
+        "scope_id": null,
+        "db_type": "value"
+    }
+}

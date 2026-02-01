@@ -1,0 +1,7 @@
+{
+    "template": "Question: What developmental milestones are appropriate for children at this age? Subject of Inquiry: Child Age\nFocus: Developmental Milestones Possible answer types: 1. Physical Milestones 2. Cognitive Milestones",
+    "subject": "Child Age",
+    "focus": "Developmental Milestones",
+    "general_category1": "Physical Milestones",
+    "general_category2": "Cognitive Milestones"
+}

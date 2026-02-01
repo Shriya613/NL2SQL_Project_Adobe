@@ -1,0 +1,6 @@
+{
+    "template": "Each Financial Statements has many different Sections. Among them, Balance Sheet is common to many Financial Statements.",
+    "specific_component": "Balance Sheet",
+    "components": "Sections",
+    "entities": "Financial Statements"
+}

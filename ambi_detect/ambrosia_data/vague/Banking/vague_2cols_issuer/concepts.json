@@ -1,0 +1,7 @@
+{
+    "template": "Question: Who offers this product? Subject of Inquiry: Banking Products\nFocus: Issuer Possible answer types: 1. Bank 2. Branch",
+    "subject": "Banking Products",
+    "focus": "Issuer",
+    "general_category1": "Bank",
+    "general_category2": "Branch"
+}

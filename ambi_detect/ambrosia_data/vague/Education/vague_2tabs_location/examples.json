@@ -1,0 +1,22 @@
+[
+    {
+        "question": "Retrieve the location of the campus where Alice Johnson was teaching on the 1st of June 2021",
+        "sql_query1": "select L.name from City L inner join Campus C on C.city_id = L.id inner join teachesAt TA on TA.campusId = C.id inner join Teacher T on T.id = TA.teacherid where TA.startDate < '2021-06-01' and ta.endDate > '2021-06-01' and T.email= 'alice.johnson@example.com'",
+        "sql_query2": "select L.full_name from State L inner join Campus C on C.state_id = L.id inner join teachesAt TA on TA.campusId = C.id inner join Teacher T on T.id = TA.teacherid where TA.startDate < '2021-06-01' and ta.endDate > '2021-06-01' and T.email= 'alice.johnson@example.com'",
+        "sql_query3": "select L.name, S.full_name from City L inner join Campus C on C.city_id = L.id inner join teachesAt TA on TA.campusId = C.id join State S on C.state_id = S.id  inner join Teacher T on T.id = TA.teacherid where TA.startDate < '2021-06-01' and ta.endDate > '2021-06-01' and T.email= 'alice.johnson@example.com'",
+        "interpretation1": "Which city was the campus where Alice Johnson was teaching on the 1st of June 2021 located?",
+        "interpretation2": "Which state was the campus where Alice Johnson was teaching on the 1st of June 2021 located?",
+        "interpretation3": "Which state and city was the campus where Alice Johnson was teaching on the 1st of June 2021 located?",
+        "sql_query_general": "select L.name from Location L inner join Campus C on C.city_id = L.id inner join teachesAt TA on TA.campusId = C.id inner join Teacher T on T.id = TA.teacherid where TA.startDate < '2021-06-01' and ta.endDate > '2021-06-01' and T.email= 'alice.johnson@example.com'"
+    },
+    {
+        "question": "What is the most populous location and its associated campus?",
+        "sql_query1": "select L.Name, C.campus_name from City L inner join Campus C on C.city_id = L.id order by L.population LIMIT 1",
+        "sql_query2": "select L.full_name from State L inner join Campus C on C.state_id = L.id inner join City ct on C.city_id = ct.id order by ct.population LIMIT 1",
+        "sql_query3": "select S.full_name, L.Name, C.campus_name from City L inner join Campus C on C.city_id = L.id  join State S on C.state_id = S.id  order by L.population LIMIT 1",
+        "interpretation1": "What is the most populous city and its associated campus?",
+        "interpretation2": "What is the most populous state and its associated campus?",
+        "interpretation3": "What are the most populous city and state, and their associated campus?",
+        "sql_query_general": "select L.Name, C.campus_name from Location L inner join Campus C on C.city_id = L.id order by L.population LIMIT 1"
+    }
+]

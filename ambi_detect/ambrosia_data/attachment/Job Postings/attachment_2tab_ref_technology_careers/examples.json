@@ -1,0 +1,9 @@
+[
+    {
+        "question": "Show senior data analysts and software developers.",
+        "sql_query1": "SELECT Employee.FullName \r\nFROM Grade JOIN Employee ON Grade.id = Employee.gradeId JOIN Software_Developer ON Employee.id = Software_Developer.employeeId\r\nWHERE Grade.name = \"Senior\"\r\nUNION\r\nSELECT Employee.FullName \r\nFROM Grade JOIN Employee ON Grade.id = Employee.gradeId JOIN Data_Analyst ON Employee.id = Data_Analyst.employeeId\r\nWHERE Grade.name = \"Senior\"",
+        "sql_query2": "SELECT Employee.FullName \r\nFROM Grade JOIN Employee ON Grade.id = Employee.gradeId JOIN Software_Developer ON Employee.id = Software_Developer.employeeId\r\nUNION\r\nSELECT Employee.FullName \r\nFROM Grade JOIN Employee ON Grade.id = Employee.gradeId JOIN Data_Analyst ON Employee.id = Data_Analyst.employeeId\r\nWHERE Grade.name = \"Senior\"",
+        "interpretation1": "What software developers are seniors and what data analysts are of the same grade?",
+        "interpretation2": "Provide a list of all software developers and also provide a list of all senior data analysts."
+    }
+]

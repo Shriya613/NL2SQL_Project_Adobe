@@ -1,0 +1,9 @@
+[
+    {
+        "question": "List magicians and mimes in Central Park, New York.",
+        "sql_query1": "SELECT Magicians.name\r\nFROM Locations JOIN Magicians ON Locations.id = Magicians.Street_Location\r\nWHERE Locations.LocationName = \"Central Park, New York\"\r\nUNION\r\nSELECT Mimes.name\r\nFROM Locations JOIN Mimes ON Locations.id = Mimes.Street_Location\r\nWHERE Locations.LocationName = \"Central Park, New York\"",
+        "sql_query2": "SELECT Magicians.name\r\nFROM Locations JOIN Magicians ON Locations.id = Magicians.Street_Location\r\nUNION\r\nSELECT Mimes.name\r\nFROM Locations JOIN Mimes ON Locations.id = Mimes.Street_Location\r\nWHERE Locations.LocationName = \"Central Park, New York\"",
+        "interpretation1": "What magicians are located in Central Park, New York and what mimes are in the same location?",
+        "interpretation2": "Provide a list of all magicians and also provide a list of mimes located in Central Park, New York."
+    }
+]

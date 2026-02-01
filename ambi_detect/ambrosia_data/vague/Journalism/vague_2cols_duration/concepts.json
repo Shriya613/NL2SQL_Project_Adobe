@@ -1,0 +1,7 @@
+{
+    "template": "Question: How long has this media outlet been in operation? Subject of Inquiry: Media Outlet\nFocus: Duration Possible answer types: 1. Operation Years 2. Operation Months",
+    "subject": "Media Outlet",
+    "focus": "Duration",
+    "general_category1": "Operation Years",
+    "general_category2": "Operation Months"
+}

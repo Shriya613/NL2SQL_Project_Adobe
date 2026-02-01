@@ -1,0 +1,7 @@
+{
+    "template": "Question: What does this teacher teach? Subject of Inquiry: Teacher\nFocus: Teaching Subjects Possible answer types: 1. Academic Discipline 2. Grade Level",
+    "subject": "Teacher",
+    "focus": "Teaching Subjects",
+    "general_category1": "Academic Discipline",
+    "general_category2": "Grade Level"
+}

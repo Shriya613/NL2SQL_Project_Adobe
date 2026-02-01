@@ -1,0 +1,9 @@
+[
+    {
+        "question": "Give me start dates of life insurances and annuities products with a payout of 50,000.",
+        "sql_query1": "SELECT Insurance_Products.StartDate \r\nFROM Insurance_Products\r\nWHERE (Insurance_Products.ProductType = \"Life Insurance\" OR Insurance_Products.ProductType = \"Annuity\") AND Insurance_Products.Payout = 50000.0",
+        "sql_query2": "SELECT Insurance_Products.StartDate \r\nFROM Insurance_Products\r\nWHERE Insurance_Products.ProductType = \"Life Insurance\" OR Insurance_Products.ProductType = \"Annuity\" AND Insurance_Products.Payout = 50000.0",
+        "interpretation1": "What are the start dates of life insurance products that have a payout of 50,000 and what are the start dates of annuity products that have the same payout?",
+        "interpretation2": "List all start dates of life insurance products combined with the start dates of annuity products with a payout of 50,000."
+    }
+]

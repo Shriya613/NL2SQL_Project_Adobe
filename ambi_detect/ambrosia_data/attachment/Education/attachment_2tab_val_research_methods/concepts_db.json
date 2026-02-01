@@ -1,0 +1,27 @@
+{
+    "domain": "Case_Studies",
+    "template": "Case Study and Interview are subclasses of Research Methods. All Case Studies and Interviews have property \"Topic\". There might be a Case Study and an Interview that both have \"Topic\" equal to \"Environmental Science\".",
+    "type": "2tab_val",
+    "general_class": "Research Methods",
+    "class1": {
+        "tab_name": "Case_Studies",
+        "col_name": null,
+        "value": null,
+        "scope_id": null,
+        "db_type": "table"
+    },
+    "class2": {
+        "tab_name": "Interviews",
+        "col_name": null,
+        "value": null,
+        "scope_id": null,
+        "db_type": "table"
+    },
+    "common_property": {
+        "tab_name": "Case_Studies",
+        "col_name": "Topic",
+        "value": "Environmental Science",
+        "scope_id": null,
+        "db_type": "value"
+    }
+}

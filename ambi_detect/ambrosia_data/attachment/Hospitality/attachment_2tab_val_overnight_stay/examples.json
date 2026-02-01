@@ -1,0 +1,9 @@
+[
+    {
+        "question": "Show guest rooms and suites that have air conditioning.",
+        "sql_query1": "SELECT Guestrooms.room as room\r\nFROM Guestrooms\r\nWHERE Guestrooms.amenities = \"Air Conditioning\"\r\nUNION\r\nSELECT Suites.suite_name as room\r\nFROM Suites\r\nWHERE Suites.amenities = \"Air Conditioning\"",
+        "sql_query2": "SELECT Guestrooms.room as room\r\nFROM Guestrooms\r\nUNION\r\nSELECT Suites.suite_name as room\r\nFROM Suites\r\nWHERE Suites.amenities = \"Air Conditioning\"",
+        "interpretation1": "Which guest rooms have air conditioning and which suites have the same amenity?",
+        "interpretation2": "Provide a list of all guest rooms as well as a list of suites that have air conditioning."
+    }
+]

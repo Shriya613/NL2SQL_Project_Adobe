@@ -1,0 +1,22 @@
+[
+    {
+        "question": "Provide the names of artists who did not release any music before 1995.",
+        "sql_query1": "SELECT realName FROM Artists WHERE id NOT IN (SELECT artistId FROM MusicAlbums WHERE releaseYear < 1995);",
+        "sql_query2": "SELECT alias FROM Artists WHERE id NOT IN (SELECT artistId FROM MusicAlbums WHERE releaseYear < 1995);",
+        "sql_query3": "SELECT realName, alias FROM Artists WHERE id NOT IN (SELECT artistId FROM MusicAlbums WHERE releaseYear < 1995);",
+        "interpretation1": "List the real names of artists who did not release music before 1995.",
+        "interpretation2": "List the aliases of artists who did not release music before 1995.",
+        "interpretation3": "List the real names and aliases of artists who did not release music before 1995.",
+        "sql_query_general": "SELECT Name FROM Artists WHERE id NOT IN (SELECT artistId FROM MusicAlbums WHERE releaseYear < 1995);"
+    },
+    {
+        "question": "Who was the lead for \"Siamese Dream\"?",
+        "sql_query1": "SELECT a.realName FROM Artists a JOIN MusicAlbums m ON a.id = m.artistId WHERE m.albumTitle = 'Siamese Dream';",
+        "sql_query2": "SELECT a.alias FROM Artists a JOIN MusicAlbums m ON a.id = m.artistId WHERE m.albumTitle = 'Siamese Dream';",
+        "sql_query3": "SELECT a.realName, alias FROM Artists a JOIN MusicAlbums m ON a.id = m.artistId WHERE m.albumTitle = 'Siamese Dream';",
+        "interpretation1": "What is the real name of the lead for \"Siamese Dream\"?",
+        "interpretation2": "What was the alias of the lead for \"Siamese Dream\"?",
+        "interpretation3": "What is the real name and alias of the lead for \"Siamese Dream\"?",
+        "sql_query_general": "SELECT a.Name FROM Artists a JOIN MusicAlbums m ON a.id = m.artistId WHERE m.albumTitle = 'Siamese Dream';"
+    }
+]

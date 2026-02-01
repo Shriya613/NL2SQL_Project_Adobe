@@ -1,0 +1,7 @@
+{
+    "template": "Question: Where is this spa located? Subject of Inquiry: Spa\nFocus: Location Possible answer types: 1. Building 2. Area",
+    "subject": "Spa",
+    "focus": "Location",
+    "general_category1": "Building",
+    "general_category2": "Area"
+}

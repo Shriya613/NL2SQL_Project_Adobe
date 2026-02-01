@@ -1,0 +1,8 @@
+{
+    "template": "Newspaper and Magazine are subclasses of Periodicals.",
+    "general_class": "Periodicals",
+    "class1": "Newspaper",
+    "class2": "Magazine",
+    "common_property": "Circulation Numbers",
+    "common_value": "20000"
+}

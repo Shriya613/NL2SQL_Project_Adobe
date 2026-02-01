@@ -1,0 +1,22 @@
+[
+    {
+        "question": "show me the age of the population in different countries.",
+        "sql_query1": "SELECT name, age\r\nFROM Median_Age JOIN Country ON Country.id = Median_Age.country\r\nGROUP BY country.name;",
+        "sql_query2": "SELECT name, start_age, end_age\r\nFROM Age_Range JOIN Country ON Country.id = Age_Range.country\r\nGROUP BY country;",
+        "sql_query3": "SELECT name, age, start_age, end_age\r\nFROM Population_Group JOIN Median_Age ON Population_Group.median_age = Median_Age.id JOIN Age_Range ON Population_Group.Age_Range_id = Age_Range.id JOIN Country ON Country.id = Age_Range.country\r\nGROUP BY name;",
+        "interpretation1": "show me the median age of the population in different countries.",
+        "interpretation2": "show me the age range of the population in different countries.",
+        "interpretation3": "show me the median age and age range of the population in different countries.",
+        "sql_query_general": "SELECT country, age\r\nFROM Age\r\nGROUP BY country;"
+    },
+    {
+        "question": "Show me the ages of different generations in different countries in order from most populated to least populated",
+        "sql_query1": "SELECT group_name, age, name\r\nFROM Population_Group JOIN Median_Age ON Population_Group.median_age = Median_Age.id JOIN Country ON Country.id = Median_Age.country\r\nGROUP BY group_name\r\nORDER BY population DESC;",
+        "sql_query2": "SELECT group_name, start_age, end_age, name\r\nFROM Population_Group JOIN Age_Range ON Population_Group.Age_Range_id = Age_Range.id JOIN Country ON Country.id = Age_Range.country\r\nGROUP BY group_name\r\nORDER BY population DESC;",
+        "sql_query3": "SELECT group_name, age, start_age, end_age, name\r\nFROM Population_Group JOIN Median_Age ON Population_Group.median_age = Median_Age.id JOIN Age_Range ON Population_Group.Age_Range_id = Age_Range.id JOIN Country ON Country.id = Age_Range.country\r\nGROUP BY group_name\r\nORDER BY population DESC;",
+        "interpretation1": "What is the median age of different generations in different countries in order from most populated to least populated",
+        "interpretation2": "What is the age range of different generations in different countries in order from most populated to least populated",
+        "interpretation3": "What is the median age of different generations in different countries in order from most populated to least populated and the corresponding age range?",
+        "sql_query_general": "SELECT group_name, age, country\r\nFROM Population_Group JOIN Age ON Population_Group.median_age = Age.id \r\nGROUP BY group_name\r\nORDER BY population DESC;"
+    }
+]

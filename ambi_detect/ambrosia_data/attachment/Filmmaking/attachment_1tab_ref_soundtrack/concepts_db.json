@@ -1,0 +1,33 @@
+{
+    "domain": "Director",
+    "template": "Sound Design and Music Score are subclasses of Soundtrack in filmmaking. All Sound Designs and Music Scores have a property \"Creator\". There might be a Sound Design and a Music Score both created by \"John Williams\".",
+    "type": "1tab_ref_like",
+    "general_class": {
+        "tab_name": "Movie_Elements",
+        "col_name": "element_type",
+        "value": null,
+        "scope_id": null,
+        "db_type": "column"
+    },
+    "class1": {
+        "tab_name": "Movie_Elements",
+        "col_name": "element_type",
+        "value": "Sound Design",
+        "scope_id": null,
+        "db_type": "value"
+    },
+    "class2": {
+        "tab_name": "Movie_Elements",
+        "col_name": "element_type",
+        "value": "Music Score",
+        "scope_id": null,
+        "db_type": "value"
+    },
+    "common_property": {
+        "tab_name": "Composer",
+        "col_name": "creator",
+        "value": "John Williams",
+        "scope_id": null,
+        "db_type": "value"
+    }
+}

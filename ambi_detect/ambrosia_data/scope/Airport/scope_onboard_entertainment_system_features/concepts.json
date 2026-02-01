@@ -1,0 +1,6 @@
+{
+    "template": "Each Onboard Entertainment System has many different Features. Among them, Movies is common to many Onboard Entertainment System.",
+    "specific_component": "Movies",
+    "components": "Features",
+    "entities": "Onboard Entertainment System"
+}

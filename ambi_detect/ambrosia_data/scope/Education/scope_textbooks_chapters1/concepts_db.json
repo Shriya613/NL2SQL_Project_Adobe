@@ -1,0 +1,31 @@
+{
+    "template": "Each Textbook has many different Chapters. Among them, Introduction is common to many Textbook.",
+    "entities": {
+        "tab_name": "Textbooks",
+        "col_name": null,
+        "value": null,
+        "scope_id": null,
+        "db_type": "table"
+    },
+    "components": {
+        "tab_name": "Chapters",
+        "col_name": null,
+        "value": null,
+        "scope_id": null,
+        "db_type": "table"
+    },
+    "specific_component": {
+        "tab_name": "Chapters",
+        "col_name": "chapter_name",
+        "value": "Introduction",
+        "scope_id": 0,
+        "db_type": "value"
+    },
+    "entities_components": {
+        "tab_name": "Textbook_Chapters",
+        "col_name": null,
+        "value": null,
+        "scope_id": null,
+        "db_type": "table"
+    }
+}

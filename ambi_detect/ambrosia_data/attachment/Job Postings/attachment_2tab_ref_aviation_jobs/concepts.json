@@ -1,0 +1,8 @@
+{
+    "template": "Flight Attendant and Pilot are subclasses of Aviation Jobs. All Flight attendants and Pilots have property \"Training Center\". There might be a Flight Attendant and a Pilot that both have \"Training Center\" equal to \"Aviation Academ\".",
+    "general_class": "Aviation Jobs",
+    "class1": "Flight Attendant",
+    "class2": "Pilot",
+    "common_property": "Training Center",
+    "common_value": "Aviation Academ"
+}

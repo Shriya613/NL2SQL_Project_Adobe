@@ -1,0 +1,6 @@
+{
+    "template": "Each Streaming Service has many different Content. Among them, Netflix Originals is common to many Streaming Service.",
+    "specific_component": "Netflix Originals",
+    "components": "Content",
+    "entities": "Streaming Service"
+}

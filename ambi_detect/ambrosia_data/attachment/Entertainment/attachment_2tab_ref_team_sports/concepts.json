@@ -1,0 +1,8 @@
+{
+    "template": "Football Player and Rugby Player are subclasses of Team Sports. All Football players and Rugby players have property \"Fitness Level\". There might be a Football Player and a Rugby Player that both have \"Fitness Level\" equal to \"Elite\".",
+    "general_class": "Team Sports",
+    "class1": "Football Player",
+    "class2": "Rugby Player",
+    "common_property": "Fitness Level",
+    "common_value": "Elite"
+}

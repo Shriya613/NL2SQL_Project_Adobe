@@ -1,0 +1,8 @@
+{
+    "template": "Field Trip and Study Hall are subclasses of Educational Activities. All Field Trips and Study Halls have property \"Number of Students\". There might be a Field Trip and a Study Hall that both have \"Number of Students\" equal to a specific number.",
+    "general_class": "Educational Activities",
+    "class1": "Field Trip",
+    "class2": "Study Hall",
+    "common_property": "Number of Students",
+    "common_value": "50"
+}

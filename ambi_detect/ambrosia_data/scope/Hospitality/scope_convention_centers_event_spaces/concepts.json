@@ -1,0 +1,6 @@
+{
+    "template": "Each Convention Centers has many different Event Spaces. Among them, Duty-Free Shopping is common to many Convention Centers.",
+    "specific_component": "Duty-Free Shopping",
+    "components": "Event Spaces",
+    "entities": "Convention Centers"
+}

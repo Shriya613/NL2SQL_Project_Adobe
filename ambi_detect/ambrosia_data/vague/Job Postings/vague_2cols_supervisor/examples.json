@@ -1,0 +1,22 @@
+[
+    {
+        "question": "Who is the supervisor of Linda Green?",
+        "sql_query1": "select M.Department_Head from Management M inner join positions P on P.positionId = M.positionId inner join Employees E on E.positionId = P.positionId where E.fullName = 'Linda Green'",
+        "sql_query2": "select M.Team_Leader from Management M inner join positions P on P.positionId = M.positionId inner join Employees E on E.positionId = P.positionId where E.fullName = 'Linda Green'",
+        "sql_query3": "select M.Department_Head, Team_Leader from Management M inner join positions P on P.positionId = M.positionId inner join Employees E on E.positionId = P.positionId where E.fullName = 'Linda Green'",
+        "interpretation1": "Who is Linda Green's department head?",
+        "interpretation2": "Who is Linda Green's team leader?",
+        "interpretation3": "Who is Linda Green's department head and team leader?",
+        "sql_query_general": "select M.Supervisor from Management M inner join positions P on P.positionId = M.positionId inner join Employees E on E.positionId = P.positionId where E.fullName = 'Linda Green'"
+    },
+    {
+        "question": "List all the supervisors in Company B",
+        "sql_query1": "select distinct M.Department_Head from Management M inner join positions P on P.positionId = M.positionId inner join Teams T on T.teamId = P.TeamId inner join Departments D on D.deptId = T.deptId inner join Companies C on C.companyId = D.companyId where C.name = 'Company B'",
+        "sql_query2": "select distinct M.Team_Leader from Management M inner join positions P on P.positionId = M.positionId inner join Teams T on T.teamId = P.TeamId inner join Departments D on D.deptId = T.deptId inner join Companies C on C.companyId = D.companyId where C.name = 'Company B'",
+        "sql_query3": "select distinct M.Department_Head, Team_Leader from Management M inner join positions P on P.positionId = M.positionId inner join Teams T on T.teamId = P.TeamId inner join Departments D on D.deptId = T.deptId inner join Companies C on C.companyId = D.companyId where C.name = 'Company B'",
+        "interpretation1": "List all the department heads in Company B.",
+        "interpretation2": "List all the team leaders in Company B.",
+        "interpretation3": "List all the department heads in Company B and team leaders in the same company.",
+        "sql_query_general": "select distinct M.Supervisor from Management M inner join positions P on P.positionId = M.positionId inner join Teams T on T.teamId = P.TeamId inner join Departments D on D.deptId = T.deptId inner join Companies C on C.companyId = D.companyId where C.name = 'Company B'"
+    }
+]

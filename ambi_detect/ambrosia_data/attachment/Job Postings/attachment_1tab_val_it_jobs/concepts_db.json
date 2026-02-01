@@ -1,0 +1,33 @@
+{
+    "domain": "CompanyInfo",
+    "template": "Network Administrator and IT Consultant are subclasses of IT Jobs. All Network administrators and It consultants have property \"Salary\". There might be a Network Administrator and a IT Consultant that both have \"Salary\" equal to \"$70,000\".",
+    "type": "1tab_val",
+    "general_class": {
+        "tab_name": "JobPostings",
+        "col_name": "itJobs",
+        "value": null,
+        "scope_id": null,
+        "db_type": "column"
+    },
+    "class1": {
+        "tab_name": "JobPostings",
+        "col_name": "itJobs",
+        "value": "Network Administrator",
+        "scope_id": null,
+        "db_type": "value"
+    },
+    "class2": {
+        "tab_name": "JobPostings",
+        "col_name": "itJobs",
+        "value": "IT Consultant",
+        "scope_id": null,
+        "db_type": "value"
+    },
+    "common_property": {
+        "tab_name": "JobPostings",
+        "col_name": "salary",
+        "value": "$70,000",
+        "scope_id": null,
+        "db_type": "value"
+    }
+}

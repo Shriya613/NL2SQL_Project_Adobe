@@ -1,0 +1,23 @@
+[
+    {
+        "question": "Give me the descriptions for each activity for all lessons",
+        "sql_query1": "SELECT Activities.description  from Lessons_Activities join Activities on Lessons_Activities.activitiesType = Activities.activityType join Lessons on Lessons_Activities.lessonsId = Lessons.id   GROUP BY Lessons_Activities.activitiesType HAVING COUNT(DISTINCT Lessons_Activities.lessonsId) = (SELECT COUNT(*) FROM  Lessons)",
+        "sql_query2": "select lessons.lessonname , activities.description from Lessons_Activities join Activities on Lessons_Activities.activitiesType = Activities.activityType join Lessons on Lessons_Activities.lessonsId = Lessons.id",
+        "interpretation1": "What activities are common to all lessons",
+        "interpretation2": "For each lesson, show me the description of activities on offer"
+    },
+    {
+        "question": "Tell me the activities every lesson has.",
+        "sql_query1": "SELECT Activities.activityType  from Lessons_Activities join Activities on Lessons_Activities.activitiesType = Activities.activityType join Lessons on Lessons_Activities.lessonsId = Lessons.id   GROUP BY Lessons_Activities.activitiesType HAVING COUNT(DISTINCT Lessons_Activities.lessonsId) = (SELECT COUNT(*) FROM  Lessons)",
+        "sql_query2": "select lessons.lessonname , activities.activitytype from Lessons_Activities join Activities on Lessons_Activities.activitiesType = Activities.activityType join Lessons on Lessons_Activities.lessonsId = Lessons.id",
+        "interpretation1": "What activities do all lessons have in common?",
+        "interpretation2": "For each lesson, list the activities they have."
+    },
+    {
+        "question": "What activity types and descriptions are associated with each lesson?",
+        "sql_query1": "SELECT Activities.activityType, Activities.description  from Lessons_Activities join Activities on Lessons_Activities.activitiesType = Activities.activityType join Lessons on Lessons_Activities.lessonsId = Lessons.id   GROUP BY Lessons_Activities.activitiesType HAVING COUNT(DISTINCT Lessons_Activities.lessonsId) = (SELECT COUNT(*) FROM  Lessons)",
+        "sql_query2": "select lessons.lessonname , activities.activitytype , activities.description from Lessons_Activities join Activities on Lessons_Activities.activitiesType = Activities.activityType join Lessons on Lessons_Activities.lessonsId = Lessons.id",
+        "interpretation1": "Which activity type and description of activities are shared by all lessons?",
+        "interpretation2": "For each lesson, provide the corresponding activity type and description of activities."
+    }
+]

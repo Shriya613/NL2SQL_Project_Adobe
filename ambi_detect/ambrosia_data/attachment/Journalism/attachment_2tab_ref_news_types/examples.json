@@ -1,0 +1,9 @@
+[
+    {
+        "question": "Provide latest news and news analysis on the Turkey-Syria Earthquakes.",
+        "sql_query1": "SELECT Breaking_News.headline as title\r\nFROM Events JOIN Breaking_News ON Events.eventId = Breaking_News.eventId\r\nWHERE Events.eventName = \"Turkey\u2013Syria Earthquakes\"\r\nUNION\r\nSELECT News_Analysis.title\r\nFROM Events JOIN News_Analysis ON Events.eventId = News_Analysis.eventId\r\nWHERE Events.eventName = \"Turkey\u2013Syria Earthquakes\"",
+        "sql_query2": "SELECT Breaking_News.headline as title\r\nFROM Events JOIN Breaking_News ON Events.eventId = Breaking_News.eventId\r\nUNION\r\nSELECT News_Analysis.title\r\nFROM Events JOIN News_Analysis ON Events.eventId = News_Analysis.eventId\r\nWHERE Events.eventName = \"Turkey\u2013Syria Earthquakes\"",
+        "interpretation1": "What latest news are there on the Turkey-Syria Earthquakes and what news analysis articles are there on the same topic?",
+        "interpretation2": "Provide a list of all latest news and also provide a list of news analysis articles on the Turkey-Syria Earthquakes."
+    }
+]

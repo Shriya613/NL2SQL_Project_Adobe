@@ -1,0 +1,25 @@
+{
+    "template": "Question: How many seasons are planned for this series? Subject of Inquiry: Series\nFocus: Number of Seasons Possible answer types: 1. Released Seasons 2. Planned Seasons",
+    "general_category1": {
+        "tab_name": "TV_Shows",
+        "col_name": "Released_Seasons",
+        "value": null,
+        "scope_id": null,
+        "db_type": "column"
+    },
+    "general_category2": {
+        "tab_name": "TV_Shows",
+        "col_name": "Planned_Seasons",
+        "value": null,
+        "scope_id": null,
+        "db_type": "column"
+    },
+    "subject": {
+        "tab_name": "TV_Shows",
+        "col_name": "Series",
+        "value": null,
+        "scope_id": null,
+        "db_type": "column"
+    },
+    "type": "2cols"
+}

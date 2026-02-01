@@ -1,0 +1,23 @@
+[
+    {
+        "question": "Can you list the test case types each quality assurance tester is qualified for?",
+        "sql_query1": "SELECT Test_Cases.caseType  from Qualified_Tests join Test_Cases on Qualified_Tests.testCaseID = Test_Cases.testCaseID join Quality_Assurance_Testers on Qualified_Tests.testerID = Quality_Assurance_Testers.testerID   GROUP BY Qualified_Tests.testCaseID HAVING COUNT(DISTINCT Qualified_Tests.testerID) = (SELECT COUNT(*) FROM  Quality_Assurance_Testers)",
+        "sql_query2": "select quality_assurance_testers.fullname , test_cases.casetype from Qualified_Tests join Test_Cases on Qualified_Tests.testCaseID = Test_Cases.testCaseID join Quality_Assurance_Testers on Qualified_Tests.testerID = Quality_Assurance_Testers.testerID",
+        "interpretation1": "What types of test cases are assigned to all testers at the same time?",
+        "interpretation2": "Can you list the quality assurance testers and the corresponding test case types."
+    },
+    {
+        "question": "Describe the test cases each quality assurance tester uses.",
+        "sql_query1": "SELECT Test_Cases.description  from Qualified_Tests join Test_Cases on Qualified_Tests.testCaseID = Test_Cases.testCaseID join Quality_Assurance_Testers on Qualified_Tests.testerID = Quality_Assurance_Testers.testerID   GROUP BY Qualified_Tests.testCaseID HAVING COUNT(DISTINCT Qualified_Tests.testerID) = (SELECT COUNT(*) FROM  Quality_Assurance_Testers)",
+        "sql_query2": "select quality_assurance_testers.fullname , test_cases.description from Qualified_Tests join Test_Cases on Qualified_Tests.testCaseID = Test_Cases.testCaseID join Quality_Assurance_Testers on Qualified_Tests.testerID = Quality_Assurance_Testers.testerID",
+        "interpretation1": "What are the descriptions of test cases that are common to all quality assurance testers?",
+        "interpretation2": "For every quality assurance tester, list descriptions of test cases they use."
+    },
+    {
+        "question": "Tell me about the different types of test cases, including their descriptions, that each tester uses.",
+        "sql_query1": "SELECT Test_Cases.caseType, Test_Cases.description  from Qualified_Tests join Test_Cases on Qualified_Tests.testCaseID = Test_Cases.testCaseID join Quality_Assurance_Testers on Qualified_Tests.testerID = Quality_Assurance_Testers.testerID   GROUP BY Qualified_Tests.testCaseID HAVING COUNT(DISTINCT Qualified_Tests.testerID) = (SELECT COUNT(*) FROM  Quality_Assurance_Testers)",
+        "sql_query2": "select quality_assurance_testers.fullname , test_cases.casetype , test_cases.description from Qualified_Tests join Test_Cases on Qualified_Tests.testCaseID = Test_Cases.testCaseID join Quality_Assurance_Testers on Qualified_Tests.testerID = Quality_Assurance_Testers.testerID",
+        "interpretation1": "What information is there about test cases common to all testers (their types and descriptions)?",
+        "interpretation2": "For every tester, list information about test cases they use (their types and descriptions)."
+    }
+]

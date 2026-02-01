@@ -1,0 +1,31 @@
+{
+    "template": "Each Multimedia Journalists has many different Platforms. Among them, Video is common to many Multimedia Journalists.",
+    "entities": {
+        "tab_name": "Multimedia_Journalists",
+        "col_name": null,
+        "value": null,
+        "scope_id": null,
+        "db_type": "table"
+    },
+    "components": {
+        "tab_name": "Platforms",
+        "col_name": null,
+        "value": null,
+        "scope_id": null,
+        "db_type": "table"
+    },
+    "specific_component": {
+        "tab_name": "Platforms",
+        "col_name": "platform_name",
+        "value": "Video",
+        "scope_id": 0,
+        "db_type": "value"
+    },
+    "entities_components": {
+        "tab_name": "Multimedia_Journalists_Platforms",
+        "col_name": null,
+        "value": null,
+        "scope_id": null,
+        "db_type": "table"
+    }
+}

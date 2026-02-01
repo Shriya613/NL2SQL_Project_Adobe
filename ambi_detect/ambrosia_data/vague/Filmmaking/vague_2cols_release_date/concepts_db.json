@@ -1,0 +1,25 @@
+{
+    "template": "Question: When will this film be released? Subject of Inquiry: Movies\nFocus: Release Date Possible answer types: 1. Streaming Release Date 2. Theatrical Release Date",
+    "general_category1": {
+        "tab_name": "Movies",
+        "col_name": "streaming_release_date",
+        "value": null,
+        "scope_id": null,
+        "db_type": "column"
+    },
+    "general_category2": {
+        "tab_name": "Movies",
+        "col_name": "theatrical_release_date",
+        "value": null,
+        "scope_id": null,
+        "db_type": "column"
+    },
+    "subject": {
+        "tab_name": "Movies",
+        "col_name": null,
+        "value": null,
+        "scope_id": null,
+        "db_type": "table"
+    },
+    "type": "2cols"
+}

@@ -1,0 +1,22 @@
+[
+    {
+        "question": "Show the country with the smallest population and its language.",
+        "sql_query1": "SELECT Name, Official_Language FROM Countries ORDER BY Population ASC LIMIT 1",
+        "sql_query2": "SELECT Name, Spoken_Language FROM Countries ORDER BY Population ASC LIMIT 1",
+        "sql_query3": "SELECT Name, Official_Language, Spoken_Language FROM Countries ORDER BY Population ASC LIMIT 1",
+        "interpretation1": "Show official languages of country with the smallest population.",
+        "interpretation2": "Show spoken languages of country with the smallest population.",
+        "interpretation3": "Show official and spoken languages of country with the smallest population.",
+        "sql_query_general": "SELECT Name, Languages FROM Countries WHERE Population > '100000000'"
+    },
+    {
+        "question": "Show all countries that have a population less than 100000000 and their languages.",
+        "sql_query1": "SELECT Name, Official_Language FROM Countries WHERE Population < '100000000'",
+        "sql_query2": "SELECT Name, Spoken_Language FROM Countries WHERE Population < '100000000'",
+        "sql_query3": "SELECT Name, Official_Language, Spoken_Language FROM Countries WHERE Population < '100000000'",
+        "interpretation1": "Show the official languages of all countries with a population less than 100 million and these countries.",
+        "interpretation2": "Show the spoken languages of all countries with a population less than 100 million and these countries.",
+        "interpretation3": "Show the official and spoken languages of all countries with a population less than 100 million and these countries.",
+        "sql_query_general": "SELECT Name, Languages FROM Countries WHERE Population < '100000000'"
+    }
+]

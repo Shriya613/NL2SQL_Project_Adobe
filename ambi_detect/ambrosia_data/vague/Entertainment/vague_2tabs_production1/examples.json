@@ -1,0 +1,22 @@
+[
+    {
+        "question": "Who made a documentary about the highest-grossing film?",
+        "sql_query1": "SELECT name FROM Producer JOIN Documentary ON Documentary.producer_id =  Producer.id JOIN Movie ON  Movie.foreign_key =  Documentary.id ORDER BY box_office DESC LIMIT 1;",
+        "sql_query2": "SELECT name FROM Company JOIN Documentary ON Documentary.Company_id =  Company.id JOIN Movie ON  Movie.foreign_key =  Documentary.id ORDER BY box_office DESC LIMIT 1;",
+        "sql_query3": "SELECT Company.name, Producer.name FROM Producer JOIN Documentary ON Documentary.producer_id =  Producer.id JOIN Movie ON  Movie.foreign_key =  Documentary.id JOIN Company ON Documentary.Company_id =  Company.id ORDER BY box_office DESC LIMIT 1;",
+        "interpretation1": "Who produced a documentary about the highest-grossing film?",
+        "interpretation2": "What company made a documentary about the highest-grossing film?",
+        "interpretation3": "Show the producer and company that made a documentary about the highest-grossing film.",
+        "sql_query_general": "SELECT name FROM Production JOIN Documentary ON Documentary.producer_id =  Production.id JOIN Movie ON  Movie.foreign_key =  Documentary.id ORDER BY box_office DESC LIMIT 1;"
+    },
+    {
+        "question": "Who made the film about the highest rated film?",
+        "sql_query1": "SELECT name FROM Producer JOIN Documentary ON Documentary.producer_id =  Producer.id JOIN Movie ON  Movie.foreign_key =  Documentary.id  JOIN Review  On Review.movie_id =  Movie.id ORDER BY rating DESC LIMIT 1;",
+        "sql_query2": "SELECT name FROM Company JOIN Documentary ON Documentary.Company_id =  Company.id JOIN Movie ON  Movie.foreign_key =  Documentary.id  JOIN Review  On Review.movie_id =  Movie.id ORDER BY rating DESC LIMIT 1;",
+        "sql_query3": "SELECT Company.name, Producer.name FROM Producer JOIN Documentary ON Documentary.producer_id =  Producer.id JOIN Movie ON  Movie.foreign_key =  Documentary.id  JOIN Review  On Review.movie_id =  Movie.id JOIN Company ON Documentary.Company_id =  Company.id  ORDER BY rating DESC LIMIT 1;",
+        "interpretation1": "what is name of the producer for the movie with the highest rated review",
+        "interpretation2": "what is name of the production company for the movie with the highest rated review",
+        "interpretation3": "what is production company and producer name for the movie with the highest rated review",
+        "sql_query_general": "SELECT name FROM Production JOIN Documentary ON Documentary.producer_id =  Production.id JOIN Movie ON  Movie.foreign_key =  Documentary.id  JOIN Review  On Review.movie_id =  Movie.id ORDER BY rating DESC LIMIT 1;"
+    }
+]

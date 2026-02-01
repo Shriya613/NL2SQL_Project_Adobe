@@ -1,0 +1,9 @@
+[
+    {
+        "question": "Which test names are associated with every diagnostic center?",
+        "sql_query1": "SELECT Tests.TestName  from Diagnostic_Centers_Tests join Tests on Diagnostic_Centers_Tests.TestTypeID = Tests.TestTypeID join Diagnostic_Centers on Diagnostic_Centers_Tests.DiagnosticCenterID = Diagnostic_Centers.CenterID   GROUP BY Diagnostic_Centers_Tests.TestTypeID HAVING COUNT(DISTINCT Diagnostic_Centers_Tests.DiagnosticCenterID) = (SELECT COUNT(*) FROM  Diagnostic_Centers)",
+        "sql_query2": "select diagnostic_centers.name , tests.testname from Diagnostic_Centers_Tests join Tests on Diagnostic_Centers_Tests.TestTypeID = Tests.TestTypeID join Diagnostic_Centers on Diagnostic_Centers_Tests.DiagnosticCenterID = Diagnostic_Centers.CenterID",
+        "interpretation1": "Provide the test name that is common for all diagnostic centers.",
+        "interpretation2": "For every diagnostic center, what are the corresponding test names?"
+    }
+]

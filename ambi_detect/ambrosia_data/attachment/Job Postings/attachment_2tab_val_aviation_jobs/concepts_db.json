@@ -1,0 +1,27 @@
+{
+    "domain": "Flight_Attendants",
+    "template": "Flight Attendant and Pilot are subclasses of Aviation Jobs. All Flight attendants and Pilots have property \"Training Center\". There might be a Flight Attendant and a Pilot that both have \"Training Center\" equal to \"Aviation Academ\".",
+    "type": "2tab_val",
+    "general_class": "Aviation Jobs",
+    "class1": {
+        "tab_name": "Flight_Attendants",
+        "col_name": null,
+        "value": null,
+        "scope_id": null,
+        "db_type": "table"
+    },
+    "class2": {
+        "tab_name": "Pilots",
+        "col_name": null,
+        "value": null,
+        "scope_id": null,
+        "db_type": "table"
+    },
+    "common_property": {
+        "tab_name": "Flight_Attendants",
+        "col_name": "Training_Center",
+        "value": "Aviation Academy",
+        "scope_id": null,
+        "db_type": "value"
+    }
+}

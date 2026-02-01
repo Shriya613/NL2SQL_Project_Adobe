@@ -1,0 +1,6 @@
+{
+    "template": "Each Farm Stays has many different Activities. Among them, Milking Cows is common to many Farm Stays.",
+    "specific_component": "Milking Cows",
+    "components": "Activities",
+    "entities": "Farm Stays"
+}

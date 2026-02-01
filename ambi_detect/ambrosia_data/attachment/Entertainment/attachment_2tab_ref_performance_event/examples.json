@@ -1,0 +1,9 @@
+[
+    {
+        "question": "Provide dance recitals and talent shows in Room 202",
+        "sql_query1": "SELECT Dance_Recital.name\r\nFROM Audition_Room JOIN Dance_Recital ON Audition_Room.RoomID = Dance_Recital.RoomID\r\nWHERE Audition_Room.RoomName = \"Room 202\"\r\nUNION\r\nSELECT Talent_Show.name\r\nFROM Audition_Room JOIN Talent_Show ON Audition_Room.RoomID = Talent_Show.RoomID\r\nWHERE Audition_Room.RoomName = \"Room 202\"",
+        "sql_query2": "SELECT Dance_Recital.name\r\nFROM Audition_Room JOIN Dance_Recital ON Audition_Room.RoomID = Dance_Recital.RoomID\r\nUNION\r\nSELECT Talent_Show.name\r\nFROM Audition_Room JOIN Talent_Show ON Audition_Room.RoomID = Talent_Show.RoomID\r\nWHERE Audition_Room.RoomName = \"Room 202\"",
+        "interpretation1": "What dance recitals are in Room 202, and what talent shows are in the same room?",
+        "interpretation2": "Give a list of all dance recitals and also list talent shows in Room 202."
+    }
+]

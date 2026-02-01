@@ -1,0 +1,6 @@
+{
+    "template": "Each College Campuses has many different Buildings. Among them, Library is common to many College Campuses.",
+    "specific_component": "Library",
+    "components": "Buildings",
+    "entities": "College Campuses"
+}

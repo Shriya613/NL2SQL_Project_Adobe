@@ -1,0 +1,31 @@
+{
+    "template": "Each Streaming Services has many different Accessibility Features. Among them, Closed Captioning is common to many Streaming Services.",
+    "entities": {
+        "tab_name": "Streaming_Services",
+        "col_name": null,
+        "value": null,
+        "scope_id": null,
+        "db_type": "table"
+    },
+    "components": {
+        "tab_name": "Accessibility_Features",
+        "col_name": null,
+        "value": null,
+        "scope_id": null,
+        "db_type": "table"
+    },
+    "specific_component": {
+        "tab_name": "Accessibility_Features",
+        "col_name": "featureName",
+        "value": "Closed_Captioning",
+        "scope_id": 0,
+        "db_type": "value"
+    },
+    "entities_components": {
+        "tab_name": "Streaming_Services_Accessibility_Features",
+        "col_name": null,
+        "value": null,
+        "scope_id": null,
+        "db_type": "table"
+    }
+}

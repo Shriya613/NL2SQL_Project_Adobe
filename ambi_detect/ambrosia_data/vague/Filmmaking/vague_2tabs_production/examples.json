@@ -1,0 +1,22 @@
+[
+    {
+        "question": "Who produced Inception?",
+        "sql_query1": "select name from Studio join Movies on Studio.studio_id=Movies.studio_id where Movies.title='Inception'",
+        "sql_query2": "select Full_name from Producer join Movies on Producer.producer_id=Movies.studio_id where Movies.title='Inception'",
+        "sql_query3": "select name, Full_name  from Studio join Movies on Studio.studio_id=Movies.studio_id  join Producer on Producer.producer_id=Movies.studio_id where Movies.title='Inception'",
+        "interpretation1": "In which studio was Inception produced?",
+        "interpretation2": "Who was the producer of Inception?",
+        "interpretation3": "Who produced Inception and in which studio?",
+        "sql_query_general": "select name from Production join Movies on Production.studio_id=Movies.studio_id where Movies.title='Inception'"
+    },
+    {
+        "question": "Display a list of movies and who produced them",
+        "sql_query1": "select Movies.title, Studio.name from Studio join Movies on Studio.studio_id=Movies.studio_id",
+        "sql_query2": "select Movies.title, Producer.Full_name  from Producer join Movies on Producer.producer_id=Movies.studio_id",
+        "sql_query3": "select Movies.title, Studio.name, Producer.Full_name  from Studio join Movies on Studio.studio_id=Movies.studio_id  join Producer on Producer.producer_id=Movies.studio_id",
+        "interpretation1": "List all the movies alongside the production studios.",
+        "interpretation2": "Show me all the movies and the names of the producers.",
+        "interpretation3": "Provide all the movies, the producers and studios.",
+        "sql_query_general": "select Movies.title, Production.name from Production join Movies on Production.studio_id=Movies.studio_id"
+    }
+]

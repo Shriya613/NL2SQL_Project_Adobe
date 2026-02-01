@@ -1,0 +1,7 @@
+{
+    "template": "Question: What is the historical context of this play? Subject of Inquiry: Play\nFocus: Context Possible answer types: 1. Epoch 2. Society",
+    "subject": "Play",
+    "focus": "Context",
+    "general_category1": "Epoch",
+    "general_category2": "Society"
+}

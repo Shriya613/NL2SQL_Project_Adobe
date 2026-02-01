@@ -1,0 +1,22 @@
+[
+    {
+        "question": "Who created Giselle?",
+        "sql_query1": "SELECT musician FROM Ballets WHERE name = 'Giselle';",
+        "sql_query2": "SELECT choreographer FROM Ballets WHERE name = 'Giselle';",
+        "sql_query3": "SELECT musician, choreographer FROM Ballets WHERE name = 'Giselle';",
+        "interpretation1": "Which choreographer created Giselle?",
+        "interpretation2": "Which musician composed Giselle?",
+        "interpretation3": "Which choreographer and musician created Giselle?",
+        "sql_query_general": "SELECT Creator FROM Ballets WHERE name = 'Giselle';"
+    },
+    {
+        "question": "Who created the ballet with the most performances?",
+        "sql_query1": "SELECT musician FROM Ballets JOIN Performances ON Performances.ballet_id = Ballets.id ORDER BY performers_count DESC LIMIT 1;",
+        "sql_query2": "SELECT choreographer FROM Ballets JOIN Performances ON Performances.ballet_id = Ballets.id ORDER BY performers_count DESC LIMIT 1;",
+        "sql_query3": "SELECT musician, choreographer FROM Ballets JOIN Performances ON Performances.ballet_id = Ballets.id ORDER BY performers_count DESC LIMIT 1;",
+        "interpretation1": "show me the musician with the largest performance count",
+        "interpretation2": "show me the choreographer with the largest performance count",
+        "interpretation3": "show me the musician with the largest number of performances and also the choreographer he largest number of performances.",
+        "sql_query_general": "SELECT Creator FROM Ballets JOIN Performances ON Performances.ballet_id = Ballets.id ORDER BY performers_count DESC LIMIT 1;"
+    }
+]

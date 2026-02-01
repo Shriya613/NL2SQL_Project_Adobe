@@ -1,0 +1,6 @@
+{
+    "template": "Each Film Archivists has many different Preservation Methods. Among them, Film Negatives is common to many Film Archivists.",
+    "specific_component": "Film Negatives",
+    "components": "Preservation Methods",
+    "entities": "Film Archivists"
+}

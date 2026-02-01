@@ -1,0 +1,7 @@
+{
+    "template": "Question: What are the rules regarding carry-on baggage size limits for domestic flights? Subject of Inquiry: Airlines\nFocus: Size Limits Possible answer types: 1. Linear Dimensions 2. Weight Restriction",
+    "subject": "Airlines",
+    "focus": "Size Limits",
+    "general_category1": "Linear Dimensions",
+    "general_category2": "Weight Restriction"
+}

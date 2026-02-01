@@ -1,0 +1,22 @@
+[
+    {
+        "question": "Where does Dr. Smith hold his class(es)?",
+        "sql_query1": "SELECT Rooms.Room_number\r\nFROM ROOMS \r\n            JOIN TEACHERS ON TEACHERS.Office_room_number=ROOMS.Room_number \r\nWHERE TEACHERS.Last_name=='Smith' AND TEACHERS.First_name='Dr.'",
+        "sql_query2": "SELECT Rooms.Building_name\r\nFROM ROOMS \r\n            JOIN TEACHERS ON TEACHERS.Office_room_number=ROOMS.Room_number \r\nWHERE TEACHERS.Last_name=='Smith' AND TEACHERS.First_name='Dr.'",
+        "sql_query3": "SELECT  Rooms.Room_number, Rooms.Building_name\r\nFROM ROOMS \r\n            JOIN TEACHERS ON TEACHERS.Office_room_number=ROOMS.Room_number \r\nWHERE TEACHERS.Last_name=='Smith' AND TEACHERS.First_name='Dr.'",
+        "interpretation1": "What room number does Dr Smith hold classes in?",
+        "interpretation2": "What is the name of the building where Dr. Smith holds classes?",
+        "interpretation3": "What is the building name and room number for the room in which Dr. Smith holds classes?",
+        "sql_query_general": "SELECT Rooms.Location\r\nFROM ROOMS \r\n            JOIN TEACHERS ON TEACHERS.Office_room_number=ROOMS.Location \r\nWHERE TEACHERS.Last_name=='Smith' AND TEACHERS.First_name='Dr.'"
+    },
+    {
+        "question": "What locations does Assoc. Prof Martin use for classes?",
+        "sql_query1": "SELECT Rooms.Room_number\r\nFROM ROOMS \r\n            JOIN TEACHERS ON TEACHERS.Office_room_number = ROOMS.Room_number \r\nWHERE TEACHERS.Last_name = 'Martin' AND TEACHERS.First_name = 'Assoc. Prof.';",
+        "sql_query2": "SELECT Rooms.Building_name\r\nFROM ROOMS \r\n            JOIN TEACHERS ON TEACHERS.Office_room_number = ROOMS.Room_number \r\nWHERE TEACHERS.Last_name = 'Martin' AND TEACHERS.First_name = 'Assoc. Prof.';",
+        "sql_query3": "SELECT Rooms.Room_number,  Rooms.Building_name\r\nFROM ROOMS \r\n            JOIN TEACHERS ON TEACHERS.Office_room_number = ROOMS.Room_number \r\nWHERE TEACHERS.Last_name = 'Martin' AND TEACHERS.First_name = 'Assoc. Prof.';",
+        "interpretation1": "Which rooms does Assoc. Prof Martin use for classes?",
+        "interpretation2": "Which buildings does Assoc. Prof Martin use for classes?",
+        "interpretation3": "Which rooms and buildings does Assoc. Prof Martin use for classes?",
+        "sql_query_general": "SELECT Rooms.Location\r\nFROM ROOMS \r\n            JOIN TEACHERS ON TEACHERS.Office_room_number = ROOMS.Location \r\nWHERE TEACHERS.Last_name = 'Martin' AND TEACHERS.First_name = 'Assoc. Prof.';"
+    }
+]

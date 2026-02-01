@@ -1,0 +1,22 @@
+[
+    {
+        "question": "What sources were used when filming 'AI Ethics & Society'?",
+        "sql_query1": "SELECT name, specialty FROM Experts JOIN Documentary ON Documentary.EXPERT_ID = Experts.id WHERE title = 'AI Ethics & Society'",
+        "sql_query2": "SELECT description, source FROM Archival_Footage JOIN Documentary ON Documentary.Archive_Footage_ID = Archival_Footage.id WHERE title = 'AI Ethics & Society'",
+        "sql_query3": "SELECT name, specialty,  description, source FROM Experts JOIN Documentary ON Documentary.EXPERT_ID = Experts.id JOIN Archival_Footage ON Documentary.Archive_Footage_ID = Archival_Footage.id  WHERE title = 'AI Ethics & Society'",
+        "interpretation1": "What experts were consulted when filming 'AI Ethics & Society'?",
+        "interpretation2": "What archival footage is there of 'AI Ethics & Society'?",
+        "interpretation3": "What experts and archival footage were used when filming 'AI Ethics & Society'?",
+        "sql_query_general": "SELECT name, specialty FROM Consulted_Sources JOIN Documentary ON Documentary.EXPERT_ID = Consulted_Sources.id WHERE title = 'AI Ethics & Society'"
+    },
+    {
+        "question": "What sources were used when filming 'The Future of Work'?",
+        "sql_query1": "SELECT name, specialty FROM Experts JOIN Documentary ON Documentary.EXPERT_ID = Experts.id WHERE title = 'The Future of Work'",
+        "sql_query2": "SELECT description, source FROM Archival_Footage JOIN Documentary ON Documentary.Archive_Footage_ID = Archival_Footage.id WHERE title = 'The Future of Work'",
+        "sql_query3": "SELECT name, specialty,  description, source FROM Experts JOIN Documentary ON Documentary.EXPERT_ID = Experts.id JOIN Archival_Footage ON Documentary.Archive_Footage_ID = Archival_Footage.id WHERE title = 'The Future of Work'",
+        "interpretation1": "What experts were used when filming 'The Future of Work'?",
+        "interpretation2": "What archival footage was used when filming 'The Future of Work'?",
+        "interpretation3": "What experts and archival footages were used when filming 'The Future of Work'?",
+        "sql_query_general": "SELECT name, specialty FROM Consulted_Sources JOIN Documentary ON Documentary.EXPERT_ID = Consulted_Sources.id WHERE title = 'The Future of Work'"
+    }
+]

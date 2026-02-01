@@ -1,0 +1,6 @@
+{
+    "template": "Each Farms has many different Crops. Among them, Wheat is common to many Farms.",
+    "specific_component": "Wheat",
+    "components": "Crops",
+    "entities": "Farms"
+}

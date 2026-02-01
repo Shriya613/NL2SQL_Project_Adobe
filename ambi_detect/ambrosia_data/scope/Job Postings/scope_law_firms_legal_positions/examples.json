@@ -1,0 +1,23 @@
+[
+    {
+        "question": "What legal positions do we have for each law firm?",
+        "sql_query1": "SELECT Legal_Positions.position_name  from Law_Firms_Legal_Positions join Legal_Positions on Law_Firms_Legal_Positions.position_id = Legal_Positions.id join Law_Firms on Law_Firms_Legal_Positions.firm_id = Law_Firms.id   GROUP BY Law_Firms_Legal_Positions.position_id HAVING COUNT(DISTINCT Law_Firms_Legal_Positions.firm_id) = (SELECT COUNT(*) FROM  Law_Firms)",
+        "sql_query2": "select law_firms.name , legal_positions.position_name from Law_Firms_Legal_Positions join Legal_Positions on Law_Firms_Legal_Positions.position_id = Legal_Positions.id join Law_Firms on Law_Firms_Legal_Positions.firm_id = Law_Firms.id",
+        "interpretation1": "What legal position is common for all law firms?",
+        "interpretation2": "Give me the law firms and the corresponding legal positions."
+    },
+    {
+        "question": "What are the legal position names and required experiences for each law firm?",
+        "sql_query1": "SELECT Legal_Positions.position_name, Legal_Positions.required_experience  from Law_Firms_Legal_Positions join Legal_Positions on Law_Firms_Legal_Positions.position_id = Legal_Positions.id join Law_Firms on Law_Firms_Legal_Positions.firm_id = Law_Firms.id   GROUP BY Law_Firms_Legal_Positions.position_id HAVING COUNT(DISTINCT Law_Firms_Legal_Positions.firm_id) = (SELECT COUNT(*) FROM  Law_Firms)",
+        "sql_query2": "select law_firms.name , legal_positions.position_name , legal_positions.required_experience from Law_Firms_Legal_Positions join Legal_Positions on Law_Firms_Legal_Positions.position_id = Legal_Positions.id join Law_Firms on Law_Firms_Legal_Positions.firm_id = Law_Firms.id",
+        "interpretation1": "What is the legal position name and required experience that is common for all law firms?",
+        "interpretation2": "What is the legal position name and required experience corresponding to each law firm respectively?"
+    },
+    {
+        "question": "Show me the required experience for positions each law firm has.",
+        "sql_query1": "SELECT Legal_Positions.required_experience  from Law_Firms_Legal_Positions join Legal_Positions on Law_Firms_Legal_Positions.position_id = Legal_Positions.id join Law_Firms on Law_Firms_Legal_Positions.firm_id = Law_Firms.id   GROUP BY Law_Firms_Legal_Positions.position_id HAVING COUNT(DISTINCT Law_Firms_Legal_Positions.firm_id) = (SELECT COUNT(*) FROM  Law_Firms)",
+        "sql_query2": "select law_firms.name , legal_positions.required_experience from Law_Firms_Legal_Positions join Legal_Positions on Law_Firms_Legal_Positions.position_id = Legal_Positions.id join Law_Firms on Law_Firms_Legal_Positions.firm_id = Law_Firms.id",
+        "interpretation1": "What is the required experience of positions all law firms have in common?",
+        "interpretation2": "For every law firm, list required experience of positions they have."
+    }
+]

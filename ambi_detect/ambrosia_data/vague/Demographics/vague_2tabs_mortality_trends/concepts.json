@@ -1,0 +1,7 @@
+{
+    "template": "Question: What is the mortality rate in this province? Subject of Inquiry: Province\nFocus: Mortality Trends Possible answer types: 1. Number of Deaths 2. Crude Death Rate",
+    "subject": "Province",
+    "focus": "Mortality Trends",
+    "general_category1": "Number of Deaths",
+    "general_category2": "Crude Death Rate"
+}

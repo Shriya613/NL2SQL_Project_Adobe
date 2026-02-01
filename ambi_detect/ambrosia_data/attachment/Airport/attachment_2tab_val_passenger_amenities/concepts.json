@@ -1,0 +1,8 @@
+{
+    "template": "Airport Lounge and Observation Deck are subclasses of Passenger Amenities. All Airport Lounges and Observation Decks have the property \"Accessibility\". There might be an Airport Lounge and an Observation Deck that both have \"Accessibility\" for \"Wheelchair Users\".",
+    "general_class": "Passenger Amenities",
+    "class1": "Airport Lounge",
+    "class2": "Observation Deck",
+    "common_property": "Accessibility",
+    "common_value": "Wheelchair Users"
+}

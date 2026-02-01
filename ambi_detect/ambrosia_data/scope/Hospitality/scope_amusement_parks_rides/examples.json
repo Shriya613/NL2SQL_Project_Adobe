@@ -1,0 +1,23 @@
+[
+    {
+        "question": "Give me the names and types of the rides that every amusement park has.",
+        "sql_query1": "SELECT Rides.ride_name, Rides.ride_type  from Amusement_Parks_Rides join Rides on Amusement_Parks_Rides.rides_id = Rides.id join Amusement_Parks on Amusement_Parks_Rides.amusement_park_id = Amusement_Parks.id   GROUP BY Amusement_Parks_Rides.rides_id HAVING COUNT(DISTINCT Amusement_Parks_Rides.amusement_park_id) = (SELECT COUNT(*) FROM  Amusement_Parks)",
+        "sql_query2": "select amusement_parks.name , rides.ride_name , rides.ride_type from Amusement_Parks_Rides join Rides on Amusement_Parks_Rides.rides_id = Rides.id join Amusement_Parks on Amusement_Parks_Rides.amusement_park_id = Amusement_Parks.id",
+        "interpretation1": "What are the names and types of the rides that all amusement parks have?",
+        "interpretation2": "For each amusement park, list the names and types of the rides they have."
+    },
+    {
+        "question": "What ride types are there at every amusement park?",
+        "sql_query1": "SELECT Rides.ride_type  from Amusement_Parks_Rides join Rides on Amusement_Parks_Rides.rides_id = Rides.id join Amusement_Parks on Amusement_Parks_Rides.amusement_park_id = Amusement_Parks.id   GROUP BY Amusement_Parks_Rides.rides_id HAVING COUNT(DISTINCT Amusement_Parks_Rides.amusement_park_id) = (SELECT COUNT(*) FROM  Amusement_Parks)",
+        "sql_query2": "select amusement_parks.name , rides.ride_type from Amusement_Parks_Rides join Rides on Amusement_Parks_Rides.rides_id = Rides.id join Amusement_Parks on Amusement_Parks_Rides.amusement_park_id = Amusement_Parks.id",
+        "interpretation1": "What ride type is equally present at all amusement parks?",
+        "interpretation2": "For every amusement park, list all of the ride types that are present."
+    },
+    {
+        "question": "Give me the rides that each amusement park has.",
+        "sql_query1": "SELECT Rides.ride_name  from Amusement_Parks_Rides join Rides on Amusement_Parks_Rides.rides_id = Rides.id join Amusement_Parks on Amusement_Parks_Rides.amusement_park_id = Amusement_Parks.id   GROUP BY Amusement_Parks_Rides.rides_id HAVING COUNT(DISTINCT Amusement_Parks_Rides.amusement_park_id) = (SELECT COUNT(*) FROM  Amusement_Parks)",
+        "sql_query2": "select amusement_parks.name , rides.ride_name from Amusement_Parks_Rides join Rides on Amusement_Parks_Rides.rides_id = Rides.id join Amusement_Parks on Amusement_Parks_Rides.amusement_park_id = Amusement_Parks.id",
+        "interpretation1": "Which rides do all amusement parks have in common?",
+        "interpretation2": "For each amusement park, show the rides that they have."
+    }
+]

@@ -1,0 +1,23 @@
+[
+    {
+        "question": "List the status of subtitles available at each streaming service.",
+        "sql_query1": "SELECT Subtitles.default_subtitle  from Streaming_Services_Subtitles join Subtitles on Streaming_Services_Subtitles.subtitle_id = Subtitles.id join Streaming_Services on Streaming_Services_Subtitles.streaming_service_id = Streaming_Services.id   GROUP BY Streaming_Services_Subtitles.subtitle_id HAVING COUNT(DISTINCT Streaming_Services_Subtitles.streaming_service_id) = (SELECT COUNT(*) FROM  Streaming_Services)",
+        "sql_query2": "select streaming_services.name , subtitles.default_subtitle from Streaming_Services_Subtitles join Subtitles on Streaming_Services_Subtitles.subtitle_id = Subtitles.id join Streaming_Services on Streaming_Services_Subtitles.streaming_service_id = Streaming_Services.id",
+        "interpretation1": "List the status of subtitles that are common to all streaming services.",
+        "interpretation2": "List the status of subtitles for every streaming service."
+    },
+    {
+        "question": "Which languages and default subtitles are associated with every streaming service?",
+        "sql_query1": "SELECT Subtitles.language, Subtitles.default_subtitle  from Streaming_Services_Subtitles join Subtitles on Streaming_Services_Subtitles.subtitle_id = Subtitles.id join Streaming_Services on Streaming_Services_Subtitles.streaming_service_id = Streaming_Services.id   GROUP BY Streaming_Services_Subtitles.subtitle_id HAVING COUNT(DISTINCT Streaming_Services_Subtitles.streaming_service_id) = (SELECT COUNT(*) FROM  Streaming_Services)",
+        "sql_query2": "select streaming_services.name , subtitles.language , subtitles.default_subtitle from Streaming_Services_Subtitles join Subtitles on Streaming_Services_Subtitles.subtitle_id = Subtitles.id join Streaming_Services on Streaming_Services_Subtitles.streaming_service_id = Streaming_Services.id",
+        "interpretation1": "what language and default subtitle is common for all streaming services?",
+        "interpretation2": "For every streaming service, give me the corresponding languages and default subtitles."
+    },
+    {
+        "question": "What languages are available for subtitles on each streaming service?",
+        "sql_query1": "SELECT Subtitles.language  from Streaming_Services_Subtitles join Subtitles on Streaming_Services_Subtitles.subtitle_id = Subtitles.id join Streaming_Services on Streaming_Services_Subtitles.streaming_service_id = Streaming_Services.id   GROUP BY Streaming_Services_Subtitles.subtitle_id HAVING COUNT(DISTINCT Streaming_Services_Subtitles.streaming_service_id) = (SELECT COUNT(*) FROM  Streaming_Services)",
+        "sql_query2": "select streaming_services.name , subtitles.language from Streaming_Services_Subtitles join Subtitles on Streaming_Services_Subtitles.subtitle_id = Subtitles.id join Streaming_Services on Streaming_Services_Subtitles.streaming_service_id = Streaming_Services.id",
+        "interpretation1": "Which subtitle language is common across all streaming services?",
+        "interpretation2": "For each streaming service. provide the corresponding subtitle language options."
+    }
+]

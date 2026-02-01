@@ -1,0 +1,9 @@
+[
+    {
+        "question": "Show all lab equipment and safety gear that was purchased in January 2023.",
+        "sql_query1": "SELECT Lab_Equipments.equipName as name\r\nFROM Lab_Equipments\r\nWHERE Lab_Equipments.dateOfPurchase = \"January 2023\"\r\nUNION\r\nSELECT Safety_Gears.gearName as name\r\nFROM Safety_Gears\r\nWHERE Safety_Gears.dateOfPurchase = \"January 2023\"",
+        "sql_query2": "SELECT Lab_Equipments.equipName as name\r\nFROM Lab_Equipments\r\nUNION\r\nSELECT Safety_Gears.gearName as name\r\nFROM Safety_Gears\r\nWHERE Safety_Gears.dateOfPurchase = \"January 2023\"",
+        "interpretation1": "Show all items purchased in January 2023 from both lab equipment and safety gear.",
+        "interpretation2": "Show all the lab equipment and just the safety gear that was purchased in January 2023."
+    }
+]

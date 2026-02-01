@@ -1,0 +1,8 @@
+{
+    "template": "Jazz Band and Rock Band are subclasses of Music Band. All Jazz bands and Rock bands have property \"Founding Year\". There might be a Jazz Band and a Rock Band that both have \"Founding Year\" equal to \"1985\".",
+    "general_class": "Music Band",
+    "class1": "Jazz Band",
+    "class2": "Rock Band",
+    "common_property": "Founding Year",
+    "common_value": "1985"
+}

@@ -1,0 +1,6 @@
+{
+    "template": "Each Project Managers has many different Methodologies. Among them, Agile is common to many Project Managers.",
+    "specific_component": "Agile",
+    "components": "Methodologies",
+    "entities": "Project Managers"
+}

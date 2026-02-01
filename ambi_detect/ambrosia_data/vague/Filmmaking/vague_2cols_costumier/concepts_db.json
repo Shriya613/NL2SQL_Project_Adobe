@@ -1,0 +1,25 @@
+{
+    "template": "Question: Who designed these costumes? Subject of Inquiry: Costumes\nFocus: Costumier Possible answer types: 1. Costume Designer 2. Costume Supervisor",
+    "general_category1": {
+        "tab_name": "Costumes",
+        "col_name": "Costume_Designer",
+        "value": null,
+        "scope_id": null,
+        "db_type": "column"
+    },
+    "general_category2": {
+        "tab_name": "Costumes",
+        "col_name": "Costume_Supervisor",
+        "value": null,
+        "scope_id": null,
+        "db_type": "column"
+    },
+    "subject": {
+        "tab_name": "Costumes",
+        "col_name": "Costumes",
+        "value": null,
+        "scope_id": null,
+        "db_type": "column"
+    },
+    "type": "2cols"
+}

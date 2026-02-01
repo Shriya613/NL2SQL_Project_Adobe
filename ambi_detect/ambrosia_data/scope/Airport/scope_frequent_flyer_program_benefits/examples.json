@@ -1,0 +1,9 @@
+[
+    {
+        "question": "What benefits descriptions are associated with each frequent flyer program?",
+        "sql_query1": "SELECT Benefits.Description  from Frequent_Flyer_Program_Benefits join Benefits on Frequent_Flyer_Program_Benefits.BenefitId = Benefits.BenefitId join Frequent_Flyer_Program on Frequent_Flyer_Program_Benefits.ProgramId = Frequent_Flyer_Program.ProgramId   GROUP BY Frequent_Flyer_Program_Benefits.BenefitId HAVING COUNT(DISTINCT Frequent_Flyer_Program_Benefits.ProgramId) = (SELECT COUNT(*) FROM  Frequent_Flyer_Program)",
+        "sql_query2": "select frequent_flyer_program.programid , benefits.description from Frequent_Flyer_Program_Benefits join Benefits on Frequent_Flyer_Program_Benefits.BenefitId = Benefits.BenefitId join Frequent_Flyer_Program on Frequent_Flyer_Program_Benefits.ProgramId = Frequent_Flyer_Program.ProgramId",
+        "interpretation1": "Please provide the description of benefits that is shared among all frequent flyer programs",
+        "interpretation2": "For each frequent flyer program, could you provide the corresponding benefit descriptions?"
+    }
+]

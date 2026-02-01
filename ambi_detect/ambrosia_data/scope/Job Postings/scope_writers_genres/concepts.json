@@ -1,0 +1,6 @@
+{
+    "template": "Each Writers has many different Genres. Among them, Blog Post is common to many Writers.",
+    "specific_component": "Blog Post",
+    "components": "Genres",
+    "entities": "Writers"
+}

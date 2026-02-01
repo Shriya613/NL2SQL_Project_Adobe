@@ -1,0 +1,22 @@
+[
+    {
+        "question": "Where's The Morning Show recorded?",
+        "sql_query1": "SELECT Studio.name\r\nFrom Studio\r\nJOIN Podcast on Podcast.studio_id = Studio.studio_id\r\nWHERE Podcast.title = \"The Morning Show\"",
+        "sql_query2": "SELECT Address.street, Address.city, Address.state, Address.country\r\nFrom Address\r\nJOIN Podcast on Podcast.Address_id = Address.Address_id\r\nWHERE Podcast.title = \"The Morning Show\"",
+        "sql_query3": "SELECT Studio.name,  Address.street, Address.city, Address.state, Address.country\r\nFrom Studio\r\nJOIN Podcast on Podcast.studio_id = Studio.studio_id\r\nJOIN Address on Podcast.Address_id = Address.Address_id WHERE Podcast.title = \"The Morning Show\"",
+        "interpretation1": "Which studio is The Morning Show recorded in?",
+        "interpretation2": "What is The Morning Show studio address?",
+        "interpretation3": "What is The Morning Show studio and address?",
+        "sql_query_general": "SELECT RECORDING_LOCATION.name\r\nFrom RECORDING_LOCATION\r\nJOIN Podcast on Podcast.studio_id = Recording_Location.studio_id\r\nWHERE Podcast.title = \"The Morning Show\""
+    },
+    {
+        "question": "For the podcasts - if any - that get 5-star reviews, where are they recorded?",
+        "sql_query1": "SELECT Studio.name\r\nFrom Studio\r\nJOIN Podcast on Podcast.studio_id = Studio.studio_id\r\nJOIN Episode ON Episode.podcast_id = Podcast.podcast_id\r\nJOIN Review ON Review.episode_id = Episode.episode_id\r\nWHERE Review.rating = 5",
+        "sql_query2": "SELECT Address.street, Address.city, Address.state, Address.country\r\nFrom Address\r\nJOIN Podcast on Podcast.Address_id = Address.Address_id\r\nJOIN Episode ON Episode.podcast_id = Podcast.podcast_id\r\nJOIN Review ON Review.episode_id = Episode.episode_id\r\nWHERE Review.rating = 5",
+        "sql_query3": "SELECT Studio.name,  Address.street, Address.city, Address.state, Address.country\r\nFrom Studio\r\nJOIN Podcast on Podcast.studio_id = Studio.studio_id\r\nJOIN Episode ON Episode.podcast_id = Podcast.podcast_id\r\nJOIN Review ON Review.episode_id = Episode.episode_id\r\nJOIN Address on Podcast.Address_id = Address.Address_id  WHERE Review.rating = 5",
+        "interpretation1": "What studio are the podcasts with 5-star reviews recorded in?",
+        "interpretation2": "What is the address of the studio where podcasts with 5-star reviews are recorded?",
+        "interpretation3": "What is the studio and its address where podcasts with 5-star reviews are recorded?",
+        "sql_query_general": "SELECT RECORDING_LOCATION.name\r\nFrom RECORDING_LOCATION\r\nJOIN Podcast on Podcast.studio_id = Recording_Location.studio_id\r\nJOIN Episode ON Episode.podcast_id = Podcast.podcast_id\r\nJOIN Review ON Review.episode_id = Episode.episode_id\r\nWHERE Review.rating = 5"
+    }
+]

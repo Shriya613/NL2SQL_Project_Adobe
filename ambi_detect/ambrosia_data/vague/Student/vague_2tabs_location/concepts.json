@@ -1,0 +1,7 @@
+{
+    "template": "Question: Where is this library located? Subject of Inquiry: Libraries\nFocus: Location Possible answer types: 1. Building Name 2. University",
+    "subject": "Libraries",
+    "focus": "Location",
+    "general_category1": "Building Name",
+    "general_category2": "University"
+}

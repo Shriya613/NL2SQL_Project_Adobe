@@ -1,0 +1,8 @@
+{
+    "template": "Blockbuster and Indie Film are subclasses of Genre. All Blockbuster and Indie Films have a property \"Film Festival\" where they might be featured. There might be both a Blockbuster and an Indie Film featured in the \"Sundance Film Festival\".",
+    "general_class": "Genre",
+    "class1": "Blockbuster",
+    "class2": "Indie Film",
+    "common_property": "Film Festival",
+    "common_value": "Sundance Film Festival"
+}

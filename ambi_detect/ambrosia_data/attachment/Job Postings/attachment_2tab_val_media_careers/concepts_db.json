@@ -1,0 +1,27 @@
+{
+    "domain": "Journalists",
+    "template": "Journalist and Editor are subclasses of Media Careers. All Journalists and Editors have property \"Languages\". There might be a Journalist and a Editor that both have \"Languages\" equal to \"English and Spanish\".",
+    "type": "2tab_val",
+    "general_class": "Media Careers",
+    "class1": {
+        "tab_name": "Journalists",
+        "col_name": null,
+        "value": null,
+        "scope_id": null,
+        "db_type": "table"
+    },
+    "class2": {
+        "tab_name": "Editors",
+        "col_name": null,
+        "value": null,
+        "scope_id": null,
+        "db_type": "table"
+    },
+    "common_property": {
+        "tab_name": "Journalists",
+        "col_name": "languages",
+        "value": "English and Spanish",
+        "scope_id": null,
+        "db_type": "value"
+    }
+}

@@ -1,0 +1,8 @@
+{
+    "template": "Lost Property and Customer Complaints are subclasses of Airport Services. All Lost Property and Customer Complaint departments have the property \"Date\". There might be a Lost Property case and a Customer Complaint that both have \"Date\" equal to \"January 5, 2024\".",
+    "general_class": "Airport Services",
+    "class1": "Lost Property",
+    "class2": "Customer Complaints",
+    "common_property": "Date",
+    "common_value": "January 5, 2024"
+}

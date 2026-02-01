@@ -1,0 +1,7 @@
+{
+    "template": "Question: Who produced this stage play? Subject of Inquiry: Stage Play\nFocus: Production Possible answer types: 1. Theater Company 2. Producer",
+    "subject": "Stage Play",
+    "focus": "Production",
+    "general_category1": "Theater Company",
+    "general_category2": "Producer"
+}

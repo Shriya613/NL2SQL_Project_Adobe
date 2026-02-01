@@ -1,0 +1,7 @@
+{
+    "template": "Question: What is the rating of this film? Subject of Inquiry: Film\nFocus: Rating Possible answer types: 1. Film Critic Rating 2. Audience Rating",
+    "subject": "Film",
+    "focus": "Rating",
+    "general_category1": "Film Critic Rating",
+    "general_category2": "Audience Rating"
+}

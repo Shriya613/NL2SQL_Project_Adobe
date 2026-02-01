@@ -1,0 +1,9 @@
+[
+    {
+        "question": "Show me mobile banking apps and internet banking platforms that use token-based authentication for signing in.",
+        "sql_query1": "SELECT MobileBankingApps.name\r\nFROM SignInOptions JOIN MobileBankingApps ON SignInOptions.OptionName = MobileBankingApps.PlatformType\r\nWHERE SignInOptions.OptionName = \"Token Based Authentication\"\r\nUNION\r\nSELECT InternetBankingPlatforms.name\r\nFROM SignInOptions JOIN InternetBankingPlatforms ON SignInOptions.OptionName = InternetBankingPlatforms.AdditionalFeatures\r\nWHERE SignInOptions.OptionName = \"Token Based Authentication\"",
+        "sql_query2": "SELECT MobileBankingApps.name\r\nFROM SignInOptions JOIN MobileBankingApps ON SignInOptions.OptionName = MobileBankingApps.PlatformType\r\nUNION\r\nSELECT InternetBankingPlatforms.name\r\nFROM SignInOptions JOIN InternetBankingPlatforms ON SignInOptions.OptionName = InternetBankingPlatforms.AdditionalFeatures\r\nWHERE SignInOptions.OptionName = \"Token Based Authentication\"",
+        "interpretation1": "Which mobile banking apps and internet banking platforms allow users to sign in using token-based authentication?",
+        "interpretation2": "Can you show me all mobile banking apps and also internet banking platforms that use token-based authentication for signing in?"
+    }
+]

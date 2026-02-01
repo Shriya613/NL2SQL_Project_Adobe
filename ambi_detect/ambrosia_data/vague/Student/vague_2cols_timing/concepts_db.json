@@ -1,0 +1,25 @@
+{
+    "template": "Question: What is the deadline for this assignment? Subject of Inquiry: Assignments\nFocus: Timing Possible answer types: 1. Date 2. Time",
+    "general_category1": {
+        "tab_name": "Assignments",
+        "col_name": "date",
+        "value": null,
+        "scope_id": null,
+        "db_type": "column"
+    },
+    "general_category2": {
+        "tab_name": "Assignments",
+        "col_name": "time",
+        "value": null,
+        "scope_id": null,
+        "db_type": "column"
+    },
+    "subject": {
+        "tab_name": "Assignments",
+        "col_name": "assignment_id",
+        "value": null,
+        "scope_id": null,
+        "db_type": "column"
+    },
+    "type": "2cols"
+}

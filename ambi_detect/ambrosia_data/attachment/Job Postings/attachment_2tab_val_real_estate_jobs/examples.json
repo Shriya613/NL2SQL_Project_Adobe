@@ -1,0 +1,9 @@
+[
+    {
+        "question": "List all real estate agents and property managers who got 5% commission.",
+        "sql_query1": "SELECT Real_Estate_Agents.name\r\nFROM Real_Estate_Agents\r\nWHERE Real_Estate_Agents.commission = \"5%\"\r\nUNION\r\nSELECT Property_Managers.name\r\nFROM Property_Managers\r\nWHERE Property_Managers.commission = \"5%\"",
+        "sql_query2": "SELECT Real_Estate_Agents.name\r\nFROM Real_Estate_Agents\r\nUNION\r\nSELECT Property_Managers.name\r\nFROM Property_Managers\r\nWHERE Property_Managers.commission = \"5%\"",
+        "interpretation1": "Give me the people who earned 5% commission from both the real estate agents and property managers.",
+        "interpretation2": "Show all the real estate agents and also the property managers, but only those who got 5% commission from the latter."
+    }
+]

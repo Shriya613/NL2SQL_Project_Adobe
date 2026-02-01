@@ -1,0 +1,7 @@
+{
+    "template": "Question: What is the average cost of this surgical procedure? Subject of Inquiry: Surgical Procedure\nFocus: Cost Possible answer types: 1. Insurance Covered 2. Out-of-pocket Expense",
+    "subject": "Surgical Procedure",
+    "focus": "Cost",
+    "general_category1": "Insurance Covered",
+    "general_category2": "Out-of-pocket Expense"
+}

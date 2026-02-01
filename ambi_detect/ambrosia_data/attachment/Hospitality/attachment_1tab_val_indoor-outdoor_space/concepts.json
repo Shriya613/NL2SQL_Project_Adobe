@@ -1,0 +1,8 @@
+{
+    "template": "Lobby and Terrace are subclasses of Indoor-Outdoor Space. All Lobbies and Terraces have property \"Size\". There might be a Lobby and a Terrace that both have \"Size\" equal to \"500\".",
+    "general_class": "Indoor-Outdoor Space",
+    "class1": "Lobby",
+    "class2": "Terrace",
+    "common_property": "Size",
+    "common_value": "500"
+}

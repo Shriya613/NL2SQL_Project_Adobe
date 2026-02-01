@@ -1,0 +1,6 @@
+{
+    "template": "Each Data Analysts has many different Techniques. Among them, Regression Analysis is common to many Data Analysts.",
+    "specific_component": "Regression Analysis",
+    "components": "Techniques",
+    "entities": "Data Analysts"
+}

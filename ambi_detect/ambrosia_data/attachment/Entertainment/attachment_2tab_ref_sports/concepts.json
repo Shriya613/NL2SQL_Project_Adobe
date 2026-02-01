@@ -1,0 +1,8 @@
+{
+    "template": "Baseball Team and Basketball Team are subclasses of Sports. All Baseball teams and Basketball teams have property \"Country\". There might be a Baseball Team and a Basketball Team that both have \"Country\" equal to \"Canada\".",
+    "general_class": "Sports",
+    "class1": "Baseball Team",
+    "class2": "Basketball Team",
+    "common_property": "Country",
+    "common_value": "Canada"
+}

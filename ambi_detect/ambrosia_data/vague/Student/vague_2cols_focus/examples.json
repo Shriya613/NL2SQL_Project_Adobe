@@ -1,0 +1,22 @@
+[
+    {
+        "question": "What are the grades corresponding to each conference and what is it about?",
+        "sql_query1": "SELECT a.conference, a.themeTrack, b.grade FROM Theme_Tracks a JOIN Submissions b ON a.themeTrackID = b.themeTrackId",
+        "sql_query2": "SELECT a.conference, a.submissionTopic, b.grade FROM Theme_Tracks a JOIN Submissions b ON a.themeTrackID = b.themeTrackId",
+        "sql_query3": "SELECT a.conference, a.themeTrack, submissionTopic, b.grade FROM Theme_Tracks a JOIN Submissions b ON a.themeTrackID = b.themeTrackId",
+        "interpretation1": "List the grades achieved for each project by conference alongside the conference theme track.",
+        "interpretation2": "Show all the project grades from each conference along with the submission topic.",
+        "interpretation3": "For every project grade show the associated conference with the relevant theme track and submission topic.",
+        "sql_query_general": "SELECT a.conference, a.Focus, b.grade FROM Theme_Tracks a JOIN Submissions b ON a.themeTrackID = b.themeTrackId"
+    },
+    {
+        "question": "What grade did John receive on their submission and what was the focus of that conference?",
+        "sql_query1": "SELECT a.themeTrack, b.grade FROM Theme_Tracks a JOIN Submissions b ON a.themeTrackID = b.themeTrackId JOIN Students c ON b.studentId = c.id where c.FirstName = 'John'",
+        "sql_query2": "SELECT a.submissionTopic, b.grade FROM Theme_Tracks a JOIN Submissions b ON a.themeTrackID = b.themeTrackId JOIN Students c ON b.studentId = c.id where c.FirstName = 'John'",
+        "sql_query3": "SELECT a.themeTrack, submissionTopic, b.grade FROM Theme_Tracks a JOIN Submissions b ON a.themeTrackID = b.themeTrackId JOIN Students c ON b.studentId = c.id where c.FirstName = 'John'",
+        "interpretation1": "What grade did John receive on their submission and what was the theme track of that conference?",
+        "interpretation2": "What grade did John receive on their submission and what was the topic of that conference?",
+        "interpretation3": "What grade did John receive on their submission and what was the theme track and topic of that conference?",
+        "sql_query_general": "SELECT a.Focus, b.grade FROM Theme_Tracks a JOIN Submissions b ON a.themeTrackID = b.themeTrackId JOIN Students c ON b.studentId = c.id where c.FirstName = 'John'"
+    }
+]

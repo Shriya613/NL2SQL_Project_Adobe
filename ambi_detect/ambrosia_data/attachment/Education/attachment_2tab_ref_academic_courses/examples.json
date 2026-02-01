@@ -1,0 +1,9 @@
+[
+    {
+        "question": "Show engineering classes and design classes which have a project named \"Waste Management System\".",
+        "sql_query1": "SELECT EngineeringClasses.classname\r\nFROM Projects JOIN EngineeringClasses ON Projects.EngineeringClassId = EngineeringClasses.ClassID\r\nWHERE Projects.ProjectName = 'Waste Management System'\r\nUNION\r\nSELECT DesignClasses.classname\r\nFROM Projects JOIN DesignClasses ON Projects.DesignClassId = DesignClasses.ClassID\r\nWHERE Projects.ProjectName = 'Waste Management System'",
+        "sql_query2": "SELECT EngineeringClasses.classname\r\nFROM Projects JOIN EngineeringClasses ON Projects.EngineeringClassId = EngineeringClasses.ClassID\r\nUNION\r\nSELECT DesignClasses.classname\r\nFROM Projects JOIN DesignClasses ON Projects.DesignClassId = DesignClasses.ClassID\r\nWHERE Projects.ProjectName = 'Waste Management System'",
+        "interpretation1": "Show the names of both engineering and design courses where either have a project named \"Waste Management System\".",
+        "interpretation2": "Show the names of all engineering classes and the names of design classes which have a project named \"Waste Management System\"."
+    }
+]

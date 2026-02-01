@@ -1,0 +1,25 @@
+{
+    "template": "Question: What is the historical context of this documentary? Subject of Inquiry: Documentary\nFocus: Context Possible answer types: 1. Historical Era 2. Event",
+    "general_category1": {
+        "tab_name": "Documentary",
+        "col_name": "HistoricalEra",
+        "value": null,
+        "scope_id": null,
+        "db_type": "column"
+    },
+    "general_category2": {
+        "tab_name": "Documentary",
+        "col_name": "Event",
+        "value": null,
+        "scope_id": null,
+        "db_type": "column"
+    },
+    "subject": {
+        "tab_name": "Documentary",
+        "col_name": "DocumentaryID",
+        "value": null,
+        "scope_id": null,
+        "db_type": "column"
+    },
+    "type": "2cols"
+}

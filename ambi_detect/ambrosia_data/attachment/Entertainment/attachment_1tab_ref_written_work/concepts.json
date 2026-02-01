@@ -1,0 +1,8 @@
+{
+    "template": "Essay and Letter are subclasses of Written Work. All Essays and Letters have property \"Author\". There might be a Essay and a Letter that both have \"Author\" equal to \"Dr. Emily Thompson\".",
+    "general_class": "Written Work",
+    "class1": "Essay",
+    "class2": "Letter",
+    "common_property": "Author",
+    "common_value": "Dr. Emily Thompson"
+}

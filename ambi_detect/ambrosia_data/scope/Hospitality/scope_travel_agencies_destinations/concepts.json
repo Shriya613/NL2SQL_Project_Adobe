@@ -1,0 +1,6 @@
+{
+    "template": "Each Travel Agencies has many different Destinations. Among them, Europe is common to many Travel Agencies.",
+    "specific_component": "Europe",
+    "components": "Destinations",
+    "entities": "Travel Agencies"
+}

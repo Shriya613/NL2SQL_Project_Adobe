@@ -1,0 +1,8 @@
+{
+    "template": "Currency Swap and Interest Rate Swap are subclasses of Financial Swaps. All Currency swaps and Interest rate swaps have property \"Bank\". There might be a Currency Swap and a Interest Rate Swap that both have \"Bank\" equal to \"Royal Bank\".",
+    "general_class": "Financial Swaps",
+    "class1": "Currency Swap",
+    "class2": "Interest Rate Swap",
+    "common_property": "Bank",
+    "common_value": "Royal Bank"
+}

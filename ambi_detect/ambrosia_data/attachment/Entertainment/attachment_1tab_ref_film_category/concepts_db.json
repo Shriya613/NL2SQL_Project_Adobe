@@ -1,0 +1,33 @@
+{
+    "domain": "Categories",
+    "template": "Fantasy and Horror are subclasses of Film Category. All Fantasies and Horrors have property \"Budget\". There might be a Fantasy and a Horror that both have \"Budget\" equal to \"20000000\".",
+    "type": "1tab_ref_like",
+    "general_class": {
+        "tab_name": "Categories",
+        "col_name": "categoryName",
+        "value": null,
+        "scope_id": null,
+        "db_type": "column"
+    },
+    "class1": {
+        "tab_name": "Categories",
+        "col_name": "categoryName",
+        "value": "Fantasy",
+        "scope_id": null,
+        "db_type": "value"
+    },
+    "class2": {
+        "tab_name": "Categories",
+        "col_name": "categoryName",
+        "value": "Horror",
+        "scope_id": null,
+        "db_type": "value"
+    },
+    "common_property": {
+        "tab_name": "Films",
+        "col_name": "budget",
+        "value": 20000000.0,
+        "scope_id": null,
+        "db_type": "value"
+    }
+}

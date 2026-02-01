@@ -1,0 +1,6 @@
+{
+    "template": "Each Casinos has many different Games. Among them, Slot Machines is common to many Casinos.",
+    "specific_component": "Slot Machines",
+    "components": "Games",
+    "entities": "Casinos"
+}

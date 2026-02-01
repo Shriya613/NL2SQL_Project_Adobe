@@ -1,0 +1,22 @@
+[
+    {
+        "question": "Show a list of the customers along with their account number, fees and overdraft limits.",
+        "sql_query1": "SELECT\r\nAccounts.AccountNumber,\r\nCustomers.fullName, \r\nFees.TransactionFee, \r\nOverdrafts.LimitAmount\r\nFROM Accounts\r\nJOIN Customers ON Accounts.CustomerID = Customers.CustomerID\r\nJOIN Fees ON Fees.AccountNumber = Accounts.AccountNumber\r\nJOIN Overdrafts ON Overdrafts.AccountNumber = Accounts.AccountNumber",
+        "sql_query2": "SELECT\r\nAccounts.AccountNumber,\r\nCustomers.fullName, \r\nFees.MaintenanceFee, \r\nOverdrafts.LimitAmount\r\nFROM Accounts\r\nJOIN Customers ON Accounts.CustomerID = Customers.CustomerID\r\nJOIN Fees ON Fees.AccountNumber = Accounts.AccountNumber\r\nJOIN Overdrafts ON Overdrafts.AccountNumber = Accounts.AccountNumber",
+        "sql_query3": "SELECT\r\nAccounts.AccountNumber,\r\nCustomers.fullName, \r\nFees.TransactionFee, Fees.MaintenanceFee,\r\nOverdrafts.LimitAmount\r\nFROM Accounts\r\nJOIN Customers ON Accounts.CustomerID = Customers.CustomerID\r\nJOIN Fees ON Fees.AccountNumber = Accounts.AccountNumber\r\nJOIN Overdrafts ON Overdrafts.AccountNumber = Accounts.AccountNumber",
+        "interpretation1": "List customers, along with their account number, transaction fee and overdraft limits.",
+        "interpretation2": "List customers, along with their account number, maintenance fee and overdraft limits.",
+        "interpretation3": "List customers, along with their account number, transaction and fees and overdraft limits.",
+        "sql_query_general": "SELECT\r\nAccounts.AccountNumber,\r\nCustomers.fullName, \r\nFees.Fees, \r\nOverdrafts.LimitAmount\r\nFROM Accounts\r\nJOIN Customers ON Accounts.CustomerID = Customers.CustomerID\r\nJOIN Fees ON Fees.AccountNumber = Accounts.AccountNumber\r\nJOIN Overdrafts ON Overdrafts.AccountNumber = Accounts.AccountNumber"
+    },
+    {
+        "question": "List all customers with their account numbers and loan rate of interest with account fees.",
+        "sql_query1": "SELECT\r\nAccounts.AccountNumber,\r\nCustomers.fullName,\r\nLoans.RateOfInterest,\r\nFees.TransactionFee\r\nFROM Accounts\r\nJOIN Customers ON Customers.CustomerID = Accounts.CustomerID\r\nJOIN Loans ON Loans.AccountNumber = Accounts.AccountNumber\r\nJOIN Fees ON Fees.AccountNumber = Accounts.AccountNumber",
+        "sql_query2": "SELECT\r\nAccounts.AccountNumber,\r\nCustomers.fullName,\r\nLoans.RateOfInterest,\r\nFees.MaintenanceFee\r\nFROM Accounts\r\nJOIN Customers ON Customers.CustomerID = Accounts.CustomerID\r\nJOIN Loans ON Loans.AccountNumber = Accounts.AccountNumber\r\nJOIN Fees ON Fees.AccountNumber = Accounts.AccountNumber",
+        "sql_query3": "SELECT\r\nAccounts.AccountNumber,\r\nCustomers.fullName,\r\nLoans.RateOfInterest,\r\nFees.TransactionFee, Fees.MaintenanceFee\r\nFROM Accounts\r\nJOIN Customers ON Customers.CustomerID = Accounts.CustomerID\r\nJOIN Loans ON Loans.AccountNumber = Accounts.AccountNumber\r\nJOIN Fees ON Fees.AccountNumber = Accounts.AccountNumber",
+        "interpretation1": "List all the customers with their account numbers, loan rate of interest and transaction fees.",
+        "interpretation2": "List all the customers with their account numbers, loan rate of interest and maintenance fees.",
+        "interpretation3": "List all the customers with their account numbers, loan rate of interest, transaction and maintenance fees.",
+        "sql_query_general": "SELECT\r\nAccounts.AccountNumber,\r\nCustomers.fullName,\r\nLoans.RateOfInterest,\r\nFees.Fees\r\nFROM Accounts\r\nJOIN Customers ON Customers.CustomerID = Accounts.CustomerID\r\nJOIN Loans ON Loans.AccountNumber = Accounts.AccountNumber\r\nJOIN Fees ON Fees.AccountNumber = Accounts.AccountNumber"
+    }
+]

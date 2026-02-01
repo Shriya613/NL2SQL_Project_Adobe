@@ -1,0 +1,7 @@
+{
+    "template": "Question: How many years of experience are needed for this job? Subject of Inquiry: Job\nFocus: Experience Possible answer types: 1. Minimum Years 2. Preferred Years",
+    "subject": "Job",
+    "focus": "Experience",
+    "general_category1": "Minimum Years",
+    "general_category2": "Preferred Years"
+}

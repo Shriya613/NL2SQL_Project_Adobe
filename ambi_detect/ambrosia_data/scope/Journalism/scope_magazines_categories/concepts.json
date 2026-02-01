@@ -1,0 +1,6 @@
+{
+    "template": "Each Magazines has many different Categories. Among them, Lifestyle is common to many Magazines.",
+    "specific_component": "Lifestyle",
+    "components": "Categories",
+    "entities": "Magazines"
+}

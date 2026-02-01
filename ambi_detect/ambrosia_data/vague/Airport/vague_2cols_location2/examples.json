@@ -1,0 +1,22 @@
+[
+    {
+        "question": "Where can I find a newspaper",
+        "sql_query1": "SELECT Terminal_Building FROM Shops JOIN ShopItems ON ShopItems.Shop_ID = Shops.Shop_ID WHERE ItemName = 'Newspaper'",
+        "sql_query2": "SELECT Floor_Level FROM Shops JOIN ShopItems ON ShopItems.Shop_ID = Shops.Shop_ID WHERE ItemName = 'Newspaper'",
+        "sql_query3": "SELECT Terminal_Building, Floor_Level FROM Shops JOIN ShopItems ON ShopItems.Shop_ID = Shops.Shop_ID WHERE ItemName = 'Newspaper'",
+        "interpretation1": "In what terminal building can a newspaper be found?",
+        "interpretation2": "On what floor level can a newspaper be found?",
+        "interpretation3": "In what terminal building and on what floor level can a newspaper be found?",
+        "sql_query_general": "SELECT Location FROM Shops JOIN ShopItems ON ShopItems.Shop_ID = Shops.Shop_ID WHERE ItemName = 'Newspaper'"
+    },
+    {
+        "question": "What is the most expensive item and where can you buy it?",
+        "sql_query1": "SELECT ItemName, Terminal_Building FROM Shops JOIN ShopItems ON ShopItems.Shop_ID = Shops.Shop_ID ORDER BY Price DESC LIMIT 1",
+        "sql_query2": "SELECT ItemName, Floor_Level FROM Shops JOIN ShopItems ON ShopItems.Shop_ID = Shops.Shop_ID ORDER BY Price DESC LIMIT 1",
+        "sql_query3": "SELECT ItemName, Terminal_Building, Floor_Level FROM Shops JOIN ShopItems ON ShopItems.Shop_ID = Shops.Shop_ID ORDER BY Price DESC LIMIT 1",
+        "interpretation1": "What is the most expensive item and in what terminal building can you find it for sale?",
+        "interpretation2": "What is the most expensive item and on what floor level can you find it for sale?",
+        "interpretation3": "What is the most expensive item and in what location - terminal building and floor level - can you find it for sale?",
+        "sql_query_general": "SELECT ItemName, Location FROM Shops JOIN ShopItems ON ShopItems.Shop_ID = Shops.Shop_ID ORDER BY Price DESC LIMIT 1"
+    }
+]

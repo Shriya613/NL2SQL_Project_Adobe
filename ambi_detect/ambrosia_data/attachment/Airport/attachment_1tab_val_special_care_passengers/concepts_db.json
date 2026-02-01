@@ -1,0 +1,33 @@
+{
+    "domain": "Airports",
+    "template": "Unaccompanied Minors and Special Needs Passengers are subclasses of Special Care Passengers. All services for Unaccompanied Minors and Special Needs Passengers have the property \"Assistant\". There might be an Unaccompanied Minor and a Special Needs Passenger that both require an \"Assistant\" equal to \"Personal Attendant\".",
+    "type": "1tab_val",
+    "general_class": {
+        "tab_name": "Requirements",
+        "col_name": "description",
+        "value": null,
+        "scope_id": null,
+        "db_type": "column"
+    },
+    "class1": {
+        "tab_name": "Requirements",
+        "col_name": "description",
+        "value": "Unaccompanied minor",
+        "scope_id": null,
+        "db_type": "value"
+    },
+    "class2": {
+        "tab_name": "Requirements",
+        "col_name": "description",
+        "value": "Tailored assistance request",
+        "scope_id": null,
+        "db_type": "value"
+    },
+    "common_property": {
+        "tab_name": "Requirements",
+        "col_name": "assistant",
+        "value": "Clare Allen",
+        "scope_id": null,
+        "db_type": "value"
+    }
+}

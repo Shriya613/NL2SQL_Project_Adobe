@@ -1,0 +1,9 @@
+[
+    {
+        "question": "Display all card fees and monthly interest rates for credit cards.",
+        "sql_query1": "SELECT CardFees.fee as amount\r\nFROM CardFees JOIN Products ON CardFees.ProductID = Products.ProductID\r\nWHERE Products.type = \"Credit Card\"\r\nUNION\r\nSELECT MonthlyInterestRates.Rate as amount\r\nFROM MonthlyInterestRates JOIN Products ON MonthlyInterestRates.ProductID = Products.ProductID\r\nWHERE Products.type = \"Credit Card\"",
+        "sql_query2": "SELECT CardFees.fee as amount\r\nFROM CardFees JOIN Products ON CardFees.ProductID = Products.ProductID\r\nUNION\r\nSELECT MonthlyInterestRates.Rate as amount\r\nFROM MonthlyInterestRates JOIN Products ON MonthlyInterestRates.ProductID = Products.ProductID\r\nWHERE Products.type = \"Credit Card\"",
+        "interpretation1": "What are the credit card fees and the credit card monthly interest rates?",
+        "interpretation2": "List all card fees as well as monthly interest rates but only for credit cards."
+    }
+]

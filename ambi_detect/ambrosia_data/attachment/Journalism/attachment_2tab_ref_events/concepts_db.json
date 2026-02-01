@@ -1,0 +1,27 @@
+{
+    "domain": "Person",
+    "template": "Press Conference and Media Scrum are subclasses of Journalist Events.",
+    "type": "2tab_ref",
+    "general_class": "Events",
+    "class1": {
+        "tab_name": "Press_Conference",
+        "col_name": null,
+        "value": null,
+        "scope_id": null,
+        "db_type": "table"
+    },
+    "class2": {
+        "tab_name": "Media_Scrum",
+        "col_name": null,
+        "value": null,
+        "scope_id": null,
+        "db_type": "table"
+    },
+    "common_property": {
+        "tab_name": "Person",
+        "col_name": "name",
+        "value": "Jane Smith",
+        "scope_id": null,
+        "db_type": "value"
+    }
+}

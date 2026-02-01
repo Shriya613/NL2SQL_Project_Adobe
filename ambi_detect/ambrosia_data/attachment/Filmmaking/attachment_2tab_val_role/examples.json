@@ -1,0 +1,9 @@
+[
+    {
+        "question": "List script supervisors and costume designers that are 45 years old.",
+        "sql_query1": "SELECT Script_Supervisors.name\r\nFROM Script_Supervisors\r\nWHERE Script_Supervisors.Age = 45\r\nUNION\r\nSELECT Costume_Designers.name\r\nFROM Costume_Designers\r\nWHERE Costume_Designers.Age = 45",
+        "sql_query2": "SELECT Script_Supervisors.name\r\nFROM Script_Supervisors\r\nUNION\r\nSELECT Costume_Designers.name\r\nFROM Costume_Designers\r\nWHERE Costume_Designers.Age = 45",
+        "interpretation1": "Which script supervisors are 45 years old and which costume designers are at the same age?",
+        "interpretation2": "Provide the list of all script supervisors and also provide a list of costume designers that are 45 years old."
+    }
+]

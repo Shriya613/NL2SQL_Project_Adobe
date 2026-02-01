@@ -1,0 +1,31 @@
+{
+    "template": "Each Bed and Breakfast has many different Rooms. Among them, Double Room is common to many Bed and Breakfast.",
+    "entities": {
+        "tab_name": "Bed_and_breakfast",
+        "col_name": null,
+        "value": null,
+        "scope_id": null,
+        "db_type": "table"
+    },
+    "components": {
+        "tab_name": "Rooms",
+        "col_name": null,
+        "value": null,
+        "scope_id": null,
+        "db_type": "table"
+    },
+    "specific_component": {
+        "tab_name": "Rooms",
+        "col_name": "room_type",
+        "value": "Double Room",
+        "scope_id": 1,
+        "db_type": "value"
+    },
+    "entities_components": {
+        "tab_name": "Bed_and_breakfast_rooms",
+        "col_name": null,
+        "value": null,
+        "scope_id": null,
+        "db_type": "table"
+    }
+}

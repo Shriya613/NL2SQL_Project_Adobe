@@ -1,0 +1,9 @@
+[
+    {
+        "question": "Display female laboratory technicians and research scientists.",
+        "sql_query1": "SELECT Research_Scientists.name\r\nFROM Research_Scientists\r\nWHERE Research_Scientists.Gender = \"Female\"\r\nUNION\r\nSELECT Laboratory_Technicians.name\r\nFROM Laboratory_Technicians\r\nWHERE Laboratory_Technicians.Gender = \"Female\"",
+        "sql_query2": "SELECT Research_Scientists.name\r\nFROM Research_Scientists\r\nUNION\r\nSELECT Laboratory_Technicians.name\r\nFROM Laboratory_Technicians\r\nWHERE Laboratory_Technicians.Gender = \"Female\"",
+        "interpretation1": "Can you show female research scientists and female laboratory technicians?",
+        "interpretation2": "List all research scientists and also display female laboratory technicians."
+    }
+]

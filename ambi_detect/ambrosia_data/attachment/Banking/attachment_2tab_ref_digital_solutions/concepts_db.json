@@ -1,0 +1,27 @@
+{
+    "domain": "SignInOptions",
+    "template": "Mobile Banking App and Internet Banking Platform are subclasses of Digital Solutions. All Mobile banking apps and Internet banking platforms have property \"Sign-In Options\". There might be a Mobile Banking App and a Internet Banking Platform that both have \"Sign-In Options\" equal to \"Biometric Authentication\".",
+    "type": "2tab_ref",
+    "general_class": "Digital Solutions",
+    "class1": {
+        "tab_name": "MobileBankingApps",
+        "col_name": null,
+        "value": null,
+        "scope_id": null,
+        "db_type": "table"
+    },
+    "class2": {
+        "tab_name": "InternetBankingPlatforms",
+        "col_name": null,
+        "value": null,
+        "scope_id": null,
+        "db_type": "table"
+    },
+    "common_property": {
+        "tab_name": "SignInOptions",
+        "col_name": "OptionName",
+        "value": "Token Based Authentication",
+        "scope_id": null,
+        "db_type": "value"
+    }
+}

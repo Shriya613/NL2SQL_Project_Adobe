@@ -1,0 +1,9 @@
+[
+    {
+        "question": "Show newspapers and magazines that circulate 20,000 copies.",
+        "sql_query1": "SELECT Publications.name \r\nFROM PublicationsPeriodicals JOIN Publications ON PublicationsPeriodicals.publication_id = Publications.id\r\nWHERE (PublicationsPeriodicals.periodical_type = \"Newspaper\" OR PublicationsPeriodicals.periodical_type = \"Magazine\") AND Publications.circulation_numbers = 20000",
+        "sql_query2": "SELECT Publications.name \r\nFROM PublicationsPeriodicals JOIN Publications ON PublicationsPeriodicals.publication_id = Publications.id\r\nWHERE PublicationsPeriodicals.periodical_type = \"Newspaper\" OR PublicationsPeriodicals.periodical_type = \"Magazine\" AND Publications.circulation_numbers = 20000",
+        "interpretation1": "What newspapers circulate 20,000 copies and what magazines circulate the same number of copies?",
+        "interpretation2": "List all newspapers and also list magazines that circulate 20,000 copies."
+    }
+]

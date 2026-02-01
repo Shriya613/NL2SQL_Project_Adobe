@@ -1,0 +1,31 @@
+{
+    "template": "Each Software Engineers has many different Languages. Among them, Python is common to many Software Engineers.",
+    "entities": {
+        "tab_name": "Software_Engineers",
+        "col_name": null,
+        "value": null,
+        "scope_id": null,
+        "db_type": "table"
+    },
+    "components": {
+        "tab_name": "Languages",
+        "col_name": null,
+        "value": null,
+        "scope_id": null,
+        "db_type": "table"
+    },
+    "specific_component": {
+        "tab_name": "Languages",
+        "col_name": "LanguageName",
+        "value": "Python",
+        "scope_id": 0,
+        "db_type": "value"
+    },
+    "entities_components": {
+        "tab_name": "Software_Engineers_Languages",
+        "col_name": null,
+        "value": null,
+        "scope_id": null,
+        "db_type": "table"
+    }
+}

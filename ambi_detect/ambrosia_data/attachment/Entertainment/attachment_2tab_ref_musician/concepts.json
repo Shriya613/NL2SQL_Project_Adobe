@@ -1,0 +1,8 @@
+{
+    "template": "Country Singer and Bluegrass Singer are subclasses of Musician. All Country singers and Bluegrass singers have property \"Instrument\". There might be a Country Singer and a Bluegrass Singer that both have \"Instrument\" equal to \"Guitar\".",
+    "general_class": "Musician",
+    "class1": "Country Singer",
+    "class2": "Bluegrass Singer",
+    "common_property": "Instrument",
+    "common_value": "Guitar"
+}

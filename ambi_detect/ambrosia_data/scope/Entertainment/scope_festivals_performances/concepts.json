@@ -1,0 +1,6 @@
+{
+    "template": "Each Festivals has many different Performances. Among them, Live Band is common to many Festivals.",
+    "specific_component": "Live Band",
+    "components": "Performances",
+    "entities": "Festivals"
+}

@@ -1,0 +1,7 @@
+{
+    "template": "Question: What is the estimated lifecycle of this infrastructure? Subject of Inquiry: Infrastructure\nFocus: Lifecycle Possible answer types: 1. Service Life Expectancy 2. Renewal Schedule",
+    "subject": "Infrastructure",
+    "focus": "Lifecycle",
+    "general_category1": "Service Life Expectancy",
+    "general_category2": "Renewal Schedule"
+}

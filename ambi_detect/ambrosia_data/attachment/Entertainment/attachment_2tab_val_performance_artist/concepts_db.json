@@ -1,0 +1,27 @@
+{
+    "domain": "standupcomedians",
+    "template": "Stand-up Comedians and Magicians are subclasses of Performance Artists. All Stand-up Comedians and Magicians have the property \"Duration of Performance\". There might be a Stand-up Comedian and a Magician that both have \"Duration of Performance\" equal to \"1 Hour\".",
+    "type": "2tab_val",
+    "general_class": "Performance Artist",
+    "class1": {
+        "tab_name": "standupcomedians",
+        "col_name": null,
+        "value": null,
+        "scope_id": null,
+        "db_type": "table"
+    },
+    "class2": {
+        "tab_name": "magicians",
+        "col_name": null,
+        "value": null,
+        "scope_id": null,
+        "db_type": "table"
+    },
+    "common_property": {
+        "tab_name": "standupcomedians",
+        "col_name": "duration_of_performance",
+        "value": 60,
+        "scope_id": null,
+        "db_type": "value"
+    }
+}

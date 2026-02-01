@@ -1,0 +1,6 @@
+{
+    "template": "Each Bank Products has many different Risks. Among them, Inflation Risk is common to many Bank Products.",
+    "specific_component": "Inflation Risk",
+    "components": "Risks",
+    "entities": "Bank Products"
+}

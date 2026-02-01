@@ -1,0 +1,9 @@
+[
+    {
+        "question": "Give me the names of the ingredients in all pesticides",
+        "sql_query1": "SELECT Ingredients.ingredient_name  from Pesticides_Ingredients join Ingredients on Pesticides_Ingredients.ingredient_id = Ingredients.id join Pesticides on Pesticides_Ingredients.pesticide_id = Pesticides.id   GROUP BY Pesticides_Ingredients.ingredient_id HAVING COUNT(DISTINCT Pesticides_Ingredients.pesticide_id) = (SELECT COUNT(*) FROM  Pesticides)",
+        "sql_query2": "select pesticides.name , ingredients.ingredient_name from Pesticides_Ingredients join Ingredients on Pesticides_Ingredients.ingredient_id = Ingredients.id join Pesticides on Pesticides_Ingredients.pesticide_id = Pesticides.id",
+        "interpretation1": "Give me the names of all ingredients that are common in all pesticides",
+        "interpretation2": "For each pesticide, give me the name of the ingredients of that pesticide"
+    }
+]

@@ -1,0 +1,31 @@
+{
+    "template": "Each Books has many different Formats. Among them, Paperback is common to many Books.",
+    "entities": {
+        "tab_name": "Books",
+        "col_name": null,
+        "value": null,
+        "scope_id": null,
+        "db_type": "table"
+    },
+    "components": {
+        "tab_name": "Formats",
+        "col_name": null,
+        "value": null,
+        "scope_id": null,
+        "db_type": "table"
+    },
+    "specific_component": {
+        "tab_name": "Formats",
+        "col_name": "name",
+        "value": "Paperback",
+        "scope_id": 0,
+        "db_type": "value"
+    },
+    "entities_components": {
+        "tab_name": "Book_Formats",
+        "col_name": null,
+        "value": null,
+        "scope_id": null,
+        "db_type": "table"
+    }
+}

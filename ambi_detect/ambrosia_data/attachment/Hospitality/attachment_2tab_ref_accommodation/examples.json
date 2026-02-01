@@ -1,0 +1,9 @@
+[
+    {
+        "question": "Display glamping pods and tree houses in Snowdonia.",
+        "sql_query1": "SELECT GlampingPod.pod\r\nFROM Location JOIN GlampingPod ON Location.id = GlampingPod.locationId\r\nWHERE Location.name = \"Snowdonia\"\r\nUNION\r\nSELECT TreeHouse.House\r\nFROM Location JOIN TreeHouse ON Location.id = TreeHouse.locationId\r\nWHERE Location.name = \"Snowdonia\"",
+        "sql_query2": "SELECT GlampingPod.pod\r\nFROM Location JOIN GlampingPod ON Location.id = GlampingPod.locationId\r\nUNION\r\nSELECT TreeHouse.House\r\nFROM Location JOIN TreeHouse ON Location.id = TreeHouse.locationId\r\nWHERE Location.name = \"Snowdonia\"",
+        "interpretation1": "What glamping pods are in Snowdonia and what tree houses are located there?",
+        "interpretation2": "Provide a list of all glamping pods and also provide a list of tree houses in Snowdonia."
+    }
+]

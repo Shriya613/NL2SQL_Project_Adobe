@@ -1,0 +1,8 @@
+{
+    "template": "Headline and Lede are subclasses of News Writing Elements.",
+    "general_class": "News Elements",
+    "class1": "Headline",
+    "class2": "Lede",
+    "common_property": "Author",
+    "common_value": "Adam Gopnik"
+}

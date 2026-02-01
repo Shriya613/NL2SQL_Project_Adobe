@@ -1,0 +1,9 @@
+[
+    {
+        "question": "Give me restaurants and cafes that serve Italian cuisine.",
+        "sql_query1": "SELECT Restaurants.Name \r\nFROM Restaurants\r\nWHERE (Restaurants.Food_Service = \"Restaurant\" OR Restaurants.Food_Service = \"Caf\u00e9\") AND Restaurants.Cuisine = \"Italian\"",
+        "sql_query2": "SELECT Restaurants.Name \r\nFROM Restaurants\r\nWHERE Restaurants.Food_Service = \"Restaurant\" OR Restaurants.Food_Service = \"Caf\u00e9\" AND Restaurants.Cuisine = \"Italian\"",
+        "interpretation1": "What restaurants serve Italian cuisine and what cafes serve the same cuisine?",
+        "interpretation2": "List all restaurants and also list cafes that serve Italian cuisine."
+    }
+]

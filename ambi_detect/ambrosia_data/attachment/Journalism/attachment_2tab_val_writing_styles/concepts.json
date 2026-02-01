@@ -1,0 +1,8 @@
+{
+    "template": "Human Interest Stories and Personal Essays are subclasses of Nonfiction Writing Styles.",
+    "general_class": "Writing Styles",
+    "class1": "Short Story",
+    "class2": "Personal Essay",
+    "common_property": "Author",
+    "common_value": "Evelyn O'Connor"
+}

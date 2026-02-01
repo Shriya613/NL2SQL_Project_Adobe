@@ -1,0 +1,6 @@
+{
+    "template": "Each Maintenance Facilities has many different Equipment. Among them, Jet Bridge is common to many Maintenance Facilities.",
+    "specific_component": "Jet Bridge",
+    "components": "Equipment",
+    "entities": "Maintenance Facilities"
+}

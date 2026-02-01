@@ -1,0 +1,9 @@
+[
+    {
+        "question": "What exercise programs are available for each fitness studio?",
+        "sql_query1": "SELECT Exercise_Program.Type  from Fitness_Studio_Exercise_Program join Exercise_Program on Fitness_Studio_Exercise_Program.ExerciseProgramID = Exercise_Program.ProgramID join Fitness_Studio on Fitness_Studio_Exercise_Program.FitnessStudioID = Fitness_Studio.StudioID   GROUP BY Fitness_Studio_Exercise_Program.ExerciseProgramID HAVING COUNT(DISTINCT Fitness_Studio_Exercise_Program.FitnessStudioID) = (SELECT COUNT(*) FROM  Fitness_Studio)",
+        "sql_query2": "select fitness_studio.name , exercise_program.type from Fitness_Studio_Exercise_Program join Exercise_Program on Fitness_Studio_Exercise_Program.ExerciseProgramID = Exercise_Program.ProgramID join Fitness_Studio on Fitness_Studio_Exercise_Program.FitnessStudioID = Fitness_Studio.StudioID",
+        "interpretation1": "Please display the exercise program that is shared among all fitness studios",
+        "interpretation2": "Could you provide the types of exercise program for all fitness studios?"
+    }
+]

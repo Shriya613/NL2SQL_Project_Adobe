@@ -1,0 +1,27 @@
+{
+    "domain": "Distributor",
+    "template": "Broadsheet and Tabloid are subclasses of Newspaper Formats. All Broadsheets and Tabloids have property \"Distributors\". There might be a Broadsheet and a Tabloid that both have \"Distributors\" equal to \"Sainsbury's\".",
+    "type": "2tab_ref",
+    "general_class": "Newspaper Formats",
+    "class1": {
+        "tab_name": "Broadsheet",
+        "col_name": null,
+        "value": null,
+        "scope_id": null,
+        "db_type": "table"
+    },
+    "class2": {
+        "tab_name": "Tabloid",
+        "col_name": null,
+        "value": null,
+        "scope_id": null,
+        "db_type": "table"
+    },
+    "common_property": {
+        "tab_name": "Distributor",
+        "col_name": "Name",
+        "value": "Tesco",
+        "scope_id": null,
+        "db_type": "value"
+    }
+}

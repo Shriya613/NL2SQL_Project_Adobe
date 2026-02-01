@@ -1,0 +1,27 @@
+{
+    "domain": "Patios",
+    "template": "Patio and Veranda are subclasses of Seating Area. All Patios and Verandas have property \"Number of Seats\". There might be a Patio and a Veranda that both have \"Number of Seats\" equal to \"50\".",
+    "type": "2tab_val",
+    "general_class": "Seating Area",
+    "class1": {
+        "tab_name": "Patios",
+        "col_name": null,
+        "value": null,
+        "scope_id": null,
+        "db_type": "table"
+    },
+    "class2": {
+        "tab_name": "Verandas",
+        "col_name": null,
+        "value": null,
+        "scope_id": null,
+        "db_type": "table"
+    },
+    "common_property": {
+        "tab_name": "Patios",
+        "col_name": "Number_of_Seats",
+        "value": 50,
+        "scope_id": null,
+        "db_type": "value"
+    }
+}

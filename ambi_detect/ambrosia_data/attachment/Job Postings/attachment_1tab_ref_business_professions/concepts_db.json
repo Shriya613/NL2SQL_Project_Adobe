@@ -1,0 +1,33 @@
+{
+    "domain": "Business_Profession",
+    "template": "Sales Manager and Marketing Specialist are subclasses of Business Professions. All Sales managers and Marketing specialists have property \"Working Arrangements\". There might be a Sales Manager and a Marketing Specialist that both have \"Working Arrangements\" equal to \"Hybrid\".",
+    "type": "1tab_ref",
+    "general_class": {
+        "tab_name": "Business_Profession",
+        "col_name": "profession",
+        "value": null,
+        "scope_id": null,
+        "db_type": "column"
+    },
+    "class1": {
+        "tab_name": "Business_Profession",
+        "col_name": "profession",
+        "value": "Sales Manager",
+        "scope_id": null,
+        "db_type": "value"
+    },
+    "class2": {
+        "tab_name": "Business_Profession",
+        "col_name": "profession",
+        "value": "Marketing Specialist",
+        "scope_id": null,
+        "db_type": "value"
+    },
+    "common_property": {
+        "tab_name": "Working_Arrangement",
+        "col_name": "arrangement",
+        "value": "Hybrid",
+        "scope_id": null,
+        "db_type": "value"
+    }
+}

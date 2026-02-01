@@ -1,0 +1,33 @@
+{
+    "domain": "Author",
+    "template": "Children's Book and Young Adult Book are subclasses of Age Group. All Children's books and Young adult books have property \"Illustrator\". There might be a Children's Book and a Young Adult Book that both have \"Illustrator\" equal to \"Jane Smith\".",
+    "type": "1tab_val",
+    "general_class": {
+        "tab_name": "Book",
+        "col_name": "age_group",
+        "value": null,
+        "scope_id": null,
+        "db_type": "column"
+    },
+    "class1": {
+        "tab_name": "Book",
+        "col_name": "age_group",
+        "value": "Children's Book",
+        "scope_id": null,
+        "db_type": "value"
+    },
+    "class2": {
+        "tab_name": "Book",
+        "col_name": "age_group",
+        "value": "Young Adult Book",
+        "scope_id": null,
+        "db_type": "value"
+    },
+    "common_property": {
+        "tab_name": "Book",
+        "col_name": "illustrator",
+        "value": "Jane Smith",
+        "scope_id": null,
+        "db_type": "value"
+    }
+}

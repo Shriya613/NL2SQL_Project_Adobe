@@ -1,0 +1,33 @@
+{
+    "domain": "Authors",
+    "template": "Essay and Letter are subclasses of Written Work. All Essays and Letters have property \"Author\". There might be a Essay and a Letter that both have \"Author\" equal to \"Dr. Emily Thompson\".",
+    "type": "1tab_val_like",
+    "general_class": {
+        "tab_name": "Written_Works",
+        "col_name": "Type",
+        "value": null,
+        "scope_id": null,
+        "db_type": "column"
+    },
+    "class1": {
+        "tab_name": "Written_Works",
+        "col_name": "Type",
+        "value": "Essay",
+        "scope_id": null,
+        "db_type": "value"
+    },
+    "class2": {
+        "tab_name": "Written_Works",
+        "col_name": "Type",
+        "value": "Letter",
+        "scope_id": null,
+        "db_type": "value"
+    },
+    "common_property": {
+        "tab_name": "Written_Works",
+        "col_name": "AuthorID",
+        "value": 1,
+        "scope_id": null,
+        "db_type": "value"
+    }
+}

@@ -1,0 +1,25 @@
+{
+    "template": "Question: Who prepares the meals at this restaurant? Subject of Inquiry: Restaurant\nFocus: Chef Possible answer types: 1. Executive Chef 2. Sous Chef",
+    "general_category1": {
+        "tab_name": "Executive_chef",
+        "col_name": null,
+        "value": null,
+        "scope_id": null,
+        "db_type": "table"
+    },
+    "general_category2": {
+        "tab_name": "Sous_chef",
+        "col_name": null,
+        "value": null,
+        "scope_id": null,
+        "db_type": "table"
+    },
+    "subject": {
+        "tab_name": "Restaurant",
+        "col_name": null,
+        "value": null,
+        "scope_id": null,
+        "db_type": "table"
+    },
+    "type": "2tabs"
+}

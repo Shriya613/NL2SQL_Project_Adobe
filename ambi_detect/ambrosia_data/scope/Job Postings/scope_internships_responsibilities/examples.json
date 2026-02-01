@@ -1,0 +1,9 @@
+[
+    {
+        "question": "Which responsibilities are associated with each internship?",
+        "sql_query1": "SELECT Responsibilities.responsibility  from Internships_Responsibilities join Responsibilities on Internships_Responsibilities.responsibilityId = Responsibilities.id join Internships on Internships_Responsibilities.internshipId = Internships.id   GROUP BY Internships_Responsibilities.responsibilityId HAVING COUNT(DISTINCT Internships_Responsibilities.internshipId) = (SELECT COUNT(*) FROM  Internships)",
+        "sql_query2": "select internships.title , responsibilities.responsibility from Internships_Responsibilities join Responsibilities on Internships_Responsibilities.responsibilityId = Responsibilities.id join Internships on Internships_Responsibilities.internshipId = Internships.id",
+        "interpretation1": "Which responsibility is shared among all internships?",
+        "interpretation2": "For each internship, could you provide the corresponding responsibility?"
+    }
+]

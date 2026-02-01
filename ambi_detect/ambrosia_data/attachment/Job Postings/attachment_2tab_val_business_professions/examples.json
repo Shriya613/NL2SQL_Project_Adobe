@@ -1,0 +1,9 @@
+[
+    {
+        "question": "Provide sales managers and marketing specialists with a hybrid work arrangement.",
+        "sql_query1": "SELECT Sales_Manager.name\r\nFROM Sales_Manager\r\nWHERE Sales_Manager.working_arrangement = \"Hybrid\"\r\nUNION\r\nSELECT Marketing_Specialist.name\r\nFROM Marketing_Specialist\r\nWHERE Marketing_Specialist.working_arrangement = \"Hybrid\"",
+        "sql_query2": "SELECT Sales_Manager.name\r\nFROM Sales_Manager\r\nUNION\r\nSELECT Marketing_Specialist.name\r\nFROM Marketing_Specialist\r\nWHERE Marketing_Specialist.working_arrangement = \"Hybrid\"",
+        "interpretation1": "What sales managers have a hybrid work arrangement and what marketing specialists are the same?",
+        "interpretation2": "Provide a list of all sales managers and also provide a list of marketing specialists with a hybrid work arrangement."
+    }
+]

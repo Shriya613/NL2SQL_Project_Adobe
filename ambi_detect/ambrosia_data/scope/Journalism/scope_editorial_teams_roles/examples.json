@@ -1,0 +1,9 @@
+[
+    {
+        "question": "Give me the role associated with each editorial team.",
+        "sql_query1": "SELECT Roles.RoleName  from Editorial_Teams_Roles join Roles on Editorial_Teams_Roles.RoleID = Roles.RoleID join Editorial_Teams on Editorial_Teams_Roles.TeamID = Editorial_Teams.TeamID   GROUP BY Editorial_Teams_Roles.RoleID HAVING COUNT(DISTINCT Editorial_Teams_Roles.TeamID) = (SELECT COUNT(*) FROM  Editorial_Teams)",
+        "sql_query2": "select editorial_teams.teamname , roles.rolename from Editorial_Teams_Roles join Roles on Editorial_Teams_Roles.RoleID = Roles.RoleID join Editorial_Teams on Editorial_Teams_Roles.TeamID = Editorial_Teams.TeamID",
+        "interpretation1": "Show me the role that is in common for all editorial teams.",
+        "interpretation2": "For each editorial team, what is the corresponding role?"
+    }
+]

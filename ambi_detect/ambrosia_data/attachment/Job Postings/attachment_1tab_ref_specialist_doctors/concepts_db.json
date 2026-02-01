@@ -1,0 +1,33 @@
+{
+    "domain": "Hospitals",
+    "template": "Radiologist and Ultrasound Technician are subclasses of Specialist Doctors. All Radiologists and Ultrasound technicians have property \"Hospital\". There might be a Radiologist and a Ultrasound Technician that both have \"Hospital\" equal to \"Western Medical Center\".",
+    "type": "1tab_ref",
+    "general_class": {
+        "tab_name": "Doctors",
+        "col_name": "specialist_doctor",
+        "value": null,
+        "scope_id": null,
+        "db_type": "column"
+    },
+    "class1": {
+        "tab_name": "Doctors",
+        "col_name": "specialist_doctor",
+        "value": "Radiologist",
+        "scope_id": null,
+        "db_type": "value"
+    },
+    "class2": {
+        "tab_name": "Doctors",
+        "col_name": "specialist_doctor",
+        "value": "Ultrasound Technician",
+        "scope_id": null,
+        "db_type": "value"
+    },
+    "common_property": {
+        "tab_name": "Hospitals",
+        "col_name": "name",
+        "value": "Western Medical Center",
+        "scope_id": null,
+        "db_type": "value"
+    }
+}

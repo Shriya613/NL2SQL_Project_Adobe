@@ -1,0 +1,22 @@
+[
+    {
+        "question": "Who made the cheapest device?",
+        "sql_query1": "SELECT Scientists.fullname FROM DeviceDevelopment JOIN  Scientists ON Scientists.id = DeviceDevelopment.scientistId JOIN MedicalDevices ON MedicalDevices.id = DeviceDevelopment.medicalDeviceId ORDER BY price ASC LIMIT 1",
+        "sql_query2": "SELECT Companies.name FROM DeviceDevelopment JOIN  Companies ON Companies.id = DeviceDevelopment.companyId JOIN MedicalDevices ON MedicalDevices.id = DeviceDevelopment.medicalDeviceId ORDER BY price ASC LIMIT 1",
+        "sql_query3": "SELECT Scientists.fullname, Companies.name FROM DeviceDevelopment JOIN  Scientists ON Scientists.id = DeviceDevelopment.scientistId JOIN MedicalDevices ON MedicalDevices.id = DeviceDevelopment.medicalDeviceId  JOIN  Companies ON Companies.id = DeviceDevelopment.companyId ORDER BY price ASC LIMIT 1",
+        "interpretation1": "Which scientist made the cheapest device?",
+        "interpretation2": "Which company made the cheapest device?",
+        "interpretation3": "Which scientist and company made the cheapest device?",
+        "sql_query_general": "SELECT Scientists.fullname FROM DeviceDevelopment JOIN  Scientists ON Scientists.id = DeviceDevelopment.Developer JOIN MedicalDevices ON MedicalDevices.id = DeviceDevelopment.medicalDeviceId ORDER BY price ASC LIMIT 1"
+    },
+    {
+        "question": "Show me all the medical devices and their makers.",
+        "sql_query1": "SELECT MedicalDevices.deviceName,  Scientists.fullname  FROM DeviceDevelopment JOIN  Scientists ON Scientists.id = DeviceDevelopment.scientistId JOIN MedicalDevices ON MedicalDevices.id = DeviceDevelopment.medicalDeviceId",
+        "sql_query2": "SELECT MedicalDevices.deviceName,  Companies.name  FROM DeviceDevelopment JOIN  Companies ON Companies.id = DeviceDevelopment.companyId JOIN MedicalDevices ON MedicalDevices.id = DeviceDevelopment.medicalDeviceId",
+        "sql_query3": "SELECT MedicalDevices.deviceName,  Scientists.fullname, Companies.name  FROM DeviceDevelopment JOIN  Scientists ON Scientists.id = DeviceDevelopment.scientistId JOIN MedicalDevices ON MedicalDevices.id = DeviceDevelopment.medicalDeviceId  JOIN  Companies ON Companies.id = DeviceDevelopment.companyId",
+        "interpretation1": "Show me all the medical devices and the scientists who developed them.",
+        "interpretation2": "show me all the medical devices and the companies who made them?",
+        "interpretation3": "show me all the medical devices and the companies and scientists who developed them?",
+        "sql_query_general": "SELECT MedicalDevices.deviceName,  Scientists.fullname  FROM DeviceDevelopment JOIN  Scientists ON Scientists.id = DeviceDevelopment.Developer JOIN MedicalDevices ON MedicalDevices.id = DeviceDevelopment.medicalDeviceId"
+    }
+]

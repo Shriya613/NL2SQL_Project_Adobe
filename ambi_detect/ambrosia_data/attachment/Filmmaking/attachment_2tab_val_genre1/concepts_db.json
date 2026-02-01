@@ -1,0 +1,27 @@
+{
+    "domain": "Action_Movies",
+    "template": "Action and Adventure are subclasses of Genre. All Action and Adventure films have a property \"Stars\". There might be an Action and an Adventure film that both star \"Tom Cruise\".",
+    "type": "2tab_val",
+    "general_class": "Genre",
+    "class1": {
+        "tab_name": "Action_Movies",
+        "col_name": null,
+        "value": null,
+        "scope_id": null,
+        "db_type": "table"
+    },
+    "class2": {
+        "tab_name": "Adventure_Movies",
+        "col_name": null,
+        "value": null,
+        "scope_id": null,
+        "db_type": "table"
+    },
+    "common_property": {
+        "tab_name": "Action_Movies",
+        "col_name": "Stars",
+        "value": "Leonardo DiCaprio",
+        "scope_id": null,
+        "db_type": "value"
+    }
+}

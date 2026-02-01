@@ -1,0 +1,27 @@
+{
+    "domain": "Artist",
+    "template": "Photography and Painting are subclasses of Visual Art. All Photographies and Paintings have property \"Gallery\". There might be a Photography and a Painting that both have \"Gallery\" equal to \"MoMA\".",
+    "type": "2tab_ref",
+    "general_class": "Visual Art",
+    "class1": {
+        "tab_name": "Photography",
+        "col_name": null,
+        "value": null,
+        "scope_id": null,
+        "db_type": "table"
+    },
+    "class2": {
+        "tab_name": "Painting",
+        "col_name": null,
+        "value": null,
+        "scope_id": null,
+        "db_type": "table"
+    },
+    "common_property": {
+        "tab_name": "Gallery",
+        "col_name": "Name",
+        "value": "MoMA - Museum of Modern Art",
+        "scope_id": null,
+        "db_type": "value"
+    }
+}

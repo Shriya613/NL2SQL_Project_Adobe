@@ -1,0 +1,9 @@
+[
+    {
+        "question": "What courses have peer tutoring and group work with 10 participants?",
+        "sql_query1": "SELECT courses.courseName\r\nFROM peer_tutoring JOIN courses ON courses.courseID = peer_tutoring.courseID\r\nWHERE peer_tutoring.participants = 10\r\nUNION\r\nSELECT courses.courseName\r\nFROM group_work JOIN courses ON courses.courseID = group_work.courseID\r\nWHERE group_work.participants = 10",
+        "sql_query2": "SELECT courses.courseName\r\nFROM peer_tutoring JOIN courses ON courses.courseID = peer_tutoring.courseID\r\nUNION\r\nSELECT courses.courseName\r\nFROM group_work JOIN courses ON courses.courseID = group_work.courseID\r\nWHERE group_work.participants = 10",
+        "interpretation1": "Show both courses with peer tutoring and courses with group work where either has 10 participants.",
+        "interpretation2": "Show all courses with peer tutoring and also show only courses with group work which have 10 participants."
+    }
+]

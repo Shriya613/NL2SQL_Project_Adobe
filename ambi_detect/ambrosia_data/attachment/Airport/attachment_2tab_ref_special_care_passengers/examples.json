@@ -1,0 +1,9 @@
+[
+    {
+        "question": "Provide unaccompanied minors and disabled passengers whose assistant is Clare Allen.",
+        "sql_query1": "SELECT  Passenger.FullName\r\nFROM Assistant JOIN UnaccompaniedMinor ON Assistant.AssistantID = UnaccompaniedMinor.AssistantID JOIN Passenger ON Passenger.PassengerID = UnaccompaniedMinor.PassengerID\r\nWHERE Assistant.Name = \"Clare Allen\"\r\nUNION\r\nSELECT Passenger.FullName\r\nFROM Assistant JOIN DisabledPassenger ON Assistant.AssistantID = DisabledPassenger.AssistantID JOIN Passenger ON Passenger.PassengerID = DisabledPassenger.PassengerID\r\nWHERE Assistant.Name = \"Clare Allen\"",
+        "sql_query2": "SELECT Passenger.FullName \r\nFROM Assistant JOIN UnaccompaniedMinor ON Assistant.AssistantID = UnaccompaniedMinor.AssistantID JOIN Passenger ON Passenger.PassengerID = UnaccompaniedMinor.PassengerID\r\nUNION\r\nSELECT  Passenger.FullName\r\nFROM Assistant JOIN DisabledPassenger ON Assistant.AssistantID = DisabledPassenger.AssistantID JOIN Passenger ON Passenger.PassengerID = DisabledPassenger.PassengerID\r\nWHERE Assistant.Name = \"Clare Allen\"",
+        "interpretation1": "Show both unaccompanied minors and disabled passengers where the assistant for either is Clare Allen.",
+        "interpretation2": "Show all unaccompanied minors and the disabled passengers whose assistant is Clare Allen."
+    }
+]

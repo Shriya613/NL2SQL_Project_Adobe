@@ -1,0 +1,31 @@
+{
+    "template": "Each Boutique Hotels has many different Themes. Among them, Art-themed is common to many Boutique Hotels.",
+    "entities": {
+        "tab_name": "Boutique_Hotels",
+        "col_name": null,
+        "value": null,
+        "scope_id": null,
+        "db_type": "table"
+    },
+    "components": {
+        "tab_name": "Themes",
+        "col_name": null,
+        "value": null,
+        "scope_id": null,
+        "db_type": "table"
+    },
+    "specific_component": {
+        "tab_name": "Themes",
+        "col_name": "theme_name",
+        "value": "Art_themed",
+        "scope_id": 0,
+        "db_type": "value"
+    },
+    "entities_components": {
+        "tab_name": "Boutique_Hotels_Themes",
+        "col_name": null,
+        "value": null,
+        "scope_id": null,
+        "db_type": "table"
+    }
+}

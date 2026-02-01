@@ -1,0 +1,8 @@
+{
+    "template": "Online Learning and Classroom Teaching are subclasses of Educational Methods. All Online Learning courses and Classroom Teaching have property \"Curriculum Content\". There might be an Online Learning course and a Classroom Teaching that both have \"Curriculum Content\" equal to \"Mathematics\".",
+    "general_class": "Educational Methods",
+    "class1": "Online Learning",
+    "class2": "Classroom Teaching",
+    "common_property": "Curriculum Content",
+    "common_value": "Mathematics"
+}

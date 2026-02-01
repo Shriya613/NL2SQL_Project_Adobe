@@ -1,0 +1,33 @@
+{
+    "domain": "TelevisionShows",
+    "template": "Cooking Show and Reality TV Show are subclasses of Television Format. All Cooking shows and Reality tv shows have property \"Audience Score\". There might be a Cooking Show and a Reality TV Show that both have \"Audience Score\" equal to \"7.5\".",
+    "type": "1tab_val",
+    "general_class": {
+        "tab_name": "TelevisionShows",
+        "col_name": "Genre",
+        "value": null,
+        "scope_id": null,
+        "db_type": "column"
+    },
+    "class1": {
+        "tab_name": "TelevisionShows",
+        "col_name": "Genre",
+        "value": "Cooking Show",
+        "scope_id": null,
+        "db_type": "value"
+    },
+    "class2": {
+        "tab_name": "TelevisionShows",
+        "col_name": "Genre",
+        "value": "Reality TV Show",
+        "scope_id": null,
+        "db_type": "value"
+    },
+    "common_property": {
+        "tab_name": "TelevisionShows",
+        "col_name": "Audience_Score",
+        "value": 7.5,
+        "scope_id": null,
+        "db_type": "value"
+    }
+}

@@ -1,0 +1,9 @@
+[
+    {
+        "question": "Show all comedies and tragedies written by Shakespeare.",
+        "sql_query1": "SELECT Play.title \r\nFROM Theatrical_Form JOIN Play ON Theatrical_Form.id = Play.theatricalFormId JOIN Author ON Play.authorId = Author.id\r\nWHERE (Theatrical_Form.form = \"Comedy\" OR Theatrical_Form.form = \"Tragedy\") AND Author.name = \"Shakespeare\"",
+        "sql_query2": "SELECT Play.title \r\nFROM Theatrical_Form JOIN Play ON Theatrical_Form.id = Play.theatricalFormId JOIN Author ON Play.authorId = Author.id\r\nWHERE Theatrical_Form.form = \"Comedy\" OR Theatrical_Form.form = \"Tragedy\" AND Author.name = \"Shakespeare\"",
+        "interpretation1": "Show both comedic and tragedy plays written by Shakespeare.",
+        "interpretation2": "Show all the comedies and only those tragedies written by Shakespeare."
+    }
+]

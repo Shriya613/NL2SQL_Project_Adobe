@@ -1,0 +1,9 @@
+[
+    {
+        "question": "Give me the coverage options that each home insurance policy offers.",
+        "sql_query1": "SELECT Coverage_Options.Description  from Home_Insurance_Policies_Coverage_Options join Coverage_Options on Home_Insurance_Policies_Coverage_Options.OptionID = Coverage_Options.OptionID join Home_Insurance_Policies on Home_Insurance_Policies_Coverage_Options.PolicyID = Home_Insurance_Policies.PolicyID   GROUP BY Home_Insurance_Policies_Coverage_Options.OptionID HAVING COUNT(DISTINCT Home_Insurance_Policies_Coverage_Options.PolicyID) = (SELECT COUNT(*) FROM  Home_Insurance_Policies)",
+        "sql_query2": "select home_insurance_policies.homeaddress , coverage_options.description from Home_Insurance_Policies_Coverage_Options join Coverage_Options on Home_Insurance_Policies_Coverage_Options.OptionID = Coverage_Options.OptionID join Home_Insurance_Policies on Home_Insurance_Policies_Coverage_Options.PolicyID = Home_Insurance_Policies.PolicyID",
+        "interpretation1": "Which coverage options are common to all home insurance policies?",
+        "interpretation2": "For each home insurance policy, show the coverage options that they offer."
+    }
+]

@@ -1,0 +1,8 @@
+{
+    "template": "Duty-Free Shop and Souvenir Store are subclasses of Retail Outlets. All Duty-Free Shops and Souvenir Stores have the property \"Location\". There might be a Duty-Free Shop and a Souvenir Store that both are located at \"Terminal 3\".",
+    "general_class": "Retail Outlets",
+    "class1": "Duty-Free Shop",
+    "class2": "Souvenir Store",
+    "common_property": "Location",
+    "common_value": "Terminal 3"
+}

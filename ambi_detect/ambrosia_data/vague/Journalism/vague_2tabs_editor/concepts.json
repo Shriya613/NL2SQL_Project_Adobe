@@ -1,0 +1,7 @@
+{
+    "template": "Question: Who edited the final draft of the article? Subject of Inquiry: Final Draft\nFocus: Editor Possible answer types: 1. Managing Editor 2. Copy Editor",
+    "subject": "Final Draft",
+    "focus": "Editor",
+    "general_category1": "Managing Editor",
+    "general_category2": "Copy Editor"
+}

@@ -1,0 +1,25 @@
+{
+    "template": "Question: What are some key elements of this fashion design? Subject of Inquiry: Fashion Design\nFocus: Key Elements Possible answer types: 1. Color Palette 2. Fabric Choice",
+    "general_category1": {
+        "tab_name": "Color_Palette",
+        "col_name": null,
+        "value": null,
+        "scope_id": null,
+        "db_type": "table"
+    },
+    "general_category2": {
+        "tab_name": "Fabric_Choice",
+        "col_name": null,
+        "value": null,
+        "scope_id": null,
+        "db_type": "table"
+    },
+    "subject": {
+        "tab_name": "Fashion_Design",
+        "col_name": null,
+        "value": null,
+        "scope_id": null,
+        "db_type": "table"
+    },
+    "type": "2tabs"
+}

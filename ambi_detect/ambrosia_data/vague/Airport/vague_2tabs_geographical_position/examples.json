@@ -1,0 +1,22 @@
+[
+    {
+        "question": "Where's the headquarters of Emirates located?",
+        "sql_query1": "Select City.name, City.country\r\nFROM City\r\nJOIN Airline on City.id = Airline.headquarter_city_id\r\nWHERE Airline.name = \"Emirates\"",
+        "sql_query2": "Select Coordinates.latitude, Coordinates.longitude\r\nFROM Coordinates\r\nJOIN Airport on Coordinates.id = Airport.coordinates_id JOIN City ON City.id = Airport.city_id JOIN Airline on City.id = Airline.headquarter_city_id\r\nWHERE Airline.name = \"Emirates\"",
+        "sql_query3": "Select City.name, City.country, Coordinates.latitude, Coordinates.longitude\r\nFROM Coordinates\r\nJOIN Airport on Coordinates.id = Airport.coordinates_id JOIN City ON City.id = Airport.city_id JOIN Airline on City.id = Airline.headquarter_city_id\r\nWHERE Airline.name = \"Emirates\"",
+        "interpretation1": "Tell me city of Emirates headquarter.",
+        "interpretation2": "Tell me coordinates of Emirates headquarter.",
+        "interpretation3": "Tell me city and coordinates of Emirates headquarter.",
+        "sql_query_general": "Select Geographical_Position.name, Geographical_Position.country\r\nFROM Geographical_Position\r\nJOIN Airline on Geographical_Position.id = Airline.headquarter_city_id\r\nWHERE Airline.name = \"Emirates\""
+    },
+    {
+        "question": "Where are asphalt runways used?",
+        "sql_query1": "Select City.name, City.country\r\nFROM City\r\nJOIN Airport on City.id = Airport.city_id\r\nJOIN Runway on Airport.id = Runway.airport_id\r\nWHERE Runway.surface_type = \"Asphalt\"",
+        "sql_query2": "Select Coordinates.latitude, Coordinates.longitude\r\nFROM Coordinates\r\nJOIN Airport on Coordinates.id = Airport.coordinates_id\r\nJOIN Runway on Airport.id = Runway.airport_id\r\nWHERE Runway.surface_type = \"Asphalt\"",
+        "sql_query3": "Select City.name, City.country, Coordinates.latitude, Coordinates.longitude\r\nFROM City\r\nJOIN Airport on City.id = Airport.city_id JOIN Coordinates on Coordinates.id = Airport.coordinates_id\r\nJOIN Runway on Airport.id = Runway.airport_id\r\nWHERE Runway.surface_type = \"Asphalt\"",
+        "interpretation1": "Which city uses asphalt runways?",
+        "interpretation2": "Give me the coordinates of a place where paved runways are used.",
+        "interpretation3": "Give me the cities where paved runways are used and their coordinates.",
+        "sql_query_general": "Select Geographical_Position.name, Geographical_Position.country\r\nFROM Geographical_Position\r\nJOIN Airport on Geographical_Position.id = Airport.city_id\r\nJOIN Runway on Airport.id = Runway.airport_id\r\nWHERE Runway.surface_type = \"Asphalt\""
+    }
+]

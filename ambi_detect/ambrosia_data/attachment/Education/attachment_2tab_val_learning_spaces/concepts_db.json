@@ -1,0 +1,27 @@
+{
+    "domain": "Science_Lab",
+    "template": "Science Lab and Art Studio are subclasses of Learning Spaces. All Science Labs and Art Studios have the property \"Available Resources\". There might be a Science Lab and an Art Studio that both have \"Available Resources\" equal to \"Microscopes and Easels\".",
+    "type": "2tab_val",
+    "general_class": "Learning Spaces",
+    "class1": {
+        "tab_name": "Science_Lab",
+        "col_name": null,
+        "value": null,
+        "scope_id": null,
+        "db_type": "table"
+    },
+    "class2": {
+        "tab_name": "Art_Studio",
+        "col_name": null,
+        "value": null,
+        "scope_id": null,
+        "db_type": "table"
+    },
+    "common_property": {
+        "tab_name": "Science_Lab",
+        "col_name": "Available_Resources",
+        "value": "Computers",
+        "scope_id": null,
+        "db_type": "value"
+    }
+}

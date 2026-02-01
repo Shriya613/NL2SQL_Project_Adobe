@@ -1,0 +1,8 @@
+{
+    "template": "Field Trip and Study Group are subclasses of Learning Activities. All Field Trips and Study Groups have the property \"Purpose\". There might be a Field Trip and a Study Group that both have \"Purpose\" equal to \"Real-world Application\".",
+    "general_class": "Learning Activities",
+    "class1": "Field Trip",
+    "class2": "Study Group",
+    "common_property": "Purpose",
+    "common_value": "Real-world Application"
+}

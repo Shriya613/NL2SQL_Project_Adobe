@@ -1,0 +1,9 @@
+[
+    {
+        "question": "Show me the type of program for each health care centre.",
+        "sql_query1": "SELECT Programs.ProgramType  from Healthcare_Centers_Programs join Programs on Healthcare_Centers_Programs.ProgramID = Programs.ProgramID join Healthcare_Centers on Healthcare_Centers_Programs.CenterID = Healthcare_Centers.CenterID   GROUP BY Healthcare_Centers_Programs.ProgramID HAVING COUNT(DISTINCT Healthcare_Centers_Programs.CenterID) = (SELECT COUNT(*) FROM  Healthcare_Centers)",
+        "sql_query2": "select healthcare_centers.centername , programs.programtype from Healthcare_Centers_Programs join Programs on Healthcare_Centers_Programs.ProgramID = Programs.ProgramID join Healthcare_Centers on Healthcare_Centers_Programs.CenterID = Healthcare_Centers.CenterID",
+        "interpretation1": "What is the common program type for all health care centres?",
+        "interpretation2": "For each health care centre, show me the type of program it offers."
+    }
+]

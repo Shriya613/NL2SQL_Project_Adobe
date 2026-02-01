@@ -1,0 +1,6 @@
+{
+    "template": "Each Preservation Societies has many different Projects. Among them, Restoration is common to many Preservation Societies.",
+    "specific_component": "Restoration",
+    "components": "Projects",
+    "entities": "Preservation Societies"
+}

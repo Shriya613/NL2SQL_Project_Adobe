@@ -1,0 +1,9 @@
+[
+    {
+        "question": "Show descriptions of all photos and illustrations related to the history course.",
+        "sql_query1": "SELECT Photos.description\r\nFROM Subjects JOIN Photos ON Subjects.ID = Photos.SubjectID\r\nWHERE Subjects.Name = \"History\"\r\nUNION\r\nSELECT Illustrations.description\r\nFROM Subjects JOIN Illustrations ON Subjects.ID = Illustrations.SubjectID\r\nWHERE Subjects.Name = \"History\"",
+        "sql_query2": "SELECT Photos.description\r\nFROM Subjects JOIN Photos ON Subjects.ID = Photos.SubjectID\r\nUNION\r\nSELECT Illustrations.description\r\nFROM Subjects JOIN Illustrations ON Subjects.ID = Illustrations.SubjectID\r\nWHERE Subjects.Name = \"History\"",
+        "interpretation1": "What are the descriptions of photos related to the history course and what are the descriptions of illustrations related to the same course?",
+        "interpretation2": "Provide a list of all photo descriptions and also illustration descriptions but only related to the history course."
+    }
+]

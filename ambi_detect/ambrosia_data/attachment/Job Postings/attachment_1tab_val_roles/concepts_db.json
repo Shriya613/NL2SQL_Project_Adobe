@@ -1,0 +1,33 @@
+{
+    "domain": "Companies",
+    "template": "Economist and Statistician are subclasses of Roles. All Economists and Statisticians have property \"Data\". There might be a Economist and a Statistician that both have \"Data\" equal to \"Demographics\".",
+    "type": "1tab_val",
+    "general_class": {
+        "tab_name": "JobPostings",
+        "col_name": "Roles",
+        "value": null,
+        "scope_id": null,
+        "db_type": "column"
+    },
+    "class1": {
+        "tab_name": "JobPostings",
+        "col_name": "Roles",
+        "value": "Economist",
+        "scope_id": null,
+        "db_type": "value"
+    },
+    "class2": {
+        "tab_name": "JobPostings",
+        "col_name": "Roles",
+        "value": "Statistician",
+        "scope_id": null,
+        "db_type": "value"
+    },
+    "common_property": {
+        "tab_name": "JobPostings",
+        "col_name": "Data",
+        "value": "Demographics",
+        "scope_id": null,
+        "db_type": "value"
+    }
+}

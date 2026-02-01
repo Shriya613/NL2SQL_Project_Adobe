@@ -1,0 +1,9 @@
+[
+    {
+        "question": "Show sales associates and marketing specialists with a target market of B2C.",
+        "sql_query1": "SELECT Position.title\r\nFROM TargetMarket JOIN SalesAssociates ON TargetMarket.id = SalesAssociates.target_market_id JOIN Position ON Position.id = SalesAssociates.Position_id\r\nWHERE TargetMarket.type = 'B2C'\r\nUNION\r\nSELECT Position.title\r\nFROM TargetMarket JOIN MarketingSpecialists ON TargetMarket.id = MarketingSpecialists.target_market_id JOIN Position ON Position.id = MarketingSpecialists.Position_id\r\nWHERE TargetMarket.type = 'B2C'",
+        "sql_query2": "SELECT Position.title\r\nFROM TargetMarket JOIN SalesAssociates ON TargetMarket.id = SalesAssociates.target_market_id JOIN Position ON Position.id = SalesAssociates.Position_id\r\nUNION\r\nSELECT Position.title\r\nFROM TargetMarket JOIN MarketingSpecialists ON TargetMarket.id = MarketingSpecialists.target_market_id JOIN Position ON Position.id = MarketingSpecialists.Position_id\r\nWHERE TargetMarket.type = 'B2C'",
+        "interpretation1": "What sales associates have a target market of B2C and what marketing specialists have the same target market?",
+        "interpretation2": "Provide a list of all sales associates and also provide a list of marketing specialists with a target market of B2C."
+    }
+]

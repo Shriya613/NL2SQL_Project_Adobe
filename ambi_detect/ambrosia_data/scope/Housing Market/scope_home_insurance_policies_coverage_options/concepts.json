@@ -1,0 +1,6 @@
+{
+    "template": "Each Home Insurance Policies has many different Coverage Options. Among them, Fire Damage is common to many Home Insurance Policies.",
+    "specific_component": "Fire Damage",
+    "components": "Coverage Options",
+    "entities": "Home Insurance Policies"
+}

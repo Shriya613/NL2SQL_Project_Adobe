@@ -1,0 +1,7 @@
+{
+    "template": "Question: Who made this documentary? Subject of Inquiry: Documentary\nFocus: Creator Possible answer types: 1. Producer 2. Director",
+    "subject": "Documentary",
+    "focus": "Creator",
+    "general_category1": "Producer",
+    "general_category2": "Director"
+}

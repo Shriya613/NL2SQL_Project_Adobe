@@ -1,0 +1,9 @@
+[
+    {
+        "question": "What are the subjects of field trips and interactive webinars with 50 students?",
+        "sql_query1": "SELECT Classes.Subject \r\nFROM Enrollments JOIN Classes ON Classes.ClassID = Enrollments.ClassID\r\nWHERE (Enrollments.Educational_Activity = \"Field Trip\" OR Enrollments.Educational_Activity = \"Interactive Webinar\") AND Enrollments.Number_of_students = 50",
+        "sql_query2": "SELECT Classes.Subject \r\nFROM Enrollments JOIN Classes ON Classes.ClassID = Enrollments.ClassID\r\nWHERE Enrollments.Educational_Activity = \"Field Trip\" OR Enrollments.Educational_Activity = \"Interactive Webinar\" AND Enrollments.Number_of_students = 50",
+        "interpretation1": "What are the subjects of field trips with 50 students and what are the subjects of interactive webinars with 50 students?",
+        "interpretation2": "What are the subjects of all field trips and what are the subjects of interactive webinars with 50 students?"
+    }
+]

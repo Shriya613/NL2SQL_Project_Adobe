@@ -1,0 +1,33 @@
+{
+    "domain": "Students",
+    "template": "Exam and Quiz are subclasses of Assessment Methods. All Exams and Quizzes have property \"Assessor\". There might be an Exam and a Quiz that both have \"Assessor\" being the same teacher.",
+    "type": "1tab_val",
+    "general_class": {
+        "tab_name": "Assessments",
+        "col_name": "AssessmentMethod",
+        "value": null,
+        "scope_id": null,
+        "db_type": "column"
+    },
+    "class1": {
+        "tab_name": "Assessments",
+        "col_name": "AssessmentMethod",
+        "value": "Exam",
+        "scope_id": null,
+        "db_type": "value"
+    },
+    "class2": {
+        "tab_name": "Assessments",
+        "col_name": "AssessmentMethod",
+        "value": "Quiz",
+        "scope_id": null,
+        "db_type": "value"
+    },
+    "common_property": {
+        "tab_name": "Assessments",
+        "col_name": "Assessor",
+        "value": "Professor Smith",
+        "scope_id": null,
+        "db_type": "value"
+    }
+}

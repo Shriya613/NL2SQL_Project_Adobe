@@ -1,0 +1,7 @@
+{
+    "template": "Question: Where did this dance originated from? Subject of Inquiry: Dance\nFocus: Origin Possible answer types: 1. Culture 2. Geographical Area",
+    "subject": "Dance",
+    "focus": "Origin",
+    "general_category1": "Culture",
+    "general_category2": "Geographical Area"
+}

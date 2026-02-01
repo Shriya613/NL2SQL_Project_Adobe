@@ -1,0 +1,9 @@
+[
+    {
+        "question": "Display podcasts and audio documents lasting 60 minutes.",
+        "sql_query1": "SELECT Podcasts.title\r\nFROM Podcasts\r\nWHERE Podcasts.Length = 60\r\nUNION\r\nSELECT AudioDocuments.title\r\nFROM AudioDocuments\r\nWHERE AudioDocuments.Length = 60",
+        "sql_query2": "SELECT Podcasts.title\r\nFROM Podcasts\r\nUNION\r\nSELECT AudioDocuments.title\r\nFROM AudioDocuments\r\nWHERE AudioDocuments.Length = 60",
+        "interpretation1": "What podcasts and audio documents are 60 minutes long?",
+        "interpretation2": "List all podcasts and also display audio documents lasting 60 minutes."
+    }
+]

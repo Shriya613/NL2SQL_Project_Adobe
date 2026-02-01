@@ -1,0 +1,33 @@
+{
+    "domain": "NarrativeForms",
+    "template": "Autobiography and Historical Account are subclasses of Narrative Form. All Autobiographies and Historical accounts have property \"Epoch\". There might be a Autobiography and a Historical Account that both have \"Epoch\" equal to \"20th Century\".",
+    "type": "1tab_ref",
+    "general_class": {
+        "tab_name": "NarrativeForms",
+        "col_name": "Narrative_Form",
+        "value": null,
+        "scope_id": null,
+        "db_type": "column"
+    },
+    "class1": {
+        "tab_name": "NarrativeForms",
+        "col_name": "Narrative_Form",
+        "value": "Autobiography",
+        "scope_id": null,
+        "db_type": "value"
+    },
+    "class2": {
+        "tab_name": "NarrativeForms",
+        "col_name": "Narrative_Form",
+        "value": "Historical Account",
+        "scope_id": null,
+        "db_type": "value"
+    },
+    "common_property": {
+        "tab_name": "Epochs",
+        "col_name": "Epoch",
+        "value": "19th Century",
+        "scope_id": null,
+        "db_type": "value"
+    }
+}

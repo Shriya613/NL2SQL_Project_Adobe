@@ -1,0 +1,33 @@
+{
+    "domain": "Companies",
+    "template": "Chemist and Geoscientist are subclasses of Earth Science Careers. All Chemists and Geoscientists have property \"University\". There might be a Chemist and a Geoscientist that both have \"University\" equal to \"MIT\".",
+    "type": "1tab_val",
+    "general_class": {
+        "tab_name": "Employees",
+        "col_name": "title",
+        "value": null,
+        "scope_id": null,
+        "db_type": "column"
+    },
+    "class1": {
+        "tab_name": "Employees",
+        "col_name": "title",
+        "value": "Chemist",
+        "scope_id": null,
+        "db_type": "value"
+    },
+    "class2": {
+        "tab_name": "Employees",
+        "col_name": "title",
+        "value": "Geoscientist",
+        "scope_id": null,
+        "db_type": "value"
+    },
+    "common_property": {
+        "tab_name": "Employees",
+        "col_name": "university",
+        "value": "MIT",
+        "scope_id": null,
+        "db_type": "value"
+    }
+}
