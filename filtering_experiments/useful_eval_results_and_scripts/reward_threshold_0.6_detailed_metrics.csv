@@ -1,0 +1,50 @@
+Metric,Reward t=0.6 (TP),Reward t=0.6 (FN),BIRD Dataset
+Accuracy,0.8950,,
+Specificity,0.7143,,
+Sensitivity (Recall),0.9281,,
+Precision,0.9467,,
+F1 Score,0.9373,,
+,,,
+True Positives (TP),142,,
+True Negatives (TN),20,,
+False Positives (FP),8,,
+False Negatives (FN),11,,
+,,,
+SQL Complexity - True Positives,142 examples,,
+  Avg Words,28.042,,
+  Avg Columns,5.655,,
+  Avg Subqueries,0.162,,
+  Avg Operators,6.958,,
+  Avg Splits,17.761,,
+,,,
+SQL Complexity - False Negatives,,11 examples,
+  Avg Words,,28.091,
+  Avg Columns,,6.818,
+  Avg Subqueries,,0.182,
+  Avg Operators,,7.727,
+  Avg Splits,,19.818,
+,,,
+SQL Complexity - BIRD Dataset,,,9428 examples
+  Avg Words,,,25.805
+  Avg Columns,,,5.310
+  Avg Subqueries,,,0.088
+  Avg Operators,,,8.553
+  Avg Splits,,,18.713
+,,,
+NL Complexity - True Positives,142 examples,,
+  Avg Tokens Before Verb,10.407,,
+  Avg Constituents Per Word,0.392,,
+  Avg Subordinate Clauses,0.382,,
+  Avg Coordinate Clauses,0.933,,
+,,,
+NL Complexity - False Negatives,,11 examples,
+  Avg Tokens Before Verb,,4.909,
+  Avg Constituents Per Word,,0.412,
+  Avg Subordinate Clauses,,0.182,
+  Avg Coordinate Clauses,,0.727,
+,,,
+NL Complexity - BIRD Dataset,,,9428 examples
+  Avg Tokens Before Verb,,,5.513
+  Avg Constituents Per Word,,,0.434
+  Avg Subordinate Clauses,,,0.305
+  Avg Coordinate Clauses,,,0.194

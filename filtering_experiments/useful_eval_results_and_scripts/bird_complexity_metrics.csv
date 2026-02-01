@@ -1,0 +1,21 @@
+Metric,Value
+SQL Complexity,9428 examples
+  Avg Words,25.805
+  Avg Columns,5.310
+  Avg Subqueries,0.088
+  Avg Operators,8.553
+  Avg Splits,18.713
+,
+NL Complexity,9428 examples
+  Avg Words,14.211
+  Avg Syllables,18.869
+  Avg Sentences,1.078
+  Avg Tokens,15.944
+  Avg Entities,1.089
+  Avg Tokens Before Verb,5.513
+  Avg Constituents Per Word,0.434
+  Avg Subordinate Clauses,0.305
+  Avg Coordinate Clauses,0.194
+  Avg Complexity Score,1.908
+  Avg Flesch Reading Ease,80.541
+  Avg Flesch-Kincaid Grade Level,5.359
