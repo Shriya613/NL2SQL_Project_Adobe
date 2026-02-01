@@ -1,0 +1,477 @@
+nl,sql,db_sql,db_result,table_id,schema_change_type
+MLSの最優秀新人賞受賞者たちの出身大学をすべて挙げてください。,"
+SELECT DISTINCT `College`
+FROM `table_1_1004033_1`;
+","
+SELECT DISTINCT col7
+FROM `table_1_1004033_1`;
+","[('florida international',), ('unlv',), ('virginia',), ('duke',), ('ucla',), ('concordia college',), ('connecticut',), ('furman',), ('wake forest',), ('maryland',), ('cal state northridge',), ('none',), ('james madison',)]",table_1_1004033_1,
+MLSの最優秀新人賞受賞者たちの出身大学をすべて挙げてください。,"
+SELECT DISTINCT `College`
+FROM `table_m_1765006502800_8307be4b_1004033_1`;
+","
+SELECT DISTINCT col5
+FROM `table_m_1765006502800_8307be4b_1004033_1`;
+","[('Florida International',), ('UNLV',), ('Virginia',), ('Duke',), ('UCLA',), ('Concordia College',), ('Connecticut',), ('Furman',), ('Wake Forest',), ('Maryland',), ('Cal State Northridge',), ('none',), ('James Madison',)]",m_1765006502800_8307be4b_1004033-1,
+1994年NHLドラフトの第10巡目で、2人以上の選手が指名された国籍と、それぞれの国籍からの指名人数を教えてください。結果は指名選手数の多い順に並べてください。,"
+SELECT `Nationality`, COUNT(`Pick`) AS `Drafted_Players` FROM `table_1_1013129_10` GROUP BY `Nationality` HAVING COUNT(`Pick`) > 1 ORDER BY `Drafted_Players` DESC;
+","
+SELECT col3, COUNT(col0) AS `Drafted_Players` FROM `table_1_1013129_10` GROUP BY col3 HAVING COUNT(col0) > 1 ORDER BY `Drafted_Players` DESC;
+","[('canada', 9), ('united states', 7), ('russia', 3), ('slovakia', 2), ('finland', 2)]",table_1_1013129_10,
+1994年NHLドラフトの第10巡目で、2人以上の選手が指名された国籍と、それぞれの国籍からの指名人数を教えてください。結果は指名選手数の多い順に並べてください。,unanswerable,unanswerable,,m_1765006568143_4104616a_1013129-10,
+IROC XXシーズンにおける各競技分野のパフォーマンスを評価するため、要約表を作成してください。各シリーズを、その所属ドライバーが獲得した賞金総額でランク付けし、それぞれのドライバー数と平均ポイントも表示してください。,"
+SELECT `Series`, COUNT(`Driver`) AS `NumberOfDrivers`, AVG(`Points`) AS `AveragePoints`, SUM(CAST(REPLACE(REPLACE(`Winnings`, '$', ''), ',', '') AS REAL)) AS `TotalWinnings` FROM `table_1_10160447_1` GROUP BY `Series` ORDER BY `TotalWinnings` DESC;
+","
+SELECT col4, COUNT(col1) AS `NumberOfDrivers`, AVG(col2) AS `AveragePoints`, SUM(CAST(REPLACE(REPLACE(col3, '$', ''), ',', '') AS REAL)) AS `TotalWinnings` FROM `table_1_10160447_1` GROUP BY col4 ORDER BY `TotalWinnings` DESC;
+","[('nascar winston cup', 6, 40.666666666666664, 435000.0), ('indy car', 3, 47.333333333333336, 185000.0), ('nascar busch series', 1, 50.0, 60000.0), ('scca trans-am series', 1, 36.0, 40000.0)]",table_1_10160447_1,
+IROC XXシーズンにおける各競技分野のパフォーマンスを評価するため、要約表を作成してください。各シリーズを、その所属ドライバーが獲得した賞金総額でランク付けし、それぞれのドライバー数と平均ポイントも表示してください。,"
+SELECT `Series`, COUNT(`Driver`) AS `NumberOfDrivers`, AVG(`Score`) AS `AveragePoints`, SUM(CAST(REPLACE(REPLACE(`Prize`, '$', ''), ',', '') AS REAL)) AS `TotalWinnings` FROM `table_m_1765006600371_468fd710_10160447_1` GROUP BY `Series` ORDER BY `TotalWinnings` DESC;
+","
+SELECT col4, COUNT(col1) AS `NumberOfDrivers`, AVG(col2) AS `AveragePoints`, SUM(CAST(REPLACE(REPLACE(col3, '$', ''), ',', '') AS REAL)) AS `TotalWinnings` FROM `table_m_1765006600371_468fd710_10160447_1` GROUP BY col4 ORDER BY `TotalWinnings` DESC;
+","[('NASCAR Winston Cup', 6, 40.666666666666664, 435000.0), ('Indy Car', 3, 47.333333333333336, 185000.0), ('NASCAR Busch Series', 1, 50.0, 60000.0), ('SCCA Trans-Am Series', 1, 36.0, 40000.0)]",m_1765006600371_468fd710_10160447-1,
+彼の戦前と戦後のキャリアについて、パフォーマンスを比較します。それぞれの期間について、リーグ戦での平均ゴール数、FAカップでの1試合あたりのゴール率、そして総ゴール数に占めるカップ戦でのゴール数の割合を示してください。,"
+SELECT
+  CASE
+    WHEN `Season` IN ('1913–14', '1914–15')
+    THEN 'Pre-War'
+    ELSE 'Post-War'
+  END AS `Career_Period`,
+  AVG(`League Goals`) AS `Avg_League_Goals`,
+  SUM(`FA Cup Goals`) * 1.0 / SUM(`FA Cup Apps`) AS `FA_Cup_Goals_Per_Game`,
+  SUM(`FA Cup Goals`) * 1.0 / SUM(`Total Goals`) AS `FA_Cup_Share_of_Total_Goals`
+FROM
+  `table_1_10240125_2`
+GROUP BY
+  `Career_Period`;
+","
+SELECT
+  CASE
+    WHEN col0 IN ('1913–14', '1914–15')
+    THEN 'Pre-War'
+    ELSE 'Post-War'
+  END AS `Career_Period`,
+  AVG(col3) AS `Avg_League_Goals`,
+  SUM(col5) * 1.0 / SUM(col4) AS `FA_Cup_Goals_Per_Game`,
+  SUM(col5) * 1.0 / SUM(col7) AS `FA_Cup_Share_of_Total_Goals`
+FROM
+  `table_1_10240125_2`
+GROUP BY
+  `Career_Period`;
+","[('Post-War', 0.6666666666666666, 0.0, 0.0), ('Pre-War', 1.0, 0.35714285714285715, 0.7142857142857143)]",table_1_10240125_2,
+彼の戦前と戦後のキャリアについて、パフォーマンスを比較します。それぞれの期間について、リーグ戦での平均ゴール数、FAカップでの1試合あたりのゴール率、そして総ゴール数に占めるカップ戦でのゴール数の割合を示してください。,"
+SELECT
+  CASE
+    WHEN `Season` IN ('1913–14', '1914–15')
+    THEN 'Pre-War'
+    ELSE 'Post-War'
+  END AS `Career_Period`,
+  AVG(`league_goals_scored`) AS `Avg_League_Goals`,
+  SUM(`FA Cup Goals`) * 1.0 / SUM(`FA Cup Apps`) AS `FA_Cup_Goals_Per_Game`,
+  SUM(`FA Cup Goals`) * 1.0 / SUM(`Total Goals`) AS `FA_Cup_Share_of_Total_Goals`
+FROM
+  `table_m_1765006641180_9a696152_10240125_2`
+GROUP BY
+  `Career_Period`;
+","
+SELECT
+  CASE
+    WHEN col0 IN ('1913–14', '1914–15')
+    THEN 'Pre-War'
+    ELSE 'Post-War'
+  END AS `Career_Period`,
+  AVG(col3) AS `Avg_League_Goals`,
+  SUM(col5) * 1.0 / SUM(col4) AS `FA_Cup_Goals_Per_Game`,
+  SUM(col5) * 1.0 / SUM(col7) AS `FA_Cup_Share_of_Total_Goals`
+FROM `table_m_1765006641180_9a696152_10240125_2`
+GROUP BY
+  `Career_Period`;
+","[('Post-War', 0.6666666666666666, 0.0, 0.0), ('Pre-War', 1.0, 0.35714285714285715, 0.7142857142857143)]",m_1765006641180_9a696152_10240125-2,
+対応するエルシニア属タンパク質名が「Y」で、エスケリキア属タンパク質名が「E」で始まる機能の一覧を、アルファベット順で教えてください。,"
+SELECT `↓ Function / Genus →` AS `Correlated Function` FROM `table_1_10321124_1` WHERE `Yersinia` LIKE 'Y%' AND `Escherichia` LIKE 'E%' ORDER BY `Correlated Function` ASC;
+","
+SELECT col0 AS `Correlated Function` FROM `table_1_10321124_1` WHERE col3 LIKE 'Y%' AND col4 LIKE 'E%' ORDER BY `Correlated Function` ASC;
+","[('inner rod',), ('needle monomer',), ('switch',), ('translocator',), ('translocator',)]",table_1_10321124_1,
+対応するエルシニア属タンパク質名が「Y」で、エスケリキア属タンパク質名が「E」で始まる機能の一覧を、アルファベット順で教えてください。,"SELECT `↓ Function / Genus →` AS `Correlated Function`
+FROM `table_m_1765006681453_dc249791_10321124_1`
+WHERE `Yersinia` LIKE 'Y%'
+  AND `Escherichia` LIKE 'E%'
+ORDER BY `Correlated Function` ASC;","SELECT col0 AS `Correlated Function`
+FROM `table_m_1765006681453_dc249791_10321124_1`
+WHERE col2 LIKE 'Y%'
+  AND col3 LIKE 'E%'
+ORDER BY `Correlated Function` ASC;","[('Inner rod',), ('Needle monomer',), ('Switch',), ('Translocator',), ('Translocator',)]",m_1765006681453_dc249791_10321124-1,
+2回以上敗れた各対戦相手について、平均観客動員数が2万人を超える場合は「高観客数」、それ以外は「通常観客数」と分類してください。対戦相手とその観客カテゴリーを、対戦相手名のZからAの順で表示してください。,"
+SELECT `Opponent`, CASE WHEN AVG(`Attendance`) > 20000 THEN `High Crowd` ELSE `Normal Crowd` END AS `Crowd Category` FROM `table_1_10392906_2` WHERE `Final score` LIKE `L %` GROUP BY `Opponent` HAVING COUNT(`Opponent`) > 1 ORDER BY `Opponent` DESC;
+","
+SELECT REPLACE(col3, 'at ', '') col3, CASE WHEN AVG(col7) > 20000 THEN 'High Crowd' ELSE 'Normal Crowd' END `Crowd Category` FROM `table_1_10392906_2` GROUP BY REPLACE(col3, 'at ', '') HAVING COUNT(*) > 1 ORDER BY col3 DESC;
+","[('rhein fire', 'Normal Crowd'), ('hamburg sea devils', 'Normal Crowd'), ('frankfurt galaxy', 'High Crowd'), ('cologne centurions', 'Normal Crowd')]",table_1_10392906_2,
+2回以上敗れた各対戦相手について、平均観客動員数が2万人を超える場合は「高観客数」、それ以外は「通常観客数」と分類してください。対戦相手とその観客カテゴリーを、対戦相手名のZからAの順で表示してください。,unanswerable,unanswerable,,m_1765006713533_9acc6a37_10392906-2,
+ネットワーク名が'R'で始まる地域または国を、アルファベットの逆順で5つ挙げてください。,"
+SELECT `Region/country` FROM table_1_1053802_1 WHERE `Network` LIKE 'R%' GROUP BY `Region/country` HAVING COUNT(*) > 0 ORDER BY `Region/country` DESC LIMIT 5;
+","
+SELECT col0 FROM table_1_1053802_1 WHERE col2 LIKE 'R%' GROUP BY col0 HAVING COUNT(*) > 0 ORDER BY col0 DESC LIMIT 5;
+","[('ireland',), ('germany',), ('brazil',)]",table_1_1053802_1,
+ネットワーク名が'R'で始まる地域または国を、アルファベットの逆順で5つ挙げてください。,"
+SELECT `region_country` FROM `table_m_1765006813237_02e49555_1053802_1` WHERE `Network` LIKE 'R%' GROUP BY `region_country` HAVING COUNT(*) > 0 ORDER BY `region_country` DESC LIMIT 5;
+","
+SELECT col0 FROM `table_m_1765006813237_02e49555_1053802_1` WHERE col2 LIKE 'R%' GROUP BY col0 HAVING COUNT(*) > 0 ORDER BY col0 DESC LIMIT 5;
+","[('Ireland',), ('Germany',), ('Brazil',)]",m_1765006813237_02e49555_1053802-1,
+名前が'Jace'で始まる監督が担当し、かつ各シーズンの第1話ではないエピソードのタイトルを、最初の2つリストアップしてください。,"
+SELECT `Title` FROM `table_1_10610087_3` WHERE `Directed by` LIKE 'Jace%' AND `No. in season` > 1 GROUP BY `Title` ORDER BY `No. in season` ASC LIMIT 2;
+","
+SELECT col2 FROM `table_1_10610087_3` WHERE col3 LIKE 'Jace%' AND col1 > 1 GROUP BY col2 ORDER BY col1 ASC LIMIT 2;
+","[('""harmony""',), ('""shame""',)]",table_1_10610087_3,
+名前が'Jace'で始まる監督が担当し、かつ各シーズンの第1話ではないエピソードのタイトルを、最初の2つリストアップしてください。,unanswerable,unanswerable,,m_1765006873259_a4505912_10610087-3,
+では、PQ（ケベック党）が過半数政権を獲得した年と、その時の得票率を教えてください。時系列順でお願いします。,"
+SELECT
+  `General election`,
+  `% of popular vote`
+FROM table_1_106367_2
+WHERE
+  `Result` LIKE 'PQ majority'
+ORDER BY
+  `General election`;
+","
+SELECT
+  col0,
+  col3
+FROM table_1_106367_2
+WHERE
+  col4 LIKE 'PQ majority'
+ORDER BY
+  col0;
+","[(1976.0, '41.37%'), (1981.0, '49.26%'), (1994.0, '44.75%'), (1998.0, '42.87%')]",table_1_106367_2,
+では、PQ（ケベック党）が過半数政権を獲得した年と、その時の得票率を教えてください。時系列順でお願いします。,"
+SELECT
+  `General election`,
+  `% of popular vote`
+FROM `table_m_1765006884066_f79eb874_106367_2`
+WHERE
+  `Result` LIKE 'PQ majority'
+ORDER BY
+  `General election`;
+","
+SELECT
+  col0,
+  col3
+FROM `table_m_1765006884066_f79eb874_106367_2`
+WHERE
+  col4 LIKE 'PQ majority'
+ORDER BY
+  col0;
+","[(1976.0, '41.37%'), (1981.0, '49.26%'), (1994.0, '44.75%'), (1998.0, '42.87%')]",m_1765006884066_f79eb874_106367-2,
+シーズン平均視聴率を上回ったCSIのエピソードについて、そのタイトル、監督、脚本家をリストアップしてください。視聴者数の多い順でお願いします。,"
+SELECT `Title`, `U.S. viewers (millions)`, `Directed by`, `Written by`
+FROM table_1_10718192_2
+WHERE `U.S. viewers (millions)` > (SELECT AVG(REPLACE(`U.S. viewers (millions)`, ',', '')) FROM table_1_10718192_2)
+ORDER BY `U.S. viewers (millions)` DESC;
+","
+SELECT col2, col6, col3, col4
+FROM table_1_10718192_2
+WHERE col6 > (SELECT AVG(REPLACE(col6, ',', '')) FROM table_1_10718192_2)
+ORDER BY col6 DESC;
+","[('""a little murder""', '30.81', 'tucker gates', 'ann donahue & naren shankar'), ('""revenge is best served cold""', '30.47', 'danny cannon', 'carol mendelsohn & anthony e. zuiker'), ('""fight night""', '29.94', 'richard j. lewis', 'andrew lipsitz & naren shankar'), ('""let the seller beware""', '29.90', 'richard j. lewis', 'andrew lipsitz & anthony e. zuiker'), ('""blood lust""', '29.74', 'charlie correll', 'josh berman & carol mendelsohn'), ('""abra-cadaver""', '28.95', 'danny cannon', 'danny cannon & anthony e. zuiker'), ('""crash and burn""', '28.60', 'richard j. lewis', 'josh berman'), ('""the accused is entitled""', '28.46', 'kenneth fink', 'elizabeth devine & ann donahue'), ('""lucky strike""', '27.95', 'kenneth fink', 'eli talbert & anthony e. zuiker'), ('""got murder?""', '27.87', 'kenneth fink', 'sarah goldfinger'), ('""the execution of catherine willows""', '27.86', 'kenneth fink', 'elizabeth devine & carol mendelsohn')]",table_1_10718192_2,
+シーズン平均視聴率を上回ったCSIのエピソードについて、そのタイトル、監督、脚本家をリストアップしてください。視聴者数の多い順でお願いします。,"
+SELECT `Title`, `u_s_viewers_millions`, `Directed by`, `Written by`
+FROM `table_m_1765006917365_3783eaea_10718192_2`
+WHERE `u_s_viewers_millions` > (SELECT AVG(REPLACE(`u_s_viewers_millions`, ',', '')) FROM `table_m_1765006917365_3783eaea_10718192_2`)
+ORDER BY `u_s_viewers_millions` DESC;
+","
+SELECT col2, col6, col3, col4
+FROM `table_m_1765006917365_3783eaea_10718192_2`
+WHERE col6 > (SELECT AVG(REPLACE(col6, ',', '')) FROM `table_m_1765006917365_3783eaea_10718192_2`)
+ORDER BY col6 DESC;
+","[('""A Little Murder""', '30.81', 'Tucker Gates', 'Ann Donahue & Naren Shankar'), ('""Revenge Is Best Served Cold""', '30.47', 'Danny Cannon', 'Carol Mendelsohn & Anthony E. Zuiker'), ('""Fight Night""', '29.94', 'Richard J. Lewis', 'Andrew Lipsitz & Naren Shankar'), ('""Let the Seller Beware""', '29.90', 'Richard J. Lewis', 'Andrew Lipsitz & Anthony E. Zuiker'), ('""Blood Lust""', '29.74', 'Charlie Correll', 'Josh Berman & Carol Mendelsohn'), ('""Abra-Cadaver""', '28.95', 'Danny Cannon', 'Danny Cannon & Anthony E. Zuiker'), ('""Crash and Burn""', '28.60', 'Richard J. Lewis', 'Josh Berman'), ('""The Accused Is Entitled""', '28.46', 'Kenneth Fink', 'Elizabeth Devine & Ann Donahue'), ('""Lucky Strike""', '27.95', 'Kenneth Fink', 'Eli Talbert & Anthony E. Zuiker'), ('""Got Murder?""', '27.87', 'Kenneth Fink', 'Sarah Goldfinger'), ('""The Execution of Catherine Willows""', '27.86', 'Kenneth Fink', 'Elizabeth Devine & Carol Mendelsohn')]",m_1765006917365_3783eaea_10718192-2,
+彼がGP2で勝利を挙げていた時期に、各チームで出走したレース数を、その勝利数と並べて表示してください。,"
+SELECT `Team Name`, `Wins`, `Races`, `Series`
+FROM table_1_10748727_1
+WHERE `Series` LIKE 'GP2 Series'
+AND `Wins` > 0
+ORDER BY `Wins` DESC
+LIMIT 5;
+","
+SELECT col2, col4, col3, col1
+FROM table_1_10748727_1
+WHERE col1 LIKE 'GP2 Series'
+AND col4 > 0
+ORDER BY col4 DESC
+LIMIT 5;
+","[('super nova racing', 1.0, 20.0, 'gp2 series'), ('isport international', 1.0, 24.0, 'gp2 series')]",table_1_10748727_1,
+彼がGP2で勝利を挙げていた時期に、各チームで出走したレース数を、その勝利数と並べて表示してください。,"SELECT ""Team Name"", ""Wins"", ""Races"", ""Series""
+FROM `table_m_1765006946282_b4341f17_10748727_1`
+WHERE ""Series"" = 'GP2 Series'
+  AND ""Wins"" > 0
+ORDER BY ""Wins"" DESC
+LIMIT 5;","SELECT ""Team Name"", ""Wins"", ""Races"", ""Series""
+FROM `table_m_1765006946282_b4341f17_10748727_1`
+WHERE ""Series"" = 'GP2 Series'
+  AND ""Wins"" > 0
+ORDER BY ""Wins"" DESC
+LIMIT 5;",[],m_1765006946282_b4341f17_10748727-1,
+確認ですが、'Premiere'の日付順に並べた'table_1_10942714_1'の'イングリッシュ title'と'HK viewers'の列のみでよろしいですね？全てのタイトル、全ての視聴者数を、漏れなくお願いします！,"
+SELECT `English title`, `HK viewers` FROM table_1_10942714_1 ORDER BY `Premiere` ASC;
+","
+SELECT col1, col7 FROM table_1_10942714_1 ORDER BY col5 ASC;
+","[('forensic heroes', '2.11 million'), ('men in pain', '2.03 million'), ('love guaranteed', '2.07 million'), ('la femme desperado', '2.14 million'), ('bar bender', '2.06 million'), ('the saviour of the soul', '2.07 million'), (""maiden's vow"", '2.05 million'), ('to grow with love', '2.04 million'), ('the dance of passion', '2.05 million')]",table_1_10942714_1,
+確認ですが、'Premiere'の日付順に並べた'table_1_10942714_1'の'イングリッシュ title'と'HK viewers'の列のみでよろしいですね？全てのタイトル、全ての視聴者数を、漏れなくお願いします！,SELECT `English title (HK viewers)` FROM `table_m_1765007002624_6d3622dd_10942714_1` ORDER BY `Premiere` ASC;,SELECT col6 FROM `table_m_1765007002624_6d3622dd_10942714_1` ORDER BY col4 ASC;,"[('Forensic Heroes, 2.11 million',), ('Men in Pain, 2.03 million',), ('Love Guaranteed, 2.07 million',), ('La Femme Desperado, 2.14 million',), ('Bar Bender, 2.06 million',), ('The Saviour of the Soul, 2.07 million',), (""Maiden's Vow, 2.05 million"",), ('To Grow with Love, 2.04 million',), ('The Dance of Passion, 2.05 million',)]",m_1765007002624_6d3622dd_10942714-1,
+Nancy Maloneが監督した、またはDarren Starが脚本を書いたエピソードのタイトルを全て表示してください。,"
+SELECT `Title` FROM table_1_10953197_2 WHERE `Director` = 'Nancy Malone' UNION SELECT `Title` FROM table_1_10953197_2 WHERE `Writer(s)` LIKE '%Darren Star%';
+","
+SELECT col2 FROM table_1_10953197_2 WHERE col3 = 'Nancy Malone' UNION SELECT col2 FROM table_1_10953197_2 WHERE col4 LIKE '%Darren Star%';
+","[('""married to it""',), ('""michael\'s game""',), ('""otherwise engaged""',), ('""revenge""',), ('""till death do us part (1)""',)]",table_1_10953197_2,
+Nancy Maloneが監督した、またはDarren Starが脚本を書いたエピソードのタイトルを全て表示してください。,"
+SELECT `Title` FROM `table_m_1765007009525_bdf7fb16_10953197_2` WHERE `Director` = 'Nancy Malone' UNION SELECT `Title` FROM `table_m_1765007009525_bdf7fb16_10953197_2` WHERE `Writer(s)` LIKE '%Darren Star%';
+","
+SELECT col2 FROM `table_m_1765007009525_bdf7fb16_10953197_2` WHERE col3 = 'Nancy Malone' UNION SELECT col2 FROM `table_m_1765007009525_bdf7fb16_10953197_2` WHERE col4 LIKE '%Darren Star%';
+","[('""Married to It""',), ('""Michael\'s Game""',), ('""Much Ado About Everything""',), ('""No Bed of Roses""',), ('""Otherwise Engaged""',), ('""Revenge""',), ('""Strange Bedfellows""',), ('""Swept Away""',), ('""The Bitch is Back""',), ('""Till Death Do Us Part (1)""',)]",m_1765007009525_bdf7fb16_10953197-2,
+各エピソードのタイトルと週間ランキングを表示し、週間ランキングが60位未満なら'Top Tier'、それ以外なら'Lower Tier'と分類してください。リストはエピソード順でお願いします。,"
+SELECT `Episode`, `Weekly Rank`, CASE WHEN `Weekly Rank` < `60` THEN `Top Tier` ELSE `Lower Tier` END FROM `table_1_11178271_1` ORDER BY `#` ASC;
+","SELECT col1, col7, CASE WHEN col7 < 60 THEN 'Top Tier' ELSE 'Lower Tier' END FROM `table_1_11178271_1` ORDER BY col0 ASC;","[('""a love of a lifetime""', 43.0, 'Top Tier'), ('""friendly skies""', 50.0, 'Top Tier'), ('""game three""', 61.0, 'Lower Tier'), ('""the year of the rabbit""', 67.0, 'Lower Tier'), ('""the legend of dylan mccleen""', 72.0, 'Lower Tier'), ('""keepers""', 71.0, 'Lower Tier'), ('""double down""', 80.0, 'Lower Tier'), ('""winterland""', 70.0, 'Lower Tier'), ('""emily""', 66.0, 'Lower Tier'), ('""blowback""', 68.0, 'Lower Tier'), ('""home by another way""', 62.0, 'Lower Tier'), ('""the hanged man""', 65.0, 'Lower Tier')]",table_1_11178271_1,
+ゴールドポイントが60超、シルバーポイントが30超獲得できる最終順位をリストアップしてください。そのうち、プラチナポイントも170を超えるものには 'High Reward Position' というステータスを割り当ててください。リストは、授与されるプラチナポイントが少ない順に並べてください。,"
+SELECT `Finishing position`, CASE WHEN `Points awarded (Platinum)` > 170 THEN `High Reward Position` END AS `Status` FROM `table_1_11254821_2` WHERE `Points awarded (Gold)` > 60 AND `Points awarded (Silver)` > 30 ORDER BY `Points awarded (Platinum)`;
+","SELECT col0, CASE WHEN col1 > 170 THEN 'High Reward Position' END AS `Status` FROM `table_1_11254821_2` WHERE col2 > 60 AND col3 > 30 ORDER BY col1;","[('9th', None), ('8th', None), ('7th', None), ('6th', None), ('5th', None), ('4th', None), ('3rd', 'High Reward Position'), ('2nd', 'High Reward Position'), ('1st', 'High Reward Position')]",table_1_11254821_2,
+数字の9を含むシーズンについて、バッティングパートナーと開催地を教えてください。フィールディングチームについては、相手がニュージーランドの場合は「Versus Kiwis」、サリー（イングランド）の場合は「Versus サリー (イングランド)」、それ以外の場合は「Other Opponent」と表示してください。,"
+SELECT CASE WHEN `Fielding team` = `New Zealand` THEN `Versus Kiwis` WHEN `Fielding team` = `Surrey` THEN `Versus Surrey` ELSE `Other Opponent` END AS `Opponent Category`, `Batting partners`, `Venue` FROM `table_1_11303072_5` WHERE `Season` LIKE `%9%`;
+","
+SELECT CASE WHEN col4 = 'New Zealand' THEN 'Versus Kiwis' WHEN col4 = 'Surrey' THEN 'Versus Surrey' ELSE 'Other Opponent' END `Opponent Category`, col2, col5 FROM `table_1_11303072_5` WHERE col6 LIKE '%9%';
+","[('Other Opponent', 'sachin tendulkar and rahul dravid', 'lal bahadur shastri stadium , hyderabad'), ('Other Opponent', 'tim curtis and tom moody', 'the oval , london'), ('Other Opponent', 'minhajul abedin and khaled mahmud', 'united bank limited sports complex , karachi'), ('Other Opponent', 'nigel llong and matthew fleming', 'south downs road , bowdon'), ('Other Opponent', 'shahid iqbal and haaris ayaz', 'united bank limited sports complex , karachi')]",table_1_11303072_5,
+数字の9を含むシーズンについて、バッティングパートナーと開催地を教えてください。フィールディングチームについては、相手がニュージーランドの場合は「Versus Kiwis」、サリー（イングランド）の場合は「Versus サリー (イングランド)」、それ以外の場合は「Other Opponent」と表示してください。,"SELECT
+  CASE
+    WHEN `Fielding team` = 'New Zealand' THEN 'Versus Kiwis'
+    WHEN `Fielding team` = 'Surrey' THEN 'Versus Surrey'
+    ELSE 'Other Opponent'
+  END AS `Opponent Category`,
+  CONCAT(`Batting_partner_1`, ' & ', `Batting_partner_2`) AS `Batting partners`,
+  `Venue`
+FROM `table_m_1765007290682_83d21946_11303072_5`
+WHERE `Season` LIKE '%9%';","SELECT
+  CASE
+    WHEN col3 = 'New Zealand' THEN 'Versus Kiwis'
+    WHEN col3 = 'Surrey' THEN 'Versus Surrey'
+    ELSE 'Other Opponent'
+  END AS `Opponent Category`,
+  CONCAT(col6, ' & ', col7) AS `Batting partners`,
+  col4
+FROM `table_m_1765007290682_83d21946_11303072_5`
+WHERE col5 LIKE '%9%';","[('Versus Kiwis', 'Sachin Tendulkar & Rahul Dravid', 'Lal Bahadur Shastri Stadium , Hyderabad'), ('Versus Surrey', 'Sachin Tendulkar & Rahul Dravid', 'The Oval , London'), ('Other Opponent', 'Ghulam Ali & Rahul Dravid', 'United Bank Limited Sports Complex , Karachi'), ('Other Opponent', 'Ghulam Ali & Rahul Dravid', 'South Downs Road , Bowdon'), ('Other Opponent', 'Sachin Tendulkar & Sohail Jaffar', 'United Bank Limited Sports Complex , Karachi')]",m_1765007290682_83d21946_11303072-5,
+勝利の全サイクルを把握したいです。各年の「オープン 1st VIII」のチャンピオンと、そのチームが優勝するちょうど3年前に達成したU-15レースの総勝利数（「基礎気のレベル」）を教えてください。,"
+WITH `U15_Energy_Focus` AS (
+  SELECT `Crew` AS `year`, `school`, COUNT(*) AS `wins`
+  FROM (
+    SELECT `Crew`, `U15 1st IV` AS `school` FROM `table_1_11318462_5`
+    UNION ALL
+    SELECT `Crew`, `U15 2nd IV` AS `school` FROM `table_1_11318462_5`
+    UNION ALL
+    SELECT `Crew`, `U15 3rd IV` AS `school` FROM `table_1_11318462_5`
+    UNION ALL
+    SELECT `Crew`, `U15 4th IV` AS `school` FROM `table_1_11318462_5`
+    UNION ALL
+    SELECT `Crew`, `U15 5th IV` AS `school` FROM `table_1_11318462_5`
+    UNION ALL
+    SELECT `Crew`, `U15 6th IV` AS `school` FROM `table_1_11318462_5`
+  )
+  GROUP BY `year`, `school`
+)
+SELECT
+  T1.`Crew` AS `Manifestation_Year`,
+  T1.`Open 1st VIII` AS `Champion_School`,
+  COALESCE(T2.`wins`, 0) AS `Foundational_Chi_Level_3_Years_Prior`
+FROM `table_1_11318462_5` AS T1
+LEFT JOIN `U15_Energy_Focus` AS T2
+  ON T1.`Crew` = T2.`year` + 3 AND T1.`Open 1st VIII` = T2.`school`
+ORDER BY
+  T1.`Crew`;
+","
+WITH `U15_Energy_Focus` AS (
+  SELECT col0 AS `year`, `school`, COUNT(*) AS `wins`
+  FROM (
+    SELECT col0, col7 AS `school` FROM `table_1_11318462_5`
+    UNION ALL
+    SELECT col0, col8 AS `school` FROM `table_1_11318462_5`
+    UNION ALL
+    SELECT col0, col9 AS `school` FROM `table_1_11318462_5`
+    UNION ALL
+    SELECT col0, col10 AS `school` FROM `table_1_11318462_5`
+    UNION ALL
+    SELECT col0, col11 AS `school` FROM `table_1_11318462_5`
+    UNION ALL
+    SELECT col0, col12 AS `school` FROM `table_1_11318462_5`
+  )
+  GROUP BY `year`, `school`
+)
+SELECT
+  T1.col0 AS `Manifestation_Year`,
+  T1.col1 AS `Champion_School`,
+  COALESCE(T2.`wins`, 0) AS `Foundational_Chi_Level_3_Years_Prior`
+FROM `table_1_11318462_5` AS T1
+LEFT JOIN `U15_Energy_Focus` AS T2
+  ON T1.col0 = T2.`year` + 3 AND T1.col1 = T2.`school`
+ORDER BY
+  T1.col0;
+","[(1994.0, 'gt', 0), (1995.0, 'bgs', 0), (1996.0, 'gt', 0), (1997.0, 'bgs', 3), (1998.0, 'acgs', 0), (1999.0, 'bgs', 4), (2000.0, 'tss', 1), (2001.0, 'bgs', 1)]",table_1_11318462_5,
+勝利の全サイクルを把握したいです。各年の「オープン 1st VIII」のチャンピオンと、そのチームが優勝するちょうど3年前に達成したU-15レースの総勝利数（「基礎気のレベル」）を教えてください。,unanswerable,unanswerable,,m_1765007326204_a31698c5_11318462-5,
+グループCで優勝経験のある全チームについて、グループDでの優勝経験の有無を教えてください。チーム名はアルファベット順で表示してください。,"
+SELECT DISTINCT
+  T1.`Group C Winner` AS `Team`,
+  CASE
+    WHEN EXISTS (
+      SELECT
+        1
+      FROM
+        `table_1_1137142_1`
+      WHERE
+        `Group D Winner` = T1.`Group C Winner`
+    )
+    THEN `Also Won Group D`
+    ELSE `Never Won Group D`
+  END AS `Status`
+FROM
+  `table_1_1137142_1` AS T1
+ORDER BY
+  `Team` ASC;
+","
+SELECT DISTINCT T1.col3 AS `Team`, CASE WHEN EXISTS ( SELECT 1 FROM `table_1_1137142_1` WHERE col4 = T1.col3 ) THEN 'Also Won Group D' ELSE 'Never Won Group D' END AS `Status` FROM `table_1_1137142_1` AS T1 ORDER BY `Team` ASC;
+","[('brindisi', 'Never Won Group D'), ('casertana', 'Never Won Group D'), ('fano', 'Never Won Group D'), ('fidelis andria', 'Never Won Group D'), ('francavilla', 'Never Won Group D'), ('giulianova', 'Never Won Group D'), ('jesi', 'Never Won Group D'), ('perugia', 'Never Won Group D'), ('siena', 'Never Won Group D'), ('teramo', 'Never Won Group D'), ('vis pesaro', 'Never Won Group D')]",table_1_1137142_1,
+MLSの最優秀新人賞受賞者たちの出身大学をすべて挙げてください。,"
+SELECT DISTINCT `College`
+FROM `table_1_1004033_1`;
+","
+SELECT DISTINCT `College`
+FROM `table_1_1004033_1`;
+","[('Florida International',), ('UNLV',), ('Virginia',), ('Duke',), ('UCLA',), ('Concordia College',), ('Connecticut',), ('Furman',), ('Wake Forest',), ('Maryland',), ('Cal State Northridge',), ('none',), ('James Madison',)]",m_1765011735765_9faa08d1_テーブル-1004033-1,ja
+MLSの最優秀新人賞受賞者たちの出身大学をすべて挙げてください。,"
+SELECT DISTINCT `College`
+FROM `table_m_1765006502800_8307be4b_1004033_1`;
+","
+SELECT DISTINCT `College`
+FROM `table_m_1765006502800_8307be4b_1004033_1`;
+","[('Florida International',), ('UNLV',), ('Virginia',), ('Duke',), ('UCLA',), ('Concordia College',), ('Connecticut',), ('Furman',), ('Wake Forest',), ('Maryland',), ('Cal State Northridge',), ('none',), ('James Madison',)]",m_1765011739280_b5090bb5_m-1765006502800-8307be4b-1004033-1,zh
+1994年NHLドラフトの第10巡目で、2人以上の選手が指名された国籍と、それぞれの国籍からの指名人数を教えてください。結果は指名選手数の多い順に並べてください。,"
+SELECT `Nationality`, COUNT(`Pick`) AS `Drafted_Players` FROM `table_1_1013129_10` GROUP BY `Nationality` HAVING COUNT(`Pick`) > 1 ORDER BY `Drafted_Players` DESC;
+","
+SELECT `Nationality`, COUNT(`Pick`) AS `Drafted_Players` FROM `table_1_1013129_10` GROUP BY `Nationality` HAVING COUNT(`Pick`) > 1 ORDER BY `Drafted_Players` DESC;
+","[('Canada', 9), ('United States', 7), ('Russia', 3), ('Slovakia', 2), ('Finland', 2)]",m_1765011742777_342fcb67_テーブル-1013129-10,ja
+IROC XXシーズンにおける各競技分野のパフォーマンスを評価するため、要約表を作成してください。各シリーズを、その所属ドライバーが獲得した賞金総額でランク付けし、それぞれのドライバー数と平均ポイントも表示してください。,"
+SELECT `Series`, COUNT(`Driver`) AS `NumberOfDrivers`, AVG(`Points`) AS `AveragePoints`, SUM(CAST(REPLACE(REPLACE(`Winnings`, '$', ''), ',', '') AS REAL)) AS `TotalWinnings` FROM `table_1_10160447_1` GROUP BY `Series` ORDER BY `TotalWinnings` DESC;
+","
+SELECT `Series`, COUNT(`Driver`) AS `NumberOfDrivers`, AVG(`Points`) AS `AveragePoints`, SUM(CAST(REPLACE(REPLACE(`Winnings`, '$', ''), ',', '') AS REAL)) AS `TotalWinnings` FROM `table_1_10160447_1` GROUP BY `Series` ORDER BY `TotalWinnings` DESC;
+","[('NASCAR Winston Cup', 6, 40.666666666666664, 435000.0), ('Indy Car', 3, 47.333333333333336, 185000.0), ('NASCAR Busch Series', 1, 50.0, 60000.0), ('SCCA Trans-Am Series', 1, 36.0, 40000.0)]",m_1765011745349_2080db04_表-10160447-1,zh
+IROC XXシーズンにおける各競技分野のパフォーマンスを評価するため、要約表を作成してください。各シリーズを、その所属ドライバーが獲得した賞金総額でランク付けし、それぞれのドライバー数と平均ポイントも表示してください。,"
+SELECT `Series`, COUNT(`Driver`) AS `NumberOfDrivers`, AVG(`Score`) AS `AveragePoints`, SUM(CAST(REPLACE(REPLACE(`Prize`, '$', ''), ',', '') AS REAL)) AS `TotalWinnings` FROM `table_m_1765006600371_468fd710_10160447_1` GROUP BY `Series` ORDER BY `TotalWinnings` DESC;
+","
+SELECT `Series`, COUNT(`Driver`) AS `NumberOfDrivers`, AVG(`Score`) AS `AveragePoints`, SUM(CAST(REPLACE(REPLACE(`Prize`, '$', ''), ',', '') AS REAL)) AS `TotalWinnings` FROM `table_m_1765006600371_468fd710_10160447_1` GROUP BY `Series` ORDER BY `TotalWinnings` DESC;
+","[('NASCAR Winston Cup', 6, 40.666666666666664, 435000.0), ('Indy Car', 3, 47.333333333333336, 185000.0), ('NASCAR Busch Series', 1, 50.0, 60000.0), ('SCCA Trans-Am Series', 1, 36.0, 40000.0)]",m_1765011748769_25b5e4f0_m-1765006600371-468fd710-10160447-1,ja
+対応するエルシニア属タンパク質名が「Y」で、エスケリキア属タンパク質名が「E」で始まる機能の一覧を、アルファベット順で教えてください。,"
+SELECT `↓ Function / Genus →` AS `Correlated Function` FROM `table_1_10321124_1` WHERE `Yersinia` LIKE 'Y%' AND `Escherichia` LIKE 'E%' ORDER BY `Correlated Function` ASC;
+","
+SELECT `↓ Function / Genus →` AS `Correlated Function` FROM `table_1_10321124_1` WHERE `Yersinia` LIKE 'Y%' AND `Escherichia` LIKE 'E%' ORDER BY `Correlated Function` ASC;
+","[('Inner rod',), ('Needle monomer',), ('Switch',), ('Translocator',), ('Translocator',)]",m_1765011751633_a0d8ff8a_テーブル-10321124-1,ja
+ネットワーク名が'R'で始まる地域または国を、アルファベットの逆順で5つ挙げてください。,"
+SELECT `Region/country` FROM table_1_1053802_1 WHERE `Network` LIKE 'R%' GROUP BY `Region/country` HAVING COUNT(*) > 0 ORDER BY `Region/country` DESC LIMIT 5;
+","
+SELECT `Region/country` FROM table_1_1053802_1 WHERE `Network` LIKE 'R%' GROUP BY `Region/country` HAVING COUNT(*) > 0 ORDER BY `Region/country` DESC LIMIT 5;
+","[('Ireland',), ('Germany',), ('Brazil',)]",m_1765011754294_fdfb3296_テーブル-1053802-1,ja
+シーズン平均視聴率を上回ったCSIのエピソードについて、そのタイトル、監督、脚本家をリストアップしてください。視聴者数の多い順でお願いします。,"
+SELECT `Title`, `U.S. viewers (millions)`, `Directed by`, `Written by`
+FROM table_1_10718192_2
+WHERE `U.S. viewers (millions)` > (SELECT AVG(REPLACE(`U.S. viewers (millions)`, ',', '')) FROM table_1_10718192_2)
+ORDER BY `U.S. viewers (millions)` DESC;
+","
+SELECT `Title`, `U.S. viewers (millions)`, `Directed by`, `Written by`
+FROM table_1_10718192_2
+WHERE `U.S. viewers (millions)` > (SELECT AVG(REPLACE(`U.S. viewers (millions)`, ',', '')) FROM table_1_10718192_2)
+ORDER BY `U.S. viewers (millions)` DESC;
+","[('""A Little Murder""', '30.81', 'Tucker Gates', 'Ann Donahue & Naren Shankar'), ('""Revenge Is Best Served Cold""', '30.47', 'Danny Cannon', 'Carol Mendelsohn & Anthony E. Zuiker'), ('""Fight Night""', '29.94', 'Richard J. Lewis', 'Andrew Lipsitz & Naren Shankar'), ('""Let the Seller Beware""', '29.90', 'Richard J. Lewis', 'Andrew Lipsitz & Anthony E. Zuiker'), ('""Blood Lust""', '29.74', 'Charlie Correll', 'Josh Berman & Carol Mendelsohn'), ('""Abra-Cadaver""', '28.95', 'Danny Cannon', 'Danny Cannon & Anthony E. Zuiker'), ('""Crash and Burn""', '28.60', 'Richard J. Lewis', 'Josh Berman'), ('""The Accused Is Entitled""', '28.46', 'Kenneth Fink', 'Elizabeth Devine & Ann Donahue'), ('""Lucky Strike""', '27.95', 'Kenneth Fink', 'Eli Talbert & Anthony E. Zuiker'), ('""Got Murder?""', '27.87', 'Kenneth Fink', 'Sarah Goldfinger'), ('""The Execution of Catherine Willows""', '27.86', 'Kenneth Fink', 'Elizabeth Devine & Carol Mendelsohn')]",m_1765011757521_39987995_テーブル-10718192-2,ja
+シーズン平均視聴率を上回ったCSIのエピソードについて、そのタイトル、監督、脚本家をリストアップしてください。視聴者数の多い順でお願いします。,"
+SELECT `Title`, `u_s_viewers_millions`, `Directed by`, `Written by`
+FROM `table_m_1765006917365_3783eaea_10718192_2`
+WHERE `u_s_viewers_millions` > (SELECT AVG(REPLACE(`u_s_viewers_millions`, ',', '')) FROM `table_m_1765006917365_3783eaea_10718192_2`)
+ORDER BY `u_s_viewers_millions` DESC;
+","
+SELECT `Title`, `u_s_viewers_millions`, `Directed by`, `Written by`
+FROM `table_m_1765006917365_3783eaea_10718192_2`
+WHERE `u_s_viewers_millions` > (SELECT AVG(REPLACE(`u_s_viewers_millions`, ',', '')) FROM `table_m_1765006917365_3783eaea_10718192_2`)
+ORDER BY `u_s_viewers_millions` DESC;
+","[('""A Little Murder""', '30.81', 'Tucker Gates', 'Ann Donahue & Naren Shankar'), ('""Revenge Is Best Served Cold""', '30.47', 'Danny Cannon', 'Carol Mendelsohn & Anthony E. Zuiker'), ('""Fight Night""', '29.94', 'Richard J. Lewis', 'Andrew Lipsitz & Naren Shankar'), ('""Let the Seller Beware""', '29.90', 'Richard J. Lewis', 'Andrew Lipsitz & Anthony E. Zuiker'), ('""Blood Lust""', '29.74', 'Charlie Correll', 'Josh Berman & Carol Mendelsohn'), ('""Abra-Cadaver""', '28.95', 'Danny Cannon', 'Danny Cannon & Anthony E. Zuiker'), ('""Crash and Burn""', '28.60', 'Richard J. Lewis', 'Josh Berman'), ('""The Accused Is Entitled""', '28.46', 'Kenneth Fink', 'Elizabeth Devine & Ann Donahue'), ('""Lucky Strike""', '27.95', 'Kenneth Fink', 'Eli Talbert & Anthony E. Zuiker'), ('""Got Murder?""', '27.87', 'Kenneth Fink', 'Sarah Goldfinger'), ('""The Execution of Catherine Willows""', '27.86', 'Kenneth Fink', 'Elizabeth Devine & Carol Mendelsohn')]",m_1765011761906_e0651c17_m-1765006917365-3783eaea-10718192-2,ja
+確認ですが、'Premiere'の日付順に並べた'table_1_10942714_1'の'イングリッシュ title'と'HK viewers'の列のみでよろしいですね？全てのタイトル、全ての視聴者数を、漏れなくお願いします！,SELECT `English title (HK viewers)` FROM `table_m_1765007002624_6d3622dd_10942714_1` ORDER BY `Premiere` ASC;,SELECT `English title (HK viewers)` FROM `table_m_1765007002624_6d3622dd_10942714_1` ORDER BY `Premiere` ASC;,"[('Forensic Heroes, 2.11 million',), ('Men in Pain, 2.03 million',), ('Love Guaranteed, 2.07 million',), ('La Femme Desperado, 2.14 million',), ('Bar Bender, 2.06 million',), ('The Saviour of the Soul, 2.07 million',), (""Maiden's Vow, 2.05 million"",), ('To Grow with Love, 2.04 million',), ('The Dance of Passion, 2.05 million',)]",m_1765011769224_1bda4498_m-1765007002624-6d3622dd-10942714-1,zh
+Nancy Maloneが監督した、またはDarren Starが脚本を書いたエピソードのタイトルを全て表示してください。,"
+SELECT `Title` FROM `table_m_1765007009525_bdf7fb16_10953197_2` WHERE `Director` = 'Nancy Malone' UNION SELECT `Title` FROM `table_m_1765007009525_bdf7fb16_10953197_2` WHERE `Writer(s)` LIKE '%Darren Star%';
+","
+SELECT `Title` FROM `table_m_1765007009525_bdf7fb16_10953197_2` WHERE `Director` = 'Nancy Malone' UNION SELECT `Title` FROM `table_m_1765007009525_bdf7fb16_10953197_2` WHERE `Writer(s)` LIKE '%Darren Star%';
+","[('""Married to It""',), ('""Michael\'s Game""',), ('""Much Ado About Everything""',), ('""No Bed of Roses""',), ('""Otherwise Engaged""',), ('""Revenge""',), ('""Strange Bedfellows""',), ('""Swept Away""',), ('""The Bitch is Back""',), ('""Till Death Do Us Part (1)""',)]",m_1765011776722_0b537f45_m-1765007009525-bdf7fb16-10953197-2,zh
+MLSの最優秀新人賞受賞者たちの出身大学をすべて挙げてください。,"
+SELECT DISTINCT `College`
+FROM `table_m_1765006502800_8307be4b_1004033_1`;
+","
+SELECT DISTINCT `College`
+FROM `table_m_1765006502800_8307be4b_1004033_1`;
+","[('Florida International',), ('UNLV',), ('Virginia',), ('Duke',), ('UCLA',), ('Concordia College',), ('Connecticut',), ('Furman',), ('Wake Forest',), ('Maryland',), ('Cal State Northridge',), ('none',), ('James Madison',)]",m_1765011786348_afa8d5a5_m-1765006502800-8307be4b-1004033-1,ja
+IROC XXシーズンにおける各競技分野のパフォーマンスを評価するため、要約表を作成してください。各シリーズを、その所属ドライバーが獲得した賞金総額でランク付けし、それぞれのドライバー数と平均ポイントも表示してください。,"
+SELECT `Series`, COUNT(`Driver`) AS `NumberOfDrivers`, AVG(`Score`) AS `AveragePoints`, SUM(CAST(REPLACE(REPLACE(`Prize`, '$', ''), ',', '') AS REAL)) AS `TotalWinnings` FROM `table_m_1765006600371_468fd710_10160447_1` GROUP BY `Series` ORDER BY `TotalWinnings` DESC;
+","
+SELECT `Series`, COUNT(`Driver`) AS `NumberOfDrivers`, AVG(`Score`) AS `AveragePoints`, SUM(CAST(REPLACE(REPLACE(`Prize`, '$', ''), ',', '') AS REAL)) AS `TotalWinnings` FROM `table_m_1765006600371_468fd710_10160447_1` GROUP BY `Series` ORDER BY `TotalWinnings` DESC;
+","[('NASCAR Winston Cup', 6, 40.666666666666664, 435000.0), ('Indy Car', 3, 47.333333333333336, 185000.0), ('NASCAR Busch Series', 1, 50.0, 60000.0), ('SCCA Trans-Am Series', 1, 36.0, 40000.0)]",m_1765011794281_f4bab0be_m-1765006600371-468fd710-10160447-1,ja
+対応するエルシニア属タンパク質名が「Y」で、エスケリキア属タンパク質名が「E」で始まる機能の一覧を、アルファベット順で教えてください。,"
+SELECT `↓ Function / Genus →` AS `Correlated Function` FROM `table_1_10321124_1` WHERE `Yersinia` LIKE 'Y%' AND `Escherichia` LIKE 'E%' ORDER BY `Correlated Function` ASC;
+","
+SELECT `↓ Function / Genus →` AS `Correlated Function` FROM `table_1_10321124_1` WHERE `Yersinia` LIKE 'Y%' AND `Escherichia` LIKE 'E%' ORDER BY `Correlated Function` ASC;
+","[('Inner rod',), ('Needle monomer',), ('Switch',), ('Translocator',), ('Translocator',)]",m_1765011797430_8ddd75bc_テーブル-10321124-1,ja
+ネットワーク名が'R'で始まる地域または国を、アルファベットの逆順で5つ挙げてください。,"
+SELECT `Region/country` FROM table_1_1053802_1 WHERE `Network` LIKE 'R%' GROUP BY `Region/country` HAVING COUNT(*) > 0 ORDER BY `Region/country` DESC LIMIT 5;
+","
+SELECT `Region/country` FROM table_1_1053802_1 WHERE `Network` LIKE 'R%' GROUP BY `Region/country` HAVING COUNT(*) > 0 ORDER BY `Region/country` DESC LIMIT 5;
+","[('Ireland',), ('Germany',), ('Brazil',)]",m_1765011800414_4ed63f7d_テーブル-1053802-1,ja
+シーズン平均視聴率を上回ったCSIのエピソードについて、そのタイトル、監督、脚本家をリストアップしてください。視聴者数の多い順でお願いします。,"
+SELECT `Title`, `u_s_viewers_millions`, `Directed by`, `Written by`
+FROM `table_m_1765006917365_3783eaea_10718192_2`
+WHERE `u_s_viewers_millions` > (SELECT AVG(REPLACE(`u_s_viewers_millions`, ',', '')) FROM `table_m_1765006917365_3783eaea_10718192_2`)
+ORDER BY `u_s_viewers_millions` DESC;
+","
+SELECT `Title`, `u_s_viewers_millions`, `Directed by`, `Written by`
+FROM `table_m_1765006917365_3783eaea_10718192_2`
+WHERE `u_s_viewers_millions` > (SELECT AVG(REPLACE(`u_s_viewers_millions`, ',', '')) FROM `table_m_1765006917365_3783eaea_10718192_2`)
+ORDER BY `u_s_viewers_millions` DESC;
+","[('""A Little Murder""', '30.81', 'Tucker Gates', 'Ann Donahue & Naren Shankar'), ('""Revenge Is Best Served Cold""', '30.47', 'Danny Cannon', 'Carol Mendelsohn & Anthony E. Zuiker'), ('""Fight Night""', '29.94', 'Richard J. Lewis', 'Andrew Lipsitz & Naren Shankar'), ('""Let the Seller Beware""', '29.90', 'Richard J. Lewis', 'Andrew Lipsitz & Anthony E. Zuiker'), ('""Blood Lust""', '29.74', 'Charlie Correll', 'Josh Berman & Carol Mendelsohn'), ('""Abra-Cadaver""', '28.95', 'Danny Cannon', 'Danny Cannon & Anthony E. Zuiker'), ('""Crash and Burn""', '28.60', 'Richard J. Lewis', 'Josh Berman'), ('""The Accused Is Entitled""', '28.46', 'Kenneth Fink', 'Elizabeth Devine & Ann Donahue'), ('""Lucky Strike""', '27.95', 'Kenneth Fink', 'Eli Talbert & Anthony E. Zuiker'), ('""Got Murder?""', '27.87', 'Kenneth Fink', 'Sarah Goldfinger'), ('""The Execution of Catherine Willows""', '27.86', 'Kenneth Fink', 'Elizabeth Devine & Carol Mendelsohn')]",m_1765011804393_ce90e253_m-1765006917365-3783eaea-10718192-2,zh
+確認ですが、'Premiere'の日付順に並べた'table_1_10942714_1'の'イングリッシュ title'と'HK viewers'の列のみでよろしいですね？全てのタイトル、全ての視聴者数を、漏れなくお願いします！,SELECT `English title (HK viewers)` FROM `table_m_1765007002624_6d3622dd_10942714_1` ORDER BY `Premiere` ASC;,SELECT `English title (HK viewers)` FROM `table_m_1765007002624_6d3622dd_10942714_1` ORDER BY `Premiere` ASC;,"[('Forensic Heroes, 2.11 million',), ('Men in Pain, 2.03 million',), ('Love Guaranteed, 2.07 million',), ('La Femme Desperado, 2.14 million',), ('Bar Bender, 2.06 million',), ('The Saviour of the Soul, 2.07 million',), (""Maiden's Vow, 2.05 million"",), ('To Grow with Love, 2.04 million',), ('The Dance of Passion, 2.05 million',)]",m_1765011809893_2cc3f3da_m-1765007002624-6d3622dd-10942714-1,ja
+MLSの最優秀新人賞受賞者たちの出身大学をすべて挙げてください。,"
+SELECT DISTINCT `College`
+FROM `table_m_1765006502800_8307be4b_1004033_1`;
+","
+SELECT DISTINCT `College`
+FROM `table_m_1765006502800_8307be4b_1004033_1`;
+","[('Florida International',), ('UNLV',), ('Virginia',), ('Duke',), ('UCLA',), ('Concordia College',), ('Connecticut',), ('Furman',), ('Wake Forest',), ('Maryland',), ('Cal State Northridge',), ('none',), ('James Madison',)]",m_1765011813059_a9f3b39f_m-1765006502800-8307be4b-1004033-1,ja
+対応するエルシニア属タンパク質名が「Y」で、エスケリキア属タンパク質名が「E」で始まる機能の一覧を、アルファベット順で教えてください。,"
+SELECT `↓ Function / Genus →` AS `Correlated Function` FROM `table_1_10321124_1` WHERE `Yersinia` LIKE 'Y%' AND `Escherichia` LIKE 'E%' ORDER BY `Correlated Function` ASC;
+","
+SELECT `↓ Function / Genus →` AS `Correlated Function` FROM `table_1_10321124_1` WHERE `Yersinia` LIKE 'Y%' AND `Escherichia` LIKE 'E%' ORDER BY `Correlated Function` ASC;
+","[('Inner rod',), ('Needle monomer',), ('Switch',), ('Translocator',), ('Translocator',)]",m_1765011816727_0b5f0ef2_テーブル-10321124-1,ja
+ネットワーク名が'R'で始まる地域または国を、アルファベットの逆順で5つ挙げてください。,"
+SELECT `Region/country` FROM table_1_1053802_1 WHERE `Network` LIKE 'R%' GROUP BY `Region/country` HAVING COUNT(*) > 0 ORDER BY `Region/country` DESC LIMIT 5;
+","
+SELECT `Region/country` FROM table_1_1053802_1 WHERE `Network` LIKE 'R%' GROUP BY `Region/country` HAVING COUNT(*) > 0 ORDER BY `Region/country` DESC LIMIT 5;
+","[('Ireland',), ('Germany',), ('Brazil',)]",m_1765011819900_55255fbc_テーブル-1053802-1,ja
+シーズン平均視聴率を上回ったCSIのエピソードについて、そのタイトル、監督、脚本家をリストアップしてください。視聴者数の多い順でお願いします。,"
+SELECT `Title`, `u_s_viewers_millions`, `Directed by`, `Written by`
+FROM `table_m_1765006917365_3783eaea_10718192_2`
+WHERE `u_s_viewers_millions` > (SELECT AVG(REPLACE(`u_s_viewers_millions`, ',', '')) FROM `table_m_1765006917365_3783eaea_10718192_2`)
+ORDER BY `u_s_viewers_millions` DESC;
+","
+SELECT `Title`, `u_s_viewers_millions`, `Directed by`, `Written by`
+FROM `table_m_1765006917365_3783eaea_10718192_2`
+WHERE `u_s_viewers_millions` > (SELECT AVG(REPLACE(`u_s_viewers_millions`, ',', '')) FROM `table_m_1765006917365_3783eaea_10718192_2`)
+ORDER BY `u_s_viewers_millions` DESC;
+","[('""A Little Murder""', '30.81', 'Tucker Gates', 'Ann Donahue & Naren Shankar'), ('""Revenge Is Best Served Cold""', '30.47', 'Danny Cannon', 'Carol Mendelsohn & Anthony E. Zuiker'), ('""Fight Night""', '29.94', 'Richard J. Lewis', 'Andrew Lipsitz & Naren Shankar'), ('""Let the Seller Beware""', '29.90', 'Richard J. Lewis', 'Andrew Lipsitz & Anthony E. Zuiker'), ('""Blood Lust""', '29.74', 'Charlie Correll', 'Josh Berman & Carol Mendelsohn'), ('""Abra-Cadaver""', '28.95', 'Danny Cannon', 'Danny Cannon & Anthony E. Zuiker'), ('""Crash and Burn""', '28.60', 'Richard J. Lewis', 'Josh Berman'), ('""The Accused Is Entitled""', '28.46', 'Kenneth Fink', 'Elizabeth Devine & Ann Donahue'), ('""Lucky Strike""', '27.95', 'Kenneth Fink', 'Eli Talbert & Anthony E. Zuiker'), ('""Got Murder?""', '27.87', 'Kenneth Fink', 'Sarah Goldfinger'), ('""The Execution of Catherine Willows""', '27.86', 'Kenneth Fink', 'Elizabeth Devine & Carol Mendelsohn')]",m_1765011827255_327f99c5_m-1765006917365-3783eaea-10718192-2,ja
+確認ですが、'Premiere'の日付順に並べた'table_1_10942714_1'の'イングリッシュ title'と'HK viewers'の列のみでよろしいですね？全てのタイトル、全ての視聴者数を、漏れなくお願いします！,SELECT `English title (HK viewers)` FROM `table_m_1765007002624_6d3622dd_10942714_1` ORDER BY `Premiere` ASC;,SELECT `English title (HK viewers)` FROM `table_m_1765007002624_6d3622dd_10942714_1` ORDER BY `Premiere` ASC;,"[('Forensic Heroes, 2.11 million',), ('Men in Pain, 2.03 million',), ('Love Guaranteed, 2.07 million',), ('La Femme Desperado, 2.14 million',), ('Bar Bender, 2.06 million',), ('The Saviour of the Soul, 2.07 million',), (""Maiden's Vow, 2.05 million"",), ('To Grow with Love, 2.04 million',), ('The Dance of Passion, 2.05 million',)]",m_1765011830861_efeca4ad_m-1765007002624-6d3622dd-10942714-1,zh
+シーズン平均視聴率を上回ったCSIのエピソードについて、そのタイトル、監督、脚本家をリストアップしてください。視聴者数の多い順でお願いします。,"
+SELECT `Title`, `u_s_viewers_millions`, `Directed by`, `Written by`
+FROM `table_m_1765006917365_3783eaea_10718192_2`
+WHERE `u_s_viewers_millions` > (SELECT AVG(REPLACE(`u_s_viewers_millions`, ',', '')) FROM `table_m_1765006917365_3783eaea_10718192_2`)
+ORDER BY `u_s_viewers_millions` DESC;
+","
+SELECT `Title`, `u_s_viewers_millions`, `Directed by`, `Written by`
+FROM `table_m_1765006917365_3783eaea_10718192_2`
+WHERE `u_s_viewers_millions` > (SELECT AVG(REPLACE(`u_s_viewers_millions`, ',', '')) FROM `table_m_1765006917365_3783eaea_10718192_2`)
+ORDER BY `u_s_viewers_millions` DESC;
+","[('""A Little Murder""', '30.81', 'Tucker Gates', 'Ann Donahue & Naren Shankar'), ('""Revenge Is Best Served Cold""', '30.47', 'Danny Cannon', 'Carol Mendelsohn & Anthony E. Zuiker'), ('""Fight Night""', '29.94', 'Richard J. Lewis', 'Andrew Lipsitz & Naren Shankar'), ('""Let the Seller Beware""', '29.90', 'Richard J. Lewis', 'Andrew Lipsitz & Anthony E. Zuiker'), ('""Blood Lust""', '29.74', 'Charlie Correll', 'Josh Berman & Carol Mendelsohn'), ('""Abra-Cadaver""', '28.95', 'Danny Cannon', 'Danny Cannon & Anthony E. Zuiker'), ('""Crash and Burn""', '28.60', 'Richard J. Lewis', 'Josh Berman'), ('""The Accused Is Entitled""', '28.46', 'Kenneth Fink', 'Elizabeth Devine & Ann Donahue'), ('""Lucky Strike""', '27.95', 'Kenneth Fink', 'Eli Talbert & Anthony E. Zuiker'), ('""Got Murder?""', '27.87', 'Kenneth Fink', 'Sarah Goldfinger'), ('""The Execution of Catherine Willows""', '27.86', 'Kenneth Fink', 'Elizabeth Devine & Carol Mendelsohn')]",m_1765011834363_32c28e2b_m-1765006917365-3783eaea-10718192-2,ja
+確認ですが、'Premiere'の日付順に並べた'table_1_10942714_1'の'イングリッシュ title'と'HK viewers'の列のみでよろしいですね？全てのタイトル、全ての視聴者数を、漏れなくお願いします！,SELECT `English title (HK viewers)` FROM `table_m_1765007002624_6d3622dd_10942714_1` ORDER BY `Premiere` ASC;,SELECT `English title (HK viewers)` FROM `table_m_1765007002624_6d3622dd_10942714_1` ORDER BY `Premiere` ASC;,"[('Forensic Heroes, 2.11 million',), ('Men in Pain, 2.03 million',), ('Love Guaranteed, 2.07 million',), ('La Femme Desperado, 2.14 million',), ('Bar Bender, 2.06 million',), ('The Saviour of the Soul, 2.07 million',), (""Maiden's Vow, 2.05 million"",), ('To Grow with Love, 2.04 million',), ('The Dance of Passion, 2.05 million',)]",m_1765011837632_b51bdc6f_m-1765007002624-6d3622dd-10942714-1,ja
+確認ですが、'Premiere'の日付順に並べた'table_1_10942714_1'の'イングリッシュ title'と'HK viewers'の列のみでよろしいですね？全てのタイトル、全ての視聴者数を、漏れなくお願いします！,SELECT `English title (HK viewers)` FROM `table_m_1765007002624_6d3622dd_10942714_1` ORDER BY `Premiere` ASC;,SELECT `English title (HK viewers)` FROM `table_m_1765007002624_6d3622dd_10942714_1` ORDER BY `Premiere` ASC;,"[('Forensic Heroes, 2.11 million',), ('Men in Pain, 2.03 million',), ('Love Guaranteed, 2.07 million',), ('La Femme Desperado, 2.14 million',), ('Bar Bender, 2.06 million',), ('The Saviour of the Soul, 2.07 million',), (""Maiden's Vow, 2.05 million"",), ('To Grow with Love, 2.04 million',), ('The Dance of Passion, 2.05 million',)]",m_1765011842466_2df4e111_m-1765007002624-6d3622dd-10942714-1,zh

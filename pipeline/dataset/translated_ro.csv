@@ -1,0 +1,312 @@
+nl,sql,db_sql,table_id
+"Vă rugăm să furnizați numărul de rânduri ale căror notă este ""Nici un slogan pe seria curentă"", grupată prin notă, organizată în ordinea descrescătoare a numărului rezultat, limitată la cinci rezultate.","
+SELECT `Notes`, COUNT(*) AS `Count`
+FROM `table_1_1000181_1`
+WHERE `Notes` = 'No slogan on current series'
+GROUP BY `Notes`
+ORDER BY `Count` DESC
+LIMIT 5;
+","SELECT col5, COUNT(*) AS `Count`
+FROM `table_1_1000181_1`
+WHERE col5 LIKE '%No slogan%'
+GROUP BY col5
+ORDER BY `Count` DESC
+LIMIT 5;",table_1_1000181_1
+"Din înregistrările flotei, enumeră numărul de entități care există pentru fiecare producător, dar include numai producătorii cu mai mult de o entitate, ordonă rezultatele după numărul de entități de la cel mai mic la cel mai mare și returnă până la cinci producători.","
+SELECT `Manufacturer`, COUNT(*)
+FROM `table_1_10007452_3`
+WHERE 1=1
+GROUP BY `Manufacturer`
+HAVING COUNT(*) > 1
+ORDER BY 2
+LIMIT 5;
+","
+SELECT col1, COUNT(*)
+FROM `table_1_10007452_3`
+WHERE 1=1
+GROUP BY col1
+HAVING COUNT(*) > 1
+ORDER BY 2
+LIMIT 5;
+",table_1_10007452_3
+"Pentru fiecare naţionalitate reprezentată în lista celor mai cunoscuţi Raptors, câţi jucători sunt acolo şi care este primul an în care un jucător din acea naţionalitate a început în Toronto?","
+SELECT
+  `Nationality` AS `Nation`,
+  COUNT(*) AS `Num Players`,
+  MIN(CAST(substr(`Years in Toronto`, 1, 4) AS INTEGER)) AS `Earliest Start Year`,
+  CASE
+    WHEN MIN(CAST(substr(`Years in Toronto`, 1, 4) AS INTEGER)) < 2000 THEN '1990s'
+    WHEN MIN(CAST(substr(`Years in Toronto`, 1, 4) AS INTEGER)) < 2010 THEN '2000s'
+    ELSE '2010s+'
+  END AS `Era`,
+  GROUP_CONCAT(DISTINCT `School/Club Team`) AS `Feeding Schools/Clubs`,
+  SUM(CASE WHEN `Years in Toronto` LIKE '%,%' THEN 1 ELSE 0 END) AS `MultiStintCount`
+FROM `table_1_10015132_1`
+GROUP BY `Nationality`
+ORDER BY `Era`, `Nation`;
+","
+SELECT
+  col2 AS `Nation`,
+  COUNT(*) AS `Num Players`,
+  MIN(CAST(substr(col4, 1, 4) AS INTEGER)) AS `Earliest Start Year`,
+  CASE
+    WHEN MIN(CAST(substr(col4, 1, 4) AS INTEGER)) < 2000 THEN '1990s'
+    WHEN MIN(CAST(substr(col4, 1, 4) AS INTEGER)) < 2010 THEN '2000s'
+    ELSE '2010s+'
+  END AS `Era`,
+  GROUP_CONCAT(DISTINCT col5) AS `Feeding Schools/Clubs`,
+  SUM(CASE WHEN col4 LIKE '%,%' THEN 1 ELSE 0 END) AS `MultiStintCount`
+FROM `table_1_10015132_1`
+GROUP BY col2
+ORDER BY `Era`, `Nation`;
+",table_1_10015132_1
+"Listază fiecare poziție distinctă cu numărul de jucători din acea poziție, afișând doar cele cinci poziții principale după număr.","
+SELECT DISTINCT `Position`, COUNT(*) AS `cnt`
+FROM `table_1_10015132_21`
+WHERE 1=1
+GROUP BY `Position`
+ORDER BY `cnt` DESC
+LIMIT 5;
+","
+SELECT DISTINCT col3, COUNT(*) AS `cnt`
+FROM `table_1_10015132_21`
+WHERE 1=1
+GROUP BY col3
+ORDER BY `cnt` DESC
+LIMIT 5;
+",table_1_10015132_21
+"Listază fiecare poziție distinctă cu numărul de jucători din acea poziție, afișând doar cele cinci poziții principale după număr.","
+SELECT DISTINCT `Role`, COUNT(*) AS `cnt`
+FROM `table_m_1764456856057_36b86edc_10015132_21`
+WHERE 1=1
+GROUP BY `Role`
+ORDER BY `cnt` DESC
+LIMIT 5;
+","
+SELECT DISTINCT `Role`, COUNT(*) AS `cnt`
+FROM `table_m_1764456856057_36b86edc_10015132_21`
+WHERE 1=1
+GROUP BY `Role`
+ORDER BY `cnt` DESC
+LIMIT 5;
+",m_1764456856057_36b86edc_10015132-21
+"Listă înregistrările de pe lista Raptors din toate timpurile, care arată numele, numărul tricoului, naționalitatea, poziția, anii petrecuți în Toronto și echipa școlii / clubului, pentru primii cinci jucători distincți atunci când ordonați după numărul tricoului în ordine ascendentă; include un statut de activ atunci când anii petrecuți în Toronto conțin ""prezent"" și inactiv altfel, și include numărul total de jucători de pe lista.","
+SELECT DISTINCT
+  `Player`,
+  `No.`,
+  `Nationality`,
+  `Position`,
+  `Years in Toronto`,
+  `School/Club Team`,
+  CASE
+    WHEN `Years in Toronto` LIKE '%present%' THEN 'Active'
+    ELSE 'Inactive'
+  END AS `Status`,
+  (SELECT COUNT(*) FROM `table_1_10015132_7`) AS `TotalPlayers`
+FROM `table_1_10015132_7`
+WHERE 1=1 AND 1=1 OR 1=1
+ORDER BY `No.` ASC
+LIMIT 5;
+","
+SELECT DISTINCT
+  col0,
+  col1,
+  col2,
+  col3,
+  col4,
+  col5,
+  CASE
+    WHEN col4 LIKE '%present%' THEN 'Active'
+    ELSE 'Inactive'
+  END AS `Status`,
+  (SELECT COUNT(*) FROM `table_1_10015132_7`) AS `TotalPlayers`
+FROM `table_1_10015132_7`
+WHERE 1=1 AND 1=1 OR 1=1
+ORDER BY col1 ASC
+LIMIT 5;
+",table_1_10015132_7
+"Prezintă un singur raport consolidat pentru barajele înalte (înălțime >= 150 m) care include: (a) distribuția pe canton și pe tip cu număr, înălțime medie și lungime maximă a crestului; (b) cele mai vechi cinci baraje înalte cu numele lor, cantonul, anul de construcție, înălțimea și lungimea crestului; și (c) cele mai înalte cinci baraje cu numele, cantonul, tipul, înălțimea, lungimea crestului și raportul.","
+WITH tall AS (
+  SELECT `Name` AS Name,
+         `Canton` AS Canton,
+         `Height (meters)` AS Height,
+         `Crest length (meters)` AS Crest,
+         `Type` AS Type,
+         `Year of construction` AS Year,
+         `Name of the Lake` AS Lake
+  FROM `table_1_10020178_1`
+  WHERE `Height (meters)` >= 150
+),
+by_block AS (
+  SELECT 'BY_CANTON_TYPE' AS `Block`,
+         Canton AS `Col1`,
+         Type AS `Col2`,
+         COUNT(*) AS `Col3`,
+         AVG(Height) AS `Col4`,
+         MAX(Crest) AS `Col5`,
+         NULL AS `Col6`,
+         NULL AS `Col7`
+  FROM tall
+  GROUP BY Canton, Type
+  ORDER BY COUNT(*) DESC, AVG(Height) DESC
+),
+oldest_tall AS (
+  SELECT 'OLDEST_TALL' AS `Block`,
+         Name AS `Col1`,
+         Canton AS `Col2`,
+         Year AS `Col3`,
+         Height AS `Col4`,
+         Crest AS `Col5`,
+         NULL AS `Col6`,
+         NULL AS `Col7`
+  FROM tall
+  ORDER BY Year ASC
+  LIMIT 5
+),
+ratio_rank AS (
+  SELECT 'HIGHEST_RATIO' AS `Block`,
+         Name AS `Col1`,
+         Canton AS `Col2`,
+         Type AS `Col3`,
+         Height AS `Col4`,
+         Crest AS `Col5`,
+         (Crest * 1.0) / Height AS `Col6`,
+         NULL AS `Col7`
+  FROM tall
+  ORDER BY (Crest * 1.0) / Height DESC
+  LIMIT 5
+)
+SELECT * FROM by_block
+UNION ALL
+SELECT * FROM oldest_tall
+UNION ALL
+SELECT * FROM ratio_rank;
+","
+WITH tall AS (
+  SELECT col0 AS Name,
+         col1 AS Canton,
+         col2 AS Height,
+         col3 AS Crest,
+         col4 AS Type,
+         col5 AS Year,
+         col6 AS Lake
+  FROM `table_1_10020178_1`
+  WHERE col2 >= 150
+),
+by_block AS (
+  SELECT 'BY_CANTON_TYPE' AS `Block`,
+         Canton AS `Col1`,
+         Type AS `Col2`,
+         COUNT(*) AS `Col3`,
+         AVG(Height) AS `Col4`,
+         MAX(Crest) AS `Col5`,
+         NULL AS `Col6`,
+         NULL AS `Col7`
+  FROM `table_1_10020178_1`
+  GROUP BY Canton, Type
+  ORDER BY COUNT(*) DESC, AVG(Height) DESC
+),
+oldest_tall AS (
+  SELECT 'OLDEST_TALL' AS `Block`,
+         Name AS `Col1`,
+         Canton AS `Col2`,
+         Year AS `Col3`,
+         Height AS `Col4`,
+         Crest AS `Col5`,
+         NULL AS `Col6`,
+         NULL AS `Col7`
+  FROM `table_1_10020178_1`
+  ORDER BY Year ASC
+  LIMIT 5
+),
+ratio_rank AS (
+  SELECT 'HIGHEST_RATIO' AS `Block`,
+         Name AS `Col1`,
+         Canton AS `Col2`,
+         Type AS `Col3`,
+         Height AS `Col4`,
+         Crest AS `Col5`,
+         (Crest * 1.0) / Height AS `Col6`,
+         NULL AS `Col7`
+  FROM `table_1_10020178_1`
+  ORDER BY (Crest * 1.0) / Height DESC
+  LIMIT 5
+)
+SELECT * FROM `table_1_10020178_1`
+UNION ALL
+SELECT * FROM `table_1_10020178_1`
+UNION ALL
+SELECT * FROM `table_1_10020178_1`
+",table_1_10020178_1
+"Din datele de rezumat al carierei LPGA Tour, între 2007 și 2012, care an a câștigat cel mai mult bani și care sunt Anul și Câștigurile ($) pentru acel an?","
+SELECT
+  `Year`,
+  `Earnings ($)`
+FROM `table_1_10021158_3`
+WHERE `Year` BETWEEN 2007 AND 2012
+ORDER BY `Earnings ($)` DESC
+LIMIT 1;
+","
+SELECT
+  col0,
+  col7
+FROM `table_1_10021158_3`
+WHERE col0 BETWEEN 2007 AND 2012
+ORDER BY col7 DESC
+LIMIT 1;
+",table_1_10021158_3
+"Dacă grupăm câștigătorii după naționalitate și sortăm după numărul de câștigători, de la cel mai mare la cel mai mic, care naționalitate vine mai întâi și câți câștigători are?","
+SELECT
+  `Nationality`, COUNT(*) AS `Count`
+FROM `table_1_1004033_1`
+WHERE 1
+GROUP BY `Nationality`
+ORDER BY `Count` DESC
+LIMIT 1;
+","
+SELECT
+  col3, COUNT(*) AS `Count`
+FROM `table_1_1004033_1`
+WHERE 1
+GROUP BY col3
+ORDER BY `Count` DESC
+LIMIT 1;
+",table_1_1004033_1
+"Calculează, pentru fiecare sediu, valoarea maximă a capitolurilor și prezintă-o ca sediu și capitole maxime; filtrează către sediul al cărui maxim pe sediu este egal cu valoarea maximă a capitolurilor găsită în întregul tabel; ordonează rezultatele după sediu.","
+SELECT `Headquarters`, MAX(`Chapters`) AS `Max Chapters`
+FROM `table_1_10054296_1`
+GROUP BY `Headquarters`
+HAVING MAX(`Chapters`) = (
+  SELECT MAX(`Chapters`)
+  FROM `table_1_10054296_1`
+)
+ORDER BY `Headquarters`;
+","
+SELECT col1, MAX(col3) AS `Max Chapters`
+FROM `table_1_10054296_1`
+GROUP BY col1
+HAVING MAX(col3) = (
+  SELECT MAX(col3)
+  FROM `table_1_10054296_1`
+)
+ORDER BY col1;
+",table_1_10054296_1
+"Calculează, pentru fiecare sediu, valoarea maximă a capitolurilor și prezintă-o ca sediu și capitole maxime; filtrează către sediul al cărui maxim pe sediu este egal cu valoarea maximă a capitolurilor găsită în întregul tabel; ordonează rezultatele după sediu.","
+SELECT `City_and_State_Hq`, MAX(`Chapters`) AS `Max Chapters`
+FROM `table_m_1764456882753_5964c03e_10054296_1`
+GROUP BY `City_and_State_Hq`
+HAVING MAX(`Chapters`) = (
+  SELECT MAX(`Chapters`)
+  FROM `table_m_1764456882753_5964c03e_10054296_1`
+)
+ORDER BY `City_and_State_Hq`;
+","
+SELECT `City_and_State_Hq`, MAX(`Chapters`) AS `Max Chapters`
+FROM `table_m_1764456882753_5964c03e_10054296_1`
+GROUP BY `City_and_State_Hq`
+HAVING MAX(`Chapters`) = (
+  SELECT MAX(`Chapters`)
+  FROM `table_m_1764456882753_5964c03e_10054296_1`
+)
+ORDER BY `City_and_State_Hq`;
+",m_1764456882753_5964c03e_10054296-1

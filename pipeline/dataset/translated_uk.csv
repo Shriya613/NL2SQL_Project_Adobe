@@ -1,0 +1,312 @@
+nl,sql,db_sql,table_id
+"Будь ласка, вкажіть перелік рядів, чиї нотації мають назву ""Без лозунгу на поточну серію"", погрупований по нотам, попорядкований по результатному переліку в похідному порядку, обмежений п'ятьма результатами.","
+SELECT `Notes`, COUNT(*) AS `Count`
+FROM `table_1_1000181_1`
+WHERE `Notes` = 'No slogan on current series'
+GROUP BY `Notes`
+ORDER BY `Count` DESC
+LIMIT 5;
+","SELECT col5, COUNT(*) AS `Count`
+FROM `table_1_1000181_1`
+WHERE col5 LIKE '%No slogan%'
+GROUP BY col5
+ORDER BY `Count` DESC
+LIMIT 5;",table_1_1000181_1
+"З записів флоту перераховуйте, скільки записів існує на одного виробника, але включайте тільки виробників з більш ніж одним записом, упорядуйте результати за кількістю записів від найменшого до найбільшого і поверніть до п'яти виробників.","
+SELECT `Manufacturer`, COUNT(*)
+FROM `table_1_10007452_3`
+WHERE 1=1
+GROUP BY `Manufacturer`
+HAVING COUNT(*) > 1
+ORDER BY 2
+LIMIT 5;
+","
+SELECT col1, COUNT(*)
+FROM `table_1_10007452_3`
+WHERE 1=1
+GROUP BY col1
+HAVING COUNT(*) > 1
+ORDER BY 2
+LIMIT 5;
+",table_1_10007452_3
+"За кожну національність, що представлена на списку всіх гравців Raptors, скільки гравців є і який перший рік будь-який гравець з цієї національності почав у Торонто?","
+SELECT
+  `Nationality` AS `Nation`,
+  COUNT(*) AS `Num Players`,
+  MIN(CAST(substr(`Years in Toronto`, 1, 4) AS INTEGER)) AS `Earliest Start Year`,
+  CASE
+    WHEN MIN(CAST(substr(`Years in Toronto`, 1, 4) AS INTEGER)) < 2000 THEN '1990s'
+    WHEN MIN(CAST(substr(`Years in Toronto`, 1, 4) AS INTEGER)) < 2010 THEN '2000s'
+    ELSE '2010s+'
+  END AS `Era`,
+  GROUP_CONCAT(DISTINCT `School/Club Team`) AS `Feeding Schools/Clubs`,
+  SUM(CASE WHEN `Years in Toronto` LIKE '%,%' THEN 1 ELSE 0 END) AS `MultiStintCount`
+FROM `table_1_10015132_1`
+GROUP BY `Nationality`
+ORDER BY `Era`, `Nation`;
+","
+SELECT
+  col2 AS `Nation`,
+  COUNT(*) AS `Num Players`,
+  MIN(CAST(substr(col4, 1, 4) AS INTEGER)) AS `Earliest Start Year`,
+  CASE
+    WHEN MIN(CAST(substr(col4, 1, 4) AS INTEGER)) < 2000 THEN '1990s'
+    WHEN MIN(CAST(substr(col4, 1, 4) AS INTEGER)) < 2010 THEN '2000s'
+    ELSE '2010s+'
+  END AS `Era`,
+  GROUP_CONCAT(DISTINCT col5) AS `Feeding Schools/Clubs`,
+  SUM(CASE WHEN col4 LIKE '%,%' THEN 1 ELSE 0 END) AS `MultiStintCount`
+FROM `table_1_10015132_1`
+GROUP BY col2
+ORDER BY `Era`, `Nation`;
+",table_1_10015132_1
+"Перераховувати кожну окрему позицію з кількістю гравців у цій позиції, показуючи лише перші п'ять позицій за кількістю.","
+SELECT DISTINCT `Position`, COUNT(*) AS `cnt`
+FROM `table_1_10015132_21`
+WHERE 1=1
+GROUP BY `Position`
+ORDER BY `cnt` DESC
+LIMIT 5;
+","
+SELECT DISTINCT col3, COUNT(*) AS `cnt`
+FROM `table_1_10015132_21`
+WHERE 1=1
+GROUP BY col3
+ORDER BY `cnt` DESC
+LIMIT 5;
+",table_1_10015132_21
+"Перераховувати кожну окрему позицію з кількістю гравців у цій позиції, показуючи лише перші п'ять позицій за кількістю.","
+SELECT DISTINCT `Role`, COUNT(*) AS `cnt`
+FROM `table_m_1764456856057_36b86edc_10015132_21`
+WHERE 1=1
+GROUP BY `Role`
+ORDER BY `cnt` DESC
+LIMIT 5;
+","
+SELECT DISTINCT `Role`, COUNT(*) AS `cnt`
+FROM `table_m_1764456856057_36b86edc_10015132_21`
+WHERE 1=1
+GROUP BY `Role`
+ORDER BY `cnt` DESC
+LIMIT 5;
+",m_1764456856057_36b86edc_10015132-21
+"Перераховуйте записи реестру всіх часів Raptors, що показують ім'я, номер футболку, національність, посаду, роки в Торонто, і шкільну / клубну команду, для перших п'яти окремих гравців при замовленні по номеру футболку в зростаючому порядку; включити Статус активного, коли роки в Торонто містить ""присутність"" і Інактивний інакше, і включити загальну кількість гравців в реестрі.","
+SELECT DISTINCT
+  `Player`,
+  `No.`,
+  `Nationality`,
+  `Position`,
+  `Years in Toronto`,
+  `School/Club Team`,
+  CASE
+    WHEN `Years in Toronto` LIKE '%present%' THEN 'Active'
+    ELSE 'Inactive'
+  END AS `Status`,
+  (SELECT COUNT(*) FROM `table_1_10015132_7`) AS `TotalPlayers`
+FROM `table_1_10015132_7`
+WHERE 1=1 AND 1=1 OR 1=1
+ORDER BY `No.` ASC
+LIMIT 5;
+","
+SELECT DISTINCT
+  col0,
+  col1,
+  col2,
+  col3,
+  col4,
+  col5,
+  CASE
+    WHEN col4 LIKE '%present%' THEN 'Active'
+    ELSE 'Inactive'
+  END AS `Status`,
+  (SELECT COUNT(*) FROM `table_1_10015132_7`) AS `TotalPlayers`
+FROM `table_1_10015132_7`
+WHERE 1=1 AND 1=1 OR 1=1
+ORDER BY col1 ASC
+LIMIT 5;
+",table_1_10015132_7
+"Доставити єдину консолидовану звіту для високих дамб (висок >= 150 м), яка включає: а) розподіл на кантон і на тип з розрахунками, середньою висотою і максимальною довжиною хребта; б) п'ять найстаріших високих дамб з їх ім'ям, кантоном, роком будівництва, висотою і довжиною хребта; і в) п'ять найвищих дамб з співвідношенням хребта до висоти з їх ім'ям, кантоном, типом, висотою, довжиною хребта та співвідношенням.","
+WITH tall AS (
+  SELECT `Name` AS Name,
+         `Canton` AS Canton,
+         `Height (meters)` AS Height,
+         `Crest length (meters)` AS Crest,
+         `Type` AS Type,
+         `Year of construction` AS Year,
+         `Name of the Lake` AS Lake
+  FROM `table_1_10020178_1`
+  WHERE `Height (meters)` >= 150
+),
+by_block AS (
+  SELECT 'BY_CANTON_TYPE' AS `Block`,
+         Canton AS `Col1`,
+         Type AS `Col2`,
+         COUNT(*) AS `Col3`,
+         AVG(Height) AS `Col4`,
+         MAX(Crest) AS `Col5`,
+         NULL AS `Col6`,
+         NULL AS `Col7`
+  FROM tall
+  GROUP BY Canton, Type
+  ORDER BY COUNT(*) DESC, AVG(Height) DESC
+),
+oldest_tall AS (
+  SELECT 'OLDEST_TALL' AS `Block`,
+         Name AS `Col1`,
+         Canton AS `Col2`,
+         Year AS `Col3`,
+         Height AS `Col4`,
+         Crest AS `Col5`,
+         NULL AS `Col6`,
+         NULL AS `Col7`
+  FROM tall
+  ORDER BY Year ASC
+  LIMIT 5
+),
+ratio_rank AS (
+  SELECT 'HIGHEST_RATIO' AS `Block`,
+         Name AS `Col1`,
+         Canton AS `Col2`,
+         Type AS `Col3`,
+         Height AS `Col4`,
+         Crest AS `Col5`,
+         (Crest * 1.0) / Height AS `Col6`,
+         NULL AS `Col7`
+  FROM tall
+  ORDER BY (Crest * 1.0) / Height DESC
+  LIMIT 5
+)
+SELECT * FROM by_block
+UNION ALL
+SELECT * FROM oldest_tall
+UNION ALL
+SELECT * FROM ratio_rank;
+","
+WITH tall AS (
+  SELECT col0 AS Name,
+         col1 AS Canton,
+         col2 AS Height,
+         col3 AS Crest,
+         col4 AS Type,
+         col5 AS Year,
+         col6 AS Lake
+  FROM `table_1_10020178_1`
+  WHERE col2 >= 150
+),
+by_block AS (
+  SELECT 'BY_CANTON_TYPE' AS `Block`,
+         Canton AS `Col1`,
+         Type AS `Col2`,
+         COUNT(*) AS `Col3`,
+         AVG(Height) AS `Col4`,
+         MAX(Crest) AS `Col5`,
+         NULL AS `Col6`,
+         NULL AS `Col7`
+  FROM `table_1_10020178_1`
+  GROUP BY Canton, Type
+  ORDER BY COUNT(*) DESC, AVG(Height) DESC
+),
+oldest_tall AS (
+  SELECT 'OLDEST_TALL' AS `Block`,
+         Name AS `Col1`,
+         Canton AS `Col2`,
+         Year AS `Col3`,
+         Height AS `Col4`,
+         Crest AS `Col5`,
+         NULL AS `Col6`,
+         NULL AS `Col7`
+  FROM `table_1_10020178_1`
+  ORDER BY Year ASC
+  LIMIT 5
+),
+ratio_rank AS (
+  SELECT 'HIGHEST_RATIO' AS `Block`,
+         Name AS `Col1`,
+         Canton AS `Col2`,
+         Type AS `Col3`,
+         Height AS `Col4`,
+         Crest AS `Col5`,
+         (Crest * 1.0) / Height AS `Col6`,
+         NULL AS `Col7`
+  FROM `table_1_10020178_1`
+  ORDER BY (Crest * 1.0) / Height DESC
+  LIMIT 5
+)
+SELECT * FROM `table_1_10020178_1`
+UNION ALL
+SELECT * FROM `table_1_10020178_1`
+UNION ALL
+SELECT * FROM `table_1_10020178_1`
+",table_1_10020178_1
+"З даних резюме кар'єри LPGA Tour, між 2007 і 2012 роками, який рік заробляв найбільше грошей, і які є рік і заробітки ($) для цього року?","
+SELECT
+  `Year`,
+  `Earnings ($)`
+FROM `table_1_10021158_3`
+WHERE `Year` BETWEEN 2007 AND 2012
+ORDER BY `Earnings ($)` DESC
+LIMIT 1;
+","
+SELECT
+  col0,
+  col7
+FROM `table_1_10021158_3`
+WHERE col0 BETWEEN 2007 AND 2012
+ORDER BY col7 DESC
+LIMIT 1;
+",table_1_10021158_3
+"Якщо груповувати переможців за національністю і розрізняти за кількістю переможців від найвищого до найнижчого, яка національність йде на перше місце і скільки переможців вона має?","
+SELECT
+  `Nationality`, COUNT(*) AS `Count`
+FROM `table_1_1004033_1`
+WHERE 1
+GROUP BY `Nationality`
+ORDER BY `Count` DESC
+LIMIT 1;
+","
+SELECT
+  col3, COUNT(*) AS `Count`
+FROM `table_1_1004033_1`
+WHERE 1
+GROUP BY col3
+ORDER BY `Count` DESC
+LIMIT 1;
+",table_1_1004033_1
+"Вираховуйте, для кожної Штаб-квартири, максимальне значення розділів і представьте його як Штаб-квартиру і Макс-квартири; фільтруйте Штаб-квартиру, чия максимальна величина за Штаб-квартиру дорівнює максимальній величині розділів, знайдений у всій таблиці; попорядкуйте результати по Штаб-квартирі.","
+SELECT `Headquarters`, MAX(`Chapters`) AS `Max Chapters`
+FROM `table_1_10054296_1`
+GROUP BY `Headquarters`
+HAVING MAX(`Chapters`) = (
+  SELECT MAX(`Chapters`)
+  FROM `table_1_10054296_1`
+)
+ORDER BY `Headquarters`;
+","
+SELECT col1, MAX(col3) AS `Max Chapters`
+FROM `table_1_10054296_1`
+GROUP BY col1
+HAVING MAX(col3) = (
+  SELECT MAX(col3)
+  FROM `table_1_10054296_1`
+)
+ORDER BY col1;
+",table_1_10054296_1
+"Вираховуйте, для кожної Штаб-квартири, максимальне значення розділів і представьте його як Штаб-квартиру і Макс-квартири; фільтруйте Штаб-квартиру, чия максимальна величина за Штаб-квартиру дорівнює максимальній величині розділів, знайдений у всій таблиці; попорядкуйте результати по Штаб-квартирі.","
+SELECT `City_and_State_Hq`, MAX(`Chapters`) AS `Max Chapters`
+FROM `table_m_1764456882753_5964c03e_10054296_1`
+GROUP BY `City_and_State_Hq`
+HAVING MAX(`Chapters`) = (
+  SELECT MAX(`Chapters`)
+  FROM `table_m_1764456882753_5964c03e_10054296_1`
+)
+ORDER BY `City_and_State_Hq`;
+","
+SELECT `City_and_State_Hq`, MAX(`Chapters`) AS `Max Chapters`
+FROM `table_m_1764456882753_5964c03e_10054296_1`
+GROUP BY `City_and_State_Hq`
+HAVING MAX(`Chapters`) = (
+  SELECT MAX(`Chapters`)
+  FROM `table_m_1764456882753_5964c03e_10054296_1`
+)
+ORDER BY `City_and_State_Hq`;
+",m_1764456882753_5964c03e_10054296-1

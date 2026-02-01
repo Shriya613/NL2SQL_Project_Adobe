@@ -1,0 +1,322 @@
+nl,sql,db_sql,db_result,table_id,schema_change_type
+Meaghan Francella 在哪些年份没有赢得任何锦标赛，但进入了前十名？请列出这些年份以及她相应的收入，并按收入从高到低排序。,"
+SELECT `Year`, `Earnings ($)` FROM `table_1_10021158_3` WHERE `Wins` < 1 AND `Top 10s` > 0 ORDER BY `Earnings ($)` DESC;
+","
+SELECT col0, col7 FROM `table_1_10021158_3` WHERE col3 < 1 AND col5 > 0 ORDER BY col7 DESC;
+","[(2009.0, 292266.0), (2010.0, 168016.0)]",table_1_10021158_3,
+Meaghan Francella 在哪些年份没有赢得任何锦标赛，但进入了前十名？请列出这些年份以及她相应的收入，并按收入从高到低排序。,"
+SELECT `tournament_year`, `Earnings ($)` FROM `table_m_1765006485884_9fb09baf_10021158_3` WHERE `Wins` < 1 AND `Top 10s` > 0 ORDER BY `Earnings ($)` DESC;
+","
+SELECT col0, col7 FROM `table_m_1765006485884_9fb09baf_10021158_3` WHERE col3 < 1 AND col5 > 0 ORDER BY col7 DESC;
+","[(2009.0, 292266.0), (2010.0, 168016.0)]",m_1765006485884_9fb09baf_10021158-3,
+为了进行形态变异分析，请展示在 Kalau Kawau Ya、Kawalgau Ya 及其他相关方言中，与格和夺格的后缀是如何表现的。,"
+SELECT ``, `Kalau Kawau Ya`, `Kawalgau Ya`, `Kalaw Lagaw Ya`, `Kulkalgau Ya`, `Kauraraigau Ya (Kowrareg)` FROM `table_1_1015914_15` WHERE `` IN (`Dative`, `Ablative`);
+","
+SELECT col0, col1, col2, col3, col4, col5 FROM `table_1_1015914_15` WHERE col0 LIKE 'Dative' OR col0 LIKE 'Ablative';
+","[('dative', '-pa', '-pa (-ka)', '-ka (-pa)', '-ka (-pa)', '-pa[rri] (-ka)'), ('ablative', '-ngu(z), -z(i)', '-ngu, -z(i)', '-ngu, -zi', '-ngu, -z(i)', '-nguzi, -zi')]",table_1_1015914_15,
+为了进行形态变异分析，请展示在 Kalau Kawau Ya、Kawalgau Ya 及其他相关方言中，与格和夺格的后缀是如何表现的。,"SELECT ``, `Kalau Kawau Ya`, `Kawalgau Ya`, `Kalaw Lagaw Ya`, `Kulkalgau Ya`, `Kauraraigau_Ya`
+FROM `table_m_1765006588322_2ebc761a_1015914_15`
+WHERE `` IN ('Dative', 'Ablative')
+  AND `dialect` = 'Kowrareg';","SELECT col0, col1, col2, col3, col4, col5
+FROM `table_m_1765006588322_2ebc761a_1015914_15`
+WHERE col0 IN ('Dative', 'Ablative')
+  AND col6 = 'Kowrareg';","[('Dative', '-pa', '-pa (-ka)', '-ka (-pa)', '-ka (-pa)', 'ngi'), ('Ablative', '-ngu(z), -z(i)', '-ngu, -z(i)', '-ngu, -zi', '-ngu, -z(i)', 'ngi')]",m_1765006588322_2ebc761a_1015914-15,
+为了评估IROC XX赛季中不同赛事的表现，能否创建一个汇总表？我希望看到各个系列赛按照其车手赢得的总奖金进行排名，并请在表中包含每个系列赛的车手数量和平均积分。,"
+SELECT `Series`, COUNT(`Driver`) AS `NumberOfDrivers`, AVG(`Points`) AS `AveragePoints`, SUM(CAST(REPLACE(REPLACE(`Winnings`, '$', ''), ',', '') AS REAL)) AS `TotalWinnings` FROM `table_1_10160447_1` GROUP BY `Series` ORDER BY `TotalWinnings` DESC;
+","
+SELECT col4, COUNT(col1) AS `NumberOfDrivers`, AVG(col2) AS `AveragePoints`, SUM(CAST(REPLACE(REPLACE(col3, '$', ''), ',', '') AS REAL)) AS `TotalWinnings` FROM `table_1_10160447_1` GROUP BY col4 ORDER BY `TotalWinnings` DESC;
+","[('nascar winston cup', 6, 40.666666666666664, 435000.0), ('indy car', 3, 47.333333333333336, 185000.0), ('nascar busch series', 1, 50.0, 60000.0), ('scca trans-am series', 1, 36.0, 40000.0)]",table_1_10160447_1,
+为了评估IROC XX赛季中不同赛事的表现，能否创建一个汇总表？我希望看到各个系列赛按照其车手赢得的总奖金进行排名，并请在表中包含每个系列赛的车手数量和平均积分。,"
+SELECT `Series`, COUNT(`Driver`) AS `NumberOfDrivers`, AVG(`Score`) AS `AveragePoints`, SUM(CAST(REPLACE(REPLACE(`Prize`, '$', ''), ',', '') AS REAL)) AS `TotalWinnings` FROM `table_m_1765006600371_468fd710_10160447_1` GROUP BY `Series` ORDER BY `TotalWinnings` DESC;
+","
+SELECT col4, COUNT(col1) AS `NumberOfDrivers`, AVG(col2) AS `AveragePoints`, SUM(CAST(REPLACE(REPLACE(col3, '$', ''), ',', '') AS REAL)) AS `TotalWinnings` FROM `table_m_1765006600371_468fd710_10160447_1` GROUP BY col4 ORDER BY `TotalWinnings` DESC;
+","[('NASCAR Winston Cup', 6, 40.666666666666664, 435000.0), ('Indy Car', 3, 47.333333333333336, 185000.0), ('NASCAR Busch Series', 1, 50.0, 60000.0), ('SCCA Trans-Am Series', 1, 36.0, 40000.0)]",m_1765006600371_468fd710_10160447-1,
+George Utley 在哪些赛季中，既在英格兰足总杯取得进球，又参加了总共超过40场比赛？请提供这些赛季的名称和总进球数，并按总进球数从少到多排序。,"
+WITH `CupScoringSeasons` AS (SELECT `Season`, `Total Goals`, `Total Apps` FROM `table_1_10240125_1` WHERE `FA Cup Goals` > `0`) SELECT `Season`, `Total Goals` FROM `CupScoringSeasons` WHERE `Total Apps` > `40` ORDER BY `Total Goals` ASC;
+","WITH `CupScoringSeasons` AS (SELECT col0, col7, col6 FROM `table_1_10240125_1` WHERE col5 > 0) SELECT col0, col7 FROM `CupScoringSeasons` WHERE col6 > 40 ORDER BY col7 ASC;","[('1909–10', 1.0)]",table_1_10240125_1,
+George Utley 在哪些赛季中，既在英格兰足总杯取得进球，又参加了总共超过40场比赛？请提供这些赛季的名称和总进球数，并按总进球数从少到多排序。,"WITH `CupScoringSeasons` AS (
+  SELECT 
+    `Season_Start_Year`,
+    `Season_End_Year`,
+    `Total Goals`,
+    `Total Apps`
+  FROM `table_m_1765006633898_a5f69cff_10240125_1`
+  WHERE `FA Cup Goals` > 0
+)
+SELECT 
+  `Season_Start_Year`,
+  `Season_End_Year`,
+  `Total Goals`
+FROM `CupScoringSeasons`
+WHERE `Total Apps` > 40
+ORDER BY `Total Goals` ASC;","WITH `CupScoringSeasons` AS (
+  SELECT 
+    col7,
+    col8,
+    col6,
+    col5
+  FROM `table_m_1765006633898_a5f69cff_10240125_1`
+  WHERE col4 > 0
+)
+SELECT 
+  col7,
+  col8,
+  col6
+FROM `CupScoringSeasons`
+WHERE col5 > 40
+ORDER BY col6 ASC;","[(1908, 1910, 1.0)]",m_1765006633898_a5f69cff_10240125-1,
+请找出所有符合以下条件的功能，并按字母顺序列出：其对应的耶尔森菌属蛋白质名称以'Y'开头，且对应的埃希氏菌属蛋白质名称以'E'开头。,"
+SELECT `↓ Function / Genus →` AS `Correlated Function` FROM `table_1_10321124_1` WHERE `Yersinia` LIKE 'Y%' AND `Escherichia` LIKE 'E%' ORDER BY `Correlated Function` ASC;
+","
+SELECT col0 AS `Correlated Function` FROM `table_1_10321124_1` WHERE col3 LIKE 'Y%' AND col4 LIKE 'E%' ORDER BY `Correlated Function` ASC;
+","[('inner rod',), ('needle monomer',), ('switch',), ('translocator',), ('translocator',)]",table_1_10321124_1,
+请找出所有符合以下条件的功能，并按字母顺序列出：其对应的耶尔森菌属蛋白质名称以'Y'开头，且对应的埃希氏菌属蛋白质名称以'E'开头。,"SELECT `↓ Function / Genus →` AS `Correlated Function`
+FROM `table_m_1765006681453_dc249791_10321124_1`
+WHERE `Yersinia` LIKE 'Y%'
+  AND `Escherichia` LIKE 'E%'
+ORDER BY `Correlated Function` ASC;","SELECT col0 AS `Correlated Function`
+FROM `table_m_1765006681453_dc249791_10321124_1`
+WHERE col2 LIKE 'Y%'
+  AND col3 LIKE 'E%'
+ORDER BY `Correlated Function` ASC;","[('Inner rod',), ('Needle monomer',), ('Switch',), ('Translocator',), ('Translocator',)]",m_1765006681453_dc249791_10321124-1,
+"对于我们输过不止一次的每个对手，如果平均上座人数超过20,000，则将其归类为“高上座率”，否则归类为“普通上座率”。请显示对手及其上座率类别，并按对手名称从Z到A的顺序排序。","
+SELECT `Opponent`, CASE WHEN AVG(`Attendance`) > 20000 THEN `High Crowd` ELSE `Normal Crowd` END AS `Crowd Category` FROM `table_1_10392906_2` WHERE `Final score` LIKE `L %` GROUP BY `Opponent` HAVING COUNT(`Opponent`) > 1 ORDER BY `Opponent` DESC;
+","
+SELECT REPLACE(col3, 'at ', '') col3, CASE WHEN AVG(col7) > 20000 THEN 'High Crowd' ELSE 'Normal Crowd' END `Crowd Category` FROM `table_1_10392906_2` GROUP BY REPLACE(col3, 'at ', '') HAVING COUNT(*) > 1 ORDER BY col3 DESC;
+","[('rhein fire', 'Normal Crowd'), ('hamburg sea devils', 'Normal Crowd'), ('frankfurt galaxy', 'High Crowd'), ('cologne centurions', 'Normal Crowd')]",table_1_10392906_2,
+"对于我们输过不止一次的每个对手，如果平均上座人数超过20,000，则将其归类为“高上座率”，否则归类为“普通上座率”。请显示对手及其上座率类别，并按对手名称从Z到A的顺序排序。",unanswerable,unanswerable,,m_1765006713533_9acc6a37_10392906-2,
+当伦敦剧组的演员是Tony Sheldon时，对应的角色名称和澳大利亚/新西兰的表演者是谁？另外，当巴西一栏不为空时，角色名称及其在多伦多/百老汇（消歧义）的对应演员又分别是谁？请按角色名称的字母逆序排序，并给出前5条结果。,"
+SELECT `Character`, `Australia & New Zealand (Sydney - first run, Melbourne, Auckland)` FROM `table_1_10402018_1` WHERE `London` LIKE 'Tony Sheldon' UNION ALL SELECT `Character`, `Toronto / Broadway` FROM `table_1_10402018_1` WHERE `Brazil` IS NOT NULL ORDER BY `Character` DESC LIMIT 5;
+","
+SELECT col0, col1 FROM `table_1_10402018_1` WHERE col2 LIKE 'Tony Sheldon' UNION ALL SELECT col0, col3 FROM `table_1_10402018_1` WHERE col4 IS NOT NULL ORDER BY col0 DESC LIMIT 5;
+","[('tick (mitzi)', 'will swenson'), ('shirley', 'keala settle'), ('miss understanding', 'nathan lee graham'), ('marion', 'jessica phillips'), ('jimmy', 'james brown iii')]",table_1_10402018_1,
+当伦敦剧组的演员是Tony Sheldon时，对应的角色名称和澳大利亚/新西兰的表演者是谁？另外，当巴西一栏不为空时，角色名称及其在多伦多/百老汇（消歧义）的对应演员又分别是谁？请按角色名称的字母逆序排序，并给出前5条结果。,"
+SELECT `character`, `australia_new_zealand` FROM `table_m_1765006734381_ce76c3b6_10402018_1` WHERE `London` LIKE 'Tony Sheldon' UNION ALL SELECT `character`, `Toronto / Broadway` FROM `table_m_1765006734381_ce76c3b6_10402018_1` WHERE `Brazil` IS NOT NULL ORDER BY `character` DESC LIMIT 5;
+","
+SELECT col0, col1 FROM `table_m_1765006734381_ce76c3b6_10402018_1` WHERE col2 LIKE 'Tony Sheldon' UNION ALL SELECT col0, col3 FROM `table_m_1765006734381_ce76c3b6_10402018_1` WHERE col4 IS NOT NULL ORDER BY col0 DESC LIMIT 5;
+","[('Tick (Mitzi)', 'Will Swenson'), ('Shirley', 'Keala Settle'), ('Miss Understanding', 'Nathan Lee Graham'), ('Marion', 'Jessica Phillips'), ('Jimmy', 'James Brown III')]",m_1765006734381_ce76c3b6_10402018-1,
+Dearbhla Walsh执导的剧集中，编号最大的一集标题是什么？,"
+SELECT `Title` FROM table_1_10413597_5 WHERE `Directed by` LIKE 'Dearbhla Walsh' ORDER BY `No. in series` DESC LIMIT 1;
+","
+SELECT col2 FROM table_1_10413597_5 WHERE col4 LIKE 'Dearbhla Walsh' ORDER BY col0 DESC LIMIT 1;
+","[('""something for you""',)]",table_1_10413597_5,
+Dearbhla Walsh 导演的编号最高的一集的标题是什么？,"
+SELECT `Title` FROM `table_m_1765006740281_ad23998f_10413597_5` WHERE `Directed by` LIKE 'Dearbhla Walsh' ORDER BY `No. in series` DESC LIMIT 1;
+","
+SELECT col2 FROM `table_m_1765006740281_ad23998f_10413597_5` WHERE col4 LIKE 'Dearbhla Walsh' ORDER BY col0 DESC LIMIT 1;
+","[('""Something for You""',)]",m_1765006740281_ad23998f_10413597-5,
+请列出让奥迪意大利运动车队（Audi Sport Italia）获胜次数最多的三个赛车系列赛，并按胜场数从多到少排名。,"
+SELECT `Series`, SUM(`Wins`) AS `Total Wins` FROM table_1_10420426_1 WHERE `Team` LIKE 'Audi Sport Italia' GROUP BY `Series` ORDER BY SUM(`Wins`) DESC LIMIT 3;
+","
+SELECT col1, SUM(col4) AS `Total Wins` FROM table_1_10420426_1 WHERE col2 LIKE 'Audi Sport Italia' GROUP BY col1 ORDER BY SUM(col4) DESC LIMIT 3;
+","[('italian gt championship – gt3', 5.0), ('international superstars series', 1.0), ('campionato italiano superstars', 1.0)]",table_1_10420426_1,
+请列出让奥迪意大利运动车队（Audi Sport Italia）获胜次数最多的三个赛车系列赛，并按胜场数从多到少排名。,unanswerable,unanswerable,,m_1765006752528_3790b56f_10420426-1,
+为彭斯克车队（Penske Racing）赢得最多比赛的车手是谁？,"
+SELECT `Winning driver` FROM table_1_10527215_3 WHERE `Winning team` LIKE 'Penske Racing' GROUP BY `Winning driver` ORDER BY COUNT(*) DESC LIMIT 1;
+","
+SELECT col4 FROM table_1_10527215_3 WHERE col5 LIKE 'Penske Racing' GROUP BY col4 ORDER BY COUNT(*) DESC LIMIT 1;
+","[('bobby unser',)]",table_1_10527215_3,
+为彭斯克车队（Penske Racing）赢得最多比赛的车手是谁？,"
+SELECT `Winning driver` FROM `table_m_1765006804159_4b97a83b_10527215_3` WHERE `Winning team` LIKE 'Penske Racing' GROUP BY `Winning driver` ORDER BY COUNT(*) DESC LIMIT 1;
+","
+SELECT col4 FROM `table_m_1765006804159_4b97a83b_10527215_3` WHERE col5 LIKE 'Penske Racing' GROUP BY col4 ORDER BY COUNT(*) DESC LIMIT 1;
+","[('Bobby Unser',)]",m_1765006804159_4b97a83b_10527215-3,
+好的，请给我一份收视率超过当季平均水平的《犯罪现场调查》（CSI）剧集列表，包括剧集标题、导演和编剧，并请按收视率从高到低排序。,"
+SELECT `Title`, `U.S. viewers (millions)`, `Directed by`, `Written by`
+FROM table_1_10718192_2
+WHERE `U.S. viewers (millions)` > (SELECT AVG(REPLACE(`U.S. viewers (millions)`, ',', '')) FROM table_1_10718192_2)
+ORDER BY `U.S. viewers (millions)` DESC;
+","
+SELECT col2, col6, col3, col4
+FROM table_1_10718192_2
+WHERE col6 > (SELECT AVG(REPLACE(col6, ',', '')) FROM table_1_10718192_2)
+ORDER BY col6 DESC;
+","[('""a little murder""', '30.81', 'tucker gates', 'ann donahue & naren shankar'), ('""revenge is best served cold""', '30.47', 'danny cannon', 'carol mendelsohn & anthony e. zuiker'), ('""fight night""', '29.94', 'richard j. lewis', 'andrew lipsitz & naren shankar'), ('""let the seller beware""', '29.90', 'richard j. lewis', 'andrew lipsitz & anthony e. zuiker'), ('""blood lust""', '29.74', 'charlie correll', 'josh berman & carol mendelsohn'), ('""abra-cadaver""', '28.95', 'danny cannon', 'danny cannon & anthony e. zuiker'), ('""crash and burn""', '28.60', 'richard j. lewis', 'josh berman'), ('""the accused is entitled""', '28.46', 'kenneth fink', 'elizabeth devine & ann donahue'), ('""lucky strike""', '27.95', 'kenneth fink', 'eli talbert & anthony e. zuiker'), ('""got murder?""', '27.87', 'kenneth fink', 'sarah goldfinger'), ('""the execution of catherine willows""', '27.86', 'kenneth fink', 'elizabeth devine & carol mendelsohn')]",table_1_10718192_2,
+好的，请给我一份收视率超过当季平均水平的《犯罪现场调查》（CSI）剧集列表，包括剧集标题、导演和编剧，并请按收视率从高到低排序。,"
+SELECT `Title`, `u_s_viewers_millions`, `Directed by`, `Written by`
+FROM `table_m_1765006917365_3783eaea_10718192_2`
+WHERE `u_s_viewers_millions` > (SELECT AVG(REPLACE(`u_s_viewers_millions`, ',', '')) FROM `table_m_1765006917365_3783eaea_10718192_2`)
+ORDER BY `u_s_viewers_millions` DESC;
+","
+SELECT col2, col6, col3, col4
+FROM `table_m_1765006917365_3783eaea_10718192_2`
+WHERE col6 > (SELECT AVG(REPLACE(col6, ',', '')) FROM `table_m_1765006917365_3783eaea_10718192_2`)
+ORDER BY col6 DESC;
+","[('""A Little Murder""', '30.81', 'Tucker Gates', 'Ann Donahue & Naren Shankar'), ('""Revenge Is Best Served Cold""', '30.47', 'Danny Cannon', 'Carol Mendelsohn & Anthony E. Zuiker'), ('""Fight Night""', '29.94', 'Richard J. Lewis', 'Andrew Lipsitz & Naren Shankar'), ('""Let the Seller Beware""', '29.90', 'Richard J. Lewis', 'Andrew Lipsitz & Anthony E. Zuiker'), ('""Blood Lust""', '29.74', 'Charlie Correll', 'Josh Berman & Carol Mendelsohn'), ('""Abra-Cadaver""', '28.95', 'Danny Cannon', 'Danny Cannon & Anthony E. Zuiker'), ('""Crash and Burn""', '28.60', 'Richard J. Lewis', 'Josh Berman'), ('""The Accused Is Entitled""', '28.46', 'Kenneth Fink', 'Elizabeth Devine & Ann Donahue'), ('""Lucky Strike""', '27.95', 'Kenneth Fink', 'Eli Talbert & Anthony E. Zuiker'), ('""Got Murder?""', '27.87', 'Kenneth Fink', 'Sarah Goldfinger'), ('""The Execution of Catherine Willows""', '27.86', 'Kenneth Fink', 'Elizabeth Devine & Carol Mendelsohn')]",m_1765006917365_3783eaea_10718192-2,
+在他赢得GP2比赛的那些车队里，他分别为每支车队参加了多少场比赛？请将参赛场数和获胜场数并列显示。,"
+SELECT `Team Name`, `Wins`, `Races`, `Series`
+FROM table_1_10748727_1
+WHERE `Series` LIKE 'GP2 Series'
+AND `Wins` > 0
+ORDER BY `Wins` DESC
+LIMIT 5;
+","
+SELECT col2, col4, col3, col1
+FROM table_1_10748727_1
+WHERE col1 LIKE 'GP2 Series'
+AND col4 > 0
+ORDER BY col4 DESC
+LIMIT 5;
+","[('super nova racing', 1.0, 20.0, 'gp2 series'), ('isport international', 1.0, 24.0, 'gp2 series')]",table_1_10748727_1,
+在他赢得GP2比赛的那些车队里，他分别为每支车队参加了多少场比赛？请将参赛场数和获胜场数并列显示。,"SELECT ""Team Name"", ""Wins"", ""Races"", ""Series""
+FROM `table_m_1765006946282_b4341f17_10748727_1`
+WHERE ""Series"" = 'GP2 Series'
+  AND ""Wins"" > 0
+ORDER BY ""Wins"" DESC
+LIMIT 5;","SELECT ""Team Name"", ""Wins"", ""Races"", ""Series""
+FROM `table_m_1765006946282_b4341f17_10748727_1`
+WHERE ""Series"" = 'GP2 Series'
+  AND ""Wins"" > 0
+ORDER BY ""Wins"" DESC
+LIMIT 5;",[],m_1765006946282_b4341f17_10748727-1,
+确认一下，我们讨论的是 'table_1_10942714_1' 这张表，只包含 '英文标题' 和 '香港观众人数' 这两列，并按照 '首播' 日期排序，对吗？所有的标题和观看数据都不能有任何遗漏！,"
+SELECT `English title`, `HK viewers` FROM table_1_10942714_1 ORDER BY `Premiere` ASC;
+","
+SELECT col1, col7 FROM table_1_10942714_1 ORDER BY col5 ASC;
+","[('forensic heroes', '2.11 million'), ('men in pain', '2.03 million'), ('love guaranteed', '2.07 million'), ('la femme desperado', '2.14 million'), ('bar bender', '2.06 million'), ('the saviour of the soul', '2.07 million'), (""maiden's vow"", '2.05 million'), ('to grow with love', '2.04 million'), ('the dance of passion', '2.05 million')]",table_1_10942714_1,
+确认一下，我们讨论的是 'table_1_10942714_1' 这张表，只包含 '英文标题' 和 '香港观众人数' 这两列，并按照 '首播' 日期排序，对吗？所有的标题和观看数据都不能有任何遗漏！,SELECT `English title (HK viewers)` FROM `table_m_1765007002624_6d3622dd_10942714_1` ORDER BY `Premiere` ASC;,SELECT col6 FROM `table_m_1765007002624_6d3622dd_10942714_1` ORDER BY col4 ASC;,"[('Forensic Heroes, 2.11 million',), ('Men in Pain, 2.03 million',), ('Love Guaranteed, 2.07 million',), ('La Femme Desperado, 2.14 million',), ('Bar Bender, 2.06 million',), ('The Saviour of the Soul, 2.07 million',), (""Maiden's Vow, 2.05 million"",), ('To Grow with Love, 2.04 million',), ('The Dance of Passion, 2.05 million',)]",m_1765007002624_6d3622dd_10942714-1,
+請顯示安娜·蒂莫蒂奇（Ana Timotić）在2005年賽事之後參加的每一場比賽的對手、日期以及比賽結果（勝利或失敗）。,"
+SELECT
+  `Opponent`,
+  `Date`,
+  CASE
+    WHEN `Outcome` = `Win`
+    THEN `VICTORY`
+    ELSE `DEFEAT`
+  END AS `match_status`
+FROM
+  `table_1_11326124_3`
+WHERE
+  `Edition` > `2005`;
+","
+SELECT col6, col3, CASE WHEN col7 = 'Win' THEN 'VICTORY' ELSE 'DEFEAT' END AS `match_status` FROM `table_1_11326124_3` WHERE col0 > 2005;
+","[('polona reberšak', '18 april 2006', 'DEFEAT'), ('eva dyrberg', '20 april 2006', 'DEFEAT'), ('anna smashnova', '22 april 2006', 'DEFEAT'), ('maša zec peškirič', '20 april 2007', 'DEFEAT'), ('mădălina gojnea', '21 april 2007', 'DEFEAT')]",table_1_11326124_3,
+請顯示安娜·蒂莫蒂奇（Ana Timotić）在2005年賽事之後參加的每一場比賽的對手、日期以及比賽結果（勝利或失敗）。,unanswerable,unanswerable,,m_1765007344706_09b9a2cd_11326124-3,
+對於每一支贏得過C組賽車的隊伍，請告訴我他們是否也曾贏得過D組比賽？請按字母順序列出這些隊伍。,"
+SELECT DISTINCT
+  T1.`Group C Winner` AS `Team`,
+  CASE
+    WHEN EXISTS (
+      SELECT
+        1
+      FROM
+        `table_1_1137142_1`
+      WHERE
+        `Group D Winner` = T1.`Group C Winner`
+    )
+    THEN `Also Won Group D`
+    ELSE `Never Won Group D`
+  END AS `Status`
+FROM
+  `table_1_1137142_1` AS T1
+ORDER BY
+  `Team` ASC;
+","
+SELECT DISTINCT T1.col3 AS `Team`, CASE WHEN EXISTS ( SELECT 1 FROM `table_1_1137142_1` WHERE col4 = T1.col3 ) THEN 'Also Won Group D' ELSE 'Never Won Group D' END AS `Status` FROM `table_1_1137142_1` AS T1 ORDER BY `Team` ASC;
+","[('brindisi', 'Never Won Group D'), ('casertana', 'Never Won Group D'), ('fano', 'Never Won Group D'), ('fidelis andria', 'Never Won Group D'), ('francavilla', 'Never Won Group D'), ('giulianova', 'Never Won Group D'), ('jesi', 'Never Won Group D'), ('perugia', 'Never Won Group D'), ('siena', 'Never Won Group D'), ('teramo', 'Never Won Group D'), ('vis pesaro', 'Never Won Group D')]",table_1_1137142_1,
+對於聖凱瑟琳斯黑鷹隊（St. Catharines Black Hawks）出場超過50場比賽的每個賽季，請顯示該賽季、他們當季的進球數，以及截至該賽季為止的累計總進球數。,"
+SELECT `Season`, `Goals for`, SUM(`Goals for`) OVER (ORDER BY `Season` ROWS UNBOUNDED PRECEDING) AS `Cumulative Goals` FROM `table_1_1143966_1` WHERE `Games` > `50`;
+","SELECT col0, col7, SUM(col7) OVER (ORDER BY col0 ROWS UNBOUNDED PRECEDING) AS `Cumulative Goals` FROM `table_1_1143966_1` WHERE col1 > 50;","[('1963–64', 244.0, 244.0), ('1964–65', 236.0, 480.0), ('1967–68', 200.0, 680.0), ('1968–69', 296.0, 976.0), ('1969–70', 268.0, 1244.0), ('1970–71', 343.0, 1587.0), ('1971–72', 258.0, 1845.0), ('1972–73', 280.0, 2125.0), ('1973–74', 358.0, 2483.0), ('1974–75', 284.0, 2767.0)]",table_1_1143966_1,
+對於聖凱瑟琳斯黑鷹隊（St. Catharines Black Hawks）出場超過50場比賽的每個賽季，請顯示該賽季、他們當季的進球數，以及截至該賽季為止的累計總進球數。,unanswerable,unanswerable,,m_1765007476834_c38c24b9_1143966-1,
+George Utley 在哪些赛季中，既在英格兰足总杯取得进球，又参加了总共超过40场比赛？请提供这些赛季的名称和总进球数，并按总进球数从少到多排序。,"WITH `CupScoringSeasons` AS (
+  SELECT 
+    `Season_Start_Year`,
+    `Season_End_Year`,
+    `Total Goals`,
+    `Total Apps`
+  FROM `table_m_1765006633898_a5f69cff_10240125_1`
+  WHERE `FA Cup Goals` > 0
+)
+SELECT 
+  `Season_Start_Year`,
+  `Season_End_Year`,
+  `Total Goals`
+FROM `CupScoringSeasons`
+WHERE `Total Apps` > 40
+ORDER BY `Total Goals` ASC;","WITH `CupScoringSeasons` AS (
+  SELECT 
+    `Season_Start_Year`,
+    `Season_End_Year`,
+    `Total Goals`,
+    `Total Apps`
+  FROM `table_m_1765006633898_a5f69cff_10240125_1`
+  WHERE `FA Cup Goals` > 0
+)
+SELECT 
+  `Season_Start_Year`,
+  `Season_End_Year`,
+  `Total Goals`
+FROM `CupScoringSeasons`
+WHERE `Total Apps` > 40
+ORDER BY `Total Goals` ASC;","[(1908, 1910, 1), (1909, 1909, 4)]",m_1765011289174_b4ac864a_м-1765006633898-a5f69cff-10240125-1,ru
+请找出所有符合以下条件的功能，并按字母顺序列出：其对应的耶尔森菌属蛋白质名称以'Y'开头，且对应的埃希氏菌属蛋白质名称以'E'开头。,"SELECT `↓ Function / Genus →` AS `Correlated Function`
+FROM `table_m_1765006681453_dc249791_10321124_1`
+WHERE `Yersinia` LIKE 'Y%'
+  AND `Escherichia` LIKE 'E%'
+ORDER BY `Correlated Function` ASC;","SELECT `↓ Function / Genus →` AS `Correlated Function`
+FROM `table_m_1765006681453_dc249791_10321124_1`
+WHERE `Yersinia` LIKE 'Y%'
+  AND `Escherichia` LIKE 'E%'
+ORDER BY `Correlated Function` ASC;","[('Inner rod',), ('Needle monomer',), ('Switch',), ('Translocator',), ('Translocator',)]",m_1765011292834_f9f8904d_表-1765006681453-dc249791-10321124-1,zh
+当伦敦剧组的演员是Tony Sheldon时，对应的角色名称和澳大利亚/新西兰的表演者是谁？另外，当巴西一栏不为空时，角色名称及其在多伦多/百老汇（消歧义）的对应演员又分别是谁？请按角色名称的字母逆序排序，并给出前5条结果。,"
+SELECT `Character`, `Australia & New Zealand (Sydney - first run, Melbourne, Auckland)` FROM `table_1_10402018_1` WHERE `London` LIKE 'Tony Sheldon' UNION ALL SELECT `Character`, `Toronto / Broadway` FROM `table_1_10402018_1` WHERE `Brazil` IS NOT NULL ORDER BY `Character` DESC LIMIT 5;
+","
+SELECT `Character`, `Australia & New Zealand (Sydney - first run, Melbourne, Auckland)` FROM `table_1_10402018_1` WHERE `London` LIKE 'Tony Sheldon' UNION ALL SELECT `Character`, `Toronto / Broadway` FROM `table_1_10402018_1` WHERE `Brazil` IS NOT NULL ORDER BY `Character` DESC LIMIT 5;
+","[('Tick (Mitzi)', 'Will Swenson'), ('Shirley', 'Keala Settle'), ('Miss Understanding', 'Nathan Lee Graham'), ('Marion', 'Jessica Phillips'), ('Jimmy', 'James Brown III')]",m_1765011299558_97852f66_表-10402018-1,zh
+当伦敦剧组的演员是Tony Sheldon时，对应的角色名称和澳大利亚/新西兰的表演者是谁？另外，当巴西一栏不为空时，角色名称及其在多伦多/百老汇（消歧义）的对应演员又分别是谁？请按角色名称的字母逆序排序，并给出前5条结果。,"
+SELECT `character`, `australia_new_zealand` FROM `table_m_1765006734381_ce76c3b6_10402018_1` WHERE `London` LIKE 'Tony Sheldon' UNION ALL SELECT `character`, `Toronto / Broadway` FROM `table_m_1765006734381_ce76c3b6_10402018_1` WHERE `Brazil` IS NOT NULL ORDER BY `character` DESC LIMIT 5;
+","
+SELECT `character`, `australia_new_zealand` FROM `table_m_1765006734381_ce76c3b6_10402018_1` WHERE `London` LIKE 'Tony Sheldon' UNION ALL SELECT `character`, `Toronto / Broadway` FROM `table_m_1765006734381_ce76c3b6_10402018_1` WHERE `Brazil` IS NOT NULL ORDER BY `character` DESC LIMIT 5;
+","[('Tick (Mitzi)', 'Will Swenson'), ('Shirley', 'Keala Settle'), ('Miss Understanding', 'Nathan Lee Graham'), ('Marion', 'Jessica Phillips'), ('Jimmy', 'James Brown III')]",m_1765011303340_edae5191_m-1765006734381-ce76c3b6-10402018-1,zh
+请列出让奥迪意大利运动车队（Audi Sport Italia）获胜次数最多的三个赛车系列赛，并按胜场数从多到少排名。,"
+SELECT `Series`, SUM(`Wins`) AS `Total Wins` FROM table_1_10420426_1 WHERE `Team` LIKE 'Audi Sport Italia' GROUP BY `Series` ORDER BY SUM(`Wins`) DESC LIMIT 3;
+","
+SELECT `Series`, SUM(`Wins`) AS `Total Wins` FROM table_1_10420426_1 WHERE `Team` LIKE 'Audi Sport Italia' GROUP BY `Series` ORDER BY SUM(`Wins`) DESC LIMIT 3;
+","[('Italian GT Championship – GT3', 5.0), ('International Superstars Series', 1.0), ('Campionato Italiano Superstars', 1.0)]",m_1765011306281_37026469_表-10420426-1,zh
+为彭斯克车队（Penske Racing）赢得最多比赛的车手是谁？,"
+SELECT `Winning driver` FROM table_1_10527215_3 WHERE `Winning team` LIKE 'Penske Racing' GROUP BY `Winning driver` ORDER BY COUNT(*) DESC LIMIT 1;
+","
+SELECT `Winning driver` FROM table_1_10527215_3 WHERE `Winning team` LIKE 'Penske Racing' GROUP BY `Winning driver` ORDER BY COUNT(*) DESC LIMIT 1;
+","[('Bobby Unser',)]",m_1765011309718_73699606_表-10527215-3,zh
+为彭斯克车队（Penske Racing）赢得最多比赛的车手是谁？,"
+SELECT `Winning driver` FROM `table_m_1765006804159_4b97a83b_10527215_3` WHERE `Winning team` LIKE 'Penske Racing' GROUP BY `Winning driver` ORDER BY COUNT(*) DESC LIMIT 1;
+","
+SELECT `Winning driver` FROM `table_m_1765006804159_4b97a83b_10527215_3` WHERE `Winning team` LIKE 'Penske Racing' GROUP BY `Winning driver` ORDER BY COUNT(*) DESC LIMIT 1;
+","[('Bobby Unser',)]",m_1765011313953_e1bbc7e8_m-1765006804159-4b97a83b-10527215-3,zh
+确认一下，我们讨论的是 'table_1_10942714_1' 这张表，只包含 '英文标题' 和 '香港观众人数' 这两列，并按照 '首播' 日期排序，对吗？所有的标题和观看数据都不能有任何遗漏！,"
+SELECT `English title`, `HK viewers` FROM table_1_10942714_1 ORDER BY `Premiere` ASC;
+","
+SELECT `English title`, `HK viewers` FROM table_1_10942714_1 ORDER BY `Premiere` ASC;
+","[('Forensic Heroes', '2.11 million'), ('Men in Pain', '2.03 million'), ('Love Guaranteed', '2.07 million'), ('La Femme Desperado', '2.14 million'), ('Bar Bender', '2.06 million'), ('The Saviour of the Soul', '2.07 million'), (""Maiden's Vow"", '2.05 million'), ('To Grow with Love', '2.04 million'), ('The Dance of Passion', '2.05 million')]",m_1765011316797_504e8123_表-10942714-1,zh
+确认一下，我们讨论的是 'table_1_10942714_1' 这张表，只包含 '英文标题' 和 '香港观众人数' 这两列，并按照 '首播' 日期排序，对吗？所有的标题和观看数据都不能有任何遗漏！,SELECT `English title (HK viewers)` FROM `table_m_1765007002624_6d3622dd_10942714_1` ORDER BY `Premiere` ASC;,SELECT `English title (HK viewers)` FROM `table_m_1765007002624_6d3622dd_10942714_1` ORDER BY `Premiere` ASC;,"[('Forensic Heroes, 2.11 million',), ('Men in Pain, 2.03 million',), ('Love Guaranteed, 2.07 million',), ('La Femme Desperado, 2.14 million',), ('Bar Bender, 2.06 million',), ('The Saviour of the Soul, 2.07 million',), (""Maiden's Vow, 2.05 million"",), ('To Grow with Love, 2.04 million',), ('The Dance of Passion, 2.05 million',)]",m_1765011320364_a81d2d30_m-1765007002624-6d3622dd-10942714-1,zh
+当伦敦剧组的演员是Tony Sheldon时，对应的角色名称和澳大利亚/新西兰的表演者是谁？另外，当巴西一栏不为空时，角色名称及其在多伦多/百老汇（消歧义）的对应演员又分别是谁？请按角色名称的字母逆序排序，并给出前5条结果。,"
+SELECT `Character`, `Australia & New Zealand (Sydney - first run, Melbourne, Auckland)` FROM `table_1_10402018_1` WHERE `London` LIKE 'Tony Sheldon' UNION ALL SELECT `Character`, `Toronto / Broadway` FROM `table_1_10402018_1` WHERE `Brazil` IS NOT NULL ORDER BY `Character` DESC LIMIT 5;
+","
+SELECT `Character`, `Australia & New Zealand (Sydney - first run, Melbourne, Auckland)` FROM `table_1_10402018_1` WHERE `London` LIKE 'Tony Sheldon' UNION ALL SELECT `Character`, `Toronto / Broadway` FROM `table_1_10402018_1` WHERE `Brazil` IS NOT NULL ORDER BY `Character` DESC LIMIT 5;
+","[('Tick (Mitzi)', 'Will Swenson'), ('Shirley', 'Keala Settle'), ('Miss Understanding', 'Nathan Lee Graham'), ('Marion', 'Jessica Phillips'), ('Jimmy', 'James Brown III')]",m_1765011329415_9763bbf5_表-10402018-1,zh
+当伦敦剧组的演员是Tony Sheldon时，对应的角色名称和澳大利亚/新西兰的表演者是谁？另外，当巴西一栏不为空时，角色名称及其在多伦多/百老汇（消歧义）的对应演员又分别是谁？请按角色名称的字母逆序排序，并给出前5条结果。,"
+SELECT `character`, `australia_new_zealand` FROM `table_m_1765006734381_ce76c3b6_10402018_1` WHERE `London` LIKE 'Tony Sheldon' UNION ALL SELECT `character`, `Toronto / Broadway` FROM `table_m_1765006734381_ce76c3b6_10402018_1` WHERE `Brazil` IS NOT NULL ORDER BY `character` DESC LIMIT 5;
+","
+SELECT `character`, `australia_new_zealand` FROM `table_m_1765006734381_ce76c3b6_10402018_1` WHERE `London` LIKE 'Tony Sheldon' UNION ALL SELECT `character`, `Toronto / Broadway` FROM `table_m_1765006734381_ce76c3b6_10402018_1` WHERE `Brazil` IS NOT NULL ORDER BY `character` DESC LIMIT 5;
+","[('Tick (Mitzi)', 'Will Swenson'), ('Shirley', 'Keala Settle'), ('Miss Understanding', 'Nathan Lee Graham'), ('Marion', 'Jessica Phillips'), ('Jimmy', 'James Brown III')]",m_1765011334409_da9f9317_м-1765006734381-ce76c3b6-10402018-1,ru
+请列出让奥迪意大利运动车队（Audi Sport Italia）获胜次数最多的三个赛车系列赛，并按胜场数从多到少排名。,"
+SELECT `Series`, SUM(`Wins`) AS `Total Wins` FROM table_1_10420426_1 WHERE `Team` LIKE 'Audi Sport Italia' GROUP BY `Series` ORDER BY SUM(`Wins`) DESC LIMIT 3;
+","
+SELECT `Series`, SUM(`Wins`) AS `Total Wins` FROM table_1_10420426_1 WHERE `Team` LIKE 'Audi Sport Italia' GROUP BY `Series` ORDER BY SUM(`Wins`) DESC LIMIT 3;
+","[('Italian GT Championship – GT3', 5.0), ('International Superstars Series', 1.0), ('Campionato Italiano Superstars', 1.0)]",m_1765011337492_37de72ee_表-10420426-1,zh
+为彭斯克车队（Penske Racing）赢得最多比赛的车手是谁？,"
+SELECT `Winning driver` FROM table_1_10527215_3 WHERE `Winning team` LIKE 'Penske Racing' GROUP BY `Winning driver` ORDER BY COUNT(*) DESC LIMIT 1;
+","
+SELECT `Winning driver` FROM table_1_10527215_3 WHERE `Winning team` LIKE 'Penske Racing' GROUP BY `Winning driver` ORDER BY COUNT(*) DESC LIMIT 1;
+","[('Bobby Unser',)]",m_1765011340844_88f096e7_表-10527215-3,zh
+确认一下，我们讨论的是 'table_1_10942714_1' 这张表，只包含 '英文标题' 和 '香港观众人数' 这两列，并按照 '首播' 日期排序，对吗？所有的标题和观看数据都不能有任何遗漏！,"
+SELECT `English title`, `HK viewers` FROM table_1_10942714_1 ORDER BY `Premiere` ASC;
+","
+SELECT `English title`, `HK viewers` FROM table_1_10942714_1 ORDER BY `Premiere` ASC;
+","[('Forensic Heroes', '2.11 million'), ('Men in Pain', '2.03 million'), ('Love Guaranteed', '2.07 million'), ('La Femme Desperado', '2.14 million'), ('Bar Bender', '2.06 million'), ('The Saviour of the Soul', '2.07 million'), (""Maiden's Vow"", '2.05 million'), ('To Grow with Love', '2.04 million'), ('The Dance of Passion', '2.05 million')]",m_1765011344592_2fdaadb6_таблица-10942714-1,ru
+确认一下，我们讨论的是 'table_1_10942714_1' 这张表，只包含 '英文标题' 和 '香港观众人数' 这两列，并按照 '首播' 日期排序，对吗？所有的标题和观看数据都不能有任何遗漏！,SELECT `English title (HK viewers)` FROM `table_m_1765007002624_6d3622dd_10942714_1` ORDER BY `Premiere` ASC;,SELECT `English title (HK viewers)` FROM `table_m_1765007002624_6d3622dd_10942714_1` ORDER BY `Premiere` ASC;,"[('Forensic Heroes, 2.11 million',), ('Men in Pain, 2.03 million',), ('Love Guaranteed, 2.07 million',), ('La Femme Desperado, 2.14 million',), ('Bar Bender, 2.06 million',), ('The Saviour of the Soul, 2.07 million',), (""Maiden's Vow, 2.05 million"",), ('To Grow with Love, 2.04 million',), ('The Dance of Passion, 2.05 million',)]",m_1765011347841_551954c3_表-1765007002624-6d3622dd-10942714-1,zh
+为彭斯克车队（Penske Racing）赢得最多比赛的车手是谁？,"
+SELECT `Winning driver` FROM table_1_10527215_3 WHERE `Winning team` LIKE 'Penske Racing' GROUP BY `Winning driver` ORDER BY COUNT(*) DESC LIMIT 1;
+","
+SELECT `Winning driver` FROM table_1_10527215_3 WHERE `Winning team` LIKE 'Penske Racing' GROUP BY `Winning driver` ORDER BY COUNT(*) DESC LIMIT 1;
+","[('Bobby Unser',)]",m_1765011350980_be018998_表-10527215-3,zh

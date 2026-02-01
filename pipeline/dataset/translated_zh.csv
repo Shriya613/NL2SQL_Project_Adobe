@@ -1,0 +1,114 @@
+nl,sql,db_sql,table_id
+"为高 (高度 >= 150 m) 提供单一综合报告,其中包括: (a) 每个省份和每种类型的分布,包括计数,平均高度和最高顶长度; (b) 五个最古老的高,以其名称,加,建造年,高度和顶长度;以及 (c) 五个最高的顶到顶比例的高,以其名称,加,类型,高度,顶长度和比例.","
+WITH tall AS (
+  SELECT `Name` AS Name,
+         `Canton` AS Canton,
+         `Height (meters)` AS Height,
+         `Crest length (meters)` AS Crest,
+         `Type` AS Type,
+         `Year of construction` AS Year,
+         `Name of the Lake` AS Lake
+  FROM `table_1_10020178_1`
+  WHERE `Height (meters)` >= 150
+),
+by_block AS (
+  SELECT 'BY_CANTON_TYPE' AS `Block`,
+         Canton AS `Col1`,
+         Type AS `Col2`,
+         COUNT(*) AS `Col3`,
+         AVG(Height) AS `Col4`,
+         MAX(Crest) AS `Col5`,
+         NULL AS `Col6`,
+         NULL AS `Col7`
+  FROM tall
+  GROUP BY Canton, Type
+  ORDER BY COUNT(*) DESC, AVG(Height) DESC
+),
+oldest_tall AS (
+  SELECT 'OLDEST_TALL' AS `Block`,
+         Name AS `Col1`,
+         Canton AS `Col2`,
+         Year AS `Col3`,
+         Height AS `Col4`,
+         Crest AS `Col5`,
+         NULL AS `Col6`,
+         NULL AS `Col7`
+  FROM tall
+  ORDER BY Year ASC
+  LIMIT 5
+),
+ratio_rank AS (
+  SELECT 'HIGHEST_RATIO' AS `Block`,
+         Name AS `Col1`,
+         Canton AS `Col2`,
+         Type AS `Col3`,
+         Height AS `Col4`,
+         Crest AS `Col5`,
+         (Crest * 1.0) / Height AS `Col6`,
+         NULL AS `Col7`
+  FROM tall
+  ORDER BY (Crest * 1.0) / Height DESC
+  LIMIT 5
+)
+SELECT * FROM by_block
+UNION ALL
+SELECT * FROM oldest_tall
+UNION ALL
+SELECT * FROM ratio_rank;
+","
+WITH tall AS (
+  SELECT col0 AS Name,
+         col1 AS Canton,
+         col2 AS Height,
+         col3 AS Crest,
+         col4 AS Type,
+         col5 AS Year,
+         col6 AS Lake
+  FROM `table_1_10020178_1`
+  WHERE col2 >= 150
+),
+by_block AS (
+  SELECT 'BY_CANTON_TYPE' AS `Block`,
+         Canton AS `Col1`,
+         Type AS `Col2`,
+         COUNT(*) AS `Col3`,
+         AVG(Height) AS `Col4`,
+         MAX(Crest) AS `Col5`,
+         NULL AS `Col6`,
+         NULL AS `Col7`
+  FROM `table_1_10020178_1`
+  GROUP BY Canton, Type
+  ORDER BY COUNT(*) DESC, AVG(Height) DESC
+),
+oldest_tall AS (
+  SELECT 'OLDEST_TALL' AS `Block`,
+         Name AS `Col1`,
+         Canton AS `Col2`,
+         Year AS `Col3`,
+         Height AS `Col4`,
+         Crest AS `Col5`,
+         NULL AS `Col6`,
+         NULL AS `Col7`
+  FROM `table_1_10020178_1`
+  ORDER BY Year ASC
+  LIMIT 5
+),
+ratio_rank AS (
+  SELECT 'HIGHEST_RATIO' AS `Block`,
+         Name AS `Col1`,
+         Canton AS `Col2`,
+         Type AS `Col3`,
+         Height AS `Col4`,
+         Crest AS `Col5`,
+         (Crest * 1.0) / Height AS `Col6`,
+         NULL AS `Col7`
+  FROM `table_1_10020178_1`
+  ORDER BY (Crest * 1.0) / Height DESC
+  LIMIT 5
+)
+SELECT * FROM `table_1_10020178_1`
+UNION ALL
+SELECT * FROM `table_1_10020178_1`
+UNION ALL
+SELECT * FROM `table_1_10020178_1`
+",table_1_10020178_1

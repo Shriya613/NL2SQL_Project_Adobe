@@ -1,0 +1,278 @@
+table_id,nl,sql,db_sql,reasoning
+table_1_1000181_1,"Please provide the count of rows whose Notes is 'No slogan on current series', grouped by Notes, arranged by the resulting count in descending order, restricted to five results.","
+SELECT `Notes`, COUNT(*) AS `Count`
+FROM `table_1_1000181_1`
+WHERE `Notes` = 'No slogan on current series'
+GROUP BY `Notes`
+ORDER BY `Count` DESC
+LIMIT 5;
+","SELECT col5, COUNT(*) AS `Count`
+FROM `table_1_1000181_1`
+WHERE col5 LIKE '%No slogan%'
+GROUP BY col5
+ORDER BY `Count` DESC
+LIMIT 5;","Validate: Ensure the question asks for the count of the specific Notes value, grouped by Notes, ordered by Count DESC, and limited to five results."
+table_1_10007452_3,"From the fleet records, list how many entries exist per Manufacturer, but only include manufacturers with more than one entry, order the results by the entry count from smallest to largest, and return up to five manufacturers.","
+SELECT `Manufacturer`, COUNT(*)
+FROM `table_1_10007452_3`
+WHERE 1=1
+GROUP BY `Manufacturer`
+HAVING COUNT(*) > 1
+ORDER BY 2
+LIMIT 5;
+","
+SELECT col1, COUNT(*)
+FROM `table_1_10007452_3`
+WHERE 1=1
+GROUP BY col1
+HAVING COUNT(*) > 1
+ORDER BY 2
+LIMIT 5;
+","Parse: identify the operation as a grouped count by Manufacturer with a HAVING clause for counts greater than one, then sort by the resulting count ascending and limit to five. Map: relies on Manufacturer as the grouping key and the total row count as the metric. Draft: ask for the count of fleet rows per Manufacturer, restricting to those with more than one row, ordered by count ascending, limited to five. Validate: matches grouping, filtering, ordering, and limiting rules."
+table_1_10015132_1,"For each nationality represented on the Raptors all-time roster, how many players are there and what is the earliest year any player from that nationality started in Toronto?","
+SELECT
+  `Nationality` AS `Nation`,
+  COUNT(*) AS `Num Players`,
+  MIN(CAST(substr(`Years in Toronto`, 1, 4) AS INTEGER)) AS `Earliest Start Year`,
+  CASE
+    WHEN MIN(CAST(substr(`Years in Toronto`, 1, 4) AS INTEGER)) < 2000 THEN '1990s'
+    WHEN MIN(CAST(substr(`Years in Toronto`, 1, 4) AS INTEGER)) < 2010 THEN '2000s'
+    ELSE '2010s+'
+  END AS `Era`,
+  GROUP_CONCAT(DISTINCT `School/Club Team`) AS `Feeding Schools/Clubs`,
+  SUM(CASE WHEN `Years in Toronto` LIKE '%,%' THEN 1 ELSE 0 END) AS `MultiStintCount`
+FROM `table_1_10015132_1`
+GROUP BY `Nationality`
+ORDER BY `Era`, `Nation`;
+","
+SELECT
+  col2 AS `Nation`,
+  COUNT(*) AS `Num Players`,
+  MIN(CAST(substr(col4, 1, 4) AS INTEGER)) AS `Earliest Start Year`,
+  CASE
+    WHEN MIN(CAST(substr(col4, 1, 4) AS INTEGER)) < 2000 THEN '1990s'
+    WHEN MIN(CAST(substr(col4, 1, 4) AS INTEGER)) < 2010 THEN '2000s'
+    ELSE '2010s+'
+  END AS `Era`,
+  GROUP_CONCAT(DISTINCT col5) AS `Feeding Schools/Clubs`,
+  SUM(CASE WHEN col4 LIKE '%,%' THEN 1 ELSE 0 END) AS `MultiStintCount`
+FROM `table_1_10015132_1`
+GROUP BY col2
+ORDER BY `Era`, `Nation`;
+","Parse the query: it groups the roster by nationality, counting players, finding the earliest start year from Years in Toronto, and prepares for era classification plus aggregations for feeding schools/clubs and multi-stints."
+table_1_10015132_21,"List each distinct Position with the number of players in that position, showing only the top five positions by count.","
+SELECT DISTINCT `Position`, COUNT(*) AS `cnt`
+FROM `table_1_10015132_21`
+WHERE 1=1
+GROUP BY `Position`
+ORDER BY `cnt` DESC
+LIMIT 5;
+","
+SELECT DISTINCT col3, COUNT(*) AS `cnt`
+FROM `table_1_10015132_21`
+WHERE 1=1
+GROUP BY col3
+ORDER BY `cnt` DESC
+LIMIT 5;
+",Map schema semantics: Position is the grouping key and COUNT(*) provides the number of players for each position.
+table_1_10015132_7,"List the Raptors all-time roster entries, showing name, jersey number, nationality, position, years in Toronto, and school/club team, for the first five distinct players when ordering by jersey number in ascending order; include a Status of Active when Years in Toronto contains 'present' and Inactive otherwise, and include the total number of players on the roster.","
+SELECT DISTINCT
+  `Player`,
+  `No.`,
+  `Nationality`,
+  `Position`,
+  `Years in Toronto`,
+  `School/Club Team`,
+  CASE
+    WHEN `Years in Toronto` LIKE '%present%' THEN 'Active'
+    ELSE 'Inactive'
+  END AS `Status`,
+  (SELECT COUNT(*) FROM `table_1_10015132_7`) AS `TotalPlayers`
+FROM `table_1_10015132_7`
+WHERE 1=1 AND 1=1 OR 1=1
+ORDER BY `No.` ASC
+LIMIT 5;
+","
+SELECT DISTINCT
+  col0,
+  col1,
+  col2,
+  col3,
+  col4,
+  col5,
+  CASE
+    WHEN col4 LIKE '%present%' THEN 'Active'
+    ELSE 'Inactive'
+  END AS `Status`,
+  (SELECT COUNT(*) FROM `table_1_10015132_7`) AS `TotalPlayers`
+FROM `table_1_10015132_7`
+WHERE 1=1 AND 1=1 OR 1=1
+ORDER BY col1 ASC
+LIMIT 5;
+","Parse: The query returns the first five players ordered by No. ASC, so we should ask for the roster entries ordered by jersey number with a limit of five. Map: include the same fields plus Status and TotalPlayers. Draft: Phrase a question that requests the five Raptors roster entries with the same columns, still including Active/Inactive derived from 'present' and the total count. Validate: Ensure the limit and order by jersey number are explicit plus the computed fields."
+table_1_10020178_1,"Provide a single consolidated report for tall dams (Height >= 150 m) that includes: (a) the per-canton and per-type distribution with counts, average height, and maximum crest length; (b) the five oldest tall dams with their name, canton, year of construction, height, and crest length; and (c) the five tallest crest-to-height-ratio dams with their name, canton, type, height, crest length, and ratio.","
+WITH tall AS (
+  SELECT `Name` AS Name,
+         `Canton` AS Canton,
+         `Height (meters)` AS Height,
+         `Crest length (meters)` AS Crest,
+         `Type` AS Type,
+         `Year of construction` AS Year,
+         `Name of the Lake` AS Lake
+  FROM `table_1_10020178_1`
+  WHERE `Height (meters)` >= 150
+),
+by_block AS (
+  SELECT 'BY_CANTON_TYPE' AS `Block`,
+         Canton AS `Col1`,
+         Type AS `Col2`,
+         COUNT(*) AS `Col3`,
+         AVG(Height) AS `Col4`,
+         MAX(Crest) AS `Col5`,
+         NULL AS `Col6`,
+         NULL AS `Col7`
+  FROM tall
+  GROUP BY Canton, Type
+  ORDER BY COUNT(*) DESC, AVG(Height) DESC
+),
+oldest_tall AS (
+  SELECT 'OLDEST_TALL' AS `Block`,
+         Name AS `Col1`,
+         Canton AS `Col2`,
+         Year AS `Col3`,
+         Height AS `Col4`,
+         Crest AS `Col5`,
+         NULL AS `Col6`,
+         NULL AS `Col7`
+  FROM tall
+  ORDER BY Year ASC
+  LIMIT 5
+),
+ratio_rank AS (
+  SELECT 'HIGHEST_RATIO' AS `Block`,
+         Name AS `Col1`,
+         Canton AS `Col2`,
+         Type AS `Col3`,
+         Height AS `Col4`,
+         Crest AS `Col5`,
+         (Crest * 1.0) / Height AS `Col6`,
+         NULL AS `Col7`
+  FROM tall
+  ORDER BY (Crest * 1.0) / Height DESC
+  LIMIT 5
+)
+SELECT * FROM by_block
+UNION ALL
+SELECT * FROM oldest_tall
+UNION ALL
+SELECT * FROM ratio_rank;
+","
+WITH tall AS (
+  SELECT col0 AS Name,
+         col1 AS Canton,
+         col2 AS Height,
+         col3 AS Crest,
+         col4 AS Type,
+         col5 AS Year,
+         col6 AS Lake
+  FROM `table_1_10020178_1`
+  WHERE col2 >= 150
+),
+by_block AS (
+  SELECT 'BY_CANTON_TYPE' AS `Block`,
+         Canton AS `Col1`,
+         Type AS `Col2`,
+         COUNT(*) AS `Col3`,
+         AVG(Height) AS `Col4`,
+         MAX(Crest) AS `Col5`,
+         NULL AS `Col6`,
+         NULL AS `Col7`
+  FROM `table_1_10020178_1`
+  GROUP BY Canton, Type
+  ORDER BY COUNT(*) DESC, AVG(Height) DESC
+),
+oldest_tall AS (
+  SELECT 'OLDEST_TALL' AS `Block`,
+         Name AS `Col1`,
+         Canton AS `Col2`,
+         Year AS `Col3`,
+         Height AS `Col4`,
+         Crest AS `Col5`,
+         NULL AS `Col6`,
+         NULL AS `Col7`
+  FROM `table_1_10020178_1`
+  ORDER BY Year ASC
+  LIMIT 5
+),
+ratio_rank AS (
+  SELECT 'HIGHEST_RATIO' AS `Block`,
+         Name AS `Col1`,
+         Canton AS `Col2`,
+         Type AS `Col3`,
+         Height AS `Col4`,
+         Crest AS `Col5`,
+         (Crest * 1.0) / Height AS `Col6`,
+         NULL AS `Col7`
+  FROM `table_1_10020178_1`
+  ORDER BY (Crest * 1.0) / Height DESC
+  LIMIT 5
+)
+SELECT * FROM `table_1_10020178_1`
+UNION ALL
+SELECT * FROM `table_1_10020178_1`
+UNION ALL
+SELECT * FROM `table_1_10020178_1`
+","Parse SQL intent: the query unions three result sets into one report. Draft a question asking for a single consolidated report that includes (a) per-canton and per-type tall-dam distribution with counts, average height, and max crest; (b) the five oldest tall dams with their details; and (c) the five highest crest-to-height-ratio dams with their details."
+table_1_10021158_3,"From the LPGA Tour career summary data, between 2007 and 2012, which year earned the most money, and what are the Year and Earnings ($) for that year?","
+SELECT
+  `Year`,
+  `Earnings ($)`
+FROM `table_1_10021158_3`
+WHERE `Year` BETWEEN 2007 AND 2012
+ORDER BY `Earnings ($)` DESC
+LIMIT 1;
+","
+SELECT
+  col0,
+  col7
+FROM `table_1_10021158_3`
+WHERE col0 BETWEEN 2007 AND 2012
+ORDER BY col7 DESC
+LIMIT 1;
+",Parse the SQL intent: locate the year with the maximum Earnings ($) among 2007–2012. Map the schema: Year and Earnings ($) are the fields to return; apply the same year filter and sort; limit to one record. Draft the question: request the year and its earnings for the top-earning year in that span. Validate: the question aligns with selecting the maximum earnings in the given range and returning both values.
+table_1_1004033_1,"If you group the winners by nationality and sort by the number of winners from highest to lowest, which nationality comes first and how many winners does it have?","
+SELECT
+  `Nationality`, COUNT(*) AS `Count`
+FROM `table_1_1004033_1`
+WHERE 1
+GROUP BY `Nationality`
+ORDER BY `Count` DESC
+LIMIT 1;
+","
+SELECT
+  col3, COUNT(*) AS `Count`
+FROM `table_1_1004033_1`
+WHERE 1
+GROUP BY col3
+ORDER BY `Count` DESC
+LIMIT 1;
+","Parse: identify the leading nationality when grouping by nationality and sorting by the group size in descending order. Map: count by nationality, sort, take the first. Draft: query for the leading nationality and its count. Validate: reflects taking the top group only (LIMIT 1)."
+table_1_10054296_1,"Compute, for every Headquarters, the maximum Chapters value and present it as Headquarters and Max Chapters; filter to Headquarters whose per-headquarters maximum equals the maximum Chapters value found in the entire table; order the results by Headquarters.","
+SELECT `Headquarters`, MAX(`Chapters`) AS `Max Chapters`
+FROM `table_1_10054296_1`
+GROUP BY `Headquarters`
+HAVING MAX(`Chapters`) = (
+  SELECT MAX(`Chapters`)
+  FROM `table_1_10054296_1`
+)
+ORDER BY `Headquarters`;
+","
+SELECT col1, MAX(col3) AS `Max Chapters`
+FROM `table_1_10054296_1`
+GROUP BY col1
+HAVING MAX(col3) = (
+  SELECT MAX(col3)
+  FROM `table_1_10054296_1`
+)
+ORDER BY col1;
+","1) Parse: The query finds Headquarters whose per-headquarters maximum matches the overall maximum of Chapters and returns them with that maximum; 2) Map: Use Headquarters as group key and the per-group max of Chapters; 3) Draft: Ask for the Headquarters with the maximum per-headquarters Chapters, showing Max Chapters, and requiring that this value equals the global maximum; 4) Validate: The phrasing maps to GROUP BY, MAX, HAVING, and ORDER BY."

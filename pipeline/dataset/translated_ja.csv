@@ -1,0 +1,166 @@
+nl,sql,db_sql,table_id
+"トロントでの名前,ジャージ番号,国籍,地位,トロントでの年数,および学校/クラブチームを示すRaptors全タイムリストのエントリーを,ジャージ番号によって順番アップで順序付けるときに最初の5人の異なるプレイヤーにリストする. トロントでの年数が""現在""および""無動""を含む場合,アクティブの状態を記載し,リスト上の選手の総数を記載する.","
+SELECT DISTINCT
+  `Player`,
+  `No.`,
+  `Nationality`,
+  `Position`,
+  `Years in Toronto`,
+  `School/Club Team`,
+  CASE
+    WHEN `Years in Toronto` LIKE '%present%' THEN 'Active'
+    ELSE 'Inactive'
+  END AS `Status`,
+  (SELECT COUNT(*) FROM `table_1_10015132_7`) AS `TotalPlayers`
+FROM `table_1_10015132_7`
+WHERE 1=1 AND 1=1 OR 1=1
+ORDER BY `No.` ASC
+LIMIT 5;
+","
+SELECT DISTINCT
+  col0,
+  col1,
+  col2,
+  col3,
+  col4,
+  col5,
+  CASE
+    WHEN col4 LIKE '%present%' THEN 'Active'
+    ELSE 'Inactive'
+  END AS `Status`,
+  (SELECT COUNT(*) FROM `table_1_10015132_7`) AS `TotalPlayers`
+FROM `table_1_10015132_7`
+WHERE 1=1 AND 1=1 OR 1=1
+ORDER BY col1 ASC
+LIMIT 5;
+",table_1_10015132_7
+"高いダム (高さ >= 150 m) に関する単一の統合報告書を提供し,その報告書には: (a) カウント,平均高さ,最大 クレスト長さの各カントーンおよび各タイプの分布, (b) 名,カントーン,建設年,高さ, クレスト長さの最も古い5つの高さダム,および (c) 名,カントーン,タイプ,高さ, クレスト長さの最も高い5つの クレスト-高さ関係ダムが含まれます.","
+WITH tall AS (
+  SELECT `Name` AS Name,
+         `Canton` AS Canton,
+         `Height (meters)` AS Height,
+         `Crest length (meters)` AS Crest,
+         `Type` AS Type,
+         `Year of construction` AS Year,
+         `Name of the Lake` AS Lake
+  FROM `table_1_10020178_1`
+  WHERE `Height (meters)` >= 150
+),
+by_block AS (
+  SELECT 'BY_CANTON_TYPE' AS `Block`,
+         Canton AS `Col1`,
+         Type AS `Col2`,
+         COUNT(*) AS `Col3`,
+         AVG(Height) AS `Col4`,
+         MAX(Crest) AS `Col5`,
+         NULL AS `Col6`,
+         NULL AS `Col7`
+  FROM tall
+  GROUP BY Canton, Type
+  ORDER BY COUNT(*) DESC, AVG(Height) DESC
+),
+oldest_tall AS (
+  SELECT 'OLDEST_TALL' AS `Block`,
+         Name AS `Col1`,
+         Canton AS `Col2`,
+         Year AS `Col3`,
+         Height AS `Col4`,
+         Crest AS `Col5`,
+         NULL AS `Col6`,
+         NULL AS `Col7`
+  FROM tall
+  ORDER BY Year ASC
+  LIMIT 5
+),
+ratio_rank AS (
+  SELECT 'HIGHEST_RATIO' AS `Block`,
+         Name AS `Col1`,
+         Canton AS `Col2`,
+         Type AS `Col3`,
+         Height AS `Col4`,
+         Crest AS `Col5`,
+         (Crest * 1.0) / Height AS `Col6`,
+         NULL AS `Col7`
+  FROM tall
+  ORDER BY (Crest * 1.0) / Height DESC
+  LIMIT 5
+)
+SELECT * FROM by_block
+UNION ALL
+SELECT * FROM oldest_tall
+UNION ALL
+SELECT * FROM ratio_rank;
+","
+WITH tall AS (
+  SELECT col0 AS Name,
+         col1 AS Canton,
+         col2 AS Height,
+         col3 AS Crest,
+         col4 AS Type,
+         col5 AS Year,
+         col6 AS Lake
+  FROM `table_1_10020178_1`
+  WHERE col2 >= 150
+),
+by_block AS (
+  SELECT 'BY_CANTON_TYPE' AS `Block`,
+         Canton AS `Col1`,
+         Type AS `Col2`,
+         COUNT(*) AS `Col3`,
+         AVG(Height) AS `Col4`,
+         MAX(Crest) AS `Col5`,
+         NULL AS `Col6`,
+         NULL AS `Col7`
+  FROM `table_1_10020178_1`
+  GROUP BY Canton, Type
+  ORDER BY COUNT(*) DESC, AVG(Height) DESC
+),
+oldest_tall AS (
+  SELECT 'OLDEST_TALL' AS `Block`,
+         Name AS `Col1`,
+         Canton AS `Col2`,
+         Year AS `Col3`,
+         Height AS `Col4`,
+         Crest AS `Col5`,
+         NULL AS `Col6`,
+         NULL AS `Col7`
+  FROM `table_1_10020178_1`
+  ORDER BY Year ASC
+  LIMIT 5
+),
+ratio_rank AS (
+  SELECT 'HIGHEST_RATIO' AS `Block`,
+         Name AS `Col1`,
+         Canton AS `Col2`,
+         Type AS `Col3`,
+         Height AS `Col4`,
+         Crest AS `Col5`,
+         (Crest * 1.0) / Height AS `Col6`,
+         NULL AS `Col7`
+  FROM `table_1_10020178_1`
+  ORDER BY (Crest * 1.0) / Height DESC
+  LIMIT 5
+)
+SELECT * FROM `table_1_10020178_1`
+UNION ALL
+SELECT * FROM `table_1_10020178_1`
+UNION ALL
+SELECT * FROM `table_1_10020178_1`
+",table_1_10020178_1
+"LPGAツアーのキャリア概要データから,2007年から2012年の間に,どの年が一番稼いだか,その年の年収と収入は?","
+SELECT
+  `Year`,
+  `Earnings ($)`
+FROM `table_1_10021158_3`
+WHERE `Year` BETWEEN 2007 AND 2012
+ORDER BY `Earnings ($)` DESC
+LIMIT 1;
+","
+SELECT
+  col0,
+  col7
+FROM `table_1_10021158_3`
+WHERE col0 BETWEEN 2007 AND 2012
+ORDER BY col7 DESC
+LIMIT 1;
+",table_1_10021158_3
