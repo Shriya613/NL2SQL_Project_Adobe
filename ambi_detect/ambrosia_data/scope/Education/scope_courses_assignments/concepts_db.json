@@ -1,0 +1,31 @@
+{
+    "template": "Each Courses has many different Assignments. Among them, Final Project is common to many Courses.",
+    "entities": {
+        "tab_name": "Courses",
+        "col_name": null,
+        "value": null,
+        "scope_id": null,
+        "db_type": "table"
+    },
+    "components": {
+        "tab_name": "Assignments",
+        "col_name": null,
+        "value": null,
+        "scope_id": null,
+        "db_type": "table"
+    },
+    "specific_component": {
+        "tab_name": "Assignments",
+        "col_name": "type",
+        "value": "Project",
+        "scope_id": 2,
+        "db_type": "value"
+    },
+    "entities_components": {
+        "tab_name": "Courses_Assignments",
+        "col_name": null,
+        "value": null,
+        "scope_id": null,
+        "db_type": "table"
+    }
+}

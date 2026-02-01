@@ -1,0 +1,8 @@
+{
+    "template": "Airport Expansion and Renovation are subclasses of Development Projects. All Airport Expansion and Renovation projects have the property \"Increased Capacity\". There might be an Airport Expansion and a Renovation project that both aim for an \"Increased Capacity\" of \"5000 Passengers per Day\".",
+    "general_class": "Development Projects",
+    "class1": "Airport Expansion",
+    "class2": "Renovation",
+    "common_property": "Increased Capacity",
+    "common_value": "1000 Passengers per Day"
+}

@@ -1,0 +1,6 @@
+{
+    "template": "Each Movie Sets has many different Equipment. Among them, Camera is common to many Movie Sets.",
+    "specific_component": "Camera",
+    "components": "Equipment",
+    "entities": "Movie Sets"
+}

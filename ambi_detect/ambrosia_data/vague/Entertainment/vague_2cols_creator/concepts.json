@@ -1,0 +1,7 @@
+{
+    "template": "Question: Who created this ballet? Subject of Inquiry: Ballet\nFocus: Creator Possible answer types: 1. Musician 2. Choreographer",
+    "subject": "Ballet",
+    "focus": "Creator",
+    "general_category1": "Musician",
+    "general_category2": "Choreographer"
+}

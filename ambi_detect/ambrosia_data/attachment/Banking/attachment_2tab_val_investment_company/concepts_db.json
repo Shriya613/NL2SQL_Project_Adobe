@@ -1,0 +1,27 @@
+{
+    "domain": "growth_equity",
+    "template": "Growth Equity Firm and Venture Capital Trust are subclasses of Investment Company. All Growth equity firms and Venture capital trusts have property \"Funding Amount\". There might be a Growth Equity Firm and a Venture Capital Trust that both have \"Funding Amount\" equal to \"5000000\".",
+    "type": "2tab_val",
+    "general_class": "Investment Company",
+    "class1": {
+        "tab_name": "growth_equity",
+        "col_name": null,
+        "value": null,
+        "scope_id": null,
+        "db_type": "table"
+    },
+    "class2": {
+        "tab_name": "venture_capital",
+        "col_name": null,
+        "value": null,
+        "scope_id": null,
+        "db_type": "table"
+    },
+    "common_property": {
+        "tab_name": "growth_equity",
+        "col_name": "funding_amount",
+        "value": 5000000.0,
+        "scope_id": null,
+        "db_type": "value"
+    }
+}

@@ -1,0 +1,6 @@
+{
+    "template": "Each Continuity Coordinators has many different Challenges. Among them, Wardrobe Changes is common to many Continuity Coordinators.",
+    "specific_component": "Wardrobe Changes",
+    "components": "Challenges",
+    "entities": "Continuity Coordinators"
+}

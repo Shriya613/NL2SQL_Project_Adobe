@@ -1,0 +1,31 @@
+{
+    "template": "Each Streaming Service has many different Content. Among them, Netflix Originals is common to many Streaming Service.",
+    "entities": {
+        "tab_name": "Streaming_Service",
+        "col_name": null,
+        "value": null,
+        "scope_id": null,
+        "db_type": "table"
+    },
+    "components": {
+        "tab_name": "Content",
+        "col_name": null,
+        "value": null,
+        "scope_id": null,
+        "db_type": "table"
+    },
+    "specific_component": {
+        "tab_name": "Content",
+        "col_name": "type",
+        "value": "Movie",
+        "scope_id": 5,
+        "db_type": "value"
+    },
+    "entities_components": {
+        "tab_name": "Streaming_Service_Content",
+        "col_name": null,
+        "value": null,
+        "scope_id": null,
+        "db_type": "table"
+    }
+}

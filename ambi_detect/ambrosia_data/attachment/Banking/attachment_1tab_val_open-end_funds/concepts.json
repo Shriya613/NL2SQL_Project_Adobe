@@ -1,0 +1,8 @@
+{
+    "template": "Money Market Fund and Bond Fund are subclasses of Open-End Funds. All Money market funds and Bond funds have property \"Month\". There might be a Money Market Fund and a Bond Fund that both have \"Month\" equal to \"January\".",
+    "general_class": "Open-End Funds",
+    "class1": "Money Market Fund",
+    "class2": "Bond Fund",
+    "common_property": "Month",
+    "common_value": "January"
+}

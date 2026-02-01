@@ -1,0 +1,25 @@
+{
+    "template": "Question: What qualifications does the investigative journalist possess? Subject of Inquiry: Investigative Journalist\nFocus: Qualification Possible answer types: 1. Degree 2. Certificate",
+    "general_category1": {
+        "tab_name": "journalists",
+        "col_name": "Degree",
+        "value": null,
+        "scope_id": null,
+        "db_type": "column"
+    },
+    "general_category2": {
+        "tab_name": "journalists",
+        "col_name": "Certificate",
+        "value": null,
+        "scope_id": null,
+        "db_type": "column"
+    },
+    "subject": {
+        "tab_name": "journalists",
+        "col_name": "Investigative_Journalist",
+        "value": null,
+        "scope_id": null,
+        "db_type": "column"
+    },
+    "type": "2cols"
+}

@@ -1,0 +1,31 @@
+{
+    "template": "Each Food Critics has many different Cuisines. Among them, Italian is common to many Food Critics.",
+    "entities": {
+        "tab_name": "Food_Critics",
+        "col_name": null,
+        "value": null,
+        "scope_id": null,
+        "db_type": "table"
+    },
+    "components": {
+        "tab_name": "Cuisines",
+        "col_name": null,
+        "value": null,
+        "scope_id": null,
+        "db_type": "table"
+    },
+    "specific_component": {
+        "tab_name": "Cuisines",
+        "col_name": "cuisine_name",
+        "value": "Italian",
+        "scope_id": 0,
+        "db_type": "value"
+    },
+    "entities_components": {
+        "tab_name": "Food_Critics_Cuisines",
+        "col_name": null,
+        "value": null,
+        "scope_id": null,
+        "db_type": "table"
+    }
+}

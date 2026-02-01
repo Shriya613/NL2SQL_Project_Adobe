@@ -1,0 +1,9 @@
+[
+    {
+        "question": "What feature values are associated with each community?",
+        "sql_query1": "SELECT Features.feature_value  from Communities_Features join Features on Communities_Features.feature_id = Features.feature_id join Communities on Communities_Features.community_id = Communities.community_id   GROUP BY Communities_Features.feature_id HAVING COUNT(DISTINCT Communities_Features.community_id) = (SELECT COUNT(*) FROM  Communities)",
+        "sql_query2": "select communities.community_name , features.feature_value from Communities_Features join Features on Communities_Features.feature_id = Features.feature_id join Communities on Communities_Features.community_id = Communities.community_id",
+        "interpretation1": "Which feature value of features is common across all communities?",
+        "interpretation2": "For each community, provide the corresponding feature values of features."
+    }
+]

@@ -1,0 +1,9 @@
+[
+    {
+        "question": "Tell me the species every facility has.",
+        "sql_query1": "SELECT Fish_Species.species_name  from Aquaculture_Facility_Fish_Species join Fish_Species on Aquaculture_Facility_Fish_Species.fish_species_id = Fish_Species.id join Aquaculture_Facility on Aquaculture_Facility_Fish_Species.aquaculture_facility_id = Aquaculture_Facility.id   GROUP BY Aquaculture_Facility_Fish_Species.fish_species_id HAVING COUNT(DISTINCT Aquaculture_Facility_Fish_Species.aquaculture_facility_id) = (SELECT COUNT(*) FROM  Aquaculture_Facility)",
+        "sql_query2": "select aquaculture_facility.name , fish_species.species_name from Aquaculture_Facility_Fish_Species join Fish_Species on Aquaculture_Facility_Fish_Species.fish_species_id = Fish_Species.id join Aquaculture_Facility on Aquaculture_Facility_Fish_Species.aquaculture_facility_id = Aquaculture_Facility.id",
+        "interpretation1": "What species are common to all facilities?",
+        "interpretation2": "For each facility, list the species they have."
+    }
+]

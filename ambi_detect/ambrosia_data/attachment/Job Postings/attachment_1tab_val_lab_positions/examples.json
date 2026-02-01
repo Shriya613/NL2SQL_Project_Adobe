@@ -1,0 +1,9 @@
+[
+    {
+        "question": "What is the salary range for female laboratory technicians and research scientists?",
+        "sql_query1": "SELECT LabPosition.salaryRange \r\nFROM LabPosition\r\nWHERE (LabPosition.labPosition = \"Research Scientist\" OR LabPosition.labPosition = \"Laboratory Technician\") AND LabPosition.gender = \"Female\"",
+        "sql_query2": "SELECT LabPosition.salaryRange \r\nFROM LabPosition\r\nWHERE LabPosition.labPosition = \"Research Scientist\" OR LabPosition.labPosition = \"Laboratory Technician\" AND LabPosition.gender = \"Female\"",
+        "interpretation1": "What is the salary range of female research scientists and laboratory technicians of the same gender?",
+        "interpretation2": "List the salary range of all research scientists as well as the salary range of female laboratory technicians."
+    }
+]

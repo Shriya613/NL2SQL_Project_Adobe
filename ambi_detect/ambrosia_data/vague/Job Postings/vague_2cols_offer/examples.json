@@ -1,0 +1,22 @@
+[
+    {
+        "question": "Return the offer for each job type",
+        "sql_query1": "SELECT T.typeName, J.Base_Pay_Range\r\nFROM JobTypes AS T\r\nLEFT JOIN Jobs AS J ON T.id = J.jobTypeId",
+        "sql_query2": "SELECT T.typeName, J.Benefits\r\nFROM JobTypes AS T\r\nLEFT JOIN Jobs AS J ON T.id = J.jobTypeId",
+        "sql_query3": "SELECT T.typeName, J.Base_Pay_Range, Benefits\r\nFROM JobTypes AS T\r\nLEFT JOIN Jobs AS J ON T.id = J.jobTypeId",
+        "interpretation1": "What is the base pay range for each job type?",
+        "interpretation2": "What are the benefits with each job type?",
+        "interpretation3": "What is the base pay range and benefits for each job type?",
+        "sql_query_general": "SELECT T.typeName, J.Offer\r\nFROM JobTypes AS T\r\nLEFT JOIN Jobs AS J ON T.id = J.jobTypeId"
+    },
+    {
+        "question": "Find all offers by location",
+        "sql_query1": "SELECT L.locationName, J.Base_Pay_Range\r\nFROM Locations AS L\r\nLEFT JOIN Jobs AS J ON L.id = J.locationId",
+        "sql_query2": "SELECT L.locationName, J.Benefits\r\nFROM Locations AS L\r\nLEFT JOIN Jobs AS J ON L.id = J.locationId",
+        "sql_query3": "SELECT L.locationName, J.Base_Pay_Range, Benefits\r\nFROM Locations AS L\r\nLEFT JOIN Jobs AS J ON L.id = J.locationId",
+        "interpretation1": "show me the location and base pay range for all jobs",
+        "interpretation2": "show me the location and benefits for all jobs",
+        "interpretation3": "show me the location, base pay range and benefits for all jobs",
+        "sql_query_general": "SELECT L.locationName, J.Offer\r\nFROM Locations AS L\r\nLEFT JOIN Jobs AS J ON L.id = J.locationId"
+    }
+]

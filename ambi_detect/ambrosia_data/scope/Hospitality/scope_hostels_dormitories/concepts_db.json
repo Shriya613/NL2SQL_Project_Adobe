@@ -1,0 +1,31 @@
+{
+    "template": "Each Hostels has many different Dormitories. Among them, Mixed Dormitory is common to many Hostels.",
+    "entities": {
+        "tab_name": "Hostels",
+        "col_name": null,
+        "value": null,
+        "scope_id": null,
+        "db_type": "table"
+    },
+    "components": {
+        "tab_name": "Dormitories",
+        "col_name": null,
+        "value": null,
+        "scope_id": null,
+        "db_type": "table"
+    },
+    "specific_component": {
+        "tab_name": "Dormitories",
+        "col_name": "type",
+        "value": "Mixed_Dormitory",
+        "scope_id": 0,
+        "db_type": "value"
+    },
+    "entities_components": {
+        "tab_name": "Hostels_Dormitories",
+        "col_name": null,
+        "value": null,
+        "scope_id": null,
+        "db_type": "table"
+    }
+}

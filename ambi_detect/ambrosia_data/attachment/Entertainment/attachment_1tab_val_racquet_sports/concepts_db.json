@@ -1,0 +1,33 @@
+{
+    "domain": "Artists",
+    "template": "Tennis Tournament and Golf Tournament are subclasses of Racquet Sports. All Tennis tournaments and Golf tournaments have property \"Sponsor\". There might be a Tennis Tournament and a Golf Tournament that both have \"Sponsor\" equal to \"Nike\".",
+    "type": "1tab_val",
+    "general_class": {
+        "tab_name": "RacquetsAndTournaments",
+        "col_name": "EventType",
+        "value": null,
+        "scope_id": null,
+        "db_type": "column"
+    },
+    "class1": {
+        "tab_name": "RacquetsAndTournaments",
+        "col_name": "EventType",
+        "value": "Tennis Tournament",
+        "scope_id": null,
+        "db_type": "value"
+    },
+    "class2": {
+        "tab_name": "RacquetsAndTournaments",
+        "col_name": "EventType",
+        "value": "Golf Tournament",
+        "scope_id": null,
+        "db_type": "value"
+    },
+    "common_property": {
+        "tab_name": "RacquetsAndTournaments",
+        "col_name": "Sponsor",
+        "value": "Nike",
+        "scope_id": null,
+        "db_type": "value"
+    }
+}

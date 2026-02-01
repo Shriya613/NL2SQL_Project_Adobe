@@ -1,0 +1,6 @@
+{
+    "template": "Each Greenhouses has many different Plants. Among them, Tomatoes is common to many Greenhouses.",
+    "specific_component": "Tomatoes",
+    "components": "Plants",
+    "entities": "Greenhouses"
+}

@@ -1,0 +1,9 @@
+[
+    {
+        "question": "List saving accounts and checking accounts with an interest rate of 1%.",
+        "sql_query1": "SELECT Savings_Accounts.AccountNumber\r\nFROM Savings_Accounts\r\nWHERE Savings_Accounts.Interest_Rate = \"1%\"\r\nUNION\r\nSELECT Checking_Accounts.AccountNumber\r\nFROM Checking_Accounts\r\nWHERE Checking_Accounts.Interest_Rate = \"1%\"",
+        "sql_query2": "SELECT Savings_Accounts.AccountNumber\r\nFROM Savings_Accounts\r\nUNION\r\nSELECT Checking_Accounts.AccountNumber\r\nFROM Checking_Accounts\r\nWHERE Checking_Accounts.Interest_Rate = \"1%\"",
+        "interpretation1": "Which saving accounts have an interest rate of 1% and which checking accounts have the same interest rate?",
+        "interpretation2": "Provide a list of all saving accounts combined with a list of checking accounts with an interest rate of 1%."
+    }
+]

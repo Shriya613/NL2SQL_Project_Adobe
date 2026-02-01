@@ -1,0 +1,7 @@
+{
+    "template": "Question: Where can I find the lost and found office? Subject of Inquiry: Shop\nFocus: Location Possible answer types: 1. Terminal Building 2. Floor Level",
+    "subject": "Shop",
+    "focus": "Location",
+    "general_category1": "Terminal Building",
+    "general_category2": "Floor Level"
+}

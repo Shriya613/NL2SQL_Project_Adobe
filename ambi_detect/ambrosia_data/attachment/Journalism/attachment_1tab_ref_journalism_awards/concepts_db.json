@@ -1,0 +1,33 @@
+{
+    "domain": "Authors",
+    "template": "Pulitzer Prize and George Polk Award are subclasses of Journalism Awards. All Pulitzer prizes and George polk awards have property \"Year\". There might be a Pulitzer Prize and a George Polk Award that both have \"Year\" equal to \"2010\".",
+    "type": "1tab_ref_like",
+    "general_class": {
+        "tab_name": "Awards",
+        "col_name": "AwardType",
+        "value": null,
+        "scope_id": null,
+        "db_type": "column"
+    },
+    "class1": {
+        "tab_name": "Awards",
+        "col_name": "AwardType",
+        "value": "Pulitzer Prize",
+        "scope_id": null,
+        "db_type": "value"
+    },
+    "class2": {
+        "tab_name": "Awards",
+        "col_name": "AwardType",
+        "value": "George Polk Award",
+        "scope_id": null,
+        "db_type": "value"
+    },
+    "common_property": {
+        "tab_name": "Winners",
+        "col_name": "Year",
+        "value": 2010,
+        "scope_id": null,
+        "db_type": "value"
+    }
+}

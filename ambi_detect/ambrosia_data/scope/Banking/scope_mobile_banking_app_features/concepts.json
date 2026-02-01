@@ -1,0 +1,6 @@
+{
+    "template": "Each Mobile Banking App has many different Features. Among them, Mobile Deposit is common to many Mobile Banking App.",
+    "specific_component": "Mobile Deposit",
+    "components": "Features",
+    "entities": "Mobile Banking App"
+}

@@ -1,0 +1,31 @@
+{
+    "template": "Each Streaming Services has many different Third-Party Apps. Among them, Spotify Connect is common to many Streaming Services.",
+    "entities": {
+        "tab_name": "Streaming_Services",
+        "col_name": null,
+        "value": null,
+        "scope_id": null,
+        "db_type": "table"
+    },
+    "components": {
+        "tab_name": "Third_Party_Apps",
+        "col_name": null,
+        "value": null,
+        "scope_id": null,
+        "db_type": "table"
+    },
+    "specific_component": {
+        "tab_name": "Third_Party_Apps",
+        "col_name": "app_name",
+        "value": "Spotify_Connect",
+        "scope_id": 0,
+        "db_type": "value"
+    },
+    "entities_components": {
+        "tab_name": "Streaming_Services_Third_Party_Apps",
+        "col_name": null,
+        "value": null,
+        "scope_id": null,
+        "db_type": "table"
+    }
+}

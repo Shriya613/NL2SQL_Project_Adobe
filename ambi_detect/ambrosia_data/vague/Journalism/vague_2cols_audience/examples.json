@@ -1,0 +1,22 @@
+[
+    {
+        "question": "How many magazines cater to each audience demographic",
+        "sql_query1": "SELECT \r\n    demographic_group,\r\n    COUNT(*) AS magazine_count\r\nFROM \r\n    Demographics\r\nGROUP BY \r\n    demographic_group;",
+        "sql_query2": "SELECT \r\n    professional_field,\r\n    COUNT(*) AS magazine_count\r\nFROM \r\n    Demographics\r\nGROUP BY \r\n    professional_field;",
+        "sql_query3": "SELECT \r\n    demographic_group, professional_field,\r\n    COUNT(*) AS magazine_count\r\nFROM \r\n    Demographics\r\nGROUP BY \r\n    demographic_group, professional_field;",
+        "interpretation1": "For each demographic group , show how many magazines cater for them.",
+        "interpretation2": "In each professional field, how many magazines cater for them.",
+        "interpretation3": "For each demographic group and professional field, show how many magazines cater for them.",
+        "sql_query_general": "SELECT \r\n    Audience,\r\n    COUNT(*) AS magazine_count\r\nFROM \r\n    Demographics\r\nGROUP BY \r\n    Audience;"
+    },
+    {
+        "question": "Which magazines correspond to each audience demographic, along with their publishers",
+        "sql_query1": "SELECT \r\n    d.demographic_group,\r\n    m.name AS magazine_name,\r\n    m.publisher\r\nFROM \r\n    Demographics d\r\nJOIN \r\n    Magazines m ON d.magazineID = m.magazineID;",
+        "sql_query2": "SELECT \r\n    d.professional_field,\r\n    m.name AS magazine_name,\r\n    m.publisher\r\nFROM \r\n    Demographics d\r\nJOIN \r\n    Magazines m ON d.magazineID = m.magazineID;",
+        "sql_query3": "SELECT \r\n    d.demographic_group, professional_field,\r\n    m.name AS magazine_name,\r\n    m.publisher\r\nFROM \r\n    Demographics d\r\nJOIN \r\n    Magazines m ON d.magazineID = m.magazineID;",
+        "interpretation1": "Give me a list of magazine names and publishers along with the associated demographic groups",
+        "interpretation2": "Give me a list of magazine names and publishers along with the associated professional fields",
+        "interpretation3": "Give me a list of magazine names and publishers along with the associated demographic groups and professional fields",
+        "sql_query_general": "SELECT \r\n    d.Audience,\r\n    m.name AS magazine_name,\r\n    m.publisher\r\nFROM \r\n    Demographics d\r\nJOIN \r\n    Magazines m ON d.magazineID = m.magazineID;"
+    }
+]

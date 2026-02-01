@@ -1,0 +1,7 @@
+{
+    "template": "Question: What is the setting of this story? Subject of Inquiry: Story\nFocus: Setting Possible answer types: 1. Location 2. Era",
+    "subject": "Story",
+    "focus": "Setting",
+    "general_category1": "Location",
+    "general_category2": "Era"
+}

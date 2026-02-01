@@ -1,0 +1,9 @@
+[
+    {
+        "question": "List the sitcom and dramas with 5 seasons.",
+        "sql_query1": "SELECT TelevisionShows.title \r\nFROM Genres JOIN TelevisionShows ON Genres.name = TelevisionShows.genre JOIN Seasons ON TelevisionShows.id = Seasons.show_id\r\nWHERE (Genres.name = \"Sitcom\" OR Genres.name = \"Drama\") AND Seasons.number_of_seasons = 5",
+        "sql_query2": "SELECT TelevisionShows.title \r\nFROM Genres JOIN TelevisionShows ON Genres.name = TelevisionShows.genre JOIN Seasons ON TelevisionShows.id = Seasons.show_id\r\nWHERE Genres.name = \"Sitcom\" OR Genres.name = \"Drama\" AND Seasons.number_of_seasons = 5",
+        "interpretation1": "Show both the sitcom and drama shows where either ran for 5 seasons.",
+        "interpretation2": "Show all of the sitcoms and only those dramas which lasted 5 seasons."
+    }
+]

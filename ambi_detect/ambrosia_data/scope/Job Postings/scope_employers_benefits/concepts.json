@@ -1,0 +1,6 @@
+{
+    "template": "Each Employers has many different Benefits. Among them, Health Insurance is common to many Employers.",
+    "specific_component": "Health Insurance",
+    "components": "Benefits",
+    "entities": "Employers"
+}

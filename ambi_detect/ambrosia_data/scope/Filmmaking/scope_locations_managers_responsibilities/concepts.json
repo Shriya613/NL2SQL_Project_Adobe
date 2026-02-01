@@ -1,0 +1,6 @@
+{
+    "template": "Each Locations Managers has many different Responsibilities. Among them, Film Permit is common to many Locations Managers.",
+    "specific_component": "Film Permit",
+    "components": "Responsibilities",
+    "entities": "Locations Managers"
+}

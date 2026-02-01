@@ -1,0 +1,9 @@
+[
+    {
+        "question": "Display lost properties and complaints for January 6, 2023.",
+        "sql_query1": "SELECT LostProperties.itemdescription as description\r\nFROM Calendar JOIN LostProperties ON Calendar.Date = LostProperties.DateOfLoss\r\nWHERE Calendar.Date = \"2023-01-06\"\r\nUNION\r\nSELECT Complaints.description\r\nFROM Calendar JOIN Complaints ON Calendar.Date = Complaints.SubmissionDate\r\nWHERE Calendar.Date = \"2023-01-06\"",
+        "sql_query2": "SELECT LostProperties.itemdescription as description\r\nFROM Calendar JOIN LostProperties ON Calendar.Date = LostProperties.DateOfLoss\r\nUNION\r\nSELECT Complaints.description\r\nFROM Calendar JOIN Complaints ON Calendar.Date = Complaints.SubmissionDate\r\nWHERE Calendar.Date = \"2023-01-06\"",
+        "interpretation1": "Which lost properties and complaints are associated with January 6, 2023?",
+        "interpretation2": "Can you show all complaints for January 6, 2023 and also all lost properties on any given day?"
+    }
+]

@@ -1,0 +1,33 @@
+{
+    "domain": "Companies",
+    "template": "Customer Service Advisor and IT Support Technician are subclasses of Customer Facing Roles. All Customer service advisors and It support technicians have property \"Language Proficiency\". There might be a Customer Service Advisor and a IT Support Technician that both have \"Language Proficiency\" equal to \"Bilingual\".",
+    "type": "1tab_ref",
+    "general_class": {
+        "tab_name": "Customer_Facing_Roles",
+        "col_name": "role",
+        "value": null,
+        "scope_id": null,
+        "db_type": "column"
+    },
+    "class1": {
+        "tab_name": "Customer_Facing_Roles",
+        "col_name": "role",
+        "value": "Customer Service Advisor",
+        "scope_id": null,
+        "db_type": "value"
+    },
+    "class2": {
+        "tab_name": "Customer_Facing_Roles",
+        "col_name": "role",
+        "value": "IT Support Technician",
+        "scope_id": null,
+        "db_type": "value"
+    },
+    "common_property": {
+        "tab_name": "Language_Proficiencies",
+        "col_name": "language",
+        "value": "Bilingual",
+        "scope_id": null,
+        "db_type": "value"
+    }
+}

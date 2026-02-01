@@ -1,0 +1,33 @@
+{
+    "domain": "Educator",
+    "template": "Museum and Planetarium are subclasses of Educational Venues. All Museums and Planetariums have property \"Tickets\". There might be a Museum and a Planetarium that both have \"Tickets\" with similar pricing.",
+    "type": "1tab_val_like",
+    "general_class": {
+        "tab_name": "Venue",
+        "col_name": "educationalVenue",
+        "value": null,
+        "scope_id": null,
+        "db_type": "column"
+    },
+    "class1": {
+        "tab_name": "Venue",
+        "col_name": "educationalVenue",
+        "value": "Museum",
+        "scope_id": null,
+        "db_type": "value"
+    },
+    "class2": {
+        "tab_name": "Venue",
+        "col_name": "educationalVenue",
+        "value": "Planetarium",
+        "scope_id": null,
+        "db_type": "value"
+    },
+    "common_property": {
+        "tab_name": "Venue",
+        "col_name": "ticketPrice",
+        "value": "$15",
+        "scope_id": null,
+        "db_type": "value"
+    }
+}

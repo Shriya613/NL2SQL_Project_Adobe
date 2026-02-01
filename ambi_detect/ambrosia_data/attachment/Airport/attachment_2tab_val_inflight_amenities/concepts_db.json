@@ -1,0 +1,27 @@
+{
+    "domain": "Airports",
+    "template": "Onboard Service and Inflight Entertainment are subclasses of Inflight Amenities. All Onboard Services and Inflight Entertainment systems have the property \"Aircraft\". There might be an Onboard Service and an Inflight Entertainment system that both are available on \"Boeing 787 Dreamliner\".",
+    "type": "2tab_val",
+    "general_class": "Inflight Amenities",
+    "class1": {
+        "tab_name": "OnboardServices",
+        "col_name": null,
+        "value": null,
+        "scope_id": null,
+        "db_type": "table"
+    },
+    "class2": {
+        "tab_name": "InflightEntertainments",
+        "col_name": null,
+        "value": null,
+        "scope_id": null,
+        "db_type": "table"
+    },
+    "common_property": {
+        "tab_name": "OnboardServices",
+        "col_name": "aircraft_id",
+        "value": 1,
+        "scope_id": null,
+        "db_type": "value"
+    }
+}

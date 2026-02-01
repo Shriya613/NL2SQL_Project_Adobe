@@ -1,0 +1,7 @@
+{
+    "template": "Question: What is included in closing costs when buying a house? Subject of Inquiry: House Price\nFocus: Extras Possible answer types: 1. Fees 2. Taxes",
+    "subject": "House Price",
+    "focus": "Extras",
+    "general_category1": "Fees",
+    "general_category2": "Taxes"
+}

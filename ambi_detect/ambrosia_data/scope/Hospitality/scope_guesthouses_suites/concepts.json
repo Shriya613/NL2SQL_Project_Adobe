@@ -1,0 +1,6 @@
+{
+    "template": "Each Guest Houses has many different Suites. Among them, Family Suite is common to many Guest Houses.",
+    "specific_component": "Family Suite",
+    "components": "Suites",
+    "entities": "Guest Houses"
+}

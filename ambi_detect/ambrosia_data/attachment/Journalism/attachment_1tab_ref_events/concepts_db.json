@@ -1,0 +1,33 @@
+{
+    "domain": "Persons",
+    "template": "Press Conference and Media Scrum are subclasses of Journalist Events.",
+    "type": "1tab_ref",
+    "general_class": {
+        "tab_name": "Events",
+        "col_name": "EventType",
+        "value": null,
+        "scope_id": null,
+        "db_type": "column"
+    },
+    "class1": {
+        "tab_name": "Events",
+        "col_name": "EventType",
+        "value": "Press Conference",
+        "scope_id": null,
+        "db_type": "value"
+    },
+    "class2": {
+        "tab_name": "Events",
+        "col_name": "EventType",
+        "value": "Media Scrum",
+        "scope_id": null,
+        "db_type": "value"
+    },
+    "common_property": {
+        "tab_name": "Persons",
+        "col_name": "FullName",
+        "value": "John Doe",
+        "scope_id": null,
+        "db_type": "value"
+    }
+}

@@ -1,0 +1,22 @@
+[
+    {
+        "question": "Display a list of films, with the smallest budget first",
+        "sql_query1": "select title, Production_Cost from Films order by Production_Cost asc",
+        "sql_query2": "select title, Marketing_Expense from Films order by Marketing_Expense asc",
+        "sql_query3": "select title, Production_Cost, Marketing_Expense from Films order by Production_Cost, Marketing_Expense asc",
+        "interpretation1": "show film and production cost ordered by production cost in ascending order",
+        "interpretation2": "show film and marketing expense ordered by production cost in ascending order",
+        "interpretation3": "show film, production cost and marketing expense ordered by the production cost in ascending order and then by production cost in ascending order",
+        "sql_query_general": "select title, Budget from Films order by Budget asc"
+    },
+    {
+        "question": "Display films that have won awards, along with their budget",
+        "sql_query1": "select Films.title, Films.Production_Cost, count(*) Awards_Won from Films JOIN Awards on Awards.id = Films.id",
+        "sql_query2": "select Films.title, Films.Marketing_Expense, count(*) Awards_Won from Films JOIN Awards on Awards.id = Films.id",
+        "sql_query3": "select Films.title, Films.Production_Cost, Marketing_Expense, count(*) Awards_Won from Films JOIN Awards on Awards.id = Films.id",
+        "interpretation1": "List the award-winning films and their production costs.",
+        "interpretation2": "List the award-winning films and their marketing costs.",
+        "interpretation3": "List the award-winning films and their production and marketing costs.",
+        "sql_query_general": "select Films.title, Films.Budget, count(*) Awards_Won from Films JOIN Awards on Awards.id = Films.id"
+    }
+]

@@ -1,0 +1,22 @@
+[
+    {
+        "question": "What is the curriculum topic of the course taught by Mrs. Williams?",
+        "sql_query1": "SELECT Core_Concepts FROM Courses\r\nWHERE TeachersName  LIKE \"%Williams%\"",
+        "sql_query2": "SELECT Advanced_Topics FROM Courses\r\nWHERE TeachersName  LIKE \"%Williams%\"",
+        "sql_query3": "SELECT Core_Concepts, Advanced_Topics FROM Courses\r\nWHERE TeachersName  LIKE \"%Williams%\"",
+        "interpretation1": "What is the core concept of the course taught by Mrs. Williams?",
+        "interpretation2": "What are the advanced topics of the course taught by Mrs. Williams?",
+        "interpretation3": "What are the advanced topics of the course taught by Mrs. Williams and its core concepts?",
+        "sql_query_general": "SELECT Curriculum_Topics FROM Courses\r\nWHERE TeachersName  LIKE \"%Williams%\""
+    },
+    {
+        "question": "What's the curriculum topic for Math 101?",
+        "sql_query1": "SELECT Core_Concepts FROM Courses\r\nWHERE CourseName=\"Math 101\"",
+        "sql_query2": "SELECT Advanced_Topics FROM Courses\r\nWHERE CourseName=\"Math 101\"",
+        "sql_query3": "SELECT Core_Concepts, Advanced_Topics FROM Courses\r\nWHERE CourseName=\"Math 101\"",
+        "interpretation1": "What are the core concepts of Math 101?",
+        "interpretation2": "What are the advanced topics of Math 101?",
+        "interpretation3": "What are the core concepts and advanced topics of Math 101?",
+        "sql_query_general": "SELECT Curriculum_Topics FROM Courses\r\nWHERE CourseName=\"Math 101\""
+    }
+]

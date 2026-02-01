@@ -1,0 +1,6 @@
+{
+    "template": "Each Internships has many different Responsibilities. Among them, Research is common to many Internships.",
+    "specific_component": "Research",
+    "components": "Responsibilities",
+    "entities": "Internships"
+}

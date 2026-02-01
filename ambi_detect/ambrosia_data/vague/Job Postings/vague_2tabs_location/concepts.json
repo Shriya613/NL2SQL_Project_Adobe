@@ -1,0 +1,7 @@
+{
+    "template": "Question: Where will this internship take place? Subject of Inquiry: Internship\nFocus: Location Possible answer types: 1. Office Address 2. City",
+    "subject": "Internship",
+    "focus": "Location",
+    "general_category1": "Office Address",
+    "general_category2": "City"
+}

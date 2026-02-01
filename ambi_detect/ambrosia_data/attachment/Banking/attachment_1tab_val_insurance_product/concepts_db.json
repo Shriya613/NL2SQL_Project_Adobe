@@ -1,0 +1,33 @@
+{
+    "domain": "Customers",
+    "template": "Life Insurance and Annuity are subclasses of Insurance Product. All Life insurances and Annuities have property \"Payout\". There might be a Life Insurance and a Annuity that both have \"Payout\" equal to \"100000\".",
+    "type": "1tab_val",
+    "general_class": {
+        "tab_name": "Insurance_Products",
+        "col_name": "ProductType",
+        "value": null,
+        "scope_id": null,
+        "db_type": "column"
+    },
+    "class1": {
+        "tab_name": "Insurance_Products",
+        "col_name": "ProductType",
+        "value": "Life Insurance",
+        "scope_id": null,
+        "db_type": "value"
+    },
+    "class2": {
+        "tab_name": "Insurance_Products",
+        "col_name": "ProductType",
+        "value": "Annuity",
+        "scope_id": null,
+        "db_type": "value"
+    },
+    "common_property": {
+        "tab_name": "Insurance_Products",
+        "col_name": "Payout",
+        "value": 50000.0,
+        "scope_id": null,
+        "db_type": "value"
+    }
+}

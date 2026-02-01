@@ -1,0 +1,25 @@
+{
+    "template": "Question: Who offers this course? Subject of Inquiry: Courses\nFocus: Offering Department Possible answer types: 1. College 2. University",
+    "general_category1": {
+        "tab_name": "Students",
+        "col_name": "college",
+        "value": null,
+        "scope_id": null,
+        "db_type": "column"
+    },
+    "general_category2": {
+        "tab_name": "Students",
+        "col_name": "university",
+        "value": null,
+        "scope_id": null,
+        "db_type": "column"
+    },
+    "subject": {
+        "tab_name": "CourseEnrollments",
+        "col_name": "course_id",
+        "value": null,
+        "scope_id": null,
+        "db_type": "column"
+    },
+    "type": "2cols"
+}

@@ -1,0 +1,31 @@
+{
+    "template": "Each Streaming Services has many different Subtitles. Among them, English is common to many Streaming Services.",
+    "entities": {
+        "tab_name": "Streaming_Services",
+        "col_name": null,
+        "value": null,
+        "scope_id": null,
+        "db_type": "table"
+    },
+    "components": {
+        "tab_name": "Subtitles",
+        "col_name": null,
+        "value": null,
+        "scope_id": null,
+        "db_type": "table"
+    },
+    "specific_component": {
+        "tab_name": "Subtitles",
+        "col_name": "language",
+        "value": "English",
+        "scope_id": 0,
+        "db_type": "value"
+    },
+    "entities_components": {
+        "tab_name": "Streaming_Services_Subtitles",
+        "col_name": null,
+        "value": null,
+        "scope_id": null,
+        "db_type": "table"
+    }
+}

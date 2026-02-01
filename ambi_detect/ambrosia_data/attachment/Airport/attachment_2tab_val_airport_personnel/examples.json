@@ -1,0 +1,9 @@
+[
+    {
+        "question": "Display the air traffic controllers and ground staff whose salary is $60,000 per year.",
+        "sql_query1": "SELECT Air_traffic_controller.name\r\nFROM Air_traffic_controller\r\nWHERE Air_traffic_controller.Salary = \"60000 per year\"\r\nUNION\r\nSELECT Ground_staff.name\r\nFROM Ground_staff\r\nWHERE Ground_staff.Salary = \"60000 per year\"",
+        "sql_query2": "SELECT Air_traffic_controller.name\r\nFROM Air_traffic_controller\r\nUNION\r\nSELECT Ground_staff.name\r\nFROM Ground_staff\r\nWHERE Ground_staff.Salary = \"60000 per year\"",
+        "interpretation1": "can you show both the air traffic controllers and ground staff members whose annual salary is $60,000?",
+        "interpretation2": "Please list all air traffic controllers and also display ground staff members who earn $60,000 annually."
+    }
+]

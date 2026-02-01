@@ -1,0 +1,9 @@
+[
+    {
+        "question": "Show all the flight attendants and pilots who trained at the Aviation Academy.",
+        "sql_query1": "SELECT Flight_Attendants.name\r\nFROM Flight_Attendants JOIN Aviation_Academies ON Flight_Attendants.Training_Center = Aviation_Academies.Name\r\nWHERE Aviation_Academies.name = \"Aviation Academy\"\r\nUNION\r\nSELECT Pilots.name\r\nFROM Pilots JOIN Aviation_Academies ON Pilots.Training_Center = Aviation_Academies.Name\r\nWHERE Aviation_Academies.name = \"Aviation Academy\"",
+        "sql_query2": "SELECT Flight_Attendants.name\r\nFROM Flight_Attendants JOIN Aviation_Academies ON Flight_Attendants.Training_Center = Aviation_Academies.Name\r\nUNION\r\nSELECT Pilots.name\r\nFROM Pilots JOIN Aviation_Academies ON Pilots.Training_Center = Aviation_Academies.Name\r\nWHERE Aviation_Academies.name = \"Aviation Academy\"",
+        "interpretation1": "Display both pilots and flight attendants where either trained at the Aviation Academy.",
+        "interpretation2": "Show all the flight attendants and just those pilots who trained at the Aviation Academy."
+    }
+]

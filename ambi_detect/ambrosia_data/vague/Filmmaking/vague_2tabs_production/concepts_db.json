@@ -1,0 +1,25 @@
+{
+    "template": "Question: Who produced this film? Subject of Inquiry: Movies\nFocus: Production Possible answer types: 1. Studio 2. Producer",
+    "general_category1": {
+        "tab_name": "Studio",
+        "col_name": null,
+        "value": null,
+        "scope_id": null,
+        "db_type": "table"
+    },
+    "general_category2": {
+        "tab_name": "Producer",
+        "col_name": null,
+        "value": null,
+        "scope_id": null,
+        "db_type": "table"
+    },
+    "subject": {
+        "tab_name": "Movies",
+        "col_name": null,
+        "value": null,
+        "scope_id": null,
+        "db_type": "table"
+    },
+    "type": "2tabs"
+}

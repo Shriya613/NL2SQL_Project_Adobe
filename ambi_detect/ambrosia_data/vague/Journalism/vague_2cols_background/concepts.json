@@ -1,0 +1,7 @@
+{
+    "template": "Question: What is the background of this photojournalist? Subject of Inquiry: Photojournalist\nFocus: Background Possible answer types: 1. Education 2. Experience",
+    "subject": "Photojournalist",
+    "focus": "Background",
+    "general_category1": "Education",
+    "general_category2": "Experience"
+}

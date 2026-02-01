@@ -1,0 +1,25 @@
+{
+    "template": "Question: How many immigrants arrived last year from this top-source country? Subject of Inquiry: Country\nFocus: Immigrants Possible answer types: 1. Number of Immigrants 2. Immigrant Percentage",
+    "general_category1": {
+        "tab_name": "ImmigrationStats",
+        "col_name": "numberOfImmigrants",
+        "value": null,
+        "scope_id": null,
+        "db_type": "column"
+    },
+    "general_category2": {
+        "tab_name": "ImmigrationStats",
+        "col_name": "immigrantPercentage",
+        "value": null,
+        "scope_id": null,
+        "db_type": "column"
+    },
+    "subject": {
+        "tab_name": "Country",
+        "col_name": "countryName",
+        "value": null,
+        "scope_id": null,
+        "db_type": "column"
+    },
+    "type": "2cols"
+}

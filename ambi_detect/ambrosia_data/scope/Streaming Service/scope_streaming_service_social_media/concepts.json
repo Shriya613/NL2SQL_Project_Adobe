@@ -1,0 +1,6 @@
+{
+    "template": "Each Streaming Service has many different Social Media. Among them, Facebook Share is common to many Streaming Service.",
+    "specific_component": "Facebook Share",
+    "components": "Social Media",
+    "entities": "Streaming Service"
+}

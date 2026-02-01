@@ -1,0 +1,33 @@
+{
+    "domain": "Movie",
+    "template": "Mystery and Thriller are subclasses of Crime Fiction. All Mysteries and Thrillers have property \"Studio\". There might be a Mystery and a Thriller that both have \"Studio\" equal to \"Warner Bros\".",
+    "type": "1tab_val",
+    "general_class": {
+        "tab_name": "Movie",
+        "col_name": "Crime_Fiction",
+        "value": null,
+        "scope_id": null,
+        "db_type": "column"
+    },
+    "class1": {
+        "tab_name": "Movie",
+        "col_name": "Crime_Fiction",
+        "value": "Mystery",
+        "scope_id": null,
+        "db_type": "value"
+    },
+    "class2": {
+        "tab_name": "Movie",
+        "col_name": "Crime_Fiction",
+        "value": "Thriller",
+        "scope_id": null,
+        "db_type": "value"
+    },
+    "common_property": {
+        "tab_name": "Movie",
+        "col_name": "Studio",
+        "value": "Warner Bros",
+        "scope_id": null,
+        "db_type": "value"
+    }
+}

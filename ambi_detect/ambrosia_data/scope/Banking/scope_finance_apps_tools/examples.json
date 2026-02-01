@@ -1,0 +1,23 @@
+[
+    {
+        "question": "What category of tools does each app offer",
+        "sql_query1": "SELECT Tools.category  from Finance_Apps_Tools join Tools on Finance_Apps_Tools.tool_id = Tools.id join Finance_Apps on Finance_Apps_Tools.finance_app_id = Finance_Apps.id   GROUP BY Finance_Apps_Tools.tool_id HAVING COUNT(DISTINCT Finance_Apps_Tools.finance_app_id) = (SELECT COUNT(*) FROM  Finance_Apps)",
+        "sql_query2": "select finance_apps.name , tools.category from Finance_Apps_Tools join Tools on Finance_Apps_Tools.tool_id = Tools.id join Finance_Apps on Finance_Apps_Tools.finance_app_id = Finance_Apps.id",
+        "interpretation1": "Show me the category of tools that is commonly offered across all apps.",
+        "interpretation2": "For each app, show me the category of tools they offer"
+    },
+    {
+        "question": "Give me the tools and their categories that every finance app offers.",
+        "sql_query1": "SELECT Tools.tool_name, Tools.category  from Finance_Apps_Tools join Tools on Finance_Apps_Tools.tool_id = Tools.id join Finance_Apps on Finance_Apps_Tools.finance_app_id = Finance_Apps.id   GROUP BY Finance_Apps_Tools.tool_id HAVING COUNT(DISTINCT Finance_Apps_Tools.finance_app_id) = (SELECT COUNT(*) FROM  Finance_Apps)",
+        "sql_query2": "select finance_apps.name , tools.tool_name , tools.category from Finance_Apps_Tools join Tools on Finance_Apps_Tools.tool_id = Tools.id join Finance_Apps on Finance_Apps_Tools.finance_app_id = Finance_Apps.id",
+        "interpretation1": "Which tool is common to every finance app and what is its category?",
+        "interpretation2": "For every finance app, show the tools and their respective categories."
+    },
+    {
+        "question": "Give me the tools that all the finance apps have.",
+        "sql_query1": "SELECT Tools.tool_name  from Finance_Apps_Tools join Tools on Finance_Apps_Tools.tool_id = Tools.id join Finance_Apps on Finance_Apps_Tools.finance_app_id = Finance_Apps.id   GROUP BY Finance_Apps_Tools.tool_id HAVING COUNT(DISTINCT Finance_Apps_Tools.finance_app_id) = (SELECT COUNT(*) FROM  Finance_Apps)",
+        "sql_query2": "select finance_apps.name , tools.tool_name from Finance_Apps_Tools join Tools on Finance_Apps_Tools.tool_id = Tools.id join Finance_Apps on Finance_Apps_Tools.finance_app_id = Finance_Apps.id",
+        "interpretation1": "Which tools do all finance apps have in common?",
+        "interpretation2": "For every finance app, show the tools that they have."
+    }
+]

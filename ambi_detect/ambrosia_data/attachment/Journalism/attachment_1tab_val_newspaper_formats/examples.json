@@ -1,0 +1,9 @@
+[
+    {
+        "question": "Give me all broadsheets and tabloids where the distributor email is distribution@sainsburys.com.",
+        "sql_query1": "SELECT Newspapers.Name \r\nFROM Newspapers JOIN Distributors ON Newspapers.Distributor = Distributors.Name\r\nWHERE (Newspapers.Format = 'Broadsheet' OR Newspapers.Format = 'Tabloid') AND Distributors.emailaddress = \"distribution@sainburys.com\"",
+        "sql_query2": "SELECT Newspapers.Name \r\nFROM Newspapers JOIN Distributors ON Newspapers.Distributor = Distributors.Name\r\nWHERE Newspapers.Format = 'Broadsheet' OR Newspapers.Format = 'Tabloid' AND Distributors.emailaddress = \"distribution@sainburys.com\"",
+        "interpretation1": "Show both broadsheet and tabloid newspapers where the distributor email is distribution@sainsburys.com.",
+        "interpretation2": "Show all the broadsheet newspapers and, in addition, just the tabloids with a distributor email contact of distribution@sainsburys.com."
+    }
+]

@@ -1,0 +1,7 @@
+{
+    "template": "Question: What is the setting of this opera? Subject of Inquiry: Opera\nFocus: Setting Possible answer types: 1. Historical Era 2. Location",
+    "subject": "Opera",
+    "focus": "Setting",
+    "general_category1": "Historical Era",
+    "general_category2": "Location"
+}

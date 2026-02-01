@@ -1,0 +1,25 @@
+{
+    "template": "Question: What is the target audience of this magazine? Subject of Inquiry: Magazine\nFocus: Audience Possible answer types: 1. Demographic Group 2. Professional Field",
+    "general_category1": {
+        "tab_name": "Demographic_Groups",
+        "col_name": null,
+        "value": null,
+        "scope_id": null,
+        "db_type": "table"
+    },
+    "general_category2": {
+        "tab_name": "Professional_Fields",
+        "col_name": null,
+        "value": null,
+        "scope_id": null,
+        "db_type": "table"
+    },
+    "subject": {
+        "tab_name": "Magazines",
+        "col_name": null,
+        "value": null,
+        "scope_id": null,
+        "db_type": "table"
+    },
+    "type": "2tabs"
+}

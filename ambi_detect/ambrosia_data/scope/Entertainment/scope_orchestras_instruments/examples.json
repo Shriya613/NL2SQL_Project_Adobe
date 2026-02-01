@@ -1,0 +1,9 @@
+[
+    {
+        "question": "What kind of instruments does each orchestra have?",
+        "sql_query1": "SELECT Instruments.instrument_type  from Orchestras_Instruments join Instruments on Orchestras_Instruments.instrument_id = Instruments.id join Orchestras on Orchestras_Instruments.orchestra_id = Orchestras.id   GROUP BY Orchestras_Instruments.instrument_id HAVING COUNT(DISTINCT Orchestras_Instruments.orchestra_id) = (SELECT COUNT(*) FROM  Orchestras)",
+        "sql_query2": "select orchestras.orchestra_name , instruments.instrument_type from Orchestras_Instruments join Instruments on Orchestras_Instruments.instrument_id = Instruments.id join Orchestras on Orchestras_Instruments.orchestra_id = Orchestras.id",
+        "interpretation1": "What instrument types are common for all orchestras?",
+        "interpretation2": "For each orchestra, can you list the types of instruments there?"
+    }
+]

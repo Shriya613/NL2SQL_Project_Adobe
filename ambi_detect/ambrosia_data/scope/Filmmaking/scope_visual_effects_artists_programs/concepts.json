@@ -1,0 +1,6 @@
+{
+    "template": "Each Visual Effects Artists has many different Programs. Among them, After Effects is common to many Visual Effects Artists.",
+    "specific_component": "After Effects",
+    "components": "Programs",
+    "entities": "Visual Effects Artists"
+}

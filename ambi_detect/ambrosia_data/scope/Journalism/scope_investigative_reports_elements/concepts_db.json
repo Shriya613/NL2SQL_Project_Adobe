@@ -1,0 +1,31 @@
+{
+    "template": "Each Investigative Reports has many different Elements. Among them, Interviews is common to many Investigative Reports.",
+    "entities": {
+        "tab_name": "Investigative_Reports",
+        "col_name": null,
+        "value": null,
+        "scope_id": null,
+        "db_type": "table"
+    },
+    "components": {
+        "tab_name": "Elements",
+        "col_name": null,
+        "value": null,
+        "scope_id": null,
+        "db_type": "table"
+    },
+    "specific_component": {
+        "tab_name": "Elements",
+        "col_name": "element_value",
+        "value": "Interviews",
+        "scope_id": 0,
+        "db_type": "value"
+    },
+    "entities_components": {
+        "tab_name": "Investigative_Reports_Elements",
+        "col_name": null,
+        "value": null,
+        "scope_id": null,
+        "db_type": "table"
+    }
+}

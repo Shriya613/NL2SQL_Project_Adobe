@@ -1,0 +1,9 @@
+[
+    {
+        "question": "Show me all passengers with cabin baggage and passengers with checked baggage which cost $25.",
+        "sql_query1": "SELECT Passengers.FullName\r\nFROM Luggage JOIN Passengers ON Passengers.PassengerID = Luggage.PassengerID\r\nWHERE (Luggage.Description = \"Cabin Baggage\" OR Luggage.Description = \"Checked Baggage\") AND Luggage.Fees = \"$25\"",
+        "sql_query2": "SELECT Passengers.FullName\r\nFROM Luggage JOIN Passengers ON Passengers.PassengerID = Luggage.PassengerID\r\nWHERE Luggage.Description = \"Cabin Baggage\" OR Luggage.Description = \"Checked Baggage\" AND Luggage.Fees = \"$25\"",
+        "interpretation1": "Show all passengers where either the cabin or checked baggage had a $25 fee.",
+        "interpretation2": "Show all the passengers with cabin baggage, also show the passengers with checked baggage, but only where it cost $25."
+    }
+]

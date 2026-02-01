@@ -1,0 +1,31 @@
+{
+    "template": "Each Adventure Tour Operators has many different Activities. Among them, Zipline is common to many Adventure Tour Operators.",
+    "entities": {
+        "tab_name": "Adventure_Tour_Operators",
+        "col_name": null,
+        "value": null,
+        "scope_id": null,
+        "db_type": "table"
+    },
+    "components": {
+        "tab_name": "Activities",
+        "col_name": null,
+        "value": null,
+        "scope_id": null,
+        "db_type": "table"
+    },
+    "specific_component": {
+        "tab_name": "Activities",
+        "col_name": "activity_name",
+        "value": "Zipline",
+        "scope_id": 0,
+        "db_type": "value"
+    },
+    "entities_components": {
+        "tab_name": "Adventure_Tour_Operators_Activities",
+        "col_name": null,
+        "value": null,
+        "scope_id": null,
+        "db_type": "table"
+    }
+}

@@ -1,0 +1,25 @@
+{
+    "template": "Question: Who edited the final draft of the article? Subject of Inquiry: Final Draft\nFocus: Editor Possible answer types: 1. Managing Editor 2. Copy Editor",
+    "general_category1": {
+        "tab_name": "Articles",
+        "col_name": "Managing_Editor",
+        "value": null,
+        "scope_id": null,
+        "db_type": "column"
+    },
+    "general_category2": {
+        "tab_name": "Articles",
+        "col_name": "Copy_Editor",
+        "value": null,
+        "scope_id": null,
+        "db_type": "column"
+    },
+    "subject": {
+        "tab_name": "Articles",
+        "col_name": "Final_Draft",
+        "value": null,
+        "scope_id": null,
+        "db_type": "column"
+    },
+    "type": "2cols"
+}

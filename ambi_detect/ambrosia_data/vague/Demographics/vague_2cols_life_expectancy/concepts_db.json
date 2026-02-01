@@ -1,0 +1,25 @@
+{
+    "template": "Question: What is the life expectancy for individuals born in this region? Subject of Inquiry: Region\nFocus: Life Expectancy Possible answer types: 1. Average Years of Life 2. Gender-specific Life Expectancy",
+    "general_category1": {
+        "tab_name": "LifeExpectancies",
+        "col_name": "average_years_of_life",
+        "value": null,
+        "scope_id": null,
+        "db_type": "column"
+    },
+    "general_category2": {
+        "tab_name": "LifeExpectancies",
+        "col_name": "gender_specific_life_expectancy",
+        "value": null,
+        "scope_id": null,
+        "db_type": "column"
+    },
+    "subject": {
+        "tab_name": "Regions",
+        "col_name": "region_id",
+        "value": null,
+        "scope_id": null,
+        "db_type": "column"
+    },
+    "type": "2cols"
+}

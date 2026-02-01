@@ -1,0 +1,27 @@
+{
+    "domain": "Construction_Workers",
+    "template": "Construction Worker and Electrician are subclasses of Trades Jobs. All Construction workers and Electricians have property \"Company Owner\". There might be a Construction Worker and a Electrician that both have \"Company Owner\" equal to \"Derek Brown\".",
+    "type": "2tab_val",
+    "general_class": "Trades Jobs",
+    "class1": {
+        "tab_name": "Construction_Workers",
+        "col_name": null,
+        "value": null,
+        "scope_id": null,
+        "db_type": "table"
+    },
+    "class2": {
+        "tab_name": "Electricians",
+        "col_name": null,
+        "value": null,
+        "scope_id": null,
+        "db_type": "table"
+    },
+    "common_property": {
+        "tab_name": "Construction_Workers",
+        "col_name": "company_owner",
+        "value": "Derek Brown",
+        "scope_id": null,
+        "db_type": "value"
+    }
+}

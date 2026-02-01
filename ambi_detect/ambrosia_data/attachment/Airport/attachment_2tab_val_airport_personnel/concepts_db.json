@@ -1,0 +1,27 @@
+{
+    "domain": "Air_traffic_controller",
+    "template": "Air Traffic Controller and Ground Staff are subclasses of Airport Personnel. All Air Traffic Controllers and Ground Staff have the property \"Salary\". There might be an Air Traffic Controller and a member of Ground Staff that both have \"Salary\" equal to \"$60,000 per year\".",
+    "type": "2tab_val",
+    "general_class": "Airport Personnel",
+    "class1": {
+        "tab_name": "Air_traffic_controller",
+        "col_name": null,
+        "value": null,
+        "scope_id": null,
+        "db_type": "table"
+    },
+    "class2": {
+        "tab_name": "Ground_staff",
+        "col_name": null,
+        "value": null,
+        "scope_id": null,
+        "db_type": "table"
+    },
+    "common_property": {
+        "tab_name": "Air_traffic_controller",
+        "col_name": "Salary",
+        "value": "60000 per year",
+        "scope_id": null,
+        "db_type": "value"
+    }
+}

@@ -1,0 +1,25 @@
+{
+    "template": "Question: Where will this internship take place? Subject of Inquiry: Internship\nFocus: Location Possible answer types: 1. Office Address 2. City",
+    "general_category1": {
+        "tab_name": "Office_Address",
+        "col_name": null,
+        "value": null,
+        "scope_id": null,
+        "db_type": "table"
+    },
+    "general_category2": {
+        "tab_name": "City",
+        "col_name": null,
+        "value": null,
+        "scope_id": null,
+        "db_type": "table"
+    },
+    "subject": {
+        "tab_name": "Internship",
+        "col_name": null,
+        "value": null,
+        "scope_id": null,
+        "db_type": "table"
+    },
+    "type": "2tabs"
+}

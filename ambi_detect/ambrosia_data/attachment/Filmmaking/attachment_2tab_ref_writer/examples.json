@@ -1,0 +1,9 @@
+[
+    {
+        "question": "Show the screenwriters and playwrights from American Film Institute.",
+        "sql_query1": "SELECT Screenwriter.name\r\nFROM Education JOIN Screenwriter ON Education.id = Screenwriter.educationId\r\nWHERE Education.institution = \"American Film Institute\"\r\nUNION\r\nSELECT Playwright.name\r\nFROM Education JOIN Playwright ON Education.id = Playwright.educationId\r\nWHERE Education.institution = \"American Film Institute\"",
+        "sql_query2": "SELECT Screenwriter.name\r\nFROM Education JOIN Screenwriter ON Education.id = Screenwriter.educationId\r\nUNION\r\nSELECT Playwright.name\r\nFROM Education JOIN Playwright ON Education.id = Playwright.educationId\r\nWHERE Education.institution = \"American Film Institute\"",
+        "interpretation1": "Who are the screenwriters from American Film Institute and playwrights from there too?",
+        "interpretation2": "Provide a list of the screenwriters as well as a list of the playwrights but only who are from American Film Institute."
+    }
+]

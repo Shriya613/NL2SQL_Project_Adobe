@@ -1,0 +1,31 @@
+{
+    "template": "Each Travel Agencies has many different Destinations. Among them, Europe is common to many Travel Agencies.",
+    "entities": {
+        "tab_name": "Travel_Agencies",
+        "col_name": null,
+        "value": null,
+        "scope_id": null,
+        "db_type": "table"
+    },
+    "components": {
+        "tab_name": "Destinations",
+        "col_name": null,
+        "value": null,
+        "scope_id": null,
+        "db_type": "table"
+    },
+    "specific_component": {
+        "tab_name": "Destinations",
+        "col_name": "destination_name",
+        "value": "Europe",
+        "scope_id": 0,
+        "db_type": "value"
+    },
+    "entities_components": {
+        "tab_name": "Travel_Agencies_Destinations",
+        "col_name": null,
+        "value": null,
+        "scope_id": null,
+        "db_type": "table"
+    }
+}

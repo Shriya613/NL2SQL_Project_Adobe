@@ -1,0 +1,7 @@
+{
+    "template": "Question: What is the baggage allowance for checked bags? Subject of Inquiry: Airlines\nFocus: Allowance Possible answer types: 1. Bag Weight Limit 2. Bag Piece Limit",
+    "subject": "Airlines",
+    "focus": "Allowance",
+    "general_category1": "Bag Weight Limit",
+    "general_category2": "Bag Piece Limit"
+}

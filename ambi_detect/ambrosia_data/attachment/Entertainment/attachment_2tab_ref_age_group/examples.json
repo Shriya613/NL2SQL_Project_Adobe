@@ -1,0 +1,9 @@
+[
+    {
+        "question": "Show children's books and young adult books illustrated by Jane Smith.",
+        "sql_query1": "SELECT ChildrensBooks.title\r\nFROM Illustrators JOIN ChildrensBooks ON Illustrators.id = ChildrensBooks.illustratorId\r\nWHERE Illustrators.illustratorName = \"Jane Smith\"\r\nUNION\r\nSELECT YoungAdultBooks.title\r\nFROM Illustrators JOIN YoungAdultBooks ON Illustrators.id = YoungAdultBooks.illustratorId\r\nWHERE Illustrators.illustratorName = \"Jane Smith\"",
+        "sql_query2": "SELECT ChildrensBooks.title\r\nFROM Illustrators JOIN ChildrensBooks ON Illustrators.id = ChildrensBooks.illustratorId\r\nUNION\r\nSELECT YoungAdultBooks.title\r\nFROM Illustrators JOIN YoungAdultBooks ON Illustrators.id = YoungAdultBooks.illustratorId\r\nWHERE Illustrators.illustratorName = \"Jane Smith\"",
+        "interpretation1": "What children's books are illustrated by Jane Smith and what young adult books are also illustrated by her?",
+        "interpretation2": "Provide a list of all children's books and also provide a list of young adult books illustrated by Jane Smith."
+    }
+]

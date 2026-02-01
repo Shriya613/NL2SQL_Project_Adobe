@@ -1,0 +1,22 @@
+[
+    {
+        "question": "What are the ratings of all the films?",
+        "sql_query1": "SELECT Film.Title, FilmReviews.critic_rating\r\nFROM Film\r\n            JOIN FilmReviews ON Film.id = FilmReviews.film_id",
+        "sql_query2": "SELECT Film.Title, FilmReviews.audience_rating\r\nFROM Film\r\n            JOIN FilmReviews ON Film.id = FilmReviews.film_id",
+        "sql_query3": "SELECT Film.Title, FilmReviews.critic_rating, audience_rating\r\nFROM Film\r\n            JOIN FilmReviews ON Film.id = FilmReviews.film_id",
+        "interpretation1": "What is the critic ratings of each film?",
+        "interpretation2": "What is the audience ratings of each film?",
+        "interpretation3": "What is the critic and audience ratings of each film?",
+        "sql_query_general": "SELECT Film.Title, FilmReviews.RATING\r\nFROM Film\r\n            JOIN FilmReviews ON Film.id = FilmReviews.film_id"
+    },
+    {
+        "question": "What's the rating of the movies with Leonardo diCaprio",
+        "sql_query1": "SELECT FilmReviews.critic_rating, Actor.name\r\nFROM FilmReviews\r\n            JOIN Role ON FilmReviews.film_id = Role.film_id\r\n            JOIN Actor ON Role.actor_id = Actor.id\r\nWHERE Actor.name = \"Leonardo DiCaprio\"",
+        "sql_query2": "SELECT FilmReviews.audience_rating, Actor.name\r\nFROM FilmReviews\r\n            JOIN Role ON FilmReviews.film_id = Role.film_id\r\n            JOIN Actor ON Role.actor_id = Actor.id\r\nWHERE Actor.name = \"Leonardo DiCaprio\"",
+        "sql_query3": "SELECT FilmReviews.critic_rating, audience_rating, Actor.name\r\nFROM FilmReviews\r\n            JOIN Role ON FilmReviews.film_id = Role.film_id\r\n            JOIN Actor ON Role.actor_id = Actor.id\r\nWHERE Actor.name = \"Leonardo DiCaprio\"",
+        "interpretation1": "what is the critic rating for movies with Leonardo diCaprio?",
+        "interpretation2": "what is the audience rating for movies with Leonardo diCaprio?",
+        "interpretation3": "what is the critic rating and audience rating for movies with Leonardo diCaprio?",
+        "sql_query_general": "SELECT FilmReviews.RATING, Actor.name\r\nFROM FilmReviews\r\n            JOIN Role ON FilmReviews.film_id = Role.film_id\r\n            JOIN Actor ON Role.actor_id = Actor.id\r\nWHERE Actor.name = \"Leonardo DiCaprio\""
+    }
+]

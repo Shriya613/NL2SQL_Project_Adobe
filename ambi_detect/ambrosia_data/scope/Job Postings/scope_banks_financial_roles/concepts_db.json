@@ -1,0 +1,31 @@
+{
+    "template": "Each Banks has many different Financial Roles. Among them, Financial Analyst is common to many Banks.",
+    "entities": {
+        "tab_name": "Banks",
+        "col_name": null,
+        "value": null,
+        "scope_id": null,
+        "db_type": "table"
+    },
+    "components": {
+        "tab_name": "Financial_Roles",
+        "col_name": null,
+        "value": null,
+        "scope_id": null,
+        "db_type": "table"
+    },
+    "specific_component": {
+        "tab_name": "Financial_Roles",
+        "col_name": "RoleName",
+        "value": "Financial Analyst",
+        "scope_id": 0,
+        "db_type": "value"
+    },
+    "entities_components": {
+        "tab_name": "Banks_Financial_Roles",
+        "col_name": null,
+        "value": null,
+        "scope_id": null,
+        "db_type": "table"
+    }
+}

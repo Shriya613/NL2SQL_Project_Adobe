@@ -1,0 +1,33 @@
+{
+    "domain": "Airports",
+    "template": "Airline Alliance and Independent Carrier are subclasses of Airline Types. All Airline Alliances and Independent Carriers have the property \"Aircraft\". There might be an Airline Alliance and an Independent Carrier that both operate \"Airbus A320\" aircraft.",
+    "type": "1tab_ref_like",
+    "general_class": {
+        "tab_name": "Airlines",
+        "col_name": "type_of_alliance",
+        "value": null,
+        "scope_id": null,
+        "db_type": "column"
+    },
+    "class1": {
+        "tab_name": "Airlines",
+        "col_name": "type_of_alliance",
+        "value": "Airline Alliance",
+        "scope_id": null,
+        "db_type": "value"
+    },
+    "class2": {
+        "tab_name": "Airlines",
+        "col_name": "type_of_alliance",
+        "value": "Independent Carrier",
+        "scope_id": null,
+        "db_type": "value"
+    },
+    "common_property": {
+        "tab_name": "Flights",
+        "col_name": "aircraft_model",
+        "value": "Airbus A320",
+        "scope_id": null,
+        "db_type": "value"
+    }
+}

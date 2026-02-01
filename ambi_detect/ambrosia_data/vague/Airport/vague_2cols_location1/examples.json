@@ -1,0 +1,22 @@
+[
+    {
+        "question": "Can you list all airports, including their names, locations, contact numbers, and websites?",
+        "sql_query1": "SELECT \r\n    id, \r\n    Name, \r\n    City, \r\n    Phone_Number, \r\n    Website \r\nFROM \r\n    Airports",
+        "sql_query2": "SELECT \r\n    id, \r\n    Name, \r\n    State, \r\n    Phone_Number, \r\n    Website \r\nFROM \r\n    Airports",
+        "sql_query3": "SELECT \r\n    id, \r\n    Name, \r\n    City, State, \r\n    Phone_Number, \r\n    Website \r\nFROM \r\n    Airports",
+        "interpretation1": "Can you list all airports, including their names, cities, contact numbers, and websites?",
+        "interpretation2": "Can you list all airports, including their names, states, contact numbers, and websites?",
+        "interpretation3": "Can you list all airports, including their names, states, cities, contact numbers, and websites?",
+        "sql_query_general": "SELECT \r\n    id, \r\n    Name, \r\n    Location, \r\n    Phone_Number, \r\n    Website \r\nFROM \r\n    Airports"
+    },
+    {
+        "question": "What are the airports that were established before 1950, and can you provide their ids, locations and websites?",
+        "sql_query1": "SELECT \r\n    id, \r\n    Name, \r\n    City, \r\n    Website \r\nFROM \r\n    Airports \r\nWHERE \r\n Year_Established < 1950",
+        "sql_query2": "SELECT \r\n    id, \r\n    Name, \r\n    State, \r\n    Website \r\nFROM \r\n    Airports \r\nWHERE \r\n Year_Established < 1950",
+        "sql_query3": "SELECT \r\n    id, \r\n    Name, \r\n    City, State, \r\n    Website \r\nFROM \r\n    Airports \r\nWHERE \r\n Year_Established < 1950",
+        "interpretation1": "List all the airports established before 1950, including their ids, cities and websites.",
+        "interpretation2": "List all the airports established before 1950, including their ids, states and websites.",
+        "interpretation3": "List all the airports established before 1950, including their ids, cities, states and websites.",
+        "sql_query_general": "SELECT \r\n    id, \r\n    Name, \r\n    Location, \r\n    Website \r\nFROM \r\n    Airports \r\nWHERE \r\n Year_Established < 1950"
+    }
+]

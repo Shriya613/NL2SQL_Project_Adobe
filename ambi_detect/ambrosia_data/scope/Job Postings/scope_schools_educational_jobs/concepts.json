@@ -1,0 +1,6 @@
+{
+    "template": "Each Schools has many different Educational Jobs. Among them, Teacher is common to many Schools.",
+    "specific_component": "Teacher",
+    "components": "Educational Jobs",
+    "entities": "Schools"
+}

@@ -1,0 +1,9 @@
+[
+    {
+        "question": "Show science labs and art studios with computers.",
+        "sql_query1": "SELECT Science_Lab.name\r\nFROM Science_Lab\r\nWHERE Science_Lab.Available_Resources = \"Computers\"\r\nUNION\r\nSELECT Art_Studio.name\r\nFROM Art_Studio\r\nWHERE Art_Studio.Available_Resources = \"Computers\"",
+        "sql_query2": "SELECT Science_Lab.name\r\nFROM Science_Lab\r\nUNION\r\nSELECT Art_Studio.name\r\nFROM Art_Studio\r\nWHERE Art_Studio.Available_Resources = \"Computers\"",
+        "interpretation1": "Which science labs have computers and which art studios have the same available resources?",
+        "interpretation2": "Provide a list of all science labs and also provide a list of all art studios with computers."
+    }
+]

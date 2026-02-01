@@ -1,0 +1,9 @@
+[
+    {
+        "question": "Provide all civil engineers and architects with expertise in AutoCAD.",
+        "sql_query1": "SELECT Civil_Engineers.name\r\nFROM Civil_Engineers\r\nWHERE Civil_Engineers.design_software_expertise = \"AutoCAD\"\r\nUNION\r\nSELECT Architects.name\r\nFROM Architects\r\nWHERE Architects.design_software_expertise = \"AutoCAD\"",
+        "sql_query2": "SELECT Civil_Engineers.name\r\nFROM Civil_Engineers\r\nUNION\r\nSELECT Architects.name\r\nFROM Architects\r\nWHERE Architects.design_software_expertise = \"AutoCAD\"",
+        "interpretation1": "Show both the civil engineers and architects with expertise in AutoCAD.",
+        "interpretation2": "Show all the civil engineers and whichever architects have expertise in AutoCAD."
+    }
+]

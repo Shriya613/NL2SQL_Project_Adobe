@@ -1,0 +1,31 @@
+{
+    "template": "Each Internships has many different Responsibilities. Among them, Research is common to many Internships.",
+    "entities": {
+        "tab_name": "Internships",
+        "col_name": null,
+        "value": null,
+        "scope_id": null,
+        "db_type": "table"
+    },
+    "components": {
+        "tab_name": "Responsibilities",
+        "col_name": null,
+        "value": null,
+        "scope_id": null,
+        "db_type": "table"
+    },
+    "specific_component": {
+        "tab_name": "Responsibilities",
+        "col_name": "responsibility",
+        "value": "Research",
+        "scope_id": 0,
+        "db_type": "value"
+    },
+    "entities_components": {
+        "tab_name": "Internships_Responsibilities",
+        "col_name": null,
+        "value": null,
+        "scope_id": null,
+        "db_type": "table"
+    }
+}

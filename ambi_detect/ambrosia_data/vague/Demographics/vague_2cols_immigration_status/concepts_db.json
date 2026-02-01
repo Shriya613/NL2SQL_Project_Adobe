@@ -1,0 +1,25 @@
+{
+    "template": "Question: What is the immigration status of residents in this municipality? Subject of Inquiry: Municipality\nFocus: Immigration Status Possible answer types: 1. Foreign-born Population 2. Naturalized Citizens",
+    "general_category1": {
+        "tab_name": "Population",
+        "col_name": "Foreign_born_Population",
+        "value": null,
+        "scope_id": null,
+        "db_type": "column"
+    },
+    "general_category2": {
+        "tab_name": "Population",
+        "col_name": "Naturalized_Citizens",
+        "value": null,
+        "scope_id": null,
+        "db_type": "column"
+    },
+    "subject": {
+        "tab_name": "Population",
+        "col_name": "Municipality",
+        "value": null,
+        "scope_id": null,
+        "db_type": "column"
+    },
+    "type": "2cols"
+}

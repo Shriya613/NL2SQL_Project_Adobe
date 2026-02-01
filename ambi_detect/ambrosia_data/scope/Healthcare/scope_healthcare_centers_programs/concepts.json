@@ -1,0 +1,6 @@
+{
+    "template": "Each Healthcare Centers has many different Programs. Among them, Wellness Initiatives is common to many Healthcare Centers.",
+    "specific_component": "Wellness Initiatives",
+    "components": "Programs",
+    "entities": "Healthcare Centers"
+}

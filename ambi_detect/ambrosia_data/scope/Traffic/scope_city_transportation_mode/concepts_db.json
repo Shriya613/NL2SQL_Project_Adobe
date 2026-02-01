@@ -1,0 +1,31 @@
+{
+    "template": "Each City has many different Transportation Mode. Among them, Buses is common to many City.",
+    "entities": {
+        "tab_name": "City",
+        "col_name": null,
+        "value": null,
+        "scope_id": null,
+        "db_type": "table"
+    },
+    "components": {
+        "tab_name": "Transportation_Mode",
+        "col_name": null,
+        "value": null,
+        "scope_id": null,
+        "db_type": "table"
+    },
+    "specific_component": {
+        "tab_name": "Transportation_Mode",
+        "col_name": "mode",
+        "value": "Buses",
+        "scope_id": 0,
+        "db_type": "value"
+    },
+    "entities_components": {
+        "tab_name": "City_Transportation_Mode",
+        "col_name": null,
+        "value": null,
+        "scope_id": null,
+        "db_type": "table"
+    }
+}

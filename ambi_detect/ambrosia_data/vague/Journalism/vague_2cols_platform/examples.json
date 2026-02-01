@@ -1,0 +1,22 @@
+[
+    {
+        "question": "List all platforms along with article titles and categories and parent news agencies.",
+        "sql_query1": "SELECT\r\nNewsArticle.Website,\r\nNewsArticle.Title,\r\nCategory.Name,\r\nNewsArticle.News_Agency\r\nFROM NewsArticle\r\nJOIN ArticleCategoryRelationship ON ArticleCategoryRelationship.articleId = NewsArticle.id\r\nJOIN Category ON Category.id = ArticleCategoryRelationship.categoryID",
+        "sql_query2": "SELECT\r\nNewsArticle.Mobile_App,\r\nNewsArticle.Title,\r\nCategory.Name,\r\nNewsArticle.News_Agency\r\nFROM NewsArticle\r\nJOIN ArticleCategoryRelationship ON ArticleCategoryRelationship.articleId = NewsArticle.id\r\nJOIN Category ON Category.id = ArticleCategoryRelationship.categoryID",
+        "sql_query3": "SELECT\r\nNewsArticle.Website, Mobile_App,\r\nNewsArticle.Title,\r\nCategory.Name,\r\nNewsArticle.News_Agency\r\nFROM NewsArticle\r\nJOIN ArticleCategoryRelationship ON ArticleCategoryRelationship.articleId = NewsArticle.id\r\nJOIN Category ON Category.id = ArticleCategoryRelationship.categoryID",
+        "interpretation1": "List all websites along with article titles and categories and parent news agencies.",
+        "interpretation2": "List all mobile apps along with article titles and categories and parent news agencies.",
+        "interpretation3": "List all websites and mobile apps along with article titles and categories and parent news agencies.",
+        "sql_query_general": "SELECT\r\nNewsArticle.Platform,\r\nNewsArticle.Title,\r\nCategory.Name,\r\nNewsArticle.News_Agency\r\nFROM NewsArticle\r\nJOIN ArticleCategoryRelationship ON ArticleCategoryRelationship.articleId = NewsArticle.id\r\nJOIN Category ON Category.id = ArticleCategoryRelationship.categoryID"
+    },
+    {
+        "question": "List all articles, platforms where they are published and comments received on them mentioning the email of the writer of the comments.",
+        "sql_query1": "SELECT\r\nNewsArticle.Title,\r\nNewsArticle.Website,\r\nComments.authorEmail,\r\nComments.content\r\nFROM NewsArticle\r\nJOIN Comments ON Comments.id = NewsArticle.id",
+        "sql_query2": "SELECT\r\nNewsArticle.Title,\r\nNewsArticle.Mobile_App,\r\nComments.authorEmail,\r\nComments.content\r\nFROM NewsArticle\r\nJOIN Comments ON Comments.id = NewsArticle.id",
+        "sql_query3": "SELECT\r\nNewsArticle.Title,\r\nNewsArticle.Website, Mobile_App,\r\nComments.authorEmail,\r\nComments.content\r\nFROM NewsArticle\r\nJOIN Comments ON Comments.id = NewsArticle.id",
+        "interpretation1": "List all articles, websites where they are published and comments received on them mentioning the email of the writer of the comments.",
+        "interpretation2": "List all articles, mobile apps where they are published and comments received on them mentioning the email of the writer of the comments.",
+        "interpretation3": "List all articles, websites and mobile apps where they are published and comments received on them mentioning the email of the writer of the comments.",
+        "sql_query_general": "SELECT\r\nNewsArticle.Title,\r\nNewsArticle.Platform,\r\nComments.authorEmail,\r\nComments.content\r\nFROM NewsArticle\r\nJOIN Comments ON Comments.id = NewsArticle.id"
+    }
+]

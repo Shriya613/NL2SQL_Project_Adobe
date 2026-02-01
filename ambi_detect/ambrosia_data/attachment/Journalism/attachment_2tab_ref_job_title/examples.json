@@ -1,0 +1,9 @@
+[
+    {
+        "question": "Display public relations positions and government communication positions that are in contact with \"Fox News\".",
+        "sql_query1": "SELECT Public_Relations.role\r\nFROM Contacts JOIN Public_Relations ON Contacts.public_relations_id = Public_Relations.id\r\nWHERE Contacts.organization = \"Fox News\"\r\nUNION\r\nSELECT Government_Communications.role\r\nFROM Contacts JOIN Government_Communications ON Contacts.government_communications_id = Government_Communications.id\r\nWHERE Contacts.organization = \"Fox News\"",
+        "sql_query2": "SELECT Public_Relations.role\r\nFROM Contacts JOIN Public_Relations ON Contacts.public_relations_id = Public_Relations.id\r\nUNION\r\nSELECT Government_Communications.role\r\nFROM Contacts JOIN Government_Communications ON Contacts.government_communications_id = Government_Communications.id\r\nWHERE Contacts.organization = \"Fox News\"",
+        "interpretation1": "Show both public relation and government communication positions that are in contact with \"Fox News\".",
+        "interpretation2": "Show me public relations positions with any contact and the government communications positions but only in contact with \"Fox News\"."
+    }
+]

@@ -1,0 +1,22 @@
+[
+    {
+        "question": "Show me the oldest artifact findings.",
+        "sql_query1": "SELECT Artifacts_Uncovered FROM Artifacts ORDER BY EstimatedAge DESC LIMIT 1",
+        "sql_query2": "SELECT Ancient_Remains FROM Artifacts ORDER BY EstimatedAge DESC LIMIT 1",
+        "sql_query3": "SELECT Artifacts_Uncovered, Ancient_Remains FROM Artifacts ORDER BY EstimatedAge DESC LIMIT 1",
+        "interpretation1": "Show me the oldest artifact uncovered.",
+        "interpretation2": "Show me the oldest ancient remains.",
+        "interpretation3": "Show me the oldest artifact uncovered and ancient remains.",
+        "sql_query_general": "SELECT Findings FROM Artifacts ORDER BY EstimatedAge DESC LIMIT 1"
+    },
+    {
+        "question": "Show me the findings and sites of the two youngest artifacts.",
+        "sql_query1": "SELECT Artifacts_Uncovered, Archaeological_Site FROM Artifacts ORDER BY EstimatedAge ASC LIMIT 2",
+        "sql_query2": "SELECT Ancient_Remains, Archaeological_Site FROM Artifacts ORDER BY EstimatedAge ASC LIMIT 2",
+        "sql_query3": "SELECT Artifacts_Uncovered, Ancient_Remains, Archaeological_Site FROM Artifacts ORDER BY EstimatedAge ASC LIMIT 2",
+        "interpretation1": "show me archaeological sites and artefacts uncovered for the the top 2 artefacts ordered by estimated age in ascending order",
+        "interpretation2": "show me archaeological sites and ancient remains for the the top 2 artefacts ordered by estimated age in ascending order",
+        "interpretation3": "show me archaeological sites, artefacts uncovered and ancient remains for the the top 2 artefacts ordered by estimated age in ascending order",
+        "sql_query_general": "SELECT Findings, Archaeological_Site FROM Artifacts ORDER BY EstimatedAge ASC LIMIT 2"
+    }
+]

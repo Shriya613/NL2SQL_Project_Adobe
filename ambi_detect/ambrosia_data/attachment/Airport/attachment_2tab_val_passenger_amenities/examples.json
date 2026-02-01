@@ -1,0 +1,9 @@
+[
+    {
+        "question": "List lounges and observation decks with accessibility options for all people.",
+        "sql_query1": "SELECT Lounge.name\r\nFROM Lounge\r\nWHERE Lounge.Accessibility = \"All\"\r\nUNION\r\nSELECT ObservationDeck.name\r\nFROM ObservationDeck\r\nWHERE ObservationDeck.Accessibility = \"All\"",
+        "sql_query2": "SELECT Lounge.name\r\nFROM Lounge\r\nUNION\r\nSELECT ObservationDeck.name\r\nFROM ObservationDeck\r\nWHERE ObservationDeck.Accessibility = \"All\"",
+        "interpretation1": "What lounges have accessibility options for all people and what observation decks have the same accessibility?",
+        "interpretation2": "List all lounges and also list observation decks with accessibility options for all people."
+    }
+]

@@ -1,0 +1,25 @@
+{
+    "template": "Question: Are there any restrictions on carry-on luggage? Subject of Inquiry: Airlines\nFocus: Restrictions Possible answer types: 1. Size Limits 2. Prohibited Items",
+    "general_category1": {
+        "tab_name": "Security",
+        "col_name": "SizeLimit",
+        "value": null,
+        "scope_id": null,
+        "db_type": "column"
+    },
+    "general_category2": {
+        "tab_name": "Security",
+        "col_name": "ProhibitedItem",
+        "value": null,
+        "scope_id": null,
+        "db_type": "column"
+    },
+    "subject": {
+        "tab_name": "Security",
+        "col_name": "Airlines",
+        "value": null,
+        "scope_id": null,
+        "db_type": "column"
+    },
+    "type": "2cols"
+}

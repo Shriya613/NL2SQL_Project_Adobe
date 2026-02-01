@@ -1,0 +1,6 @@
+{
+    "template": "Each Research Institutes has many different Projects. Among them, Cancer Research is common to many Research Institutes.",
+    "specific_component": "Cancer Research",
+    "components": "Projects",
+    "entities": "Research Institutes"
+}

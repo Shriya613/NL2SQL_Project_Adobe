@@ -1,0 +1,9 @@
+[
+    {
+        "question": "Display short stories and personal essays written by Evelyn O'Connor.",
+        "sql_query1": "SELECT Short_Stories.Title\r\nFROM Short_Stories\r\nWHERE Short_Stories.Author = \"Evelyn O'Connor\"\r\nUNION\r\nSELECT Personal_Essays.Title\r\nFROM Personal_Essays\r\nWHERE Personal_Essays.Author = \"Evelyn O'Connor\"",
+        "sql_query2": "SELECT Short_Stories.Title\r\nFROM Short_Stories\r\nUNION\r\nSELECT Personal_Essays.Title\r\nFROM Personal_Essays\r\nWHERE Personal_Essays.Author = \"Evelyn O'Connor\"",
+        "interpretation1": "What short stories and personal essays did Evelyn O'Connor write?",
+        "interpretation2": "List all short stories and also display personal essays written by Evelyn O'Connor."
+    }
+]

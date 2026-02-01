@@ -1,0 +1,27 @@
+{
+    "domain": "Company",
+    "template": "Sales Associate and Marketing Specialist are subclasses of Sales and Marketing Jobs. All Sales Associates and Marketing Specialists have property \"Target Market\". There might be a Sales Associate and a Marketing Specialist that both have \"Target Market\" equal to \"B2B\".",
+    "type": "2tab_ref",
+    "general_class": "Sales and Marketing Jobs",
+    "class1": {
+        "tab_name": "SalesAssociates",
+        "col_name": null,
+        "value": null,
+        "scope_id": null,
+        "db_type": "table"
+    },
+    "class2": {
+        "tab_name": "MarketingSpecialists",
+        "col_name": null,
+        "value": null,
+        "scope_id": null,
+        "db_type": "table"
+    },
+    "common_property": {
+        "tab_name": "TargetMarket",
+        "col_name": "type",
+        "value": "B2C",
+        "scope_id": null,
+        "db_type": "value"
+    }
+}

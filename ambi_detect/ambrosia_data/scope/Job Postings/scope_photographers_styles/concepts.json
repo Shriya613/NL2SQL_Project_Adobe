@@ -1,0 +1,6 @@
+{
+    "template": "Each Photographers has many different Styles. Among them, Portrait is common to many Photographers.",
+    "specific_component": "Portrait",
+    "components": "Styles",
+    "entities": "Photographers"
+}

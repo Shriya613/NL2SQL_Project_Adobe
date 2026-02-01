@@ -1,0 +1,9 @@
+[
+    {
+        "question": "Show independent directors and executive managers who work for Global Corp.",
+        "sql_query1": "SELECT Employees.FullName\r\nFROM Employees\r\nWHERE (Employees.Board_Member = \"Independent Director\" OR Employees.Board_Member = \"Executive Manager\") AND Employees.Organization = \"Global Corp\"",
+        "sql_query2": "SELECT Employees.FullName\r\nFROM Employees\r\nWHERE Employees.Board_Member = \"Independent Director\" OR Employees.Board_Member = \"Executive Manager\" AND Employees.Organization = \"Global Corp\"",
+        "interpretation1": "Which independent directors work for Global Corp and which executive managers work for the same company?",
+        "interpretation2": "Provide a list of all independent directors and also provide a list of executive managers who work for Global Corp."
+    }
+]

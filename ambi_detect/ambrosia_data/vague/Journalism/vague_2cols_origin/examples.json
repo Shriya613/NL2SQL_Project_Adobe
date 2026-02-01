@@ -1,0 +1,22 @@
+[
+    {
+        "question": "Show me the origin of all photos published in 2022",
+        "sql_query1": "SELECT Photojournalists.Name FROM Assignments JOIN Photojournalists ON Assignments.PhotojournalistId = Photojournalists.ID JOIN PublishedPhotos ON PublishedPhotos.AssignmentId = Assignments.id WHERE  strftime('%Y', PublishedPhotos.PublicationDate) = '2022'",
+        "sql_query2": "SELECT Events.Title FROM Assignments JOIN Events ON Assignments.EventId = Events.ID JOIN PublishedPhotos ON PublishedPhotos.AssignmentId = Assignments.id WHERE  strftime('%Y', PublishedPhotos.PublicationDate) = '2022'",
+        "sql_query3": "SELECT Photojournalists.Name , Events.Title FROM Assignments JOIN Events ON Assignments.EventId = Events.ID JOIN PublishedPhotos ON PublishedPhotos.AssignmentId = Assignments.id JOIN Photojournalists ON Assignments.PhotojournalistId = Photojournalists.ID  WHERE  strftime('%Y', PublishedPhotos.PublicationDate) = '2022'",
+        "interpretation1": "List the photojournalists whose photos were published in 2022.",
+        "interpretation2": "List the events of photos published in 2022",
+        "interpretation3": "List the photojournalists whose photos were published in 2022 and the events depicted in these photos.",
+        "sql_query_general": "SELECT Events.Title FROM Assignments JOIN Events ON Assignments.Origin = Events.ID JOIN PublishedPhotos ON PublishedPhotos.AssignmentId = Assignments.id WHERE  strftime('%Y', PublishedPhotos.PublicationDate) = '2022'"
+    },
+    {
+        "question": "Show me the origin of the most recent photo",
+        "sql_query1": "SELECT Photojournalists.Name\r\nFROM Assignments\r\nJOIN Photojournalists ON Assignments.PhotojournalistId = Photojournalists.ID \r\nJOIN PublishedPhotos ON PublishedPhotos.AssignmentId = Assignments.id \r\nORDER BY PublishedPhotos.PublicationDate DESC LIMIT 1",
+        "sql_query2": "SELECT Events.Title\r\nFROM Assignments\r\nJOIN Events ON Assignments.EventId = Events.ID\r\nJOIN PublishedPhotos ON PublishedPhotos.AssignmentId = Assignments.id \r\nORDER BY PublishedPhotos.PublicationDate DESC LIMIT 1",
+        "sql_query3": "SELECT Photojournalists.Name , Events.Title\r\nFROM Assignments\r\nJOIN Events ON Assignments.EventId = Events.ID\r\nJOIN PublishedPhotos ON PublishedPhotos.AssignmentId = Assignments.id  JOIN Photojournalists ON Assignments.PhotojournalistId = Photojournalists.ID \r\nORDER BY PublishedPhotos.PublicationDate DESC LIMIT 1",
+        "interpretation1": "Show me the photojournalist who took the most recent photo.",
+        "interpretation2": "Show me the event of the most recent photo.",
+        "interpretation3": "Show me the photojournalist and the event of the most recent photo.",
+        "sql_query_general": "SELECT Events.Title\r\nFROM Assignments\r\nJOIN Events ON Assignments.Origin = Events.ID\r\nJOIN PublishedPhotos ON PublishedPhotos.AssignmentId = Assignments.id \r\nORDER BY PublishedPhotos.PublicationDate DESC LIMIT 1"
+    }
+]

@@ -1,0 +1,25 @@
+{
+    "template": "Question: What resources were allocated for the maintenance and upkeep of this public works project? Subject of Inquiry: Project\nFocus: Resources Possible answer types: 1. Budget 2. Staff",
+    "general_category1": {
+        "tab_name": "Construction_Projects",
+        "col_name": "Budget",
+        "value": null,
+        "scope_id": null,
+        "db_type": "column"
+    },
+    "general_category2": {
+        "tab_name": "Construction_Projects",
+        "col_name": "Staff",
+        "value": null,
+        "scope_id": null,
+        "db_type": "column"
+    },
+    "subject": {
+        "tab_name": "Construction_Projects",
+        "col_name": "ProjectID",
+        "value": null,
+        "scope_id": null,
+        "db_type": "column"
+    },
+    "type": "2cols"
+}

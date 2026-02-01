@@ -1,0 +1,7 @@
+{
+    "template": "Question: When did this hotel open? Subject of Inquiry: Hotel\nFocus: Opening Date Possible answer types: 1. Opening Year 2. Opening Month",
+    "subject": "Hotel",
+    "focus": "Opening Date",
+    "general_category1": "Opening Year",
+    "general_category2": "Opening Month"
+}

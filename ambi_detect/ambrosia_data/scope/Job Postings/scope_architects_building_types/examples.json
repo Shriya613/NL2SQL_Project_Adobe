@@ -1,0 +1,9 @@
+[
+    {
+        "question": "What type of building types are associated with each architect?",
+        "sql_query1": "SELECT Building_Types.type  from Architects_Building_Types join Building_Types on Architects_Building_Types.building_type_id = Building_Types.id join Architects on Architects_Building_Types.architect_id = Architects.id   GROUP BY Architects_Building_Types.building_type_id HAVING COUNT(DISTINCT Architects_Building_Types.architect_id) = (SELECT COUNT(*) FROM  Architects)",
+        "sql_query2": "select architects.name , building_types.type from Architects_Building_Types join Building_Types on Architects_Building_Types.building_type_id = Building_Types.id join Architects on Architects_Building_Types.architect_id = Architects.id",
+        "interpretation1": "What type of building is common across all architects?",
+        "interpretation2": "For each architect, provide the corresponding building type."
+    }
+]

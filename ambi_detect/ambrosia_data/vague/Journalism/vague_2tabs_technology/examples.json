@@ -1,0 +1,22 @@
+[
+    {
+        "question": "Show me the technology used by the Tech Today online platform",
+        "sql_query1": "Select system_name from Content_Management_System join online_news_platform on online_news_platform.cms_id = Content_Management_System.id where platform_name = 'Tech Today'",
+        "sql_query2": "Select framework_name from Web_Framework join online_news_platform on online_news_platform.web_framework_id = Web_Framework.id where platform_name = 'Tech Today'",
+        "sql_query3": "Select system_name, framework_name from Content_Management_System join online_news_platform on online_news_platform.cms_id = Content_Management_System.id join Web_Framework on online_news_platform.web_framework_id = Web_Framework.id  where platform_name = 'Tech Today'",
+        "interpretation1": "Show the content management system used by the Tech Today online platform.",
+        "interpretation2": "Show the web framework used by the Tech Today online platform.",
+        "interpretation3": "Show the content management system and web framework used by the Tech Today online platform.",
+        "sql_query_general": "Select system_name from Technology join online_news_platform on online_news_platform.cms_id = technology.id where platform_name = 'Tech Today'"
+    },
+    {
+        "question": "Show me the platform name and technology for all online news platforms containing the letter t",
+        "sql_query1": "SELECT platform_name, system_name FROM Online_News_Platform JOIN Content_Management_System ON Online_News_Platform.cms_id = Content_Management_System.id WHERE platform_name LIKE '%t%'",
+        "sql_query2": "SELECT platform_name, framework_name FROM Online_News_Platform JOIN Web_Framework ON Online_News_Platform.web_framework_id = Web_Framework.id WHERE platform_name LIKE '%t%'",
+        "sql_query3": "SELECT platform_name, system_name, framework_name FROM Online_News_Platform JOIN Content_Management_System ON Online_News_Platform.cms_id = Content_Management_System.id join Web_Framework on online_news_platform.web_framework_id = Web_Framework.id WHERE platform_name LIKE '%t%'",
+        "interpretation1": "For all online news platforms containing the letter t, list the platform name and content management system.",
+        "interpretation2": "For all online news platforms containing the letter t, list the platform name and web framework.",
+        "interpretation3": "For all online news platforms containing the letter t, list the platform name, content management system, and web framework.",
+        "sql_query_general": "SELECT platform_name, system_name FROM Online_News_Platform JOIN Technology ON Online_News_Platform.cms_id = Technology.id WHERE platform_name LIKE '%t%'"
+    }
+]

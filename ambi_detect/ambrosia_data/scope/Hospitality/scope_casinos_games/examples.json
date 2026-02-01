@@ -1,0 +1,23 @@
+[
+    {
+        "question": "Show me the names of the games along with their descriptions that are offered by every casino.",
+        "sql_query1": "SELECT Games.game_name, Games.description  from Casinos_Games join Games on Casinos_Games.game_id = Games.id join Casinos on Casinos_Games.casino_id = Casinos.id   GROUP BY Casinos_Games.game_id HAVING COUNT(DISTINCT Casinos_Games.casino_id) = (SELECT COUNT(*) FROM  Casinos)",
+        "sql_query2": "select casinos.name , games.game_name , games.description from Casinos_Games join Games on Casinos_Games.game_id = Games.id join Casinos on Casinos_Games.casino_id = Casinos.id",
+        "interpretation1": "List all of the games along with their descriptions that are common across all of the casinos.",
+        "interpretation2": "For each casino, provide a list of games and a description of each game they provide."
+    },
+    {
+        "question": "What game does each casino have?",
+        "sql_query1": "SELECT Games.game_name  from Casinos_Games join Games on Casinos_Games.game_id = Games.id join Casinos on Casinos_Games.casino_id = Casinos.id   GROUP BY Casinos_Games.game_id HAVING COUNT(DISTINCT Casinos_Games.casino_id) = (SELECT COUNT(*) FROM  Casinos)",
+        "sql_query2": "select casinos.name , games.game_name from Casinos_Games join Games on Casinos_Games.game_id = Games.id join Casinos on Casinos_Games.casino_id = Casinos.id",
+        "interpretation1": "Give me the games that are popular in all casinos.",
+        "interpretation2": "For each casino, what are the corresponding games?"
+    },
+    {
+        "question": "Give me the descriptions of the games offered in each casino.",
+        "sql_query1": "SELECT Games.description  from Casinos_Games join Games on Casinos_Games.game_id = Games.id join Casinos on Casinos_Games.casino_id = Casinos.id   GROUP BY Casinos_Games.game_id HAVING COUNT(DISTINCT Casinos_Games.casino_id) = (SELECT COUNT(*) FROM  Casinos)",
+        "sql_query2": "select casinos.name , games.description from Casinos_Games join Games on Casinos_Games.game_id = Games.id join Casinos on Casinos_Games.casino_id = Casinos.id",
+        "interpretation1": "Give me the description of the game that is common to all casinos.",
+        "interpretation2": "For each casino, show me the corresponding game description."
+    }
+]

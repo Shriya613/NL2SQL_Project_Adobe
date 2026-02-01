@@ -1,0 +1,25 @@
+{
+    "template": "Question: What is the gender pay gap for full-time workers in this occupation? Subject of Inquiry: Occupation\nFocus: Pay Gap Possible answer types: 1. Percentage Gap 2. Difference in Salaries",
+    "general_category1": {
+        "tab_name": "OccupationalStats",
+        "col_name": "percentageGap",
+        "value": null,
+        "scope_id": null,
+        "db_type": "column"
+    },
+    "general_category2": {
+        "tab_name": "OccupationalStats",
+        "col_name": "differenceInSalaries",
+        "value": null,
+        "scope_id": null,
+        "db_type": "column"
+    },
+    "subject": {
+        "tab_name": "OccupationalStats",
+        "col_name": "occupation",
+        "value": null,
+        "scope_id": null,
+        "db_type": "column"
+    },
+    "type": "2cols"
+}

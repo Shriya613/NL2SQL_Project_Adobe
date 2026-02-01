@@ -1,0 +1,8 @@
+{
+    "template": "Fiction Book and Non-fiction Book are subclasses of Literature. All Fiction Books and Non-fiction Books have property \"Rating\". There might be a Fiction Book and a Non-fiction Book that both have \"Rating\" equal to \"5 stars\".",
+    "general_class": "Literature",
+    "class1": "Fiction Book",
+    "class2": "Non-fiction Book",
+    "common_property": "Rating",
+    "common_value": "3.5"
+}

@@ -1,0 +1,9 @@
+[
+    {
+        "question": "Show me dance recitals and talent shows which are taking place in audition Room 101.",
+        "sql_query1": "SELECT Dance_Recitals.name\r\nFROM Dance_Recitals\r\nWHERE Dance_Recitals.Audition_Room = \"Room 101\"\r\nUNION\r\nSELECT Talent_Shows.name\r\nFROM Talent_Shows\r\nWHERE Talent_Shows.Audition_Room = \"Room 101\"",
+        "sql_query2": "SELECT Dance_Recitals.name\r\nFROM Dance_Recitals\r\nUNION\r\nSELECT Talent_Shows.name\r\nFROM Talent_Shows\r\nWHERE Talent_Shows.Audition_Room = \"Room 101\"",
+        "interpretation1": "Which dance recitals are taking place in audition Room 101 and which talent shows are taking place in a room with the same name?",
+        "interpretation2": "Provide a list of all dance recitals and also provide a list of all talent shows that are taking place in audition Room 101."
+    }
+]

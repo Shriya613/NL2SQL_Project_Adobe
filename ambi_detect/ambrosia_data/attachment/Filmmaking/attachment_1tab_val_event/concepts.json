@@ -1,0 +1,8 @@
+{
+    "template": "Film Festival and Award are subclasses of Event. All Film Festivals and Awards have a property \"Committee\". There might be a Film Festival and an Award that both are organized by the \"Cannes Jury\" while others have different committees.",
+    "general_class": "Event",
+    "class1": "Film Festival",
+    "class2": "Award",
+    "common_property": "Committee Members",
+    "common_value": "Gerardo Prat"
+}

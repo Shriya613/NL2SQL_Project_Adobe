@@ -1,0 +1,7 @@
+{
+    "template": "Question: When was this press conference held? Subject of Inquiry: Press Conference\nFocus: Timeframe Possible answer types: 1. Date 2. Time",
+    "subject": "Press Conference",
+    "focus": "Timeframe",
+    "general_category1": "Date",
+    "general_category2": "Time"
+}

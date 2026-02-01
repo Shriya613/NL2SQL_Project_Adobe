@@ -1,0 +1,9 @@
+[
+    {
+        "question": "Show takeaway descriptions and prepared meal descriptions with a best before date of 10.11.2018.",
+        "sql_query1": "SELECT Meals.Description \r\nFROM Meals\r\nWHERE (Meals.MealType = \"Prepared Meal\" OR Meals.MealType = \"Takeaway\") AND Meals.BestBefore = \"10.11.2018\"",
+        "sql_query2": "SELECT Meals.Description \r\nFROM Meals\r\nWHERE Meals.MealType = \"Prepared Meal\" OR Meals.MealType = \"Takeaway\" AND Meals.BestBefore = \"10.11.2018\"",
+        "interpretation1": "Which takeaway meal descriptions have a best before date of 10.11.2018 and which prepared meal descriptions have the same best before date?",
+        "interpretation2": "Provide a list of takeaway meal descriptions with any best before date as well as prepared meal descriptions with a best before date of 10.11.2018."
+    }
+]

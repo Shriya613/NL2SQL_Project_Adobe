@@ -1,0 +1,9 @@
+[
+    {
+        "question": "Show me the diets that every nutritionist covers.",
+        "sql_query1": "SELECT Diets.diet_type_value  from Nutritionists_Diets join Diets on Nutritionists_Diets.diet_type_id = Diets.diet_type_id join Nutritionists on Nutritionists_Diets.nutritionist_id = Nutritionists.nutritionist_id   GROUP BY Nutritionists_Diets.diet_type_id HAVING COUNT(DISTINCT Nutritionists_Diets.nutritionist_id) = (SELECT COUNT(*) FROM  Nutritionists)",
+        "sql_query2": "select nutritionists.email , diets.diet_type_value from Nutritionists_Diets join Diets on Nutritionists_Diets.diet_type_id = Diets.diet_type_id join Nutritionists on Nutritionists_Diets.nutritionist_id = Nutritionists.nutritionist_id",
+        "interpretation1": "What diets do all the nutritionists cover together?",
+        "interpretation2": "For each nutritionist, list the diets they cover."
+    }
+]

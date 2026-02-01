@@ -1,0 +1,23 @@
+[
+    {
+        "question": "List the description of school grades that every district has.",
+        "sql_query1": "SELECT School_Grades.description  from District_School_Grades join School_Grades on District_School_Grades.school_grade_id = School_Grades.id join District on District_School_Grades.district_id = District.id   GROUP BY District_School_Grades.school_grade_id HAVING COUNT(DISTINCT District_School_Grades.district_id) = (SELECT COUNT(*) FROM  District)",
+        "sql_query2": "select district.name , school_grades.description from District_School_Grades join School_Grades on District_School_Grades.school_grade_id = School_Grades.id join District on District_School_Grades.district_id = District.id",
+        "interpretation1": "List the common descriptions of school grades for all districts.",
+        "interpretation2": "For every district, list the description of school grades."
+    },
+    {
+        "question": "List the school grades and their descriptions that we have in each district.",
+        "sql_query1": "SELECT School_Grades.grade, School_Grades.description  from District_School_Grades join School_Grades on District_School_Grades.school_grade_id = School_Grades.id join District on District_School_Grades.district_id = District.id   GROUP BY District_School_Grades.school_grade_id HAVING COUNT(DISTINCT District_School_Grades.district_id) = (SELECT COUNT(*) FROM  District)",
+        "sql_query2": "select district.name , school_grades.grade , school_grades.description from District_School_Grades join School_Grades on District_School_Grades.school_grade_id = School_Grades.id join District on District_School_Grades.district_id = District.id",
+        "interpretation1": "List the grade and description from the list of school grades common to all districts.",
+        "interpretation2": "For each district, list the grade and description."
+    },
+    {
+        "question": "Give me the school grades for every district.",
+        "sql_query1": "SELECT School_Grades.grade  from District_School_Grades join School_Grades on District_School_Grades.school_grade_id = School_Grades.id join District on District_School_Grades.district_id = District.id   GROUP BY District_School_Grades.school_grade_id HAVING COUNT(DISTINCT District_School_Grades.district_id) = (SELECT COUNT(*) FROM  District)",
+        "sql_query2": "select district.name , school_grades.grade from District_School_Grades join School_Grades on District_School_Grades.school_grade_id = School_Grades.id join District on District_School_Grades.district_id = District.id",
+        "interpretation1": "What is the common school grade for all districts?",
+        "interpretation2": "For each district, what is the corresponding school grade?"
+    }
+]

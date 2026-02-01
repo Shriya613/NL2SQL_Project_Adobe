@@ -1,0 +1,22 @@
+[
+    {
+        "question": "List each patient along with suitable vaccines and what they target",
+        "sql_query1": "SELECT Patient.full_name, Age_Group.Name, Vaccine.Vaccine_Name\r\nFROM Patient INNER JOIN Age_Group ON Patient.Age_Group_Id = Age_Group.Id \r\nINNER JOIN Vaccine ON Patient.Age_Group_Id = Vaccine.Age_Group_ID",
+        "sql_query2": "SELECT Patient.full_name, Health_Condition.condition_name, Vaccine.Vaccine_Name\r\nFROM Patient INNER JOIN Vaccine ON Patient.Age_Group_Id = Vaccine.Age_Group_ID INNER JOIN  Health_Condition ON Vaccine.Health_Condition_Id = Health_Condition.Id",
+        "sql_query3": "SELECT Patient.full_name, Health_Condition.condition_name, Age_Group.Name, Vaccine.Vaccine_Name\r\nFROM Patient INNER JOIN Age_Group ON Patient.Age_Group_Id = Age_Group.Id \r\nINNER JOIN Vaccine ON Patient.Age_Group_Id = Vaccine.Age_Group_ID INNER JOIN Health_Condition ON Health_Condition.Id = Vaccine.Health_Condition_Id",
+        "interpretation1": "List each patient along with suitable vaccines and their age groups",
+        "interpretation2": "List each patient along with suitable vaccines and their health conditions",
+        "interpretation3": "List each patient along with suitable vaccines, their age groups and health conditions",
+        "sql_query_general": "SELECT Patient.full_name, Target.Name, Vaccine.Vaccine_Name\r\nFROM Patient INNER JOIN Target ON Patient.Age_Group_Id = Target.Id \r\nINNER JOIN Vaccine ON Patient.Age_Group_Id = Vaccine.Age_Group_ID"
+    },
+    {
+        "question": "List the total number of vaccines appropriate for each target",
+        "sql_query1": "SELECT Age_Group.Name, Count(*) FROM Age_Group INNER JOIN Vaccine ON Age_Group.Id = Vaccine.age_group_id\r\nGROUP BY Age_Group.Name",
+        "sql_query2": "SELECT Health_Condition.condition_name, Count(*) FROM Health_Condition INNER JOIN Vaccine ON Health_Condition.Id = Vaccine.Health_Condition_Id\r\nGROUP BY Health_Condition.condition_name",
+        "sql_query3": "SELECT Health_Condition.condition_name, Age_Group.Name, Count(*) FROM Age_Group INNER JOIN Vaccine ON Age_Group.Id = Vaccine.age_group_id INNER JOIN Health_Condition ON Health_Condition.Id = Vaccine.Health_Condition_Id\r\nGROUP BY Age_Group.Name, Health_Condition.condition_name",
+        "interpretation1": "List the total number of vaccines appropriate for each age group.",
+        "interpretation2": "List the total number of vaccines appropriate for each health condition.",
+        "interpretation3": "List the total number of vaccines appropriate for each age group and health condition.",
+        "sql_query_general": "SELECT Target.Name, Count(*) FROM Target INNER JOIN Vaccine ON Target.Id = Vaccine.age_group_id\r\nGROUP BY Target.Name"
+    }
+]

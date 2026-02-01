@@ -1,0 +1,7 @@
+{
+    "template": "Question: Who is the author of this movie? Subject of Inquiry: Movie\nFocus: Author Possible answer types: 1. Filmmaker 2. Screenwriter",
+    "subject": "Movie",
+    "focus": "Author",
+    "general_category1": "Filmmaker",
+    "general_category2": "Screenwriter"
+}

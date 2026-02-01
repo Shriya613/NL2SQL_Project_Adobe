@@ -1,0 +1,27 @@
+{
+    "domain": "cocktail_lounges",
+    "template": "Cocktail Lounge and Sports Bar are subclasses of Entertainment Hub. All Cocktail lounges and Sports bars have property \"Hours\". There might be a Cocktail Lounge and a Sports Bar that both have \"Hours\" equal to \"open from 5 PM to 2 AM\".",
+    "type": "2tab_val",
+    "general_class": "Entertainment Hub",
+    "class1": {
+        "tab_name": "cocktail_lounges",
+        "col_name": null,
+        "value": null,
+        "scope_id": null,
+        "db_type": "table"
+    },
+    "class2": {
+        "tab_name": "sports_bars",
+        "col_name": null,
+        "value": null,
+        "scope_id": null,
+        "db_type": "table"
+    },
+    "common_property": {
+        "tab_name": "cocktail_lounges",
+        "col_name": "hours",
+        "value": "Open from 5 PM to 2 AM",
+        "scope_id": null,
+        "db_type": "value"
+    }
+}

@@ -1,0 +1,9 @@
+[
+    {
+        "question": "Show social workers and counselors from the West Side.",
+        "sql_query1": "SELECT JobPosting.title \r\nFROM HelpingProfession JOIN JobPosting ON HelpingProfession.ProfessionID = JobPosting.ProfessionID JOIN GeoArea ON JobPosting.AreaID = GeoArea.AreaID\r\nWHERE (HelpingProfession.ProfessionName = \"Social Worker\" OR HelpingProfession.ProfessionName = \"Counselor\") AND GeoArea.LocationText = \"West Side\"",
+        "sql_query2": "SELECT JobPosting.title \r\nFROM HelpingProfession JOIN JobPosting ON HelpingProfession.ProfessionID = JobPosting.ProfessionID JOIN GeoArea ON JobPosting.AreaID = GeoArea.AreaID\r\nWHERE HelpingProfession.ProfessionName = \"Social Worker\" OR HelpingProfession.ProfessionName = \"Counselor\" AND GeoArea.LocationText = \"West Side\"",
+        "interpretation1": "What social workers are from the West Side and what councelors are from the same location?",
+        "interpretation2": "List all social workers and also list counselors from the West Side."
+    }
+]

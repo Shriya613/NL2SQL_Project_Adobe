@@ -1,0 +1,6 @@
+{
+    "template": "Each Green Buildings has many different Features. Among them, Solar Panels is common to many Green Buildings.",
+    "specific_component": "Solar Panels",
+    "components": "Features",
+    "entities": "Green Buildings"
+}

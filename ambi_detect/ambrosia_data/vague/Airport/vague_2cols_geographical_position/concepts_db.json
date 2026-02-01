@@ -1,0 +1,25 @@
+{
+    "template": "Question: Where is this airport located? Subject of Inquiry: Airport\nFocus: Geographical Position Possible answer types: 1. City 2. Coordinates",
+    "general_category1": {
+        "tab_name": "Airports",
+        "col_name": "City",
+        "value": null,
+        "scope_id": null,
+        "db_type": "column"
+    },
+    "general_category2": {
+        "tab_name": "Airports",
+        "col_name": "Coordinates",
+        "value": null,
+        "scope_id": null,
+        "db_type": "column"
+    },
+    "subject": {
+        "tab_name": "Airports",
+        "col_name": null,
+        "value": null,
+        "scope_id": null,
+        "db_type": "table"
+    },
+    "type": "2cols"
+}

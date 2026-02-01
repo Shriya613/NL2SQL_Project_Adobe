@@ -1,0 +1,6 @@
+{
+    "template": "Each Streaming Service has many different Devices Compatibility. Among them, Smart TV is common to many Streaming Service.",
+    "specific_component": "Smart TV",
+    "components": "Devices Compatibility",
+    "entities": "Streaming Service"
+}

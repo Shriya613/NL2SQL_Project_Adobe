@@ -1,0 +1,22 @@
+[
+    {
+        "question": "List all the article contents with their respective editor and reporter names.",
+        "sql_query1": "SELECT\r\nArticles.content,\r\nManaging_Editor.name,\r\nReporters.fullname\r\nFROM Articles\r\nJOIN Final_Draft ON Final_Draft.id = Articles.final_draft_id\r\nJOIN Managing_Editor ON Managing_Editor.id = Final_Draft.managing_editor_id\r\nJOIN Reporters ON Reporters.reporter_id = Articles.reporter_id",
+        "sql_query2": "SELECT\r\nArticles.content,\r\nCopy_Editor.name,\r\nReporters.fullname\r\nFROM Articles\r\nJOIN Final_Draft ON Final_Draft.id = Articles.final_draft_id\r\nJOIN Copy_Editor ON Copy_Editor.id = Final_Draft.Copy_Editor_id\r\nJOIN Reporters ON Reporters.reporter_id = Articles.reporter_id",
+        "sql_query3": "SELECT\r\nArticles.content,\r\nManaging_Editor.name, Copy_Editor.name,\r\nReporters.fullname\r\nFROM Articles\r\nJOIN Final_Draft ON Final_Draft.id = Articles.final_draft_id\r\nJOIN Managing_Editor ON Managing_Editor.id = Final_Draft.managing_editor_id\r\nJOIN Reporters ON Reporters.reporter_id = Articles.reporter_id JOIN Copy_Editor ON Copy_Editor.id = Final_Draft.Copy_Editor_id",
+        "interpretation1": "List all the article contents with their respective managing editor and reporter names",
+        "interpretation2": "List all the article contents with their respective copy editor and reporter names",
+        "interpretation3": "List all the article contents with their respective managing editor, copy editor and reporter names",
+        "sql_query_general": "SELECT\r\nArticles.content,\r\nEditor.name,\r\nReporters.fullname\r\nFROM Articles\r\nJOIN Final_Draft ON Final_Draft.id = Articles.final_draft_id\r\nJOIN Editor ON Editor.id = Final_Draft.managing_editor_id\r\nJOIN Reporters ON Reporters.reporter_id = Articles.reporter_id"
+    },
+    {
+        "question": "List all the articles with their respective editor and author names.",
+        "sql_query1": "SELECT\r\nArticles.title,\r\nManaging_Editor.name,\r\nAuthors.fullname\r\nFROM Articles\r\nJOIN Final_Draft ON Final_Draft.id = Articles.final_draft_id\r\nJOIN Managing_Editor ON Managing_Editor.id = Final_Draft.managing_editor_id\r\nJOIN Authors ON Authors.author_id = Articles.author_id",
+        "sql_query2": "SELECT\r\nArticles.title,\r\nCopy_Editor.name,\r\nAuthors.fullname\r\nFROM Articles\r\nJOIN Final_Draft ON Final_Draft.id = Articles.final_draft_id\r\nJOIN Copy_Editor ON Copy_Editor.id = Final_Draft.Copy_Editor_id\r\nJOIN Authors ON Authors.author_id = Articles.author_id",
+        "sql_query3": "SELECT\r\nArticles.title,\r\nManaging_Editor.name, Copy_Editor.name,\r\nAuthors.fullname\r\nFROM Articles\r\nJOIN Final_Draft ON Final_Draft.id = Articles.final_draft_id\r\nJOIN Managing_Editor ON Managing_Editor.id = Final_Draft.managing_editor_id\r\nJOIN Authors ON Authors.author_id = Articles.author_id JOIN Copy_Editor ON Copy_Editor.id = Final_Draft.Copy_Editor_id",
+        "interpretation1": "Show me all available articles alongside their managing editors and their authors.",
+        "interpretation2": "Show me all available articles alongside their copy editors and their authors.",
+        "interpretation3": "Show me all available articles alongside their managing and copy editors and their authors.",
+        "sql_query_general": "SELECT\r\nArticles.title,\r\nEditor.name,\r\nAuthors.fullname\r\nFROM Articles\r\nJOIN Final_Draft ON Final_Draft.id = Articles.final_draft_id\r\nJOIN Editor ON Editor.id = Final_Draft.managing_editor_id\r\nJOIN Authors ON Authors.author_id = Articles.author_id"
+    }
+]

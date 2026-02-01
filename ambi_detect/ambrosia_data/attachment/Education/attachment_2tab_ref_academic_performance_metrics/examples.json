@@ -1,0 +1,9 @@
+[
+    {
+        "question": "Display attendance records and grades for White.",
+        "sql_query1": "SELECT Attendance.date_attended\r\nFROM Students JOIN Attendance ON Students.student_id = Attendance.student_id\r\nWHERE Students.last_name = \"White\"\r\nUNION\r\nSELECT Grades.grade\r\nFROM Students JOIN Grades ON Students.student_id = Grades.student_id\r\nWHERE Students.last_name = \"White\"",
+        "sql_query2": "SELECT Attendance.date_attended\r\nFROM Students JOIN Attendance ON Students.student_id = Attendance.student_id\r\nUNION\r\nSELECT Grades.grade\r\nFROM Students JOIN Grades ON Students.student_id = Grades.student_id\r\nWHERE Students.last_name = \"White\"",
+        "interpretation1": "Which attendance records and grades are associated with a student whose last name is white?",
+        "interpretation2": "Can you show me all grades for a student with the last name White and all student attendance records?"
+    }
+]

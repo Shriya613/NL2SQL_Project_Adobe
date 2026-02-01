@@ -1,0 +1,9 @@
+[
+    {
+        "question": "Show comedians and magicians who perform for 60 minutes.",
+        "sql_query1": "SELECT standupcomedians.name\r\nFROM standupcomedians\r\nWHERE standupcomedians.duration_of_performance = 60\r\nUNION\r\nSELECT magicians.name\r\nFROM magicians\r\nWHERE magicians.duration_of_performance = 60",
+        "sql_query2": "SELECT standupcomedians.name\r\nFROM standupcomedians\r\nUNION\r\nSELECT magicians.name\r\nFROM magicians\r\nWHERE magicians.duration_of_performance = 60",
+        "interpretation1": "What comedians perform for 60 minutes and what magicians perform for same duration?",
+        "interpretation2": "Provide a list of all comedians and also provide a list of magicians that perform for 60 minutes."
+    }
+]

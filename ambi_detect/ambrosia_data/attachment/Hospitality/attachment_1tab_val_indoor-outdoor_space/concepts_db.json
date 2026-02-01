@@ -1,0 +1,33 @@
+{
+    "domain": "Room",
+    "template": "Lobby and Terrace are subclasses of Indoor-Outdoor Space. All Lobbies and Terraces have property \"Size\". There might be a Lobby and a Terrace that both have \"Size\" equal to \"500\".",
+    "type": "1tab_val",
+    "general_class": {
+        "tab_name": "Room",
+        "col_name": "Indoor_Outdoor_Space",
+        "value": null,
+        "scope_id": null,
+        "db_type": "column"
+    },
+    "class1": {
+        "tab_name": "Room",
+        "col_name": "Indoor_Outdoor_Space",
+        "value": "Lobby",
+        "scope_id": null,
+        "db_type": "value"
+    },
+    "class2": {
+        "tab_name": "Room",
+        "col_name": "Indoor_Outdoor_Space",
+        "value": "Terrace",
+        "scope_id": null,
+        "db_type": "value"
+    },
+    "common_property": {
+        "tab_name": "Room",
+        "col_name": "Size",
+        "value": 500,
+        "scope_id": null,
+        "db_type": "value"
+    }
+}

@@ -1,0 +1,31 @@
+{
+    "template": "Each Gate has many different Facility. Among them, Baggage Claim is common to many Gate.",
+    "entities": {
+        "tab_name": "Gate",
+        "col_name": null,
+        "value": null,
+        "scope_id": null,
+        "db_type": "table"
+    },
+    "components": {
+        "tab_name": "Facility",
+        "col_name": null,
+        "value": null,
+        "scope_id": null,
+        "db_type": "table"
+    },
+    "specific_component": {
+        "tab_name": "Facility",
+        "col_name": "name",
+        "value": "Baggage Claim",
+        "scope_id": 0,
+        "db_type": "value"
+    },
+    "entities_components": {
+        "tab_name": "Gate_Facility",
+        "col_name": null,
+        "value": null,
+        "scope_id": null,
+        "db_type": "table"
+    }
+}

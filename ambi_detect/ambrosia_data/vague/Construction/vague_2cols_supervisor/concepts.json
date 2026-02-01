@@ -1,0 +1,7 @@
+{
+    "template": "Question: Who supervised the construction of this edifice? Subject of Inquiry: Edifice\nFocus: Supervisor Possible answer types: 1. Project Manager 2. Construction Manager",
+    "subject": "Edifice",
+    "focus": "Supervisor",
+    "general_category1": "Project Manager",
+    "general_category2": "Construction Manager"
+}

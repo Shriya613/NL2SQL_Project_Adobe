@@ -1,0 +1,9 @@
+[
+    {
+        "question": "What acts are performed at each comedy show?",
+        "sql_query1": "SELECT Acts.act_name  from Comedy_Shows_Acts join Comedy_Shows on Comedy_Shows_Acts.comedy_show_id = Comedy_Shows.comedy_show_id join Acts on Comedy_Shows_Acts.acts_comedy_shows_id = Acts.act_id   GROUP BY Comedy_Shows_Acts.acts_comedy_shows_id HAVING COUNT(DISTINCT Comedy_Shows_Acts.comedy_show_id) = (SELECT COUNT(*) FROM  Comedy_Shows)",
+        "sql_query2": "select comedy_shows.show_title , acts.act_name from Comedy_Shows_Acts join Comedy_Shows on Comedy_Shows_Acts.comedy_show_id = Comedy_Shows.comedy_show_id join Acts on Comedy_Shows_Acts.acts_comedy_shows_id = Acts.act_id",
+        "interpretation1": "Show me the acts that are common for all comedy shows.",
+        "interpretation2": "For each comedy show, what are the names of the acts performing?"
+    }
+]

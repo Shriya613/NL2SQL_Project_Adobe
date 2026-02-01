@@ -1,0 +1,7 @@
+{
+    "template": "Question: What fees does this checking account charge? Subject of Inquiry: Checking Accounts\nFocus: Fee Possible answer types: 1. Monthly Maintenance Fee 2. Overdraft Charges",
+    "subject": "Checking Accounts",
+    "focus": "Fee",
+    "general_category1": "Monthly Maintenance Fee",
+    "general_category2": "Overdraft Charges"
+}

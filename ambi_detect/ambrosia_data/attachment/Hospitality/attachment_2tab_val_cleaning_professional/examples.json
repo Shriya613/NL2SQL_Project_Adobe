@@ -1,0 +1,9 @@
+[
+    {
+        "question": "Display housekeepers and laundry service attendants working at the Grand Hotel.",
+        "sql_query1": "SELECT Housekeeping.housekeeper as name\r\nFROM Housekeeping\r\nWHERE Housekeeping.hotel = \"The Grand Hotel\"\r\nUNION\r\nSELECT LaundryService.laundry_attendant as name\r\nFROM LaundryService\r\nWHERE LaundryService.hotel = \"The Grand Hotel\"",
+        "sql_query2": "SELECT Housekeeping.housekeeper as name\r\nFROM Housekeeping\r\nUNION\r\nSELECT LaundryService.laundry_attendant as name\r\nFROM LaundryService\r\nWHERE LaundryService.hotel = \"The Grand Hotel\"",
+        "interpretation1": "What housekeepers and laundry service attendants are employed at the Grand Hotel?",
+        "interpretation2": "List all housekeepers and also display laundry service attendants working at The Grand Hotel."
+    }
+]

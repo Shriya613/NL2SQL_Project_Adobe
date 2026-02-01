@@ -1,0 +1,8 @@
+{
+    "template": "Comedy and Tragedy are subclasses of Theatrical Form. All Comedies and Tragedies have property \"Author\". There might be a Comedy and a Tragedy that both have \"Author\" equal to \"William Shakespeare\".",
+    "general_class": "Theatrical Form",
+    "class1": "Comedy",
+    "class2": "Tragedy",
+    "common_property": "Author",
+    "common_value": "William Shakespeare"
+}

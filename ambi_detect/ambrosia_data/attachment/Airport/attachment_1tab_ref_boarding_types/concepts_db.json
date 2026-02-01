@@ -1,0 +1,33 @@
+{
+    "domain": "Flights",
+    "template": "Priority Boarding and Family Boarding are subclasses of Boarding Types. All Priority Boarding and Family Boarding methods have the property \"Airline\". There might be a Priority Boarding service and a Family Boarding service that both have \"Airline\" equal to \"Airline A\".",
+    "type": "1tab_ref",
+    "general_class": {
+        "tab_name": "Passengers",
+        "col_name": "BoardingType",
+        "value": null,
+        "scope_id": null,
+        "db_type": "column"
+    },
+    "class1": {
+        "tab_name": "Passengers",
+        "col_name": "BoardingType",
+        "value": "Priority Boarding",
+        "scope_id": null,
+        "db_type": "value"
+    },
+    "class2": {
+        "tab_name": "Passengers",
+        "col_name": "BoardingType",
+        "value": "Family Boarding",
+        "scope_id": null,
+        "db_type": "value"
+    },
+    "common_property": {
+        "tab_name": "Airlines",
+        "col_name": "Name",
+        "value": "United Airlines",
+        "scope_id": null,
+        "db_type": "value"
+    }
+}

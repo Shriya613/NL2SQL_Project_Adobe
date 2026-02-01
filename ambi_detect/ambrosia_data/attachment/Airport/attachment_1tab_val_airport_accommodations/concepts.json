@@ -1,0 +1,8 @@
+{
+    "template": "Airport Hotel and Sleep Pod are subclasses of Airport Accommodations. All Airport Hotels and Sleep Pods have the property \"Price\". There might be an Airport Hotel and a Sleep Pod that both have a \"Price\" of \"$150 per night\".",
+    "general_class": "Airport Accommodations",
+    "class1": "Airport Hotel",
+    "class2": "Sleep Pod",
+    "common_property": "Price",
+    "common_value": "$150"
+}

@@ -1,0 +1,8 @@
+{
+    "template": "Day Spa and Wellness Retreat are subclasses of Relaxation Getaway. All Day spas and Wellness retreats have property \"Price\". There might be a Day Spa and a Wellness Retreat that both have \"Price\" equal to \"150\".",
+    "general_class": "Relaxation Getaway",
+    "class1": "Day Spa",
+    "class2": "Wellness Retreat",
+    "common_property": "Price",
+    "common_value": "150"
+}

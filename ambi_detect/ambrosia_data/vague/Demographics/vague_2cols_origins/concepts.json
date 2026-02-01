@@ -1,0 +1,7 @@
+{
+    "template": "Question: Where did these immigrants originally come from? Subject of Inquiry: Immigrants\nFocus: Origins Possible answer types: 1. Country of Origin 2. Region of Origin",
+    "subject": "Immigrants",
+    "focus": "Origins",
+    "general_category1": "Country of Origin",
+    "general_category2": "Region of Origin"
+}

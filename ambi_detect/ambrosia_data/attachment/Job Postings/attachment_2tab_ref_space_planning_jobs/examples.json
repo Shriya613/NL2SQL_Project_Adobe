@@ -1,0 +1,9 @@
+[
+    {
+        "question": "Provide modern architects and designers.",
+        "sql_query1": "SELECT Interior_Designer.name\r\nFROM Style JOIN Interior_Designer ON Style.style_id = Interior_Designer.design_style\r\nWHERE Style.style_name = \"Modern\"\r\nUNION\r\nSELECT Landscape_Architect.name\r\nFROM Style JOIN Landscape_Architect ON Style.style_id = Landscape_Architect.landscape_style\r\nWHERE Style.style_name = \"Modern\"",
+        "sql_query2": "SELECT Interior_Designer.name\r\nFROM Style JOIN Interior_Designer ON Style.style_id = Interior_Designer.design_style\r\nUNION\r\nSELECT Landscape_Architect.name\r\nFROM Style JOIN Landscape_Architect ON Style.style_id = Landscape_Architect.landscape_style\r\nWHERE Style.style_name = \"Modern\"",
+        "interpretation1": "What designers use modern styles, and what architects also use the same style?",
+        "interpretation2": "Provide a list of all designers and also provide a list of modern architects."
+    }
+]

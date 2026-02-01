@@ -1,0 +1,9 @@
+[
+    {
+        "question": "Show journalists and editors who speak English and Spanish.",
+        "sql_query1": "SELECT Journalists.name\r\nFROM Journalists\r\nWHERE Journalists.languages = \"English and Spanish\"\r\nUNION\r\nSELECT Editors.name\r\nFROM Editors\r\nWHERE Editors.languages = \"English and Spanish\"",
+        "sql_query2": "SELECT Journalists.name\r\nFROM Journalists\r\nUNION\r\nSELECT Editors.name\r\nFROM Editors\r\nWHERE Editors.languages = \"English and Spanish\"",
+        "interpretation1": "What journalists speak English and Spanish and what editors also speak those languages?",
+        "interpretation2": "Provide a list of all journalists and also provide a list of editors that speak English and Spanish."
+    }
+]

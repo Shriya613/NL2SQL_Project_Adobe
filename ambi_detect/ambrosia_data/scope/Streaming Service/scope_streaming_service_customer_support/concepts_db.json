@@ -1,0 +1,31 @@
+{
+    "template": "Each Streaming Service has many different Customer Support. Among them, Live Chat is common to many Streaming Service.",
+    "entities": {
+        "tab_name": "streaming_service",
+        "col_name": null,
+        "value": null,
+        "scope_id": null,
+        "db_type": "table"
+    },
+    "components": {
+        "tab_name": "customer_support",
+        "col_name": null,
+        "value": null,
+        "scope_id": null,
+        "db_type": "table"
+    },
+    "specific_component": {
+        "tab_name": "customer_support",
+        "col_name": "support_type",
+        "value": "Live Chat",
+        "scope_id": 0,
+        "db_type": "value"
+    },
+    "entities_components": {
+        "tab_name": "streaming_service_customer_support",
+        "col_name": null,
+        "value": null,
+        "scope_id": null,
+        "db_type": "table"
+    }
+}

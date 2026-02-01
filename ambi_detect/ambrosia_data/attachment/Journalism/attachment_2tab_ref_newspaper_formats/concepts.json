@@ -1,0 +1,8 @@
+{
+    "template": "Broadsheet and Tabloid are subclasses of Newspaper Formats. All Broadsheets and Tabloids have property \"Distributors\". There might be a Broadsheet and a Tabloid that both have \"Distributors\" equal to \"Sainsbury's\".",
+    "general_class": "Newspaper Formats",
+    "class1": "Broadsheet",
+    "class2": "Tabloid",
+    "common_property": "Distributors",
+    "common_value": "Sainsbury's"
+}

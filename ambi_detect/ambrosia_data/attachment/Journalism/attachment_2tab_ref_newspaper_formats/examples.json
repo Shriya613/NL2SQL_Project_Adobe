@@ -1,0 +1,9 @@
+[
+    {
+        "question": "Show me broadsheets and tabloids sold by Tesco.",
+        "sql_query1": "SELECT Broadsheet.Title\r\nFROM Distributor JOIN Broadsheet ON Distributor.ID = Broadsheet.DistributorID\r\nWHERE Distributor.Name = \"Tesco\"\r\nUNION\r\nSELECT Tabloid.Title\r\nFROM Distributor JOIN Tabloid ON Distributor.ID = Tabloid.DistributorID\r\nWHERE Distributor.Name = \"Tesco\"",
+        "sql_query2": "SELECT Broadsheet.Title\r\nFROM Distributor JOIN Broadsheet ON Distributor.ID = Broadsheet.DistributorID\r\nUNION\r\nSELECT Tabloid.Title\r\nFROM Distributor JOIN Tabloid ON Distributor.ID = Tabloid.DistributorID\r\nWHERE Distributor.Name = \"Tesco\"",
+        "interpretation1": "What are the broadsheets sold by Tesco and also the tabloids sold by Tesco?",
+        "interpretation2": "List the broadsheets and also list the tabloids sold by Tesco."
+    }
+]

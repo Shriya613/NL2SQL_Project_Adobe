@@ -1,0 +1,9 @@
+[
+    {
+        "question": "Show the IT technicians and network administrators who use Windows.",
+        "sql_query1": "SELECT IT_Support_Technician.name\r\nFROM Operating_System_Knowledge JOIN IT_Support_Technician ON Operating_System_Knowledge.ID = IT_Support_Technician.Operating_System_ID\r\nWHERE Operating_System_Knowledge.OS_Name = \"Windows\"\r\nUNION\r\nSELECT Network_Administrator.name\r\nFROM Operating_System_Knowledge JOIN Network_Administrator ON Operating_System_Knowledge.ID = Network_Administrator.Operating_System_ID\r\nWHERE Operating_System_Knowledge.OS_Name = \"Windows\"",
+        "sql_query2": "SELECT IT_Support_Technician.name\r\nFROM Operating_System_Knowledge JOIN IT_Support_Technician ON Operating_System_Knowledge.ID = IT_Support_Technician.Operating_System_ID\r\nUNION\r\nSELECT Network_Administrator.name\r\nFROM Operating_System_Knowledge JOIN Network_Administrator ON Operating_System_Knowledge.ID = Network_Administrator.Operating_System_ID\r\nWHERE Operating_System_Knowledge.OS_Name = \"Windows\"",
+        "interpretation1": "What are the IT technicians who use Windows, and also network administrators who use Windows?",
+        "interpretation2": "List the IT technicians and also list the network administrators who use Windows."
+    }
+]

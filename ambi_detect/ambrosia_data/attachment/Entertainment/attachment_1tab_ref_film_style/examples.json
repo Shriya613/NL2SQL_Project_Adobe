@@ -1,0 +1,9 @@
+[
+    {
+        "question": "Show all the adventure movies and action movies directed by Sofia Martinez.",
+        "sql_query1": "SELECT Movies.Title \r\nFROM Movies JOIN Directors ON Movies.DirectorId = Directors.DirectorId\r\nWHERE (Movies.FilmStyle = \"Adventure Movie\" OR Movies.FilmStyle = \"Action Movie\") AND Directors.Name = \"Sofia Martinez\"",
+        "sql_query2": "SELECT Movies.Title \r\nFROM Movies JOIN Directors ON Movies.DirectorId = Directors.DirectorId\r\nWHERE Movies.FilmStyle = \"Adventure Movie\" OR Movies.FilmStyle = \"Action Movie\" AND Directors.Name = \"Sofia Martinez\"",
+        "interpretation1": "Give me all the adventure and action movies where either of them is directed by Sofia Martinez.",
+        "interpretation2": "Show all of the adventure movies, then also show the Sofia Martinez directed action movies."
+    }
+]

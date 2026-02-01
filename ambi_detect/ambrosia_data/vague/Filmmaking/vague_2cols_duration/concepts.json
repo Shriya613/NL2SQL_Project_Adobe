@@ -1,0 +1,7 @@
+{
+    "template": "Question: How long is this movie? Subject of Inquiry: Movies\nFocus: Duration Possible answer types: 1. Running Time 2. Extended Version Length",
+    "subject": "Movies",
+    "focus": "Duration",
+    "general_category1": "Running Time",
+    "general_category2": "Extended Version Length"
+}

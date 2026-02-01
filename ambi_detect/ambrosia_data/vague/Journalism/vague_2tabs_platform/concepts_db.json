@@ -1,0 +1,25 @@
+{
+    "template": "Question: What technology platform do journalists use to distribute their content? Subject of Inquiry: News Agency\nFocus: Platform Possible answer types: 1. Website 2. Mobile App",
+    "general_category1": {
+        "tab_name": "Website",
+        "col_name": null,
+        "value": null,
+        "scope_id": null,
+        "db_type": "table"
+    },
+    "general_category2": {
+        "tab_name": "Mobile_App",
+        "col_name": null,
+        "value": null,
+        "scope_id": null,
+        "db_type": "table"
+    },
+    "subject": {
+        "tab_name": "News_Agency",
+        "col_name": null,
+        "value": null,
+        "scope_id": null,
+        "db_type": "table"
+    },
+    "type": "2tabs"
+}

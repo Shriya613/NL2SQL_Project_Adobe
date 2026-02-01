@@ -1,0 +1,25 @@
+{
+    "template": "Question: Where is this online course taught? Subject of Inquiry: Online Course\nFocus: Course Provider Possible answer types: 1. Platform Name 2. University",
+    "general_category1": {
+        "tab_name": "Platforms",
+        "col_name": "PlatformName",
+        "value": null,
+        "scope_id": null,
+        "db_type": "column"
+    },
+    "general_category2": {
+        "tab_name": "Platforms",
+        "col_name": "University",
+        "value": null,
+        "scope_id": null,
+        "db_type": "column"
+    },
+    "subject": {
+        "tab_name": "Platforms",
+        "col_name": "PlaformID",
+        "value": null,
+        "scope_id": null,
+        "db_type": "column"
+    },
+    "type": "2cols"
+}

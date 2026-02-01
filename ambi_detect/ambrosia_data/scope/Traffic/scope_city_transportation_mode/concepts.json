@@ -1,0 +1,6 @@
+{
+    "template": "Each City has many different Transportation Mode. Among them, Buses is common to many City.",
+    "specific_component": "Buses",
+    "components": "Transportation Mode",
+    "entities": "City"
+}

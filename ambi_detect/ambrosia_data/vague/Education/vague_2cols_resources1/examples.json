@@ -1,0 +1,22 @@
+[
+    {
+        "question": "give me a list of resource used in projects containing the word poster",
+        "sql_query1": "Select TextbookTitle from Textbooks_Supplies_Projects where ProjectDescription like '%poster%'",
+        "sql_query2": "Select SupplyItem from Textbooks_Supplies_Projects where ProjectDescription like '%poster%'",
+        "sql_query3": "Select TextbookTitle, SupplyItem from Textbooks_Supplies_Projects where ProjectDescription like '%poster%'",
+        "interpretation1": "give me a list of textbooks used in projects containing the word poster",
+        "interpretation2": "give me a list of supply items used in projects containing the word poster",
+        "interpretation3": "give me a list of textbooks used in projects containing the word poster and the supply items used for that projects.",
+        "sql_query_general": "Select Resources from Textbooks_Supplies_Projects where ProjectDescription like '%poster%'"
+    },
+    {
+        "question": "give me a list of projects containing the word poster and corresponding resources",
+        "sql_query1": "Select TextbookTitle, ProjectDescription from Textbooks_Supplies_Projects where ProjectDescription like '%poster%'",
+        "sql_query2": "Select SupplyItem, ProjectDescription from Textbooks_Supplies_Projects where ProjectDescription like '%poster%'",
+        "sql_query3": "Select TextbookTitle, SupplyItem, ProjectDescription from Textbooks_Supplies_Projects where ProjectDescription like '%poster%'",
+        "interpretation1": "List all projects with the word poster and their associated textbooks.",
+        "interpretation2": "List all projects with the word poster and their associated supply items.",
+        "interpretation3": "List all projects with the word poster and their associated textbooks and other supply items.",
+        "sql_query_general": "Select Resources, ProjectDescription from Textbooks_Supplies_Projects where ProjectDescription like '%poster%'"
+    }
+]

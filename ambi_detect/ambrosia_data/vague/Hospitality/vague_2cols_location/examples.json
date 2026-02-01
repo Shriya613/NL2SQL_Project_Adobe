@@ -1,0 +1,22 @@
+[
+    {
+        "question": "Where is the cheapest room with a spa?",
+        "sql_query1": "select Building from Rooms where Spa = 1 order by Rate limit 1",
+        "sql_query2": "select Area from Rooms where Spa = 1 order by Rate limit 1",
+        "sql_query3": "select Building, Area from Rooms where Spa = 1 order by Rate limit 1",
+        "interpretation1": "which building has the cheapest room with a spa?",
+        "interpretation2": "which area has the cheapest room with a spa?",
+        "interpretation3": "which building and area have the cheapest room with a spa?",
+        "sql_query_general": "select Location from Rooms where Spa = 1 order by Rate limit 1"
+    },
+    {
+        "question": "Show the locations of occupied rooms.",
+        "sql_query1": "select Building from Rooms where occupied = 1",
+        "sql_query2": "select Area from Rooms where occupied = 1",
+        "sql_query3": "select Building, Area from Rooms where occupied = 1",
+        "interpretation1": "What building are the occupied rooms in?",
+        "interpretation2": "Which area are the occupied rooms in?",
+        "interpretation3": "What building and area are the occupied rooms in?",
+        "sql_query_general": "select Location from Rooms where occupied = 1"
+    }
+]

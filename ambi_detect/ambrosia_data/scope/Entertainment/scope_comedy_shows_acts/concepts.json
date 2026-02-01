@@ -1,0 +1,6 @@
+{
+    "template": "Each Comedy Shows has many different Acts. Among them, Headliner is common to many Comedy Shows.",
+    "specific_component": "Headliner",
+    "components": "Acts",
+    "entities": "Comedy Shows"
+}

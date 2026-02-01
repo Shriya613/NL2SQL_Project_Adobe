@@ -1,0 +1,23 @@
+[
+    {
+        "question": "Show me activities each tour operator organises.",
+        "sql_query1": "SELECT Activities.activity_name  from Adventure_Tour_Operators_Activities join Activities on Adventure_Tour_Operators_Activities.activity_id = Activities.id join Adventure_Tour_Operators on Adventure_Tour_Operators_Activities.adventure_tour_operator_id = Adventure_Tour_Operators.id   GROUP BY Adventure_Tour_Operators_Activities.activity_id HAVING COUNT(DISTINCT Adventure_Tour_Operators_Activities.adventure_tour_operator_id) = (SELECT COUNT(*) FROM  Adventure_Tour_Operators)",
+        "sql_query2": "select adventure_tour_operators.name , activities.activity_name from Adventure_Tour_Operators_Activities join Activities on Adventure_Tour_Operators_Activities.activity_id = Activities.id join Adventure_Tour_Operators on Adventure_Tour_Operators_Activities.adventure_tour_operator_id = Adventure_Tour_Operators.id",
+        "interpretation1": "What activities are common to all tour operators?",
+        "interpretation2": "For every tour operator, list activities they organise."
+    },
+    {
+        "question": "which activity names and descriptions are associated with each adventure tour operator?",
+        "sql_query1": "SELECT Activities.activity_name, Activities.description  from Adventure_Tour_Operators_Activities join Activities on Adventure_Tour_Operators_Activities.activity_id = Activities.id join Adventure_Tour_Operators on Adventure_Tour_Operators_Activities.adventure_tour_operator_id = Adventure_Tour_Operators.id   GROUP BY Adventure_Tour_Operators_Activities.activity_id HAVING COUNT(DISTINCT Adventure_Tour_Operators_Activities.adventure_tour_operator_id) = (SELECT COUNT(*) FROM  Adventure_Tour_Operators)",
+        "sql_query2": "select adventure_tour_operators.name , activities.activity_name , activities.description from Adventure_Tour_Operators_Activities join Activities on Adventure_Tour_Operators_Activities.activity_id = Activities.id join Adventure_Tour_Operators on Adventure_Tour_Operators_Activities.adventure_tour_operator_id = Adventure_Tour_Operators.id",
+        "interpretation1": "Provide me with the activity name and description that are common to all adventure tours.",
+        "interpretation2": "For each adventure tour  operator, list the corresponding activity names and descriptions."
+    },
+    {
+        "question": "Describe the activities that each tour operator offers.",
+        "sql_query1": "SELECT Activities.description  from Adventure_Tour_Operators_Activities join Activities on Adventure_Tour_Operators_Activities.activity_id = Activities.id join Adventure_Tour_Operators on Adventure_Tour_Operators_Activities.adventure_tour_operator_id = Adventure_Tour_Operators.id   GROUP BY Adventure_Tour_Operators_Activities.activity_id HAVING COUNT(DISTINCT Adventure_Tour_Operators_Activities.adventure_tour_operator_id) = (SELECT COUNT(*) FROM  Adventure_Tour_Operators)",
+        "sql_query2": "select adventure_tour_operators.name , activities.description from Adventure_Tour_Operators_Activities join Activities on Adventure_Tour_Operators_Activities.activity_id = Activities.id join Adventure_Tour_Operators on Adventure_Tour_Operators_Activities.adventure_tour_operator_id = Adventure_Tour_Operators.id",
+        "interpretation1": "What are the descriptions of the activities common to all tour operators?",
+        "interpretation2": "For each tour operator, describe the activities that they offer."
+    }
+]

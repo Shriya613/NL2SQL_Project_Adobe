@@ -1,0 +1,7 @@
+{
+    "template": "Question: What is the life expectancy for individuals born in this region? Subject of Inquiry: Region\nFocus: Life Expectancy Possible answer types: 1. Average Years of Life 2. Gender-specific Life Expectancy",
+    "subject": "Region",
+    "focus": "Life Expectancy",
+    "general_category1": "Average Years of Life",
+    "general_category2": "Gender-specific Life Expectancy"
+}

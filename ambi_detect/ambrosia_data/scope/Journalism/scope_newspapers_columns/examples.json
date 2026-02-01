@@ -1,0 +1,9 @@
+[
+    {
+        "question": "Show me the columns each newspaper publishes.",
+        "sql_query1": "SELECT Columns.column_name  from Newspapers_Columns join Columns on Newspapers_Columns.column_id = Columns.id join Newspapers on Newspapers_Columns.newspaper_id = Newspapers.id   GROUP BY Newspapers_Columns.column_id HAVING COUNT(DISTINCT Newspapers_Columns.newspaper_id) = (SELECT COUNT(*) FROM  Newspapers)",
+        "sql_query2": "select newspapers.name , columns.column_name from Newspapers_Columns join Columns on Newspapers_Columns.column_id = Columns.id join Newspapers on Newspapers_Columns.newspaper_id = Newspapers.id",
+        "interpretation1": "What columns are common to all newspapers?",
+        "interpretation2": "For every newspaper, list the columns they publish."
+    }
+]

@@ -1,0 +1,27 @@
+{
+    "domain": "Languages",
+    "template": "Gate Agent and Pilot are subclasses of Airport Staff. All Gate Agents and Pilots have the property \"Language\". There might be a Gate Agent and a Pilot that both speak \"English\".",
+    "type": "2tab_ref",
+    "general_class": "Airport Staff",
+    "class1": {
+        "tab_name": "GateAgents",
+        "col_name": null,
+        "value": null,
+        "scope_id": null,
+        "db_type": "table"
+    },
+    "class2": {
+        "tab_name": "Pilots",
+        "col_name": null,
+        "value": null,
+        "scope_id": null,
+        "db_type": "table"
+    },
+    "common_property": {
+        "tab_name": "Languages",
+        "col_name": "language",
+        "value": "Japanese",
+        "scope_id": null,
+        "db_type": "value"
+    }
+}

@@ -1,0 +1,7 @@
+{
+    "template": "Question: What is the immigration status of residents in this municipality? Subject of Inquiry: Municipality\nFocus: Immigration Status Possible answer types: 1. Foreign-born Population 2. Naturalized Citizens",
+    "subject": "Municipality",
+    "focus": "Immigration Status",
+    "general_category1": "Foreign-born Population",
+    "general_category2": "Naturalized Citizens"
+}

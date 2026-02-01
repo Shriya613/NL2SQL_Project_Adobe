@@ -1,0 +1,6 @@
+{
+    "template": "Each Scuba Diving Centers has many different Dive Sites. Among them, Coral Reefs is common to many Scuba Diving Centers.",
+    "specific_component": "Coral Reefs",
+    "components": "Dive Sites",
+    "entities": "Scuba Diving Centers"
+}

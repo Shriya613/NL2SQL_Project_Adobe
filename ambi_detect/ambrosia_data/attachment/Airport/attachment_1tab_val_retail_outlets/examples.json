@@ -1,0 +1,9 @@
+[
+    {
+        "question": "Show me duty-free shops and souvenir stores that are located at Terminal 3.",
+        "sql_query1": "SELECT RetailOutlets.Name \r\nFROM RetailOutlets\r\nWHERE (RetailOutlets.type = \"Duty-Free Shop\" OR RetailOutlets.type = \"Souvenir Store\") AND RetailOutlets.location = \"Terminal 3\"",
+        "sql_query2": "SELECT RetailOutlets.Name \r\nFROM RetailOutlets\r\nWHERE RetailOutlets.type = \"Duty-Free Shop\" OR RetailOutlets.type = \"Souvenir Store\" AND RetailOutlets.location = \"Terminal 3\"",
+        "interpretation1": "Which duty-free shops are located at Terminal 3 and which souvenir stores are located at the same terminal?",
+        "interpretation2": "Provide a list of all duty-free shops and also provide a list of souvenir stores that are located at Terminal 3."
+    }
+]

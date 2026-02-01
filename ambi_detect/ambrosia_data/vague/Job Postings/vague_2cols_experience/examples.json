@@ -1,0 +1,12 @@
+[
+    {
+        "question": "What experience do I need for the open position with the greatest salary?",
+        "sql_query1": "SELECT Minimum_Years\r\nFROM Jobs\r\nORDER BY Salary DESC\r\nLIMIT 1;",
+        "sql_query2": "SELECT Preferred_Years\r\nFROM Jobs\r\nORDER BY Salary DESC\r\nLIMIT 1;",
+        "sql_query3": "SELECT Minimum_Years, Preferred_Years\r\nFROM Jobs\r\nORDER BY Salary DESC\r\nLIMIT 1;",
+        "interpretation1": "What are the minimum years of experience that I need for the open position with the greatest salary?",
+        "interpretation2": "What are the preferred years of experience for the open position with the greatest salary?",
+        "interpretation3": "What are the minimum and preferred years of experience for the open position with the greatest salary?",
+        "sql_query_general": "SELECT Experience\r\nFROM Jobs\r\nORDER BY Salary DESC\r\nLIMIT 1;"
+    }
+]

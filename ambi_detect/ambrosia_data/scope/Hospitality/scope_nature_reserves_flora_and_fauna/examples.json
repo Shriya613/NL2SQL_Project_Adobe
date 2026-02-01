@@ -1,0 +1,9 @@
+[
+    {
+        "question": "Give me the species of flora and fauna that every nature reserve has.",
+        "sql_query1": "SELECT Flora_and_fauna.SpeciesName  from Nature_reserves_flora_and_fauna join Flora_and_fauna on Nature_reserves_flora_and_fauna.FaunaId = Flora_and_fauna.FaunaID join Nature_Reserves on Nature_reserves_flora_and_fauna.NatureReserveId = Nature_Reserves.ReserveID   GROUP BY Nature_reserves_flora_and_fauna.FaunaId HAVING COUNT(DISTINCT Nature_reserves_flora_and_fauna.NatureReserveId) = (SELECT COUNT(*) FROM  Nature_Reserves)",
+        "sql_query2": "select nature_reserves.name , flora_and_fauna.speciesname from Nature_reserves_flora_and_fauna join Flora_and_fauna on Nature_reserves_flora_and_fauna.FaunaId = Flora_and_fauna.FaunaID join Nature_Reserves on Nature_reserves_flora_and_fauna.NatureReserveId = Nature_Reserves.ReserveID",
+        "interpretation1": "Which species of flora and fauna do all nature reserves have in common?",
+        "interpretation2": "For each nature reserve, show the species of flora and fauna that they have."
+    }
+]

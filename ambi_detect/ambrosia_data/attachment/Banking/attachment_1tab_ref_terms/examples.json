@@ -1,0 +1,9 @@
+[
+    {
+        "question": "Display monthly interest rates and annual percentage rates of bank accounts with a balance of 20,000.",
+        "sql_query1": "SELECT Terms.Value \r\nFROM Terms JOIN Loans ON Terms.LOAN_ID = Loans.LoanID JOIN BankAccounts ON Loans.ForeignKeyAccountNumber = BankAccounts.AccountNumber\r\nWHERE (Terms.Description = \"Monthly Interest Rate\" OR Terms.Description = \"Annual Percentage Rate\") AND BankAccounts.CurrentBalance = 20000.0",
+        "sql_query2": "SELECT Terms.Value \r\nFROM Terms JOIN Loans ON Terms.LOAN_ID = Loans.LoanID JOIN BankAccounts ON Loans.ForeignKeyAccountNumber = BankAccounts.AccountNumber\r\nWHERE Terms.Description = \"Monthly Interest Rate\" OR Terms.Description = \"Annual Percentage Rate\" AND BankAccounts.CurrentBalance = 20000.0",
+        "interpretation1": "What are monthly interest rates of bank accounts with a balance of 20,000 and what are annual percentage rates of bank accounts with the same balance?",
+        "interpretation2": "List all monthly interest rates and also list annual percentage rates of bank accounts with a balance of 20,000."
+    }
+]

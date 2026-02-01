@@ -1,0 +1,25 @@
+{
+    "template": "Question: Who reported this story? Subject of Inquiry: Story\nFocus: Reporter Possible answer types: 1. Journalist 2. News Agency",
+    "general_category1": {
+        "tab_name": "stories",
+        "col_name": "journalist_id",
+        "value": null,
+        "scope_id": null,
+        "db_type": "column"
+    },
+    "general_category2": {
+        "tab_name": "stories",
+        "col_name": "news_agency_id",
+        "value": null,
+        "scope_id": null,
+        "db_type": "column"
+    },
+    "subject": {
+        "tab_name": "assigned_stories",
+        "col_name": "story_id",
+        "value": null,
+        "scope_id": null,
+        "db_type": "column"
+    },
+    "type": "2cols"
+}

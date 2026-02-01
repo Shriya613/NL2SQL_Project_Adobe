@@ -1,0 +1,25 @@
+{
+    "template": "Question: What is included in closing costs when buying a house? Subject of Inquiry: House Price\nFocus: Extras Possible answer types: 1. Fees 2. Taxes",
+    "general_category1": {
+        "tab_name": "House",
+        "col_name": "Fees",
+        "value": null,
+        "scope_id": null,
+        "db_type": "column"
+    },
+    "general_category2": {
+        "tab_name": "House",
+        "col_name": "Taxes",
+        "value": null,
+        "scope_id": null,
+        "db_type": "column"
+    },
+    "subject": {
+        "tab_name": "House",
+        "col_name": "House_Price",
+        "value": null,
+        "scope_id": null,
+        "db_type": "column"
+    },
+    "type": "2cols"
+}

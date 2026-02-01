@@ -1,0 +1,31 @@
+{
+    "template": "Each Hotels has many different Amenities. Among them, Spa is common to many Hotels.",
+    "entities": {
+        "tab_name": "Hotels",
+        "col_name": null,
+        "value": null,
+        "scope_id": null,
+        "db_type": "table"
+    },
+    "components": {
+        "tab_name": "Amenities",
+        "col_name": null,
+        "value": null,
+        "scope_id": null,
+        "db_type": "table"
+    },
+    "specific_component": {
+        "tab_name": "Amenities",
+        "col_name": "amenityName",
+        "value": "Spa",
+        "scope_id": 0,
+        "db_type": "value"
+    },
+    "entities_components": {
+        "tab_name": "Hotel_Amenities",
+        "col_name": null,
+        "value": null,
+        "scope_id": null,
+        "db_type": "table"
+    }
+}

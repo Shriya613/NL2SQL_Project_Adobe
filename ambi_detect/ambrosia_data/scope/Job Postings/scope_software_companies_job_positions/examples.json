@@ -1,0 +1,23 @@
+[
+    {
+        "question": "Display the description of job positions available at each software company.",
+        "sql_query1": "SELECT Job_Positions.description  from Software_Companies_Job_Positions join Job_Positions on Software_Companies_Job_Positions.job_position_id = Job_Positions.id join Software_Companies on Software_Companies_Job_Positions.software_company_id = Software_Companies.id   GROUP BY Software_Companies_Job_Positions.job_position_id HAVING COUNT(DISTINCT Software_Companies_Job_Positions.software_company_id) = (SELECT COUNT(*) FROM  Software_Companies)",
+        "sql_query2": "select software_companies.company_name , job_positions.description from Software_Companies_Job_Positions join Job_Positions on Software_Companies_Job_Positions.job_position_id = Job_Positions.id join Software_Companies on Software_Companies_Job_Positions.software_company_id = Software_Companies.id",
+        "interpretation1": "List the common description of job positions for all software companies.",
+        "interpretation2": "For each software company, list the corresponding description of job positions."
+    },
+    {
+        "question": "Tell me the jobs every software company has.",
+        "sql_query1": "SELECT Job_Positions.position_title  from Software_Companies_Job_Positions join Job_Positions on Software_Companies_Job_Positions.job_position_id = Job_Positions.id join Software_Companies on Software_Companies_Job_Positions.software_company_id = Software_Companies.id   GROUP BY Software_Companies_Job_Positions.job_position_id HAVING COUNT(DISTINCT Software_Companies_Job_Positions.software_company_id) = (SELECT COUNT(*) FROM  Software_Companies)",
+        "sql_query2": "select software_companies.company_name , job_positions.position_title from Software_Companies_Job_Positions join Job_Positions on Software_Companies_Job_Positions.job_position_id = Job_Positions.id join Software_Companies on Software_Companies_Job_Positions.software_company_id = Software_Companies.id",
+        "interpretation1": "What jobs do all software companies have in common?",
+        "interpretation2": "For each software company, list the jobs they have."
+    },
+    {
+        "question": "which job titles and descriptions are associated with each software company?",
+        "sql_query1": "SELECT Job_Positions.position_title, Job_Positions.description  from Software_Companies_Job_Positions join Job_Positions on Software_Companies_Job_Positions.job_position_id = Job_Positions.id join Software_Companies on Software_Companies_Job_Positions.software_company_id = Software_Companies.id   GROUP BY Software_Companies_Job_Positions.job_position_id HAVING COUNT(DISTINCT Software_Companies_Job_Positions.software_company_id) = (SELECT COUNT(*) FROM  Software_Companies)",
+        "sql_query2": "select software_companies.company_name , job_positions.position_title , job_positions.description from Software_Companies_Job_Positions join Job_Positions on Software_Companies_Job_Positions.job_position_id = Job_Positions.id join Software_Companies on Software_Companies_Job_Positions.software_company_id = Software_Companies.id",
+        "interpretation1": "Provide me with the job title and description that is common for all software companies.",
+        "interpretation2": "For each software company, list the corresponding job titles and descriptions."
+    }
+]

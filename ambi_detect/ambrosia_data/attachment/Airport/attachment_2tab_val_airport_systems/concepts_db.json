@@ -1,0 +1,27 @@
+{
+    "domain": "Navigation_Systems",
+    "template": "Navigation System and Communication System are subclasses of Airport Systems. All Navigation Systems and Communication Systems have the property \"Airport\". There might be a Navigation System and a Communication System that both have \"Airport\" equal to \"Airport C\".",
+    "type": "2tab_val",
+    "general_class": "Airport Systems",
+    "class1": {
+        "tab_name": "Navigation_Systems",
+        "col_name": null,
+        "value": null,
+        "scope_id": null,
+        "db_type": "table"
+    },
+    "class2": {
+        "tab_name": "Communication_Systems",
+        "col_name": null,
+        "value": null,
+        "scope_id": null,
+        "db_type": "table"
+    },
+    "common_property": {
+        "tab_name": "Navigation_Systems",
+        "col_name": "Airport",
+        "value": "Heathrow",
+        "scope_id": null,
+        "db_type": "value"
+    }
+}

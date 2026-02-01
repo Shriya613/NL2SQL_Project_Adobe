@@ -1,0 +1,25 @@
+{
+    "template": "Question: What is the baggage allowance for checked bags? Subject of Inquiry: Airlines\nFocus: Allowance Possible answer types: 1. Bag Weight Limit 2. Bag Piece Limit",
+    "general_category1": {
+        "tab_name": "BaggageLimits",
+        "col_name": "BagWeightLimit",
+        "value": null,
+        "scope_id": null,
+        "db_type": "column"
+    },
+    "general_category2": {
+        "tab_name": "BaggageLimits",
+        "col_name": "BagPieceLimit",
+        "value": null,
+        "scope_id": null,
+        "db_type": "column"
+    },
+    "subject": {
+        "tab_name": "BaggageLimits",
+        "col_name": "Airlines",
+        "value": null,
+        "scope_id": null,
+        "db_type": "column"
+    },
+    "type": "2cols"
+}

@@ -1,0 +1,22 @@
+[
+    {
+        "question": "When did the hotel with the highest rate open?",
+        "sql_query1": "select Opening_Year from Hotels Join Rooms on Rooms.HotelID = Hotels.HotelID order by Rooms.Rate DESC LIMIT 1",
+        "sql_query2": "select Opening_Month from Hotels Join Rooms on Rooms.HotelID = Hotels.HotelID order by Rooms.Rate DESC LIMIT 1",
+        "sql_query3": "select Opening_Year, Opening_Month from Hotels Join Rooms on Rooms.HotelID = Hotels.HotelID order by Rooms.Rate DESC LIMIT 1",
+        "interpretation1": "In what year did the hotel with the highest rate open?",
+        "interpretation2": "In what month did the hotel with the highest rate open?",
+        "interpretation3": "In what year and month did the hotel with the highest rate open?",
+        "sql_query_general": "select Opening_Date from Hotels Join Rooms on Rooms.HotelID = Hotels.HotelID order by Rooms.Rate DESC LIMIT 1"
+    },
+    {
+        "question": "When did the hotel with a sea view open?",
+        "sql_query1": "select Opening_Year from Hotels Join Rooms on Rooms.HotelID = Hotels.HotelID where Rooms.Type = 'Sea View'",
+        "sql_query2": "select Opening_Month from Hotels Join Rooms on Rooms.HotelID = Hotels.HotelID where Rooms.Type = 'Sea View'",
+        "sql_query3": "select Opening_Year, Opening_Month from Hotels Join Rooms on Rooms.HotelID = Hotels.HotelID where Rooms.Type = 'Sea View'",
+        "interpretation1": "In what year did the hotel with a sea view open?",
+        "interpretation2": "Which month had the opening of the hotel with a sea view?",
+        "interpretation3": "List the year and month of the opening of the hotel with a sea view.",
+        "sql_query_general": "select Opening_Date from Hotels Join Rooms on Rooms.HotelID = Hotels.HotelID where Rooms.Type = 'Sea View'"
+    }
+]

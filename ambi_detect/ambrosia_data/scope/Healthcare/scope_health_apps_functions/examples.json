@@ -1,0 +1,9 @@
+[
+    {
+        "question": "Show me the functions of each health app.",
+        "sql_query1": "SELECT Functions.value  from Health_Apps_Functions join Functions on Health_Apps_Functions.functionID = Functions.functionID join Health_Apps on Health_Apps_Functions.healthAppID = Health_Apps.appID   GROUP BY Health_Apps_Functions.functionID HAVING COUNT(DISTINCT Health_Apps_Functions.healthAppID) = (SELECT COUNT(*) FROM  Health_Apps)",
+        "sql_query2": "select health_apps.name , functions.value from Health_Apps_Functions join Functions on Health_Apps_Functions.functionID = Functions.functionID join Health_Apps on Health_Apps_Functions.healthAppID = Health_Apps.appID",
+        "interpretation1": "What functions do all health apps have in common?",
+        "interpretation2": "For every health app, list the functions they have."
+    }
+]

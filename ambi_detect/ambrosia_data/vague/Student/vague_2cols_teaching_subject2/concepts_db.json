@@ -1,0 +1,25 @@
+{
+    "template": "Question: What does this professor teach? Subject of Inquiry: Professors\nFocus: Teaching Subject Possible answer types: 1. Discipline 2. Course Name",
+    "general_category1": {
+        "tab_name": "Courses",
+        "col_name": "discipline_id",
+        "value": null,
+        "scope_id": null,
+        "db_type": "column"
+    },
+    "general_category2": {
+        "tab_name": "Courses",
+        "col_name": "course_name",
+        "value": null,
+        "scope_id": null,
+        "db_type": "column"
+    },
+    "subject": {
+        "tab_name": "Courses",
+        "col_name": "professor_id",
+        "value": null,
+        "scope_id": null,
+        "db_type": "column"
+    },
+    "type": "2cols"
+}

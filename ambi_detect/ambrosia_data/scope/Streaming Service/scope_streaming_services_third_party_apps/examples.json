@@ -1,0 +1,23 @@
+[
+    {
+        "question": "Give me the third-party apps that each streaming service supports.",
+        "sql_query1": "SELECT Third_Party_Apps.app_name  from Streaming_Services_Third_Party_Apps join Third_Party_Apps on Streaming_Services_Third_Party_Apps.third_party_app_id = Third_Party_Apps.app_id join Streaming_Services on Streaming_Services_Third_Party_Apps.streaming_service_id = Streaming_Services.id   GROUP BY Streaming_Services_Third_Party_Apps.third_party_app_id HAVING COUNT(DISTINCT Streaming_Services_Third_Party_Apps.streaming_service_id) = (SELECT COUNT(*) FROM  Streaming_Services)",
+        "sql_query2": "select streaming_services.name , third_party_apps.app_name from Streaming_Services_Third_Party_Apps join Third_Party_Apps on Streaming_Services_Third_Party_Apps.third_party_app_id = Third_Party_Apps.app_id join Streaming_Services on Streaming_Services_Third_Party_Apps.streaming_service_id = Streaming_Services.id",
+        "interpretation1": "Which third-party apps are supported equally by all streaming services?",
+        "interpretation2": "For every steaming service, show the supported third-party apps."
+    },
+    {
+        "question": "What is the activation status of third-party apps associated with each streaming service?",
+        "sql_query1": "SELECT Third_Party_Apps.is_active  from Streaming_Services_Third_Party_Apps join Third_Party_Apps on Streaming_Services_Third_Party_Apps.third_party_app_id = Third_Party_Apps.app_id join Streaming_Services on Streaming_Services_Third_Party_Apps.streaming_service_id = Streaming_Services.id   GROUP BY Streaming_Services_Third_Party_Apps.third_party_app_id HAVING COUNT(DISTINCT Streaming_Services_Third_Party_Apps.streaming_service_id) = (SELECT COUNT(*) FROM  Streaming_Services)",
+        "sql_query2": "select streaming_services.name , third_party_apps.is_active from Streaming_Services_Third_Party_Apps join Third_Party_Apps on Streaming_Services_Third_Party_Apps.third_party_app_id = Third_Party_Apps.app_id join Streaming_Services on Streaming_Services_Third_Party_Apps.streaming_service_id = Streaming_Services.id",
+        "interpretation1": "What is the common activation status of third-party apps across all streaming services?",
+        "interpretation2": "For each streaming service, provide the corresponding activation status of third-party apps."
+    },
+    {
+        "question": "Give me the third-party apps that every streaming service supports and their statuses.",
+        "sql_query1": "SELECT Third_Party_Apps.app_name, Third_Party_Apps.is_active  from Streaming_Services_Third_Party_Apps join Third_Party_Apps on Streaming_Services_Third_Party_Apps.third_party_app_id = Third_Party_Apps.app_id join Streaming_Services on Streaming_Services_Third_Party_Apps.streaming_service_id = Streaming_Services.id   GROUP BY Streaming_Services_Third_Party_Apps.third_party_app_id HAVING COUNT(DISTINCT Streaming_Services_Third_Party_Apps.streaming_service_id) = (SELECT COUNT(*) FROM  Streaming_Services)",
+        "sql_query2": "select streaming_services.name , third_party_apps.app_name , third_party_apps.is_active from Streaming_Services_Third_Party_Apps join Third_Party_Apps on Streaming_Services_Third_Party_Apps.third_party_app_id = Third_Party_Apps.app_id join Streaming_Services on Streaming_Services_Third_Party_Apps.streaming_service_id = Streaming_Services.id",
+        "interpretation1": "Which third party apps are supported by all streaming services at the same time and what are their statuses?",
+        "interpretation2": "For each streaming service, show the supported third party apps and their statuses."
+    }
+]

@@ -1,0 +1,22 @@
+[
+    {
+        "question": "What is the passing requirement for Michael Brown's exam?",
+        "sql_query1": "SELECT PR.score FROM Students AS S JOIN Exams AS E ON S.id = E.studentId JOIN Minimum_Scores AS PR ON E.minScoreId = PR.id WHERE S.firstName = 'Michael' AND S.lastName = 'Brown';",
+        "sql_query2": "SELECT PR.percentage FROM Students AS S JOIN Exams AS E ON S.id = E.studentId JOIN percentage_requirements AS PR ON E.percentReqId = PR.id WHERE S.firstName = 'Michael' AND S.lastName = 'Brown';",
+        "sql_query3": "SELECT PR.score, P.percentage FROM Students AS S JOIN Exams AS E ON S.id = E.studentId JOIN Minimum_Scores AS PR ON E.minScoreId = PR.id JOIN percentage_requirements AS P ON E.percentReqId = P.id  WHERE S.firstName = 'Michael' AND S.lastName = 'Brown';",
+        "interpretation1": "What is the minimum score for Michael Brown to pass his exam?",
+        "interpretation2": "What is the percentage for Michael Brown to pass his exam?",
+        "interpretation3": "What is the minimum score and percentage for Michael Brown to pass his exam?",
+        "sql_query_general": "SELECT PR.score FROM Students AS S JOIN Exams AS E ON S.id = E.studentId JOIN Passing_Requirements AS PR ON E.minScoreId = PR.id WHERE S.firstName = 'Michael' AND S.lastName = 'Brown';"
+    },
+    {
+        "question": "What are the passing requirement for students whose first names start with the letter \"J\"?",
+        "sql_query1": "SELECT PR.score FROM Students AS S JOIN Exams AS E ON S.id = E.studentId JOIN Minimum_Scores AS PR ON E.minScoreId = PR.id WHERE S.firstName LIKE 'J%';",
+        "sql_query2": "SELECT PR.percentage FROM Students AS S JOIN Exams AS E ON S.id = E.studentId JOIN percentage_requirements AS PR ON E.percentReqId = PR.id WHERE S.firstName LIKE 'J%';",
+        "sql_query3": "SELECT PR.score, P.percentage FROM Students AS S JOIN Exams AS E ON S.id = E.studentId JOIN Minimum_Scores AS PR ON E.minScoreId = PR.id JOIN percentage_requirements AS P ON E.percentReqId = P.id WHERE S.firstName LIKE 'J%';",
+        "interpretation1": "What are the required minimum scores for all students whose first name starts with a J?",
+        "interpretation2": "What's the pass percentage for all students whose first names begin with J?",
+        "interpretation3": "What score is needed to pass for all students whose names begin with the letter J and what's that as a percentage.",
+        "sql_query_general": "SELECT PR.score FROM Students AS S JOIN Exams AS E ON S.id = E.studentId JOIN Passing_Requirements AS PR ON E.minScoreId = PR.id WHERE S.firstName LIKE 'J%';"
+    }
+]

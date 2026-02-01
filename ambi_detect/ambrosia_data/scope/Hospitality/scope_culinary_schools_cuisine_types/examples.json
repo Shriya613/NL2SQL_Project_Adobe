@@ -1,0 +1,9 @@
+[
+    {
+        "question": "What are the cuisine types available for every one of the culinary schools?",
+        "sql_query1": "SELECT Cuisine_Types.type  from Culinary_Schools_Cuisine_Types join Cuisine_Types on Culinary_Schools_Cuisine_Types.cuisine_type_id = Cuisine_Types.cuisine_id join Culinary_Schools on Culinary_Schools_Cuisine_Types.culinary_school_id = Culinary_Schools.id   GROUP BY Culinary_Schools_Cuisine_Types.cuisine_type_id HAVING COUNT(DISTINCT Culinary_Schools_Cuisine_Types.culinary_school_id) = (SELECT COUNT(*) FROM  Culinary_Schools)",
+        "sql_query2": "select culinary_schools.name , cuisine_types.type from Culinary_Schools_Cuisine_Types join Cuisine_Types on Culinary_Schools_Cuisine_Types.cuisine_type_id = Cuisine_Types.cuisine_id join Culinary_Schools on Culinary_Schools_Cuisine_Types.culinary_school_id = Culinary_Schools.id",
+        "interpretation1": "What are the cuisine types common to all schools?",
+        "interpretation2": "For each of the schools, what cuisine types are there?"
+    }
+]

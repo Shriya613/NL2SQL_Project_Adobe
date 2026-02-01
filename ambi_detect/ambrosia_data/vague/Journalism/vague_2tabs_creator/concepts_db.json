@@ -1,0 +1,25 @@
+{
+    "template": "Question: Who made this documentary? Subject of Inquiry: Documentary\nFocus: Creator Possible answer types: 1. Producer 2. Director",
+    "general_category1": {
+        "tab_name": "Producer",
+        "col_name": null,
+        "value": null,
+        "scope_id": null,
+        "db_type": "table"
+    },
+    "general_category2": {
+        "tab_name": "Director",
+        "col_name": null,
+        "value": null,
+        "scope_id": null,
+        "db_type": "table"
+    },
+    "subject": {
+        "tab_name": "Documentary",
+        "col_name": null,
+        "value": null,
+        "scope_id": null,
+        "db_type": "table"
+    },
+    "type": "2tabs"
+}

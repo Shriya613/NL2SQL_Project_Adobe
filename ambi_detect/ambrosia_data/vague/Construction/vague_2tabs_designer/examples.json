@@ -1,0 +1,22 @@
+[
+    {
+        "question": "Show all designers",
+        "sql_query1": "SELECT name\r\nFROM Architect;",
+        "sql_query2": "SELECT name\r\nFROM Firm;",
+        "sql_query3": "SELECT Firm.name, Architect.name\r\nFROM Architect JOIN Building ON Building.architect_id = Architect.id  JOIN Firm ON Building.firm_id = Firm.id;",
+        "interpretation1": "Show all architects.",
+        "interpretation2": "Show all firms.",
+        "interpretation3": "Show all architects and firms.",
+        "sql_query_general": "SELECT name\r\nFROM Designer;"
+    },
+    {
+        "question": "Who designed the hospital?",
+        "sql_query1": "SELECT name\r\nFROM Architect JOIN Building ON Building.architect_id = Architect.id\r\nWHERE building_name = 'Hospital'",
+        "sql_query2": "SELECT name\r\nFROM Firm JOIN Building ON Building.firm_id = Firm.id\r\nWHERE building_name = 'Hospital'",
+        "sql_query3": "SELECT Firm.name, Architect.name\r\nFROM Architect JOIN Building ON Building.architect_id = Architect.id  JOIN Firm ON Building.firm_id = Firm.id\r\nWHERE building_name = 'Hospital'",
+        "interpretation1": "the hospital was designed by which architect?",
+        "interpretation2": "Which firm designed the hospital?",
+        "interpretation3": "Which architect and firm designed the hospital?",
+        "sql_query_general": "SELECT name\r\nFROM Designer JOIN Building ON Building.architect_id = Designer.id\r\nWHERE building_name = 'Hospital'"
+    }
+]

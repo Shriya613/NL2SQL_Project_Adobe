@@ -1,0 +1,33 @@
+{
+    "domain": "Students",
+    "template": "Tablet and Laptop are subclasses of Personal Computing Devices. All Tablets and Laptops have property \"Operating System\". There might be a Tablet and a Laptop that both have \"Operating System\" equal to \"Windows 10\".",
+    "type": "1tab_val",
+    "general_class": {
+        "tab_name": "Students",
+        "col_name": "Personal_Computing_Devices",
+        "value": null,
+        "scope_id": null,
+        "db_type": "column"
+    },
+    "class1": {
+        "tab_name": "Students",
+        "col_name": "Personal_Computing_Devices",
+        "value": "Tablet",
+        "scope_id": null,
+        "db_type": "value"
+    },
+    "class2": {
+        "tab_name": "Students",
+        "col_name": "Personal_Computing_Devices",
+        "value": "Laptop",
+        "scope_id": null,
+        "db_type": "value"
+    },
+    "common_property": {
+        "tab_name": "Students",
+        "col_name": "Operating_System",
+        "value": "Windows 10",
+        "scope_id": null,
+        "db_type": "value"
+    }
+}

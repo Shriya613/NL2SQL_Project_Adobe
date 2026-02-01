@@ -1,0 +1,30 @@
+[
+    {
+        "question": "Show me the types and side effects of medications that are sold in every pharmacy.",
+        "sql_query1": "SELECT Medications.type, Medications.side_effects  from Pharmacy_Medications join Medications on Pharmacy_Medications.medication_id = Medications.medication_id join Pharmacies on Pharmacy_Medications.pharmacy_id = Pharmacies.id   GROUP BY Pharmacy_Medications.medication_id HAVING COUNT(DISTINCT Pharmacy_Medications.pharmacy_id) = (SELECT COUNT(*) FROM  Pharmacies)",
+        "sql_query2": "select pharmacies.name , medications.type , medications.side_effects from Pharmacy_Medications join Medications on Pharmacy_Medications.medication_id = Medications.medication_id join Pharmacies on Pharmacy_Medications.pharmacy_id = Pharmacies.id",
+        "interpretation1": "List the common medication types and side effects for all pharmacies.",
+        "interpretation2": "For each pharmacy, list their medication types and side effects."
+    },
+    {
+        "question": "What is the medication type for each pharmacy?",
+        "sql_query1": "SELECT Medications.type  from Pharmacy_Medications join Medications on Pharmacy_Medications.medication_id = Medications.medication_id join Pharmacies on Pharmacy_Medications.pharmacy_id = Pharmacies.id   GROUP BY Pharmacy_Medications.medication_id HAVING COUNT(DISTINCT Pharmacy_Medications.pharmacy_id) = (SELECT COUNT(*) FROM  Pharmacies)",
+        "sql_query2": "select pharmacies.name , medications.type from Pharmacy_Medications join Medications on Pharmacy_Medications.medication_id = Medications.medication_id join Pharmacies on Pharmacy_Medications.pharmacy_id = Pharmacies.id",
+        "interpretation1": "Show me the common type of medication for all pharmacies.",
+        "interpretation2": "For each pharmacy, show the type of medication it offers."
+    },
+    {
+        "question": "Give the medication type and its dosage available at each pharmacy.",
+        "sql_query1": "SELECT Medications.type, Medications.dosage  from Pharmacy_Medications join Medications on Pharmacy_Medications.medication_id = Medications.medication_id join Pharmacies on Pharmacy_Medications.pharmacy_id = Pharmacies.id   GROUP BY Pharmacy_Medications.medication_id HAVING COUNT(DISTINCT Pharmacy_Medications.pharmacy_id) = (SELECT COUNT(*) FROM  Pharmacies)",
+        "sql_query2": "select pharmacies.name , medications.type , medications.dosage from Pharmacy_Medications join Medications on Pharmacy_Medications.medication_id = Medications.medication_id join Pharmacies on Pharmacy_Medications.pharmacy_id = Pharmacies.id",
+        "interpretation1": "What is the medication type and dosage that is the same for every pharmacy?",
+        "interpretation2": "For every pharmacy, list the type and dosage of medications."
+    },
+    {
+        "question": "Tell me everything about the medications that every pharmacy offers.",
+        "sql_query1": "SELECT Medications.type, Medications.dosage, Medications.side_effects  from Pharmacy_Medications join Medications on Pharmacy_Medications.medication_id = Medications.medication_id join Pharmacies on Pharmacy_Medications.pharmacy_id = Pharmacies.id   GROUP BY Pharmacy_Medications.medication_id HAVING COUNT(DISTINCT Pharmacy_Medications.pharmacy_id) = (SELECT COUNT(*) FROM  Pharmacies)",
+        "sql_query2": "select pharmacies.name , medications.type , medications.dosage , medications.side_effects from Pharmacy_Medications join Medications on Pharmacy_Medications.medication_id = Medications.medication_id join Pharmacies on Pharmacy_Medications.pharmacy_id = Pharmacies.id",
+        "interpretation1": "What information is there about medications that are common to all pharmacies (their types, doses and side effects)?",
+        "interpretation2": "For each pharmacy, list information about medications offered (their types, doses and side effects)."
+    }
+]

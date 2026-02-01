@@ -1,0 +1,22 @@
+[
+    {
+        "question": "Describe the diagnosis, medications, and symptoms that have been alleviated",
+        "sql_query1": "SELECT Conditions.Medication, Conditions.ConditionName, Diagnoses.DiagnosisID FROM Conditions JOIN Diagnoses ON Diagnoses.ConditionID = Conditions. ConditionID;",
+        "sql_query2": "SELECT Conditions.Medication, Conditions.BodyPartAffected, Diagnoses.DiagnosisID FROM Conditions JOIN Diagnoses ON Diagnoses.ConditionID = Conditions. ConditionID;",
+        "sql_query3": "SELECT Conditions.Medication, Conditions.ConditionName, BodyPartAffected, Diagnoses.DiagnosisID FROM Conditions JOIN Diagnoses ON Diagnoses.ConditionID = Conditions. ConditionID;",
+        "interpretation1": "Describe the diagnosis, medications, and medical conditions.",
+        "interpretation2": "Describe the diagnosis, medications, and body parts affected.",
+        "interpretation3": "Describe the diagnosis, medications, medical conditions and body parts affected.",
+        "sql_query_general": "SELECT Conditions.Medication, Conditions.Symptom_Relief, Diagnoses.DiagnosisID FROM Conditions JOIN Diagnoses ON Diagnoses.ConditionID = Conditions. ConditionID;"
+    },
+    {
+        "question": "Describe dates of diagnosis that occurred on or after January 1, 2023, medications used to treat it, and symptoms associated with that diagnosis.",
+        "sql_query1": "SELECT Conditions.Medication, Conditions.ConditionName, Diagnoses.DateOfDiagnosis FROM Conditions JOIN Diagnoses ON Diagnoses.ConditionID = Conditions.ConditionID WHERE Diagnoses.DateOfDiagnosis >='2023-01-01';",
+        "sql_query2": "SELECT Conditions.Medication, Conditions.BodyPartAffected, Diagnoses.DateOfDiagnosis FROM Conditions JOIN Diagnoses ON Diagnoses.ConditionID = Conditions.ConditionID WHERE Diagnoses.DateOfDiagnosis >='2023-01-01';",
+        "sql_query3": "SELECT Conditions.Medication, Conditions.ConditionName, BodyPartAffected, Diagnoses.DateOfDiagnosis FROM Conditions JOIN Diagnoses ON Diagnoses.ConditionID = Conditions.ConditionID WHERE Diagnoses.DateOfDiagnosis >='2023-01-01';",
+        "interpretation1": "Describe dates of diagnosis that occurred on or after January 1, 2023, medications used to treat it, and the name of the condition associated with that diagnosis.",
+        "interpretation2": "Describe dates of diagnosis that occurred on or after January 1, 2023, medications used to treat it, and body parts affected by that diagnosis.",
+        "interpretation3": "Describe dates of diagnosis that occurred on or after January 1, 2023, medications used to treat it, and the name of the condition and body parts affected by that diagnosis.",
+        "sql_query_general": "SELECT Conditions.Medication, Conditions.Symptom_Relief, Diagnoses.DateOfDiagnosis FROM Conditions JOIN Diagnoses ON Diagnoses.ConditionID = Conditions.ConditionID WHERE Diagnoses.DateOfDiagnosis >='2023-01-01';"
+    }
+]

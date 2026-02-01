@@ -1,0 +1,22 @@
+[
+    {
+        "question": "Who made Inception?",
+        "sql_query1": "SELECT name FROM Studio JOIN Movie ON Studio.id = Movie.studio_id WHERE title = 'Inception'",
+        "sql_query2": "SELECT name FROM Director JOIN Movie ON Director.id = Movie.director_id WHERE title = 'Inception'",
+        "sql_query3": "SELECT Studio.name, Director.name FROM Studio JOIN Movie ON Studio.id = Movie.studio_id  JOIN Director ON Director.id = Movie.director_id  WHERE title = 'Inception'",
+        "interpretation1": "which studio made the movie inception?",
+        "interpretation2": "which director made the movie inception?",
+        "interpretation3": "which studio and director made the movie inception?",
+        "sql_query_general": "SELECT name FROM Film_Creator JOIN Movie ON Film_Creator.id = Movie.studio_id WHERE title = 'Inception'"
+    },
+    {
+        "question": "Who made the latest movie?",
+        "sql_query1": "SELECT name FROM Studio JOIN Movie ON Studio.id = Movie.studio_id ORDER BY release_date DESC LIMIT 1",
+        "sql_query2": "SELECT name FROM Director JOIN Movie ON Director.id = Movie.director_id ORDER BY release_date DESC LIMIT 1",
+        "sql_query3": "SELECT Studio.name, Director.name FROM Studio JOIN Movie ON Studio.id = Movie.studio_id JOIN Director ON Director.id = Movie.director_id   ORDER BY release_date DESC LIMIT 1",
+        "interpretation1": "Which studio made the latest movie?",
+        "interpretation2": "Which director made the latest movie?",
+        "interpretation3": "Which studio and director made the latest movie?",
+        "sql_query_general": "SELECT name FROM Film_Creator JOIN Movie ON Film_Creator.id = Movie.studio_id ORDER BY release_date DESC LIMIT 1"
+    }
+]

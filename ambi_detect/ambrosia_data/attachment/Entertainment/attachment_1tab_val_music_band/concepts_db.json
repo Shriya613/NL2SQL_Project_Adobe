@@ -1,0 +1,33 @@
+{
+    "domain": "Music_Bands",
+    "template": "Jazz Band and Rock Band are subclasses of Music Band. All Jazz bands and Rock bands have property \"Founding Year\". There might be a Jazz Band and a Rock Band that both have \"Founding Year\" equal to \"1985\".",
+    "type": "1tab_val",
+    "general_class": {
+        "tab_name": "Music_Bands",
+        "col_name": "Genre",
+        "value": null,
+        "scope_id": null,
+        "db_type": "column"
+    },
+    "class1": {
+        "tab_name": "Music_Bands",
+        "col_name": "Genre",
+        "value": "Jazz",
+        "scope_id": null,
+        "db_type": "value"
+    },
+    "class2": {
+        "tab_name": "Music_Bands",
+        "col_name": "Genre",
+        "value": "Rock",
+        "scope_id": null,
+        "db_type": "value"
+    },
+    "common_property": {
+        "tab_name": "Music_Bands",
+        "col_name": "Founding_Year",
+        "value": 1985,
+        "scope_id": null,
+        "db_type": "value"
+    }
+}

@@ -1,0 +1,22 @@
+[
+    {
+        "question": "What was the review of Pulp Fiction?",
+        "sql_query1": "SELECT Opinion\r\nFROM Reviews\r\n JOIN Film ON Film.ID = Reviews.FilmId  WHERE Title = 'Pulp Fiction'",
+        "sql_query2": "SELECT AudienceReviews\r\nFROM Reviews\r\n JOIN Film ON Film.ID = Reviews.FilmId  WHERE Title = 'Pulp Fiction'",
+        "sql_query3": "SELECT Opinion, AudienceReviews\r\nFROM Reviews\r\n JOIN Film ON Film.ID = Reviews.FilmId  WHERE Title = 'Pulp Fiction'",
+        "interpretation1": "What is the opinion on Pulp Fiction?",
+        "interpretation2": "What are the audience reviews on Pulp Fiction?",
+        "interpretation3": "What is the opinion and audience reviews of Pulp Fiction?",
+        "sql_query_general": "SELECT Review\r\nFROM Reviews\r\n JOIN Film ON Film.ID = Reviews.FilmId  WHERE Title = 'Pulp Fiction'"
+    },
+    {
+        "question": "What was the review of the drama film?",
+        "sql_query1": "SELECT Opinion\r\nFROM Reviews\r\nJOIN Film ON Film.ID = Reviews.FilmId  WHERE Genre = 'Drama'",
+        "sql_query2": "SELECT AudienceReviews\r\nFROM Reviews\r\nJOIN Film ON Film.ID = Reviews.FilmId  WHERE Genre = 'Drama'",
+        "sql_query3": "SELECT Opinion, AudienceReviews\r\nFROM Reviews\r\nJOIN Film ON Film.ID = Reviews.FilmId  WHERE Genre = 'Drama'",
+        "interpretation1": "What was the critic's opinion of the drama film?",
+        "interpretation2": "How did the audience review the drama film?",
+        "interpretation3": "What was the audience review and critical opinion for the drama film?",
+        "sql_query_general": "SELECT Review\r\nFROM Reviews\r\nJOIN Film ON Film.ID = Reviews.FilmId  WHERE Genre = 'Drama'"
+    }
+]

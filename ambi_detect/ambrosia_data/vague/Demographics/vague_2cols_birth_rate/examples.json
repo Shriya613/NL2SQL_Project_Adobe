@@ -1,0 +1,22 @@
+[
+    {
+        "question": "Show the birth rate, city and population for cities with a population greater than 75,000 people",
+        "sql_query1": "SELECT BirthYears.Number_Of_Births, BirthYears.City, AgeGroupPopulations.TotalPopulation FROM BirthYears JOIN AgeGroupPopulations ON BirthYears.City = AgeGroupPopulations.CityName WHERE AgeGroupPopulations.TotalPopulation > 75000",
+        "sql_query2": "SELECT BirthYears.Crude_Birth_Rate, BirthYears.City, AgeGroupPopulations.TotalPopulation FROM BirthYears JOIN AgeGroupPopulations ON BirthYears.City = AgeGroupPopulations.CityName WHERE AgeGroupPopulations.TotalPopulation > 75000",
+        "sql_query3": "SELECT BirthYears.Number_Of_Births, Crude_Birth_Rate, BirthYears.City, AgeGroupPopulations.TotalPopulation FROM BirthYears JOIN AgeGroupPopulations ON BirthYears.City = AgeGroupPopulations.CityName WHERE AgeGroupPopulations.TotalPopulation > 75000",
+        "interpretation1": "In cities with populations larger than 75,000, can you give me the number of births per year? Also show these cities and population.",
+        "interpretation2": "In cities with populations larger than 75,000, can you give me the crude birth rate? Also show these cities and population.",
+        "interpretation3": "In cities with populations larger than 75,000, can you give me the number of births per year and crude birth rate? Also show these cities and population.",
+        "sql_query_general": "SELECT BirthYears.Birth_Rate, BirthYears.City, AgeGroupPopulations.TotalPopulation FROM BirthYears JOIN AgeGroupPopulations ON BirthYears.City = AgeGroupPopulations.CityName WHERE AgeGroupPopulations.TotalPopulation > 75000"
+    },
+    {
+        "question": "Show me the birth rate for the most populous city, its population and name",
+        "sql_query1": "SELECT BirthYears.Number_Of_Births, AgeGroupPopulations.TotalPopulation, AgeGroupPopulations.CityName FROM BirthYears JOIN AgeGroupPopulations ON BirthYears.City = AgeGroupPopulations.CityName ORDER BY AgeGroupPopulations.TotalPopulation DESC LIMIT 1;",
+        "sql_query2": "SELECT BirthYears.Crude_Birth_Rate, AgeGroupPopulations.TotalPopulation, AgeGroupPopulations.CityName FROM BirthYears JOIN AgeGroupPopulations ON BirthYears.City = AgeGroupPopulations.CityName ORDER BY AgeGroupPopulations.TotalPopulation DESC LIMIT 1;",
+        "sql_query3": "SELECT BirthYears.Number_Of_Births, Crude_Birth_Rate, AgeGroupPopulations.TotalPopulation, AgeGroupPopulations.CityName FROM BirthYears JOIN AgeGroupPopulations ON BirthYears.City = AgeGroupPopulations.CityName ORDER BY AgeGroupPopulations.TotalPopulation DESC LIMIT 1;",
+        "interpretation1": "Show me the number of births for the most populous city, its population and name",
+        "interpretation2": "Show me the crude birth rate for the most populous city, its population and name",
+        "interpretation3": "Show me the crude birth rate for the most populous city, the number of people born there, its population and name.",
+        "sql_query_general": "SELECT BirthYears.Birth_Rate, AgeGroupPopulations.TotalPopulation, AgeGroupPopulations.CityName FROM BirthYears JOIN AgeGroupPopulations ON BirthYears.City = AgeGroupPopulations.CityName ORDER BY AgeGroupPopulations.TotalPopulation DESC LIMIT 1;"
+    }
+]

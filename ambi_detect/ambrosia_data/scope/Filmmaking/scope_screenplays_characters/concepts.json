@@ -1,0 +1,6 @@
+{
+    "template": "Each Screenplays has many different Characters. Among them, Protagonist is common to many Screenplays.",
+    "specific_component": "Protagonist",
+    "components": "Characters",
+    "entities": "Screenplays"
+}

@@ -1,0 +1,23 @@
+[
+    {
+        "question": "Tell me about the styles every hair stylist offers (with their descriptions).",
+        "sql_query1": "SELECT Styles.style_name, Styles.description  from Hair_Stylists_Styles join Styles on Hair_Stylists_Styles.style_id = Styles.style_id join Hair_Stylists on Hair_Stylists_Styles.hairdresser_id = Hair_Stylists.id   GROUP BY Hair_Stylists_Styles.style_id HAVING COUNT(DISTINCT Hair_Stylists_Styles.hairdresser_id) = (SELECT COUNT(*) FROM  Hair_Stylists)",
+        "sql_query2": "select hair_stylists.name , styles.style_name , styles.description from Hair_Stylists_Styles join Styles on Hair_Stylists_Styles.style_id = Styles.style_id join Hair_Stylists on Hair_Stylists_Styles.hairdresser_id = Hair_Stylists.id",
+        "interpretation1": "What information is there on the styles including their descriptions common to all hair stylists?",
+        "interpretation2": "For each hair stylist, list information on the styles offered (including their descriptions)."
+    },
+    {
+        "question": "What styles are available at every hair stylist?",
+        "sql_query1": "SELECT Styles.style_name  from Hair_Stylists_Styles join Styles on Hair_Stylists_Styles.style_id = Styles.style_id join Hair_Stylists on Hair_Stylists_Styles.hairdresser_id = Hair_Stylists.id   GROUP BY Hair_Stylists_Styles.style_id HAVING COUNT(DISTINCT Hair_Stylists_Styles.hairdresser_id) = (SELECT COUNT(*) FROM  Hair_Stylists)",
+        "sql_query2": "select hair_stylists.name , styles.style_name from Hair_Stylists_Styles join Styles on Hair_Stylists_Styles.style_id = Styles.style_id join Hair_Stylists on Hair_Stylists_Styles.hairdresser_id = Hair_Stylists.id",
+        "interpretation1": "Give me the styles that are common to all hair stylists",
+        "interpretation2": "For every hair stylist, give me the styles that they offer"
+    },
+    {
+        "question": "Show me the style description for each hair stylist.",
+        "sql_query1": "SELECT Styles.description  from Hair_Stylists_Styles join Styles on Hair_Stylists_Styles.style_id = Styles.style_id join Hair_Stylists on Hair_Stylists_Styles.hairdresser_id = Hair_Stylists.id   GROUP BY Hair_Stylists_Styles.style_id HAVING COUNT(DISTINCT Hair_Stylists_Styles.hairdresser_id) = (SELECT COUNT(*) FROM  Hair_Stylists)",
+        "sql_query2": "select hair_stylists.name , styles.description from Hair_Stylists_Styles join Styles on Hair_Stylists_Styles.style_id = Styles.style_id join Hair_Stylists on Hair_Stylists_Styles.hairdresser_id = Hair_Stylists.id",
+        "interpretation1": "What is the style description that is in common for all hair stylists?",
+        "interpretation2": "For each hair stylist, give me the style description."
+    }
+]

@@ -1,0 +1,6 @@
+{
+    "template": "Each Urban Planners has many different Elements. Among them, Green Space is common to many Urban Planners.",
+    "specific_component": "Green Space",
+    "components": "Elements",
+    "entities": "Urban Planners"
+}

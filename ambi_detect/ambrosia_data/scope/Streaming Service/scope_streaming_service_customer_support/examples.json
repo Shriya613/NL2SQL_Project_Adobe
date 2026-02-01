@@ -1,0 +1,23 @@
+[
+    {
+        "question": "Show me the type of support each streaming service provides.",
+        "sql_query1": "SELECT customer_support.support_type  from streaming_service_customer_support join customer_support on streaming_service_customer_support.customer_support_id = customer_support.id join streaming_service on streaming_service_customer_support.streaming_service_id = streaming_service.id   GROUP BY streaming_service_customer_support.customer_support_id HAVING COUNT(DISTINCT streaming_service_customer_support.streaming_service_id) = (SELECT COUNT(*) FROM  streaming_service)",
+        "sql_query2": "select streaming_service.name , customer_support.support_type from streaming_service_customer_support join customer_support on streaming_service_customer_support.customer_support_id = customer_support.id join streaming_service on streaming_service_customer_support.streaming_service_id = streaming_service.id",
+        "interpretation1": "What type of support do all streaming services provide equally?",
+        "interpretation2": "For every streaming service, list the types of support they provide."
+    },
+    {
+        "question": "What is the customer support type and description for each streaming service?",
+        "sql_query1": "SELECT customer_support.support_type, customer_support.description  from streaming_service_customer_support join customer_support on streaming_service_customer_support.customer_support_id = customer_support.id join streaming_service on streaming_service_customer_support.streaming_service_id = streaming_service.id   GROUP BY streaming_service_customer_support.customer_support_id HAVING COUNT(DISTINCT streaming_service_customer_support.streaming_service_id) = (SELECT COUNT(*) FROM  streaming_service)",
+        "sql_query2": "select streaming_service.name , customer_support.support_type , customer_support.description from streaming_service_customer_support join customer_support on streaming_service_customer_support.customer_support_id = customer_support.id join streaming_service on streaming_service_customer_support.streaming_service_id = streaming_service.id",
+        "interpretation1": "Give me the customer support type and description in common for all streaming services.",
+        "interpretation2": "What is the customer support type and description corresponding to each streaming service respectively?"
+    },
+    {
+        "question": "What is the customer support description for each streaming service?",
+        "sql_query1": "SELECT customer_support.description  from streaming_service_customer_support join customer_support on streaming_service_customer_support.customer_support_id = customer_support.id join streaming_service on streaming_service_customer_support.streaming_service_id = streaming_service.id   GROUP BY streaming_service_customer_support.customer_support_id HAVING COUNT(DISTINCT streaming_service_customer_support.streaming_service_id) = (SELECT COUNT(*) FROM  streaming_service)",
+        "sql_query2": "select streaming_service.name , customer_support.description from streaming_service_customer_support join customer_support on streaming_service_customer_support.customer_support_id = customer_support.id join streaming_service on streaming_service_customer_support.streaming_service_id = streaming_service.id",
+        "interpretation1": "What customer support description is in common for all streaming services?",
+        "interpretation2": "For each streaming service, show me the corresponding customer support description."
+    }
+]

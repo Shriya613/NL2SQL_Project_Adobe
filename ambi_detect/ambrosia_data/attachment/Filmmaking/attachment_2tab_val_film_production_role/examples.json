@@ -1,0 +1,9 @@
+[
+    {
+        "question": "Show all screenwriters and editors with 15 completed projects.",
+        "sql_query1": "SELECT Screenwriters.name\r\nFROM Screenwriters\r\nWHERE Screenwriters.Number_Of_Projects_Completed = 15\r\nUNION\r\nSELECT Editors.name\r\nFROM Editors\r\nWHERE Editors.Number_Of_Projects_Completed = 15",
+        "sql_query2": "SELECT Screenwriters.name\r\nFROM Screenwriters\r\nUNION\r\nSELECT Editors.name\r\nFROM Editors\r\nWHERE Editors.Number_Of_Projects_Completed = 15",
+        "interpretation1": "Which screenwriters have 15 completed projects and which editors have the same number of completed projects?",
+        "interpretation2": "Provide a list of all screenwriters combined with a list of editors with 15 completed projects."
+    }
+]

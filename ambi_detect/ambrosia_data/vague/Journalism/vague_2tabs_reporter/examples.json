@@ -1,0 +1,22 @@
+[
+    {
+        "question": "Who is working on the health crisis?",
+        "sql_query1": "SELECT Journalist.fullname FROM Journalist JOIN Story ON Story.journalistId = Journalist.id WHERE Story.title = 'Health Crisis'",
+        "sql_query2": "SELECT News_Agency.name FROM News_Agency JOIN Story ON Story.agencyId = News_Agency.id WHERE Story.title = 'Health Crisis'",
+        "sql_query3": "SELECT News_Agency.name, Journalist.fullname FROM Journalist JOIN Story ON Story.journalistId = Journalist.id JOIN News_Agency ON Story.agencyId = News_Agency.id  WHERE Story.title = 'Health Crisis'",
+        "interpretation1": "What journalist is working on the health crisis?",
+        "interpretation2": "Which news agency is working on the health crisis?",
+        "interpretation3": "What journalist and news agency is working on the health crisis?",
+        "sql_query_general": "SELECT Reporter.firstName, Reporter.lastName FROM Reporter JOIN Story ON Story.journalistId = Reporter.id WHERE Story.title = 'Health Crisis'"
+    },
+    {
+        "question": "Who is working on the tech innovations?",
+        "sql_query1": "SELECT Journalist.fullname FROM Journalist JOIN Story ON Story.journalistId = Journalist.id WHERE Story.title = 'Tech Innovations'",
+        "sql_query2": "SELECT News_Agency.name FROM News_Agency JOIN Story ON Story.agencyId = News_Agency.id WHERE Story.title = 'Tech Innovations'",
+        "sql_query3": "SELECT News_Agency.name, Journalist.fullname FROM Journalist JOIN Story ON Story.journalistId = Journalist.id JOIN News_Agency ON Story.agencyId = News_Agency.id WHERE Story.title = 'Tech Innovations'",
+        "interpretation1": "Show all journalists working on the tech innovations.",
+        "interpretation2": "Show all news agencies working on the tech innovations.",
+        "interpretation3": "Show all the journalists working on the tech innovations and news agencies working on the same topic.",
+        "sql_query_general": "SELECT Reporter.firstName, Reporter.lastName FROM Reporter JOIN Story ON Story.journalistId = Reporter.id WHERE Story.title = 'Tech Innovations'"
+    }
+]

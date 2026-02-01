@@ -1,0 +1,23 @@
+[
+    {
+        "question": "Show me the animals each farm uses and their count.",
+        "sql_query1": "SELECT Animals.Type, Animals.Quantity  from Farms_Animals join Animals on Farms_Animals.AnimalID = Animals.AnimalID join Farms on Farms_Animals.FarmID = Farms.FarmID   GROUP BY Farms_Animals.AnimalID HAVING COUNT(DISTINCT Farms_Animals.FarmID) = (SELECT COUNT(*) FROM  Farms)",
+        "sql_query2": "select farms.name , animals.type , animals.quantity from Farms_Animals join Animals on Farms_Animals.AnimalID = Animals.AnimalID join Farms on Farms_Animals.FarmID = Farms.FarmID",
+        "interpretation1": "Show me the animals that are the same on all farms and their count.",
+        "interpretation2": "For each farm, list the animals they use and their count."
+    },
+    {
+        "question": "What is the type of animal for each farm?",
+        "sql_query1": "SELECT Animals.Type  from Farms_Animals join Animals on Farms_Animals.AnimalID = Animals.AnimalID join Farms on Farms_Animals.FarmID = Farms.FarmID   GROUP BY Farms_Animals.AnimalID HAVING COUNT(DISTINCT Farms_Animals.FarmID) = (SELECT COUNT(*) FROM  Farms)",
+        "sql_query2": "select farms.name , animals.type from Farms_Animals join Animals on Farms_Animals.AnimalID = Animals.AnimalID join Farms on Farms_Animals.FarmID = Farms.FarmID",
+        "interpretation1": "What is the common type of animal for all farms?",
+        "interpretation2": "Show me the farms and the types of animals they offer."
+    },
+    {
+        "question": "Tell me the quantity of animals each farm has.",
+        "sql_query1": "SELECT Animals.Quantity  from Farms_Animals join Animals on Farms_Animals.AnimalID = Animals.AnimalID join Farms on Farms_Animals.FarmID = Farms.FarmID   GROUP BY Farms_Animals.AnimalID HAVING COUNT(DISTINCT Farms_Animals.FarmID) = (SELECT COUNT(*) FROM  Farms)",
+        "sql_query2": "select farms.name , animals.quantity from Farms_Animals join Animals on Farms_Animals.AnimalID = Animals.AnimalID join Farms on Farms_Animals.FarmID = Farms.FarmID",
+        "interpretation1": "What is the quantity of animals all farms have?",
+        "interpretation2": "For every farm, list the quantity of animals they have."
+    }
+]

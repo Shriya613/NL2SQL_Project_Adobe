@@ -1,0 +1,25 @@
+{
+    "template": "Question: Where was this film be released? Subject of Inquiry: Movies\nFocus: Distribution Channels Possible answer types: 1. Streaming Platforms 2. Countries",
+    "general_category1": {
+        "tab_name": "StreamingDetails",
+        "col_name": "Platforms",
+        "value": null,
+        "scope_id": null,
+        "db_type": "column"
+    },
+    "general_category2": {
+        "tab_name": "StreamingDetails",
+        "col_name": "Countries",
+        "value": null,
+        "scope_id": null,
+        "db_type": "column"
+    },
+    "subject": {
+        "tab_name": "StreamingDetails",
+        "col_name": "Movies",
+        "value": null,
+        "scope_id": null,
+        "db_type": "column"
+    },
+    "type": "2cols"
+}

@@ -1,0 +1,9 @@
+[
+    {
+        "question": "Give me all documentaries and short films with a 500K budget.",
+        "sql_query1": "SELECT Films.Title \r\nFROM Films\r\nWHERE (Films.FilmType = \"Documentary\" OR Films.FilmType = \"Short Film\") AND Films.Budget = 500000.0",
+        "sql_query2": "SELECT Films.Title \r\nFROM Films\r\nWHERE Films.FilmType = \"Documentary\" OR Films.FilmType = \"Short Film\" AND Films.Budget = 500000.0",
+        "interpretation1": "Show films classed as either documentary or short film where either has a 500K budget.",
+        "interpretation2": "Show all the documentary films, in addition show just those short films which had a 500K budget."
+    }
+]

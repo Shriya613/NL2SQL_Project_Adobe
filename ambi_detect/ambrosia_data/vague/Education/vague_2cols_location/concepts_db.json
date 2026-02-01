@@ -1,0 +1,25 @@
+{
+    "template": "Question: Where is this campus located? Subject of Inquiry: Campus\nFocus: Location Possible answer types: 1. City 2. Campus",
+    "general_category1": {
+        "tab_name": "Students",
+        "col_name": "City",
+        "value": null,
+        "scope_id": null,
+        "db_type": "column"
+    },
+    "general_category2": {
+        "tab_name": "Students",
+        "col_name": "Campus",
+        "value": null,
+        "scope_id": null,
+        "db_type": "column"
+    },
+    "subject": {
+        "tab_name": "Students",
+        "col_name": "Major",
+        "value": null,
+        "scope_id": null,
+        "db_type": "column"
+    },
+    "type": "2cols"
+}

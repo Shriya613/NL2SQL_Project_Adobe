@@ -1,0 +1,23 @@
+[
+    {
+        "question": "what markets and descriptions are covered by each real estate reporter?",
+        "sql_query1": "SELECT Markets.market_name, Markets.description  from Real_Estate_Reporters_Markets join Markets on Real_Estate_Reporters_Markets.market_id = Markets.id join Real_Estate_Reporters on Real_Estate_Reporters_Markets.reporter_id = Real_Estate_Reporters.id   GROUP BY Real_Estate_Reporters_Markets.market_id HAVING COUNT(DISTINCT Real_Estate_Reporters_Markets.reporter_id) = (SELECT COUNT(*) FROM  Real_Estate_Reporters)",
+        "sql_query2": "select real_estate_reporters.name , markets.market_name , markets.description from Real_Estate_Reporters_Markets join Markets on Real_Estate_Reporters_Markets.market_id = Markets.id join Real_Estate_Reporters on Real_Estate_Reporters_Markets.reporter_id = Real_Estate_Reporters.id",
+        "interpretation1": "provide the market name and description that are common to all real estate reporters.",
+        "interpretation2": "For each real estate reporters, what are the corresponding market names and descriptions?"
+    },
+    {
+        "question": "Give me descriptions of markets every real estate reporter covers.",
+        "sql_query1": "SELECT Markets.description  from Real_Estate_Reporters_Markets join Markets on Real_Estate_Reporters_Markets.market_id = Markets.id join Real_Estate_Reporters on Real_Estate_Reporters_Markets.reporter_id = Real_Estate_Reporters.id   GROUP BY Real_Estate_Reporters_Markets.market_id HAVING COUNT(DISTINCT Real_Estate_Reporters_Markets.reporter_id) = (SELECT COUNT(*) FROM  Real_Estate_Reporters)",
+        "sql_query2": "select real_estate_reporters.name , markets.description from Real_Estate_Reporters_Markets join Markets on Real_Estate_Reporters_Markets.market_id = Markets.id join Real_Estate_Reporters on Real_Estate_Reporters_Markets.reporter_id = Real_Estate_Reporters.id",
+        "interpretation1": "What are descriptions of markets all real estate reporters equally cover?",
+        "interpretation2": "For each real estate reporter, list descriptions of markets they cover."
+    },
+    {
+        "question": "What markets are associated with each real estate reporter?",
+        "sql_query1": "SELECT Markets.market_name  from Real_Estate_Reporters_Markets join Markets on Real_Estate_Reporters_Markets.market_id = Markets.id join Real_Estate_Reporters on Real_Estate_Reporters_Markets.reporter_id = Real_Estate_Reporters.id   GROUP BY Real_Estate_Reporters_Markets.market_id HAVING COUNT(DISTINCT Real_Estate_Reporters_Markets.reporter_id) = (SELECT COUNT(*) FROM  Real_Estate_Reporters)",
+        "sql_query2": "select real_estate_reporters.name , markets.market_name from Real_Estate_Reporters_Markets join Markets on Real_Estate_Reporters_Markets.market_id = Markets.id join Real_Estate_Reporters on Real_Estate_Reporters_Markets.reporter_id = Real_Estate_Reporters.id",
+        "interpretation1": "Which market is common across all real estate reporters?",
+        "interpretation2": "For each real estate reporter, provide the corresponding markets?"
+    }
+]

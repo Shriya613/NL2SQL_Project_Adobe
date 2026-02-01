@@ -1,0 +1,12 @@
+[
+    {
+        "question": "How many people speak different languages?",
+        "sql_query1": "SELECT Name, Number_of_speakers FROM Language",
+        "sql_query2": "SELECT Name, Percentage_of_population FROM Language",
+        "sql_query3": "SELECT Name, Number_of_speakers, Percentage_of_population FROM Language",
+        "interpretation1": "What number of people speak each language?",
+        "interpretation2": "What percentage of the population speak each language?",
+        "interpretation3": "What is the number of people and percentage of population that speak each language?",
+        "sql_query_general": "SELECT Name, Speakers FROM Language"
+    }
+]

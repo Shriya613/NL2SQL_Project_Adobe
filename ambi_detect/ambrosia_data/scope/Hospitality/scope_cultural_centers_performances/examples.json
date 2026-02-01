@@ -1,0 +1,9 @@
+[
+    {
+        "question": "Give me the performance types for each cultural center.",
+        "sql_query1": "SELECT Performances.type  from Cultural_Centers_Performances join Performances on Cultural_Centers_Performances.performanceID = Performances.performanceID join Cultural_Centers on Cultural_Centers_Performances.culturalCenterID = Cultural_Centers.centerID   GROUP BY Cultural_Centers_Performances.performanceID HAVING COUNT(DISTINCT Cultural_Centers_Performances.culturalCenterID) = (SELECT COUNT(*) FROM  Cultural_Centers)",
+        "sql_query2": "select cultural_centers.name , performances.type from Cultural_Centers_Performances join Performances on Cultural_Centers_Performances.performanceID = Performances.performanceID join Cultural_Centers on Cultural_Centers_Performances.culturalCenterID = Cultural_Centers.centerID",
+        "interpretation1": "What performance types are the same for all cultural centers?",
+        "interpretation2": "For every cultural center, show me the corresponding performance type."
+    }
+]

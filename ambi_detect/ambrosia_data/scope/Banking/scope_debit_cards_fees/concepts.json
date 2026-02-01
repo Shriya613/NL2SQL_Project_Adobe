@@ -1,0 +1,6 @@
+{
+    "template": "Each Debit Cards has many different Fees. Among them, Overdraft Fee is common to many Debit Cards.",
+    "specific_component": "Overdraft Fee",
+    "components": "Fees",
+    "entities": "Debit Cards"
+}

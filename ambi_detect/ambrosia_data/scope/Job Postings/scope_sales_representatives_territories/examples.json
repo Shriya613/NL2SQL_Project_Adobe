@@ -1,0 +1,30 @@
+[
+    {
+        "question": "Give me the territory in which each sales rep works and the corresponding city.",
+        "sql_query1": "SELECT Territories.Name, Territories.OtherColumn1, Territories.OtherColumn2  from Sales_Representatives_Territories join Territories on Sales_Representatives_Territories.TerritoryID = Territories.RegionID join Sales_Representatives on Sales_Representatives_Territories.SalesRepID = Sales_Representatives.ID   GROUP BY Sales_Representatives_Territories.TerritoryID HAVING COUNT(DISTINCT Sales_Representatives_Territories.SalesRepID) = (SELECT COUNT(*) FROM  Sales_Representatives)",
+        "sql_query2": "select sales_representatives.fullname , territories.name , territories.othercolumn1 , territories.othercolumn2 from Sales_Representatives_Territories join Territories on Sales_Representatives_Territories.TerritoryID = Territories.RegionID join Sales_Representatives on Sales_Representatives_Territories.SalesRepID = Sales_Representatives.ID",
+        "interpretation1": "What are the territories and cities where all sales reps work in together?",
+        "interpretation2": "For all sales reps, list their territories and cities."
+    },
+    {
+        "question": "Show me the cities of territories every sales rep covers.",
+        "sql_query1": "SELECT Territories.OtherColumn1  from Sales_Representatives_Territories join Territories on Sales_Representatives_Territories.TerritoryID = Territories.RegionID join Sales_Representatives on Sales_Representatives_Territories.SalesRepID = Sales_Representatives.ID   GROUP BY Sales_Representatives_Territories.TerritoryID HAVING COUNT(DISTINCT Sales_Representatives_Territories.SalesRepID) = (SELECT COUNT(*) FROM  Sales_Representatives)",
+        "sql_query2": "select sales_representatives.fullname , territories.othercolumn1 from Sales_Representatives_Territories join Territories on Sales_Representatives_Territories.TerritoryID = Territories.RegionID join Sales_Representatives on Sales_Representatives_Territories.SalesRepID = Sales_Representatives.ID",
+        "interpretation1": "What are the cities of territories that are the same for all sales reps?",
+        "interpretation2": "For each sales rep, list the cities of territories they cover."
+    },
+    {
+        "question": "Give me the territories and cities that each sales representative is responsible for.",
+        "sql_query1": "SELECT Territories.Name, Territories.OtherColumn1  from Sales_Representatives_Territories join Territories on Sales_Representatives_Territories.TerritoryID = Territories.RegionID join Sales_Representatives on Sales_Representatives_Territories.SalesRepID = Sales_Representatives.ID   GROUP BY Sales_Representatives_Territories.TerritoryID HAVING COUNT(DISTINCT Sales_Representatives_Territories.SalesRepID) = (SELECT COUNT(*) FROM  Sales_Representatives)",
+        "sql_query2": "select sales_representatives.fullname , territories.name , territories.othercolumn1 from Sales_Representatives_Territories join Territories on Sales_Representatives_Territories.TerritoryID = Territories.RegionID join Sales_Representatives on Sales_Representatives_Territories.SalesRepID = Sales_Representatives.ID",
+        "interpretation1": "What territories are all sales representatives equally responsible for and what are the corresponding cities?",
+        "interpretation2": "For each sales representative, show the territories that they are responsible for and the corresponding cities."
+    },
+    {
+        "question": "Tell me the territories every sales rep covers.",
+        "sql_query1": "SELECT Territories.Name  from Sales_Representatives_Territories join Territories on Sales_Representatives_Territories.TerritoryID = Territories.RegionID join Sales_Representatives on Sales_Representatives_Territories.SalesRepID = Sales_Representatives.ID   GROUP BY Sales_Representatives_Territories.TerritoryID HAVING COUNT(DISTINCT Sales_Representatives_Territories.SalesRepID) = (SELECT COUNT(*) FROM  Sales_Representatives)",
+        "sql_query2": "select sales_representatives.fullname , territories.name from Sales_Representatives_Territories join Territories on Sales_Representatives_Territories.TerritoryID = Territories.RegionID join Sales_Representatives on Sales_Representatives_Territories.SalesRepID = Sales_Representatives.ID",
+        "interpretation1": "What territories are covered equally by all sales representatives?",
+        "interpretation2": "For each sales rep, list the territories they cover."
+    }
+]

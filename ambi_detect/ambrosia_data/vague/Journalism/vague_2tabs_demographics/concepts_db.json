@@ -1,0 +1,25 @@
+{
+    "template": "Question: What is the demographic composition of the readers of this newspaper? Subject of Inquiry: Readers\nFocus: Demographics Possible answer types: 1. Age Range 2. Socioeconomic Status",
+    "general_category1": {
+        "tab_name": "Age_Range",
+        "col_name": null,
+        "value": null,
+        "scope_id": null,
+        "db_type": "table"
+    },
+    "general_category2": {
+        "tab_name": "Socioeconomic_Status",
+        "col_name": null,
+        "value": null,
+        "scope_id": null,
+        "db_type": "table"
+    },
+    "subject": {
+        "tab_name": "id",
+        "col_name": null,
+        "value": null,
+        "scope_id": null,
+        "db_type": "table"
+    },
+    "type": "2tabs"
+}

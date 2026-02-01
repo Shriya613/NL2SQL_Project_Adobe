@@ -1,0 +1,7 @@
+{
+    "template": "Question: What types of inspections are performed during the course of this construction project? Subject of Inquiry: Project\nFocus: Inspection Types Possible answer types: 1. Structural Inspection 2. Safety Inspection",
+    "subject": "Project",
+    "focus": "Inspection Types",
+    "general_category1": "Structural Inspection",
+    "general_category2": "Safety Inspection"
+}

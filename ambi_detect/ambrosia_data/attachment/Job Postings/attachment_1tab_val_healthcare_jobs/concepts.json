@@ -1,0 +1,8 @@
+{
+    "template": "Nurse and Physical Therapist are subclasses of Healthcare Jobs. All Nurses and Physical Therapists have property \"Shift Hours\". There might be a Nurse and a Physical Therapist that both have \"Shift Hours\" equal to \"Night Shift\".",
+    "general_class": "Healthcare Jobs",
+    "class1": "Nurse",
+    "class2": "Physical Therapist",
+    "common_property": "Shift Hours",
+    "common_value": "Night Shift"
+}

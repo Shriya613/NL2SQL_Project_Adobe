@@ -1,0 +1,22 @@
+[
+    {
+        "question": "What resources are used for Introductory Organic Chemistry?",
+        "sql_query1": "SELECT \r\n    r.title AS Resource_Title\r\nFROM \r\n    Courses c\r\n    INNER JOIN Textbooks r ON c.textbook_id = r.id\r\nWHERE \r\n    c.course_name = 'Introductory Organic Chemistry';",
+        "sql_query2": "SELECT \r\n    r.name AS Resource_Title\r\nFROM \r\n    Courses c\r\n    INNER JOIN Software r ON c.Software_id = r.id\r\nWHERE \r\n    c.course_name = 'Introductory Organic Chemistry';",
+        "sql_query3": "SELECT \r\n    r.title, sw.name\nFROM \r\n    Courses c\r\n    INNER JOIN Textbooks r ON c.textbook_id = r.id INNER JOIN Software sw ON c.Software_id = sw.id\r\nWHERE \r\n    c.course_name = 'Introductory Organic Chemistry';",
+        "interpretation1": "What textbooks are used for Introductory Organic Chemistry?",
+        "interpretation2": "What software is used for Introductory Organic Chemistry?",
+        "interpretation3": "What textbooks and softwares are used for Introductory Organic Chemistry?",
+        "sql_query_general": "SELECT \r\n    r.title AS Resource_Title\r\nFROM \r\n    Courses c\r\n    INNER JOIN Resources r ON c.textbook_id = r.id\r\nWHERE \r\n    c.course_name = 'Introductory Organic Chemistry';"
+    },
+    {
+        "question": "Which resource is Alice Smith using?",
+        "sql_query1": "SELECT \r\n    r.title AS Resource_Title\r\nFROM \r\n    Students s\r\n    INNER JOIN Courses c ON s.enrolled_course_id = c.id\r\n    INNER JOIN Textbooks r ON c.textbook_id = r.id\r\nWHERE \r\n    s.student_name = 'Alice Smith';",
+        "sql_query2": "SELECT \r\n    r.name AS Resource_Title\r\nFROM \r\n    Students s\r\n    INNER JOIN Courses c ON s.enrolled_course_id = c.id\r\n    INNER JOIN Software r ON c.Software_id = r.id\r\nWHERE \r\n    s.student_name = 'Alice Smith';",
+        "sql_query3": "SELECT \r\n    r.title, sw.name\r\nFROM \r\n    Students s\r\n    INNER JOIN Courses c ON s.enrolled_course_id = c.id\r\n    INNER JOIN Textbooks r ON c.textbook_id = r.id  INNER JOIN Software sw ON c.Software_id = sw.id\r\nWHERE \r\n    s.student_name = 'Alice Smith';",
+        "interpretation1": "Which textbooks is Alice Smith using?",
+        "interpretation2": "Which software is Alice Smith using?",
+        "interpretation3": "Which textbooks and software is Alice Smith using?",
+        "sql_query_general": "SELECT \r\n    r.title AS Resource_Title\r\nFROM \r\n    Students s\r\n    INNER JOIN Courses c ON s.enrolled_course_id = c.id\r\n    INNER JOIN Resources r ON c.textbook_id = r.id\r\nWHERE \r\n    s.student_name = 'Alice Smith';"
+    }
+]

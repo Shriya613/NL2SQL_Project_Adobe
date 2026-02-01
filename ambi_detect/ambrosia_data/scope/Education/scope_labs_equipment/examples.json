@@ -1,0 +1,9 @@
+[
+    {
+        "question": "Tell me the equipment each lab uses.",
+        "sql_query1": "SELECT Equipment.type  from Labs_Equipment join Equipment on Labs_Equipment.equipment_id = Equipment.id join Labs on Labs_Equipment.labs_id = Labs.id   GROUP BY Labs_Equipment.equipment_id HAVING COUNT(DISTINCT Labs_Equipment.labs_id) = (SELECT COUNT(*) FROM  Labs)",
+        "sql_query2": "select labs.name , equipment.type from Labs_Equipment join Equipment on Labs_Equipment.equipment_id = Equipment.id join Labs on Labs_Equipment.labs_id = Labs.id",
+        "interpretation1": "What equipment do all labs equally use?",
+        "interpretation2": "For every lab, list the equipment they use."
+    }
+]

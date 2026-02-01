@@ -1,0 +1,7 @@
+{
+    "template": "Question: When did the reporter start working for the media outlet? Subject of Inquiry: Reporter\nFocus: Employment Start Possible answer types: 1. Start Year 2. Start Month",
+    "subject": "Reporter",
+    "focus": "Employment Start",
+    "general_category1": "Start Year",
+    "general_category2": "Start Month"
+}

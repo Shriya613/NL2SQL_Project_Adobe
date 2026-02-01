@@ -1,0 +1,9 @@
+[
+    {
+        "question": "Show all fantasy films and horrors with a 20000000 budget.",
+        "sql_query1": "SELECT Films.title \r\nFROM Categories JOIN Films ON Categories.id = Films.categoryId\r\nWHERE (Categories.categoryName = \"Fantasy\" OR Categories.categoryName = \"Horror\") AND Films.budget = 20000000.0",
+        "sql_query2": "SELECT Films.title \r\nFROM Categories JOIN Films ON Categories.id = Films.categoryId\r\nWHERE Categories.categoryName = \"Fantasy\" OR Categories.categoryName = \"Horror\" AND Films.budget = 20000000.0",
+        "interpretation1": "Provide all fantasy with a budget of 20000000.0 and horrors with the same budget.",
+        "interpretation2": "Show all fantasy films, also show all horrors with a 20000000.0 budget."
+    }
+]

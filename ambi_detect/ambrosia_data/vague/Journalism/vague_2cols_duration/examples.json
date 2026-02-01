@@ -1,0 +1,22 @@
+[
+    {
+        "question": "What is the average revenue per operation and when did this occur?",
+        "sql_query1": "SELECT AVG(Revenue) AS AverageRevenuePerOperation, OperationYears FROM Operations",
+        "sql_query2": "SELECT AVG(Revenue) AS AverageRevenuePerOperation, OperationMonths FROM Operations",
+        "sql_query3": "SELECT AVG(Revenue) AS AverageRevenuePerOperation, OperationYears, OperationMonths FROM Operations",
+        "interpretation1": "For each operation, list its average revenue and the years it took place.",
+        "interpretation2": "For each operation, list its average revenue and the months it took place.",
+        "interpretation3": "For each operation, list its average revenue and the years and months it took place.",
+        "sql_query_general": "SELECT AVG(Revenue) AS AverageRevenuePerOperation, Duration FROM Operations"
+    },
+    {
+        "question": "What is the profit per operation and when did that operation occur?",
+        "sql_query1": "SELECT OperationID, (Revenue - Expenses) AS Profit, OperationYears FROM Operations",
+        "sql_query2": "SELECT OperationID, (Revenue - Expenses) AS Profit, OperationMonths FROM Operations",
+        "sql_query3": "SELECT OperationID, (Revenue - Expenses) AS Profit, OperationYears, OperationMonths FROM Operations",
+        "interpretation1": "For each operation, list the profit and the operational year it was made.",
+        "interpretation2": "For each operation, list the profit and the operational month it was made.",
+        "interpretation3": "For each operation, list the profit and the operational year and month it was made.",
+        "sql_query_general": "SELECT OperationID, (Revenue - Expenses) AS Profit, Duration FROM Operations"
+    }
+]

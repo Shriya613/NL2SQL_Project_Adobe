@@ -1,0 +1,25 @@
+{
+    "template": "Question: What materials are needed for this project? Subject of Inquiry: Project\nFocus: Resources Possible answer types: 1. Textbooks 2. Supplies",
+    "general_category1": {
+        "tab_name": "Textbooks_Supplies_Projects",
+        "col_name": "TextbookTitle",
+        "value": null,
+        "scope_id": null,
+        "db_type": "column"
+    },
+    "general_category2": {
+        "tab_name": "Textbooks_Supplies_Projects",
+        "col_name": "SupplyItem",
+        "value": null,
+        "scope_id": null,
+        "db_type": "column"
+    },
+    "subject": {
+        "tab_name": "Textbooks_Supplies_Projects",
+        "col_name": "ProjectDescription",
+        "value": null,
+        "scope_id": null,
+        "db_type": "column"
+    },
+    "type": "2cols"
+}

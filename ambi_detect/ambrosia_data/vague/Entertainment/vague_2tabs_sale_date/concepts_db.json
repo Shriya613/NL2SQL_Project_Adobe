@@ -1,0 +1,25 @@
+{
+    "template": "Question: When were these tickets available for purchase? Subject of Inquiry: Tickets\nFocus: Sale Date Possible answer types: 1. On Sale Date 2. Pre-Sale Date",
+    "general_category1": {
+        "tab_name": "On_Sale_Date",
+        "col_name": null,
+        "value": null,
+        "scope_id": null,
+        "db_type": "table"
+    },
+    "general_category2": {
+        "tab_name": "Pre_sale_Date",
+        "col_name": null,
+        "value": null,
+        "scope_id": null,
+        "db_type": "table"
+    },
+    "subject": {
+        "tab_name": "Tickets",
+        "col_name": null,
+        "value": null,
+        "scope_id": null,
+        "db_type": "table"
+    },
+    "type": "2tabs"
+}

@@ -1,0 +1,9 @@
+[
+    {
+        "question": "Show me the chapters corresponding to each text book.",
+        "sql_query1": "SELECT Chapters.chapter_name  from Textbook_Chapters join Chapters on Textbook_Chapters.chapter_id = Chapters.chapter_id join Textbooks on Textbook_Chapters.textbook_id = Textbooks.id   GROUP BY Textbook_Chapters.chapter_id HAVING COUNT(DISTINCT Textbook_Chapters.textbook_id) = (SELECT COUNT(*) FROM  Textbooks)",
+        "sql_query2": "select textbooks.title , chapters.chapter_name from Textbook_Chapters join Chapters on Textbook_Chapters.chapter_id = Chapters.chapter_id join Textbooks on Textbook_Chapters.textbook_id = Textbooks.id",
+        "interpretation1": "Give me the chapters that are in common for all text books.",
+        "interpretation2": "For each text book, what are the corresponding chapters?"
+    }
+]

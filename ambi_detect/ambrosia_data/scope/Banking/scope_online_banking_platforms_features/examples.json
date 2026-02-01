@@ -1,0 +1,9 @@
+[
+    {
+        "question": "Show me features every banking platform has.",
+        "sql_query1": "SELECT Features.feature_value  from Online_Banking_Platforms_Features join Features on Online_Banking_Platforms_Features.feature_id = Features.feature_id join Online_Banking_Platforms on Online_Banking_Platforms_Features.platform_id = Online_Banking_Platforms.id   GROUP BY Online_Banking_Platforms_Features.feature_id HAVING COUNT(DISTINCT Online_Banking_Platforms_Features.platform_id) = (SELECT COUNT(*) FROM  Online_Banking_Platforms)",
+        "sql_query2": "select online_banking_platforms.name , features.feature_value from Online_Banking_Platforms_Features join Features on Online_Banking_Platforms_Features.feature_id = Features.feature_id join Online_Banking_Platforms on Online_Banking_Platforms_Features.platform_id = Online_Banking_Platforms.id",
+        "interpretation1": "What are features all banking platforms have in common?",
+        "interpretation2": "For each banking platform, list features they have."
+    }
+]

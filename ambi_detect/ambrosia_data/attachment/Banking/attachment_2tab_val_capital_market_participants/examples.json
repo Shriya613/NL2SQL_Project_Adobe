@@ -1,0 +1,9 @@
+[
+    {
+        "question": "Show all stockbrokers and mutual funds with 1% fees.",
+        "sql_query1": "SELECT Stockbrokers.name\r\nFROM Stockbrokers\r\nWHERE Stockbrokers.fees = \"1%\"\r\nUNION\r\nSELECT Mutual_funds.fund_name as name\r\nFROM Mutual_funds\r\nWHERE Mutual_funds.fees = \"1%\"",
+        "sql_query2": "SELECT Stockbrokers.name\r\nFROM Stockbrokers\r\nUNION\r\nSELECT Mutual_funds.fund_name as name\r\nFROM Mutual_funds\r\nWHERE Mutual_funds.fees = \"1%\"",
+        "interpretation1": "Show stockbrokers and mutual funds where either charge a 1% fee.",
+        "interpretation2": "Show all the stockbrokers and only the mutual funds with a 1% fee."
+    }
+]

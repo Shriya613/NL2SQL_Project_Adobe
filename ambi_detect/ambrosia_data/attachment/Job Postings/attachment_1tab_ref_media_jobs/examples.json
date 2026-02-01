@@ -1,0 +1,9 @@
+[
+    {
+        "question": "Display salaries for English-speaking journalists and editors.",
+        "sql_query1": "SELECT Jobs.Salary  \r\nFROM Jobs JOIN Languages ON Jobs.LanguageProficiencyID = Languages.ID\r\nWHERE (Jobs.Title = \"Editor\" OR Jobs.Title = \"Journalist\") AND Languages.Name = \"English\"",
+        "sql_query2": "SELECT Jobs.Salary \r\nFROM Jobs JOIN Languages ON Jobs.LanguageProficiencyID = Languages.ID\r\nWHERE Jobs.Title = \"Editor\" OR Jobs.Title = \"Journalist\" AND Languages.Name = \"English\"",
+        "interpretation1": "Show editor or journalist salaries for English-language positions.",
+        "interpretation2": "Show all the salaries of editors and the salaries of only those journalists who work in English."
+    }
+]

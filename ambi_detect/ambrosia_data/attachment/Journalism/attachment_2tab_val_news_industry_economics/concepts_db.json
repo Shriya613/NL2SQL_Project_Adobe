@@ -1,0 +1,27 @@
+{
+    "domain": "Advertising",
+    "template": "Advertising Revenue and Subscription Fees are subclasses of News Industry Economics. All Advertising revenues and Subscription feess have property \"Magazine\". There might be a Advertising Revenue and a Subscription Fees that both have \"Magazine\" equal to \"Good Housekeeping\".",
+    "type": "2tab_val",
+    "general_class": "News Industry Economics",
+    "class1": {
+        "tab_name": "Advertising",
+        "col_name": null,
+        "value": null,
+        "scope_id": null,
+        "db_type": "table"
+    },
+    "class2": {
+        "tab_name": "Subscriptions",
+        "col_name": null,
+        "value": null,
+        "scope_id": null,
+        "db_type": "table"
+    },
+    "common_property": {
+        "tab_name": "Advertising",
+        "col_name": "Magazine",
+        "value": "Good Housekeeping",
+        "scope_id": null,
+        "db_type": "value"
+    }
+}

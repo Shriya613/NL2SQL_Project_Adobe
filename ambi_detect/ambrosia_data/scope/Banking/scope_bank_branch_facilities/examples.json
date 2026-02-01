@@ -1,0 +1,9 @@
+[
+    {
+        "question": "Show me the facility type available at each bank branch.",
+        "sql_query1": "SELECT Facilities.FacilityType  from Bank_Branch_Facilities join Facilities on Bank_Branch_Facilities.FacilityID = Facilities.FacilityID join Bank_Branch on Bank_Branch_Facilities.BranchID = Bank_Branch.BranchID   GROUP BY Bank_Branch_Facilities.FacilityID HAVING COUNT(DISTINCT Bank_Branch_Facilities.BranchID) = (SELECT COUNT(*) FROM  Bank_Branch)",
+        "sql_query2": "select bank_branch.branchname , facilities.facilitytype from Bank_Branch_Facilities join Facilities on Bank_Branch_Facilities.FacilityID = Facilities.FacilityID join Bank_Branch on Bank_Branch_Facilities.BranchID = Bank_Branch.BranchID",
+        "interpretation1": "What facility type is common for all bank branches?",
+        "interpretation2": "For each bank branch, what facility type is there?"
+    }
+]

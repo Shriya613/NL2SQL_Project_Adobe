@@ -1,0 +1,6 @@
+{
+    "template": "Each Weather Model has many different Parameters. Among them, Temperature is common to many Weather Model.",
+    "specific_component": "Temperature",
+    "components": "Parameters",
+    "entities": "Weather Model"
+}

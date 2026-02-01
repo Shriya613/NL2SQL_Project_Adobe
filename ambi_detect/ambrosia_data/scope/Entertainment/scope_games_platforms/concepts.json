@@ -1,0 +1,6 @@
+{
+    "template": "Each Games has many different Platforms. Among them, PC is common to many Games.",
+    "specific_component": "PC",
+    "components": "Platforms",
+    "entities": "Games"
+}

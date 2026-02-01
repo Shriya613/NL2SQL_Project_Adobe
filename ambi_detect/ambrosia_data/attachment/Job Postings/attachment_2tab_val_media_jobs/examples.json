@@ -1,0 +1,9 @@
+[
+    {
+        "question": "Display journalists and editors with English language proficiency.",
+        "sql_query1": "SELECT Journalists.name\r\nFROM Journalists\r\nWHERE Journalists.language_proficiency = \"English\"\r\nUNION\r\nSELECT Editors.name\r\nFROM Editors\r\nWHERE Editors.language_proficiency = \"English\"",
+        "sql_query2": "SELECT Journalists.name\r\nFROM Journalists\r\nUNION\r\nSELECT Editors.name\r\nFROM Editors\r\nWHERE Editors.language_proficiency = \"English\"",
+        "interpretation1": "Can you show both journalists and editors who have English language proficiency?",
+        "interpretation2": "List all journalists and also show editors with English language proficiency."
+    }
+]

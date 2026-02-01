@@ -1,0 +1,7 @@
+{
+    "template": "Question: Where is this airport located? Subject of Inquiry: Airport\nFocus: Location Possible answer types: 1. City 2. Country",
+    "subject": "Airport",
+    "focus": "Location",
+    "general_category1": "City",
+    "general_category2": "Country"
+}

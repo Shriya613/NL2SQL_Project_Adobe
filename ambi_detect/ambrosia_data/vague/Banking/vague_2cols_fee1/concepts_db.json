@@ -1,0 +1,25 @@
+{
+    "template": "Question: What are the fees associated with this service? Subject of Inquiry: Banking Services\nFocus: Fee Possible answer types: 1. Transaction Fee 2. Maintenance Fee",
+    "general_category1": {
+        "tab_name": "Fees",
+        "col_name": "TransactionFee",
+        "value": null,
+        "scope_id": null,
+        "db_type": "column"
+    },
+    "general_category2": {
+        "tab_name": "Fees",
+        "col_name": "MaintenanceFee",
+        "value": null,
+        "scope_id": null,
+        "db_type": "column"
+    },
+    "subject": {
+        "tab_name": "Fees",
+        "col_name": "BankingServicesCharge",
+        "value": null,
+        "scope_id": null,
+        "db_type": "column"
+    },
+    "type": "2cols"
+}

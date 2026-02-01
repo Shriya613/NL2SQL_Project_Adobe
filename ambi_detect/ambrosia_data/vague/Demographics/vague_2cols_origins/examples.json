@@ -1,0 +1,22 @@
+[
+    {
+        "question": "Where do immigrant women come from?",
+        "sql_query1": "SELECT  country_name  FROM Immigrants JOIN Countries ON Immigrants.country_of_origin = Countries.id WHERE gender  = 'F'",
+        "sql_query2": "SELECT  region_name  FROM Immigrants JOIN Regions ON Immigrants.region_of_origin = Regions.region_id WHERE gender  = 'F'",
+        "sql_query3": "SELECT  country_name, region_of_origin  FROM Immigrants JOIN Countries ON Immigrants.country_of_origin = Countries.id JOIN Regions ON Immigrants.region_of_origin = Regions.region_id  WHERE gender  = 'F'",
+        "interpretation1": "What country do women immigrants come from?",
+        "interpretation2": "What region are women immigrants from?",
+        "interpretation3": "What country and region do women immigrants come from?",
+        "sql_query_general": "SELECT  country_name  FROM Immigrants JOIN Countries ON Immigrants.Origins = Countries.id WHERE gender  = 'F'"
+    },
+    {
+        "question": "Where does the oldest immigrant come from?",
+        "sql_query1": "SELECT  country_name  FROM Immigrants JOIN Countries ON Immigrants.country_of_origin = Countries.id ORDER BY age ASC LIMIT 1",
+        "sql_query2": "SELECT  region_name  FROM Immigrants JOIN Regions ON Immigrants.region_of_origin = Regions.region_id ORDER BY age ASC LIMIT 1",
+        "sql_query3": "SELECT  country_name, region_name  FROM Immigrants JOIN Countries ON Immigrants.country_of_origin = Countries.id JOIN Regions ON Immigrants.region_of_origin = Regions.region_id  ORDER BY age ASC LIMIT 1",
+        "interpretation1": "What is the country of origin of the oldest immigrant?",
+        "interpretation2": "Which region does the oldest immigrant come from?",
+        "interpretation3": "Which region and country does the oldest immigrant come from?",
+        "sql_query_general": "SELECT  country_name  FROM Immigrants JOIN Countries ON Immigrants.Origins = Countries.id ORDER BY age ASC LIMIT 1"
+    }
+]

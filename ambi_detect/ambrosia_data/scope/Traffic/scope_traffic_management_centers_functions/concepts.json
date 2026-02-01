@@ -1,0 +1,6 @@
+{
+    "template": "Each Traffic Management Centers has many different Functions. Among them, Incident Detection System is common to many Traffic Management Centers.",
+    "specific_component": "Incident Detection System",
+    "components": "Functions",
+    "entities": "Traffic Management Centers"
+}

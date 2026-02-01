@@ -1,0 +1,37 @@
+[
+    {
+        "question": "Show me the categories and prices of the products every duty free shop sells.",
+        "sql_query1": "SELECT Products.category, Products.price  from Duty_Free_Shops_Products join Products on Duty_Free_Shops_Products.product_id = Products.product_id join Duty_Free_Shops on Duty_Free_Shops_Products.shop_id = Duty_Free_Shops.shop_id   GROUP BY Duty_Free_Shops_Products.product_id HAVING COUNT(DISTINCT Duty_Free_Shops_Products.shop_id) = (SELECT COUNT(*) FROM  Duty_Free_Shops)",
+        "sql_query2": "select duty_free_shops.name , products.category , products.price from Duty_Free_Shops_Products join Products on Duty_Free_Shops_Products.product_id = Products.product_id join Duty_Free_Shops on Duty_Free_Shops_Products.shop_id = Duty_Free_Shops.shop_id",
+        "interpretation1": "What are the categories and prices of the products common to all duty free shops?",
+        "interpretation2": "For every duty free shop, list the categories and prices of the products sold."
+    },
+    {
+        "question": "Give me the ids and prices of products that each duty free shop has.",
+        "sql_query1": "SELECT Products.product_id, Products.price  from Duty_Free_Shops_Products join Products on Duty_Free_Shops_Products.product_id = Products.product_id join Duty_Free_Shops on Duty_Free_Shops_Products.shop_id = Duty_Free_Shops.shop_id   GROUP BY Duty_Free_Shops_Products.product_id HAVING COUNT(DISTINCT Duty_Free_Shops_Products.shop_id) = (SELECT COUNT(*) FROM  Duty_Free_Shops)",
+        "sql_query2": "select duty_free_shops.name , products.product_id , products.price from Duty_Free_Shops_Products join Products on Duty_Free_Shops_Products.product_id = Products.product_id join Duty_Free_Shops on Duty_Free_Shops_Products.shop_id = Duty_Free_Shops.shop_id",
+        "interpretation1": "Give me the ids and prices of products that are common to all duty free shops.",
+        "interpretation2": "For each duty free shop, what are the corresponding product ids and prices?"
+    },
+    {
+        "question": "List the price of products sold in every duty-free shop.",
+        "sql_query1": "SELECT Products.price  from Duty_Free_Shops_Products join Products on Duty_Free_Shops_Products.product_id = Products.product_id join Duty_Free_Shops on Duty_Free_Shops_Products.shop_id = Duty_Free_Shops.shop_id   GROUP BY Duty_Free_Shops_Products.product_id HAVING COUNT(DISTINCT Duty_Free_Shops_Products.shop_id) = (SELECT COUNT(*) FROM  Duty_Free_Shops)",
+        "sql_query2": "select duty_free_shops.name , products.price from Duty_Free_Shops_Products join Products on Duty_Free_Shops_Products.product_id = Products.product_id join Duty_Free_Shops on Duty_Free_Shops_Products.shop_id = Duty_Free_Shops.shop_id",
+        "interpretation1": "List the price of products that are common to all duty-free shops.",
+        "interpretation2": "For each duty-free shop, list the price of its products."
+    },
+    {
+        "question": "Tell me about the ids, categories and prices of the products every duty free shop sells.",
+        "sql_query1": "SELECT Products.product_id, Products.category, Products.price  from Duty_Free_Shops_Products join Products on Duty_Free_Shops_Products.product_id = Products.product_id join Duty_Free_Shops on Duty_Free_Shops_Products.shop_id = Duty_Free_Shops.shop_id   GROUP BY Duty_Free_Shops_Products.product_id HAVING COUNT(DISTINCT Duty_Free_Shops_Products.shop_id) = (SELECT COUNT(*) FROM  Duty_Free_Shops)",
+        "sql_query2": "select duty_free_shops.name , products.product_id , products.category , products.price from Duty_Free_Shops_Products join Products on Duty_Free_Shops_Products.product_id = Products.product_id join Duty_Free_Shops on Duty_Free_Shops_Products.shop_id = Duty_Free_Shops.shop_id",
+        "interpretation1": "What are the ids, categories and prices of the products common to all duty free shops?",
+        "interpretation2": "For each duty free shop, list the ids, categories and prices of the products being sold."
+    },
+    {
+        "question": "Tell me the ids and categories of the products every shop sells.",
+        "sql_query1": "SELECT Products.product_id, Products.category  from Duty_Free_Shops_Products join Products on Duty_Free_Shops_Products.product_id = Products.product_id join Duty_Free_Shops on Duty_Free_Shops_Products.shop_id = Duty_Free_Shops.shop_id   GROUP BY Duty_Free_Shops_Products.product_id HAVING COUNT(DISTINCT Duty_Free_Shops_Products.shop_id) = (SELECT COUNT(*) FROM  Duty_Free_Shops)",
+        "sql_query2": "select duty_free_shops.name , products.product_id , products.category from Duty_Free_Shops_Products join Products on Duty_Free_Shops_Products.product_id = Products.product_id join Duty_Free_Shops on Duty_Free_Shops_Products.shop_id = Duty_Free_Shops.shop_id",
+        "interpretation1": "What are the ids and categories of the products common to all shops?",
+        "interpretation2": "For each shop, list the ids and categories of the products they sell."
+    }
+]

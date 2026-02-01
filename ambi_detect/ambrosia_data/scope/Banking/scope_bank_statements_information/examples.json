@@ -1,0 +1,23 @@
+[
+    {
+        "question": "What value and description do we have for each bank statement?",
+        "sql_query1": "SELECT Information.description, Information.value  from Bank_Statement_Information join Information on Bank_Statement_Information.information_id = Information.info_id join Bank_Statements on Bank_Statement_Information.bank_statements_id = Bank_Statements.statement_id   GROUP BY Bank_Statement_Information.information_id HAVING COUNT(DISTINCT Bank_Statement_Information.bank_statements_id) = (SELECT COUNT(*) FROM  Bank_Statements)",
+        "sql_query2": "select bank_statements.statement_id , information.description , information.value from Bank_Statement_Information join Information on Bank_Statement_Information.information_id = Information.info_id join Bank_Statements on Bank_Statement_Information.bank_statements_id = Bank_Statements.statement_id",
+        "interpretation1": "Show all information descriptions and their values that are common for all bank statements.",
+        "interpretation2": "For each bank statement, what are the information descriptions and values?"
+    },
+    {
+        "question": "Show me the value information we have for each bank statement",
+        "sql_query1": "SELECT Information.value  from Bank_Statement_Information join Information on Bank_Statement_Information.information_id = Information.info_id join Bank_Statements on Bank_Statement_Information.bank_statements_id = Bank_Statements.statement_id   GROUP BY Bank_Statement_Information.information_id HAVING COUNT(DISTINCT Bank_Statement_Information.bank_statements_id) = (SELECT COUNT(*) FROM  Bank_Statements)",
+        "sql_query2": "select bank_statements.statement_id , information.value from Bank_Statement_Information join Information on Bank_Statement_Information.information_id = Information.info_id join Bank_Statements on Bank_Statement_Information.bank_statements_id = Bank_Statements.statement_id",
+        "interpretation1": "List the value information that is common for all bank statements",
+        "interpretation2": "For each bank statement, show me all of the value information they have"
+    },
+    {
+        "question": "What description of information do we have for every bank statement?",
+        "sql_query1": "SELECT Information.description  from Bank_Statement_Information join Information on Bank_Statement_Information.information_id = Information.info_id join Bank_Statements on Bank_Statement_Information.bank_statements_id = Bank_Statements.statement_id   GROUP BY Bank_Statement_Information.information_id HAVING COUNT(DISTINCT Bank_Statement_Information.bank_statements_id) = (SELECT COUNT(*) FROM  Bank_Statements)",
+        "sql_query2": "select bank_statements.statement_id , information.description from Bank_Statement_Information join Information on Bank_Statement_Information.information_id = Information.info_id join Bank_Statements on Bank_Statement_Information.bank_statements_id = Bank_Statements.statement_id",
+        "interpretation1": "What description of information is common for all bank statements?",
+        "interpretation2": "For each bank statement, provide me with the corresponding description of information."
+    }
+]

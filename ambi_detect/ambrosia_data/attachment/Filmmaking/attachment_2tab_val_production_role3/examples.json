@@ -1,0 +1,9 @@
+[
+    {
+        "question": "Display stunt coordinators and fight scene coordinators with ten years of experience.",
+        "sql_query1": "SELECT Stunts.Coordinator as name\r\nFROM Stunts\r\nWHERE Stunts.Experience = \"10 years\"\r\nUNION\r\nSELECT FightScenes.Choreographer as name\r\nFROM FightScenes\r\nWHERE FightScenes.Experience = \"10 years\"",
+        "sql_query2": "SELECT Stunts.Coordinator as name\r\nFROM Stunts\r\nUNION\r\nSELECT FightScenes.Choreographer as name\r\nFROM FightScenes\r\nWHERE FightScenes.Experience = \"10 years\"",
+        "interpretation1": "Which stunt and fight scene coordinators have ten years of experience?",
+        "interpretation2": "List all stunt coordinators and also display fight scene coordinators with ten years of experience."
+    }
+]

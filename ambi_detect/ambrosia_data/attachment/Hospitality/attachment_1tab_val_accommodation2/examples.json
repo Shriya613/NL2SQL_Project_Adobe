@@ -1,0 +1,9 @@
+[
+    {
+        "question": "Please give me all family suites and single rooms which cost 150 per night.",
+        "sql_query1": "SELECT Accommodations.RoomNumber \r\nFROM Accommodations\r\nWHERE (Accommodations.TypeOfAccomodation = \"Family Suite\" OR Accommodations.TypeOfAccomodation = \"Single Room\") AND Accommodations.PricePerNight = 150.0",
+        "sql_query2": "SELECT Accommodations.RoomNumber \r\nFROM Accommodations\r\nWHERE Accommodations.TypeOfAccomodation = \"Family Suite\" OR Accommodations.TypeOfAccomodation = \"Single Room\" AND Accommodations.PricePerNight = 150.0",
+        "interpretation1": "List all the rooms that cost 150 per night and are either a family suite or single room.",
+        "interpretation2": "Show all the family suites listed, also show the single rooms which cost 150 per night."
+    }
+]

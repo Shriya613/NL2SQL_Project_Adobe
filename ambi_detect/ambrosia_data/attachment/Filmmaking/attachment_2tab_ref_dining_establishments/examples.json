@@ -1,0 +1,9 @@
+[
+    {
+        "question": "Show names of all restaurants and cafes that serve lasagna.",
+        "sql_query1": "SELECT Restaurants.name\r\nFROM Menu_Options JOIN Restaurant_Menus ON Menu_Options.id = Restaurant_Menus.menu_option_id JOIN Restaurants ON Restaurant_Menus.restaurant_id = Restaurants.id\r\nWHERE Menu_Options.option_name = \"Lasagna\"\r\nUNION\r\nSELECT Cafe.name\r\nFROM Menu_Options JOIN Cafe_Menus ON Menu_Options.id = Cafe_Menus.menu_option_id JOIN Cafe ON Cafe_Menus.cafe_id = Cafe.id\r\nWHERE Menu_Options.option_name = \"Lasagna\"",
+        "sql_query2": "SELECT Restaurants.name\r\nFROM Menu_Options JOIN Restaurant_Menus ON Menu_Options.id = Restaurant_Menus.menu_option_id JOIN Restaurants ON Restaurant_Menus.restaurant_id = Restaurants.id\r\nUNION\r\nSELECT Cafe.name\r\nFROM Menu_Options JOIN Cafe_Menus ON Menu_Options.id = Cafe_Menus.menu_option_id JOIN Cafe ON Cafe_Menus.cafe_id = Cafe.id\r\nWHERE Menu_Options.option_name = \"Lasagna\"",
+        "interpretation1": "What are names of restaurants that serve lasagna and names of cafes that also serve it?",
+        "interpretation2": "Provide a list of names of restaurants and also provide a list of names of cafes that serve lasagna."
+    }
+]

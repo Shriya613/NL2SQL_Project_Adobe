@@ -1,0 +1,9 @@
+[
+    {
+        "question": "Show novels and poems that are written in Italian.",
+        "sql_query1": "SELECT Literatures.Title \r\nFROM Literatures\r\nWHERE (Literatures.LiteratureType = \"Novel\" OR Literatures.LiteratureType = \"Poem\") AND Literatures.Language = \"Italian\"",
+        "sql_query2": "SELECT Literatures.Title \r\nFROM Literatures\r\nWHERE Literatures.LiteratureType = \"Novel\" OR Literatures.LiteratureType = \"Poem\" AND Literatures.Language = \"Italian\"",
+        "interpretation1": "What novels are written in Italian and what poems are in the same language?",
+        "interpretation2": "Provide a list of all novels and also list poems that are written in Italian."
+    }
+]

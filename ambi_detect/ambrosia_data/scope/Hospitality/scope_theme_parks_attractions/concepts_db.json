@@ -1,0 +1,31 @@
+{
+    "template": "Each Theme Parks has many different Attractions. Among them, Roller Coaster is common to many Theme Parks.",
+    "entities": {
+        "tab_name": "Theme_Parks",
+        "col_name": null,
+        "value": null,
+        "scope_id": null,
+        "db_type": "table"
+    },
+    "components": {
+        "tab_name": "Attractions",
+        "col_name": null,
+        "value": null,
+        "scope_id": null,
+        "db_type": "table"
+    },
+    "specific_component": {
+        "tab_name": "Attractions",
+        "col_name": "type",
+        "value": "Roller Coaster",
+        "scope_id": 0,
+        "db_type": "value"
+    },
+    "entities_components": {
+        "tab_name": "Theme_Parks_Attractions",
+        "col_name": null,
+        "value": null,
+        "scope_id": null,
+        "db_type": "table"
+    }
+}

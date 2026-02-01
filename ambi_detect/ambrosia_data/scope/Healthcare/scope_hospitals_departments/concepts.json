@@ -1,0 +1,6 @@
+{
+    "template": "Each Hospitals has many different Departments. Among them, Cardiology is common to many Hospitals.",
+    "specific_component": "Cardiology",
+    "components": "Departments",
+    "entities": "Hospitals"
+}

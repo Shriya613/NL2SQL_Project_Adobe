@@ -1,0 +1,22 @@
+[
+    {
+        "question": "Who reported the results of the US elections?",
+        "sql_query1": "SELECT \r\n    j.name AS journalist_name\r\nFROM \r\n    stories s \r\nJOIN \r\n    journalists j ON s.journalist_id = j.id\r\nWHERE\r\n    s.title = 'US Election Results'",
+        "sql_query2": "SELECT \r\n    j.name AS news_agency_name\r\nFROM \r\n    stories s \r\nJOIN \r\n    news_agencies j ON s.news_agency_id = j.id\r\nWHERE\r\n    s.title = 'US Election Results'",
+        "sql_query3": "SELECT \r\n    j.name AS journalist_name, na.name AS news_agency_name\r\nFROM \r\n    stories s \r\nJOIN \r\n    journalists j ON s.journalist_id = j.id  JOIN news_agencies na ON s.news_agency_id = na.id\r\nWHERE\r\n    s.title = 'US Election Results'",
+        "interpretation1": "What journalists reported the US election results?",
+        "interpretation2": "What news agencies reported the US election results?",
+        "interpretation3": "What journalists and news agencies reported the US election results?",
+        "sql_query_general": "SELECT \r\n    j.name AS journalist_name\r\nFROM \r\n    stories s \r\nJOIN \r\n    journalists j ON s.Reporter = j.id\r\nWHERE\r\n    s.title = 'US Election Results'"
+    },
+    {
+        "question": "Who reported what story?",
+        "sql_query1": "SELECT \r\n    j.name AS journalist_name,\r\n    s.title AS story_title\r\nFROM \r\n    stories s \r\nJOIN \r\n    journalists j ON s.journalist_id = j.id;",
+        "sql_query2": "SELECT \r\n    j.name AS news_agency_name,\r\n    s.title AS story_title\r\nFROM \r\n    stories s \r\nJOIN \r\n    news_agencies j ON s.news_agency_id = j.id;",
+        "sql_query3": "SELECT \r\n    j.name, na.name,\r\n    s.title AS story_title\r\nFROM \r\n    stories s \r\nJOIN \r\n    journalists j ON s.journalist_id = j.id JOIN news_agencies na ON s.news_agency_id = na.id;",
+        "interpretation1": "List the journalists and the stories they reported.",
+        "interpretation2": "List the news agencies and the stories they reported.",
+        "interpretation3": "List the journalists and news agencies and the stories they reported.",
+        "sql_query_general": "SELECT \r\n    j.name AS journalist_name,\r\n    s.title AS story_title\r\nFROM \r\n    stories s \r\nJOIN \r\n    journalists j ON s.Reporter = j.id;"
+    }
+]

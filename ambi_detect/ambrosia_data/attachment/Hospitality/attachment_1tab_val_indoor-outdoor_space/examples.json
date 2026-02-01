@@ -1,0 +1,9 @@
+[
+    {
+        "question": "List all lobbies or terraces that can accomodate 500 people.",
+        "sql_query1": "SELECT Room.Name \r\nFROM Room\r\nWHERE (Room.Indoor_Outdoor_Space = \"Lobby\" OR Room.Indoor_Outdoor_Space = \"Terrace\") AND Room.Size = 500",
+        "sql_query2": "SELECT Room.Name \r\nFROM Room\r\nWHERE Room.Indoor_Outdoor_Space = \"Lobby\" OR Room.Indoor_Outdoor_Space = \"Terrace\" AND Room.Size = 500",
+        "interpretation1": "List all lobbies that can accommodate 500 people and terraces of the same size.",
+        "interpretation2": "Show all lobbies and also show all terraces that can accommodate 500 people."
+    }
+]

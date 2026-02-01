@@ -1,0 +1,9 @@
+[
+    {
+        "question": "Display onboard services and inflight entertainments available on Boeing 787 Dreamliner.",
+        "sql_query1": "SELECT OnboardServices.service_name as name\r\nFROM OnboardServices JOIN Aircrafts ON OnboardServices.aircraft_id = Aircrafts.id\r\nWHERE Aircrafts.model = \"Boeing 787 Dreamliner\"\r\nUNION\r\nSELECT InflightEntertainments.entertainment_name as name\r\nFROM InflightEntertainments JOIN Aircrafts ON InflightEntertainments.aircraft_id = Aircrafts.id\r\nWHERE Aircrafts.model = \"Boeing 787 Dreamliner\"",
+        "sql_query2": "SELECT OnboardServices.service_name as name\r\nFROM OnboardServices JOIN Aircrafts ON OnboardServices.aircraft_id = Aircrafts.id\r\nUNION\r\nSELECT InflightEntertainments.entertainment_name as name\r\nFROM InflightEntertainments JOIN Aircrafts ON InflightEntertainments.aircraft_id = Aircrafts.id\r\nWHERE Aircrafts.model = \"Boeing 787 Dreamliner\"",
+        "interpretation1": "What onboard services and inflight entertainments are available on Boeing 787 Dreamliner?",
+        "interpretation2": "List all onboard services and also display inflight entertainments available on Boeing 787 Dreamliner."
+    }
+]

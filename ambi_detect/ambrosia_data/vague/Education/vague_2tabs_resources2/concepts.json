@@ -1,0 +1,7 @@
+{
+    "template": "Question: What resources are required for this course? Subject of Inquiry: Course\nFocus: Resources Possible answer types: 1. Textbooks 2. Software",
+    "subject": "Course",
+    "focus": "Resources",
+    "general_category1": "Textbooks",
+    "general_category2": "Software"
+}

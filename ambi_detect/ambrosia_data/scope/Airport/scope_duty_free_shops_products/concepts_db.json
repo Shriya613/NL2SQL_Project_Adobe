@@ -1,0 +1,31 @@
+{
+    "template": "Each Duty Free Shops has many different Products. Among them, Perfume is common to many Duty Free Shops.",
+    "entities": {
+        "tab_name": "Duty_Free_Shops",
+        "col_name": null,
+        "value": null,
+        "scope_id": null,
+        "db_type": "table"
+    },
+    "components": {
+        "tab_name": "Products",
+        "col_name": null,
+        "value": null,
+        "scope_id": null,
+        "db_type": "table"
+    },
+    "specific_component": {
+        "tab_name": "Products",
+        "col_name": "category",
+        "value": "Perfume",
+        "scope_id": 0,
+        "db_type": "value"
+    },
+    "entities_components": {
+        "tab_name": "Duty_Free_Shops_Products",
+        "col_name": null,
+        "value": null,
+        "scope_id": null,
+        "db_type": "table"
+    }
+}

@@ -1,0 +1,8 @@
+{
+    "template": "Unaccompanied Minors and Special Needs Passengers are subclasses of Special Care Passengers. All services for Unaccompanied Minors and Special Needs Passengers have the property \"Assistant\". There might be an Unaccompanied Minor and a Special Needs Passenger that both require an \"Assistant\" equal to \"Personal Attendant\".",
+    "general_class": "Special Care Passengers",
+    "class1": "Unaccompanied Minors",
+    "class2": "Tailored Assistance",
+    "common_property": "Assistant",
+    "common_value": "Clare Allen"
+}

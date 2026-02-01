@@ -1,0 +1,9 @@
+[
+    {
+        "question": "Display stringers and editors of \"Article 4 Title\".",
+        "sql_query1": "SELECT Stringers.FullName\r\nFROM Articles JOIN Stringers ON Articles.stringer_id = Stringers.id\r\nWHERE Articles.title = \"Article 4 Title\"\r\nUNION\r\nSELECT Editors.FullName\r\nFROM Articles JOIN Editors ON Articles.editor_id = Editors.id\r\nWHERE Articles.title = \"Article 4 Title\"",
+        "sql_query2": "SELECT Stringers.FullName\r\nFROM Articles JOIN Stringers ON Articles.stringer_id = Stringers.id\r\nUNION\r\nSELECT Editors.FullName\r\nFROM Articles JOIN Editors ON Articles.editor_id = Editors.id\r\nWHERE Articles.title = \"Article 4 Title\"",
+        "interpretation1": "Which stringers and editors are associated with \"Article 4 Title\"?",
+        "interpretation2": "Can you show me all editors of \"Article 4 Title\" along with all existing stringers?"
+    }
+]

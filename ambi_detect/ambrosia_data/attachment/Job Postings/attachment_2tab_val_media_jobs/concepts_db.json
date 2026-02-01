@@ -1,0 +1,27 @@
+{
+    "domain": "Journalists",
+    "template": "Journalist and Editor are subclasses of Media Jobs. All Journalists and Editors have property \"Language Proficiency\". There might be a Journalist and an Editor that both have \"Language Proficiency\" equal to \"English\".",
+    "type": "2tab_val",
+    "general_class": "Media Jobs",
+    "class1": {
+        "tab_name": "Journalists",
+        "col_name": null,
+        "value": null,
+        "scope_id": null,
+        "db_type": "table"
+    },
+    "class2": {
+        "tab_name": "Editors",
+        "col_name": null,
+        "value": null,
+        "scope_id": null,
+        "db_type": "table"
+    },
+    "common_property": {
+        "tab_name": "Journalists",
+        "col_name": "language_proficiency",
+        "value": "English",
+        "scope_id": null,
+        "db_type": "value"
+    }
+}

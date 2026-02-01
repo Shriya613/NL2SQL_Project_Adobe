@@ -1,0 +1,9 @@
+[
+    {
+        "question": "List Boeing models and Airbus models with 180 seats.",
+        "sql_query1": "SELECT planes.model\r\nFROM manufacturers JOIN plane_details ON manufacturers.id = plane_details.manufacturer_id JOIN planes ON plane_details.plane_id = planes.id\r\nWHERE (manufacturers.name = \"Boeing\" OR manufacturers.name = \"Airbus\") AND planes.number_of_seats = 180",
+        "sql_query2": "SELECT planes.model\r\nFROM manufacturers JOIN plane_details ON manufacturers.id = plane_details.manufacturer_id JOIN planes ON plane_details.plane_id = planes.id\r\nWHERE manufacturers.name = \"Boeing\" OR manufacturers.name = \"Airbus\" AND planes.number_of_seats = 180",
+        "interpretation1": "What Boeing planes have 180 seats and what Airbus planes have the same number of seats?",
+        "interpretation2": "List all Boeing planes and also list Airbus planes with 180 seats."
+    }
+]

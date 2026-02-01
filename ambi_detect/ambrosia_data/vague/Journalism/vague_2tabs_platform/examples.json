@@ -1,0 +1,22 @@
+[
+    {
+        "question": "List all platforms and articles published there along with the published date.",
+        "sql_query1": "SELECT \r\nWebsite.name,\r\nWebsite.url,\r\nArticle.title,\r\nArticle.publishedDate\r\nFROM Website\r\nJOIN News_Agency ON News_Agency.id = Website.id\r\nJOIN Article ON Article.newsAgencyID = News_Agency.websiteID",
+        "sql_query2": "SELECT \r\nMobile_App.name,\r\nArticle.title,\r\nArticle.publishedDate\r\nFROM Mobile_App\r\nJOIN News_Agency ON News_Agency.id = Mobile_App.id\r\nJOIN Article ON Article.newsAgencyID = News_Agency.MobileAppID",
+        "sql_query3": "SELECT \r\nWebsite.name,\r\nWebsite.url, Mobile_App.name,\r\nArticle.title,\r\nArticle.publishedDate\r\nFROM Website\r\nJOIN News_Agency ON News_Agency.id = Website.id\r\nJOIN Article ON Article.newsAgencyID = News_Agency.websiteID JOIN Mobile_App ON News_Agency.MobileAppID = Mobile_App.id",
+        "interpretation1": "List all the websites with their published articles and dates.",
+        "interpretation2": "List all the mobile apps with their published articles and dates.",
+        "interpretation3": "List all the websites, their mobile apps and their published articles and dates.",
+        "sql_query_general": "SELECT \r\nPlatform.name,\r\nPlatform.url,\r\nArticle.title,\r\nArticle.publishedDate\r\nFROM Platform\r\nJOIN News_Agency ON News_Agency.id = Platform.id\r\nJOIN Article ON Article.newsAgencyID = News_Agency.websiteID"
+    },
+    {
+        "question": "Show all articles, platforms that they were published on and author name.",
+        "sql_query1": "SELECT\r\nArticle.title,\r\nWebsite.name,Website.url,\r\nAuthor.fullname\r\nFROM Article\r\nJOIN News_Agency ON News_Agency.id = Article.newsAgencyId\r\nJOIN AuthorArticle ON AuthorArticle.authorID = Article.id\r\nJOIN Author ON Author.id = AuthorArticle.authorID\r\nJOIN Website ON News_Agency.websiteID = Website.id",
+        "sql_query2": "SELECT\r\nArticle.title,\r\nMobile_App.name,\r\nAuthor.fullname\r\nFROM Article\r\nJOIN News_Agency ON News_Agency.id = Article.newsAgencyId\r\nJOIN AuthorArticle ON AuthorArticle.authorID = Article.id\r\nJOIN Author ON Author.id = AuthorArticle.authorID\r\nJOIN Mobile_App ON News_Agency.MobileAppID = Mobile_App.id",
+        "sql_query3": "SELECT\r\nArticle.title,\r\nWebsite.name, Website.url, Mobile_App.name,\r\nAuthor.fullname\r\nFROM Article\r\nJOIN News_Agency ON News_Agency.id = Article.newsAgencyId\r\nJOIN AuthorArticle ON AuthorArticle.authorID = Article.id\r\nJOIN Author ON Author.id = AuthorArticle.authorID\r\nJOIN Website ON News_Agency.websiteID = Website.id JOIN Mobile_App ON News_Agency.MobileAppID = Mobile_App.id",
+        "interpretation1": "Show all articles, websites that they were published on and author names.",
+        "interpretation2": "Show all articles, mobile apps that they were published on and author names.",
+        "interpretation3": "Show all articles, websites and mobile apps on which they were published, along with the author names.",
+        "sql_query_general": "SELECT\r\nArticle.title,\r\nPlatform.name,\r\nAuthor.fullname\r\nFROM Article\r\nJOIN News_Agency ON News_Agency.id = Article.newsAgencyId\r\nJOIN AuthorArticle ON AuthorArticle.authorID = Article.id\r\nJOIN Author ON Author.id = AuthorArticle.authorID\r\nJOIN Platform ON News_Agency.websiteID = Platform.id"
+    }
+]

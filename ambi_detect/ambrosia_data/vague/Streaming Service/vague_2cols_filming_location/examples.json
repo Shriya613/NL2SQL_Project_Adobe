@@ -1,0 +1,22 @@
+[
+    {
+        "question": "Show me the name and the filming location of the reality show filmed on Network A.",
+        "sql_query1": "Select name, city FROM RealityShows WHERE network = \"Network A\";",
+        "sql_query2": "Select name, country FROM RealityShows WHERE network = \"Network A\";",
+        "sql_query3": "Select name, city, country FROM RealityShows WHERE network = \"Network A\";",
+        "interpretation1": "Show the name of reality shows filmed by network A and the city where it was filmed.",
+        "interpretation2": "Show the name of reality shows filmed by network A and the country where it was filmed.",
+        "interpretation3": "Show the name of reality shows filmed by network A and the city and country where it was filmed.",
+        "sql_query_general": "Select name, Filming_Location FROM RealityShows WHERE network = \"Network A\";"
+    },
+    {
+        "question": "Show name and film location of reality shown where host was Host2",
+        "sql_query1": "Select name, city FROM RealityShows WHERE host = \"Host2\";",
+        "sql_query2": "Select name, country FROM RealityShows WHERE host = \"Host2\";",
+        "sql_query3": "Select name, city, country FROM RealityShows WHERE host = \"Host2\";",
+        "interpretation1": "What was the name of the reality show where the host was Host2, and in what city was it filmed?",
+        "interpretation2": "What was the name of the reality show where the host was Host2, and in what country was it filmed?",
+        "interpretation3": "What was the name of the reality show where the host was Host2, and in what city and country was it filmed?",
+        "sql_query_general": "Select name, Filming_Location FROM RealityShows WHERE host = \"Host2\";"
+    }
+]

@@ -1,0 +1,27 @@
+{
+    "domain": "Guestrooms",
+    "template": "Guestroom and Suite are subclasses of Overnight Stay. All Guestrooms and Suites have property \"Amenities\". There might be a Guestroom and a Suite that both have \"Amenities\" equal to \"Air Conditioning\".",
+    "type": "2tab_val",
+    "general_class": "Overnight Stay",
+    "class1": {
+        "tab_name": "Guestrooms",
+        "col_name": null,
+        "value": null,
+        "scope_id": null,
+        "db_type": "table"
+    },
+    "class2": {
+        "tab_name": "Suites",
+        "col_name": null,
+        "value": null,
+        "scope_id": null,
+        "db_type": "table"
+    },
+    "common_property": {
+        "tab_name": "Guestrooms",
+        "col_name": "amenities",
+        "value": "Air Conditioning",
+        "scope_id": null,
+        "db_type": "value"
+    }
+}

@@ -1,0 +1,22 @@
+[
+    {
+        "question": "Show a list of movies along with the directors and the distribution channels.",
+        "sql_query1": "SELECT\r\nStreamingDetails.Platforms,\r\nStreamingDetails.Movies,\r\nDirectors.Name\r\nFROM StreamingDetails\r\nJOIN Films ON Films.Title = StreamingDetails.Movies\r\nJOIN Directors ON Directors.DirectorID = Films.DirectorID",
+        "sql_query2": "SELECT\r\nStreamingDetails.Countries,\r\nStreamingDetails.Movies,\r\nDirectors.Name\r\nFROM StreamingDetails\r\nJOIN Films ON Films.Title = StreamingDetails.Movies\r\nJOIN Directors ON Directors.DirectorID = Films.DirectorID",
+        "sql_query3": "SELECT\r\nStreamingDetails.Platforms, Countries,\r\nStreamingDetails.Movies,\r\nDirectors.Name\r\nFROM StreamingDetails\r\nJOIN Films ON Films.Title = StreamingDetails.Movies\r\nJOIN Directors ON Directors.DirectorID = Films.DirectorID",
+        "interpretation1": "List all movies, along with their directors and streaming platforms.",
+        "interpretation2": "List all movies, along with the directors and streaming countries.",
+        "interpretation3": "List all movies, along with the directors, streaming platforms and countries.",
+        "sql_query_general": "SELECT\r\nStreamingDetails.Distribution_Channels,\r\nStreamingDetails.Movies,\r\nDirectors.Name\r\nFROM StreamingDetails\r\nJOIN Films ON Films.Title = StreamingDetails.Movies\r\nJOIN Directors ON Directors.DirectorID = Films.DirectorID"
+    },
+    {
+        "question": "Show a list of distribution channels and movies that they are showing along with the release year.",
+        "sql_query1": "SELECT\r\nStreamingDetails.Platforms,\r\nStreamingDetails.Movies,\r\nFilms.ReleaseYear\r\nFROM StreamingDetails\r\nJOIN Films ON Films.Title = StreamingDetails.Movies",
+        "sql_query2": "SELECT\r\nStreamingDetails.Countries,\r\nStreamingDetails.Movies,\r\nFilms.ReleaseYear\r\nFROM StreamingDetails\r\nJOIN Films ON Films.Title = StreamingDetails.Movies",
+        "sql_query3": "SELECT\r\nStreamingDetails.Platforms, Countries,\r\nStreamingDetails.Movies,\r\nFilms.ReleaseYear\r\nFROM StreamingDetails\r\nJOIN Films ON Films.Title = StreamingDetails.Movies",
+        "interpretation1": "List platforms and movies they are showing along with the release year.",
+        "interpretation2": "List countries and movies they are showing along with the release year.",
+        "interpretation3": "List platforms and countries along with the movies they are showing and their release year.",
+        "sql_query_general": "SELECT\r\nStreamingDetails.Distribution_Channels,\r\nStreamingDetails.Movies,\r\nFilms.ReleaseYear\r\nFROM StreamingDetails\r\nJOIN Films ON Films.Title = StreamingDetails.Movies"
+    }
+]

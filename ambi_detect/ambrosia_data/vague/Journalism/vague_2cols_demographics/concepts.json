@@ -1,0 +1,7 @@
+{
+    "template": "Question: What are the demographics of this audience? Subject of Inquiry: Audience\nFocus: Demographics Possible answer types: 1. Age Group 2. Income Level",
+    "subject": "Audience",
+    "focus": "Demographics",
+    "general_category1": "Age Group",
+    "general_category2": "Income Level"
+}

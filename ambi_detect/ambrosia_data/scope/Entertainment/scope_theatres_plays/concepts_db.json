@@ -1,0 +1,31 @@
+{
+    "template": "Each Theatres has many different Plays. Among them, Hamlet is common to many Theatres.",
+    "entities": {
+        "tab_name": "Theatres",
+        "col_name": null,
+        "value": null,
+        "scope_id": null,
+        "db_type": "table"
+    },
+    "components": {
+        "tab_name": "Plays",
+        "col_name": null,
+        "value": null,
+        "scope_id": null,
+        "db_type": "table"
+    },
+    "specific_component": {
+        "tab_name": "Plays",
+        "col_name": "title",
+        "value": "Hamlet",
+        "scope_id": 0,
+        "db_type": "value"
+    },
+    "entities_components": {
+        "tab_name": "TheatrePerformances",
+        "col_name": null,
+        "value": null,
+        "scope_id": null,
+        "db_type": "table"
+    }
+}

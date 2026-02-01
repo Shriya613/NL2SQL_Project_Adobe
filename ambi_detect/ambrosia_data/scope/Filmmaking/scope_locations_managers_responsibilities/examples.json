@@ -1,0 +1,9 @@
+[
+    {
+        "question": "Which responsibilities does each location manager have?",
+        "sql_query1": "SELECT Responsibilities.description  from Locations_Managers_Responsibilities join Responsibilities on Locations_Managers_Responsibilities.responsibility_id = Responsibilities.id join Locations_Managers on Locations_Managers_Responsibilities.locations_manager_id = Locations_Managers.id   GROUP BY Locations_Managers_Responsibilities.responsibility_id HAVING COUNT(DISTINCT Locations_Managers_Responsibilities.locations_manager_id) = (SELECT COUNT(*) FROM  Locations_Managers)",
+        "sql_query2": "select locations_managers.name , responsibilities.description from Locations_Managers_Responsibilities join Responsibilities on Locations_Managers_Responsibilities.responsibility_id = Responsibilities.id join Locations_Managers on Locations_Managers_Responsibilities.locations_manager_id = Locations_Managers.id",
+        "interpretation1": "What responsibilities are applicable to all managers at the same time?",
+        "interpretation2": "Show me the managers and their responsibilities."
+    }
+]

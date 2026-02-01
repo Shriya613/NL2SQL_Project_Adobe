@@ -1,0 +1,22 @@
+[
+    {
+        "question": "For what project and how much funding did Contractor B get and from where?",
+        "sql_query1": "SELECT Funding.governmentAgency, Funding.fundsAmount\r\nFROM Funding\r\nJOIN Payments on Funding.projectID = Payments.projectID\r\nJOIN Contractors on Payments.contractorID = Contractors.contractorID\r\nWHERE Contractors.companyName = \"Contractor B\"",
+        "sql_query2": "SELECT Funding.privateDonors, Funding.fundsAmount\r\nFROM Funding\r\nJOIN Payments on Funding.projectID = Payments.projectID\r\nJOIN Contractors on Payments.contractorID = Contractors.contractorID\r\nWHERE Contractors.companyName = \"Contractor B\"",
+        "sql_query3": "SELECT Funding.governmentAgency,Funding.privateDonors, Funding.fundsAmount\r\nFROM Funding\r\nJOIN Payments on Funding.projectID = Payments.projectID\r\nJOIN Contractors on Payments.contractorID = Contractors.contractorID\r\nWHERE Contractors.companyName = \"Contractor B\"",
+        "interpretation1": "From which government agency did Contractor B fund the project and how much was it? Also, show the project.",
+        "interpretation2": "From what private donors did Contractor B get the project funding and how much was it? Also, show the project.",
+        "interpretation3": "From what private donors and government agencies did Contractor B get the project funding and how much was it? Also, show the project.",
+        "sql_query_general": "SELECT Funding.Funding, Funding.fundsAmount\r\nFROM Funding\r\nJOIN Payments on Funding.projectID = Payments.projectID\r\nJOIN Contractors on Payments.contractorID = Contractors.contractorID\r\nWHERE Contractors.companyName = \"Contractor B\""
+    },
+    {
+        "question": "Who paid the funding on 2022-02-05?",
+        "sql_query1": "SELECT Funding.governmentAgency\r\nFROM Funding\r\nJOIN Payments on Funding.projectID = Payments.projectID\r\nWHERE Payments.paymentDate = \"2022-02-05\"",
+        "sql_query2": "SELECT Funding.privateDonors\r\nFROM Funding\r\nJOIN Payments on Funding.projectID = Payments.projectID\r\nWHERE Payments.paymentDate = \"2022-02-05\"",
+        "sql_query3": "SELECT Funding.governmentAgency, Funding.privateDonors\r\nFROM Funding\r\nJOIN Payments on Funding.projectID = Payments.projectID\r\nWHERE Payments.paymentDate = \"2022-02-05\"",
+        "interpretation1": "Which government agency made a payment on February 5th 2022.",
+        "interpretation2": "Who was the private donor who submitted a payment on February 5th 2022.",
+        "interpretation3": "List the government agency and private donor who submitted a payment on February 5th 2022.",
+        "sql_query_general": "SELECT Funding.Funding\r\nFROM Funding\r\nJOIN Payments on Funding.projectID = Payments.projectID\r\nWHERE Payments.paymentDate = \"2022-02-05\""
+    }
+]

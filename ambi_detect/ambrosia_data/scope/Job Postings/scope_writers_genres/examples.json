@@ -1,0 +1,9 @@
+[
+    {
+        "question": "Give me the genres that each writer writes about.",
+        "sql_query1": "SELECT Genres.name  from Writers_Genres join Genres on Writers_Genres.genreID = Genres.genreID join Writers on Writers_Genres.writerID = Writers.writerID   GROUP BY Writers_Genres.genreID HAVING COUNT(DISTINCT Writers_Genres.writerID) = (SELECT COUNT(*) FROM  Writers)",
+        "sql_query2": "select writers.fullname , genres.name from Writers_Genres join Genres on Writers_Genres.genreID = Genres.genreID join Writers on Writers_Genres.writerID = Writers.writerID",
+        "interpretation1": "Which genres are common to all writers?",
+        "interpretation2": "For every writer, show the genres that they write about."
+    }
+]

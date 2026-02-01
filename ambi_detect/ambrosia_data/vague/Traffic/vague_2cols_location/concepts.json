@@ -1,0 +1,7 @@
+{
+    "template": "Question: Where is the nearest bus stop located? Subject of Inquiry: Bus Stop\nFocus: Location Possible answer types: 1. Street Name 2. Block Number",
+    "subject": "Bus Stop",
+    "focus": "Location",
+    "general_category1": "Street Name",
+    "general_category2": "Block Number"
+}

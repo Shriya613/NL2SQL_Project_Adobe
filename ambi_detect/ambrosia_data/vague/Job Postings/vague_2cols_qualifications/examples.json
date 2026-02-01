@@ -1,0 +1,22 @@
+[
+    {
+        "question": "Show all vacancies and required qualifications",
+        "sql_query1": "SELECT degree_level, job_post FROM Degrees",
+        "sql_query2": "SELECT certification, job_post FROM Degrees",
+        "sql_query3": "SELECT degree_level, certification, job_post FROM Degrees",
+        "interpretation1": "List all the vacancies and the required educational degrees.",
+        "interpretation2": "List all the vacancies and the required certifications.",
+        "interpretation3": "List all the vacancies and the required degrees and certifications for them.",
+        "sql_query_general": "SELECT Qualifications, job_post FROM Degrees"
+    },
+    {
+        "question": "What are the required qualifications for AI Researcher?",
+        "sql_query1": "SELECT degree_level FROM Degrees WHERE job_post = 'AI Researcher'",
+        "sql_query2": "SELECT certification FROM Degrees WHERE job_post = 'AI Researcher'",
+        "sql_query3": "SELECT degree_level, certification FROM Degrees WHERE job_post = 'AI Researcher'",
+        "interpretation1": "What is the required degree level for AI Researcher?",
+        "interpretation2": "What is the required certification for AI Researcher?",
+        "interpretation3": "What is the required degree level and certification for AI Researcher?",
+        "sql_query_general": "SELECT Qualifications FROM Degrees WHERE job_post = 'AI Researcher'"
+    }
+]

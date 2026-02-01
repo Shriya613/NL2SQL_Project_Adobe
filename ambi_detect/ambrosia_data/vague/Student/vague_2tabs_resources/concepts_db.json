@@ -1,0 +1,25 @@
+{
+    "template": "Question: What resources are available for test preparation? Subject of Inquiry: Test Preparation\nFocus: Resources Possible answer types: 1. Tutoring Service 2. Online Resource",
+    "general_category1": {
+        "tab_name": "TutoringServices",
+        "col_name": null,
+        "value": null,
+        "scope_id": null,
+        "db_type": "table"
+    },
+    "general_category2": {
+        "tab_name": "OnlineResources",
+        "col_name": null,
+        "value": null,
+        "scope_id": null,
+        "db_type": "table"
+    },
+    "subject": {
+        "tab_name": "TestPreparations",
+        "col_name": null,
+        "value": null,
+        "scope_id": null,
+        "db_type": "table"
+    },
+    "type": "2tabs"
+}

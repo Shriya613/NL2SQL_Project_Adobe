@@ -1,0 +1,31 @@
+{
+    "template": "Each Space Reporters has many different Missions. Among them, Mars Exploration is common to many Space Reporters.",
+    "entities": {
+        "tab_name": "Space_Reporters",
+        "col_name": null,
+        "value": null,
+        "scope_id": null,
+        "db_type": "table"
+    },
+    "components": {
+        "tab_name": "Missions",
+        "col_name": null,
+        "value": null,
+        "scope_id": null,
+        "db_type": "table"
+    },
+    "specific_component": {
+        "tab_name": "Missions",
+        "col_name": "mission_name",
+        "value": "Mars_Exploration",
+        "scope_id": 0,
+        "db_type": "value"
+    },
+    "entities_components": {
+        "tab_name": "Space_Reporters_Missions",
+        "col_name": null,
+        "value": null,
+        "scope_id": null,
+        "db_type": "table"
+    }
+}

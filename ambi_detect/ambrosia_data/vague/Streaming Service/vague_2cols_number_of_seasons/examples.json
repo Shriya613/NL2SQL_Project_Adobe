@@ -1,0 +1,22 @@
+[
+    {
+        "question": "Who has the highest number of tv seasons ordered by most to least",
+        "sql_query1": "Select * From TV_Shows Order by Released_Seasons DESC",
+        "sql_query2": "Select * From TV_Shows Order by Planned_Seasons DESC",
+        "sql_query3": "Select * From TV_Shows Order by Released_Seasons, Planned_Seasons DESC",
+        "interpretation1": "Show me the titles of tv shows in descending number of released seasons",
+        "interpretation2": "Show me the titles of tv shows in descending number of planned seasons",
+        "interpretation3": "Show me the titles of tv shows in descending number of released seasons and then by planned seasons",
+        "sql_query_general": "Select * From TV_Shows Order by Number_Of_Seasons DESC"
+    },
+    {
+        "question": "How many seasons are in mystery sci-fi?",
+        "sql_query1": "Select Released_Seasons From TV_Shows Where Series = 'Mystery Sci-Fi'",
+        "sql_query2": "Select Planned_Seasons From TV_Shows Where Series = 'Mystery Sci-Fi'",
+        "sql_query3": "Select Released_Seasons, Planned_Seasons From TV_Shows Where Series = 'Mystery Sci-Fi'",
+        "interpretation1": "For mystery sci-fi, how many seasons were released?",
+        "interpretation2": "For mystery sci-fi, how many seasons were planned?",
+        "interpretation3": "How many released and planned seasons of mystery sci-fi are there?",
+        "sql_query_general": "Select Number_Of_Seasons From TV_Shows Where Series = 'Mystery Sci-Fi'"
+    }
+]

@@ -1,0 +1,25 @@
+{
+    "template": "Question: Who produced this stage play? Subject of Inquiry: Stage Play\nFocus: Production Possible answer types: 1. Theater Company 2. Producer",
+    "general_category1": {
+        "tab_name": "Theater_Company",
+        "col_name": null,
+        "value": null,
+        "scope_id": null,
+        "db_type": "table"
+    },
+    "general_category2": {
+        "tab_name": "Producer",
+        "col_name": null,
+        "value": null,
+        "scope_id": null,
+        "db_type": "table"
+    },
+    "subject": {
+        "tab_name": "Stage_Play",
+        "col_name": null,
+        "value": null,
+        "scope_id": null,
+        "db_type": "table"
+    },
+    "type": "2tabs"
+}

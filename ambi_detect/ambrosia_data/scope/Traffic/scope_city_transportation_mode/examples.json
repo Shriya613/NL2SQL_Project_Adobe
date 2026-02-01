@@ -1,0 +1,9 @@
+[
+    {
+        "question": "Tell me about transportation options each city has.",
+        "sql_query1": "SELECT Transportation_Mode.mode  from City_Transportation_Mode join Transportation_Mode on City_Transportation_Mode.transportation_mode_id = Transportation_Mode.id join City on City_Transportation_Mode.city_id = City.id   GROUP BY City_Transportation_Mode.transportation_mode_id HAVING COUNT(DISTINCT City_Transportation_Mode.city_id) = (SELECT COUNT(*) FROM  City)",
+        "sql_query2": "select city.name , transportation_mode.mode from City_Transportation_Mode join Transportation_Mode on City_Transportation_Mode.transportation_mode_id = Transportation_Mode.id join City on City_Transportation_Mode.city_id = City.id",
+        "interpretation1": "What transportation options do all cities have in common?",
+        "interpretation2": "For every city, list transportation options they have."
+    }
+]

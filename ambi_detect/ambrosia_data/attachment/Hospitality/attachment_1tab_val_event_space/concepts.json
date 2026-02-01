@@ -1,0 +1,8 @@
+{
+    "template": "Banquet Hall and Conference Room are subclasses of Event Space. All Banquet halls and Conference rooms have property \"Capacity\". There might be a Banquet Hall and a Conference Room that both have \"Capacity\" equal to \"200\".",
+    "general_class": "Event Space",
+    "class1": "Banquet Hall",
+    "class2": "Conference Room",
+    "common_property": "Capacity",
+    "common_value": "200"
+}

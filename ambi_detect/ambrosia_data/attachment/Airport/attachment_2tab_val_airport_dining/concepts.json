@@ -1,0 +1,8 @@
+{
+    "template": "Airport Restaurant and Bar are subclasses of Airport Dining. All Airport Restaurants and Bars have the property \"Opening hours\". There might be an Airport Restaurant and a Bar that both have \"Opening hours\" equal to \"9 AM to 11 PM\".",
+    "general_class": "Airport Dining",
+    "class1": "Airport Restaurant",
+    "class2": "Bar",
+    "common_property": "Opening hours",
+    "common_value": "9 AM to 11 PM"
+}

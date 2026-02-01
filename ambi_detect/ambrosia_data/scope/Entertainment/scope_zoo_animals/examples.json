@@ -1,0 +1,9 @@
+[
+    {
+        "question": "List the animals we have in each zoo.",
+        "sql_query1": "SELECT Animals.animalName  from Zoo_Animals join Animals on Zoo_Animals.animalID = Animals.animalID join Zoo on Zoo_Animals.zooID = Zoo.zooID   GROUP BY Zoo_Animals.animalID HAVING COUNT(DISTINCT Zoo_Animals.zooID) = (SELECT COUNT(*) FROM  Zoo)",
+        "sql_query2": "select zoo.zooname , animals.animalname from Zoo_Animals join Animals on Zoo_Animals.animalID = Animals.animalID join Zoo on Zoo_Animals.zooID = Zoo.zooID",
+        "interpretation1": "List the common animals for all zoos.",
+        "interpretation2": "List the zoos and their animals."
+    }
+]

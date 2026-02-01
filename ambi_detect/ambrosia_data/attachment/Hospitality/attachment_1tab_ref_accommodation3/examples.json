@@ -1,0 +1,9 @@
+[
+    {
+        "question": "Show all chalets and cabins which cost 200 per night.",
+        "sql_query1": "SELECT Chalets.Name \r\nFROM Chalets\r\nWHERE (Chalets.Accommodation = \"Chalet\" OR Chalets.Accommodation = \"Cabin\") AND Chalets.Price_Per_Night = 200.0",
+        "sql_query2": "SELECT Chalets.Name \r\nFROM Chalets\r\nWHERE Chalets.Accommodation = \"Chalet\" OR Chalets.Accommodation = \"Cabin\" AND Chalets.Price_Per_Night = 200.0",
+        "interpretation1": "Show both chalets and cabins where either cost 200 per night.",
+        "interpretation2": "Show all the chalets, also show the cabins which cost 200 per night."
+    }
+]

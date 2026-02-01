@@ -1,0 +1,8 @@
+{
+    "template": "Airline Alliance and Independent Carrier are subclasses of Airline Types. All Airline Alliances and Independent Carriers have the property \"Aircraft\". There might be an Airline Alliance and an Independent Carrier that both operate \"Airbus A320\" aircraft.",
+    "general_class": "Airline Types",
+    "class1": "Airline Alliance",
+    "class2": "Independent Carrier",
+    "common_property": "Aircraft",
+    "common_value": "Airbus A320"
+}

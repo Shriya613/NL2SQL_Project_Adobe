@@ -1,0 +1,9 @@
+[
+    {
+        "question": "Show horror films and thriller films with a budget of 20 million.",
+        "sql_query1": "SELECT Films.title \r\nFROM Genres JOIN Film_Genre ON Genres.id = Film_Genre.genre_id JOIN Films ON Film_Genre.film_id = Films.id\r\nWHERE (Genres.genre = \"Horror\" OR Genres.genre = \"Thriller\") AND Films.budget = 20000000.0",
+        "sql_query2": "SELECT Films.title \r\nFROM Genres JOIN Film_Genre ON Genres.id = Film_Genre.genre_id JOIN Films ON Film_Genre.film_id = Films.id\r\nWHERE Genres.genre = \"Horror\" OR Genres.genre = \"Thriller\" AND Films.budget = 20000000.0",
+        "interpretation1": "What horror films had a budget of 20 million and what thriller films had the same budget?",
+        "interpretation2": "Provide a list of all horror films and also list thriller films with a budget of 20 million."
+    }
+]

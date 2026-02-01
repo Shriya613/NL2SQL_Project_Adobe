@@ -1,0 +1,22 @@
+[
+    {
+        "question": "Provide a list of professors along with the subjects they teach",
+        "sql_query1": "SELECT Professors.fullname, Disciplines.name AS Teaching_Subject\r\nFROM Professors\r\nJOIN Courses ON Courses.professor_id = Professors.id\r\nJOIN Disciplines ON Courses.Discipline_id = Disciplines.id;",
+        "sql_query2": "SELECT Professors.fullname, Courses.Course_name AS Teaching_Subject\r\nFROM Professors\r\nJOIN Courses ON Courses.professor_id = Professors.id",
+        "sql_query3": "SELECT Professors.fullname, Disciplines.name, Courses.Course_name\r\nFROM Professors\r\nJOIN Courses ON Courses.professor_id = Professors.id\r\nJOIN Disciplines ON Courses.Discipline_id = Disciplines.id;",
+        "interpretation1": "What are the disciplines of each professor?",
+        "interpretation2": "What is the name of each professor's course?",
+        "interpretation3": "Which discipline and course are associated with which professor?",
+        "sql_query_general": "SELECT Professors.fullname, Disciplines.name AS Teaching_Subject\r\nFROM Professors\r\nJOIN Courses ON Courses.professor_id = Professors.id\r\nJOIN Disciplines ON Courses.Teaching_Subject = Disciplines.id;"
+    },
+    {
+        "question": "How many professors are teaching each subject?",
+        "sql_query1": "SELECT Disciplines.name AS Teaching_Subject, COUNT(*) AS Number_of_Professors\r\nFROM Courses\r\nJOIN Disciplines ON Courses.Discipline_id = Disciplines.id\r\nGROUP BY Disciplines.name;",
+        "sql_query2": "SELECT Courses.Course_name AS Teaching_Subject, COUNT(*) AS Number_of_Professors\r\nFROM Courses\r\nGROUP BY Courses.Course_name;",
+        "sql_query3": "SELECT Disciplines.name, Courses.Course_name, COUNT(*) AS Number_of_Professors\r\nFROM Courses\r\nJOIN Disciplines ON Courses.Discipline_id = Disciplines.id\r\nGROUP BY Disciplines.name, Courses.Course_name;",
+        "interpretation1": "What discipline is linked to each professor?",
+        "interpretation2": "What courses is each professors teaching?",
+        "interpretation3": "What discipline and courses are linked to which professor?",
+        "sql_query_general": "SELECT Disciplines.name AS Teaching_Subject, COUNT(*) AS Number_of_Professors\r\nFROM Courses\r\nJOIN Disciplines ON Courses.Teaching_Subject = Disciplines.id\r\nGROUP BY Disciplines.name;"
+    }
+]

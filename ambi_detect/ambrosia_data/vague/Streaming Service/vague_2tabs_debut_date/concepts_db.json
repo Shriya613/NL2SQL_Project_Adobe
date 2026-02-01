@@ -1,0 +1,25 @@
+{
+    "template": "Question: When did this podcast first air? Subject of Inquiry: Podcast\nFocus: Debut Date Possible answer types: 1. Debut Day 2. Debut Year",
+    "general_category1": {
+        "tab_name": "Debut_Day",
+        "col_name": null,
+        "value": null,
+        "scope_id": null,
+        "db_type": "table"
+    },
+    "general_category2": {
+        "tab_name": "Debut_Year",
+        "col_name": null,
+        "value": null,
+        "scope_id": null,
+        "db_type": "table"
+    },
+    "subject": {
+        "tab_name": "Podcast",
+        "col_name": null,
+        "value": null,
+        "scope_id": null,
+        "db_type": "table"
+    },
+    "type": "2tabs"
+}

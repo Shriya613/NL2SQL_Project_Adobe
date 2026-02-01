@@ -1,0 +1,7 @@
+{
+    "template": "Question: What is the requirement for passing this exam? Subject of Inquiry: Exam\nFocus: Passing Requirements Possible answer types: 1. Minimum Score 2. Percentage Required",
+    "subject": "Exam",
+    "focus": "Passing Requirements",
+    "general_category1": "Minimum Score",
+    "general_category2": "Percentage Required"
+}

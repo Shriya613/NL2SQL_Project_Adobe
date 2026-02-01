@@ -1,0 +1,6 @@
+{
+    "template": "Each Lighting Technicians has many different Fixtures. Among them, Softbox is common to many Lighting Technicians.",
+    "specific_component": "Softbox",
+    "components": "Fixtures",
+    "entities": "Lighting Technicians"
+}

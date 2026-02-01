@@ -1,0 +1,9 @@
+[
+    {
+        "question": "Show life insurances and annuities with the payout of 100000.0.",
+        "sql_query1": "SELECT life_insurances.policy_number as number\r\nFROM life_insurances\r\nWHERE life_insurances.payout = 100000.0\r\nUNION\r\nSELECT annuities.contract_number as number\r\nFROM annuities\r\nWHERE annuities.payout = 100000.0",
+        "sql_query2": "SELECT life_insurances.policy_number as number\r\nFROM life_insurances\r\nUNION\r\nSELECT annuities.contract_number as number\r\nFROM annuities\r\nWHERE annuities.payout = 100000.0",
+        "interpretation1": "Which life insurances have a payout of 100000.0 and which annuities have the same payout.",
+        "interpretation2": "Provide a list of all life insurances combined with a list of all annuities with the payout of 100000.0."
+    }
+]

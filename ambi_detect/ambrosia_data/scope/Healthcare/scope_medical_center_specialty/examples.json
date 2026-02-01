@@ -1,0 +1,9 @@
+[
+    {
+        "question": "List the types of speciality of every medical centre.",
+        "sql_query1": "SELECT Specialty.Type  from Medical_Center_Specialty join Specialty on Medical_Center_Specialty.Specialty_ID = Specialty.ID join Medical_Center on Medical_Center_Specialty.Medical_Center_ID = Medical_Center.ID   GROUP BY Medical_Center_Specialty.Specialty_ID HAVING COUNT(DISTINCT Medical_Center_Specialty.Medical_Center_ID) = (SELECT COUNT(*) FROM  Medical_Center)",
+        "sql_query2": "select medical_center.name , specialty.type from Medical_Center_Specialty join Specialty on Medical_Center_Specialty.Specialty_ID = Specialty.ID join Medical_Center on Medical_Center_Specialty.Medical_Center_ID = Medical_Center.ID",
+        "interpretation1": "List the types of specialty common to all medical centres.",
+        "interpretation2": "For all the medical centres, list their specialty type."
+    }
+]

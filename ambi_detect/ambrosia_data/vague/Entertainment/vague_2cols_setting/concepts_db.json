@@ -1,0 +1,25 @@
+{
+    "template": "Question: What is the setting of this opera? Subject of Inquiry: Opera\nFocus: Setting Possible answer types: 1. Historical Era 2. Location",
+    "general_category1": {
+        "tab_name": "Operas",
+        "col_name": "Historical_Era",
+        "value": null,
+        "scope_id": null,
+        "db_type": "column"
+    },
+    "general_category2": {
+        "tab_name": "Operas",
+        "col_name": "Location",
+        "value": null,
+        "scope_id": null,
+        "db_type": "column"
+    },
+    "subject": {
+        "tab_name": "Operas",
+        "col_name": "operaID",
+        "value": null,
+        "scope_id": null,
+        "db_type": "column"
+    },
+    "type": "2cols"
+}

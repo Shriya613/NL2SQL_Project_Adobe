@@ -1,0 +1,22 @@
+[
+    {
+        "question": "What is the pay gap and job satisfaction across occupations, from lowest to highest satisfaction?",
+        "sql_query1": "SELECT occupation, percentageGap, jobSatisfactionIndex FROM OccupationalStats ORDER BY jobSatisfactionIndex ASC",
+        "sql_query2": "SELECT occupation, differenceInSalaries, jobSatisfactionIndex FROM OccupationalStats ORDER BY jobSatisfactionIndex ASC",
+        "sql_query3": "SELECT occupation, percentageGap, differenceInSalaries, jobSatisfactionIndex FROM OccupationalStats ORDER BY jobSatisfactionIndex ASC",
+        "interpretation1": "Show the pay gap percentage and job satisfaction of occupations, from lowest to highest satisfaction.",
+        "interpretation2": "Show the difference in salaries and job satisfaction of occupations, from lowest to highest satisfaction.",
+        "interpretation3": "Show the pay gap percentage, difference in salaries and job satisfaction of occupations, from lowest to highest satisfaction.",
+        "sql_query_general": "SELECT occupation, Pay_Gap, jobSatisfactionIndex FROM OccupationalStats ORDER BY jobSatisfactionIndex ASC"
+    },
+    {
+        "question": "Working in different sectors, what will be the salary and pay gap?",
+        "sql_query1": "SELECT OccupationalStats.occupation, OccupationalStats.percentageGap, SalaryData.salary FROM OccupationalStats JOIN People ON OccupationalStats.occupation = People. occupation JOIN SalaryData ON SalaryData.personId = People.id",
+        "sql_query2": "SELECT OccupationalStats.occupation, OccupationalStats.differenceInSalaries, SalaryData.salary FROM OccupationalStats JOIN People ON OccupationalStats.occupation = People. occupation JOIN SalaryData ON SalaryData.personId = People.id",
+        "sql_query3": "SELECT OccupationalStats.occupation, OccupationalStats.percentageGap, differenceInSalaries, SalaryData.salary FROM OccupationalStats JOIN People ON OccupationalStats.occupation = People. occupation JOIN SalaryData ON SalaryData.personId = People.id",
+        "interpretation1": "For each occupation, list the salaries and salary differences as a percentage.",
+        "interpretation2": "For each occupation, list the salaries and the pay gap as the pay amount.",
+        "interpretation3": "For each occupation, show me all the salaries and the salary differences both as the pay amount and a percentage.",
+        "sql_query_general": "SELECT OccupationalStats.occupation, OccupationalStats.Pay_Gap, SalaryData.salary FROM OccupationalStats JOIN People ON OccupationalStats.occupation = People. occupation JOIN SalaryData ON SalaryData.personId = People.id"
+    }
+]

@@ -1,0 +1,33 @@
+{
+    "domain": "City",
+    "template": "Swimming Pool and Hot Tub are subclasses of Leisure Features. All Swimming pools and Hot tubs have property \"City\". There might be a Swimming Pool and a Hot Tub that both have \"City\" equal to \"Miami\".",
+    "type": "1tab_ref",
+    "general_class": {
+        "tab_name": "LeisureFeature",
+        "col_name": "feature",
+        "value": null,
+        "scope_id": null,
+        "db_type": "column"
+    },
+    "class1": {
+        "tab_name": "LeisureFeature",
+        "col_name": "feature",
+        "value": "Swimming Pool",
+        "scope_id": null,
+        "db_type": "value"
+    },
+    "class2": {
+        "tab_name": "LeisureFeature",
+        "col_name": "feature",
+        "value": "Hot Tub",
+        "scope_id": null,
+        "db_type": "value"
+    },
+    "common_property": {
+        "tab_name": "City",
+        "col_name": "name",
+        "value": "New York",
+        "scope_id": null,
+        "db_type": "value"
+    }
+}

@@ -1,0 +1,6 @@
+{
+    "template": "Each Cultural Centers has many different Performances. Among them, Dance Performances is common to many Cultural Centers.",
+    "specific_component": "Dance Performances",
+    "components": "Performances",
+    "entities": "Cultural Centers"
+}

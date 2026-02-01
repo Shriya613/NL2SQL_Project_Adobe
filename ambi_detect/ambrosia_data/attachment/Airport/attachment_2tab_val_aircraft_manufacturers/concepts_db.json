@@ -1,0 +1,27 @@
+{
+    "domain": "Boeing",
+    "template": "Boeing and Airbus are subclasses of Aircraft Manufacturers. All Boeing and Airbus aircraft have the property \"Number of Seats\". There might be a Boeing aircraft and an Airbus aircraft that both have \"Number of Seats\" equal to \"180\".",
+    "type": "2tab_val",
+    "general_class": "Aircraft Manufacturers",
+    "class1": {
+        "tab_name": "Boeing",
+        "col_name": null,
+        "value": null,
+        "scope_id": null,
+        "db_type": "table"
+    },
+    "class2": {
+        "tab_name": "Airbus",
+        "col_name": null,
+        "value": null,
+        "scope_id": null,
+        "db_type": "table"
+    },
+    "common_property": {
+        "tab_name": "Boeing",
+        "col_name": "Number_of_seats",
+        "value": 180,
+        "scope_id": null,
+        "db_type": "value"
+    }
+}

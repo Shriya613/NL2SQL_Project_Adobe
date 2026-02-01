@@ -1,0 +1,31 @@
+{
+    "template": "Each Advertisements has many different Formats. Among them, Billboard is common to many Advertisements.",
+    "entities": {
+        "tab_name": "Advertisements",
+        "col_name": null,
+        "value": null,
+        "scope_id": null,
+        "db_type": "table"
+    },
+    "components": {
+        "tab_name": "Formats",
+        "col_name": null,
+        "value": null,
+        "scope_id": null,
+        "db_type": "table"
+    },
+    "specific_component": {
+        "tab_name": "Formats",
+        "col_name": "format_name",
+        "value": "Billboard",
+        "scope_id": 0,
+        "db_type": "value"
+    },
+    "entities_components": {
+        "tab_name": "Advertisements_Formats",
+        "col_name": null,
+        "value": null,
+        "scope_id": null,
+        "db_type": "table"
+    }
+}

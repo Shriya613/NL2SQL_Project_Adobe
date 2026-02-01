@@ -1,0 +1,9 @@
+[
+    {
+        "question": "Show central banks and commercial banks in the USA.",
+        "sql_query1": "SELECT Banks.name \r\nFROM Types_of_banks JOIN Banks ON Types_of_banks.id = Banks.type_id JOIN Countries ON Banks.country_id = Countries.id\r\nWHERE (Types_of_banks.bank_type = \"Central Bank\" OR Types_of_banks.bank_type = \"Commercial Bank\") AND Countries.country_name = \"USA\"",
+        "sql_query2": "SELECT Banks.name \r\nFROM Types_of_banks JOIN Banks ON Types_of_banks.id = Banks.type_id JOIN Countries ON Banks.country_id = Countries.id\r\nWHERE Types_of_banks.bank_type = \"Central Bank\" OR Types_of_banks.bank_type = \"Commercial Bank\" AND Countries.country_name = \"USA\"",
+        "interpretation1": "Show both the central and commercial banks in the USA.",
+        "interpretation2": "Give me all of the central banks and just those commercial banks based in the USA."
+    }
+]

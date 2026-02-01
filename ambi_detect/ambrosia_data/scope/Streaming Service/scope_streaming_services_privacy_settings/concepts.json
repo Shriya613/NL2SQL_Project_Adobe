@@ -1,0 +1,6 @@
+{
+    "template": "Each Streaming Services has many different Privacy Settings. Among them, Data Collection Opt-Out is common to many Streaming Services.",
+    "specific_component": "Data Collection Opt-Out",
+    "components": "Privacy Settings",
+    "entities": "Streaming Services"
+}

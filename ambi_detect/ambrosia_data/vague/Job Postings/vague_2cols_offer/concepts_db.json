@@ -1,0 +1,25 @@
+{
+    "template": "Question: What does this job offer? Subject of Inquiry: Job Post\nFocus: Offer Possible answer types: 1. Base Pay Range 2. Benefits",
+    "general_category1": {
+        "tab_name": "Jobs",
+        "col_name": "Base_Pay_Range",
+        "value": null,
+        "scope_id": null,
+        "db_type": "column"
+    },
+    "general_category2": {
+        "tab_name": "Jobs",
+        "col_name": "Benefits",
+        "value": null,
+        "scope_id": null,
+        "db_type": "column"
+    },
+    "subject": {
+        "tab_name": "Jobs",
+        "col_name": "Job_Post",
+        "value": null,
+        "scope_id": null,
+        "db_type": "column"
+    },
+    "type": "2cols"
+}

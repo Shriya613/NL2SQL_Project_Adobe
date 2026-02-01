@@ -1,0 +1,25 @@
+{
+    "template": "Question: What is the acceptance rate of this university? Subject of Inquiry: University\nFocus: Level of Prestige Possible answer types: 1. Admission Rate 2. Ranking",
+    "general_category1": {
+        "tab_name": "Universities",
+        "col_name": "admissionRate",
+        "value": null,
+        "scope_id": null,
+        "db_type": "column"
+    },
+    "general_category2": {
+        "tab_name": "Universities",
+        "col_name": "ranking",
+        "value": null,
+        "scope_id": null,
+        "db_type": "column"
+    },
+    "subject": {
+        "tab_name": "Universities",
+        "col_name": "universityName",
+        "value": null,
+        "scope_id": null,
+        "db_type": "column"
+    },
+    "type": "2cols"
+}

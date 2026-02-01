@@ -1,0 +1,8 @@
+{
+    "template": "Autobiography and Historical Account are subclasses of Narrative Form. All Autobiographies and Historical accounts have property \"Epoch\". There might be a Autobiography and a Historical Account that both have \"Epoch\" equal to \"20th Century\".",
+    "general_class": "Narrative Form",
+    "class1": "Autobiography",
+    "class2": "Historical Account",
+    "common_property": "Epoch",
+    "common_value": "20th Century"
+}

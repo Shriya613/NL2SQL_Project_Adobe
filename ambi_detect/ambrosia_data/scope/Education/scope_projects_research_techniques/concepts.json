@@ -1,0 +1,6 @@
+{
+    "template": "Each Projects has many different Research Techniques. Among them, Surveys is common to many Projects.",
+    "specific_component": "Surveys",
+    "components": "Research Techniques",
+    "entities": "Projects"
+}

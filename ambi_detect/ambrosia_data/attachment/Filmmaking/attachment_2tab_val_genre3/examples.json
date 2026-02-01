@@ -1,0 +1,9 @@
+[
+    {
+        "question": "Show action movies and romantic comedies that run for 120 minutes.",
+        "sql_query1": "SELECT Action_Movies.title\r\nFROM Action_Movies\r\nWHERE Action_Movies.Duration = 120\r\nUNION\r\nSELECT Romantic_Comedies.title\r\nFROM Romantic_Comedies\r\nWHERE Romantic_Comedies.Duration = 120",
+        "sql_query2": "SELECT Action_Movies.title\r\nFROM Action_Movies\r\nUNION\r\nSELECT Romantic_Comedies.title\r\nFROM Romantic_Comedies\r\nWHERE Romantic_Comedies.Duration = 120",
+        "interpretation1": "What action movies run for 120 minutes and what romantic comedies have the same duration?",
+        "interpretation2": "List all action movies and also list romantic comedies with a duration of 120 minutes."
+    }
+]

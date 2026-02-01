@@ -1,0 +1,22 @@
+[
+    {
+        "question": "Who issued CD Special?",
+        "sql_query1": "SELECT Branch.BranchName FROM Branch JOIN BankingProducts ON BankingProducts.BranchName = Branch.BranchID WHERE ProductName = 'CD Special'",
+        "sql_query2": "SELECT Bank.BankName FROM Bank JOIN BankingProducts ON BankingProducts.BankName = Bank.BankName WHERE ProductName = 'CD Special'",
+        "sql_query3": "SELECT Bank.BankName, Branch.BranchName FROM Branch JOIN BankingProducts ON BankingProducts.BranchName = Branch.BranchID JOIN Bank ON BankingProducts.BankName = Bank.BankName WHERE ProductName = 'CD Special'",
+        "interpretation1": "Which branch issued CD Special?",
+        "interpretation2": "Which bank issued CD Special?",
+        "interpretation3": "Which bank and branch issued CD Special?",
+        "sql_query_general": "SELECT Branch.BranchName FROM Branch JOIN BankingProducts ON BankingProducts.Issuer = Branch.BankName WHERE ProductName = 'CD Special'"
+    },
+    {
+        "question": "Who issued products where I can invest more than 50k",
+        "sql_query1": "SELECT Branch.BranchName FROM Branch JOIN BankingProducts ON BankingProducts.BranchName = Branch.BranchID where MaximumDepositAmount > 49999",
+        "sql_query2": "SELECT Bank.BankName FROM Bank JOIN BankingProducts ON BankingProducts.BankName = Bank.BankName  where MaximumDepositAmount > 49999",
+        "sql_query3": "SELECT Bank.BankName, Branch.BranchName FROM Branch JOIN BankingProducts ON BankingProducts.BranchName = Branch.BranchID JOIN Bank ON BankingProducts.BankName = Bank.BankName where MaximumDepositAmount > 49999",
+        "interpretation1": "Which branches issues products where I can invest more than 50k?",
+        "interpretation2": "Which bank issues products where I can invest more than 50k?",
+        "interpretation3": "Which bank and their branches issue products where I can invest more than 50k?",
+        "sql_query_general": "SELECT Branch.BranchName FROM Branch JOIN BankingProducts ON BankingProducts.Issuer = Branch.BankName where MaximumDepositAmount > 49999"
+    }
+]

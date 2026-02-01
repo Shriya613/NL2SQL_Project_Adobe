@@ -1,0 +1,22 @@
+[
+    {
+        "question": "Can you find all internship topics?",
+        "sql_query1": "SELECT \r\n    name\r\nFROM \r\n    Industry_Sector",
+        "sql_query2": "SELECT \r\n    project_name\r\nFROM \r\n    Project_Name",
+        "sql_query3": "SELECT \r\n    project_name, name\r\nFROM \r\n    Industry_Sector\r\nJOIN\r\n    Internship ON Internship.industry_sector_id = Industry_Sector.id\r\nJOIN\r\n  Project_Name ON Internship.project_id = Project_Name.id",
+        "interpretation1": "List all the industry sectors that have at least one student intern.",
+        "interpretation2": "List all the project names that have at least one student intern.",
+        "interpretation3": "List all the industry topics and project names that have at least one student intern.",
+        "sql_query_general": "SELECT \r\n    name\r\nFROM \r\n    Topic"
+    },
+    {
+        "question": "Show me the students along with their internship topics.",
+        "sql_query1": "SELECT \r\n    Internship.student_id, \r\n    Industry_Sector.name\r\nFROM \r\n    Industry_Sector\r\nJOIN\r\n    Internship ON Internship.industry_sector_id = Industry_Sector.id",
+        "sql_query2": "SELECT \r\n    Internship.student_id, \r\n    Project_Name.project_name\r\nFROM \r\n    Project_Name\r\nJOIN\r\n    Internship ON Internship.project_id = Project_Name.id",
+        "sql_query3": "SELECT \r\n    Internship.student_id, \r\n    Industry_Sector.name,\r\n    Project_Name.project_name\r\nFROM \r\n    Industry_Sector\r\nJOIN\r\n    Internship ON Internship.industry_sector_id = Industry_Sector.id\r\nJOIN\r\n Project_Name ON Internship.project_id = Project_Name.id",
+        "interpretation1": "List the students and their industry sectors.",
+        "interpretation2": "List the students and their project names.",
+        "interpretation3": "List the students, their industry sectors and their project names.",
+        "sql_query_general": "SELECT \r\n    Internship.student_id, \r\n    Topic.name\r\nFROM \r\n    Topic\r\nJOIN\r\n    Internship ON Internship.industry_sector_id = Topic.id"
+    }
+]

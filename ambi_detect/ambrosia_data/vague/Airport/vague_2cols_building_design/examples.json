@@ -1,0 +1,22 @@
+[
+    {
+        "question": "Who did the building design of LAX airport?",
+        "sql_query1": "SELECT architecture_firm FROM Buildings\r\nJOIN Terminals ON Buildings.airport_terminal = Terminals.terminal_name\r\nJOIN Airports ON Terminals.airport_id = Airports.id\r\nWHERE Airports.name LIKE \"%LAX%\"",
+        "sql_query2": "SELECT architect FROM Buildings\r\nJOIN Terminals ON Buildings.airport_terminal = Terminals.terminal_name\r\nJOIN Airports ON Terminals.airport_id = Airports.id\r\nWHERE Airports.name LIKE \"%LAX%\"",
+        "sql_query3": "SELECT architecture_firm, architect FROM Buildings\r\nJOIN Terminals ON Buildings.airport_terminal = Terminals.terminal_name\r\nJOIN Airports ON Terminals.airport_id = Airports.id\r\nWHERE Airports.name LIKE \"%LAX%\"",
+        "interpretation1": "Which architect designed LAX?",
+        "interpretation2": "What architecture firm worked on LAX?",
+        "interpretation3": "Which architect designed LAX and what firm did they work for?",
+        "sql_query_general": "SELECT Building_Design FROM Buildings\r\nJOIN Terminals ON Buildings.airport_terminal = Terminals.terminal_name\r\nJOIN Airports ON Terminals.airport_id = Airports.id\r\nWHERE Airports.name LIKE \"%LAX%\""
+    },
+    {
+        "question": "Who did the building design of the airport in Paris?",
+        "sql_query1": "SELECT architecture_firm FROM Buildings\r\nJOIN Terminals ON Buildings.airport_terminal = Terminals.terminal_name\r\nJOIN Airports ON Terminals.airport_id = Airports.id\r\nWHERE Airports.location LIKE \"%Paris%\"",
+        "sql_query2": "SELECT architect FROM Buildings\r\nJOIN Terminals ON Buildings.airport_terminal = Terminals.terminal_name\r\nJOIN Airports ON Terminals.airport_id = Airports.id\r\nWHERE Airports.location LIKE \"%Paris%\"",
+        "sql_query3": "SELECT architecture_firm, architect FROM Buildings\r\nJOIN Terminals ON Buildings.airport_terminal = Terminals.terminal_name\r\nJOIN Airports ON Terminals.airport_id = Airports.id\r\nWHERE Airports.location LIKE \"%Paris%\"",
+        "interpretation1": "Which firm did the building design of the airport in Paris?",
+        "interpretation2": "Tell me the architect who did the building design of the airport in Paris.",
+        "interpretation3": "Tell me the architect who did the building design of the airport in Paris and the company they work for.",
+        "sql_query_general": "SELECT Building_Design FROM Buildings\r\nJOIN Terminals ON Buildings.airport_terminal = Terminals.terminal_name\r\nJOIN Airports ON Terminals.airport_id = Airports.id\r\nWHERE Airports.location LIKE \"%Paris%\""
+    }
+]

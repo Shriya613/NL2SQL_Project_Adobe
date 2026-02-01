@@ -1,0 +1,31 @@
+{
+    "template": "Each Patient Advocates has many different Issues. Among them, Billing is common to many Patient Advocates.",
+    "entities": {
+        "tab_name": "Patient_Advocates",
+        "col_name": null,
+        "value": null,
+        "scope_id": null,
+        "db_type": "table"
+    },
+    "components": {
+        "tab_name": "Issues",
+        "col_name": null,
+        "value": null,
+        "scope_id": null,
+        "db_type": "table"
+    },
+    "specific_component": {
+        "tab_name": "Issues",
+        "col_name": "issue_name",
+        "value": "Billing",
+        "scope_id": 0,
+        "db_type": "value"
+    },
+    "entities_components": {
+        "tab_name": "Patient_Advocates_Issues",
+        "col_name": null,
+        "value": null,
+        "scope_id": null,
+        "db_type": "table"
+    }
+}

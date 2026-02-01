@@ -1,0 +1,27 @@
+{
+    "domain": "Engineering_Class",
+    "template": "Engineering Class and Design Class are subclasses of Academic Courses. All Engineering Classes and Design Classes have property \"Projects\". There might be an Engineering Class and a Design Class that both have \"Projects\" of similar nature.",
+    "type": "2tab_val",
+    "general_class": "Academic Courses",
+    "class1": {
+        "tab_name": "Engineering_Class",
+        "col_name": null,
+        "value": null,
+        "scope_id": null,
+        "db_type": "table"
+    },
+    "class2": {
+        "tab_name": "Design_Class",
+        "col_name": null,
+        "value": null,
+        "scope_id": null,
+        "db_type": "table"
+    },
+    "common_property": {
+        "tab_name": "Engineering_Class",
+        "col_name": "Projects",
+        "value": "Sustainability Project",
+        "scope_id": null,
+        "db_type": "value"
+    }
+}

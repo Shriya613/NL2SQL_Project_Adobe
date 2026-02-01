@@ -1,0 +1,9 @@
+[
+    {
+        "question": "Please show all research papers and review articles using the APA citation style.",
+        "sql_query1": "SELECT Papers.Title \r\nFROM Papers\r\nWHERE (Papers.Academic_PaperType = \"Research Paper\" OR Papers.Academic_PaperType = \"Review Article\") AND Papers.Citation_Style = \"APA\"",
+        "sql_query2": "SELECT Papers.Title \r\nFROM Papers\r\nWHERE Papers.Academic_PaperType = \"Research Paper\" OR Papers.Academic_PaperType = \"Review Article\" AND Papers.Citation_Style = \"APA\"",
+        "interpretation1": "Show both the research papers and review articles where either use the APA citation style.",
+        "interpretation2": "Show all the research papers, also show the review articles that use the APA style for citations."
+    }
+]

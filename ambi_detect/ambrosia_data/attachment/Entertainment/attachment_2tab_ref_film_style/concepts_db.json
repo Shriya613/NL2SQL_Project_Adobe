@@ -1,0 +1,27 @@
+{
+    "domain": "Director",
+    "template": "Adventure Movie and Action Movie are subclasses of Film Style. All Adventure movies and Action movies have property \"Director\". There might be a Adventure Movie and a Action Movie that both have \"Director\" equal to \"Sofia Martinez\".",
+    "type": "2tab_ref",
+    "general_class": "Film Style",
+    "class1": {
+        "tab_name": "Action_Movie",
+        "col_name": null,
+        "value": null,
+        "scope_id": null,
+        "db_type": "table"
+    },
+    "class2": {
+        "tab_name": "Adventure_Movie",
+        "col_name": null,
+        "value": null,
+        "scope_id": null,
+        "db_type": "table"
+    },
+    "common_property": {
+        "tab_name": "Director",
+        "col_name": "name",
+        "value": "Sofia Martinez",
+        "scope_id": null,
+        "db_type": "value"
+    }
+}

@@ -1,0 +1,9 @@
+[
+    {
+        "question": "Show credit cards and debit cards with a limit of 5000.",
+        "sql_query1": "SELECT _Bank_Cards.card_number \r\nFROM _Bank_Cards JOIN Limits ON _Bank_Cards.card_id = Limits.card_id\r\nWHERE (_Bank_Cards._bank_card_type = \"Credit Card\" OR _Bank_Cards._bank_card_type = \"Debit Card\") AND Limits.card_limit = 5000.0",
+        "sql_query2": "SELECT _Bank_Cards.card_number \r\nFROM _Bank_Cards JOIN Limits ON _Bank_Cards.card_id = Limits.card_id\r\nWHERE _Bank_Cards._bank_card_type = \"Credit Card\" OR _Bank_Cards._bank_card_type = \"Debit Card\" AND Limits.card_limit = 5000.0",
+        "interpretation1": "What credit cards have a limit of 5000 and what debit cards have the same limit?",
+        "interpretation2": "Provide a list of all credit cards and also provide a list of debit cards with a limit of 5000."
+    }
+]

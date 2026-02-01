@@ -1,0 +1,22 @@
+[
+    {
+        "question": "What were the requirements for each loan.",
+        "sql_query1": "Select Loans.LoanID, EligibilityAndDocuments.Eligibility_Criteria    From EligibilityAndDocuments JOIN Loans ON Loans.LoanID = EligibilityAndDocuments.LoanId",
+        "sql_query2": "Select Loans.LoanID, EligibilityAndDocuments.Documentation_Requirements    From EligibilityAndDocuments JOIN Loans ON Loans.LoanID = EligibilityAndDocuments.LoanId",
+        "sql_query3": "Select Loans.LoanID, EligibilityAndDocuments.Eligibility_Criteria, Documentation_Requirements    From EligibilityAndDocuments JOIN Loans ON Loans.LoanID = EligibilityAndDocuments.LoanId",
+        "interpretation1": "What are the eligibility criteria required for this loan?",
+        "interpretation2": "What are the necessary documents required for this loan?",
+        "interpretation3": "What are the eligibility criteria required for this loan and necessary documents for it?",
+        "sql_query_general": "Select Loans.LoanID, EligibilityAndDocuments.Requirements    From EligibilityAndDocuments JOIN Loans ON Loans.LoanID = EligibilityAndDocuments.LoanId"
+    },
+    {
+        "question": "Which loans met the approval status and what were the requirements",
+        "sql_query1": "Select Loans.LoanID, EligibilityAndDocuments.Eligibility_Criteria    From EligibilityAndDocuments JOIN Loans ON Loans.LoanID = EligibilityAndDocuments.LoanId Where Loans.Status = 'Approved'",
+        "sql_query2": "Select Loans.LoanID, EligibilityAndDocuments.Documentation_Requirements    From EligibilityAndDocuments JOIN Loans ON Loans.LoanID = EligibilityAndDocuments.LoanId Where Loans.Status = 'Approved'",
+        "sql_query3": "Select Loans.LoanID, EligibilityAndDocuments.Eligibility_Criteria, Documentation_Requirements    From EligibilityAndDocuments JOIN Loans ON Loans.LoanID = EligibilityAndDocuments.LoanId Where Loans.Status = 'Approved'",
+        "interpretation1": "List the eligibility criteria for all approved loans and these loans.",
+        "interpretation2": "List the document requirements for all approved loans and these loans.",
+        "interpretation3": "List the eligibility criteria  for all approved loans, the document requirements for them and these loans.",
+        "sql_query_general": "Select Loans.LoanID, EligibilityAndDocuments.Requirements    From EligibilityAndDocuments JOIN Loans ON Loans.LoanID = EligibilityAndDocuments.LoanId Where Loans.Status = 'Approved'"
+    }
+]

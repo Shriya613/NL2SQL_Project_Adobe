@@ -1,0 +1,8 @@
+{
+    "template": "Event Planner and Wedding Coordinator are subclasses of Events Industry. All Event planners and Wedding coordinators have property \"Company\". There might be a Event Planner and a Wedding Coordinator that both have \"Company\" equal to \"Events Unlimited\".",
+    "general_class": "Events Industry",
+    "class1": "Event Planner",
+    "class2": "Wedding Coordinator",
+    "common_property": "Company",
+    "common_value": "Events Unlimited"
+}

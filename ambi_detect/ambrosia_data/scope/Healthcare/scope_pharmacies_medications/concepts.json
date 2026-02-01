@@ -1,0 +1,6 @@
+{
+    "template": "Each Pharmacy has many different Medications. Among them, Pain Relievers is common to many Pharmacy.",
+    "specific_component": "Pain Relievers",
+    "components": "Medications",
+    "entities": "Pharmacy"
+}

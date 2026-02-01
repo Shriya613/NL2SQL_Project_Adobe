@@ -1,0 +1,22 @@
+[
+    {
+        "question": "How many extras are in the most expensive property?",
+        "sql_query1": "SELECT House.Fees\r\nFROM House JOIN\r\nSaleRecord ON House.id = SaleRecord.house_id\r\nWHERE SaleRecord.purchase_price = (\r\n                               SELECT MAX(SaleRecord.purchase_price) FROM SaleRecord\r\n                               )",
+        "sql_query2": "SELECT House.Taxes\r\nFROM House JOIN\r\nSaleRecord ON House.id = SaleRecord.house_id\r\nWHERE SaleRecord.purchase_price = (\r\n                               SELECT MAX(SaleRecord.purchase_price) FROM SaleRecord\r\n                               )",
+        "sql_query3": "SELECT House.Fees, Taxes\r\nFROM House JOIN\r\nSaleRecord ON House.id = SaleRecord.house_id\r\nWHERE SaleRecord.purchase_price = (\r\n                               SELECT MAX(SaleRecord.purchase_price) FROM SaleRecord\r\n                               )",
+        "interpretation1": "How much are the fees for the most expensive real estate?",
+        "interpretation2": "How much are the taxes for the most expensive real estate?",
+        "interpretation3": "How much are the fees and taxes for the most expensive real estate?",
+        "sql_query_general": "SELECT House.EXTRAS\r\nFROM House JOIN\r\nSaleRecord ON House.id = SaleRecord.house_id\r\nWHERE SaleRecord.purchase_price = (\r\n                               SELECT MAX(SaleRecord.purchase_price) FROM SaleRecord\r\n                               )"
+    },
+    {
+        "question": "How many extras are in the Condo?",
+        "sql_query1": "SELECT House.Fees\r\nFROM House \r\n    JOIN PropertyType ON PropertyType.id = House. property_type_id\r\nWHERE PropertyType.type = \"Condo\"",
+        "sql_query2": "SELECT House.Taxes\r\nFROM House \r\n    JOIN PropertyType ON PropertyType.id = House. property_type_id\r\nWHERE PropertyType.type = \"Condo\"",
+        "sql_query3": "SELECT House.Fees, Taxes\r\nFROM House \r\n    JOIN PropertyType ON PropertyType.id = House. property_type_id\r\nWHERE PropertyType.type = \"Condo\"",
+        "interpretation1": "How many fees are in the condo?",
+        "interpretation2": "What are the taxes associated with the condo?",
+        "interpretation3": "What are the fees associated with the condo and the corresponding taxes?",
+        "sql_query_general": "SELECT House.EXTRAS\r\nFROM House \r\n    JOIN PropertyType ON PropertyType.id = House. property_type_id\r\nWHERE PropertyType.type = \"Condo\""
+    }
+]

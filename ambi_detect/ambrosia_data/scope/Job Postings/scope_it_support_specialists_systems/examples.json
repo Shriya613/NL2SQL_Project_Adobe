@@ -1,0 +1,23 @@
+[
+    {
+        "question": "What is the state of the system that each IT support specialist works with?",
+        "sql_query1": "SELECT Systems.is_active  from It_Support_Specialists_Systems join Systems on It_Support_Specialists_Systems.system_id = Systems.system_id join It_Support_Specialists on It_Support_Specialists_Systems.it_specialist_id = It_Support_Specialists.id   GROUP BY It_Support_Specialists_Systems.system_id HAVING COUNT(DISTINCT It_Support_Specialists_Systems.it_specialist_id) = (SELECT COUNT(*) FROM  It_Support_Specialists)",
+        "sql_query2": "select it_support_specialists.name , systems.is_active from It_Support_Specialists_Systems join Systems on It_Support_Specialists_Systems.system_id = Systems.system_id join It_Support_Specialists on It_Support_Specialists_Systems.it_specialist_id = It_Support_Specialists.id",
+        "interpretation1": "Show me the state of the system common to all IT support specialists.",
+        "interpretation2": "For every IT support specialist, show me the state of the corresponding system."
+    },
+    {
+        "question": "which system names and active statuses are associated with every IT support specialist?",
+        "sql_query1": "SELECT Systems.system_name, Systems.is_active  from It_Support_Specialists_Systems join Systems on It_Support_Specialists_Systems.system_id = Systems.system_id join It_Support_Specialists on It_Support_Specialists_Systems.it_specialist_id = It_Support_Specialists.id   GROUP BY It_Support_Specialists_Systems.system_id HAVING COUNT(DISTINCT It_Support_Specialists_Systems.it_specialist_id) = (SELECT COUNT(*) FROM  It_Support_Specialists)",
+        "sql_query2": "select it_support_specialists.name , systems.system_name , systems.is_active from It_Support_Specialists_Systems join Systems on It_Support_Specialists_Systems.system_id = Systems.system_id join It_Support_Specialists on It_Support_Specialists_Systems.it_specialist_id = It_Support_Specialists.id",
+        "interpretation1": "What system names and active statuses are common for all IT support specialists?",
+        "interpretation2": "For each IT support specialist, what are the corresponding system names and active statuses?"
+    },
+    {
+        "question": "Tell me the systems every support specialist works with.",
+        "sql_query1": "SELECT Systems.system_name  from It_Support_Specialists_Systems join Systems on It_Support_Specialists_Systems.system_id = Systems.system_id join It_Support_Specialists on It_Support_Specialists_Systems.it_specialist_id = It_Support_Specialists.id   GROUP BY It_Support_Specialists_Systems.system_id HAVING COUNT(DISTINCT It_Support_Specialists_Systems.it_specialist_id) = (SELECT COUNT(*) FROM  It_Support_Specialists)",
+        "sql_query2": "select it_support_specialists.name , systems.system_name from It_Support_Specialists_Systems join Systems on It_Support_Specialists_Systems.system_id = Systems.system_id join It_Support_Specialists on It_Support_Specialists_Systems.it_specialist_id = It_Support_Specialists.id",
+        "interpretation1": "What systems are the same for all support specialists?",
+        "interpretation2": "For each support specialist, list the systems they work on."
+    }
+]

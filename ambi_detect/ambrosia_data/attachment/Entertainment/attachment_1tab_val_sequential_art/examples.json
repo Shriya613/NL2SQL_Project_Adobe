@@ -1,0 +1,9 @@
+[
+    {
+        "question": "Provide all comic books and graphic novels published by BOOM Studios.",
+        "sql_query1": "SELECT Comics.Title \r\nFROM Comics JOIN Publisher ON Comics.PublisherId = Publisher.PublisherID\r\nWHERE (Comics.SequentialArt = 'Comic Book' OR Comics.SequentialArt = 'Graphic Novel') AND Publisher.name = \"BOOM Studios\"",
+        "sql_query2": "SELECT Comics.Title \r\nFROM Comics JOIN Publisher ON Comics.PublisherId = Publisher.PublisherID\r\nWHERE Comics.SequentialArt = 'Comic Book' OR Comics.SequentialArt = 'Graphic Novel' AND Publisher.name = \"BOOM Studios\"",
+        "interpretation1": "Show all the BOOM Studios publications that are either comic books or graphic novels.",
+        "interpretation2": "List all of the comic books, in addition also list the graphic novels published by BOOM Studios."
+    }
+]

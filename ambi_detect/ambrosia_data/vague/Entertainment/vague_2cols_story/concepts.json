@@ -1,0 +1,7 @@
+{
+    "template": "Question: What this novel is about? Subject of Inquiry: Novel\nFocus: Story Possible answer types: 1. Summary 2. Themes",
+    "subject": "Novel",
+    "focus": "Story",
+    "general_category1": "Summary",
+    "general_category2": "Themes"
+}

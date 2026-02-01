@@ -1,0 +1,25 @@
+{
+    "template": "Question: Are there any educational requirements for this post? Subject of Inquiry: Job Post\nFocus: Qualifications Possible answer types: 1. Degree Level 2. Certification",
+    "general_category1": {
+        "tab_name": "Degrees",
+        "col_name": "degree_level",
+        "value": null,
+        "scope_id": null,
+        "db_type": "column"
+    },
+    "general_category2": {
+        "tab_name": "Degrees",
+        "col_name": "certification",
+        "value": null,
+        "scope_id": null,
+        "db_type": "column"
+    },
+    "subject": {
+        "tab_name": "Degrees",
+        "col_name": "job_post",
+        "value": null,
+        "scope_id": null,
+        "db_type": "column"
+    },
+    "type": "2cols"
+}

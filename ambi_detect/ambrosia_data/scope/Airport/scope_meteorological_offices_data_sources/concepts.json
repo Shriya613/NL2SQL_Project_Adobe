@@ -1,0 +1,6 @@
+{
+    "template": "Each Meteorological Offices has many different Data Sources. Among them, Automated Weather Stations is common to many Meteorological Offices.",
+    "specific_component": "Automated Weather Stations",
+    "components": "Data Sources",
+    "entities": "Meteorological Offices"
+}

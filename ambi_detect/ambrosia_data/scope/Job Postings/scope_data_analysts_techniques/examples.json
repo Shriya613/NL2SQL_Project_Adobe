@@ -1,0 +1,9 @@
+[
+    {
+        "question": "List the technique names for every data analyst.",
+        "sql_query1": "SELECT Techniques.technique_name  from Data_Analysts_Techniques join Techniques on Data_Analysts_Techniques.technique_id = Techniques.id join Data_Analysts on Data_Analysts_Techniques.data_analyst_id = Data_Analysts.id   GROUP BY Data_Analysts_Techniques.technique_id HAVING COUNT(DISTINCT Data_Analysts_Techniques.data_analyst_id) = (SELECT COUNT(*) FROM  Data_Analysts)",
+        "sql_query2": "select data_analysts.name , techniques.technique_name from Data_Analysts_Techniques join Techniques on Data_Analysts_Techniques.technique_id = Techniques.id join Data_Analysts on Data_Analysts_Techniques.data_analyst_id = Data_Analysts.id",
+        "interpretation1": "List the technique names in common for every data analyst.",
+        "interpretation2": "For every data analyst list all the technique names."
+    }
+]

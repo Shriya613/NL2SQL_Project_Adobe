@@ -1,0 +1,31 @@
+{
+    "template": "Each Clinics has many different Services. Among them, Vaccination is common to many Clinics.",
+    "entities": {
+        "tab_name": "Clinics",
+        "col_name": null,
+        "value": null,
+        "scope_id": null,
+        "db_type": "table"
+    },
+    "components": {
+        "tab_name": "Services",
+        "col_name": null,
+        "value": null,
+        "scope_id": null,
+        "db_type": "table"
+    },
+    "specific_component": {
+        "tab_name": "Services",
+        "col_name": "service_name",
+        "value": "Vaccination",
+        "scope_id": 0,
+        "db_type": "value"
+    },
+    "entities_components": {
+        "tab_name": "Clinics_Services",
+        "col_name": null,
+        "value": null,
+        "scope_id": null,
+        "db_type": "table"
+    }
+}

@@ -1,0 +1,9 @@
+[
+    {
+        "question": "Show all autobiographies and historical accounts from the 20th century.",
+        "sql_query1": "SELECT Books.Title \r\nFROM Books\r\nWHERE (Books.Narrative_Form = \"Autobiography\" OR Books.Narrative_Form = \"Historical Account\") AND Books.Epoch = \"20th Century\"",
+        "sql_query2": "SELECT Books.Title \r\nFROM Books\r\nWHERE Books.Narrative_Form = \"Autobiography\" OR Books.Narrative_Form = \"Historical Account\" AND Books.Epoch = \"20th Century\"",
+        "interpretation1": "Show any autobiographies or historical accounts where either is from the 20th century.",
+        "interpretation2": "Show all the autobiographies and just those historical accounts that are from the 20th century."
+    }
+]

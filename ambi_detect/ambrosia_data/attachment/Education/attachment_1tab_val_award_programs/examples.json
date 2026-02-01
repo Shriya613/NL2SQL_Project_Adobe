@@ -1,0 +1,9 @@
+[
+    {
+        "question": "Show me all diplomas and certificates that require passing an exam.",
+        "sql_query1": "SELECT Courses.Title \r\nFROM Courses\r\nWHERE (Courses.AwardProgram = \"Diploma\" OR Courses.AwardProgram = \"Certificate\") AND Courses.CompletionRequirements = \"Passing Exam\"",
+        "sql_query2": "SELECT Courses.Title \r\nFROM Courses\r\nWHERE Courses.AwardProgram = \"Diploma\" OR Courses.AwardProgram = \"Certificate\" AND Courses.CompletionRequirements = \"Passing Exam\"",
+        "interpretation1": "Which diplomas require passing an exam and which certificates have the same requirements?",
+        "interpretation2": "Provide a list of all diplomas and also provide a list of certificates that require passing an exam."
+    }
+]

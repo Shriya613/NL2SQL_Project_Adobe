@@ -1,0 +1,23 @@
+[
+    {
+        "question": "What events can I see at each festival?",
+        "sql_query1": "SELECT Events.EventName  from Festivals_Events join Events on Festivals_Events.EventTypeID = Events.EventTypeID join Festivals on Festivals_Events.FestivalID = Festivals.FestivalID   GROUP BY Festivals_Events.EventTypeID HAVING COUNT(DISTINCT Festivals_Events.FestivalID) = (SELECT COUNT(*) FROM  Festivals)",
+        "sql_query2": "select festivals.name , events.eventname from Festivals_Events join Events on Festivals_Events.EventTypeID = Events.EventTypeID join Festivals on Festivals_Events.FestivalID = Festivals.FestivalID",
+        "interpretation1": "Please show me the events that all festivals have in common.",
+        "interpretation2": "Show me the festivals and the corresponding events."
+    },
+    {
+        "question": "Show me the name and description of the events that every festival has",
+        "sql_query1": "SELECT Events.EventName, Events.Description  from Festivals_Events join Events on Festivals_Events.EventTypeID = Events.EventTypeID join Festivals on Festivals_Events.FestivalID = Festivals.FestivalID   GROUP BY Festivals_Events.EventTypeID HAVING COUNT(DISTINCT Festivals_Events.FestivalID) = (SELECT COUNT(*) FROM  Festivals)",
+        "sql_query2": "select festivals.name , events.eventname , events.description from Festivals_Events join Events on Festivals_Events.EventTypeID = Events.EventTypeID join Festivals on Festivals_Events.FestivalID = Festivals.FestivalID",
+        "interpretation1": "Show me the name and description of the events common to every festival",
+        "interpretation2": "For all festivals, show me the name and description of the events the festival holds"
+    },
+    {
+        "question": "What description of events is associated with each festival?",
+        "sql_query1": "SELECT Events.Description  from Festivals_Events join Events on Festivals_Events.EventTypeID = Events.EventTypeID join Festivals on Festivals_Events.FestivalID = Festivals.FestivalID   GROUP BY Festivals_Events.EventTypeID HAVING COUNT(DISTINCT Festivals_Events.FestivalID) = (SELECT COUNT(*) FROM  Festivals)",
+        "sql_query2": "select festivals.name , events.description from Festivals_Events join Events on Festivals_Events.EventTypeID = Events.EventTypeID join Festivals on Festivals_Events.FestivalID = Festivals.FestivalID",
+        "interpretation1": "What description of events is common across all festivals?",
+        "interpretation2": "For each festival, provide the corresponding description of events."
+    }
+]

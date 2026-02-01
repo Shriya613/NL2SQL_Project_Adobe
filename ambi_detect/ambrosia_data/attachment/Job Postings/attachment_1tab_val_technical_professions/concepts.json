@@ -1,0 +1,8 @@
+{
+    "template": "Engineer and Architect are subclasses of Technical Professions. All Engineers and Architects have property \"Salary\". There might be a Engineer and a Architect that both have \"Salary\" equal to \"80000\".",
+    "general_class": "Technical Professions",
+    "class1": "Engineer",
+    "class2": "Architect",
+    "common_property": "Salary",
+    "common_value": "80000"
+}

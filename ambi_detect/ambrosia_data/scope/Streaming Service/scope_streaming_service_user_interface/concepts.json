@@ -1,0 +1,6 @@
+{
+    "template": "Each Streaming Service has many different User Interface. Among them, Dark Mode is common to many Streaming Service.",
+    "specific_component": "Dark Mode",
+    "components": "User Interface",
+    "entities": "Streaming Service"
+}

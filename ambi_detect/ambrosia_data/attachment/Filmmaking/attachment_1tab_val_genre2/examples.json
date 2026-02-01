@@ -1,0 +1,9 @@
+[
+    {
+        "question": "Show animation films and comedy films released in 2021.",
+        "sql_query1": "SELECT Films.Title \r\nFROM Films\r\nWHERE (Films.Genre = \"Animation\" OR Films.Genre = \"Comedy\") AND Films.Release_Year = 2021",
+        "sql_query2": "SELECT Films.Title \r\nFROM Films\r\nWHERE Films.Genre = \"Animation\" OR Films.Genre = \"Comedy\" AND Films.Release_Year = 2021",
+        "interpretation1": "What animation films were released in 2021 and what comedies were released in the same year?",
+        "interpretation2": "List all animation films and also list comedies that were released in 2021."
+    }
+]

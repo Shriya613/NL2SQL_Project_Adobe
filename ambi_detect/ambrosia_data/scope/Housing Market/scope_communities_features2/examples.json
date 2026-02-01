@@ -1,0 +1,9 @@
+[
+    {
+        "question": "Show me the features every community has.",
+        "sql_query1": "SELECT Features.feature_name  from Communities_Features join Features on Communities_Features.feature_id = Features.id join Communities on Communities_Features.community_id = Communities.id   GROUP BY Communities_Features.feature_id HAVING COUNT(DISTINCT Communities_Features.community_id) = (SELECT COUNT(*) FROM  Communities)",
+        "sql_query2": "select communities.name , features.feature_name from Communities_Features join Features on Communities_Features.feature_id = Features.id join Communities on Communities_Features.community_id = Communities.id",
+        "interpretation1": "What features do all communities have in common?",
+        "interpretation2": "For each community, list the features they have."
+    }
+]

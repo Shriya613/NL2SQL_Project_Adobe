@@ -1,0 +1,6 @@
+{
+    "template": "Each Product Managers has many different Metrics. Among them, Conversion Rate is common to many Product Managers.",
+    "specific_component": "Conversion Rate",
+    "components": "Metrics",
+    "entities": "Product Managers"
+}

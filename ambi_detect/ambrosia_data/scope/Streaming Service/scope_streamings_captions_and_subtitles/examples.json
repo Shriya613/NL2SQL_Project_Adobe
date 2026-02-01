@@ -1,0 +1,23 @@
+[
+    {
+        "question": "Show me caption and subtitle languages each stream has.",
+        "sql_query1": "SELECT Captions_and_subtitles.language  from Streamings_captions_and_subtitles join Captions_and_subtitles on Streamings_captions_and_subtitles.captions_and_subtitles_id = Captions_and_subtitles.caption_id join Streamings on Streamings_captions_and_subtitles.streamings_id = Streamings.streaming_id   GROUP BY Streamings_captions_and_subtitles.captions_and_subtitles_id HAVING COUNT(DISTINCT Streamings_captions_and_subtitles.streamings_id) = (SELECT COUNT(*) FROM  Streamings)",
+        "sql_query2": "select streamings.title , captions_and_subtitles.language from Streamings_captions_and_subtitles join Captions_and_subtitles on Streamings_captions_and_subtitles.captions_and_subtitles_id = Captions_and_subtitles.caption_id join Streamings on Streamings_captions_and_subtitles.streamings_id = Streamings.streaming_id",
+        "interpretation1": "What caption and subtitle languages are common to all streams?",
+        "interpretation2": "For every stream, list the caption and subtitle languages they have."
+    },
+    {
+        "question": "Tell me what captions and subtitles types each stream uses.",
+        "sql_query1": "SELECT Captions_and_subtitles.type  from Streamings_captions_and_subtitles join Captions_and_subtitles on Streamings_captions_and_subtitles.captions_and_subtitles_id = Captions_and_subtitles.caption_id join Streamings on Streamings_captions_and_subtitles.streamings_id = Streamings.streaming_id   GROUP BY Streamings_captions_and_subtitles.captions_and_subtitles_id HAVING COUNT(DISTINCT Streamings_captions_and_subtitles.streamings_id) = (SELECT COUNT(*) FROM  Streamings)",
+        "sql_query2": "select streamings.title , captions_and_subtitles.type from Streamings_captions_and_subtitles join Captions_and_subtitles on Streamings_captions_and_subtitles.captions_and_subtitles_id = Captions_and_subtitles.caption_id join Streamings on Streamings_captions_and_subtitles.streamings_id = Streamings.streaming_id",
+        "interpretation1": "What captions and subtitles types do all streams have in common?",
+        "interpretation2": "For every stream, list the caption and subtitles types they use."
+    },
+    {
+        "question": "Give me the caption and subtitle languages and types for every streaming.",
+        "sql_query1": "SELECT Captions_and_subtitles.type, Captions_and_subtitles.language  from Streamings_captions_and_subtitles join Captions_and_subtitles on Streamings_captions_and_subtitles.captions_and_subtitles_id = Captions_and_subtitles.caption_id join Streamings on Streamings_captions_and_subtitles.streamings_id = Streamings.streaming_id   GROUP BY Streamings_captions_and_subtitles.captions_and_subtitles_id HAVING COUNT(DISTINCT Streamings_captions_and_subtitles.streamings_id) = (SELECT COUNT(*) FROM  Streamings)",
+        "sql_query2": "select streamings.title , captions_and_subtitles.type , captions_and_subtitles.language from Streamings_captions_and_subtitles join Captions_and_subtitles on Streamings_captions_and_subtitles.captions_and_subtitles_id = Captions_and_subtitles.caption_id join Streamings on Streamings_captions_and_subtitles.streamings_id = Streamings.streaming_id",
+        "interpretation1": "Which caption and subtitle languages and types does every streaming service equally offer?",
+        "interpretation2": "For each streaming, show the caption and subtitle language and type."
+    }
+]

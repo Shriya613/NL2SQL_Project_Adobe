@@ -1,0 +1,9 @@
+[
+    {
+        "question": "Show civil engineering jobs and architecture jobs that use AutoCAD software.",
+        "sql_query1": "SELECT Construction_Jobs.jobTitle \r\nFROM Construction_Jobs JOIN Design_Software_Expertise ON Construction_Jobs.designSoftware = Design_Software_Expertise.softwareName\r\nWHERE (Construction_Jobs.ConstructionJobType = \"Civil Engineering\" OR Construction_Jobs.ConstructionJobType = \"Architecture\") AND Design_Software_Expertise.softwareName = \"AutoCAD\"",
+        "sql_query2": "SELECT Construction_Jobs.jobTitle \r\nFROM Construction_Jobs JOIN Design_Software_Expertise ON Construction_Jobs.designSoftware = Design_Software_Expertise.softwareName\r\nWHERE Construction_Jobs.ConstructionJobType = \"Civil Engineering\" OR Construction_Jobs.ConstructionJobType = \"Architecture\" AND Design_Software_Expertise.softwareName = \"AutoCAD\"",
+        "interpretation1": "What civil engineering jobs use AutoCAD and what architecture jobs use the same software?",
+        "interpretation2": "Provide a list of all civil engineering jobs and also provide a list of architecture jobs that use AutoCAD software."
+    }
+]

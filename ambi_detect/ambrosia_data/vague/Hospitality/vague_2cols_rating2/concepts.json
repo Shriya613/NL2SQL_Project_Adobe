@@ -1,0 +1,7 @@
+{
+    "template": "Question: How is this hike rated? Subject of Inquiry: Hikes\nFocus: Rating Possible answer types: 1. Customer Reviews 2. Difficulty Level",
+    "subject": "Hikes",
+    "focus": "Rating",
+    "general_category1": "Customer Reviews",
+    "general_category2": "Difficulty Level"
+}

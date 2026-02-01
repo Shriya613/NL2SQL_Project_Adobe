@@ -1,0 +1,7 @@
+{
+    "template": "Question: What is the curriculum for this program? Subject of Inquiry: Program\nFocus: Study Plan Possible answer types: 1. Core Courses 2. Electives",
+    "subject": "Program",
+    "focus": "Study Plan",
+    "general_category1": "Core Courses",
+    "general_category2": "Electives"
+}

@@ -1,0 +1,23 @@
+[
+    {
+        "question": "What is the salary of a role that each hospital has?",
+        "sql_query1": "SELECT MedicalRoles.Salary  from Hospitals_Medical_Roles join MedicalRoles on Hospitals_Medical_Roles.RoleID = MedicalRoles.RoleID join Hospitals on Hospitals_Medical_Roles.HospitalID = Hospitals.HospitalID   GROUP BY Hospitals_Medical_Roles.RoleID HAVING COUNT(DISTINCT Hospitals_Medical_Roles.HospitalID) = (SELECT COUNT(*) FROM  Hospitals)",
+        "sql_query2": "select hospitals.name , medicalroles.salary from Hospitals_Medical_Roles join MedicalRoles on Hospitals_Medical_Roles.RoleID = MedicalRoles.RoleID join Hospitals on Hospitals_Medical_Roles.HospitalID = Hospitals.HospitalID",
+        "interpretation1": "What is the salary for a position that is common to all hospitals?",
+        "interpretation2": "For each hospital, show me the salaries of the roles there."
+    },
+    {
+        "question": "What name and salary do we have in medical roles for every hospital",
+        "sql_query1": "SELECT MedicalRoles.RoleName, MedicalRoles.Salary  from Hospitals_Medical_Roles join MedicalRoles on Hospitals_Medical_Roles.RoleID = MedicalRoles.RoleID join Hospitals on Hospitals_Medical_Roles.HospitalID = Hospitals.HospitalID   GROUP BY Hospitals_Medical_Roles.RoleID HAVING COUNT(DISTINCT Hospitals_Medical_Roles.HospitalID) = (SELECT COUNT(*) FROM  Hospitals)",
+        "sql_query2": "select hospitals.name , medicalroles.rolename , medicalroles.salary from Hospitals_Medical_Roles join MedicalRoles on Hospitals_Medical_Roles.RoleID = MedicalRoles.RoleID join Hospitals on Hospitals_Medical_Roles.HospitalID = Hospitals.HospitalID",
+        "interpretation1": "What name and salary combinations do we have for medical roles that are common to all hospitals",
+        "interpretation2": "For all hospitals, show me the names and salaries of all the medical roles they have."
+    },
+    {
+        "question": "Show me the roles every hospital has.",
+        "sql_query1": "SELECT MedicalRoles.RoleName  from Hospitals_Medical_Roles join MedicalRoles on Hospitals_Medical_Roles.RoleID = MedicalRoles.RoleID join Hospitals on Hospitals_Medical_Roles.HospitalID = Hospitals.HospitalID   GROUP BY Hospitals_Medical_Roles.RoleID HAVING COUNT(DISTINCT Hospitals_Medical_Roles.HospitalID) = (SELECT COUNT(*) FROM  Hospitals)",
+        "sql_query2": "select hospitals.name , medicalroles.rolename from Hospitals_Medical_Roles join MedicalRoles on Hospitals_Medical_Roles.RoleID = MedicalRoles.RoleID join Hospitals on Hospitals_Medical_Roles.HospitalID = Hospitals.HospitalID",
+        "interpretation1": "What roles do all hospitals have in common?",
+        "interpretation2": "For each hospital, list the roles they have."
+    }
+]

@@ -1,0 +1,27 @@
+{
+    "domain": "Ballrooms",
+    "template": "Ballroom and Green Room are subclasses of Function Room. All Ballrooms and Green rooms have property \"Seating Capacity\". There might be a Ballroom and a Green Room that both have \"Seating Capacity\" equal to \"200\".",
+    "type": "2tab_val",
+    "general_class": "Function Room",
+    "class1": {
+        "tab_name": "Ballrooms",
+        "col_name": null,
+        "value": null,
+        "scope_id": null,
+        "db_type": "table"
+    },
+    "class2": {
+        "tab_name": "GreenRooms",
+        "col_name": null,
+        "value": null,
+        "scope_id": null,
+        "db_type": "table"
+    },
+    "common_property": {
+        "tab_name": "Ballrooms",
+        "col_name": "seating_capacity",
+        "value": 100,
+        "scope_id": null,
+        "db_type": "value"
+    }
+}

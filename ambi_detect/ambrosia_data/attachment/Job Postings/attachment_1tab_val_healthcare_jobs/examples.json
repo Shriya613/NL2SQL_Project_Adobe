@@ -1,0 +1,9 @@
+[
+    {
+        "question": "Show all job postings for nurses and physical therapists which are on the day shift.",
+        "sql_query1": "SELECT JobPostings.title \r\nFROM JobPostings\r\nWHERE (JobPostings.healthcare = \"Nurse\" OR JobPostings.healthcare = \"Physical Therapist\") AND JobPostings.shift = \"Day Shift\"",
+        "sql_query2": "SELECT JobPostings.title \r\nFROM JobPostings\r\nWHERE JobPostings.healthcare = \"Nurse\" OR JobPostings.healthcare = \"Physical Therapist\" AND JobPostings.shift = \"Day Shift\"",
+        "interpretation1": "Show all day shift job postings for nurses and physical therapists.",
+        "interpretation2": "Show all the job postings for nurses, and just the day shift job postings for physical therapists."
+    }
+]

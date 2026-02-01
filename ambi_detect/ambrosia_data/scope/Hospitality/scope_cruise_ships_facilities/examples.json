@@ -1,0 +1,23 @@
+[
+    {
+        "question": "List the availability status of the facilities built on every cruise ship.",
+        "sql_query1": "SELECT Facilities.isAvailable  from Cruise_Ships_Facilities join Facilities on Cruise_Ships_Facilities.facilityId = Facilities.id join Cruise_Ships on Cruise_Ships_Facilities.cruiseShipId = Cruise_Ships.id   GROUP BY Cruise_Ships_Facilities.facilityId HAVING COUNT(DISTINCT Cruise_Ships_Facilities.cruiseShipId) = (SELECT COUNT(*) FROM  Cruise_Ships)",
+        "sql_query2": "select cruise_ships.name , facilities.isavailable from Cruise_Ships_Facilities join Facilities on Cruise_Ships_Facilities.facilityId = Facilities.id join Cruise_Ships on Cruise_Ships_Facilities.cruiseShipId = Cruise_Ships.id",
+        "interpretation1": "List the availability status of the facilities that are common to all cruise ships.",
+        "interpretation2": "For each cruise ship, list the availability status of the facilities."
+    },
+    {
+        "question": "What facilities do we have for each cruise ship?",
+        "sql_query1": "SELECT Facilities.facilityName  from Cruise_Ships_Facilities join Facilities on Cruise_Ships_Facilities.facilityId = Facilities.id join Cruise_Ships on Cruise_Ships_Facilities.cruiseShipId = Cruise_Ships.id   GROUP BY Cruise_Ships_Facilities.facilityId HAVING COUNT(DISTINCT Cruise_Ships_Facilities.cruiseShipId) = (SELECT COUNT(*) FROM  Cruise_Ships)",
+        "sql_query2": "select cruise_ships.name , facilities.facilityname from Cruise_Ships_Facilities join Facilities on Cruise_Ships_Facilities.facilityId = Facilities.id join Cruise_Ships on Cruise_Ships_Facilities.cruiseShipId = Cruise_Ships.id",
+        "interpretation1": "What facilities are found on all of the cruise ships?",
+        "interpretation2": "For each cruise shop, list the facilities it has"
+    },
+    {
+        "question": "Give me the facilities and their statuses on all cruise ships.",
+        "sql_query1": "SELECT Facilities.facilityName, Facilities.isAvailable  from Cruise_Ships_Facilities join Facilities on Cruise_Ships_Facilities.facilityId = Facilities.id join Cruise_Ships on Cruise_Ships_Facilities.cruiseShipId = Cruise_Ships.id   GROUP BY Cruise_Ships_Facilities.facilityId HAVING COUNT(DISTINCT Cruise_Ships_Facilities.cruiseShipId) = (SELECT COUNT(*) FROM  Cruise_Ships)",
+        "sql_query2": "select cruise_ships.name , facilities.facilityname , facilities.isavailable from Cruise_Ships_Facilities join Facilities on Cruise_Ships_Facilities.facilityId = Facilities.id join Cruise_Ships on Cruise_Ships_Facilities.cruiseShipId = Cruise_Ships.id",
+        "interpretation1": "Which facilities are common to among all cruise ships and what are their statuses?",
+        "interpretation2": "For each cruise ship, show the facilities and their statuses."
+    }
+]

@@ -1,0 +1,25 @@
+{
+    "template": "Question: How many people speak this language? Subject of Inquiry: Language\nFocus: Speakers Possible answer types: 1. Number of Speakers 2. Percentage of Population",
+    "general_category1": {
+        "tab_name": "Language",
+        "col_name": "Number_of_speakers",
+        "value": null,
+        "scope_id": null,
+        "db_type": "column"
+    },
+    "general_category2": {
+        "tab_name": "Language",
+        "col_name": "Percentage_of_population",
+        "value": null,
+        "scope_id": null,
+        "db_type": "column"
+    },
+    "subject": {
+        "tab_name": "Language",
+        "col_name": "LanguageID",
+        "value": null,
+        "scope_id": null,
+        "db_type": "column"
+    },
+    "type": "2cols"
+}

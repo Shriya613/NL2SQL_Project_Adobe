@@ -1,0 +1,22 @@
+[
+    {
+        "question": "What award did Toy Story 4 win?",
+        "sql_query1": "select Award_Name from award where film = 'Toy Story 4'",
+        "sql_query2": "select Winning_Category from award where film = 'Toy Story 4'",
+        "sql_query3": "select Award_Name, Winning_Category from award where film = 'Toy Story 4'",
+        "interpretation1": "What is the name of the award that Toy Story 4 won?",
+        "interpretation2": "What is the category of the award that Toy Story 4 won?",
+        "interpretation3": "What is the name and category of the award that Toy Story 4 won?",
+        "sql_query_general": "select awards from award where film = 'Toy Story 4'"
+    },
+    {
+        "question": "What awards and for what films did Zack Snyder present?",
+        "sql_query1": "select Award_Name, film from award where presenter = 'Zack Snyder'",
+        "sql_query2": "select Winning_Category, film from award where presenter = 'Zack Snyder'",
+        "sql_query3": "select Award_Name, Winning_Category, film from award where presenter = 'Zack Snyder'",
+        "interpretation1": "What are the award names that Zack Snyder presented and for what films?",
+        "interpretation2": "What are the winning categories that Zack Snyder presented and for what films?",
+        "interpretation3": "What are the names of the awards presented by Zack Snyder and the corresponding categories of winners? For which films?",
+        "sql_query_general": "select awards, film from award where presenter = 'Zack Snyder'"
+    }
+]

@@ -1,0 +1,9 @@
+[
+    {
+        "question": "Display magicians and mimes that performed in Times Square street in New York.",
+        "sql_query1": "SELECT PERFORMERS.NAME \r\nFROM PERFORMERS\r\nWHERE (PERFORMERS.GENRE = \"Magic\" OR PERFORMERS.GENRE = \"Mime\") AND PERFORMERS.STREET_LOCATION = \"Times Square, New York\"",
+        "sql_query2": "SELECT PERFORMERS.NAME \r\nFROM PERFORMERS\r\nWHERE PERFORMERS.GENRE = \"Magic\" OR PERFORMERS.GENRE = \"Mime\" AND PERFORMERS.STREET_LOCATION = \"Times Square, New York\"",
+        "interpretation1": "Which magicians performed in Times Square street in New York and which mimes performed on the same street?",
+        "interpretation2": "Provide a list of all magicians and also provide a list of mimes that performed in Times Square street in New York."
+    }
+]

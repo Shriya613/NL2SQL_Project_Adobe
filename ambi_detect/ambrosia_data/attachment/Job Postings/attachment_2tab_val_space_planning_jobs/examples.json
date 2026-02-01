@@ -1,0 +1,9 @@
+[
+    {
+        "question": "Show minimalist landscape architects and interior designers.",
+        "sql_query1": "SELECT Interior_Designers.Name\r\nFROM Interior_Designers\r\nWHERE Interior_Designers.Style = \"Minimalism\"\r\nUNION\r\nSELECT Landscape_Architects.Name\r\nFROM Landscape_Architects\r\nWHERE Landscape_Architects.Style = \"Minimalism\"",
+        "sql_query2": "SELECT Interior_Designers.Name\r\nFROM Interior_Designers\r\nUNION\r\nSELECT Landscape_Architects.Name\r\nFROM Landscape_Architects\r\nWHERE Landscape_Architects.Style = \"Minimalism\"",
+        "interpretation1": "Which interior designers are minimalists and which landscape architects have the same style?",
+        "interpretation2": "Show a list of all interior designers and also provide a list of minimalist landscape architects."
+    }
+]

@@ -1,0 +1,6 @@
+{
+    "template": "Each Food Critics has many different Cuisines. Among them, Italian is common to many Food Critics.",
+    "specific_component": "Italian",
+    "components": "Cuisines",
+    "entities": "Food Critics"
+}

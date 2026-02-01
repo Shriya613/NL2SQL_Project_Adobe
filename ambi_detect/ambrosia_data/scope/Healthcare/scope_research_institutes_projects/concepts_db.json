@@ -1,0 +1,31 @@
+{
+    "template": "Each Research Institutes has many different Projects. Among them, Cancer Research is common to many Research Institutes.",
+    "entities": {
+        "tab_name": "Research_Institutes",
+        "col_name": null,
+        "value": null,
+        "scope_id": null,
+        "db_type": "table"
+    },
+    "components": {
+        "tab_name": "Projects",
+        "col_name": null,
+        "value": null,
+        "scope_id": null,
+        "db_type": "table"
+    },
+    "specific_component": {
+        "tab_name": "Projects",
+        "col_name": "Name",
+        "value": "Cancer_Research",
+        "scope_id": 0,
+        "db_type": "value"
+    },
+    "entities_components": {
+        "tab_name": "Research_Institutes_Projects",
+        "col_name": null,
+        "value": null,
+        "scope_id": null,
+        "db_type": "table"
+    }
+}

@@ -1,0 +1,7 @@
+{
+    "template": "Question: Where is this cruise ship docked? Subject of Inquiry: Cruise Ships\nFocus: Docking Location Possible answer types: 1. Port 2. City",
+    "subject": "Cruise Ships",
+    "focus": "Docking Location",
+    "general_category1": "Port",
+    "general_category2": "City"
+}

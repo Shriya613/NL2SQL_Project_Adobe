@@ -1,0 +1,31 @@
+{
+    "template": "Each Photography Workshops has many different Techniques. Among them, Portrait Photography is common to many Photography Workshops.",
+    "entities": {
+        "tab_name": "Photography_Workshops",
+        "col_name": null,
+        "value": null,
+        "scope_id": null,
+        "db_type": "table"
+    },
+    "components": {
+        "tab_name": "Techniques",
+        "col_name": null,
+        "value": null,
+        "scope_id": null,
+        "db_type": "table"
+    },
+    "specific_component": {
+        "tab_name": "Techniques",
+        "col_name": "technique_name",
+        "value": "Portrait_Photography",
+        "scope_id": 0,
+        "db_type": "value"
+    },
+    "entities_components": {
+        "tab_name": "Photography_Workshops_Techniques",
+        "col_name": null,
+        "value": null,
+        "scope_id": null,
+        "db_type": "table"
+    }
+}

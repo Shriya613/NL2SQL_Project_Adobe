@@ -1,0 +1,25 @@
+{
+    "template": "Question: Who offers this product? Subject of Inquiry: Banking Products\nFocus: Issuer Possible answer types: 1. Bank 2. Branch",
+    "general_category1": {
+        "tab_name": "BankingProducts",
+        "col_name": "BankName",
+        "value": null,
+        "scope_id": null,
+        "db_type": "column"
+    },
+    "general_category2": {
+        "tab_name": "BankingProducts",
+        "col_name": "BranchName",
+        "value": null,
+        "scope_id": null,
+        "db_type": "column"
+    },
+    "subject": {
+        "tab_name": "BankingProducts",
+        "col_name": null,
+        "value": null,
+        "scope_id": null,
+        "db_type": "table"
+    },
+    "type": "2cols"
+}

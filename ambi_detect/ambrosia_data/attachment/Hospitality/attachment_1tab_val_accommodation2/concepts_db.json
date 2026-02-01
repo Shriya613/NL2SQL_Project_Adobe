@@ -1,0 +1,33 @@
+{
+    "domain": "Hotels",
+    "template": "Family Suite and Single Room are subclasses of Accommodation. All Family suites and Single rooms have property \"Price Per Night\". There might be a Family Suite and a Single Room that both have \"Price Per Night\" equal to \"150\".",
+    "type": "1tab_val",
+    "general_class": {
+        "tab_name": "Accommodations",
+        "col_name": "TypeOfAccomodation",
+        "value": null,
+        "scope_id": null,
+        "db_type": "column"
+    },
+    "class1": {
+        "tab_name": "Accommodations",
+        "col_name": "TypeOfAccomodation",
+        "value": "Family Suite",
+        "scope_id": null,
+        "db_type": "value"
+    },
+    "class2": {
+        "tab_name": "Accommodations",
+        "col_name": "TypeOfAccomodation",
+        "value": "Single Room",
+        "scope_id": null,
+        "db_type": "value"
+    },
+    "common_property": {
+        "tab_name": "Accommodations",
+        "col_name": "PricePerNight",
+        "value": 150.0,
+        "scope_id": null,
+        "db_type": "value"
+    }
+}

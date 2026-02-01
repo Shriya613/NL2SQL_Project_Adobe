@@ -1,0 +1,33 @@
+{
+    "domain": "AccountTypes",
+    "template": "Monthly Interest Rate and Annual Percentage Rate are subclasses of Terms. All Monthly interest rates and Annual percentage rates have property \"Bank Account\". There might be a Monthly Interest Rate and a Annual Percentage Rate that both have \"Bank Account\" equal to \"1834293214\".",
+    "type": "1tab_ref",
+    "general_class": {
+        "tab_name": "Terms",
+        "col_name": "Description",
+        "value": null,
+        "scope_id": null,
+        "db_type": "column"
+    },
+    "class1": {
+        "tab_name": "Terms",
+        "col_name": "Description",
+        "value": "Monthly Interest Rate",
+        "scope_id": null,
+        "db_type": "value"
+    },
+    "class2": {
+        "tab_name": "Terms",
+        "col_name": "Description",
+        "value": "Annual Percentage Rate",
+        "scope_id": null,
+        "db_type": "value"
+    },
+    "common_property": {
+        "tab_name": "BankAccounts",
+        "col_name": "CurrentBalance",
+        "value": 20000.0,
+        "scope_id": null,
+        "db_type": "value"
+    }
+}

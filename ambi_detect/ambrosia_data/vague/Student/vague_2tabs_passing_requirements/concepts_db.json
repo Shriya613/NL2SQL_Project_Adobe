@@ -1,0 +1,25 @@
+{
+    "template": "Question: What is the requirement for passing this exam? Subject of Inquiry: Exam\nFocus: Passing Requirements Possible answer types: 1. Minimum Score 2. Percentage Required",
+    "general_category1": {
+        "tab_name": "Minimum_Scores",
+        "col_name": null,
+        "value": null,
+        "scope_id": null,
+        "db_type": "table"
+    },
+    "general_category2": {
+        "tab_name": "Percentage_Requirements",
+        "col_name": "percentage",
+        "value": null,
+        "scope_id": null,
+        "db_type": "column"
+    },
+    "subject": {
+        "tab_name": "Exams",
+        "col_name": null,
+        "value": null,
+        "scope_id": null,
+        "db_type": "table"
+    },
+    "type": "2tabs"
+}

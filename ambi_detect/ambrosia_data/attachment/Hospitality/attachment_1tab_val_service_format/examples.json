@@ -1,0 +1,9 @@
+[
+    {
+        "question": "List all buffets and coffee shops open from 7:30am to 4:00pm.",
+        "sql_query1": "SELECT Restaurant.name \r\nFROM Restaurant\r\nWHERE (Restaurant.Service_format = \"Buffet\" OR Restaurant.Service_format = \"Coffee Shop\") AND Restaurant.Hours = \"7.30 a.m. - 4 p.m.\"",
+        "sql_query2": "SELECT Restaurant.name \r\nFROM Restaurant\r\nWHERE Restaurant.Service_format = \"Buffet\" OR Restaurant.Service_format = \"Coffee Shop\" AND Restaurant.Hours = \"7.30 a.m. - 4 p.m.\"",
+        "interpretation1": "Show all buffets open between 7:30 am and 4:00pm, also show the coffee shops open during the same time.",
+        "interpretation2": "Show all the buffets in the data, also show just the coffee shops open from 7:30am to 4:00pm."
+    }
+]

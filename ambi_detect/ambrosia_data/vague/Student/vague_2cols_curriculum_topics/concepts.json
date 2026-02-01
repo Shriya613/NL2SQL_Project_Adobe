@@ -1,0 +1,7 @@
+{
+    "template": "Question: What topics are covered in this subject? Subject of Inquiry: School Subjects\nFocus: Curriculum Topics Possible answer types: 1. Core Concepts 2. Advanced Topics",
+    "subject": "School Subjects",
+    "focus": "Curriculum Topics",
+    "general_category1": "Core Concepts",
+    "general_category2": "Advanced Topics"
+}

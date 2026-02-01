@@ -1,0 +1,8 @@
+{
+    "template": "Jet Bridge and Staircar are subclasses of Boarding Equipment. All Jet Bridges and Staircars have the property \"Terminal\". There might be a Jet Bridge and a Staircar that both have \"Terminal\" equal to \"Terminal 1\".",
+    "general_class": "Boarding Equipment",
+    "class1": "Jet Bridge",
+    "class2": "Staircar",
+    "common_property": "Terminal",
+    "common_value": "Terminal 1"
+}

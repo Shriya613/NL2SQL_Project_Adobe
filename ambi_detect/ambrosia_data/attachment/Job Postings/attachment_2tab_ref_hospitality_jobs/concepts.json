@@ -1,0 +1,8 @@
+{
+    "template": "Tour Guide and Travel Agent are subclasses of Hospitality Jobs. All Tour guides and Travel agents have property \"Agency\". There might be a Tour Guide and a Travel Agent that both have \"Agency\" equal to \"Expedia\".",
+    "general_class": "Hospitality Jobs",
+    "class1": "Tour Guide",
+    "class2": "Travel Agent",
+    "common_property": "Agency",
+    "common_value": "Expedia"
+}

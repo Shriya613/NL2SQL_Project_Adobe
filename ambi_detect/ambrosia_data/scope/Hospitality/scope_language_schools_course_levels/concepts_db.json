@@ -1,0 +1,31 @@
+{
+    "template": "Each Language Schools has many different Course Levels. Among them, Beginner Level is common to many Language Schools.",
+    "entities": {
+        "tab_name": "Language_Schools",
+        "col_name": null,
+        "value": null,
+        "scope_id": null,
+        "db_type": "table"
+    },
+    "components": {
+        "tab_name": "Course_Levels",
+        "col_name": null,
+        "value": null,
+        "scope_id": null,
+        "db_type": "table"
+    },
+    "specific_component": {
+        "tab_name": "Course_Levels",
+        "col_name": "level",
+        "value": "Beginner_Level",
+        "scope_id": 0,
+        "db_type": "value"
+    },
+    "entities_components": {
+        "tab_name": "Language_Schools_Course_Levels",
+        "col_name": null,
+        "value": null,
+        "scope_id": null,
+        "db_type": "table"
+    }
+}

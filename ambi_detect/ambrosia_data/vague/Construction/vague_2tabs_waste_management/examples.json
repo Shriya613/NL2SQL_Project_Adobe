@@ -1,0 +1,22 @@
+[
+    {
+        "question": "What happens to waste in New York?",
+        "sql_query1": "SELECT  wm.method_name  FROM Waste_Disposal_Method wm JOIN Construction_Site c ON wm.id =c.waste_disposal_method_id  WHERE c.location = 'New York City'",
+        "sql_query2": "SELECT  wm.program_name  FROM Recycling_Program wm JOIN Construction_Site c ON wm.id =c.Recycling_Program_id  WHERE c.location = 'New York City'",
+        "sql_query3": "SELECT  wm.method_name, rp.program_name  FROM Waste_Disposal_Method wm JOIN Construction_Site c ON wm.id =c.waste_disposal_method_id JOIN Recycling_Program rp ON rp.id =c.Recycling_Program_id  WHERE c.location = 'New York City'",
+        "interpretation1": "What waste disposal method is used in New York?",
+        "interpretation2": "What recycling program is used in New York?",
+        "interpretation3": "What waste disposal method and recycling program is used in New York?",
+        "sql_query_general": "SELECT  wm.method_name  FROM Waste_Management wm JOIN Construction_Site c ON wm.id =c.waste_disposal_method_id  WHERE c.location = 'New York City'"
+    },
+    {
+        "question": "Return waste management types in alphabetical order",
+        "sql_query1": "SELECT method_name FROM Waste_Disposal_Method ORDER BY method_name ASC",
+        "sql_query2": "SELECT program_name FROM Recycling_Program ORDER BY program_name ASC",
+        "sql_query3": "SELECT wm.method_name, rp.program_name FROM Waste_Disposal_Method wm JOIN Construction_Site c ON wm.id =c.waste_disposal_method_id JOIN Recycling_Program rp ON rp.id =c.Recycling_Program_id ORDER BY wm.method_name, rp.program_name ASC",
+        "interpretation1": "Return waste disposal methods in alphabetical order",
+        "interpretation2": "Return recycling programs in alphabetical order",
+        "interpretation3": "Return waste disposal methods and recycling programs in alphabetical order",
+        "sql_query_general": "SELECT method_name FROM Waste_Management ORDER BY method_name ASC"
+    }
+]

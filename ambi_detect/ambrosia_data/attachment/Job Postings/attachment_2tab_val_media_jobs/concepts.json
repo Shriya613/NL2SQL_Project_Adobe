@@ -1,0 +1,8 @@
+{
+    "template": "Journalist and Editor are subclasses of Media Jobs. All Journalists and Editors have property \"Language Proficiency\". There might be a Journalist and an Editor that both have \"Language Proficiency\" equal to \"English\".",
+    "general_class": "Media Jobs",
+    "class1": "Journalist",
+    "class2": "Editor",
+    "common_property": "Language Proficiency",
+    "common_value": "English"
+}

@@ -1,0 +1,31 @@
+{
+    "template": "Each Music Critics has many different Genres. Among them, Jazz is common to many Music Critics.",
+    "entities": {
+        "tab_name": "Music_Critics",
+        "col_name": null,
+        "value": null,
+        "scope_id": null,
+        "db_type": "table"
+    },
+    "components": {
+        "tab_name": "Genres",
+        "col_name": null,
+        "value": null,
+        "scope_id": null,
+        "db_type": "table"
+    },
+    "specific_component": {
+        "tab_name": "Genres",
+        "col_name": "name",
+        "value": "Jazz",
+        "scope_id": 0,
+        "db_type": "value"
+    },
+    "entities_components": {
+        "tab_name": "Music_Critics_Genres",
+        "col_name": null,
+        "value": null,
+        "scope_id": null,
+        "db_type": "table"
+    }
+}

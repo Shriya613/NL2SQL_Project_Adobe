@@ -1,0 +1,22 @@
+[
+    {
+        "question": "When was David Brown's album released?",
+        "sql_query1": "SELECT Year FROM Albums JOIN Artists ON Artists.id = Albums.ArtistId WHERE Artists.Name = \"David Brown\";",
+        "sql_query2": "SELECT Month FROM Albums JOIN Artists ON Artists.id = Albums.ArtistId WHERE Artists.Name = \"David Brown\";",
+        "sql_query3": "SELECT Year, Month FROM Albums JOIN Artists ON Artists.id = Albums.ArtistId WHERE Artists.Name = \"David Brown\";",
+        "interpretation1": "In what year was David Brown's album released?",
+        "interpretation2": "In what month was David Brown's album released?",
+        "interpretation3": "In what month and year was David Brown's album released?",
+        "sql_query_general": "SELECT Release_Timeframe FROM Albums JOIN Artists ON Artists.id = Albums.ArtistId WHERE Artists.Name = \"David Brown\";"
+    },
+    {
+        "question": "When was the album with the shortest song released?",
+        "sql_query1": "SELECT Year FROM Albums JOIN Songs ON Songs.AlbumId = Albums.id ORDER BY Length ASC LIMIT 1;",
+        "sql_query2": "SELECT Month FROM Albums JOIN Songs ON Songs.AlbumId = Albums.id ORDER BY Length ASC LIMIT 1;",
+        "sql_query3": "SELECT Year, Month FROM Albums JOIN Songs ON Songs.AlbumId = Albums.id ORDER BY Length ASC LIMIT 1;",
+        "interpretation1": "What year was the album with the shortest song released?",
+        "interpretation2": "In what month did the album with the shortest song get released?",
+        "interpretation3": "Give me the month and year that the album with the shortest song was released.",
+        "sql_query_general": "SELECT Release_Timeframe FROM Albums JOIN Songs ON Songs.AlbumId = Albums.id ORDER BY Length ASC LIMIT 1;"
+    }
+]

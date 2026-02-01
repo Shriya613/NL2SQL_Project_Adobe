@@ -1,0 +1,8 @@
+{
+    "template": "Production Company and Distribution Company are subclasses of Film Industry Company. All Production and Distribution Companies have a property \"Number of Employees\". There might be a Production Company and a Distribution Company both with \"500\" employees while others in these categories have a different number of employees.",
+    "general_class": "Film Industry Company",
+    "class1": "Production Company",
+    "class2": "Distribution Company",
+    "common_property": "Number of Employees",
+    "common_value": "500"
+}

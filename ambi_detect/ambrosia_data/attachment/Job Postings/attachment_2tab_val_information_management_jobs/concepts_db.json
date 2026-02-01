@@ -1,0 +1,27 @@
+{
+    "domain": "Librarians",
+    "template": "Librarian and Archivist are subclasses of Information Management Jobs. All Librarians and Archivists have property \"Location\". There might be a Librarian and a Archivist that both have \"Location\" equal to \"University's Main Library\".",
+    "type": "2tab_val",
+    "general_class": "Information Management Jobs",
+    "class1": {
+        "tab_name": "Librarians",
+        "col_name": null,
+        "value": null,
+        "scope_id": null,
+        "db_type": "table"
+    },
+    "class2": {
+        "tab_name": "Archivists",
+        "col_name": null,
+        "value": null,
+        "scope_id": null,
+        "db_type": "table"
+    },
+    "common_property": {
+        "tab_name": "Librarians",
+        "col_name": "location",
+        "value": "University's Main Library",
+        "scope_id": null,
+        "db_type": "value"
+    }
+}

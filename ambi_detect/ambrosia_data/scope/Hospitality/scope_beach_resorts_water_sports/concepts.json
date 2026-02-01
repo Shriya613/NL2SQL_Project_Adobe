@@ -1,0 +1,6 @@
+{
+    "template": "Each Beach Resorts has many different Water Sports. Among them, Surfing is common to many Beach Resorts.",
+    "specific_component": "Surfing",
+    "components": "Water Sports",
+    "entities": "Beach Resorts"
+}

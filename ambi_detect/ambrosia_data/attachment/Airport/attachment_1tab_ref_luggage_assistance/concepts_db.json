@@ -1,0 +1,33 @@
+{
+    "domain": "Passengers",
+    "template": "Luggage Trolley and Porter Service are subclasses of Luggage Assistance. All Luggage Trolleys and Porter Services have the property \"Available Locations\". There might be a Luggage Trolley station and a Porter Service desk that both are located at \"Entrance B\".",
+    "type": "1tab_ref_like",
+    "general_class": {
+        "tab_name": "LuggageRequests",
+        "col_name": "AssistanceType",
+        "value": null,
+        "scope_id": null,
+        "db_type": "column"
+    },
+    "class1": {
+        "tab_name": "LuggageRequests",
+        "col_name": "AssistanceType",
+        "value": "Luggage Trolley",
+        "scope_id": null,
+        "db_type": "value"
+    },
+    "class2": {
+        "tab_name": "LuggageRequests",
+        "col_name": "AssistanceType",
+        "value": "Porter Service",
+        "scope_id": null,
+        "db_type": "value"
+    },
+    "common_property": {
+        "tab_name": "Locations",
+        "col_name": "LocationName",
+        "value": "Exit A",
+        "scope_id": null,
+        "db_type": "value"
+    }
+}

@@ -1,0 +1,31 @@
+{
+    "template": "Each Television Channels has many different Shows. Among them, Sitcom is common to many Television Channels.",
+    "entities": {
+        "tab_name": "Television_Channels",
+        "col_name": null,
+        "value": null,
+        "scope_id": null,
+        "db_type": "table"
+    },
+    "components": {
+        "tab_name": "Shows",
+        "col_name": null,
+        "value": null,
+        "scope_id": null,
+        "db_type": "table"
+    },
+    "specific_component": {
+        "tab_name": "Shows",
+        "col_name": "genre",
+        "value": "Sitcom",
+        "scope_id": 0,
+        "db_type": "value"
+    },
+    "entities_components": {
+        "tab_name": "Television_Channels_Shows",
+        "col_name": null,
+        "value": null,
+        "scope_id": null,
+        "db_type": "table"
+    }
+}

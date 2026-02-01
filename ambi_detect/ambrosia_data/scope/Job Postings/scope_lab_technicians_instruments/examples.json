@@ -1,0 +1,23 @@
+[
+    {
+        "question": "Tell me about the instruments every lab technician uses (their names and descriptions).",
+        "sql_query1": "SELECT Instruments.instrumentName, Instruments.description  from Lab_Technicians_Instruments join Instruments on Lab_Technicians_Instruments.instrumentId = Instruments.id join Lab_Technicians on Lab_Technicians_Instruments.technicianId = Lab_Technicians.id   GROUP BY Lab_Technicians_Instruments.instrumentId HAVING COUNT(DISTINCT Lab_Technicians_Instruments.technicianId) = (SELECT COUNT(*) FROM  Lab_Technicians)",
+        "sql_query2": "select lab_technicians.name , instruments.instrumentname , instruments.description from Lab_Technicians_Instruments join Instruments on Lab_Technicians_Instruments.instrumentId = Instruments.id join Lab_Technicians on Lab_Technicians_Instruments.technicianId = Lab_Technicians.id",
+        "interpretation1": "What information is there about the instruments that are used equally by all lab technicians (their names and descriptions)?",
+        "interpretation2": "For each lab technician, list information about the instruments they use (their names and descriptions)."
+    },
+    {
+        "question": "What instruments are associated with each lab technician?",
+        "sql_query1": "SELECT Instruments.instrumentName  from Lab_Technicians_Instruments join Instruments on Lab_Technicians_Instruments.instrumentId = Instruments.id join Lab_Technicians on Lab_Technicians_Instruments.technicianId = Lab_Technicians.id   GROUP BY Lab_Technicians_Instruments.instrumentId HAVING COUNT(DISTINCT Lab_Technicians_Instruments.technicianId) = (SELECT COUNT(*) FROM  Lab_Technicians)",
+        "sql_query2": "select lab_technicians.name , instruments.instrumentname from Lab_Technicians_Instruments join Instruments on Lab_Technicians_Instruments.instrumentId = Instruments.id join Lab_Technicians on Lab_Technicians_Instruments.technicianId = Lab_Technicians.id",
+        "interpretation1": "What instrument is common for all lab technicians?",
+        "interpretation2": "For every lab technician, what are the corresponding instrument?"
+    },
+    {
+        "question": "What description of instruments do we have for each laboratory technician?",
+        "sql_query1": "SELECT Instruments.description  from Lab_Technicians_Instruments join Instruments on Lab_Technicians_Instruments.instrumentId = Instruments.id join Lab_Technicians on Lab_Technicians_Instruments.technicianId = Lab_Technicians.id   GROUP BY Lab_Technicians_Instruments.instrumentId HAVING COUNT(DISTINCT Lab_Technicians_Instruments.technicianId) = (SELECT COUNT(*) FROM  Lab_Technicians)",
+        "sql_query2": "select lab_technicians.name , instruments.description from Lab_Technicians_Instruments join Instruments on Lab_Technicians_Instruments.instrumentId = Instruments.id join Lab_Technicians on Lab_Technicians_Instruments.technicianId = Lab_Technicians.id",
+        "interpretation1": "What description of instruments is common for all lab technicians?",
+        "interpretation2": "For every lab technicians, provide the corresponding description of instruments."
+    }
+]

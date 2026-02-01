@@ -1,0 +1,23 @@
+[
+    {
+        "question": "What are the tour options offered by boat tours in each maritime village?",
+        "sql_query1": "SELECT Boat_Tours.tour_name  from Maritime_Villages_Boat_Tours join Boat_Tours on Maritime_Villages_Boat_Tours.boat_tour_id = Boat_Tours.id join Maritime_Villages on Maritime_Villages_Boat_Tours.maritime_village_id = Maritime_Villages.id   GROUP BY Maritime_Villages_Boat_Tours.boat_tour_id HAVING COUNT(DISTINCT Maritime_Villages_Boat_Tours.maritime_village_id) = (SELECT COUNT(*) FROM  Maritime_Villages)",
+        "sql_query2": "select maritime_villages.name , boat_tours.tour_name from Maritime_Villages_Boat_Tours join Boat_Tours on Maritime_Villages_Boat_Tours.boat_tour_id = Boat_Tours.id join Maritime_Villages on Maritime_Villages_Boat_Tours.maritime_village_id = Maritime_Villages.id",
+        "interpretation1": "Which boat tour is shared across all maritime villages?",
+        "interpretation2": "Could you provide the boat tours for all maritime villages?"
+    },
+    {
+        "question": "Show me the names and descriptions of the tours each maritime village offers.",
+        "sql_query1": "SELECT Boat_Tours.tour_name, Boat_Tours.description  from Maritime_Villages_Boat_Tours join Boat_Tours on Maritime_Villages_Boat_Tours.boat_tour_id = Boat_Tours.id join Maritime_Villages on Maritime_Villages_Boat_Tours.maritime_village_id = Maritime_Villages.id   GROUP BY Maritime_Villages_Boat_Tours.boat_tour_id HAVING COUNT(DISTINCT Maritime_Villages_Boat_Tours.maritime_village_id) = (SELECT COUNT(*) FROM  Maritime_Villages)",
+        "sql_query2": "select maritime_villages.name , boat_tours.tour_name , boat_tours.description from Maritime_Villages_Boat_Tours join Boat_Tours on Maritime_Villages_Boat_Tours.boat_tour_id = Boat_Tours.id join Maritime_Villages on Maritime_Villages_Boat_Tours.maritime_village_id = Maritime_Villages.id",
+        "interpretation1": "What are the names and descriptions of the tours common to all maritime villages?",
+        "interpretation2": "For every maritime village, list the names and descriptions of the tours they offer."
+    },
+    {
+        "question": "Describe the boat tours that each maritime village offers",
+        "sql_query1": "SELECT Boat_Tours.description  from Maritime_Villages_Boat_Tours join Boat_Tours on Maritime_Villages_Boat_Tours.boat_tour_id = Boat_Tours.id join Maritime_Villages on Maritime_Villages_Boat_Tours.maritime_village_id = Maritime_Villages.id   GROUP BY Maritime_Villages_Boat_Tours.boat_tour_id HAVING COUNT(DISTINCT Maritime_Villages_Boat_Tours.maritime_village_id) = (SELECT COUNT(*) FROM  Maritime_Villages)",
+        "sql_query2": "select maritime_villages.name , boat_tours.description from Maritime_Villages_Boat_Tours join Boat_Tours on Maritime_Villages_Boat_Tours.boat_tour_id = Boat_Tours.id join Maritime_Villages on Maritime_Villages_Boat_Tours.maritime_village_id = Maritime_Villages.id",
+        "interpretation1": "What are the descriptions of the boat tours that are common to all martime villages?",
+        "interpretation2": "For every maritime village, describe the boat tours that they offer."
+    }
+]

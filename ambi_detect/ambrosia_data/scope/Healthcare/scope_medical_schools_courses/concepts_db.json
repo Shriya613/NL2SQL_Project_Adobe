@@ -1,0 +1,31 @@
+{
+    "template": "Each Medical Schools has many different Courses. Among them, Anatomy is common to many Medical Schools.",
+    "entities": {
+        "tab_name": "Medical_Schools",
+        "col_name": null,
+        "value": null,
+        "scope_id": null,
+        "db_type": "table"
+    },
+    "components": {
+        "tab_name": "Courses",
+        "col_name": null,
+        "value": null,
+        "scope_id": null,
+        "db_type": "table"
+    },
+    "specific_component": {
+        "tab_name": "Courses",
+        "col_name": "courseName",
+        "value": "Anatomy",
+        "scope_id": 0,
+        "db_type": "value"
+    },
+    "entities_components": {
+        "tab_name": "Medical_School_Courses",
+        "col_name": null,
+        "value": null,
+        "scope_id": null,
+        "db_type": "table"
+    }
+}

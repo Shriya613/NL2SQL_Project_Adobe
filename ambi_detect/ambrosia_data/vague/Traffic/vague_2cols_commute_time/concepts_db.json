@@ -1,0 +1,25 @@
+{
+    "template": "Question: What is the average commute time for residents in this neighborhood? Subject of Inquiry: Neighborhood\nFocus: Commute Time Possible answer types: 1. Mean Commute Time 2. Median Commute Time",
+    "general_category1": {
+        "tab_name": "Neighborhood",
+        "col_name": "mean_commute_time",
+        "value": null,
+        "scope_id": null,
+        "db_type": "column"
+    },
+    "general_category2": {
+        "tab_name": "Neighborhood",
+        "col_name": "median_commute_time",
+        "value": null,
+        "scope_id": null,
+        "db_type": "column"
+    },
+    "subject": {
+        "tab_name": "DailyTrafficVolume",
+        "col_name": "neighborhood_id",
+        "value": null,
+        "scope_id": null,
+        "db_type": "column"
+    },
+    "type": "2cols"
+}

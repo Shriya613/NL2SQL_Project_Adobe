@@ -1,0 +1,31 @@
+{
+    "template": "Each National Parks has many different Trails. Among them, Beginner Trail is common to many National Parks.",
+    "entities": {
+        "tab_name": "National_Parks",
+        "col_name": null,
+        "value": null,
+        "scope_id": null,
+        "db_type": "table"
+    },
+    "components": {
+        "tab_name": "Trails",
+        "col_name": null,
+        "value": null,
+        "scope_id": null,
+        "db_type": "table"
+    },
+    "specific_component": {
+        "tab_name": "Trails",
+        "col_name": "difficulty",
+        "value": "Beginner_Trail",
+        "scope_id": 0,
+        "db_type": "value"
+    },
+    "entities_components": {
+        "tab_name": "National_Parks_Trails",
+        "col_name": null,
+        "value": null,
+        "scope_id": null,
+        "db_type": "table"
+    }
+}

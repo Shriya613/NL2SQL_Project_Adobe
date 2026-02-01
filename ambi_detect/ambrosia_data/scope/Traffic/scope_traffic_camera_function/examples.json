@@ -1,0 +1,9 @@
+[
+    {
+        "question": "Give me the function that every traffic camera has.",
+        "sql_query1": "SELECT Function.functionName  from Traffic_Camera_Function join Function on Traffic_Camera_Function.functionId = Function.id join Traffic_Camera on Traffic_Camera_Function.cameraId = Traffic_Camera.id   GROUP BY Traffic_Camera_Function.functionId HAVING COUNT(DISTINCT Traffic_Camera_Function.cameraId) = (SELECT COUNT(*) FROM  Traffic_Camera)",
+        "sql_query2": "select traffic_camera.name , function.functionname from Traffic_Camera_Function join Function on Traffic_Camera_Function.functionId = Function.id join Traffic_Camera on Traffic_Camera_Function.cameraId = Traffic_Camera.id",
+        "interpretation1": "What is the common function that all traffic cameras offer?",
+        "interpretation2": "Give me the traffic cameras and their functions."
+    }
+]

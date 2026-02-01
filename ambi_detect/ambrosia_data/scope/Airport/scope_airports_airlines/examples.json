@@ -1,0 +1,9 @@
+[
+    {
+        "question": "Show me the airlines represented at each airport.",
+        "sql_query1": "SELECT Airlines.Name  from Airports_Airlines join Airlines on Airports_Airlines.AirlineID = Airlines.AirlineID join Airports on Airports_Airlines.AirportID = Airports.AirportID   GROUP BY Airports_Airlines.AirlineID HAVING COUNT(DISTINCT Airports_Airlines.AirportID) = (SELECT COUNT(*) FROM  Airports)",
+        "sql_query2": "select airports.name , airlines.name from Airports_Airlines join Airlines on Airports_Airlines.AirlineID = Airlines.AirlineID join Airports on Airports_Airlines.AirportID = Airports.AirportID",
+        "interpretation1": "What airlines are common for all airports?",
+        "interpretation2": "For each airport, list the airlines represented."
+    }
+]

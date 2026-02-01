@@ -1,0 +1,9 @@
+[
+    {
+        "question": "Show $150 wellness programs and day spas.",
+        "sql_query1": "SELECT Day_Spa.name\r\nFROM Day_Spa\r\nWHERE Day_Spa.Price = 150\r\nUNION\r\nSELECT Wellness_Retreat.name\r\nFROM Wellness_Retreat\r\nWHERE Wellness_Retreat.Price = 150",
+        "sql_query2": "SELECT Day_Spa.name\r\nFROM Day_Spa\r\nUNION\r\nSELECT Wellness_Retreat.name\r\nFROM Wellness_Retreat\r\nWHERE Wellness_Retreat.Price = 150",
+        "interpretation1": "Show me $150 wellness programs and $150 day spas.",
+        "interpretation2": "Show all day spas and $150 wellness programs."
+    }
+]

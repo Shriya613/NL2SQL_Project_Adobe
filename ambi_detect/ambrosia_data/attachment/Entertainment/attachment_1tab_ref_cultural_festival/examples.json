@@ -1,0 +1,9 @@
+[
+    {
+        "question": "Show music festivals and film festivals with 60000 attendees.",
+        "sql_query1": "SELECT Festivals.Name \r\nFROM Festivals JOIN Events ON Festivals.id = Events.FestivalID\r\nWHERE (Festivals.Cultural_Festival = \"Music Festival\" OR Festivals.Cultural_Festival = \"Film Festival\") AND Events.Attendance = 60000",
+        "sql_query2": "SELECT Festivals.Name \r\nFROM Festivals JOIN Events ON Festivals.id = Events.FestivalID\r\nWHERE Festivals.Cultural_Festival = \"Music Festival\" OR Festivals.Cultural_Festival = \"Film Festival\" AND Events.Attendance = 60000",
+        "interpretation1": "Which music festivals have 60000 attendees and which film festivals have the same number of attendees?",
+        "interpretation2": "Provide a list of all music festivals and also provide a list of film festivals with 60000 attendees."
+    }
+]

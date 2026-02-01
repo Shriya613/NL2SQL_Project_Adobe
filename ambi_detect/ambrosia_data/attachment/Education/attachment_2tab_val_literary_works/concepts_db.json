@@ -1,0 +1,27 @@
+{
+    "domain": "Novels",
+    "template": "Novel and Short Story are subclasses of Literary Works. All Novels and Short Stories have property \"Character\". There might be a Novel and a Short Story that both have \"Character\" equal to \"John Smith\".",
+    "type": "2tab_val",
+    "general_class": "Literary Works",
+    "class1": {
+        "tab_name": "Novels",
+        "col_name": null,
+        "value": null,
+        "scope_id": null,
+        "db_type": "table"
+    },
+    "class2": {
+        "tab_name": "ShortStories",
+        "col_name": null,
+        "value": null,
+        "scope_id": null,
+        "db_type": "table"
+    },
+    "common_property": {
+        "tab_name": "Novels",
+        "col_name": "Character",
+        "value": "John Smith",
+        "scope_id": null,
+        "db_type": "value"
+    }
+}

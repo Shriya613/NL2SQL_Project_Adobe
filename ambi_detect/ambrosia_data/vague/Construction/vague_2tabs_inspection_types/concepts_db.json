@@ -1,0 +1,25 @@
+{
+    "template": "Question: What types of inspections are performed during the course of this construction project? Subject of Inquiry: Project\nFocus: Inspection Types Possible answer types: 1. Structural Inspection 2. Safety Inspection",
+    "general_category1": {
+        "tab_name": "Structural_Inspection",
+        "col_name": null,
+        "value": null,
+        "scope_id": null,
+        "db_type": "table"
+    },
+    "general_category2": {
+        "tab_name": "Safety_Inspection",
+        "col_name": null,
+        "value": null,
+        "scope_id": null,
+        "db_type": "table"
+    },
+    "subject": {
+        "tab_name": "Project",
+        "col_name": null,
+        "value": null,
+        "scope_id": null,
+        "db_type": "table"
+    },
+    "type": "2tabs"
+}

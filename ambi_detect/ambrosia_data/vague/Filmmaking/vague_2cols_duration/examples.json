@@ -1,0 +1,22 @@
+[
+    {
+        "question": "List movies sorted by descending order of duration?",
+        "sql_query1": "SELECT Movies.Title FROM Movies ORDER BY Movies.Running_Time DESC",
+        "sql_query2": "SELECT Movies.Title FROM Movies ORDER BY Movies.Extended_Version_Length DESC",
+        "sql_query3": "SELECT Movies.Title FROM Movies ORDER BY Movies.Running_Time, Extended_Version_Length DESC",
+        "interpretation1": "In descending order of running time, list the movies.",
+        "interpretation2": "In descending order of extended version length, list the movies.",
+        "interpretation3": "List the movies in descending order of their running time and extended version lengths.",
+        "sql_query_general": "SELECT Movies.Title FROM Movies ORDER BY Movies.Duration DESC"
+    },
+    {
+        "question": "Who is the director of the longest movie?",
+        "sql_query1": "SELECT Directors.Name FROM Movies INNER JOIN Directors ON Movies.DirectorID = Directors.DirectorID ORDER BY Movies.Running_Time DESC LIMIT 1",
+        "sql_query2": "SELECT Directors.Name FROM Movies INNER JOIN Directors ON Movies.DirectorID = Directors.DirectorID ORDER BY Movies.Extended_Version_Length DESC LIMIT 1",
+        "sql_query3": "SELECT Directors.Name FROM Movies INNER JOIN Directors ON Movies.DirectorID = Directors.DirectorID ORDER BY Movies.Running_Time, Extended_Version_Length DESC LIMIT 1",
+        "interpretation1": "Who directed the movie with the longest running time?",
+        "interpretation2": "Who directed the movie with the longest time of its extended version?",
+        "interpretation3": "Who directed the movies with the longest running time and extended version duration?",
+        "sql_query_general": "SELECT Directors.Name FROM Movies INNER JOIN Directors ON Movies.DirectorID = Directors.DirectorID ORDER BY Movies.Duration DESC LIMIT 1"
+    }
+]

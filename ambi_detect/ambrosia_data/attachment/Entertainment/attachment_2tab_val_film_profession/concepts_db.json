@@ -1,0 +1,27 @@
+{
+    "domain": "Director",
+    "template": "Director and Producer are subclasses of Film Profession. All Directors and Producers have property \"Award\". There might be a Director and a Producer that both have \"Award\" equal to \"Oscar\".",
+    "type": "2tab_val",
+    "general_class": "Film Profession",
+    "class1": {
+        "tab_name": "Director",
+        "col_name": null,
+        "value": null,
+        "scope_id": null,
+        "db_type": "table"
+    },
+    "class2": {
+        "tab_name": "Producer",
+        "col_name": null,
+        "value": null,
+        "scope_id": null,
+        "db_type": "table"
+    },
+    "common_property": {
+        "tab_name": "Director",
+        "col_name": "Award",
+        "value": "Oscar",
+        "scope_id": null,
+        "db_type": "value"
+    }
+}

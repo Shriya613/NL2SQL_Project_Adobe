@@ -1,0 +1,31 @@
+{
+    "template": "Each Airports has many different Airlines. Among them, American Airlines is common to many Airports.",
+    "entities": {
+        "tab_name": "Airports",
+        "col_name": null,
+        "value": null,
+        "scope_id": null,
+        "db_type": "table"
+    },
+    "components": {
+        "tab_name": "Airlines",
+        "col_name": null,
+        "value": null,
+        "scope_id": null,
+        "db_type": "table"
+    },
+    "specific_component": {
+        "tab_name": "Airlines",
+        "col_name": "Name",
+        "value": "American_Airlines",
+        "scope_id": 0,
+        "db_type": "value"
+    },
+    "entities_components": {
+        "tab_name": "Airports_Airlines",
+        "col_name": null,
+        "value": null,
+        "scope_id": null,
+        "db_type": "table"
+    }
+}

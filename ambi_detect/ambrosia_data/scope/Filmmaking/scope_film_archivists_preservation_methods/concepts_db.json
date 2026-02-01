@@ -1,0 +1,31 @@
+{
+    "template": "Each Film Archivists has many different Preservation Methods. Among them, Film Negatives is common to many Film Archivists.",
+    "entities": {
+        "tab_name": "Film_Archivists",
+        "col_name": null,
+        "value": null,
+        "scope_id": null,
+        "db_type": "table"
+    },
+    "components": {
+        "tab_name": "Preservation_Methods",
+        "col_name": null,
+        "value": null,
+        "scope_id": null,
+        "db_type": "table"
+    },
+    "specific_component": {
+        "tab_name": "Preservation_Methods",
+        "col_name": "method",
+        "value": "Film Negatives",
+        "scope_id": 0,
+        "db_type": "value"
+    },
+    "entities_components": {
+        "tab_name": "Archived_Films",
+        "col_name": null,
+        "value": null,
+        "scope_id": null,
+        "db_type": "table"
+    }
+}

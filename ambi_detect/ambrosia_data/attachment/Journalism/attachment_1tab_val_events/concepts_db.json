@@ -1,0 +1,33 @@
+{
+    "domain": "Articles",
+    "template": "Press Conference and Media Scrum are subclasses of Journalist Events.",
+    "type": "1tab_val",
+    "general_class": {
+        "tab_name": "Sources",
+        "col_name": "event",
+        "value": null,
+        "scope_id": null,
+        "db_type": "column"
+    },
+    "class1": {
+        "tab_name": "Sources",
+        "col_name": "event",
+        "value": "Press Conference",
+        "scope_id": null,
+        "db_type": "value"
+    },
+    "class2": {
+        "tab_name": "Sources",
+        "col_name": "event",
+        "value": "Media Scrum",
+        "scope_id": null,
+        "db_type": "value"
+    },
+    "common_property": {
+        "tab_name": "Sources",
+        "col_name": "person",
+        "value": "Jack Layton",
+        "scope_id": null,
+        "db_type": "value"
+    }
+}

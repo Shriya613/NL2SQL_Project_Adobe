@@ -1,0 +1,33 @@
+{
+    "domain": "Customers",
+    "template": "IPO and Secondary Offering are subclasses of Stock Market Offerings. All Ipoes and Secondary offerings have property \"Raised Capital Amount\". There might be a IPO and a Secondary Offering that both have \"Raised Capital Amount\" equal to \"50000000\".",
+    "type": "1tab_val",
+    "general_class": {
+        "tab_name": "Loans",
+        "col_name": "StockMarketOfferings",
+        "value": null,
+        "scope_id": null,
+        "db_type": "column"
+    },
+    "class1": {
+        "tab_name": "Loans",
+        "col_name": "StockMarketOfferings",
+        "value": "IPO",
+        "scope_id": null,
+        "db_type": "value"
+    },
+    "class2": {
+        "tab_name": "Loans",
+        "col_name": "StockMarketOfferings",
+        "value": "Secondary Offering",
+        "scope_id": null,
+        "db_type": "value"
+    },
+    "common_property": {
+        "tab_name": "Loans",
+        "col_name": "RaisedCapitalAmount",
+        "value": "50000000",
+        "scope_id": null,
+        "db_type": "value"
+    }
+}

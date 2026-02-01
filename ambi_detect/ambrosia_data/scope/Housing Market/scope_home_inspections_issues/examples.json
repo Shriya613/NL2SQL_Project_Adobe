@@ -1,0 +1,9 @@
+[
+    {
+        "question": "Show me the issues each home inspection revealed.",
+        "sql_query1": "SELECT Issues.issue_type  from Home_Inspection_Issues join Issues on Home_Inspection_Issues.issue_id = Issues.id join Home_Inspections on Home_Inspection_Issues.home_inspection_id = Home_Inspections.id   GROUP BY Home_Inspection_Issues.issue_id HAVING COUNT(DISTINCT Home_Inspection_Issues.home_inspection_id) = (SELECT COUNT(*) FROM  Home_Inspections)",
+        "sql_query2": "select home_inspections.address , issues.issue_type from Home_Inspection_Issues join Issues on Home_Inspection_Issues.issue_id = Issues.id join Home_Inspections on Home_Inspection_Issues.home_inspection_id = Home_Inspections.id",
+        "interpretation1": "What issues are common to all home inspections?",
+        "interpretation2": "For every home inspection, list the issues revealed."
+    }
+]

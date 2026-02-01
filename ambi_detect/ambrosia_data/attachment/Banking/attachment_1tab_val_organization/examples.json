@@ -1,0 +1,9 @@
+[
+    {
+        "question": "Show all currency exchange service customers and commodity trading firm customers where the organisation was formed in 2000.",
+        "sql_query1": "SELECT Customers.FullName\r\nFROM Customers\r\nWHERE (Customers.Organization = \"Currency Exchange Service\" OR Customers.Organization = \"Commodity Trading Firm\") AND Customers.Year_of_establishment = 2000",
+        "sql_query2": "SELECT Customers.FullName\r\nFROM Customers\r\nWHERE Customers.Organization = \"Currency Exchange Service\" OR Customers.Organization = \"Commodity Trading Firm\" AND Customers.Year_of_establishment = 2000",
+        "interpretation1": "Show all customers of either the currency exchange services founded in 2000 or the commodity trading firms that were founded at the same time.",
+        "interpretation2": "Show the commodity trading firm customers from firms formed in 2000 and also show all the currency exchange service customers."
+    }
+]

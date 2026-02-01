@@ -1,0 +1,33 @@
+{
+    "domain": "Customers",
+    "template": "Exchange-Traded Product and Unit Investment Trust are subclasses of Products. All Exchange-traded products and Unit investment trusts have property \"Exit Fee\". There might be a Exchange-Traded Product and a Unit Investment Trust that both have \"Exit Fee\" equal to \"1%\".",
+    "type": "1tab_val",
+    "general_class": {
+        "tab_name": "Products",
+        "col_name": "Category",
+        "value": null,
+        "scope_id": null,
+        "db_type": "column"
+    },
+    "class1": {
+        "tab_name": "Products",
+        "col_name": "Category",
+        "value": "ETP",
+        "scope_id": null,
+        "db_type": "value"
+    },
+    "class2": {
+        "tab_name": "Products",
+        "col_name": "Category",
+        "value": "UTP",
+        "scope_id": null,
+        "db_type": "value"
+    },
+    "common_property": {
+        "tab_name": "Products",
+        "col_name": "ExitFee",
+        "value": 0.01,
+        "scope_id": null,
+        "db_type": "value"
+    }
+}

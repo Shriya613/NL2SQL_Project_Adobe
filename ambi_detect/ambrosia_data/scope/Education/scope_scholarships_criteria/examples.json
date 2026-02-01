@@ -1,0 +1,9 @@
+[
+    {
+        "question": "What criteria do we have for every scholarship?",
+        "sql_query1": "SELECT Criteria.value  from Scholarship_Criteria join Criteria on Scholarship_Criteria.criterion_id = Criteria.id join Scholarships on Scholarship_Criteria.scholarship_id = Scholarships.id   GROUP BY Scholarship_Criteria.criterion_id HAVING COUNT(DISTINCT Scholarship_Criteria.scholarship_id) = (SELECT COUNT(*) FROM  Scholarships)",
+        "sql_query2": "select scholarships.name , criteria.value from Scholarship_Criteria join Criteria on Scholarship_Criteria.criterion_id = Criteria.id join Scholarships on Scholarship_Criteria.scholarship_id = Scholarships.id",
+        "interpretation1": "Give me the criteria that are common to all scholarships",
+        "interpretation2": "For every scholarship, provide me its criteria"
+    }
+]

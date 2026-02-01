@@ -1,0 +1,33 @@
+{
+    "domain": "EventSpaces",
+    "template": "Banquet Hall and Conference Room are subclasses of Event Space. All Banquet halls and Conference rooms have property \"Capacity\". There might be a Banquet Hall and a Conference Room that both have \"Capacity\" equal to \"200\".",
+    "type": "1tab_val",
+    "general_class": {
+        "tab_name": "EventSpaces",
+        "col_name": "Event_Space",
+        "value": null,
+        "scope_id": null,
+        "db_type": "column"
+    },
+    "class1": {
+        "tab_name": "EventSpaces",
+        "col_name": "Event_Space",
+        "value": "Banquet Hall",
+        "scope_id": null,
+        "db_type": "value"
+    },
+    "class2": {
+        "tab_name": "EventSpaces",
+        "col_name": "Event_Space",
+        "value": "Conference Room",
+        "scope_id": null,
+        "db_type": "value"
+    },
+    "common_property": {
+        "tab_name": "EventSpaces",
+        "col_name": "Capacity",
+        "value": 200,
+        "scope_id": null,
+        "db_type": "value"
+    }
+}

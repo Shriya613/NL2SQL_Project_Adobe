@@ -1,0 +1,9 @@
+[
+    {
+        "question": "Show pop songs and hip hop songs performed at Madison Square Garden.",
+        "sql_query1": "SELECT Songs.title \r\nFROM Music_Genres JOIN Songs ON Music_Genres.id = Songs.music_genre_id JOIN Concerts ON Songs.concert_id = Concerts.id\r\nWHERE (Music_Genres.name = \"Pop Song\" OR Music_Genres.name = \"Hip Hop Song\") AND Concerts.venue = \"Madison Square Garden\"",
+        "sql_query2": "SELECT Songs.title \r\nFROM Music_Genres JOIN Songs ON Music_Genres.id = Songs.music_genre_id JOIN Concerts ON Songs.concert_id = Concerts.id\r\nWHERE Music_Genres.name = \"Pop Song\" OR Music_Genres.name = \"Hip Hop Song\" AND Concerts.venue = \"Madison Square Garden\"",
+        "interpretation1": "List both pop songs and hip hop songs where either were performed at Madison Square Garden.",
+        "interpretation2": "Show all pop songs and only those hip hop songs which were performed at Madison Square Garden."
+    }
+]

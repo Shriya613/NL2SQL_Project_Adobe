@@ -1,0 +1,31 @@
+{
+    "template": "Each Festivals has many different Events. Among them, Parade is common to many Festivals.",
+    "entities": {
+        "tab_name": "Festivals",
+        "col_name": null,
+        "value": null,
+        "scope_id": null,
+        "db_type": "table"
+    },
+    "components": {
+        "tab_name": "Events",
+        "col_name": null,
+        "value": null,
+        "scope_id": null,
+        "db_type": "table"
+    },
+    "specific_component": {
+        "tab_name": "Events",
+        "col_name": "EventName",
+        "value": "Parade",
+        "scope_id": 0,
+        "db_type": "value"
+    },
+    "entities_components": {
+        "tab_name": "Festivals_Events",
+        "col_name": null,
+        "value": null,
+        "scope_id": null,
+        "db_type": "table"
+    }
+}

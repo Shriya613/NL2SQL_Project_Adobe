@@ -1,0 +1,9 @@
+[
+    {
+        "question": "Give me the museums and planetariums with tickets priced at $15.",
+        "sql_query1": "SELECT Venue.name \r\nFROM Venue\r\nWHERE (Venue.educationalVenue = \"Museum\" OR Venue.educationalVenue = \"Planetarium\") AND Venue.ticketPrice = \"$15\"",
+        "sql_query2": "SELECT Venue.name \r\nFROM Venue\r\nWHERE Venue.educationalVenue = \"Museum\" OR Venue.educationalVenue = \"Planetarium\" AND Venue.ticketPrice = \"$15\"",
+        "interpretation1": "What museums have tickets priced at $15 and what planetariums have the same price?",
+        "interpretation2": "Provide a list of all museums and also provide a list of planetariums with tickets priced at $15."
+    }
+]

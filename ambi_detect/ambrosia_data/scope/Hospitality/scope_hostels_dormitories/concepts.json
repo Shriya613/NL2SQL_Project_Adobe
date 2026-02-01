@@ -1,0 +1,6 @@
+{
+    "template": "Each Hostels has many different Dormitories. Among them, Mixed Dormitory is common to many Hostels.",
+    "specific_component": "Mixed Dormitory",
+    "components": "Dormitories",
+    "entities": "Hostels"
+}

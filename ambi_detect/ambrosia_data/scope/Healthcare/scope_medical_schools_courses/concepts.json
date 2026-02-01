@@ -1,0 +1,6 @@
+{
+    "template": "Each Medical Schools has many different Courses. Among them, Anatomy is common to many Medical Schools.",
+    "specific_component": "Anatomy",
+    "components": "Courses",
+    "entities": "Medical Schools"
+}

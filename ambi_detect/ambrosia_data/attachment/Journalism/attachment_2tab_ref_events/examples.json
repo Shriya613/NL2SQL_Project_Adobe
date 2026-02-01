@@ -1,0 +1,9 @@
+[
+    {
+        "question": "Where were all Jane Smith's media scrums and press conferences?",
+        "sql_query1": "SELECT Press_Conference.venue\r\nFROM Person JOIN Press_Conference ON Person.id = Press_Conference.personId\r\nWHERE Person.name = \"Jane Smith\"\r\nUNION\r\nSELECT Media_Scrum.location\r\nFROM Person JOIN Media_Scrum ON Person.id = Media_Scrum.personId\r\nWHERE Person.name = \"Jane Smith\"",
+        "sql_query2": "SELECT Press_Conference.venue\r\nFROM Person JOIN Press_Conference ON Person.id = Press_Conference.personId\r\nUNION\r\nSELECT Media_Scrum.location\r\nFROM Person JOIN Media_Scrum ON Person.id = Media_Scrum.personId\r\nWHERE Person.name = \"Jane Smith\"",
+        "interpretation1": "Where were all press conferences conducted by Jane Smith and media scrums conducted by her?",
+        "interpretation2": "Can you display the locations of all press conferences and also the locations of all media scrums, but recorded by Jane Smith?"
+    }
+]

@@ -1,0 +1,8 @@
+{
+    "template": "Scriptwriter and Editor are production roles in filmmaking. All Scriptwriters and Editors have a property \"Deadline\" for their projects. There might be a Scriptwriter and an Editor both working with a deadline of \"6 months\" while others in these roles have different deadlines.",
+    "general_class": "Production Role",
+    "class1": "Scriptwriter",
+    "class2": "Editor",
+    "common_property": "Deadline",
+    "common_value": "21.04.03"
+}

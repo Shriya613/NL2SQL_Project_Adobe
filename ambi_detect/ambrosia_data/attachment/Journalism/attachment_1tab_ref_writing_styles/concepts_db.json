@@ -1,0 +1,33 @@
+{
+    "domain": "Authors",
+    "template": "Human Interest Stories and Personal Essays are subclasses of Nonfiction Writing Styles.",
+    "type": "1tab_ref",
+    "general_class": {
+        "tab_name": "WritingStyles",
+        "col_name": "StyleName",
+        "value": null,
+        "scope_id": null,
+        "db_type": "column"
+    },
+    "class1": {
+        "tab_name": "WritingStyles",
+        "col_name": "StyleName",
+        "value": "Short Story",
+        "scope_id": null,
+        "db_type": "value"
+    },
+    "class2": {
+        "tab_name": "WritingStyles",
+        "col_name": "StyleName",
+        "value": "Personal Essay",
+        "scope_id": null,
+        "db_type": "value"
+    },
+    "common_property": {
+        "tab_name": "Authors",
+        "col_name": "Name",
+        "value": "Evelyn O'Connor",
+        "scope_id": null,
+        "db_type": "value"
+    }
+}

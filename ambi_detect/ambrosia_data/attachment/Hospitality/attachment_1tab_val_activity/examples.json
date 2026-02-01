@@ -1,0 +1,9 @@
+[
+    {
+        "question": "Provide me with the tourists that visited tourist attractions and local markets in Portobello.",
+        "sql_query1": "SELECT Tourists.Name \r\nFROM Tourists\r\nWHERE (Tourists.Activity = \"Tourist Attraction\" OR Tourists.Activity = \"Local Market\") AND Tourists.Location = \"Portobello\"",
+        "sql_query2": "SELECT Tourists.Name \r\nFROM Tourists\r\nWHERE Tourists.Activity = \"Tourist Attraction\" OR Tourists.Activity = \"Local Market\" AND Tourists.Location = \"Portobello\"",
+        "interpretation1": "What tourists visited tourist attractions at Portobello and what tourists visited local markets in the same location?",
+        "interpretation2": "List all tourists that visited tourist attractions and also list tourists that visited local markets in Portobello."
+    }
+]

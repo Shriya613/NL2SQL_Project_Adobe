@@ -1,0 +1,22 @@
+[
+    {
+        "question": "show me all the projects including name, milestone and company name",
+        "sql_query1": "SELECT \r\n    dp.project_name AS Project_Name,\r\n    pm.milestone_description AS Milestone,\r\n    oc.name AS Company_Name\r\nFROM \r\n    Development_Project dp\r\nJOIN \r\n    Project_Milestone pm ON dp.id = pm.development_project_id\r\nJOIN \r\n    Real_Estate_Developer oc ON dp.developer_id = oc.id",
+        "sql_query2": "SELECT \r\n    dp.project_name AS Project_Name,\r\n    pm.milestone_description AS Milestone,\r\n    oc.name AS Company_Name\r\nFROM \r\n    Development_Project dp\r\nJOIN \r\n    Project_Milestone pm ON dp.id = pm.development_project_id\r\nJOIN \r\n    Contractor oc ON dp.Contractor_id = oc.id",
+        "sql_query3": "SELECT \r\n    dp.project_name AS Project_Name,\r\n    pm.milestone_description AS Milestone,\r\n    oc.name, co.name\r\nFROM \r\n    Development_Project dp\r\nJOIN \r\n    Project_Milestone pm ON dp.id = pm.development_project_id\r\nJOIN \r\n    Real_Estate_Developer oc ON dp.developer_id = oc.id JOIN Contractor co ON dp.Contractor_id = oc.id",
+        "interpretation1": "List the projects, including their names, milestones and their real estate developers.",
+        "interpretation2": "List the projects, including their names, milestones and their contractors.",
+        "interpretation3": "List the projects, including their names, milestones, their contractors and their real estate developers.",
+        "sql_query_general": "SELECT \r\n    dp.project_name AS Project_Name,\r\n    pm.milestone_description AS Milestone,\r\n    oc.name AS Company_Name\r\nFROM \r\n    Development_Project dp\r\nJOIN \r\n    Project_Milestone pm ON dp.id = pm.development_project_id\r\nJOIN \r\n    Overseeing_Company oc ON dp.developer_id = oc.id"
+    },
+    {
+        "question": "show me all projects by company",
+        "sql_query1": "SELECT dp.project_name AS Project_Name, oc.name AS Company_Name\r\nFROM Development_Project dp\r\nJOIN Real_Estate_Developer oc ON dp.developer_id = oc.id",
+        "sql_query2": "SELECT dp.project_name AS Project_Name, oc.name AS Company_Name\r\nFROM Development_Project dp\r\nJOIN Contractor oc ON dp.Contractor_id = oc.id",
+        "sql_query3": "SELECT dp.project_name AS Project_Name, oc.name, co.name\r\nFROM Development_Project dp\r\nJOIN Real_Estate_Developer oc ON dp.developer_id = oc.id JOIN Contractor co ON dp.Contractor_id = oc.id",
+        "interpretation1": "Show me all projects by developer",
+        "interpretation2": "Show me all projects by contractor",
+        "interpretation3": "Show me all projects by developer and contractor",
+        "sql_query_general": "SELECT dp.project_name AS Project_Name, oc.name AS Company_Name\r\nFROM Development_Project dp\r\nJOIN Overseeing_Company oc ON dp.developer_id = oc.id"
+    }
+]

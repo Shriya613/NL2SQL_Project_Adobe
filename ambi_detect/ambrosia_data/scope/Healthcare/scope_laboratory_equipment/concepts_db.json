@@ -1,0 +1,31 @@
+{
+    "template": "Each Laboratory has many different Equipment. Among them, Microscope is common to many Laboratory.",
+    "entities": {
+        "tab_name": "Laboratory",
+        "col_name": null,
+        "value": null,
+        "scope_id": null,
+        "db_type": "table"
+    },
+    "components": {
+        "tab_name": "Equipment",
+        "col_name": null,
+        "value": null,
+        "scope_id": null,
+        "db_type": "table"
+    },
+    "specific_component": {
+        "tab_name": "Equipment",
+        "col_name": "type",
+        "value": "Microscope",
+        "scope_id": 0,
+        "db_type": "value"
+    },
+    "entities_components": {
+        "tab_name": "Laboratory_Equipment",
+        "col_name": null,
+        "value": null,
+        "scope_id": null,
+        "db_type": "table"
+    }
+}

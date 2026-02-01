@@ -1,0 +1,8 @@
+{
+    "template": "Science Lab and Art Studio are subclasses of Learning Spaces. All Science Labs and Art Studios have the property \"Available Resources\". There might be a Science Lab and an Art Studio that both have \"Available Resources\" equal to \"Microscopes and Easels\".",
+    "general_class": "Learning Spaces",
+    "class1": "Science Lab",
+    "class2": "Art Studio",
+    "common_property": "Available Resources",
+    "common_value": "Computers"
+}

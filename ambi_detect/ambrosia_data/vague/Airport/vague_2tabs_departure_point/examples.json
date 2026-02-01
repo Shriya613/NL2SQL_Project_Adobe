@@ -1,0 +1,22 @@
+[
+    {
+        "question": "Show departure point from each flight",
+        "sql_query1": "SELECT Flight.flight_number, Terminal.terminal_name FROM Terminal JOIN Flight ON Flight.terminal_id = Terminal.id",
+        "sql_query2": "SELECT Flight.flight_number, City.name FROM City JOIN Flight ON Flight.origin_city_id = City.id",
+        "sql_query3": "SELECT Flight.flight_number, Terminal.terminal_name,  City.name  FROM Terminal JOIN Flight ON Flight.terminal_id = Terminal.id JOIN City ON Flight.origin_city_id = City.id",
+        "interpretation1": "Show the departure terminal from each flight.",
+        "interpretation2": "Show the departure city from each flight.",
+        "interpretation3": "Show the departure terminal and city from each flight.",
+        "sql_query_general": "SELECT Flight.flight_number, Departure_Point.terminal_name FROM Departure_Point JOIN Flight ON Flight.terminal_id = Departure_Point.id"
+    },
+    {
+        "question": "Show the flight and its departure point that departs first.",
+        "sql_query1": "SELECT Flight.flight_number, Terminal.terminal_name FROM Terminal JOIN Flight ON Flight.terminal_id = Terminal.id ORDER BY Flight.departure_time ASC LIMIT 1",
+        "sql_query2": "SELECT Flight.flight_number, City.name FROM City JOIN Flight ON Flight.origin_city_id = City.id ORDER BY Flight.departure_time ASC LIMIT 1",
+        "sql_query3": "SELECT Flight.flight_number, Terminal.terminal_name, City.name FROM Terminal JOIN Flight ON Flight.terminal_id = Terminal.id JOIN City ON Flight.origin_city_id = City.id ORDER BY Flight.departure_time ASC LIMIT 1",
+        "interpretation1": "Show the earliest flight and its departure terminal.",
+        "interpretation2": "Show the earliest flight and specify what city it is leaving from.",
+        "interpretation3": "Show the earliest flight and provide the departure city and terminal.",
+        "sql_query_general": "SELECT Flight.flight_number, Departure_Point.terminal_name FROM Departure_Point JOIN Flight ON Flight.terminal_id = Departure_Point.id ORDER BY Flight.departure_time ASC LIMIT 1"
+    }
+]

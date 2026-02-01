@@ -1,0 +1,6 @@
+{
+    "template": "Each Amusement Parks has many different Rides. Among them, Ferris Wheel is common to many Amusement Parks.",
+    "specific_component": "Ferris Wheel",
+    "components": "Rides",
+    "entities": "Amusement Parks"
+}

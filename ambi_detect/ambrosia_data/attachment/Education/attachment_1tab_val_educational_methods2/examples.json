@@ -1,0 +1,9 @@
+[
+    {
+        "question": "Show peer tutoring assignments and group work assignments that had 10 students.",
+        "sql_query1": "SELECT Assignment.title \r\nFROM Assignment\r\nWHERE (Assignment.educationalMethod = \"Peer Tutoring\" OR Assignment.educationalMethod = \"Group Work\") AND Assignment.participants = \"10 students\"",
+        "sql_query2": "SELECT Assignment.title \r\nFROM Assignment\r\nWHERE Assignment.educationalMethod = \"Peer Tutoring\" OR Assignment.educationalMethod = \"Group Work\" AND Assignment.participants = \"10 students\"",
+        "interpretation1": "What peer tutoring assignments had 10 students and what group work assignments had the same number of students?",
+        "interpretation2": "List all peer tutoring assignments and also list group work assignments that had 10 students."
+    }
+]

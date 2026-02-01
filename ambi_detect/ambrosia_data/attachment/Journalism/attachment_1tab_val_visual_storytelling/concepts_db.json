@@ -1,0 +1,33 @@
+{
+    "domain": "Authors",
+    "template": "Photojournalism and Video Journalism are subclasses of Visual Storytelling.",
+    "type": "1tab_val_like",
+    "general_class": {
+        "tab_name": "Articles",
+        "col_name": "visualStorytelling",
+        "value": null,
+        "scope_id": null,
+        "db_type": "column"
+    },
+    "class1": {
+        "tab_name": "Articles",
+        "col_name": "visualStorytelling",
+        "value": "Photo",
+        "scope_id": null,
+        "db_type": "value"
+    },
+    "class2": {
+        "tab_name": "Articles",
+        "col_name": "visualStorytelling",
+        "value": "Video",
+        "scope_id": null,
+        "db_type": "value"
+    },
+    "common_property": {
+        "tab_name": "Articles",
+        "col_name": "articleType",
+        "value": "Technology",
+        "scope_id": null,
+        "db_type": "value"
+    }
+}

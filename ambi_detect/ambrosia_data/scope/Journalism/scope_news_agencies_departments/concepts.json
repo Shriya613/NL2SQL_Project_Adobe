@@ -1,0 +1,6 @@
+{
+    "template": "Each News Agencies has many different Departments. Among them, Foreign Correspondence is common to many News Agencies.",
+    "specific_component": "Foreign Correspondence",
+    "components": "Departments",
+    "entities": "News Agencies"
+}

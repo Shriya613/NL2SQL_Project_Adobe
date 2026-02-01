@@ -1,0 +1,22 @@
+[
+    {
+        "question": "Show me the email address of all students with the first name Alice and what they study.",
+        "sql_query1": "Select email, name from Student join Field_of_study on Student.field_of_study_id=Field_of_study.id where  full_name LIKE 'Alice %'",
+        "sql_query2": "Select email, degree_name from Student join Degree_program on Student.Degree_program_id=Degree_program.id where  full_name LIKE 'Alice %'",
+        "sql_query3": "Select email, degree_name, name from Student join Field_of_study on Student.field_of_study_id=Field_of_study.id join Degree_program on Student.Degree_program_id=Degree_program.id where  full_name LIKE 'Alice %'",
+        "interpretation1": "Show me the email address and field of study of all students with the first name Alice.",
+        "interpretation2": "Show me the email address and degree program of all students with the first name Alice.",
+        "interpretation3": "Show me the email address, field of study and degree program of all students with the first name Alice.",
+        "sql_query_general": "Select email, name from Student join Studies on Student.field_of_study_id=Studies.id where  full_name LIKE 'Alice %'"
+    },
+    {
+        "question": "Show the student's name and what they study",
+        "sql_query1": "Select full_name, name from Student join Field_of_study on Student.field_of_study_id=Field_of_study.id",
+        "sql_query2": "Select full_name, degree_name from Student join Degree_program on Student.Degree_program_id=Degree_program.id",
+        "sql_query3": "Select full_name, degree_name, name from Student join Field_of_study on Student.field_of_study_id=Field_of_study.id join Degree_program on Student.Degree_program_id=Degree_program.id",
+        "interpretation1": "Show me students and their field of study.",
+        "interpretation2": "Show me students and their degree program.",
+        "interpretation3": "Show me students and their field of study, as well as their degree program.",
+        "sql_query_general": "Select full_name, name from Student join Studies on Student.field_of_study_id=Studies.id"
+    }
+]

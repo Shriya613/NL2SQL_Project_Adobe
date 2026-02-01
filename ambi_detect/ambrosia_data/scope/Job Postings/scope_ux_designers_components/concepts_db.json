@@ -1,0 +1,31 @@
+{
+    "template": "Each UX Designers has many different Components. Among them, Navigation is common to many UX Designers.",
+    "entities": {
+        "tab_name": "Ux_Designers",
+        "col_name": null,
+        "value": null,
+        "scope_id": null,
+        "db_type": "table"
+    },
+    "components": {
+        "tab_name": "Components",
+        "col_name": null,
+        "value": null,
+        "scope_id": null,
+        "db_type": "table"
+    },
+    "specific_component": {
+        "tab_name": "Components",
+        "col_name": "component_name",
+        "value": "Navigation",
+        "scope_id": 0,
+        "db_type": "value"
+    },
+    "entities_components": {
+        "tab_name": "Ux_Designers_Components",
+        "col_name": null,
+        "value": null,
+        "scope_id": null,
+        "db_type": "table"
+    }
+}

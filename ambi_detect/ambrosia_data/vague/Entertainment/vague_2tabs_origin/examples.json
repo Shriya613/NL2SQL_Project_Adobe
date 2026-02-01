@@ -1,0 +1,22 @@
+[
+    {
+        "question": "Where did all the dances presented in the table originate?",
+        "sql_query1": "SELECT name FROM Culture JOIN Dance ON Dance.culture_id = Culture.id  GROUP BY culture_id",
+        "sql_query2": "SELECT region FROM Geographical_Area JOIN Dance ON Dance.Geographical_Area_id = Geographical_Area.id  GROUP BY culture_id",
+        "sql_query3": "SELECT name, region FROM Culture JOIN Dance ON Dance.culture_id = Culture.id JOIN Geographical_Area ON Dance.Geographical_Area_id = Geographical_Area.id  GROUP BY culture_id",
+        "interpretation1": "From what culture did all the dances originate?",
+        "interpretation2": "In what geographical area did all the dances originate?",
+        "interpretation3": "From what culture and associated geographical area did all the dances originate?",
+        "sql_query_general": "SELECT name FROM Origin JOIN Dance ON Dance.culture_id = Origin.id  GROUP BY culture_id"
+    },
+    {
+        "question": "Where did capoeira come from?",
+        "sql_query1": "SELECT name FROM Culture JOIN Dance ON Dance.culture_id = Culture.id  WHERE dance_name = 'Capoeira'",
+        "sql_query2": "SELECT region FROM Geographical_Area JOIN Dance ON Dance.Geographical_Area_id = Geographical_Area.id  WHERE dance_name = 'Capoeira'",
+        "sql_query3": "SELECT name, region FROM Culture JOIN Dance ON Dance.culture_id = Culture.id JOIN Geographical_Area ON Dance.Geographical_Area_id = Geographical_Area.id   WHERE dance_name = 'Capoeira'",
+        "interpretation1": "From what culture did capoeira originate?",
+        "interpretation2": "In what geographical area did capoeira originate?",
+        "interpretation3": "From what culture and in what geographical area did capoeira originate?",
+        "sql_query_general": "SELECT name FROM Origin JOIN Dance ON Dance.culture_id = Origin.id  WHERE dance_name = 'Capoeira'"
+    }
+]

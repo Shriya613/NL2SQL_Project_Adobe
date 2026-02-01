@@ -1,0 +1,7 @@
+{
+    "template": "Question: On what date is the final exam scheduled? Subject of Inquiry: Exams\nFocus: Exam Date Possible answer types: 1. Month 2. Day",
+    "subject": "Exams",
+    "focus": "Exam Date",
+    "general_category1": "Month",
+    "general_category2": "Day"
+}

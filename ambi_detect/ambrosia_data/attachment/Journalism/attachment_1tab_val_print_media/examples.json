@@ -1,0 +1,9 @@
+[
+    {
+        "question": "Show me all newspaper publications and magazine publications that come out weekly.",
+        "sql_query1": "SELECT Publications.title \r\nFROM Publications\r\nWHERE (Publications.Print_Media = \"Newspaper\" OR Publications.Print_Media = \"Magazine\") AND Publications.Publication_Frequency = \"Weekly\"",
+        "sql_query2": "SELECT Publications.title \r\nFROM Publications\r\nWHERE Publications.Print_Media = \"Newspaper\" OR Publications.Print_Media = \"Magazine\" AND Publications.Publication_Frequency = \"Weekly\"",
+        "interpretation1": "List both newspaper and magazine publications where either one is issued weekly.",
+        "interpretation2": "Show all the newspaper publications, in addition show only the weekly magazine publications."
+    }
+]

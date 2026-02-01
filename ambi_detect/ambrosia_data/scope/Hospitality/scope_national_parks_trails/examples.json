@@ -1,0 +1,37 @@
+[
+    {
+        "question": "What length of trails do we have for each national park?",
+        "sql_query1": "SELECT Trails.length  from National_Parks_Trails join Trails on National_Parks_Trails.trail_id = Trails.trail_id join National_Parks on National_Parks_Trails.national_park_id = National_Parks.park_id   GROUP BY National_Parks_Trails.trail_id HAVING COUNT(DISTINCT National_Parks_Trails.national_park_id) = (SELECT COUNT(*) FROM  National_Parks)",
+        "sql_query2": "select national_parks.name , trails.length from National_Parks_Trails join Trails on National_Parks_Trails.trail_id = Trails.trail_id join National_Parks on National_Parks_Trails.national_park_id = National_Parks.park_id",
+        "interpretation1": "What length of trail is common for Grand Canyon?",
+        "interpretation2": "For every national park, what is the related length of trail?"
+    },
+    {
+        "question": "which trail IDs and difficulties are associated with every national park?",
+        "sql_query1": "SELECT Trails.trail_id, Trails.difficulty  from National_Parks_Trails join Trails on National_Parks_Trails.trail_id = Trails.trail_id join National_Parks on National_Parks_Trails.national_park_id = National_Parks.park_id   GROUP BY National_Parks_Trails.trail_id HAVING COUNT(DISTINCT National_Parks_Trails.national_park_id) = (SELECT COUNT(*) FROM  National_Parks)",
+        "sql_query2": "select national_parks.name , trails.trail_id , trails.difficulty from National_Parks_Trails join Trails on National_Parks_Trails.trail_id = Trails.trail_id join National_Parks on National_Parks_Trails.national_park_id = National_Parks.park_id",
+        "interpretation1": "What trail IDs and difficulties are common for all national parks?",
+        "interpretation2": "For every national park, what are the corresponding trail IDs and difficulties?"
+    },
+    {
+        "question": "Show me the IDs, difficulties and lengths of the trails every national park has.",
+        "sql_query1": "SELECT Trails.trail_id, Trails.difficulty, Trails.length  from National_Parks_Trails join Trails on National_Parks_Trails.trail_id = Trails.trail_id join National_Parks on National_Parks_Trails.national_park_id = National_Parks.park_id   GROUP BY National_Parks_Trails.trail_id HAVING COUNT(DISTINCT National_Parks_Trails.national_park_id) = (SELECT COUNT(*) FROM  National_Parks)",
+        "sql_query2": "select national_parks.name , trails.trail_id , trails.difficulty , trails.length from National_Parks_Trails join Trails on National_Parks_Trails.trail_id = Trails.trail_id join National_Parks on National_Parks_Trails.national_park_id = National_Parks.park_id",
+        "interpretation1": "What are the IDs, difficulties and lengths of the trails common to all national parks.",
+        "interpretation2": "For each national park, list the IDs, difficulties and lengths of the trails they have."
+    },
+    {
+        "question": "For every National Park, what are the corresponding difficulty and length of trials?",
+        "sql_query1": "SELECT Trails.difficulty, Trails.length  from National_Parks_Trails join Trails on National_Parks_Trails.trail_id = Trails.trail_id join National_Parks on National_Parks_Trails.national_park_id = National_Parks.park_id   GROUP BY National_Parks_Trails.trail_id HAVING COUNT(DISTINCT National_Parks_Trails.national_park_id) = (SELECT COUNT(*) FROM  National_Parks)",
+        "sql_query2": "select national_parks.name , trails.difficulty , trails.length from National_Parks_Trails join Trails on National_Parks_Trails.trail_id = Trails.trail_id join National_Parks on National_Parks_Trails.national_park_id = National_Parks.park_id",
+        "interpretation1": "Show the difficulty and length of trials that are shared by all national parks.",
+        "interpretation2": "For each national park, list the difficulty and length of the trials available."
+    },
+    {
+        "question": "What is the difficulty of the trail that is offered in each national park?",
+        "sql_query1": "SELECT Trails.difficulty  from National_Parks_Trails join Trails on National_Parks_Trails.trail_id = Trails.trail_id join National_Parks on National_Parks_Trails.national_park_id = National_Parks.park_id   GROUP BY National_Parks_Trails.trail_id HAVING COUNT(DISTINCT National_Parks_Trails.national_park_id) = (SELECT COUNT(*) FROM  National_Parks)",
+        "sql_query2": "select national_parks.name , trails.difficulty from National_Parks_Trails join Trails on National_Parks_Trails.trail_id = Trails.trail_id join National_Parks on National_Parks_Trails.national_park_id = National_Parks.park_id",
+        "interpretation1": "What are the difficulties of the trails that are common to all national parks?",
+        "interpretation2": "For each national park, what is the difficulty of the trail?"
+    }
+]

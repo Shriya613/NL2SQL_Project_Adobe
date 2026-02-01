@@ -1,0 +1,8 @@
+{
+    "template": "Podcast and Radio Show are subclasses of Audio Format. All Podcasts and Radio shows have property \"Host\". There might be a Podcast and a Radio Show that both have \"Host\" equal to \"Alex Johnson\".",
+    "general_class": "Audio Format",
+    "class1": "Podcast",
+    "class2": "Radio Show",
+    "common_property": "Host",
+    "common_value": "Alex Johnson"
+}

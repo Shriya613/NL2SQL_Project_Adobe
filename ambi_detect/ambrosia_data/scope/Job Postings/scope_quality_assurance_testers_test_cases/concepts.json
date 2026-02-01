@@ -1,0 +1,6 @@
+{
+    "template": "Each Quality Assurance Testers has many different Test Cases. Among them, Smoke Test is common to many Quality Assurance Testers.",
+    "specific_component": "Smoke Test",
+    "components": "Test Cases",
+    "entities": "Quality Assurance Testers"
+}

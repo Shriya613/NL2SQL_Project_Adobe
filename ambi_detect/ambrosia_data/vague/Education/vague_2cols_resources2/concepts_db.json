@@ -1,0 +1,25 @@
+{
+    "template": "Question: What resources are required for this course? Subject of Inquiry: Course\nFocus: Resources Possible answer types: 1. Textbooks 2. Software",
+    "general_category1": {
+        "tab_name": "Textbooks_and_Software",
+        "col_name": "TextbookTitle",
+        "value": null,
+        "scope_id": null,
+        "db_type": "column"
+    },
+    "general_category2": {
+        "tab_name": "Textbooks_and_Software",
+        "col_name": "SoftwareName",
+        "value": null,
+        "scope_id": null,
+        "db_type": "column"
+    },
+    "subject": {
+        "tab_name": "Courses",
+        "col_name": "CourseID",
+        "value": null,
+        "scope_id": null,
+        "db_type": "column"
+    },
+    "type": "2cols"
+}

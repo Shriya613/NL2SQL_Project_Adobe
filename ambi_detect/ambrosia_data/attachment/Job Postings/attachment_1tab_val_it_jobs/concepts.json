@@ -1,0 +1,8 @@
+{
+    "template": "Network Administrator and IT Consultant are subclasses of IT Jobs. All Network administrators and It consultants have property \"Salary\". There might be a Network Administrator and a IT Consultant that both have \"Salary\" equal to \"$70,000\".",
+    "general_class": "IT Jobs",
+    "class1": "Network Administrator",
+    "class2": "IT Consultant",
+    "common_property": "Salary",
+    "common_value": "$70,000"
+}

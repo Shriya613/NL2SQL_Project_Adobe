@@ -1,0 +1,6 @@
+{
+    "template": "Each Advertisements has many different Formats. Among them, Billboard is common to many Advertisements.",
+    "specific_component": "Billboard",
+    "components": "Formats",
+    "entities": "Advertisements"
+}

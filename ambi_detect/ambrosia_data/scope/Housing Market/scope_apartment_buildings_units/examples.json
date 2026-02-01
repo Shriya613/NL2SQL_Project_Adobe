@@ -1,0 +1,23 @@
+[
+    {
+        "question": "Give me the types and descriptions of units that are in each apartment building.",
+        "sql_query1": "SELECT Units.unit_type, Units.description  from Apartment_Buildings_Units join Units on Apartment_Buildings_Units.unit_id = Units.id join Apartment_Buildings on Apartment_Buildings_Units.building_id = Apartment_Buildings.id   GROUP BY Apartment_Buildings_Units.unit_id HAVING COUNT(DISTINCT Apartment_Buildings_Units.building_id) = (SELECT COUNT(*) FROM  Apartment_Buildings)",
+        "sql_query2": "select apartment_buildings.name , units.unit_type , units.description from Apartment_Buildings_Units join Units on Apartment_Buildings_Units.unit_id = Units.id join Apartment_Buildings on Apartment_Buildings_Units.building_id = Apartment_Buildings.id",
+        "interpretation1": "What unit types and descriptions do all apartment buildings have in common?",
+        "interpretation2": "For each apartment building, list the unit type and descriptions they have."
+    },
+    {
+        "question": "What unit descriptions do we have for every apartment building?",
+        "sql_query1": "SELECT Units.description  from Apartment_Buildings_Units join Units on Apartment_Buildings_Units.unit_id = Units.id join Apartment_Buildings on Apartment_Buildings_Units.building_id = Apartment_Buildings.id   GROUP BY Apartment_Buildings_Units.unit_id HAVING COUNT(DISTINCT Apartment_Buildings_Units.building_id) = (SELECT COUNT(*) FROM  Apartment_Buildings)",
+        "sql_query2": "select apartment_buildings.name , units.description from Apartment_Buildings_Units join Units on Apartment_Buildings_Units.unit_id = Units.id join Apartment_Buildings on Apartment_Buildings_Units.building_id = Apartment_Buildings.id",
+        "interpretation1": "Provide me the descriptions for units that are common to all apartment buildings",
+        "interpretation2": "For all apartment buildings, show me a description of the units it contains"
+    },
+    {
+        "question": "Give me the type of unit for each apartment building.",
+        "sql_query1": "SELECT Units.unit_type  from Apartment_Buildings_Units join Units on Apartment_Buildings_Units.unit_id = Units.id join Apartment_Buildings on Apartment_Buildings_Units.building_id = Apartment_Buildings.id   GROUP BY Apartment_Buildings_Units.unit_id HAVING COUNT(DISTINCT Apartment_Buildings_Units.building_id) = (SELECT COUNT(*) FROM  Apartment_Buildings)",
+        "sql_query2": "select apartment_buildings.name , units.unit_type from Apartment_Buildings_Units join Units on Apartment_Buildings_Units.unit_id = Units.id join Apartment_Buildings on Apartment_Buildings_Units.building_id = Apartment_Buildings.id",
+        "interpretation1": "Which type of unit is common to all apartment buildings?",
+        "interpretation2": "For every apartment building, show the unit types that they contain."
+    }
+]

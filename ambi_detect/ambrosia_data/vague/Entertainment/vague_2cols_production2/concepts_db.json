@@ -1,0 +1,25 @@
+{
+    "template": "Question: Who produced this documentary? Subject of Inquiry: Documentary\nFocus: Production Possible answer types: 1. Producer 2. Company",
+    "general_category1": {
+        "tab_name": "Producers",
+        "col_name": "ProducerName",
+        "value": null,
+        "scope_id": null,
+        "db_type": "column"
+    },
+    "general_category2": {
+        "tab_name": "Producers",
+        "col_name": "Company",
+        "value": null,
+        "scope_id": null,
+        "db_type": "column"
+    },
+    "subject": {
+        "tab_name": "Producers",
+        "col_name": "DocumentaryId",
+        "value": null,
+        "scope_id": null,
+        "db_type": "column"
+    },
+    "type": "2cols"
+}

@@ -1,0 +1,9 @@
+[
+    {
+        "question": "Show me prepared meals and takeaway products with a best before date of 10.11.2018.",
+        "sql_query1": "SELECT Products.name \r\nFROM FoodTypes JOIN Products ON FoodTypes.FoodTypeID = Products.Dining\r\nWHERE (FoodTypes.TypeName = \"Prepared Meal\" OR FoodTypes.TypeName = \"Takeaway\") AND Products.Best_Before = \"10.11.2018\"",
+        "sql_query2": "SELECT Products.name \r\nFROM FoodTypes JOIN Products ON FoodTypes.FoodTypeID = Products.Dining\r\nWHERE FoodTypes.TypeName = \"Prepared Meal\" OR FoodTypes.TypeName = \"Takeaway\" AND Products.Best_Before = \"10.11.2018\"",
+        "interpretation1": "What prepared meals have a best before date of 10.11.2018 and what takeaway products have the same best before date?",
+        "interpretation2": "List all prepared meals and also list takeaway products with a best before date of 10.11.2018."
+    }
+]

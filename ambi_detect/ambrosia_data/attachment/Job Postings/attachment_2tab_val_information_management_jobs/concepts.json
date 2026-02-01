@@ -1,0 +1,8 @@
+{
+    "template": "Librarian and Archivist are subclasses of Information Management Jobs. All Librarians and Archivists have property \"Location\". There might be a Librarian and a Archivist that both have \"Location\" equal to \"University's Main Library\".",
+    "general_class": "Information Management Jobs",
+    "class1": "Librarian",
+    "class2": "Archivist",
+    "common_property": "Location",
+    "common_value": "University's Main Library"
+}

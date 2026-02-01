@@ -1,0 +1,8 @@
+{
+    "template": "Textbook and E-Book are subclasses of Educational Materials. All Textbooks and E-Books have property \"Publisher\". There might be a Textbook and an E-Book that both have \"Publisher\" equal to \"Pearson\".",
+    "general_class": "Educational Materials",
+    "class1": "Textbook",
+    "class2": "E-Book",
+    "common_property": "Publisher",
+    "common_value": "Pearson"
+}

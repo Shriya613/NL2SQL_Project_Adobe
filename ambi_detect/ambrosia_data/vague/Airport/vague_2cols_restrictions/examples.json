@@ -1,0 +1,22 @@
+[
+    {
+        "question": "What is the limit for liquids on United Airlines?",
+        "sql_query1": "SELECT \r\n    SizeLimit AS Restriction\r\nFROM \r\n    Security\r\nWHERE \r\n    Airlines = 'United';",
+        "sql_query2": "SELECT \r\n    ProhibitedItem AS Restriction\r\nFROM \r\n    Security\r\nWHERE \r\n    Airlines = 'United';",
+        "sql_query3": "SELECT \r\n    SizeLimit, ProhibitedItem AS Restriction\r\nFROM \r\n    Security\r\nWHERE \r\n    Airlines = 'United';",
+        "interpretation1": "Is there a size limit for liquids on United Airlines?",
+        "interpretation2": "Are there any prohibited items for United Airlines?",
+        "interpretation3": "Are there any size limits for liquids on United Airlines? Are there any prohibited items on that airline?",
+        "sql_query_general": "SELECT \r\n    Restrictions AS Restriction\r\nFROM \r\n    Security\r\nWHERE \r\n    Airlines = 'United';"
+    },
+    {
+        "question": "What is the restriction for the New York flight?",
+        "sql_query1": "SELECT \r\n    s.SizeLimit AS RestrictionAmount\r\nFROM \r\n    Flights f\r\n    INNER JOIN Security s \r\nON f.AirlineName = s.Airlines\r\nWHERE \r\n    f.DestinationCity = 'New York';",
+        "sql_query2": "SELECT \r\n    s.ProhibitedItem AS RestrictionAmount\r\nFROM \r\n    Flights f\r\n    INNER JOIN Security s \r\nON f.AirlineName = s.Airlines\r\nWHERE \r\n    f.DestinationCity = 'New York';",
+        "sql_query3": "SELECT \r\n    s.SizeLimit, ProhibitedItem AS RestrictionAmount\r\nFROM \r\n    Flights f\r\n    INNER JOIN Security s \r\nON f.AirlineName = s.Airlines\r\nWHERE \r\n    f.DestinationCity = 'New York';",
+        "interpretation1": "Is there a size limit restriction on this flight to New York?",
+        "interpretation2": "What are the prohibited items on the flight to New York?",
+        "interpretation3": "What are the prohibited items on the flight to New York and size limit restrictions on that flight?",
+        "sql_query_general": "SELECT \r\n    s.Restrictions AS RestrictionAmount\r\nFROM \r\n    Flights f\r\n    INNER JOIN Security s \r\nON f.AirlineName = s.Airlines\r\nWHERE \r\n    f.DestinationCity = 'New York';"
+    }
+]

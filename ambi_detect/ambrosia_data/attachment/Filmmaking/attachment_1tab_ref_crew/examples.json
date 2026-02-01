@@ -1,0 +1,9 @@
+[
+    {
+        "question": "Show me all directors and editors of shows with hour-long episodes.",
+        "sql_query1": "SELECT Crew.Name \r\nFROM Crew JOIN Episodes ON Crew.Episode_ID = Episodes.Episode_ID\r\nWHERE (Crew.Position = \"Director\" OR Crew.Position = \"Editor\") AND Episodes.EpisodeLength = \"01:00:00\"",
+        "sql_query2": "SELECT Crew.Name \r\nFROM Crew JOIN Episodes ON Crew.Episode_ID = Episodes.Episode_ID\r\nWHERE Crew.Position = \"Director\" OR Crew.Position = \"Editor\" AND Episodes.EpisodeLength = \"01:00:00\"",
+        "interpretation1": "Show me the directors of shows with hour-long episodes and the editors of shows with hour-long episodes.",
+        "interpretation2": "Show me all the directors and also show me the editors of shows with hour-long episodes."
+    }
+]

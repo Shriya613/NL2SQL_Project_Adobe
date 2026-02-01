@@ -1,0 +1,27 @@
+{
+    "domain": "Podcasts",
+    "template": "Podcast and Audio Documentary are subclasses of Emerging Media Formats.",
+    "type": "2tab_val",
+    "general_class": "Media Formats",
+    "class1": {
+        "tab_name": "Podcasts",
+        "col_name": null,
+        "value": null,
+        "scope_id": null,
+        "db_type": "table"
+    },
+    "class2": {
+        "tab_name": "AudioDocuments",
+        "col_name": null,
+        "value": null,
+        "scope_id": null,
+        "db_type": "table"
+    },
+    "common_property": {
+        "tab_name": "Podcasts",
+        "col_name": "Length",
+        "value": 60,
+        "scope_id": null,
+        "db_type": "value"
+    }
+}

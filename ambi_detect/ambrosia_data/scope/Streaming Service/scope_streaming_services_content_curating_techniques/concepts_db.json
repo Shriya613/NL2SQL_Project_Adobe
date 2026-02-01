@@ -1,0 +1,31 @@
+{
+    "template": "Each Streaming Services has many different Content Curating Techniques. Among them, Algorithmic Recommendations is common to many Streaming Services.",
+    "entities": {
+        "tab_name": "Streaming_Services",
+        "col_name": null,
+        "value": null,
+        "scope_id": null,
+        "db_type": "table"
+    },
+    "components": {
+        "tab_name": "Content_Curating_Techniques",
+        "col_name": null,
+        "value": null,
+        "scope_id": null,
+        "db_type": "table"
+    },
+    "specific_component": {
+        "tab_name": "Content_Curating_Techniques",
+        "col_name": "technique",
+        "value": "Algorithmic_Recommendations",
+        "scope_id": 0,
+        "db_type": "value"
+    },
+    "entities_components": {
+        "tab_name": "Streaming_Services_Content_Curating_Techniques",
+        "col_name": null,
+        "value": null,
+        "scope_id": null,
+        "db_type": "table"
+    }
+}

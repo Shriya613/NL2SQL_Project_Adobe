@@ -1,0 +1,6 @@
+{
+    "template": "Each Streaming Service has many different Video Quality. Among them, HD is common to many Streaming Service.",
+    "specific_component": "HD",
+    "components": "Video Quality",
+    "entities": "Streaming Service"
+}

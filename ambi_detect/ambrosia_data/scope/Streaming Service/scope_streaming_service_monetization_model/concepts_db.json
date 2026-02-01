@@ -1,0 +1,31 @@
+{
+    "template": "Each Streaming Service has many different Monetization Model. Among them, Subscription is common to many Streaming Service.",
+    "entities": {
+        "tab_name": "Streaming_Service",
+        "col_name": null,
+        "value": null,
+        "scope_id": null,
+        "db_type": "table"
+    },
+    "components": {
+        "tab_name": "Monetization_Model",
+        "col_name": null,
+        "value": null,
+        "scope_id": null,
+        "db_type": "table"
+    },
+    "specific_component": {
+        "tab_name": "Monetization_Model",
+        "col_name": "model_name",
+        "value": "Subscription",
+        "scope_id": 3,
+        "db_type": "value"
+    },
+    "entities_components": {
+        "tab_name": "Streaming_Service_Monetization_Model",
+        "col_name": null,
+        "value": null,
+        "scope_id": null,
+        "db_type": "table"
+    }
+}

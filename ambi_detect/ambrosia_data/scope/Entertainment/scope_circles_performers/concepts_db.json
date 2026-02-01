@@ -1,0 +1,31 @@
+{
+    "template": "Each Circles has many different Performers. Among them, Clown is common to many Circles.",
+    "entities": {
+        "tab_name": "Circles",
+        "col_name": null,
+        "value": null,
+        "scope_id": null,
+        "db_type": "table"
+    },
+    "components": {
+        "tab_name": "Performers",
+        "col_name": null,
+        "value": null,
+        "scope_id": null,
+        "db_type": "table"
+    },
+    "specific_component": {
+        "tab_name": "Performers",
+        "col_name": "type",
+        "value": "Clown",
+        "scope_id": 0,
+        "db_type": "value"
+    },
+    "entities_components": {
+        "tab_name": "CirclePerformers",
+        "col_name": null,
+        "value": null,
+        "scope_id": null,
+        "db_type": "table"
+    }
+}

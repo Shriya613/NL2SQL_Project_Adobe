@@ -1,0 +1,6 @@
+{
+    "template": "Each Traffic Simulators has many different Applications. Among them, Urban Simulation is common to many Traffic Simulators.",
+    "specific_component": "Urban Simulation",
+    "components": "Applications",
+    "entities": "Traffic Simulators"
+}

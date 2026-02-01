@@ -1,0 +1,25 @@
+{
+    "template": "Question: How much does it cost to maintain this infrastructure annually? Subject of Inquiry: Infrastructure\nFocus: Maintenance Cost Possible answer types: 1. Monetary Value 2. Percentage of Budget",
+    "general_category1": {
+        "tab_name": "Project",
+        "col_name": "Monetary_Value",
+        "value": null,
+        "scope_id": null,
+        "db_type": "column"
+    },
+    "general_category2": {
+        "tab_name": "Project",
+        "col_name": "Percentage_Of_Budget",
+        "value": null,
+        "scope_id": null,
+        "db_type": "column"
+    },
+    "subject": {
+        "tab_name": "Project",
+        "col_name": "Infrastructure",
+        "value": null,
+        "scope_id": null,
+        "db_type": "column"
+    },
+    "type": "2cols"
+}

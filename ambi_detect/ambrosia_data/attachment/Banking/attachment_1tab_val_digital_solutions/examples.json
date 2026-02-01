@@ -1,0 +1,9 @@
+[
+    {
+        "question": "Show mobile banking customers and internet banking customers that use biometric authentication.",
+        "sql_query1": "SELECT Customers.FullName\r\nFROM Customers\r\nWHERE (Customers.Digital_Solutions = \"Mobile Banking App\" OR Customers.Digital_Solutions = \"Internet Banking Platform\") AND Customers.Sign_in_Options = \"Biometric Authentication\"",
+        "sql_query2": "SELECT Customers.FullName\r\nFROM Customers\r\nWHERE Customers.Digital_Solutions = \"Mobile Banking App\" OR Customers.Digital_Solutions = \"Internet Banking Platform\" AND Customers.Sign_in_Options = \"Biometric Authentication\"",
+        "interpretation1": "What mobile banking customers use biometric authentication and what internet banking customers also use it?",
+        "interpretation2": "Provide a list of all mobile banking customers and also provide a list of online banking customers that use biometric authentication."
+    }
+]

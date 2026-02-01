@@ -1,0 +1,6 @@
+{
+    "template": "Each Geologists has many different Specimens. Among them, Rock is common to many Geologists.",
+    "specific_component": "Rock",
+    "components": "Specimens",
+    "entities": "Geologists"
+}

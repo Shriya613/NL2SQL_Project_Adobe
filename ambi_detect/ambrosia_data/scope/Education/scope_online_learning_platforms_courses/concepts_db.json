@@ -1,0 +1,31 @@
+{
+    "template": "Each Online Learning Platforms has many different Courses. Among them, English as a Second Language is common to many Online Learning Platforms.",
+    "entities": {
+        "tab_name": "Online_Learning_Platforms",
+        "col_name": null,
+        "value": null,
+        "scope_id": null,
+        "db_type": "table"
+    },
+    "components": {
+        "tab_name": "Courses",
+        "col_name": null,
+        "value": null,
+        "scope_id": null,
+        "db_type": "table"
+    },
+    "specific_component": {
+        "tab_name": "Courses",
+        "col_name": "title",
+        "value": "English_As_A_Second_Language",
+        "scope_id": 0,
+        "db_type": "value"
+    },
+    "entities_components": {
+        "tab_name": "Online_Learning_Platforms_Courses",
+        "col_name": null,
+        "value": null,
+        "scope_id": null,
+        "db_type": "table"
+    }
+}

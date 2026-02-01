@@ -1,0 +1,9 @@
+[
+    {
+        "question": "Show photographers and videographers who charged 500.",
+        "sql_query1": "SELECT Photographers.photographerName as name\r\nFROM Photographers\r\nWHERE Photographers.price = 500\r\nUNION\r\nSELECT Videographers.videographerName as name\r\nFROM Videographers\r\nWHERE Videographers.price = 500",
+        "sql_query2": "SELECT Photographers.photographerName as name\r\nFROM Photographers\r\nUNION\r\nSELECT Videographers.videographerName as name\r\nFROM Videographers\r\nWHERE Videographers.price = 500",
+        "interpretation1": "Which photographers charged 500 and which videographers charged the same price?",
+        "interpretation2": "Provide a list of all photographers and also provide a list of all videographers who charged 500."
+    }
+]

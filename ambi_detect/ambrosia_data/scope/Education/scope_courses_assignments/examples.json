@@ -1,0 +1,23 @@
+[
+    {
+        "question": "Show me the types of assignments that every course comprises of abd their descriptions",
+        "sql_query1": "SELECT Assignments.type, Assignments.description  from Courses_Assignments join Assignments on Courses_Assignments.assignmentID = Assignments.assignmentID join Courses on Courses_Assignments.courseID = Courses.courseID   GROUP BY Courses_Assignments.assignmentID HAVING COUNT(DISTINCT Courses_Assignments.courseID) = (SELECT COUNT(*) FROM  Courses)",
+        "sql_query2": "select courses.title , assignments.type , assignments.description from Courses_Assignments join Assignments on Courses_Assignments.assignmentID = Assignments.assignmentID join Courses on Courses_Assignments.courseID = Courses.courseID",
+        "interpretation1": "What type of assignments do all the courses have in common and what are their descriptions?",
+        "interpretation2": "For each course show the assignments offered and their descriptions"
+    },
+    {
+        "question": "Give me the type of assignments used in each course.",
+        "sql_query1": "SELECT Assignments.type  from Courses_Assignments join Assignments on Courses_Assignments.assignmentID = Assignments.assignmentID join Courses on Courses_Assignments.courseID = Courses.courseID   GROUP BY Courses_Assignments.assignmentID HAVING COUNT(DISTINCT Courses_Assignments.courseID) = (SELECT COUNT(*) FROM  Courses)",
+        "sql_query2": "select courses.title , assignments.type from Courses_Assignments join Assignments on Courses_Assignments.assignmentID = Assignments.assignmentID join Courses on Courses_Assignments.courseID = Courses.courseID",
+        "interpretation1": "Show me the assignment types that are in common for all courses.",
+        "interpretation2": "What is the type of assignment corresponding to each course?"
+    },
+    {
+        "question": "Give me the descriptions of the assignments that every course requires.",
+        "sql_query1": "SELECT Assignments.description  from Courses_Assignments join Assignments on Courses_Assignments.assignmentID = Assignments.assignmentID join Courses on Courses_Assignments.courseID = Courses.courseID   GROUP BY Courses_Assignments.assignmentID HAVING COUNT(DISTINCT Courses_Assignments.courseID) = (SELECT COUNT(*) FROM  Courses)",
+        "sql_query2": "select courses.title , assignments.description from Courses_Assignments join Assignments on Courses_Assignments.assignmentID = Assignments.assignmentID join Courses on Courses_Assignments.courseID = Courses.courseID",
+        "interpretation1": "What are the descriptions of the assignments that are the same for all courses?",
+        "interpretation2": "For every course, show the descriptions of the assignments that they require."
+    }
+]

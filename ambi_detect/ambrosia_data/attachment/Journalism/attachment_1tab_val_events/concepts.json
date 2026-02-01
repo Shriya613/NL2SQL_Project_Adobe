@@ -1,0 +1,8 @@
+{
+    "template": "Press Conference and Media Scrum are subclasses of Journalist Events.",
+    "general_class": "Events",
+    "class1": "Press Conference",
+    "class2": "Media Scrum",
+    "common_property": "Person",
+    "common_value": "Jack Layton"
+}

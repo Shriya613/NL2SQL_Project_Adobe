@@ -1,0 +1,6 @@
+{
+    "template": "Each Career Pathways has many different Opportunities. Among them, Teaching is common to many Career Pathways.",
+    "specific_component": "Teaching",
+    "components": "Opportunities",
+    "entities": "Career Pathways"
+}

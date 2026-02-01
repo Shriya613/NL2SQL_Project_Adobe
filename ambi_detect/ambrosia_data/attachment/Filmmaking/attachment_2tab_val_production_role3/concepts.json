@@ -1,0 +1,8 @@
+{
+    "template": "Stunt Coordinator and Fight Choreographer are production roles in filmmaking. All Stunt Coordinators and Fight Choreographers have a property \"Work Experience\". There might be a Stunt Coordinator and a Fight Choreographer both with \"10 years\" of experience while others in these roles have different amounts of experience.",
+    "general_class": "Production Role",
+    "class1": "Stunt Coordinator",
+    "class2": "Fight Choreographer",
+    "common_property": "Work Experience",
+    "common_value": "10 years"
+}

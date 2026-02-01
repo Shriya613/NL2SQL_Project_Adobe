@@ -1,0 +1,23 @@
+[
+    {
+        "question": "What dive sites are used by every scuba diving center?",
+        "sql_query1": "SELECT Dive_Sites.site_name  from Bookings join Dive_Sites on Bookings.dive_site_id = Dive_Sites.id join Scuba_Diving_Centers on Bookings.scuba_center_id = Scuba_Diving_Centers.id   GROUP BY Bookings.dive_site_id HAVING COUNT(DISTINCT Bookings.scuba_center_id) = (SELECT COUNT(*) FROM  Scuba_Diving_Centers)",
+        "sql_query2": "select scuba_diving_centers.name , dive_sites.site_name from Bookings join Dive_Sites on Bookings.dive_site_id = Dive_Sites.id join Scuba_Diving_Centers on Bookings.scuba_center_id = Scuba_Diving_Centers.id",
+        "interpretation1": "What dive sites are common for all scuba diving centers?",
+        "interpretation2": "For each scuba diving center, what are the corresponding dive sites?"
+    },
+    {
+        "question": "What are the dive sites and types for every scuba diving centre?",
+        "sql_query1": "SELECT Dive_Sites.site_name, Dive_Sites.type  from Bookings join Dive_Sites on Bookings.dive_site_id = Dive_Sites.id join Scuba_Diving_Centers on Bookings.scuba_center_id = Scuba_Diving_Centers.id   GROUP BY Bookings.dive_site_id HAVING COUNT(DISTINCT Bookings.scuba_center_id) = (SELECT COUNT(*) FROM  Scuba_Diving_Centers)",
+        "sql_query2": "select scuba_diving_centers.name , dive_sites.site_name , dive_sites.type from Bookings join Dive_Sites on Bookings.dive_site_id = Dive_Sites.id join Scuba_Diving_Centers on Bookings.scuba_center_id = Scuba_Diving_Centers.id",
+        "interpretation1": "What are the dive sites and types common to every scuba diving centre?",
+        "interpretation2": "For every scuba diving centre what are all of the dive sites and types?"
+    },
+    {
+        "question": "What types of dive sites are available at each scuba diving center?",
+        "sql_query1": "SELECT Dive_Sites.type  from Bookings join Dive_Sites on Bookings.dive_site_id = Dive_Sites.id join Scuba_Diving_Centers on Bookings.scuba_center_id = Scuba_Diving_Centers.id   GROUP BY Bookings.dive_site_id HAVING COUNT(DISTINCT Bookings.scuba_center_id) = (SELECT COUNT(*) FROM  Scuba_Diving_Centers)",
+        "sql_query2": "select scuba_diving_centers.name , dive_sites.type from Bookings join Dive_Sites on Bookings.dive_site_id = Dive_Sites.id join Scuba_Diving_Centers on Bookings.scuba_center_id = Scuba_Diving_Centers.id",
+        "interpretation1": "Which type of dive site is shared by all scuba diving centers?",
+        "interpretation2": "For each scuba diving center, what types of dive sites are available?"
+    }
+]

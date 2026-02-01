@@ -1,0 +1,8 @@
+{
+    "template": "Salad and Soup are subclasses of Appetizers. All Salads and Soups have property \"Buffet\". There might be a Salad and a Soup that both have \"Buffet\" equal to \"Hilton\".",
+    "general_class": "Appetizers",
+    "class1": "Salad",
+    "class2": "Soup",
+    "common_property": "Buffet",
+    "common_value": "Hilton"
+}

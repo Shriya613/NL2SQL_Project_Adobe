@@ -1,0 +1,25 @@
+{
+    "template": "Question: What is the divorce rate for couples married less than five years? Subject of Inquiry: Village\nFocus: Divorce Rate Possible answer types: 1. Divorced Percentage 2. Divorced Count",
+    "general_category1": {
+        "tab_name": "VillageDemographics",
+        "col_name": "Divorced_Percentage",
+        "value": null,
+        "scope_id": null,
+        "db_type": "column"
+    },
+    "general_category2": {
+        "tab_name": "VillageDemographics",
+        "col_name": "Divorced_Count",
+        "value": null,
+        "scope_id": null,
+        "db_type": "column"
+    },
+    "subject": {
+        "tab_name": "VillageDemographics",
+        "col_name": "Village",
+        "value": null,
+        "scope_id": null,
+        "db_type": "column"
+    },
+    "type": "2cols"
+}

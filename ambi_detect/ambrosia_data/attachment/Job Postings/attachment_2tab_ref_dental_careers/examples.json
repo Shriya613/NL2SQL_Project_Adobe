@@ -1,0 +1,9 @@
+[
+    {
+        "question": "Display orthodontists and periodontists who have a Bachelor of dental surgery degree in their education.",
+        "sql_query1": "SELECT Orthodontists.name\r\nFROM Education JOIN Orthodontists ON Education.id = Orthodontists.education_id\r\nWHERE Education.degree_name = \"Bachelor of Dental Surgery\"\r\nUNION\r\nSELECT Periodontists.name\r\nFROM Education JOIN Periodontists ON Education.id = Periodontists.education_id\r\nWHERE Education.degree_name = \"Bachelor of Dental Surgery\"",
+        "sql_query2": "SELECT Orthodontists.name\r\nFROM Education JOIN Orthodontists ON Education.id = Orthodontists.education_id\r\nUNION\r\nSELECT Periodontists.name\r\nFROM Education JOIN Periodontists ON Education.id = Periodontists.education_id\r\nWHERE Education.degree_name = \"Bachelor of Dental Surgery\"",
+        "interpretation1": "Which orthodontists and periodontists hold a bachelor of dental surgery degree in their education?",
+        "interpretation2": "Can you show me all periodontists with a bachelor of dental surgery degree in their education, along with all exisiting orthodontists?"
+    }
+]

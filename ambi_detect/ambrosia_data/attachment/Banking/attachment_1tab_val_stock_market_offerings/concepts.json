@@ -1,0 +1,8 @@
+{
+    "template": "IPO and Secondary Offering are subclasses of Stock Market Offerings. All Ipoes and Secondary offerings have property \"Raised Capital Amount\". There might be a IPO and a Secondary Offering that both have \"Raised Capital Amount\" equal to \"50000000\".",
+    "general_class": "Stock Market Offerings",
+    "class1": "IPO",
+    "class2": "Secondary Offering",
+    "common_property": "Raised Capital Amount",
+    "common_value": "50000000"
+}

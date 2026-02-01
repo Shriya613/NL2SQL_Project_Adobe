@@ -1,0 +1,9 @@
+[
+    {
+        "question": "List science fiction books and romance books published in 2018.",
+        "sql_query1": "SELECT Books.Title \r\nFROM Books JOIN BookPublishingHistory ON Books.ISBN = BookPublishingHistory.ISBN\r\nWHERE (Books.Genre = 'Science Fiction' OR Books.Genre = 'Romance') AND BookPublishingHistory.YearOfPublication = 2018",
+        "sql_query2": "SELECT Books.Title \r\nFROM Books JOIN BookPublishingHistory ON Books.ISBN = BookPublishingHistory.ISBN\r\nWHERE Books.Genre = 'Science Fiction' OR Books.Genre = 'Romance' AND BookPublishingHistory.YearOfPublication = 2018",
+        "interpretation1": "Which science fiction books were published in 2018 and which romance books were published in the same year?",
+        "interpretation2": "Provide a list of all science fiction books and also provide a list of romance books published in 2018."
+    }
+]

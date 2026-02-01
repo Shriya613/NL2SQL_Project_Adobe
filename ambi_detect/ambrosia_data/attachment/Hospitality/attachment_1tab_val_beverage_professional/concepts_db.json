@@ -1,0 +1,33 @@
+{
+    "domain": "Beverages",
+    "template": "Sommelier and Bartender are subclasses of Beverage Professional. All Sommeliers and Bartenders have property \"First Name\". There might be a Sommelier and a Bartender that both have \"First Name\" equal to \"Alex\".",
+    "type": "1tab_val",
+    "general_class": {
+        "tab_name": "Professionals",
+        "col_name": "Position",
+        "value": null,
+        "scope_id": null,
+        "db_type": "column"
+    },
+    "class1": {
+        "tab_name": "Professionals",
+        "col_name": "Position",
+        "value": "Sommelier",
+        "scope_id": null,
+        "db_type": "value"
+    },
+    "class2": {
+        "tab_name": "Professionals",
+        "col_name": "Position",
+        "value": "Bartender",
+        "scope_id": null,
+        "db_type": "value"
+    },
+    "common_property": {
+        "tab_name": "Professionals",
+        "col_name": "FullName",
+        "value": "Alex",
+        "scope_id": null,
+        "db_type": "value"
+    }
+}

@@ -1,0 +1,27 @@
+{
+    "domain": "Authors",
+    "template": "News Article and Feature Article are subclasses of Written Journalism. All News articles and Feature articles have property \"Word Count\". There might be a News Article and a Feature Article that both have \"Word Count\" equal to \"1,000 words\".",
+    "type": "2tab_val",
+    "general_class": "Written Journalism",
+    "class1": {
+        "tab_name": "News_Articles",
+        "col_name": null,
+        "value": null,
+        "scope_id": null,
+        "db_type": "table"
+    },
+    "class2": {
+        "tab_name": "Feature_Articles",
+        "col_name": null,
+        "value": null,
+        "scope_id": null,
+        "db_type": "table"
+    },
+    "common_property": {
+        "tab_name": "News_Articles",
+        "col_name": "Word_Count",
+        "value": 1000,
+        "scope_id": null,
+        "db_type": "value"
+    }
+}

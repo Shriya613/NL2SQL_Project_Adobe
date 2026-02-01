@@ -1,0 +1,16 @@
+[
+    {
+        "question": "Show me image names and descriptions each photojournalism piece uses.",
+        "sql_query1": "SELECT Images.image_name, Images.description  from Photojournalism_Pieces_Images join Images on Photojournalism_Pieces_Images.image_id = Images.id join Photojournalism_Pieces on Photojournalism_Pieces_Images.photojournalism_piece_id = Photojournalism_Pieces.id   GROUP BY Photojournalism_Pieces_Images.image_id HAVING COUNT(DISTINCT Photojournalism_Pieces_Images.photojournalism_piece_id) = (SELECT COUNT(*) FROM  Photojournalism_Pieces)",
+        "sql_query2": "select photojournalism_pieces.title , images.image_name , images.description from Photojournalism_Pieces_Images join Images on Photojournalism_Pieces_Images.image_id = Images.id join Photojournalism_Pieces on Photojournalism_Pieces_Images.photojournalism_piece_id = Photojournalism_Pieces.id",
+        "interpretation1": "What image names and descriptions are common to all photojournalism pieces?",
+        "interpretation2": "For every photojournalism piece, list image names and descriptions used."
+    },
+    {
+        "question": "What are the image names for every piece?",
+        "sql_query1": "SELECT Images.image_name  from Photojournalism_Pieces_Images join Images on Photojournalism_Pieces_Images.image_id = Images.id join Photojournalism_Pieces on Photojournalism_Pieces_Images.photojournalism_piece_id = Photojournalism_Pieces.id   GROUP BY Photojournalism_Pieces_Images.image_id HAVING COUNT(DISTINCT Photojournalism_Pieces_Images.photojournalism_piece_id) = (SELECT COUNT(*) FROM  Photojournalism_Pieces)",
+        "sql_query2": "select photojournalism_pieces.title , images.image_name from Photojournalism_Pieces_Images join Images on Photojournalism_Pieces_Images.image_id = Images.id join Photojournalism_Pieces on Photojournalism_Pieces_Images.photojournalism_piece_id = Photojournalism_Pieces.id",
+        "interpretation1": "Show me the image names that are common to all pieces",
+        "interpretation2": "For every piece, show me the image names it contains"
+    }
+]

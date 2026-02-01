@@ -1,0 +1,30 @@
+[
+    {
+        "question": "What crew member do we have for each film?",
+        "sql_query1": "SELECT Crew_Members.role  from Films_Crew_Members join Crew_Members on Films_Crew_Members.member_id = Crew_Members.member_id join Films on Films_Crew_Members.film_id = Films.film_id   GROUP BY Films_Crew_Members.member_id HAVING COUNT(DISTINCT Films_Crew_Members.film_id) = (SELECT COUNT(*) FROM  Films)",
+        "sql_query2": "select films.title , crew_members.role from Films_Crew_Members join Crew_Members on Films_Crew_Members.member_id = Crew_Members.member_id join Films on Films_Crew_Members.film_id = Films.film_id",
+        "interpretation1": "Provide the role of crew members that is most popular for all films.",
+        "interpretation2": "For each film, what is the related role of each crew member?"
+    },
+    {
+        "question": "What are all the crew member IDs present for every film?",
+        "sql_query1": "SELECT Crew_Members.member_id  from Films_Crew_Members join Crew_Members on Films_Crew_Members.member_id = Crew_Members.member_id join Films on Films_Crew_Members.film_id = Films.film_id   GROUP BY Films_Crew_Members.member_id HAVING COUNT(DISTINCT Films_Crew_Members.film_id) = (SELECT COUNT(*) FROM  Films)",
+        "sql_query2": "select films.title , crew_members.member_id from Films_Crew_Members join Crew_Members on Films_Crew_Members.member_id = Crew_Members.member_id join Films on Films_Crew_Members.film_id = Films.film_id",
+        "interpretation1": "What crew member IDs are common for every film?",
+        "interpretation2": "For every film what are all of the crew member IDs?"
+    },
+    {
+        "question": "Show me the id and name of the crew members each film used.",
+        "sql_query1": "SELECT Crew_Members.member_id, Crew_Members.name  from Films_Crew_Members join Crew_Members on Films_Crew_Members.member_id = Crew_Members.member_id join Films on Films_Crew_Members.film_id = Films.film_id   GROUP BY Films_Crew_Members.member_id HAVING COUNT(DISTINCT Films_Crew_Members.film_id) = (SELECT COUNT(*) FROM  Films)",
+        "sql_query2": "select films.title , crew_members.member_id , crew_members.name from Films_Crew_Members join Crew_Members on Films_Crew_Members.member_id = Crew_Members.member_id join Films on Films_Crew_Members.film_id = Films.film_id",
+        "interpretation1": "What are the id and name of the crew members that are common to all films?",
+        "interpretation2": "For every film, list the id and name of the crew members used."
+    },
+    {
+        "question": "What are the ids, roles, and names of crew members that we have for each films?",
+        "sql_query1": "SELECT Crew_Members.member_id, Crew_Members.role, Crew_Members.name  from Films_Crew_Members join Crew_Members on Films_Crew_Members.member_id = Crew_Members.member_id join Films on Films_Crew_Members.film_id = Films.film_id   GROUP BY Films_Crew_Members.member_id HAVING COUNT(DISTINCT Films_Crew_Members.film_id) = (SELECT COUNT(*) FROM  Films)",
+        "sql_query2": "select films.title , crew_members.member_id , crew_members.role , crew_members.name from Films_Crew_Members join Crew_Members on Films_Crew_Members.member_id = Crew_Members.member_id join Films on Films_Crew_Members.film_id = Films.film_id",
+        "interpretation1": "Show the ids, roles and names of crew members that are common for all films.",
+        "interpretation2": "For each film, provide the corresponding id, role and name of crew members."
+    }
+]

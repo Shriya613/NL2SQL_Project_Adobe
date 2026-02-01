@@ -1,0 +1,22 @@
+[
+    {
+        "question": "Where is the insulin pen made?",
+        "sql_query1": "Select name from Country join Medical_Device on Medical_Device.country_id = Country.id where device_name = 'Insulin Pen'",
+        "sql_query2": "Select company_name from Manufacturing_Company join Medical_Device on Medical_Device.Manufacturing_Company_id = Manufacturing_Company.id where device_name = 'Insulin Pen'",
+        "sql_query3": "Select name, company_name from Country join Medical_Device on Medical_Device.country_id = Country.id join Manufacturing_Company on Medical_Device.Manufacturing_Company_id = Manufacturing_Company.id where device_name = 'Insulin Pen'",
+        "interpretation1": "In what country is the insulin pen made?",
+        "interpretation2": "What company manufactures the insulin pen?",
+        "interpretation3": "What company manufactures the insulin pen, and in what country?",
+        "sql_query_general": "Select name from Place_Of_Origin join Medical_Device on Medical_Device.country_id = Place_Of_Origin.id where device_name = 'Insulin Pen'"
+    },
+    {
+        "question": "Show me the devices and where they are made.",
+        "sql_query1": "Select device_name, name from Country join Medical_Device on Medical_Device.country_id = Country.id where device_name = 'Insulin Pen'",
+        "sql_query2": "Select device_name, company_name from Manufacturing_Company join Medical_Device on Medical_Device.Manufacturing_Company_id = Manufacturing_Company.id where device_name = 'Insulin Pen'",
+        "sql_query3": "Select device_name, name, company_name from Country join Medical_Device on Medical_Device.country_id = Country.id join Manufacturing_Company on Medical_Device.Manufacturing_Company_id = Manufacturing_Company.id  where device_name = 'Insulin Pen'",
+        "interpretation1": "What country are the devices made?",
+        "interpretation2": "What manufacturing company are the devices made?",
+        "interpretation3": "What manufacturing company and country are the devices made?",
+        "sql_query_general": "Select device_name, name from Place_Of_Origin join Medical_Device on Medical_Device.country_id = Place_Of_Origin.id where device_name = 'Insulin Pen'"
+    }
+]

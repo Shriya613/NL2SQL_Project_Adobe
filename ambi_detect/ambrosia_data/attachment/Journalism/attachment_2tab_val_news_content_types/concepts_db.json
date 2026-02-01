@@ -1,0 +1,27 @@
+{
+    "domain": "Opinion_Pieces",
+    "template": "Opinion Piece and Feature Article are subclasses of News Content Types. All Opinion pieces and Feature articles have property \"Volume\". There might be a Opinion Piece and a Feature Article that both have \"Volume\" equal to \"01\".",
+    "type": "2tab_val",
+    "general_class": "News Content Types",
+    "class1": {
+        "tab_name": "Opinion_Pieces",
+        "col_name": null,
+        "value": null,
+        "scope_id": null,
+        "db_type": "table"
+    },
+    "class2": {
+        "tab_name": "Feature_Articles",
+        "col_name": null,
+        "value": null,
+        "scope_id": null,
+        "db_type": "table"
+    },
+    "common_property": {
+        "tab_name": "Opinion_Pieces",
+        "col_name": "Volume",
+        "value": "01",
+        "scope_id": null,
+        "db_type": "value"
+    }
+}

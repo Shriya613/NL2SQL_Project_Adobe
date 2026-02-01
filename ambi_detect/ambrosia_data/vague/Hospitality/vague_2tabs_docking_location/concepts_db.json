@@ -1,0 +1,25 @@
+{
+    "template": "Question: Where is this cruise ship docked? Subject of Inquiry: Cruise Ships\nFocus: Docking Location Possible answer types: 1. Port 2. City",
+    "general_category1": {
+        "tab_name": "Ports",
+        "col_name": null,
+        "value": null,
+        "scope_id": null,
+        "db_type": "table"
+    },
+    "general_category2": {
+        "tab_name": "Cities",
+        "col_name": null,
+        "value": null,
+        "scope_id": null,
+        "db_type": "table"
+    },
+    "subject": {
+        "tab_name": "CruiseShips",
+        "col_name": null,
+        "value": null,
+        "scope_id": null,
+        "db_type": "table"
+    },
+    "type": "2tabs"
+}

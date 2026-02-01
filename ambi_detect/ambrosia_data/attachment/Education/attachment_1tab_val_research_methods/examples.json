@@ -1,0 +1,9 @@
+[
+    {
+        "question": "Show projects with case studies and interviews about environmental science.",
+        "sql_query1": "SELECT Projects.title \r\nFROM Projects\r\nWHERE (Projects.researchMethod = \"Case Study\" OR Projects.researchMethod = \"Interview\") AND Projects.topic = \"Environmental Science\"",
+        "sql_query2": "SELECT Projects.title \r\nFROM Projects\r\nWHERE Projects.researchMethod = \"Case Study\" OR Projects.researchMethod = \"Interview\" AND Projects.topic = \"Environmental Science\"",
+        "interpretation1": "What projects have case studies about environmental science and interviews about the same topic?",
+        "interpretation2": "List all projects with case studies and also list projects with interviews about environmental science."
+    }
+]

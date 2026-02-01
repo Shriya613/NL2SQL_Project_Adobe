@@ -1,0 +1,6 @@
+{
+    "template": "Each Press Conferences has many different Participants. Among them, Reporters is common to many Press Conferences.",
+    "specific_component": "Reporters",
+    "components": "Participants",
+    "entities": "Press Conferences"
+}

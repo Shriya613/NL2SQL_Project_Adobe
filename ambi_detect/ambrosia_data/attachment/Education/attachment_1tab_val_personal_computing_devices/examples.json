@@ -1,0 +1,9 @@
+[
+    {
+        "question": "Who has tablets and laptops with Windows 10?",
+        "sql_query1": "SELECT Students.FullName\r\nFROM Students\r\nWHERE (Students.Personal_Computing_Devices = \"Tablet\" OR Students.Personal_Computing_Devices = \"Laptop\") AND Students.Operating_System = \"Windows 10\"",
+        "sql_query2": "SELECT Students.FullName\r\nFROM Students\r\nWHERE Students.Personal_Computing_Devices = \"Tablet\" OR Students.Personal_Computing_Devices = \"Laptop\" AND Students.Operating_System = \"Windows 10\"",
+        "interpretation1": "Show all the students who use either a tablet or laptop, where either runs on Windows 10.",
+        "interpretation2": "Show all of the students who use a tablet, also show the students who use a latop running Windows 10."
+    }
+]

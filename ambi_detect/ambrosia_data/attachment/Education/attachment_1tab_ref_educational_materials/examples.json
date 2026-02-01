@@ -1,0 +1,9 @@
+[
+    {
+        "question": "Show textbooks and e-books published by someone with phone number 1234567890.",
+        "sql_query1": "SELECT EducationalMaterials.Title \r\nFROM EducationalMaterials JOIN Publishers ON EducationalMaterials.PublisherID = Publishers.PublisherID\r\nWHERE (EducationalMaterials.Type = \"Textbook\" OR EducationalMaterials.Type = \"E-Book\") AND Publishers.PhoneNumber = \"1234567890\"",
+        "sql_query2": "SELECT EducationalMaterials.Title \r\nFROM EducationalMaterials JOIN Publishers ON EducationalMaterials.PublisherID = Publishers.PublisherID\r\nWHERE EducationalMaterials.Type = \"Textbook\" OR EducationalMaterials.Type = \"E-Book\" AND Publishers.PhoneNumber = \"1234567890\"",
+        "interpretation1": "Which textbooks are published by someone with phone number 1234567890 and which e-books are published by a publisher with the same phone number?",
+        "interpretation2": "Provide a list of all text books and also provide a list of e-books published by someone with phone number 1234567890."
+    }
+]

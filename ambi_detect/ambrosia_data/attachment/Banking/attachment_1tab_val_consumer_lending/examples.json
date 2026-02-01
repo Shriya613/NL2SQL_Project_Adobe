@@ -1,0 +1,9 @@
+[
+    {
+        "question": "List all credit card balances and personal loan balances with a 15% interest rate.",
+        "sql_query1": "SELECT Account.Balance \r\nFROM Account\r\nWHERE (Account.ConsumerLending = \"Credit Card\" OR Account.ConsumerLending = \"Personal Loan\") AND Account.InterestRate = 15.0",
+        "sql_query2": "SELECT Account.Balance \r\nFROM Account\r\nWHERE Account.ConsumerLending = \"Credit Card\" OR Account.ConsumerLending = \"Personal Loan\" AND Account.InterestRate = 15.0",
+        "interpretation1": "List all accounts with a 15% interest rate where the lending option is either a credit card or a personal loan.",
+        "interpretation2": "Show all the credit card balances, on top of that show the balances for personal loans paying 15% interest."
+    }
+]

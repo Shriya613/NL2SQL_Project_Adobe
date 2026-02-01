@@ -1,0 +1,6 @@
+{
+    "template": "Each Cars has many different Safety Features. Among them, Airbags is common to many Cars.",
+    "specific_component": "Airbags",
+    "components": "Safety Features",
+    "entities": "Cars"
+}

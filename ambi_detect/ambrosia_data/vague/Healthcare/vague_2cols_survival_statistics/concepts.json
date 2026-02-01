@@ -1,0 +1,7 @@
+{
+    "template": "Question: What is the survival rate for patients with this illness? Subject of Inquiry: Illness\nFocus: Survival Statistics Possible answer types: 1. Five-Year Survival Rate 2. Ten-Year Survival Rate",
+    "subject": "Illness",
+    "focus": "Survival Statistics",
+    "general_category1": "Five-Year Survival Rate",
+    "general_category2": "Ten-Year Survival Rate"
+}

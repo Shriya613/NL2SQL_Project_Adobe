@@ -1,0 +1,7 @@
+{
+    "template": "Question: Where is this lecture held? Subject of Inquiry: Lecture\nFocus: Venue Possible answer types: 1. Campus Building 2. Online Platform",
+    "subject": "Lecture",
+    "focus": "Venue",
+    "general_category1": "Campus Building",
+    "general_category2": "Online Platform"
+}

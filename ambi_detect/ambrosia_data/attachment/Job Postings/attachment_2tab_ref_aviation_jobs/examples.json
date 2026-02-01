@@ -1,0 +1,9 @@
+[
+    {
+        "question": "Display the flight attendants and pilots from New Horizons Aviation.",
+        "sql_query1": "SELECT Flight_Attendants.Name\r\nFROM Training_Center JOIN Flight_Attendants ON Training_Center.ID = Flight_Attendants.Training_Center_ID\r\nWHERE Training_Center.Name = \"New Horizons Aviation\"\r\nUNION\r\nSELECT Pilots.Name\r\nFROM Training_Center JOIN Pilots ON Training_Center.ID = Pilots.Training_Center_ID\r\nWHERE Training_Center.Name = \"New Horizons Aviation\"",
+        "sql_query2": "SELECT Flight_Attendants.Name\r\nFROM Training_Center JOIN Flight_Attendants ON Training_Center.ID = Flight_Attendants.Training_Center_ID\r\nUNION\r\nSELECT Pilots.Name\r\nFROM Training_Center JOIN Pilots ON Training_Center.ID = Pilots.Training_Center_ID\r\nWHERE Training_Center.Name = \"New Horizons Aviation\"",
+        "interpretation1": "Who are the flight attendants from New Horizons Aviation and also the pilots from New Horizons Aviation?",
+        "interpretation2": "List the flight attendants and also list the pilots from New Horizons Aviation."
+    }
+]

@@ -1,0 +1,7 @@
+{
+    "template": "Question: Where does this flight depart? Subject of Inquiry: Flights\nFocus: Departure Possible answer types: 1. Terminal Number 2. Boarding Area",
+    "subject": "Flights",
+    "focus": "Departure",
+    "general_category1": "Terminal Number",
+    "general_category2": "Boarding Area"
+}

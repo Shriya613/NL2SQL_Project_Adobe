@@ -1,0 +1,23 @@
+[
+    {
+        "question": "What are the room numbers and capacities that every teacher uses?",
+        "sql_query1": "SELECT Classrooms.room_number, Classrooms.capacity  from Teachers_Classrooms join Classrooms on Teachers_Classrooms.classroom_id = Classrooms.classroom_id join Teachers on Teachers_Classrooms.teacher_id = Teachers.teacher_id   GROUP BY Teachers_Classrooms.classroom_id HAVING COUNT(DISTINCT Teachers_Classrooms.teacher_id) = (SELECT COUNT(*) FROM  Teachers)",
+        "sql_query2": "select teachers.full_name , classrooms.room_number , classrooms.capacity from Teachers_Classrooms join Classrooms on Teachers_Classrooms.classroom_id = Classrooms.classroom_id join Teachers on Teachers_Classrooms.teacher_id = Teachers.teacher_id",
+        "interpretation1": "Which room number is shared by all the teachers and what is its capacity?",
+        "interpretation2": "For each teacher, show me a list of room numbers along with their capacity."
+    },
+    {
+        "question": "What are the capacities of the classrooms that every teacher uses?",
+        "sql_query1": "SELECT Classrooms.capacity  from Teachers_Classrooms join Classrooms on Teachers_Classrooms.classroom_id = Classrooms.classroom_id join Teachers on Teachers_Classrooms.teacher_id = Teachers.teacher_id   GROUP BY Teachers_Classrooms.classroom_id HAVING COUNT(DISTINCT Teachers_Classrooms.teacher_id) = (SELECT COUNT(*) FROM  Teachers)",
+        "sql_query2": "select teachers.full_name , classrooms.capacity from Teachers_Classrooms join Classrooms on Teachers_Classrooms.classroom_id = Classrooms.classroom_id join Teachers on Teachers_Classrooms.teacher_id = Teachers.teacher_id",
+        "interpretation1": "What are the capacities of the classrooms that are common for all teachers?",
+        "interpretation2": "For each teacher, show me the capacity of the corresponding classroom."
+    },
+    {
+        "question": "What classroom numbers are used by each teacher?",
+        "sql_query1": "SELECT Classrooms.room_number  from Teachers_Classrooms join Classrooms on Teachers_Classrooms.classroom_id = Classrooms.classroom_id join Teachers on Teachers_Classrooms.teacher_id = Teachers.teacher_id   GROUP BY Teachers_Classrooms.classroom_id HAVING COUNT(DISTINCT Teachers_Classrooms.teacher_id) = (SELECT COUNT(*) FROM  Teachers)",
+        "sql_query2": "select teachers.full_name , classrooms.room_number from Teachers_Classrooms join Classrooms on Teachers_Classrooms.classroom_id = Classrooms.classroom_id join Teachers on Teachers_Classrooms.teacher_id = Teachers.teacher_id",
+        "interpretation1": "What are the room numbers used by all the teachers?",
+        "interpretation2": "For every teacher, list all the room numbers booked by each."
+    }
+]

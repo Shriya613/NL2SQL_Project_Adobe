@@ -1,0 +1,6 @@
+{
+    "template": "Each Content Creators has many different Platforms. Among them, YouTube is common to many Content Creators.",
+    "specific_component": "YouTube",
+    "components": "Platforms",
+    "entities": "Content Creators"
+}

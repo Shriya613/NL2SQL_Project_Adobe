@@ -1,0 +1,6 @@
+{
+    "template": "Each Homeowners Associations has many different Rules. Among them, Noise Ordinance is common to many Homeowners Associations.",
+    "specific_component": "Noise Ordinance",
+    "components": "Rules",
+    "entities": "Homeowners Associations"
+}

@@ -1,0 +1,9 @@
+[
+    {
+        "question": "what themes are available for each summer camp?",
+        "sql_query1": "SELECT Themes.themeName  from Summer_Camp_Themes join Themes on Summer_Camp_Themes.themeId = Themes.id join Summer_Camps on Summer_Camp_Themes.summerCampId = Summer_Camps.id   GROUP BY Summer_Camp_Themes.themeId HAVING COUNT(DISTINCT Summer_Camp_Themes.summerCampId) = (SELECT COUNT(*) FROM  Summer_Camps)",
+        "sql_query2": "select summer_camps.campname , themes.themename from Summer_Camp_Themes join Themes on Summer_Camp_Themes.themeId = Themes.id join Summer_Camps on Summer_Camp_Themes.summerCampId = Summer_Camps.id",
+        "interpretation1": "provide the theme that is common to all summer camps.",
+        "interpretation2": "For each summer camp, what are the corresponding theme names?"
+    }
+]

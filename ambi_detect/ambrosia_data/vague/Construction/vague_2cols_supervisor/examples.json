@@ -1,0 +1,22 @@
+[
+    {
+        "question": "What supervisors are on what projects?",
+        "sql_query1": "Select Projects.Project_Manager, Projects.ProjectName From Projects",
+        "sql_query2": "Select Projects.Construction_Manager, Projects.ProjectName From Projects",
+        "sql_query3": "Select Projects.Project_Manager, Construction_Manager, Projects.ProjectName From Projects",
+        "interpretation1": "List the project managers and their responsible projects.",
+        "interpretation2": "List the construction managers and their responsible projects.",
+        "interpretation3": "List the project and construction managers and their responsible projects.",
+        "sql_query_general": "Select Projects.Supervisor, Projects.ProjectName From Projects"
+    },
+    {
+        "question": "Which supervisor has the highest budget?",
+        "sql_query1": "Select Projects.Project_Manager, Projects.Budget  From Projects ORDER BY budget DESC LIMIT 1",
+        "sql_query2": "Select Projects.Construction_Manager, Projects.Budget  From Projects ORDER BY budget DESC LIMIT 1",
+        "sql_query3": "Select Projects.Project_Manager, Construction_Manager, Projects.Budget  From Projects ORDER BY budget DESC LIMIT 1",
+        "interpretation1": "Which project manager has the highest budget?",
+        "interpretation2": "Which construction manager has the highest budget?",
+        "interpretation3": "Which project manager and construction manager has the highest budget?",
+        "sql_query_general": "Select Projects.Supervisor, Projects.Budget  From Projects ORDER BY budget DESC LIMIT 1"
+    }
+]

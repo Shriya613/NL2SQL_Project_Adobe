@@ -1,0 +1,33 @@
+{
+    "domain": "Publishers",
+    "template": "Textbook and E-Book are subclasses of Educational Materials. All Textbooks and E-Books have property \"Publisher\". There might be a Textbook and an E-Book that both have \"Publisher\" equal to \"Pearson\".",
+    "type": "1tab_ref",
+    "general_class": {
+        "tab_name": "EducationalMaterials",
+        "col_name": "Type",
+        "value": null,
+        "scope_id": null,
+        "db_type": "column"
+    },
+    "class1": {
+        "tab_name": "EducationalMaterials",
+        "col_name": "Type",
+        "value": "Textbook",
+        "scope_id": null,
+        "db_type": "value"
+    },
+    "class2": {
+        "tab_name": "EducationalMaterials",
+        "col_name": "Type",
+        "value": "E-Book",
+        "scope_id": null,
+        "db_type": "value"
+    },
+    "common_property": {
+        "tab_name": "Publishers",
+        "col_name": "PhoneNumber",
+        "value": "1234567890",
+        "scope_id": null,
+        "db_type": "value"
+    }
+}

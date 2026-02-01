@@ -1,0 +1,33 @@
+{
+    "domain": "Students",
+    "template": "Online Learning and Classroom Teaching are subclasses of Educational Methods. All Online Learning courses and Classroom Teaching have property \"Curriculum Content\". There might be an Online Learning course and a Classroom Teaching that both have \"Curriculum Content\" equal to \"Mathematics\".",
+    "type": "1tab_val",
+    "general_class": {
+        "tab_name": "Courses",
+        "col_name": "EducationalMethod",
+        "value": null,
+        "scope_id": null,
+        "db_type": "column"
+    },
+    "class1": {
+        "tab_name": "Courses",
+        "col_name": "EducationalMethod",
+        "value": "Online Learning",
+        "scope_id": null,
+        "db_type": "value"
+    },
+    "class2": {
+        "tab_name": "Courses",
+        "col_name": "EducationalMethod",
+        "value": "Classroom Teaching",
+        "scope_id": null,
+        "db_type": "value"
+    },
+    "common_property": {
+        "tab_name": "Courses",
+        "col_name": "CurriculumContent",
+        "value": "Mathematics",
+        "scope_id": null,
+        "db_type": "value"
+    }
+}

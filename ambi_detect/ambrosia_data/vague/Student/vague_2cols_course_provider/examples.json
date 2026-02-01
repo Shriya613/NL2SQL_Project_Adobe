@@ -1,0 +1,22 @@
+[
+    {
+        "question": "Show me course providers in alphabetical order",
+        "sql_query1": "SELECT PlatformName FROM Platforms ORDER BY PlatformName ASC",
+        "sql_query2": "SELECT University FROM Platforms ORDER BY University ASC",
+        "sql_query3": "SELECT PlatformName, University FROM Platforms ORDER BY PlatformName, University ASC",
+        "interpretation1": "List the course platforms in alphabetical order.",
+        "interpretation2": "List the universities offering courses in alphabetical order of university.",
+        "interpretation3": "List the universities offering courses and the corresponding platforms in alphabetical order of university and platform.",
+        "sql_query_general": "SELECT Course_Provider FROM Platforms ORDER BY Course_Provider ASC"
+    },
+    {
+        "question": "Show me course providers where id is odd",
+        "sql_query1": "SELECT PlatformName FROM Platforms WHERE PlatformID % 2 = 1",
+        "sql_query2": "SELECT University FROM Platforms WHERE PlatformID % 2 = 1",
+        "sql_query3": "SELECT PlatformName, University FROM Platforms WHERE PlatformID % 2 = 1",
+        "interpretation1": "Show me platforms where id is odd",
+        "interpretation2": "Show me universities where id is odd",
+        "interpretation3": "Show me platforms and universities where ids are odd",
+        "sql_query_general": "SELECT Course_Provider FROM Platforms WHERE PlatformID % 2 = 1"
+    }
+]

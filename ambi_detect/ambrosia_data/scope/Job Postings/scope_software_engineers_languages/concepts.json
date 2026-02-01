@@ -1,0 +1,6 @@
+{
+    "template": "Each Software Engineers has many different Languages. Among them, Python is common to many Software Engineers.",
+    "specific_component": "Python",
+    "components": "Languages",
+    "entities": "Software Engineers"
+}

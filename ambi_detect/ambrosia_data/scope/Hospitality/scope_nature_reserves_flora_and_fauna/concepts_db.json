@@ -1,0 +1,31 @@
+{
+    "template": "Each Nature Reserves has many different Flora and Fauna. Among them, Deer is common to many Nature Reserves.",
+    "entities": {
+        "tab_name": "Nature_Reserves",
+        "col_name": null,
+        "value": null,
+        "scope_id": null,
+        "db_type": "table"
+    },
+    "components": {
+        "tab_name": "Flora_and_fauna",
+        "col_name": null,
+        "value": null,
+        "scope_id": null,
+        "db_type": "table"
+    },
+    "specific_component": {
+        "tab_name": "Flora_and_fauna",
+        "col_name": "SpeciesName",
+        "value": "Deer",
+        "scope_id": 0,
+        "db_type": "value"
+    },
+    "entities_components": {
+        "tab_name": "Nature_reserves_flora_and_fauna",
+        "col_name": null,
+        "value": null,
+        "scope_id": null,
+        "db_type": "table"
+    }
+}

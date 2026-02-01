@@ -1,0 +1,27 @@
+{
+    "domain": "Students",
+    "template": "Attendance and Grades are subclasses of Academic Performance Metrics. All Attendance records and Grades have property \"Student\". There might be an Attendance record and a Grade that both have \"Student\" equal to \"Alice Johnson\".",
+    "type": "2tab_ref",
+    "general_class": "Academic Performance Metrics",
+    "class1": {
+        "tab_name": "Attendance",
+        "col_name": null,
+        "value": null,
+        "scope_id": null,
+        "db_type": "table"
+    },
+    "class2": {
+        "tab_name": "Grades",
+        "col_name": null,
+        "value": null,
+        "scope_id": null,
+        "db_type": "table"
+    },
+    "common_property": {
+        "tab_name": "Students",
+        "col_name": "last_name",
+        "value": "White",
+        "scope_id": null,
+        "db_type": "value"
+    }
+}

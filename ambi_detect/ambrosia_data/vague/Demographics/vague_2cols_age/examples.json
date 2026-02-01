@@ -1,0 +1,12 @@
+[
+    {
+        "question": "What is the age and population group for the most recent year for New York?",
+        "sql_query1": "select MedianAge, PopulationGroup from AgeDemographics JOIN Cities ON AgeDemographics.CityId = Cities.id where Cities.CityName = 'New York' ORDER BY Year DESC LIMIT 1;",
+        "sql_query2": "select AgeRange, PopulationGroup from AgeDemographics JOIN Cities ON AgeDemographics.CityId = Cities.id where Cities.CityName = 'New York' ORDER BY Year DESC LIMIT 1;",
+        "sql_query3": "select MedianAge, PopulationGroup from AgeDemographics JOIN Cities ON AgeDemographics.CityId = Cities.id where Cities.CityName = 'New York' ORDER BY Year DESC LIMIT 1;",
+        "interpretation1": "Give me the median age and population group for the most recent year for New York.",
+        "interpretation2": "Give me the age range and population group for the most recent year for New York.",
+        "interpretation3": "Give me the median age, age range and population group for the most recent year for New York.",
+        "sql_query_general": "select Age, PopulationGroup from AgeDemographics JOIN Cities ON AgeDemographics.CityId = Cities.id where Cities.CityName = 'New York' ORDER BY Year DESC LIMIT 1;"
+    }
+]

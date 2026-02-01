@@ -1,0 +1,25 @@
+{
+    "template": "Question: How much will I be charged for each overdraft transaction? Subject of Inquiry: Transactions\nFocus: Extra Charges Possible answer types: 1. Fee Amount 2. Commission Percentage",
+    "general_category1": {
+        "tab_name": "Transactions",
+        "col_name": "Fee_Amount",
+        "value": null,
+        "scope_id": null,
+        "db_type": "column"
+    },
+    "general_category2": {
+        "tab_name": "Transactions",
+        "col_name": "Commission_Percentage",
+        "value": null,
+        "scope_id": null,
+        "db_type": "column"
+    },
+    "subject": {
+        "tab_name": "Transactions",
+        "col_name": "Transactions",
+        "value": null,
+        "scope_id": null,
+        "db_type": "column"
+    },
+    "type": "2cols"
+}

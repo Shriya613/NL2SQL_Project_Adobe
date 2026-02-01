@@ -1,0 +1,18 @@
+[
+    {
+        "question": "What is the name and email of most experienced applicant.",
+        "sql_query1": "Select name, email FROM Applicants JOIN Experiences ON Applicants.id = Experiences.applicant_id ORDER BY years_of_experience  DESC LIMIT 1;",
+        "sql_query2": "Select name, email FROM Applicants JOIN Experiences ON Applicants.id = Experiences.applicant_id ORDER BY number_of_completed_projects  DESC LIMIT 1;",
+        "interpretation1": "Provide the name and email of the applicant with the longest tenure.",
+        "interpretation2": "Who has completed the most projects and what is their email address?",
+        "sql_query_general": "Select name, email FROM Applicants JOIN Experiences ON Applicants.id = Experiences.applicant_id ORDER BY Experience_Level  DESC LIMIT 1;"
+    },
+    {
+        "question": "What is the name and phone number of least experienced applicant.",
+        "sql_query1": "Select name, phone FROM Applicants JOIN Experiences ON Applicants.id = Experiences.applicant_id ORDER BY years_of_experience  ASC LIMIT 1;",
+        "sql_query2": "Select name, phone FROM Applicants JOIN Experiences ON Applicants.id = Experiences.applicant_id ORDER BY number_of_completed_projects  ASC LIMIT 1;",
+        "interpretation1": "What is the name and phone number of the applicant with the least years of experience?",
+        "interpretation2": "What is the name and phone number of the applicant with the fewest number of completed projects?",
+        "sql_query_general": "Select name, phone FROM Applicants JOIN Experiences ON Applicants.id = Experiences.applicant_id ORDER BY Experience_Level  ASC LIMIT 1;"
+    }
+]

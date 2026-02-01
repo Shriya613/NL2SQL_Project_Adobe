@@ -1,0 +1,7 @@
+{
+    "template": "Question: Who composed the music for this soundtrack? Subject of Inquiry: Soundtrack\nFocus: Composer Possible answer types: 1. Musician 2. Band",
+    "subject": "Soundtrack",
+    "focus": "Composer",
+    "general_category1": "Musician",
+    "general_category2": "Band"
+}

@@ -1,0 +1,23 @@
+[
+    {
+        "question": "List the type of tools we have for each traffic engineer.",
+        "sql_query1": "SELECT Tools.type  from Traffic_Engineers_Tools join Tools on Traffic_Engineers_Tools.tool_id = Tools.tool_id join Traffic_Engineers on Traffic_Engineers_Tools.engineer_id = Traffic_Engineers.id   GROUP BY Traffic_Engineers_Tools.tool_id HAVING COUNT(DISTINCT Traffic_Engineers_Tools.engineer_id) = (SELECT COUNT(*) FROM  Traffic_Engineers)",
+        "sql_query2": "select traffic_engineers.name , tools.type from Traffic_Engineers_Tools join Tools on Traffic_Engineers_Tools.tool_id = Tools.tool_id join Traffic_Engineers on Traffic_Engineers_Tools.engineer_id = Traffic_Engineers.id",
+        "interpretation1": "List the type of tools that are common to all traffic engineers.",
+        "interpretation2": "Show me the traffic engineers and their tool types."
+    },
+    {
+        "question": "What are the tool types and names for every engineer",
+        "sql_query1": "SELECT Tools.tool_name, Tools.type  from Traffic_Engineers_Tools join Tools on Traffic_Engineers_Tools.tool_id = Tools.tool_id join Traffic_Engineers on Traffic_Engineers_Tools.engineer_id = Traffic_Engineers.id   GROUP BY Traffic_Engineers_Tools.tool_id HAVING COUNT(DISTINCT Traffic_Engineers_Tools.engineer_id) = (SELECT COUNT(*) FROM  Traffic_Engineers)",
+        "sql_query2": "select traffic_engineers.name , tools.tool_name , tools.type from Traffic_Engineers_Tools join Tools on Traffic_Engineers_Tools.tool_id = Tools.tool_id join Traffic_Engineers on Traffic_Engineers_Tools.engineer_id = Traffic_Engineers.id",
+        "interpretation1": "Give me the tool types and names that are common to all engineers",
+        "interpretation2": "For all engineers, please provide me with the names and types of tools they use."
+    },
+    {
+        "question": "Give me the tools that all traffic engineers use.",
+        "sql_query1": "SELECT Tools.tool_name  from Traffic_Engineers_Tools join Tools on Traffic_Engineers_Tools.tool_id = Tools.tool_id join Traffic_Engineers on Traffic_Engineers_Tools.engineer_id = Traffic_Engineers.id   GROUP BY Traffic_Engineers_Tools.tool_id HAVING COUNT(DISTINCT Traffic_Engineers_Tools.engineer_id) = (SELECT COUNT(*) FROM  Traffic_Engineers)",
+        "sql_query2": "select traffic_engineers.name , tools.tool_name from Traffic_Engineers_Tools join Tools on Traffic_Engineers_Tools.tool_id = Tools.tool_id join Traffic_Engineers on Traffic_Engineers_Tools.engineer_id = Traffic_Engineers.id",
+        "interpretation1": "Which tools do all traffic engineers equally use?",
+        "interpretation2": "For each traffic engineer, show the tools that they use."
+    }
+]

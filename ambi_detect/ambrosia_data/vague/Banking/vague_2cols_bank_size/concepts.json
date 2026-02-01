@@ -1,0 +1,7 @@
+{
+    "template": "Question: How large is this bank? Subject of Inquiry: Bank\nFocus: Bank Size Possible answer types: 1. Number of Branches 2. Countries Served",
+    "subject": "Bank",
+    "focus": "Bank Size",
+    "general_category1": "Number of Branches",
+    "general_category2": "Countries Served"
+}

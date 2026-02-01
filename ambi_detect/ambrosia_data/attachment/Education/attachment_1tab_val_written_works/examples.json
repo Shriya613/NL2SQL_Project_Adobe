@@ -1,0 +1,9 @@
+[
+    {
+        "question": "Show all essays and poetry entries written by Emily Dickinson.",
+        "sql_query1": "SELECT WrittenWorks.Title \r\nFROM WrittenWorks JOIN Authors ON WrittenWorks.AuthorID = Authors.AuthorID\r\nWHERE (WrittenWorks.Type = 'Essay' OR WrittenWorks.Type = 'Poetry') AND Authors.name = \"Emily Dickinson\"",
+        "sql_query2": "SELECT WrittenWorks.Title \r\nFROM WrittenWorks JOIN Authors ON WrittenWorks.AuthorID = Authors.AuthorID\r\nWHERE WrittenWorks.Type = 'Essay' OR WrittenWorks.Type = 'Poetry' AND Authors.name = \"Emily Dickinson\"",
+        "interpretation1": "Show all the pieces of writing by Emily Dickinson that are either essays or poetry.",
+        "interpretation2": "Show all the essays by any author, also show just the poems by Emily Dickinson."
+    }
+]

@@ -1,0 +1,6 @@
+{
+    "template": "Each Real Estate Agencies has many different Services. Among them, Property Valuation is common to many Real Estate Agencies.",
+    "specific_component": "Property Valuation",
+    "components": "Services",
+    "entities": "Real Estate Agencies"
+}

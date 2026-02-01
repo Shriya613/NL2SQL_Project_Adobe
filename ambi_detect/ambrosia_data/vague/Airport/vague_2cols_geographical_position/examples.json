@@ -1,0 +1,22 @@
+[
+    {
+        "question": "Where did the cheapest flight depart from?",
+        "sql_query1": "SELECT A.City\r\nFROM Airports A\r\nJOIN Flights F\r\n    ON A.IATA_Code = F.IATA_Departure\r\nORDER BY F.Price ASC\r\nLIMIT 1;",
+        "sql_query2": "SELECT A.Coordinates\r\nFROM Airports A\r\nJOIN Flights F\r\n    ON A.IATA_Code = F.IATA_Departure\r\nORDER BY F.Price ASC\r\nLIMIT 1;",
+        "sql_query3": "SELECT A.City, Coordinates\r\nFROM Airports A\r\nJOIN Flights F\r\n    ON A.IATA_Code = F.IATA_Departure\r\nORDER BY F.Price ASC\r\nLIMIT 1;",
+        "interpretation1": "What city did the cheapest flight depart from?",
+        "interpretation2": "What are the coordinates of the cheapest flight departure?",
+        "interpretation3": "What city did the cheapest flight depart from and what are the coordinates of that place?",
+        "sql_query_general": "SELECT A.Geographical_Position\r\nFROM Airports A\r\nJOIN Flights F\r\n    ON A.IATA_Code = F.IATA_Departure\r\nORDER BY F.Price ASC\r\nLIMIT 1;"
+    },
+    {
+        "question": "Where is the headquarters of the airline with the most flights located?",
+        "sql_query1": "SELECT A.City\r\nFROM Airports A\r\nJOIN Flights F\r\n    ON A.IATA_Code = F.IATA_Departure\r\nJOIN Airlines AL\r\n    ON F.ForeignKey_Airline = AL.Airlines_Id\r\nWHERE\r\n    AL.Airlines_Id = (\r\n        SELECT ForeignKey_Airline\r\n        FROM Flights\r\n        GROUP BY ForeignKey_Airline\r\n        ORDER BY COUNT(*) DESC\r\n        LIMIT 1\r\n    );",
+        "sql_query2": "SELECT A.Coordinates\r\nFROM Airports A\r\nJOIN Flights F\r\n    ON A.IATA_Code = F.IATA_Departure\r\nJOIN Airlines AL\r\n    ON F.ForeignKey_Airline = AL.Airlines_Id\r\nWHERE\r\n    AL.Airlines_Id = (\r\n        SELECT ForeignKey_Airline\r\n        FROM Flights\r\n        GROUP BY ForeignKey_Airline\r\n        ORDER BY COUNT(*) DESC\r\n        LIMIT 1\r\n    );",
+        "sql_query3": "SELECT A.City, Coordinates\r\nFROM Airports A\r\nJOIN Flights F\r\n    ON A.IATA_Code = F.IATA_Departure\r\nJOIN Airlines AL\r\n    ON F.ForeignKey_Airline = AL.Airlines_Id\r\nWHERE\r\n    AL.Airlines_Id = (\r\n        SELECT ForeignKey_Airline\r\n        FROM Flights\r\n        GROUP BY ForeignKey_Airline\r\n        ORDER BY COUNT(*) DESC\r\n        LIMIT 1\r\n    );",
+        "interpretation1": "In which city is the headquarters of the airline with the most flights?",
+        "interpretation2": "What are the headquarters coordinates of the airline with the most flights?",
+        "interpretation3": "What are the headquarter coordinates of the airline with the most flights and the corresponding city?",
+        "sql_query_general": "SELECT A.Geographical_Position\r\nFROM Airports A\r\nJOIN Flights F\r\n    ON A.IATA_Code = F.IATA_Departure\r\nJOIN Airlines AL\r\n    ON F.ForeignKey_Airline = AL.Airlines_Id\r\nWHERE\r\n    AL.Airlines_Id = (\r\n        SELECT ForeignKey_Airline\r\n        FROM Flights\r\n        GROUP BY ForeignKey_Airline\r\n        ORDER BY COUNT(*) DESC\r\n        LIMIT 1\r\n    );"
+    }
+]

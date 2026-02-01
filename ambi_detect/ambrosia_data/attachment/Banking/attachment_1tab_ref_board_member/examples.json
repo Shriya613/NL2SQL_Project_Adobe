@@ -1,0 +1,9 @@
+[
+    {
+        "question": "Provide the independent directors and executive managers of Global Corp.",
+        "sql_query1": "SELECT Board_Members.MemberName \r\nFROM Board_Members JOIN Organizations ON Board_Members.OrganizationID = Organizations.ID\r\nWHERE (Board_Members.Role = \"Independent Director\" OR Board_Members.Role = \"Executive Manager\") AND Organizations.Name = \"Global Corp\"",
+        "sql_query2": "SELECT Board_Members.MemberName \r\nFROM Board_Members JOIN Organizations ON Board_Members.OrganizationID = Organizations.ID\r\nWHERE Board_Members.Role = \"Independent Director\" OR Board_Members.Role = \"Executive Manager\" AND Organizations.Name = \"Global Corp\"",
+        "interpretation1": "For Global Corp, show both the independent director and executive manager personnel.",
+        "interpretation2": "Show all the people in independent director roles, also show the executive manager(s) of Global Corp."
+    }
+]

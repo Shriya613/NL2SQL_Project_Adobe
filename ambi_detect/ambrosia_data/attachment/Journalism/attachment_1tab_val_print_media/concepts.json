@@ -1,0 +1,8 @@
+{
+    "template": "Newspaper and Magazine are subclasses of Print Media. All Newspapers and Magazines have property \"Publication Frequency\". There might be a Newspaper and a Magazine that both have \"Publication Frequency\" equal to \"Weekly\".",
+    "general_class": "Print Media",
+    "class1": "Newspaper",
+    "class2": "Magazine",
+    "common_property": "Publication Frequency",
+    "common_value": "Weekly"
+}

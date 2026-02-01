@@ -1,0 +1,9 @@
+[
+    {
+        "question": "Show me all essays and letters written by Dr. Emily Thompson",
+        "sql_query1": "SELECT Written_Works.Title \r\nFROM Written_Works JOIN Authors ON Written_Works.AuthorID = Authors.id\r\nWHERE (Written_Works.Type = 'Essay' OR Written_Works.Type = 'Letter') AND Authors.name = \"Dr. Emily Thompson\"",
+        "sql_query2": "SELECT Written_Works.Title \r\nFROM Written_Works JOIN Authors ON Written_Works.AuthorID = Authors.id\r\nWHERE Written_Works.Type = 'Essay' OR Written_Works.Type = 'Letter' AND Authors.name = \"Dr. Emily Thompson\"",
+        "interpretation1": "Show all of Dr. Emily Thompson's written works classed as either an essay or a letter.",
+        "interpretation2": "Show all of the essays regardless of author, also show the letters written by Dr. Emily Thompson."
+    }
+]

@@ -1,0 +1,25 @@
+{
+    "template": "Question: Who composed the music for this soundtrack? Subject of Inquiry: Soundtrack\nFocus: Composer Possible answer types: 1. Musician 2. Band",
+    "general_category1": {
+        "tab_name": "Musician",
+        "col_name": null,
+        "value": null,
+        "scope_id": null,
+        "db_type": "table"
+    },
+    "general_category2": {
+        "tab_name": "Band",
+        "col_name": null,
+        "value": null,
+        "scope_id": null,
+        "db_type": "table"
+    },
+    "subject": {
+        "tab_name": "Soundtrack",
+        "col_name": null,
+        "value": null,
+        "scope_id": null,
+        "db_type": "table"
+    },
+    "type": "2tabs"
+}

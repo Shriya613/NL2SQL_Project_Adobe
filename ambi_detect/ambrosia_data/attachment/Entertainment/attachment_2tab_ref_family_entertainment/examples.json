@@ -1,0 +1,9 @@
+[
+    {
+        "question": "Provide amusement parks and water parks located in California.",
+        "sql_query1": "SELECT AmusementPark.name\r\nFROM Location JOIN AmusementPark ON Location.id = AmusementPark.locationID\r\nWHERE Location.state = \"California\"\r\nUNION\r\nSELECT WaterPark.name\r\nFROM Location JOIN WaterPark ON Location.id = WaterPark.locationID\r\nWHERE Location.state = \"California\"",
+        "sql_query2": "SELECT AmusementPark.name\r\nFROM Location JOIN AmusementPark ON Location.id = AmusementPark.locationID\r\nUNION\r\nSELECT WaterPark.name\r\nFROM Location JOIN WaterPark ON Location.id = WaterPark.locationID\r\nWHERE Location.state = \"California\"",
+        "interpretation1": "Show both amusement parks located in California and water parks located in California.",
+        "interpretation2": "Show all amusement parks and also show water parks located in California."
+    }
+]

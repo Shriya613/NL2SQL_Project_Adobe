@@ -1,0 +1,6 @@
+{
+    "template": "Each Affordable Housing Projects has many different Financing Sources. Among them, Low-Income Housing Tax Credit is common to many Affordable Housing Projects.",
+    "specific_component": "Low-Income Housing Tax Credit",
+    "components": "Financing Sources",
+    "entities": "Affordable Housing Projects"
+}

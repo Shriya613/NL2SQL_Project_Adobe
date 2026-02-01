@@ -1,0 +1,6 @@
+{
+    "template": "Each Epidemiological Study has many different Methods. Among them, Survey is common to many Epidemiological Study.",
+    "specific_component": "Survey",
+    "components": "Methods",
+    "entities": "Epidemiological Study"
+}

@@ -1,0 +1,9 @@
+[
+    {
+        "question": "List all patios and verandas with 50 seats.",
+        "sql_query1": "SELECT Seating_Areas.Name \r\nFROM Seating_Areas\r\nWHERE (Seating_Areas.Name = \"Patio\" OR Seating_Areas.Name = \"Veranda\") AND Seating_Areas.Number_Of_Seats = 50",
+        "sql_query2": "SELECT Seating_Areas.Name \r\nFROM Seating_Areas\r\nWHERE Seating_Areas.Name = \"Patio\" OR Seating_Areas.Name = \"Veranda\" AND Seating_Areas.Number_Of_Seats = 50",
+        "interpretation1": "Show both patios and verandas where either of which have 50 seats.",
+        "interpretation2": "List all the patios available, also show the 50 seat capacity verandas."
+    }
+]

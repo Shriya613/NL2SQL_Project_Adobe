@@ -1,0 +1,9 @@
+[
+    {
+        "question": "Give me the fashion designers that each reporter has written about.",
+        "sql_query1": "SELECT Designers.Name  from Fashion_Reporters_Designers join Designers on Fashion_Reporters_Designers.DesignerID = Designers.DesignerID join Fashion_Reporters on Fashion_Reporters_Designers.ReporterID = Fashion_Reporters.ReporterID   GROUP BY Fashion_Reporters_Designers.DesignerID HAVING COUNT(DISTINCT Fashion_Reporters_Designers.ReporterID) = (SELECT COUNT(*) FROM  Fashion_Reporters)",
+        "sql_query2": "select fashion_reporters.fullname , designers.name from Fashion_Reporters_Designers join Designers on Fashion_Reporters_Designers.DesignerID = Designers.DesignerID join Fashion_Reporters on Fashion_Reporters_Designers.ReporterID = Fashion_Reporters.ReporterID",
+        "interpretation1": "Which fashion designer brings all the reporters together?",
+        "interpretation2": "For each reporter, show the fashion designers that they have written about."
+    }
+]

@@ -1,0 +1,8 @@
+{
+    "template": "Stockbroker and Mutual Fund are subclasses of Capital Market Participants. All Stockbrokers and Mutual funds have property \"Fees\". There might be a Stockbroker and a Mutual Fund that both have \"Fees\" equal to \"1%\".",
+    "general_class": "Capital Market Participants",
+    "class1": "Stockbroker",
+    "class2": "Mutual Fund",
+    "common_property": "Fees",
+    "common_value": "1%"
+}

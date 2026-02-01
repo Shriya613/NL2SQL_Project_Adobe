@@ -1,0 +1,9 @@
+[
+    {
+        "question": "List all international baccalaureate programs and advanced placement programs with 30 credits.",
+        "sql_query1": "SELECT Education_Programs.name \r\nFROM Education_Programs\r\nWHERE (Education_Programs.Type = \"International Baccalaureate Program\" OR Education_Programs.Type = \"Advanced Placement Program\") AND Education_Programs.Credits = 30",
+        "sql_query2": "SELECT Education_Programs.name \r\nFROM Education_Programs\r\nWHERE Education_Programs.Type = \"International Baccalaureate Program\" OR Education_Programs.Type = \"Advanced Placement Program\" AND Education_Programs.Credits = 30",
+        "interpretation1": "Which international baccalaureate programs have 30 credits and which advanced placement programs have the same number of credits?",
+        "interpretation2": "Provide a list of international baccalaureate programs and also provide a list of advanced placement programs with 30 credits."
+    }
+]

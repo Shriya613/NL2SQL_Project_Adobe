@@ -1,0 +1,22 @@
+[
+    {
+        "question": "Which books are suggested in the Physics department and what versions?",
+        "sql_query1": "SELECT TextbookEditions.Textbooks, TextbookEditions.EditionNumber FROM TextbookEditions JOIN BookCopies ON BookCopies.CopyID = TextbookEditions.EditionNumber JOIN CourseOfferings ON CourseOfferings.OfferingID = BookCopies.CourseOfferingID JOIN Instructors ON Instructors.ID =  CourseOfferings.InstructorID WHERE Instructors.Department = 'Physics'",
+        "sql_query2": "SELECT TextbookEditions.Textbooks, TextbookEditions.YearPublished FROM TextbookEditions JOIN BookCopies ON BookCopies.CopyID = TextbookEditions.EditionNumber JOIN CourseOfferings ON CourseOfferings.OfferingID = BookCopies.CourseOfferingID JOIN Instructors ON Instructors.ID =  CourseOfferings.InstructorID WHERE Instructors.Department = 'Physics'",
+        "sql_query3": "SELECT TextbookEditions.Textbooks, TextbookEditions.EditionNumber, TextbookEditions.YearPublished FROM TextbookEditions JOIN BookCopies ON BookCopies.CopyID = TextbookEditions.EditionNumber JOIN CourseOfferings ON CourseOfferings.OfferingID = BookCopies.CourseOfferingID JOIN Instructors ON Instructors.ID =  CourseOfferings.InstructorID WHERE Instructors.Department = 'Physics'",
+        "interpretation1": "Which books are suggested in the Physics department and which editions?",
+        "interpretation2": "Which books are suggested in the Physics department and when they were published?",
+        "interpretation3": "Which books are suggested in the Physics department and which editions? When they were published?",
+        "sql_query_general": "SELECT TextbookEditions.Textbooks, TextbookEditions.Version FROM TextbookEditions JOIN BookCopies ON BookCopies.CopyID = TextbookEditions.Version JOIN CourseOfferings ON CourseOfferings.OfferingID = BookCopies.CourseOfferingID JOIN Instructors ON Instructors.ID =  CourseOfferings.InstructorID WHERE Instructors.Department = 'Physics'"
+    },
+    {
+        "question": "In what version did the book with the smallest quantity appear and who published it?",
+        "sql_query1": "SELECT TextbookEditions.Publisher, TextbookEditions.EditionNumber FROM TextbookEditions JOIN BookCopies ON BookCopies.CopyID = TextbookEditions.EditionNumber ORDER BY BookCopies.Quantity ASC LIMIT 1",
+        "sql_query2": "SELECT TextbookEditions.Publisher, TextbookEditions.YearPublished FROM TextbookEditions JOIN BookCopies ON BookCopies.CopyID = TextbookEditions.EditionNumber ORDER BY BookCopies.Quantity ASC LIMIT 1",
+        "sql_query3": "SELECT TextbookEditions.Publisher, TextbookEditions.EditionNumber, TextbookEditions.YearPublished FROM TextbookEditions JOIN BookCopies ON BookCopies.CopyID = TextbookEditions.EditionNumber ORDER BY BookCopies.Quantity ASC LIMIT 1",
+        "interpretation1": "What was the edition number of the book with the smallest quantity and who published it?",
+        "interpretation2": "In what year did the book with the smallest quantity appear and who published it?",
+        "interpretation3": "What was the edition number and year of publication of the book with the smallest quantity and who published it?",
+        "sql_query_general": "SELECT TextbookEditions.Publisher, TextbookEditions.Version FROM TextbookEditions JOIN BookCopies ON BookCopies.CopyID = TextbookEditions.Version ORDER BY BookCopies.Quantity ASC LIMIT 1"
+    }
+]

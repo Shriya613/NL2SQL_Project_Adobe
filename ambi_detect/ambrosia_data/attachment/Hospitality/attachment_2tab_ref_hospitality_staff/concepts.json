@@ -1,0 +1,8 @@
+{
+    "template": "Chef and Server are subclasses of Hospitality Staff. All Chefs and Servers have property \"Language\". There might be a Chef and a Server that both have \"Language\" equal to \"Spanish\".",
+    "general_class": "Hospitality Staff",
+    "class1": "Chef",
+    "class2": "Server",
+    "common_property": "Language",
+    "common_value": "Spanish"
+}

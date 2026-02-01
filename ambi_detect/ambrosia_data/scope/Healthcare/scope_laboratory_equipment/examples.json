@@ -1,0 +1,23 @@
+[
+    {
+        "question": "What type of equipment corresponds to each laboratory?",
+        "sql_query1": "SELECT Equipment.type  from Laboratory_Equipment join Equipment on Laboratory_Equipment.equipment_type_id = Equipment.id join Laboratory on Laboratory_Equipment.laboratory_id = Laboratory.id   GROUP BY Laboratory_Equipment.equipment_type_id HAVING COUNT(DISTINCT Laboratory_Equipment.laboratory_id) = (SELECT COUNT(*) FROM  Laboratory)",
+        "sql_query2": "select laboratory.name , equipment.type from Laboratory_Equipment join Equipment on Laboratory_Equipment.equipment_type_id = Equipment.id join Laboratory on Laboratory_Equipment.laboratory_id = Laboratory.id",
+        "interpretation1": "What is the type of equipment in common for all laboratories?",
+        "interpretation2": "For each laboratory, show me the corresponding type of equipment."
+    },
+    {
+        "question": "What is the description of the equipment that we have for every laboratory",
+        "sql_query1": "SELECT Equipment.description  from Laboratory_Equipment join Equipment on Laboratory_Equipment.equipment_type_id = Equipment.id join Laboratory on Laboratory_Equipment.laboratory_id = Laboratory.id   GROUP BY Laboratory_Equipment.equipment_type_id HAVING COUNT(DISTINCT Laboratory_Equipment.laboratory_id) = (SELECT COUNT(*) FROM  Laboratory)",
+        "sql_query2": "select laboratory.name , equipment.description from Laboratory_Equipment join Equipment on Laboratory_Equipment.equipment_type_id = Equipment.id join Laboratory on Laboratory_Equipment.laboratory_id = Laboratory.id",
+        "interpretation1": "What is the description of the equipment common to all laboratories?",
+        "interpretation2": "For all laboratories, describe the equipment that is available"
+    },
+    {
+        "question": "Show me the type and description of equipment each laboratory has.",
+        "sql_query1": "SELECT Equipment.type, Equipment.description  from Laboratory_Equipment join Equipment on Laboratory_Equipment.equipment_type_id = Equipment.id join Laboratory on Laboratory_Equipment.laboratory_id = Laboratory.id   GROUP BY Laboratory_Equipment.equipment_type_id HAVING COUNT(DISTINCT Laboratory_Equipment.laboratory_id) = (SELECT COUNT(*) FROM  Laboratory)",
+        "sql_query2": "select laboratory.name , equipment.type , equipment.description from Laboratory_Equipment join Equipment on Laboratory_Equipment.equipment_type_id = Equipment.id join Laboratory on Laboratory_Equipment.laboratory_id = Laboratory.id",
+        "interpretation1": "What type and description of equipment is common to all laboratories?",
+        "interpretation2": "For every laboratory, list the type and description of equipment they have."
+    }
+]

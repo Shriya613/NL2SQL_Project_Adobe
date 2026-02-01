@@ -1,0 +1,6 @@
+{
+    "template": "Each Circles has many different Performers. Among them, Clown is common to many Circles.",
+    "specific_component": "Clown",
+    "components": "Performers",
+    "entities": "Circles"
+}

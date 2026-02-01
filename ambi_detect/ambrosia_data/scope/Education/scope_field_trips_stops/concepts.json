@@ -1,0 +1,6 @@
+{
+    "template": "Each Field Trips has many different Stops. Among them, Zoo is common to many Field Trips.",
+    "specific_component": "Zoo",
+    "components": "Stops",
+    "entities": "Field Trips"
+}

@@ -1,0 +1,6 @@
+{
+    "template": "Each Houses has many different Rooms. Among them, Kitchen is common to many Houses.",
+    "specific_component": "Kitchen",
+    "components": "Rooms",
+    "entities": "Houses"
+}

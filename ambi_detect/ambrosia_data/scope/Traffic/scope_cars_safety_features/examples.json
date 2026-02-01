@@ -1,0 +1,9 @@
+[
+    {
+        "question": "Which safety features are associated with each car?",
+        "sql_query1": "SELECT Safety_Features.name  from Cars_Safety_Features join Safety_Features on Cars_Safety_Features.featureId = Safety_Features.featureId join Cars on Cars_Safety_Features.carId = Cars.id   GROUP BY Cars_Safety_Features.featureId HAVING COUNT(DISTINCT Cars_Safety_Features.carId) = (SELECT COUNT(*) FROM  Cars)",
+        "sql_query2": "select cars.make , safety_features.name from Cars_Safety_Features join Safety_Features on Cars_Safety_Features.featureId = Safety_Features.featureId join Cars on Cars_Safety_Features.carId = Cars.id",
+        "interpretation1": "Provide me with the safety feature that is common for all cars.",
+        "interpretation2": "For each car, list the corresponding safety features."
+    }
+]

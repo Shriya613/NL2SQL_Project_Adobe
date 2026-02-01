@@ -1,0 +1,33 @@
+{
+    "domain": "MediaFranchises",
+    "template": "Media Franchise and Cross-Platform Expansion are subclasses of Business Strategies in Journalism.",
+    "type": "1tab_val",
+    "general_class": {
+        "tab_name": "MediaFranchises",
+        "col_name": "Business_Strategy",
+        "value": null,
+        "scope_id": null,
+        "db_type": "column"
+    },
+    "class1": {
+        "tab_name": "MediaFranchises",
+        "col_name": "Business_Strategy",
+        "value": "Media Franchise",
+        "scope_id": null,
+        "db_type": "value"
+    },
+    "class2": {
+        "tab_name": "MediaFranchises",
+        "col_name": "Business_Strategy",
+        "value": "Cross-Platform Expansion",
+        "scope_id": null,
+        "db_type": "value"
+    },
+    "common_property": {
+        "tab_name": "MediaFranchises",
+        "col_name": "Audience",
+        "value": "Liberals",
+        "scope_id": null,
+        "db_type": "value"
+    }
+}

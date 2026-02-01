@@ -1,0 +1,27 @@
+{
+    "domain": "SteakHouses",
+    "template": "Steakhouse and Seafood Restaurant are subclasses of Restaurant. All Steakhouses and Seafood restaurants have property \"Year of Establishment\". There might be a Steakhouse and a Seafood Restaurant that both have \"Year of Establishment\" equal to \"1980\".",
+    "type": "2tab_val",
+    "general_class": "Restaurant",
+    "class1": {
+        "tab_name": "SteakHouses",
+        "col_name": null,
+        "value": null,
+        "scope_id": null,
+        "db_type": "table"
+    },
+    "class2": {
+        "tab_name": "SeaFoodRestaurants",
+        "col_name": null,
+        "value": null,
+        "scope_id": null,
+        "db_type": "table"
+    },
+    "common_property": {
+        "tab_name": "SteakHouses",
+        "col_name": "Year_of_establishment",
+        "value": 1980,
+        "scope_id": null,
+        "db_type": "value"
+    }
+}

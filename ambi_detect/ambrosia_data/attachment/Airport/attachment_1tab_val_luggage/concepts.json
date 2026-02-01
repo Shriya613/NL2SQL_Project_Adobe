@@ -1,0 +1,8 @@
+{
+    "template": "Cabin Baggage and Checked Baggage are subclasses of Luggage. All pieces of Cabin Baggage and Checked Baggage have the property \"Fees\". There might be a piece of Cabin Baggage and a piece of Checked Baggage that both have \"Fees\" equal to \"$25\".",
+    "general_class": "Luggage",
+    "class1": "Cabin Baggage",
+    "class2": "Checked Baggage",
+    "common_property": "Fees",
+    "common_value": "$25"
+}

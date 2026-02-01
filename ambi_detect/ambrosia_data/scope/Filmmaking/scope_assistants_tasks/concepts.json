@@ -1,0 +1,6 @@
+{
+    "template": "Each Assistants has many different Tasks. Among them, Calls is common to many Assistants.",
+    "specific_component": "Calls",
+    "components": "Tasks",
+    "entities": "Assistants"
+}

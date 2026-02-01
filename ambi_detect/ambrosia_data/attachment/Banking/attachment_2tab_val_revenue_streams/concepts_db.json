@@ -1,0 +1,27 @@
+{
+    "domain": "Customers",
+    "template": "Card Fees and Monthly Interest Rate are subclasses of Revenue Streams. All Card feess and Monthly interest rates have property \"Product\". There might be a Card Fees and a Monthly Interest Rate that both have \"Product\" equal to \"Premium Credit Card\".",
+    "type": "2tab_val",
+    "general_class": "Revenue Streams",
+    "class1": {
+        "tab_name": "CardFees",
+        "col_name": null,
+        "value": null,
+        "scope_id": null,
+        "db_type": "table"
+    },
+    "class2": {
+        "tab_name": "MonthlyInterestRates",
+        "col_name": null,
+        "value": null,
+        "scope_id": null,
+        "db_type": "table"
+    },
+    "common_property": {
+        "tab_name": "CardFees",
+        "col_name": "ProductID",
+        "value": 1,
+        "scope_id": null,
+        "db_type": "value"
+    }
+}

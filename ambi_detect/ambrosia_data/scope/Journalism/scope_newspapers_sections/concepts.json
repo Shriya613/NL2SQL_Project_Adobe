@@ -1,0 +1,6 @@
+{
+    "template": "Each Newspapers has many different Sections. Among them, Local News is common to many Newspapers.",
+    "specific_component": "Local News",
+    "components": "Sections",
+    "entities": "Newspapers"
+}

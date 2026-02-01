@@ -1,0 +1,7 @@
+{
+    "template": "Question: When does the new season premiere? Subject of Inquiry: Season\nFocus: Premiere Date Possible answer types: 1. Premiere Month 2. Premiere Year",
+    "subject": "Season",
+    "focus": "Premiere Date",
+    "general_category1": "Premiere Month",
+    "general_category2": "Premiere Year"
+}

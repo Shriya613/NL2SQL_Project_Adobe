@@ -1,0 +1,25 @@
+{
+    "template": "Question: Where did this dance originated from? Subject of Inquiry: Dance\nFocus: Origin Possible answer types: 1. Culture 2. Geographical Area",
+    "general_category1": {
+        "tab_name": "DanceTable",
+        "col_name": "Culture",
+        "value": null,
+        "scope_id": null,
+        "db_type": "column"
+    },
+    "general_category2": {
+        "tab_name": "DanceTable",
+        "col_name": "Geographical_Area",
+        "value": null,
+        "scope_id": null,
+        "db_type": "column"
+    },
+    "subject": {
+        "tab_name": "DanceTable",
+        "col_name": "DanceName",
+        "value": null,
+        "scope_id": null,
+        "db_type": "column"
+    },
+    "type": "2cols"
+}

@@ -1,0 +1,6 @@
+{
+    "template": "Each Marketing Campaigns has many different Approaches. Among them, Direct Mail is common to many Marketing Campaigns.",
+    "specific_component": "Direct Mail",
+    "components": "Approaches",
+    "entities": "Marketing Campaigns"
+}

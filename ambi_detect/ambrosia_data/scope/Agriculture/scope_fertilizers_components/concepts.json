@@ -1,0 +1,6 @@
+{
+    "template": "Each Fertilizers has many different Components. Among them, Nitrogen is common to many Fertilizers.",
+    "specific_component": "Nitrogen",
+    "components": "Components",
+    "entities": "Fertilizers"
+}

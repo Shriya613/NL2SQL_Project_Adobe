@@ -1,0 +1,9 @@
+[
+    {
+        "question": "Give me the blues songs and folk songs where the singer's first name is John.",
+        "sql_query1": "SELECT Music.title \r\nFROM Music JOIN Singer ON Music.SINGER_id = Singer.id\r\nWHERE (Music.title = \"Blues Song\" OR Music.title = \"Folk Song\") AND Singer.first_name = \"John\"",
+        "sql_query2": "SELECT Music.title \r\nFROM Music JOIN Singer ON Music.SINGER_id = Singer.id\r\nWHERE Music.title = \"Blues Song\" OR Music.title = \"Folk Song\" AND Singer.first_name = \"John\"",
+        "interpretation1": "Show me both blues and folks songs by singers called John.",
+        "interpretation2": "Show all of the blues songs, also show the folk songs, but just those by singers named John."
+    }
+]

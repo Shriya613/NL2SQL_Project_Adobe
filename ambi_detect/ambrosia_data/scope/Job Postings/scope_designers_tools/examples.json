@@ -1,0 +1,23 @@
+[
+    {
+        "question": "Give me descriptions of the tools that each designer uses.",
+        "sql_query1": "SELECT Tools.description  from Designer_Tools join Tools on Designer_Tools.tool_name = Tools.tool_name join Designers on Designer_Tools.designer_id = Designers.id   GROUP BY Designer_Tools.tool_name HAVING COUNT(DISTINCT Designer_Tools.designer_id) = (SELECT COUNT(*) FROM  Designers)",
+        "sql_query2": "select designers.name , tools.description from Designer_Tools join Tools on Designer_Tools.tool_name = Tools.tool_name join Designers on Designer_Tools.designer_id = Designers.id",
+        "interpretation1": "What descriptions do you have on tools that are used the same by all designers?",
+        "interpretation2": "For every designer, list descriptions of tools used."
+    },
+    {
+        "question": "What tool names and descriptions do we have for every designer",
+        "sql_query1": "SELECT Tools.tool_name, Tools.description  from Designer_Tools join Tools on Designer_Tools.tool_name = Tools.tool_name join Designers on Designer_Tools.designer_id = Designers.id   GROUP BY Designer_Tools.tool_name HAVING COUNT(DISTINCT Designer_Tools.designer_id) = (SELECT COUNT(*) FROM  Designers)",
+        "sql_query2": "select designers.name , tools.tool_name , tools.description from Designer_Tools join Tools on Designer_Tools.tool_name = Tools.tool_name join Designers on Designer_Tools.designer_id = Designers.id",
+        "interpretation1": "What tools are common to all designers",
+        "interpretation2": "For each designer, provide the tool name and description for each tool they use"
+    },
+    {
+        "question": "Tell me the tools each designer uses.",
+        "sql_query1": "SELECT Tools.tool_name  from Designer_Tools join Tools on Designer_Tools.tool_name = Tools.tool_name join Designers on Designer_Tools.designer_id = Designers.id   GROUP BY Designer_Tools.tool_name HAVING COUNT(DISTINCT Designer_Tools.designer_id) = (SELECT COUNT(*) FROM  Designers)",
+        "sql_query2": "select designers.name , tools.tool_name from Designer_Tools join Tools on Designer_Tools.tool_name = Tools.tool_name join Designers on Designer_Tools.designer_id = Designers.id",
+        "interpretation1": "What tools are common to all designers?",
+        "interpretation2": "For every designer, list the tools used."
+    }
+]

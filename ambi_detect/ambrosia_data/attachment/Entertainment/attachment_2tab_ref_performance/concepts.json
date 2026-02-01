@@ -1,0 +1,8 @@
+{
+    "template": "Improvised Theatre and Musical are subclasses of Performance. All Improvised theatres and Musicals have property \"Venue\". There might be a Improvised Theatre and a Musical that both have \"Venue\" equal to \"Cambridge Theatre\".",
+    "general_class": "Performance",
+    "class1": "Improvised Theatre",
+    "class2": "Musical",
+    "common_property": "Venue",
+    "common_value": "Cambridge Theatre"
+}

@@ -1,0 +1,7 @@
+{
+    "template": "Question: When was this album released? Subject of Inquiry: Album\nFocus: Timeframe Possible answer types: 1. Year 2. Month",
+    "subject": "Album",
+    "focus": "Timeframe",
+    "general_category1": "Year",
+    "general_category2": "Month"
+}

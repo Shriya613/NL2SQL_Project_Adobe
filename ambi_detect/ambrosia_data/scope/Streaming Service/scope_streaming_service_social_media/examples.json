@@ -1,0 +1,9 @@
+[
+    {
+        "question": "Display the type of social media content we have on each streaming service",
+        "sql_query1": "SELECT Social_Media.type  from Streaming_Service_Social_Media join Social_Media on Streaming_Service_Social_Media.social_media_id = Social_Media.social_media_id join Streaming_Service on Streaming_Service_Social_Media.streaming_service_id = Streaming_Service.id   GROUP BY Streaming_Service_Social_Media.social_media_id HAVING COUNT(DISTINCT Streaming_Service_Social_Media.streaming_service_id) = (SELECT COUNT(*) FROM  Streaming_Service)",
+        "sql_query2": "select streaming_service.service_name , social_media.type from Streaming_Service_Social_Media join Social_Media on Streaming_Service_Social_Media.social_media_id = Social_Media.social_media_id join Streaming_Service on Streaming_Service_Social_Media.streaming_service_id = Streaming_Service.id",
+        "interpretation1": "Are any types of social media content common for all streaming services?",
+        "interpretation2": "For every streaming service, what type of social media content does it have?"
+    }
+]

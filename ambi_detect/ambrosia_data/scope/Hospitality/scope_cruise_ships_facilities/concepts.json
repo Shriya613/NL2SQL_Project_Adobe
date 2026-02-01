@@ -1,0 +1,6 @@
+{
+    "template": "Each Cruise Ships has many different Facilities. Among them, Dining Hall is common to many Cruise Ships.",
+    "specific_component": "Dining Hall",
+    "components": "Facilities",
+    "entities": "Cruise Ships"
+}

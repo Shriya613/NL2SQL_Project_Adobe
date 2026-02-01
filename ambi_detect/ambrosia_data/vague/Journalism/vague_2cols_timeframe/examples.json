@@ -1,0 +1,22 @@
+[
+    {
+        "question": "When was the press conference that Jane attended?",
+        "sql_query1": "SELECT Date, ReporterAttendeeID FROM PressConferences JOIN ReportersAttending ON ReportersAttending.ConferenceID = PressConferences.ConferenceID JOIN Reporters ON Reporters.ReporterID = ReportersAttending.ReporterID WHERE Reporters.FirstName = \"Jane\"",
+        "sql_query2": "SELECT Time, ReporterAttendeeID FROM PressConferences JOIN ReportersAttending ON ReportersAttending.ConferenceID = PressConferences.ConferenceID JOIN Reporters ON Reporters.ReporterID = ReportersAttending.ReporterID WHERE Reporters.FirstName = \"Jane\"",
+        "sql_query3": "SELECT Date, Time, ReporterAttendeeID FROM PressConferences JOIN ReportersAttending ON ReportersAttending.ConferenceID = PressConferences.ConferenceID JOIN Reporters ON Reporters.ReporterID = ReportersAttending.ReporterID WHERE Reporters.FirstName = \"Jane\"",
+        "interpretation1": "What was the date of the press conference that Jane attended?",
+        "interpretation2": "What was the time of the press conference that Jane attended?",
+        "interpretation3": "What was the date and time of the press conference that Jane attended?",
+        "sql_query_general": "SELECT Timeframe, ReporterAttendeeID FROM PressConferences JOIN ReportersAttending ON ReportersAttending.ConferenceID = PressConferences.ConferenceID JOIN Reporters ON Reporters.ReporterID = ReportersAttending.ReporterID WHERE Reporters.FirstName = \"Jane\""
+    },
+    {
+        "question": "Where and when did John attend the press conference?",
+        "sql_query1": "SELECT PressConferences.Date, PressConferences.Location FROM PressConferences JOIN ReportersAttending ON ReportersAttending.ConferenceID = PressConferences.ConferenceID JOIN Reporters ON ReportersAttending.ReporterID = Reporters.ReporterID WHERE Reporters.FirstName = 'John';",
+        "sql_query2": "SELECT PressConferences.Time, PressConferences.Location FROM PressConferences JOIN ReportersAttending ON ReportersAttending.ConferenceID = PressConferences.ConferenceID JOIN Reporters ON ReportersAttending.ReporterID = Reporters.ReporterID WHERE Reporters.FirstName = 'John';",
+        "sql_query3": "SELECT PressConferences.Date, Time, PressConferences.Location FROM PressConferences JOIN ReportersAttending ON ReportersAttending.ConferenceID = PressConferences.ConferenceID JOIN Reporters ON ReportersAttending.ReporterID = Reporters.ReporterID WHERE Reporters.FirstName = 'John';",
+        "interpretation1": "Where John attended the press conference and on what day?",
+        "interpretation2": "Where John attended the press conference and at what time?",
+        "interpretation3": "Where John attended the press conference and on what day and time?",
+        "sql_query_general": "SELECT PressConferences.Timeframe, PressConferences.Location FROM PressConferences JOIN ReportersAttending ON ReportersAttending.ConferenceID = PressConferences.ConferenceID JOIN Reporters ON ReportersAttending.ReporterID = Reporters.ReporterID WHERE Reporters.FirstName = 'John';"
+    }
+]

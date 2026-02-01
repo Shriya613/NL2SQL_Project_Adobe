@@ -1,0 +1,31 @@
+{
+    "template": "Each Sound Designers has many different Techniques. Among them, Foley Artistry is common to many Sound Designers.",
+    "entities": {
+        "tab_name": "Sound_Designers",
+        "col_name": null,
+        "value": null,
+        "scope_id": null,
+        "db_type": "table"
+    },
+    "components": {
+        "tab_name": "Techniques",
+        "col_name": null,
+        "value": null,
+        "scope_id": null,
+        "db_type": "table"
+    },
+    "specific_component": {
+        "tab_name": "Techniques",
+        "col_name": "MethodName",
+        "value": "Foley Artistry",
+        "scope_id": 0,
+        "db_type": "value"
+    },
+    "entities_components": {
+        "tab_name": "Sound_Designer_Technique",
+        "col_name": null,
+        "value": null,
+        "scope_id": null,
+        "db_type": "table"
+    }
+}

@@ -1,0 +1,22 @@
+[
+    {
+        "question": "Which album has the longest song and when was it released?",
+        "sql_query1": "SELECT AlbumName, Year FROM Albums JOIN Songs ON Albums.AlbumID = Songs.AlbumID ORDER By duration DESC LIMIT 1 ;",
+        "sql_query2": "SELECT AlbumName, Month FROM Albums JOIN Songs ON Albums.AlbumID = Songs.AlbumID ORDER By duration DESC LIMIT 1 ;",
+        "sql_query3": "SELECT AlbumName, Year, Month FROM Albums JOIN Songs ON Albums.AlbumID = Songs.AlbumID ORDER By duration DESC LIMIT 1 ;",
+        "interpretation1": "Which album has the longest song and what year was it released?",
+        "interpretation2": "Which album has the longest song and which month was it released?",
+        "interpretation3": "Which album has the longest song and what month and year was it released?",
+        "sql_query_general": "SELECT AlbumName, Timeframe FROM Albums JOIN Songs ON Albums.AlbumID = Songs.AlbumID ORDER By duration DESC LIMIT 1 ;"
+    },
+    {
+        "question": "For each singer, show me the album and its release timeframe and concert venue.",
+        "sql_query1": "SELECT artistname, AlbumName, Year, Venue FROM Albums JOIN Artists on Albums.ArtistID = Artists.ArtistID JOIN Concerts ON Concerts.HeadlinerID = Artists.ArtistID;",
+        "sql_query2": "SELECT artistname, AlbumName, Month, Venue FROM Albums JOIN Artists on Albums.ArtistID = Artists.ArtistID JOIN Concerts ON Concerts.HeadlinerID = Artists.ArtistID;",
+        "sql_query3": "SELECT artistname, AlbumName, Year, Month, Venue FROM Albums JOIN Artists on Albums.ArtistID = Artists.ArtistID JOIN Concerts ON Concerts.HeadlinerID = Artists.ArtistID;",
+        "interpretation1": "For each singer, show me the album, its release year and concert venue.",
+        "interpretation2": "For each singer, show me the album, its release month and concert venue.",
+        "interpretation3": "For each singer, show me the album, its release year and month, and concert venue.",
+        "sql_query_general": "SELECT artistname, AlbumName, Timeframe, Venue FROM Albums JOIN Artists on Albums.ArtistID = Artists.ArtistID JOIN Concerts ON Concerts.HeadlinerID = Artists.ArtistID;"
+    }
+]

@@ -1,0 +1,9 @@
+[
+    {
+        "question": "Provide all the jazz musicians and rock guitarists who have been performing for 10 years.",
+        "sql_query1": "SELECT Artists.name \r\nFROM Artists JOIN Artist_genre ON Artists.id = Artist_genre.artist_id JOIN Genres ON Genres.genre_id = Artist_genre.genre_id\r\nWHERE (Genres.name = \"Jazz\" OR Genres.name = \"Rock\") AND Artist_genre.years_in_industry = 10",
+        "sql_query2": "SELECT Artists.name \r\nFROM Artists JOIN Artist_genre ON Artists.id = Artist_genre.artist_id JOIN Genres ON Genres.genre_id = Artist_genre.genre_id\r\nWHERE Genres.name = \"Jazz\" OR Genres.name = \"Rock\" AND Artist_genre.years_in_industry = 10",
+        "interpretation1": "Provide all the musicians, jazz and rock, who have been performing for a decade.",
+        "interpretation2": "Show all the jazz performers, and only those rock artists who have been playing for 10 years."
+    }
+]

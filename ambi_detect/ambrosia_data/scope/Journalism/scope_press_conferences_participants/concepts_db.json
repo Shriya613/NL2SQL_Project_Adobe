@@ -1,0 +1,31 @@
+{
+    "template": "Each Press Conferences has many different Participants. Among them, Reporters is common to many Press Conferences.",
+    "entities": {
+        "tab_name": "Press_Conferences",
+        "col_name": null,
+        "value": null,
+        "scope_id": null,
+        "db_type": "table"
+    },
+    "components": {
+        "tab_name": "Participants",
+        "col_name": null,
+        "value": null,
+        "scope_id": null,
+        "db_type": "table"
+    },
+    "specific_component": {
+        "tab_name": "Participants",
+        "col_name": "role",
+        "value": "Reporter",
+        "scope_id": 0,
+        "db_type": "value"
+    },
+    "entities_components": {
+        "tab_name": "Press_Conferences_Participants",
+        "col_name": null,
+        "value": null,
+        "scope_id": null,
+        "db_type": "table"
+    }
+}

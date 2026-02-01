@@ -1,0 +1,25 @@
+{
+    "template": "Question: What is the median age of this population group? Subject of Inquiry: Population Group\nFocus: Age Possible answer types: 1. Median Age 2. Age Range",
+    "general_category1": {
+        "tab_name": "AgeDemographics",
+        "col_name": "MedianAge",
+        "value": null,
+        "scope_id": null,
+        "db_type": "column"
+    },
+    "general_category2": {
+        "tab_name": "AgeDemographics",
+        "col_name": "AgeRange",
+        "value": null,
+        "scope_id": null,
+        "db_type": "column"
+    },
+    "subject": {
+        "tab_name": "AgeDemographics",
+        "col_name": "PopulationGroup",
+        "value": null,
+        "scope_id": null,
+        "db_type": "column"
+    },
+    "type": "2cols"
+}

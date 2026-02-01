@@ -1,0 +1,27 @@
+{
+    "domain": "Science_Fiction_Book",
+    "template": "Science Fiction Book and Romance Book are subclasses of Book Genre. All Science fiction books and Romance books have property \"Year of Publication\". There might be a Science Fiction Book and a Romance Book that both have \"Year of Publication\" equal to \"2018\".",
+    "type": "2tab_val",
+    "general_class": "Book Genre",
+    "class1": {
+        "tab_name": "Science_Fiction_Book",
+        "col_name": null,
+        "value": null,
+        "scope_id": null,
+        "db_type": "table"
+    },
+    "class2": {
+        "tab_name": "Romance_Book",
+        "col_name": null,
+        "value": null,
+        "scope_id": null,
+        "db_type": "table"
+    },
+    "common_property": {
+        "tab_name": "Science_Fiction_Book",
+        "col_name": "Year_of_publication",
+        "value": 2018,
+        "scope_id": null,
+        "db_type": "value"
+    }
+}

@@ -1,0 +1,9 @@
+[
+    {
+        "question": "Provide me with the blues music and folk music sung by John Hurt.",
+        "sql_query1": "SELECT Songs.SongTitle \r\nFROM Songs JOIN Singers ON Songs.Singer_id = Singers.id\r\nWHERE (Songs.Music = 'Blues Music' OR Songs.Music = 'Folk Music') AND Singers.singername = \"John Hurt\"",
+        "sql_query2": "SELECT Songs.SongTitle \r\nFROM Songs JOIN Singers ON Songs.Singer_id = Singers.id\r\nWHERE Songs.Music = 'Blues Music' OR Songs.Music = 'Folk Music' AND Singers.singername = \"John Hurt\"",
+        "interpretation1": "What blues music is sung by John Hurt and what folk music is also sung by him?",
+        "interpretation2": "List all blues songs and also list folk music sung by John Hurt."
+    }
+]

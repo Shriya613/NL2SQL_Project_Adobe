@@ -1,0 +1,31 @@
+{
+    "template": "Each Credit Cards has many different Benefits. Among them, Rewards Program is common to many Credit Cards.",
+    "entities": {
+        "tab_name": "Credit_Cards",
+        "col_name": null,
+        "value": null,
+        "scope_id": null,
+        "db_type": "table"
+    },
+    "components": {
+        "tab_name": "Benefits",
+        "col_name": null,
+        "value": null,
+        "scope_id": null,
+        "db_type": "table"
+    },
+    "specific_component": {
+        "tab_name": "Benefits",
+        "col_name": "benefitName",
+        "value": "Rewards_Program",
+        "scope_id": 0,
+        "db_type": "value"
+    },
+    "entities_components": {
+        "tab_name": "Credit_Card_Benefits",
+        "col_name": null,
+        "value": null,
+        "scope_id": null,
+        "db_type": "table"
+    }
+}

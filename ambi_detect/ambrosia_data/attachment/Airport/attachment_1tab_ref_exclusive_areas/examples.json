@@ -1,0 +1,9 @@
+[
+    {
+        "question": "Show terminals that have frequent flyer lounges and VIP lounges with complimentary Wi-Fi.",
+        "sql_query1": "SELECT Terminal.Name \r\nFROM ExclusiveArea JOIN AreaAmenityMap ON ExclusiveArea.areaId = AreaAmenityMap.areaId JOIN Amenity ON AreaAmenityMap.amenityId = Amenity.amenityId JOIN Terminal ON Terminal.id = ExclusiveArea.terminalid WHERE ExclusiveArea.exclusiveAreaValue = \"Frequent Flyer Lounge\" AND Amenity.amenityValue = \"Complimentary Wi-Fi\"\nUNION\nSELECT Terminal.Name \r\nFROM ExclusiveArea JOIN AreaAmenityMap ON ExclusiveArea.areaId = AreaAmenityMap.areaId JOIN Amenity ON AreaAmenityMap.amenityId = Amenity.amenityId JOIN Terminal ON Terminal.id = ExclusiveArea.terminalid\r\nWHERE ExclusiveArea.exclusiveAreaValue = \"VIP Lounge\" AND Amenity.amenityValue = \"Complimentary Wi-Fi\"",
+        "sql_query2": "SELECT Terminal.Name \r\nFROM Terminal JOIN ExclusiveArea ON Terminal.id = ExclusiveArea.terminalId WHERE ExclusiveArea.exclusiveAreaValue = \"Frequent Flyer Lounge\"\nUNION\nSELECT Terminal.Name \r\nFROM ExclusiveArea JOIN AreaAmenityMap ON ExclusiveArea.areaId = AreaAmenityMap.areaId JOIN Amenity ON AreaAmenityMap.amenityId = Amenity.amenityId JOIN Terminal ON Terminal.id = ExclusiveArea.terminalid\r\nWHERE ExclusiveArea.exclusiveAreaValue = \"VIP Lounge\" AND Amenity.amenityValue = \"Complimentary Wi-Fi\"",
+        "interpretation1": "Which terminals have frequent flyer lounges with complimentary Wi-Fi and which terminals have VIP lounges with the same amenity?",
+        "interpretation2": "Provide a list of all terminals with frequent flyer lounges and also provide a list of terminals with VIP lounges that have complimentary Wi-Fi."
+    }
+]

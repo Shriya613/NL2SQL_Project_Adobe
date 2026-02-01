@@ -1,0 +1,25 @@
+{
+    "template": "Question: What are the critical reviews of this film? Subject of Inquiry: Film\nFocus: Review Possible answer types: 1. Film Critic Opinion 2. Audience Reviews",
+    "general_category1": {
+        "tab_name": "Reviews",
+        "col_name": "Opinion",
+        "value": null,
+        "scope_id": null,
+        "db_type": "column"
+    },
+    "general_category2": {
+        "tab_name": "Reviews",
+        "col_name": "AudienceReviews",
+        "value": null,
+        "scope_id": null,
+        "db_type": "column"
+    },
+    "subject": {
+        "tab_name": "Actor",
+        "col_name": "RoleInFilm",
+        "value": null,
+        "scope_id": null,
+        "db_type": "column"
+    },
+    "type": "2cols"
+}

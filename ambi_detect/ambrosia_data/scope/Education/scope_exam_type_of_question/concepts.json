@@ -1,0 +1,6 @@
+{
+    "template": "Each Exam has many different Type of Question. Among them, Multiple Choice is common to many Exam.",
+    "specific_component": "Multiple Choice",
+    "components": "Type of Question",
+    "entities": "Exam"
+}

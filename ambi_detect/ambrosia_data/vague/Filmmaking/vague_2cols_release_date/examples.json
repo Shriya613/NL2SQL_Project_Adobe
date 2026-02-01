@@ -1,0 +1,22 @@
+[
+    {
+        "question": "when was a movie released",
+        "sql_query1": "select title, streaming_release_date from movies",
+        "sql_query2": "select title, theatrical_release_date from movies",
+        "sql_query3": "select title, streaming_release_date, theatrical_release_date from movies",
+        "interpretation1": "show the streaming release date for all movies",
+        "interpretation2": "show the theatrical release date for all movies",
+        "interpretation3": "show the streaming and theatrical release date for all movies",
+        "sql_query_general": "select title, release_date from movies"
+    },
+    {
+        "question": "who directed 'Selma' and when was it released?",
+        "sql_query1": "select streaming_release_date, name from movies join Directors on Directors.id = movies.director_id where title = 'Selma'",
+        "sql_query2": "select theatrical_release_date, name from movies join Directors on Directors.id = movies.director_id where title = 'Selma'",
+        "sql_query3": "select streaming_release_date, theatrical_release_date, name from movies join Directors on Directors.id = movies.director_id where title = 'Selma'",
+        "interpretation1": "When was Selma first available to stream and who was the director?",
+        "interpretation2": "When was Selma released in theatres and who directed it?",
+        "interpretation3": "What dates was Selma released to theatres and to stream and who directed the film?",
+        "sql_query_general": "select release_date, name from movies join Directors on Directors.id = movies.director_id where title = 'Selma'"
+    }
+]

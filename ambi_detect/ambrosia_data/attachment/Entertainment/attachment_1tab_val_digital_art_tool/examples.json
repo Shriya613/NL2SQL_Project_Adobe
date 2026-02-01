@@ -1,0 +1,9 @@
+[
+    {
+        "question": "Show all graphic design tools and web design tools which need a subscription.",
+        "sql_query1": "SELECT Digital_Tools.Name \r\nFROM Digital_Tools\r\nWHERE (Digital_Tools.Category = \"Graphic Design\" OR Digital_Tools.Category = \"Web Design\") AND Digital_Tools.Access = \"Subscription\"",
+        "sql_query2": "SELECT Digital_Tools.Name \r\nFROM Digital_Tools\r\nWHERE Digital_Tools.Category = \"Graphic Design\" OR Digital_Tools.Category = \"Web Design\" AND Digital_Tools.Access = \"Subscription\"",
+        "interpretation1": "Show all the subscription-based graphic- and web-design digital tools.",
+        "interpretation2": "Show all the graphic design tools, also show the web design tools that run on a subscription model."
+    }
+]

@@ -1,0 +1,7 @@
+{
+    "template": "Question: Where is the science laboratory located within the school campus? Subject of Inquiry: Laboratory\nFocus: Location Possible answer types: 1. Building 2. Room",
+    "subject": "Laboratory",
+    "focus": "Location",
+    "general_category1": "Building",
+    "general_category2": "Room"
+}

@@ -1,0 +1,7 @@
+{
+    "template": "Question: When did this podcast first air? Subject of Inquiry: Podcast\nFocus: Debut Date Possible answer types: 1. Debut Day 2. Debut Year",
+    "subject": "Podcast",
+    "focus": "Debut Date",
+    "general_category1": "Debut Day",
+    "general_category2": "Debut Year"
+}

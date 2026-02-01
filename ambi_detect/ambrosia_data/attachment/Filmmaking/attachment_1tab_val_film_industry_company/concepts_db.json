@@ -1,0 +1,33 @@
+{
+    "domain": "Companies",
+    "template": "Production Company and Distribution Company are subclasses of Film Industry Company. All Production and Distribution Companies have a property \"Number of Employees\". There might be a Production Company and a Distribution Company both with \"500\" employees while others in these categories have a different number of employees.",
+    "type": "1tab_val",
+    "general_class": {
+        "tab_name": "Companies",
+        "col_name": "Film_Industry_Type",
+        "value": null,
+        "scope_id": null,
+        "db_type": "column"
+    },
+    "class1": {
+        "tab_name": "Companies",
+        "col_name": "Film_Industry_Type",
+        "value": "Production Company",
+        "scope_id": null,
+        "db_type": "value"
+    },
+    "class2": {
+        "tab_name": "Companies",
+        "col_name": "Film_Industry_Type",
+        "value": "Distribution Company",
+        "scope_id": null,
+        "db_type": "value"
+    },
+    "common_property": {
+        "tab_name": "Companies",
+        "col_name": "Number_Of_Employees",
+        "value": 500,
+        "scope_id": null,
+        "db_type": "value"
+    }
+}

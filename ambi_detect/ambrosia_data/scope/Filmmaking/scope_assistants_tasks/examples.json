@@ -1,0 +1,23 @@
+[
+    {
+        "question": "Show me descriptions of tasks every assistant does.",
+        "sql_query1": "SELECT Tasks.description  from Assistants_Tasks join Tasks on Assistants_Tasks.task_id = Tasks.id join Assistants on Assistants_Tasks.assistant_id = Assistants.id   GROUP BY Assistants_Tasks.task_id HAVING COUNT(DISTINCT Assistants_Tasks.assistant_id) = (SELECT COUNT(*) FROM  Assistants)",
+        "sql_query2": "select assistants.name , tasks.description from Assistants_Tasks join Tasks on Assistants_Tasks.task_id = Tasks.id join Assistants on Assistants_Tasks.assistant_id = Assistants.id",
+        "interpretation1": "What are descriptions of tasks shared among all assistants?",
+        "interpretation2": "For each assistant, list descriptions of tasks they do."
+    },
+    {
+        "question": "What is the task name for each assistant?",
+        "sql_query1": "SELECT Tasks.task_name  from Assistants_Tasks join Tasks on Assistants_Tasks.task_id = Tasks.id join Assistants on Assistants_Tasks.assistant_id = Assistants.id   GROUP BY Assistants_Tasks.task_id HAVING COUNT(DISTINCT Assistants_Tasks.assistant_id) = (SELECT COUNT(*) FROM  Assistants)",
+        "sql_query2": "select assistants.name , tasks.task_name from Assistants_Tasks join Tasks on Assistants_Tasks.task_id = Tasks.id join Assistants on Assistants_Tasks.assistant_id = Assistants.id",
+        "interpretation1": "What task name is common for all assistants?",
+        "interpretation2": "For each assistant, give me the corresponding task name."
+    },
+    {
+        "question": "Give me the names and descriptions of the tasks that each assistant is responsible for.",
+        "sql_query1": "SELECT Tasks.task_name, Tasks.description  from Assistants_Tasks join Tasks on Assistants_Tasks.task_id = Tasks.id join Assistants on Assistants_Tasks.assistant_id = Assistants.id   GROUP BY Assistants_Tasks.task_id HAVING COUNT(DISTINCT Assistants_Tasks.assistant_id) = (SELECT COUNT(*) FROM  Assistants)",
+        "sql_query2": "select assistants.name , tasks.task_name , tasks.description from Assistants_Tasks join Tasks on Assistants_Tasks.task_id = Tasks.id join Assistants on Assistants_Tasks.assistant_id = Assistants.id",
+        "interpretation1": "What are the names and descriptions of the tasks that are shared among all assistants?",
+        "interpretation2": "For every assistant, show the names and descriptions of the tasks that they are responsible for."
+    }
+]

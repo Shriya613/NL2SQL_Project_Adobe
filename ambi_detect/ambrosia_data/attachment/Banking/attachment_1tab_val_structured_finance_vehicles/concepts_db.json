@@ -1,0 +1,33 @@
+{
+    "domain": "Clients",
+    "template": "Collateralized Debt Obligation and Collateralized Mortgage Obligation are subclasses of Structured Finance Vehicles. All Collateralized debt obligations and Collateralized mortgage obligations have property \"Price\". There might be a Collateralized Debt Obligation and a Collateralized Mortgage Obligation that both have \"Price\" equal to \"1000\".",
+    "type": "1tab_val",
+    "general_class": {
+        "tab_name": "Structured_Financial_Products",
+        "col_name": "Type",
+        "value": null,
+        "scope_id": null,
+        "db_type": "column"
+    },
+    "class1": {
+        "tab_name": "Structured_Financial_Products",
+        "col_name": "Type",
+        "value": "Collateralized Debt Obligation",
+        "scope_id": null,
+        "db_type": "value"
+    },
+    "class2": {
+        "tab_name": "Structured_Financial_Products",
+        "col_name": "Type",
+        "value": "Collateralized Mortgage Obligation",
+        "scope_id": null,
+        "db_type": "value"
+    },
+    "common_property": {
+        "tab_name": "Structured_Financial_Products",
+        "col_name": "Price",
+        "value": 1000.0,
+        "scope_id": null,
+        "db_type": "value"
+    }
+}

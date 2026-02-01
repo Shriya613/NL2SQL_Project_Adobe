@@ -1,0 +1,31 @@
+{
+    "template": "Each Resorts has many different Activities. Among them, Swimming Pool is common to many Resorts.",
+    "entities": {
+        "tab_name": "Resorts",
+        "col_name": null,
+        "value": null,
+        "scope_id": null,
+        "db_type": "table"
+    },
+    "components": {
+        "tab_name": "Activities",
+        "col_name": null,
+        "value": null,
+        "scope_id": null,
+        "db_type": "table"
+    },
+    "specific_component": {
+        "tab_name": "Activities",
+        "col_name": "activityName",
+        "value": "Swimming Pool",
+        "scope_id": 0,
+        "db_type": "value"
+    },
+    "entities_components": {
+        "tab_name": "Resorts_Activities",
+        "col_name": null,
+        "value": null,
+        "scope_id": null,
+        "db_type": "table"
+    }
+}

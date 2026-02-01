@@ -1,0 +1,9 @@
+[
+    {
+        "question": "Show all Spanish-speaking gate agents and pilots.",
+        "sql_query1": "SELECT Staff.FullName\r\nFROM Staff JOIN Languages ON Staff.languageID = Languages.id\r\nWHERE (Staff.role = \"Gate Agent\" OR Staff.role = \"Pilot\") AND Languages.language = \"Spanish\"",
+        "sql_query2": "SELECT Staff.FullName\r\nFROM Staff JOIN Languages ON Staff.languageID = Languages.id\r\nWHERE Staff.role = \"Gate Agent\" OR Staff.role = \"Pilot\" AND Languages.language = \"Spanish\"",
+        "interpretation1": "List both gate agents who speak Spanish and pilots who also speak Spanish.",
+        "interpretation2": "Show all gate agents and also show all pilots who can speak Spanish."
+    }
+]

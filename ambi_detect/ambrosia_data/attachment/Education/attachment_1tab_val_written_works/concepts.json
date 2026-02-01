@@ -1,0 +1,8 @@
+{
+    "template": "Essay and Poetry are subclasses of Written Works. All Essays and Poetry have property \"Author\". There might be an Essay and a Poem that both have \"Author\" equal to \"Emily Dickinson\".",
+    "general_class": "Written Works",
+    "class1": "Essay",
+    "class2": "Poetry",
+    "common_property": "Author",
+    "common_value": "Emily Dickinson"
+}

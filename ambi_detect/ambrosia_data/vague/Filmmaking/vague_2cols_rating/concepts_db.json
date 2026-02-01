@@ -1,0 +1,25 @@
+{
+    "template": "Question: What is the rating of this film? Subject of Inquiry: Film\nFocus: Rating Possible answer types: 1. Film Critic Rating 2. Audience Rating",
+    "general_category1": {
+        "tab_name": "FilmReviews",
+        "col_name": "critic_rating",
+        "value": null,
+        "scope_id": null,
+        "db_type": "column"
+    },
+    "general_category2": {
+        "tab_name": "FilmReviews",
+        "col_name": "audience_rating",
+        "value": null,
+        "scope_id": null,
+        "db_type": "column"
+    },
+    "subject": {
+        "tab_name": "Role",
+        "col_name": "film_id",
+        "value": null,
+        "scope_id": null,
+        "db_type": "column"
+    },
+    "type": "2cols"
+}

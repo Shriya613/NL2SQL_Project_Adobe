@@ -1,0 +1,33 @@
+{
+    "domain": "Cleaning_Professionals",
+    "template": "Housekeeper and Laundry Attendant are subclasses of Cleaning Professional. All Housekeepers and Laundry attendants have property \"Hotel\". There might be a Housekeeper and a Laundry Attendant that both have \"Hotel\" equal to \"The Grand Hotel\".",
+    "type": "1tab_val_like",
+    "general_class": {
+        "tab_name": "Cleaning_Professionals",
+        "col_name": "Position",
+        "value": null,
+        "scope_id": null,
+        "db_type": "column"
+    },
+    "class1": {
+        "tab_name": "Cleaning_Professionals",
+        "col_name": "Position",
+        "value": "Housekeeper",
+        "scope_id": null,
+        "db_type": "value"
+    },
+    "class2": {
+        "tab_name": "Cleaning_Professionals",
+        "col_name": "Position",
+        "value": "Laundry Attendant",
+        "scope_id": null,
+        "db_type": "value"
+    },
+    "common_property": {
+        "tab_name": "Cleaning_Professionals",
+        "col_name": "Hotel_ID",
+        "value": 1,
+        "scope_id": null,
+        "db_type": "value"
+    }
+}

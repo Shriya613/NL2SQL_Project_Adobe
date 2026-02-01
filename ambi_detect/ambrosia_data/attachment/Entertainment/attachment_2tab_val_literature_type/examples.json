@@ -1,0 +1,9 @@
+[
+    {
+        "question": "Display novels and poems written in Italian.",
+        "sql_query1": "SELECT Novels.title as title\r\nFROM Novels\r\nWHERE Novels.language = \"Italian\"\r\nUNION\r\nSELECT Poems.poem_name as title\r\nFROM Poems\r\nWHERE Poems.language = \"Italian\"",
+        "sql_query2": "SELECT Novels.title as title\r\nFROM Novels\r\nUNION\r\nSELECT Poems.poem_name as title\r\nFROM Poems\r\nWHERE Poems.language = \"Italian\"",
+        "interpretation1": "Can you show novels and poems written in Italian?",
+        "interpretation2": "List all novels and also display poems written in Italian."
+    }
+]

@@ -1,0 +1,27 @@
+{
+    "domain": "Day_Spa",
+    "template": "Day Spa and Wellness Retreat are subclasses of Relaxation Getaway. All Day spas and Wellness retreats have property \"Price\". There might be a Day Spa and a Wellness Retreat that both have \"Price\" equal to \"150\".",
+    "type": "2tab_val",
+    "general_class": "Relaxation Getaway",
+    "class1": {
+        "tab_name": "Day_Spa",
+        "col_name": null,
+        "value": null,
+        "scope_id": null,
+        "db_type": "table"
+    },
+    "class2": {
+        "tab_name": "Wellness_Retreat",
+        "col_name": null,
+        "value": null,
+        "scope_id": null,
+        "db_type": "table"
+    },
+    "common_property": {
+        "tab_name": "Day_Spa",
+        "col_name": "Price",
+        "value": 150,
+        "scope_id": null,
+        "db_type": "value"
+    }
+}

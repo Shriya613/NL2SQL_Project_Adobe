@@ -1,0 +1,33 @@
+{
+    "domain": "Authors",
+    "template": "Newspaper and Magazine are subclasses of Periodicals.",
+    "type": "1tab_ref_like",
+    "general_class": {
+        "tab_name": "PublicationsPeriodicals",
+        "col_name": "periodical_type",
+        "value": null,
+        "scope_id": null,
+        "db_type": "column"
+    },
+    "class1": {
+        "tab_name": "PublicationsPeriodicals",
+        "col_name": "periodical_type",
+        "value": "Newspaper",
+        "scope_id": null,
+        "db_type": "value"
+    },
+    "class2": {
+        "tab_name": "PublicationsPeriodicals",
+        "col_name": "periodical_type",
+        "value": "Magazine",
+        "scope_id": null,
+        "db_type": "value"
+    },
+    "common_property": {
+        "tab_name": "Publications",
+        "col_name": "circulation_numbers",
+        "value": 20000,
+        "scope_id": null,
+        "db_type": "value"
+    }
+}

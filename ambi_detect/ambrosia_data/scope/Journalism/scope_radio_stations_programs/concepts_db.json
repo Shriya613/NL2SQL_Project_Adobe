@@ -1,0 +1,31 @@
+{
+    "template": "Each Radio Stations has many different Programs. Among them, Talk Show is common to many Radio Stations.",
+    "entities": {
+        "tab_name": "Radio_Stations",
+        "col_name": null,
+        "value": null,
+        "scope_id": null,
+        "db_type": "table"
+    },
+    "components": {
+        "tab_name": "Programs",
+        "col_name": null,
+        "value": null,
+        "scope_id": null,
+        "db_type": "table"
+    },
+    "specific_component": {
+        "tab_name": "Programs",
+        "col_name": "programType",
+        "value": "Talk Show",
+        "scope_id": 0,
+        "db_type": "value"
+    },
+    "entities_components": {
+        "tab_name": "Radio_Stations_Programs",
+        "col_name": null,
+        "value": null,
+        "scope_id": null,
+        "db_type": "table"
+    }
+}

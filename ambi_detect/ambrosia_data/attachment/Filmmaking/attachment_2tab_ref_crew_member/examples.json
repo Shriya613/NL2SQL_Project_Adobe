@@ -1,0 +1,9 @@
+[
+    {
+        "question": "Display the directors and cinematographers whose films won an award in 1983.",
+        "sql_query1": "SELECT Director.name\r\nFROM Award JOIN Film ON Award.film_id = Film.id JOIN Director ON Film.director_id = Director.id\r\nWHERE Award.year = 1983\r\nUNION\r\nSELECT Cinematographer.name\r\nFROM Award JOIN Film ON Award.film_id = Film.id JOIN Cinematographer ON Film.cinematographer_id = Cinematographer.id\r\nWHERE Award.year = 1983",
+        "sql_query2": "SELECT Director.name\r\nFROM Award JOIN Film ON Award.film_id = Film.id JOIN Director ON Film.director_id = Director.id\r\nUNION\r\nSELECT Cinematographer.name\r\nFROM Award JOIN Film ON Award.film_id = Film.id JOIN Cinematographer ON Film.cinematographer_id = Cinematographer.id\r\nWHERE Award.year = 1983",
+        "interpretation1": "What is the director whose film won an award in 1983 and who was the cinematographer for the same film?",
+        "interpretation2": "Provide a list of all directors and also list the cinematographer whose film won an award in 1983."
+    }
+]

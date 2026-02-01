@@ -1,0 +1,9 @@
+[
+    {
+        "question": "Show the chefs and servers who speak English.",
+        "sql_query1": "SELECT Chefs.lastname\r\nFROM Languages JOIN Chefs ON Languages.LanguageID = Chefs.LanguageID\r\nWHERE Languages.LanguageName = \"English\"\r\nUNION\r\nSELECT Servers.lastname\r\nFROM Languages JOIN Servers ON Languages.LanguageID = Servers.LanguageID\r\nWHERE Languages.LanguageName = \"English\"",
+        "sql_query2": "SELECT Chefs.lastname\r\nFROM Languages JOIN Chefs ON Languages.LanguageID = Chefs.LanguageID\r\nUNION\r\nSELECT Servers.lastname\r\nFROM Languages JOIN Servers ON Languages.LanguageID = Servers.LanguageID\r\nWHERE Languages.LanguageName = \"English\"",
+        "interpretation1": "What are the chefs who speak English and servers who speak English?",
+        "interpretation2": "List the chefs and also list the servers who speak English."
+    }
+]

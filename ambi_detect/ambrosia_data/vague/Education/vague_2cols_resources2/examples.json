@@ -1,0 +1,22 @@
+[
+    {
+        "question": "Which resource is the least expensive?",
+        "sql_query1": "select TextbookTitle from textbooks_and_software order by price asc limit 1;",
+        "sql_query2": "select SoftwareName from textbooks_and_software order by price asc limit 1;",
+        "sql_query3": "select TextbookTitle, SoftwareName from textbooks_and_software order by price asc limit 1;",
+        "interpretation1": "Which textbook is the least expensive?",
+        "interpretation2": "Which software is the least expensive?",
+        "interpretation3": "Which textbook and software are the least expensive?",
+        "sql_query_general": "select Resources from textbooks_and_software order by price asc limit 1;"
+    },
+    {
+        "question": "Show me courses and resources for them.",
+        "sql_query1": "Select title, TextbookTitle from courses C join textbooks_and_software TAS on C.courseID = TAS.courseID;",
+        "sql_query2": "Select title, SoftwareName from courses C join textbooks_and_software TAS on C.courseID = TAS.courseID;",
+        "sql_query3": "Select title, TextbookTitle, SoftwareName from courses C join textbooks_and_software TAS on C.courseID = TAS.courseID;",
+        "interpretation1": "List the courses and their required textbooks.",
+        "interpretation2": "List the courses and their required softwares.",
+        "interpretation3": "List the courses and their required textbooks and softwares.",
+        "sql_query_general": "Select title, Resources from courses C join textbooks_and_software TAS on C.courseID = TAS.courseID;"
+    }
+]

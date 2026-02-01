@@ -1,0 +1,6 @@
+{
+    "template": "Each Agroforestry Systems has many different Species. Among them, Oak is common to many Agroforestry Systems.",
+    "specific_component": "Oak",
+    "components": "Species",
+    "entities": "Agroforestry Systems"
+}

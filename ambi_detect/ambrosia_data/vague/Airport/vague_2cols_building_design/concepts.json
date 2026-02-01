@@ -1,0 +1,7 @@
+{
+    "template": "Question: Who designed this airport terminal? Subject of Inquiry: Airport Terminal\nFocus: Building Design Possible answer types: 1. Architecture Firm 2. Architect",
+    "subject": "Airport Terminal",
+    "focus": "Building Design",
+    "general_category1": "Architecture Firm",
+    "general_category2": "Architect"
+}

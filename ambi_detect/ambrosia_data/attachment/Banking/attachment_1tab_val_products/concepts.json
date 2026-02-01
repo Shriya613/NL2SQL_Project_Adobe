@@ -1,0 +1,8 @@
+{
+    "template": "Exchange-Traded Product and Unit Investment Trust are subclasses of Products. All Exchange-traded products and Unit investment trusts have property \"Exit Fee\". There might be a Exchange-Traded Product and a Unit Investment Trust that both have \"Exit Fee\" equal to \"1%\".",
+    "general_class": "Products",
+    "class1": "Exchange-Traded Product",
+    "class2": "Unit Investment Trust",
+    "common_property": "Exit Fee",
+    "common_value": "1%"
+}
