@@ -1,6 +1,0 @@
-{
-    "template": "Each Sales Representatives has many different Territories. Among them, Region is common to many Sales Representatives.",
-    "specific_component": "Region",
-    "components": "Territories",
-    "entities": "Sales Representatives"
-}

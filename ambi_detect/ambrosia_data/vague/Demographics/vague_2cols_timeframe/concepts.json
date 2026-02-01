@@ -1,7 +1,0 @@
-{
-    "template": "Question: When did this census take place? Subject of Inquiry: Census\nFocus: Timeframe Possible answer types: 1. Year 2. Month",
-    "subject": "Census",
-    "focus": "Timeframe",
-    "general_category1": "Year",
-    "general_category2": "Month"
-}

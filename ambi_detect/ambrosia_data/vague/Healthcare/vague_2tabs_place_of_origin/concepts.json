@@ -1,7 +1,0 @@
-{
-    "template": "Question: Where is this medical device manufactured? Subject of Inquiry: Medical Device\nFocus: Place of Origin Possible answer types: 1. Country 2. Manufacturing Company",
-    "subject": "Medical Device",
-    "focus": "Place of Origin",
-    "general_category1": "Country",
-    "general_category2": "Manufacturing Company"
-}

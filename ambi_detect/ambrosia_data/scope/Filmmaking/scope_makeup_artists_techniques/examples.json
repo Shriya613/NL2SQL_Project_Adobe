@@ -1,9 +1,0 @@
-[
-    {
-        "question": "What technique names are associated with each makeup artist?",
-        "sql_query1": "SELECT Techniques.name  from Artist_Techniques join Techniques on Artist_Techniques.technique_id = Techniques.technique_id join Makeup_Artists on Artist_Techniques.artist_id = Makeup_Artists.artist_id   GROUP BY Artist_Techniques.technique_id HAVING COUNT(DISTINCT Artist_Techniques.artist_id) = (SELECT COUNT(*) FROM  Makeup_Artists)",
-        "sql_query2": "select makeup_artists.full_name , techniques.name from Artist_Techniques join Techniques on Artist_Techniques.technique_id = Techniques.technique_id join Makeup_Artists on Artist_Techniques.artist_id = Makeup_Artists.artist_id",
-        "interpretation1": "Please provide the technique name that is common for all makeup artists.",
-        "interpretation2": "For each makeup artist, what are the respective names of their techniques?"
-    }
-]

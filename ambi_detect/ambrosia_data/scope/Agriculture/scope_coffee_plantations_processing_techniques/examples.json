@@ -1,9 +1,0 @@
-[
-    {
-        "question": "Give me the processing techniques each coffee plantation uses.",
-        "sql_query1": "SELECT Processing_Techniques.technique_name  from Coffee_Plantations_Processing_Techniques join Processing_Techniques on Coffee_Plantations_Processing_Techniques.processing_technique_id = Processing_Techniques.technique_id join Coffee_Plantations on Coffee_Plantations_Processing_Techniques.coffee_plantation_id = Coffee_Plantations.plantation_id   GROUP BY Coffee_Plantations_Processing_Techniques.processing_technique_id HAVING COUNT(DISTINCT Coffee_Plantations_Processing_Techniques.coffee_plantation_id) = (SELECT COUNT(*) FROM  Coffee_Plantations)",
-        "sql_query2": "select coffee_plantations.name , processing_techniques.technique_name from Coffee_Plantations_Processing_Techniques join Processing_Techniques on Coffee_Plantations_Processing_Techniques.processing_technique_id = Processing_Techniques.technique_id join Coffee_Plantations on Coffee_Plantations_Processing_Techniques.coffee_plantation_id = Coffee_Plantations.plantation_id",
-        "interpretation1": "What processing techniques are the same on all coffee plantations?",
-        "interpretation2": "For every coffee plantation, list the processing techniques used."
-    }
-]

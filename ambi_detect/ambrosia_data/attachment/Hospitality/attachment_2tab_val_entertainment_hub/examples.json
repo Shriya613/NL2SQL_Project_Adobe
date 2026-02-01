@@ -1,9 +1,0 @@
-[
-    {
-        "question": "Provide cocktail lounges and sports bars that are open from 5pm to 2am.",
-        "sql_query1": "SELECT cocktail_lounges.name\r\nFROM cocktail_lounges\r\nWHERE cocktail_lounges.hours = \"Open from 5 PM to 2 AM\"\r\nUNION\r\nSELECT sports_bars.name\r\nFROM sports_bars\r\nWHERE sports_bars.hours = \"Open from 5 PM to 2 AM\"",
-        "sql_query2": "SELECT cocktail_lounges.name\r\nFROM cocktail_lounges\r\nUNION\r\nSELECT sports_bars.name\r\nFROM sports_bars\r\nWHERE sports_bars.hours = \"Open from 5 PM to 2 AM\"",
-        "interpretation1": "What cocktail lounges are open from 5pm to 2am and what sports bars are open for the same hours?",
-        "interpretation2": "List all cocktail lounges and also list sports bars that are open from 5pm to 2am."
-    }
-]

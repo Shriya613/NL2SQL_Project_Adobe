@@ -1,9 +1,0 @@
-[
-    {
-        "question": "Show me all opinion pieces and featured articles in volume 02.",
-        "sql_query1": "SELECT News_Contents.Title \r\nFROM News_Contents JOIN Volumes ON News_Contents.Volume_ID = Volumes.id\r\nWHERE (News_Contents.News_Type = \"Opinion Piece\" OR News_Contents.News_Type = \"Feature Article\") AND Volumes.Issue_Number = \"02\"",
-        "sql_query2": "SELECT News_Contents.Title \r\nFROM News_Contents JOIN Volumes ON News_Contents.Volume_ID = Volumes.id\r\nWHERE News_Contents.News_Type = \"Opinion Piece\" OR News_Contents.News_Type = \"Feature Article\" AND Volumes.Issue_Number = \"02\"",
-        "interpretation1": "Show both opinion pieces and featured articles featured in volume 02.",
-        "interpretation2": "Show all opinion pieces and include just the featured articles from volume 02."
-    }
-]

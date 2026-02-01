@@ -1,9 +1,0 @@
-[
-    {
-        "question": "Show me the topics that each health reporter covers.",
-        "sql_query1": "SELECT Topics.Name  from Health_Reporters_Topics join Topics on Health_Reporters_Topics.TopicID = Topics.TopicID join Health_Reporters on Health_Reporters_Topics.ReporterID = Health_Reporters.ReporterID   GROUP BY Health_Reporters_Topics.TopicID HAVING COUNT(DISTINCT Health_Reporters_Topics.ReporterID) = (SELECT COUNT(*) FROM  Health_Reporters)",
-        "sql_query2": "select health_reporters.name , topics.name from Health_Reporters_Topics join Topics on Health_Reporters_Topics.TopicID = Topics.TopicID join Health_Reporters on Health_Reporters_Topics.ReporterID = Health_Reporters.ReporterID",
-        "interpretation1": "Which topics do all health reporters cover together?",
-        "interpretation2": "For every health reporter, show me the topics they cover."
-    }
-]

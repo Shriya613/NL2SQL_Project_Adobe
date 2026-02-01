@@ -1,7 +1,0 @@
-{
-    "template": "Question: Who developed this medical device? Subject of Inquiry: Medical Device\nFocus: Developer Possible answer types: 1. Scientist 2. Company",
-    "subject": "Medical Device",
-    "focus": "Developer",
-    "general_category1": "Scientist",
-    "general_category2": "Company"
-}

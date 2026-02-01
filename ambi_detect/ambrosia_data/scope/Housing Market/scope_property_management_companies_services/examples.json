@@ -1,9 +1,0 @@
-[
-    {
-        "question": "Tell me services each property management company provides.",
-        "sql_query1": "SELECT Services.service_name  from Property_Management_Companies_Services join Services on Property_Management_Companies_Services.service_id = Services.id join Property_Management_Companies on Property_Management_Companies_Services.company_id = Property_Management_Companies.id   GROUP BY Property_Management_Companies_Services.service_id HAVING COUNT(DISTINCT Property_Management_Companies_Services.company_id) = (SELECT COUNT(*) FROM  Property_Management_Companies)",
-        "sql_query2": "select property_management_companies.name , services.service_name from Property_Management_Companies_Services join Services on Property_Management_Companies_Services.service_id = Services.id join Property_Management_Companies on Property_Management_Companies_Services.company_id = Property_Management_Companies.id",
-        "interpretation1": "What services do all property management companies have in common?",
-        "interpretation2": "For every property management company, list services provided."
-    }
-]

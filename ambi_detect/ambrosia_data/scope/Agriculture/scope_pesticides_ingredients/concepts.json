@@ -1,6 +1,0 @@
-{
-    "template": "Each Pesticides has many different Ingredients. Among them, Malathion is common to many Pesticides.",
-    "specific_component": "Malathion",
-    "components": "Ingredients",
-    "entities": "Pesticides"
-}

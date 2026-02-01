@@ -1,9 +1,0 @@
-[
-    {
-        "question": "Show me the environment every sound mixer records in.",
-        "sql_query1": "SELECT Recording_Environments.environment_name  from Sound_Mixer_Environment_History join Recording_Environments on Sound_Mixer_Environment_History.environment_id = Recording_Environments.id join Post_Production_Sound_Mixers on Sound_Mixer_Environment_History.sound_mixer_id = Post_Production_Sound_Mixers.id   GROUP BY Sound_Mixer_Environment_History.environment_id HAVING COUNT(DISTINCT Sound_Mixer_Environment_History.sound_mixer_id) = (SELECT COUNT(*) FROM  Post_Production_Sound_Mixers)",
-        "sql_query2": "select post_production_sound_mixers.name , recording_environments.environment_name from Sound_Mixer_Environment_History join Recording_Environments on Sound_Mixer_Environment_History.environment_id = Recording_Environments.id join Post_Production_Sound_Mixers on Sound_Mixer_Environment_History.sound_mixer_id = Post_Production_Sound_Mixers.id",
-        "interpretation1": "What environment is common to all sound mixers?",
-        "interpretation2": "For each sound mixer, list the environments they record in."
-    }
-]

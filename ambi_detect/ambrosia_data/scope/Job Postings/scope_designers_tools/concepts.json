@@ -1,6 +1,0 @@
-{
-    "template": "Each Designers has many different Tools. Among them, Adobe Creative Suite is common to many Designers.",
-    "specific_component": "Adobe Creative Suite",
-    "components": "Tools",
-    "entities": "Designers"
-}

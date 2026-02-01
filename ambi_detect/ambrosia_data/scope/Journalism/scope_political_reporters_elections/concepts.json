@@ -1,6 +1,0 @@
-{
-    "template": "Each Political Reporters has many different Elections. Among them, Presidential Campaigns is common to many Political Reporters.",
-    "specific_component": "Presidential Campaigns",
-    "components": "Elections",
-    "entities": "Political Reporters"
-}

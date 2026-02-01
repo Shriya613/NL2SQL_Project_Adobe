@@ -1,6 +1,0 @@
-{
-    "template": "Each Insurance Plan has many different Coverage. Among them, Prescription Drug is common to many Insurance Plan.",
-    "specific_component": "Prescription Drug",
-    "components": "Coverage",
-    "entities": "Insurance Plan"
-}

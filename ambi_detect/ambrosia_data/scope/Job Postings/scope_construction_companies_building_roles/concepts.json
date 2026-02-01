@@ -1,6 +1,0 @@
-{
-    "template": "Each Construction Companies has many different Building Roles. Among them, Site Supervisor is common to many Construction Companies.",
-    "specific_component": "Site Supervisor",
-    "components": "Building Roles",
-    "entities": "Construction Companies"
-}

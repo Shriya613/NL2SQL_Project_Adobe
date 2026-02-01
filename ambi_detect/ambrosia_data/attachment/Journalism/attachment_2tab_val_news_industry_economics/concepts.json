@@ -1,8 +1,0 @@
-{
-    "template": "Advertising Revenue and Subscription Fees are subclasses of News Industry Economics. All Advertising revenues and Subscription feess have property \"Magazine\". There might be a Advertising Revenue and a Subscription Fees that both have \"Magazine\" equal to \"Good Housekeeping\".",
-    "general_class": "News Industry Economics",
-    "class1": "Advertising Revenue",
-    "class2": "Subscription Fees",
-    "common_property": "Magazine",
-    "common_value": "Good Housekeeping"
-}

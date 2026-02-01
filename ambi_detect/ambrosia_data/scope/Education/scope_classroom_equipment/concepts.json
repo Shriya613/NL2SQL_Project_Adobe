@@ -1,6 +1,0 @@
-{
-    "template": "Each Classroom has many different Equipment. Among them, Desks and Chairs is common to many Classroom.",
-    "specific_component": "Desks and Chairs",
-    "components": "Equipment",
-    "entities": "Classroom"
-}

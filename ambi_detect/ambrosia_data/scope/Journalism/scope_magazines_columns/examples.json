@@ -1,9 +1,0 @@
-[
-    {
-        "question": "Give me the columns that each magazine has.",
-        "sql_query1": "SELECT Columns.column_name  from Magazines_Columns join Columns on Magazines_Columns.column_id = Columns.id join Magazines on Magazines_Columns.magazine_id = Magazines.id   GROUP BY Magazines_Columns.column_id HAVING COUNT(DISTINCT Magazines_Columns.magazine_id) = (SELECT COUNT(*) FROM  Magazines)",
-        "sql_query2": "select magazines.name , columns.column_name from Magazines_Columns join Columns on Magazines_Columns.column_id = Columns.id join Magazines on Magazines_Columns.magazine_id = Magazines.id",
-        "interpretation1": "Which columns do all magazines have in common?",
-        "interpretation2": "For every magazine, show the columns that they have."
-    }
-]

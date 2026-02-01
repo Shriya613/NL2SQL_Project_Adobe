@@ -1,8 +1,0 @@
-{
-    "template": "Guitar and Piano are subclasses of Musical Instrument. All Guitars and Pianos have property \"Manufacturer\". There might be a Guitar and a Piano that both have \"Manufacturer\" equal to \"Bonners Music\".",
-    "general_class": "Musical Instrument",
-    "class1": "Guitar",
-    "class2": "Piano",
-    "common_property": "Manufacturer",
-    "common_value": "Bonners Music"
-}

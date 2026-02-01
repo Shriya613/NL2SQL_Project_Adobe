@@ -1,7 +1,0 @@
-{
-    "template": "Question: Who designed this intersection? Subject of Inquiry: Intersection\nFocus: Designer Possible answer types: 1. Civil Engineer 2. Engineering Firm",
-    "subject": "Intersection",
-    "focus": "Designer",
-    "general_category1": "Civil Engineer",
-    "general_category2": "Engineering Firm"
-}

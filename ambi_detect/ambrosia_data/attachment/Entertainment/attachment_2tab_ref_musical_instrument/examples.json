@@ -1,9 +1,0 @@
-[
-    {
-        "question": "Show guitar models and piano models where Yamaha is the manufacturer.",
-        "sql_query1": "SELECT Guitars.model_name\r\nFROM Manufacturers JOIN Guitars ON Manufacturers.id = Guitars.manufacturer_id\r\nWHERE Manufacturers.name = \"Yamaha\"\r\nUNION\r\nSELECT Pianos.model_name\r\nFROM Manufacturers JOIN Pianos ON Manufacturers.id = Pianos.manufacturer_id\r\nWHERE Manufacturers.name = \"Yamaha\"",
-        "sql_query2": "SELECT Guitars.model_name\r\nFROM Manufacturers JOIN Guitars ON Manufacturers.id = Guitars.manufacturer_id\r\nUNION\r\nSELECT Pianos.model_name\r\nFROM Manufacturers JOIN Pianos ON Manufacturers.id = Pianos.manufacturer_id\r\nWHERE Manufacturers.name = \"Yamaha\"",
-        "interpretation1": "What are the guitar models where the manufacturer is Yamaha and what are the piano models from the same manufacturer?",
-        "interpretation2": "Provide a list of all guitar models and also provide a list of all the piano models where the manufacturer is Yamaha."
-    }
-]

@@ -1,9 +1,0 @@
-[
-    {
-        "question": "Show me the benefits each credit card has.",
-        "sql_query1": "SELECT Benefits.benefitName  from Credit_Card_Benefits join Benefits on Credit_Card_Benefits.benefitId = Benefits.id join Credit_Cards on Credit_Card_Benefits.creditCardId = Credit_Cards.id   GROUP BY Credit_Card_Benefits.benefitId HAVING COUNT(DISTINCT Credit_Card_Benefits.creditCardId) = (SELECT COUNT(*) FROM  Credit_Cards)",
-        "sql_query2": "select credit_cards.cardnumber , benefits.benefitname from Credit_Card_Benefits join Benefits on Credit_Card_Benefits.benefitId = Benefits.id join Credit_Cards on Credit_Card_Benefits.creditCardId = Credit_Cards.id",
-        "interpretation1": "What benefits do all credit cards have in common?",
-        "interpretation2": "For every credit card, list the benefits they have."
-    }
-]

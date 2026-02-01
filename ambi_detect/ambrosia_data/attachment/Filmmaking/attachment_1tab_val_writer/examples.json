@@ -1,9 +1,0 @@
-[
-    {
-        "question": "Show screenwriters and playwrights who have studied at New York University.",
-        "sql_query1": "SELECT Writer.name \r\nFROM Writer\r\nWHERE (Writer.Type = \"Screenwriter\" OR Writer.Type = \"Playwright\") AND Writer.Education = \"New York University\"",
-        "sql_query2": "SELECT Writer.name \r\nFROM Writer\r\nWHERE Writer.Type = \"Screenwriter\" OR Writer.Type = \"Playwright\" AND Writer.Education = \"New York University\"",
-        "interpretation1": "Which screenwriters have studied at New York University which playwrights have studied at the same university?",
-        "interpretation2": "Provide a list of all screenwriters and also provide a list of playwrights who have studied at New York University."
-    }
-]

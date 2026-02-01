@@ -1,9 +1,0 @@
-[
-    {
-        "question": "Give me all airport expansions and renovations that increased capacity to 1000 passengers per day.",
-        "sql_query1": "SELECT Development_Projects.ProjectName \r\nFROM Development_Projects\r\nWHERE (Development_Projects.ProjectName = \"Airport Expansion\" OR Development_Projects.ProjectName = \"Renovation\") AND Development_Projects.Increased_Capacity = \"1000 Passengers per Day\"",
-        "sql_query2": "SELECT Development_Projects.ProjectName \r\nFROM Development_Projects\r\nWHERE Development_Projects.ProjectName = \"Airport Expansion\" OR Development_Projects.ProjectName = \"Renovation\" AND Development_Projects.Increased_Capacity = \"1000 Passengers per Day\"",
-        "interpretation1": "Give me both airport expansions that increased capacity to 1000 passengers per day and renovations that increased capacity to the same number.",
-        "interpretation2": "Give me all the airport expansions and also give me all renovations that increased capacity to 1000 passengers per day."
-    }
-]

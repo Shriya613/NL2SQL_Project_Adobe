@@ -1,9 +1,0 @@
-[
-    {
-        "question": "Show exams and quizzes graded by Professor Smith.",
-        "sql_query1": "SELECT Exams.CourseTitle as title\r\nFROM Exams JOIN Assessors ON Exams.AssessorId = Assessors.AssessorID\r\nWHERE Assessors.name = \"Professor Smith\"\r\nUNION\r\nSELECT Quizzes.Description as title\r\nFROM Quizzes JOIN Assessors ON Quizzes.AssessorId = Assessors.AssessorID\r\nWHERE Assessors.name = \"Professor Smith\"",
-        "sql_query2": "SELECT Exams.CourseTitle as title\r\nFROM Exams JOIN Assessors ON Exams.AssessorId = Assessors.AssessorID\r\nUNION\r\nSELECT Quizzes.Description as title\r\nFROM Quizzes JOIN Assessors ON Quizzes.AssessorId = Assessors.AssessorID\r\nWHERE Assessors.name = \"Professor Smith\"",
-        "interpretation1": "Show both exams graded by Professor Smith and quizzes graded by the same person.",
-        "interpretation2": "Show all exams and also show quizzes graded by Professor Smith."
-    }
-]

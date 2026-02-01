@@ -1,9 +1,0 @@
-[
-    {
-        "question": "Show me the themes each hotel uses.",
-        "sql_query1": "SELECT Themes.theme_name  from Boutique_Hotels_Themes join Themes on Boutique_Hotels_Themes.theme_id = Themes.theme_id join Boutique_Hotels on Boutique_Hotels_Themes.boutique_hotel_id = Boutique_Hotels.hotel_id   GROUP BY Boutique_Hotels_Themes.theme_id HAVING COUNT(DISTINCT Boutique_Hotels_Themes.boutique_hotel_id) = (SELECT COUNT(*) FROM  Boutique_Hotels)",
-        "sql_query2": "select boutique_hotels.name , themes.theme_name from Boutique_Hotels_Themes join Themes on Boutique_Hotels_Themes.theme_id = Themes.theme_id join Boutique_Hotels on Boutique_Hotels_Themes.boutique_hotel_id = Boutique_Hotels.hotel_id",
-        "interpretation1": "What themes are common to all hotels?",
-        "interpretation2": "For every hotel, list the themes they use."
-    }
-]

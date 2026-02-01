@@ -1,9 +1,0 @@
-[
-    {
-        "question": "List all construction worker salaries and electrician salaries for employees who work for any of Derek Brown's companies.",
-        "sql_query1": "SELECT Trade_Jobs.salary \r\nFROM Trade_Jobs\r\nWHERE (Trade_Jobs.trade_job = \"Construction Worker\" OR Trade_Jobs.trade_job = \"Electrician\") AND Trade_Jobs.company_owner = \"Derek Brown\"",
-        "sql_query2": "SELECT Trade_Jobs.salary \r\nFROM Trade_Jobs\r\nWHERE Trade_Jobs.trade_job = \"Construction Worker\" OR Trade_Jobs.trade_job = \"Electrician\" AND Trade_Jobs.company_owner = \"Derek Brown\"",
-        "interpretation1": "List all construction worker and electrician salaries where the company owner is Derek Brown.",
-        "interpretation2": "Show all of the construction worker salaries, also show the electrician salaries for those working for any of Derek Brown's companies."
-    }
-]

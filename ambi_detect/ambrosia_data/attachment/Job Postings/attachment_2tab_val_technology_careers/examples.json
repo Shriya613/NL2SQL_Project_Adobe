@@ -1,9 +1,0 @@
-[
-    {
-        "question": "Display middle data analysts and software developers.",
-        "sql_query1": "SELECT Software_Developers.name\r\nFROM Software_Developers\r\nWHERE Software_Developers.grade = \"Middle\"\r\nUNION\r\nSELECT Data_Analysts.name\r\nFROM Data_Analysts\r\nWHERE Data_Analysts.grade = \"Middle\"",
-        "sql_query2": "SELECT Software_Developers.name\r\nFROM Software_Developers\r\nUNION\r\nSELECT Data_Analysts.name\r\nFROM Data_Analysts\r\nWHERE Data_Analysts.grade = \"Middle\"",
-        "interpretation1": "Which software developers and data analysts have a middle grade?",
-        "interpretation2": "List all software developers and also show middle data analysts."
-    }
-]

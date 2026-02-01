@@ -1,9 +1,0 @@
-[
-    {
-        "question": "Show all science fiction books and romance books published in 2018.",
-        "sql_query1": "SELECT Books.title \r\nFROM Books\r\nWHERE (Books.Book_Genre = \"Science Fiction Book\" OR Books.Book_Genre = \"Romance Book\") AND Books.Year_Of_Publication = 2018",
-        "sql_query2": "SELECT Books.title \r\nFROM Books\r\nWHERE Books.Book_Genre = \"Science Fiction Book\" OR Books.Book_Genre = \"Romance Book\" AND Books.Year_Of_Publication = 2018",
-        "interpretation1": "Show all books in the science fiction published in 2018 or romance genres, which were published at the same time.",
-        "interpretation2": "Show all science fiction books regardless of publishing date, also show the romance books published in 2018."
-    }
-]

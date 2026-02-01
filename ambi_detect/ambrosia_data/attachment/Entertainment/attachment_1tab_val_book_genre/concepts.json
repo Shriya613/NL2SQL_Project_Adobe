@@ -1,8 +1,0 @@
-{
-    "template": "Science Fiction Book and Romance Book are subclasses of Book Genre. All Science fiction books and Romance books have property \"Year of Publication\". There might be a Science Fiction Book and a Romance Book that both have \"Year of Publication\" equal to \"2018\".",
-    "general_class": "Book Genre",
-    "class1": "Science Fiction Book",
-    "class2": "Romance Book",
-    "common_property": "Year of Publication",
-    "common_value": "2018"
-}

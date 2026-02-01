@@ -1,9 +1,0 @@
-[
-    {
-        "question": "Who are the staff working at the baggage claims and security checks at terminal 2?",
-        "sql_query1": "SELECT BaggageClaims.HandlerName as name\r\nFROM BaggageClaims\r\nWHERE BaggageClaims.Location = \"Terminal 2\"\r\nUNION\r\nSELECT SecurityChecks.OfficerName as name\r\nFROM SecurityChecks\r\nWHERE SecurityChecks.Location = \"Terminal 2\"",
-        "sql_query2": "SELECT BaggageClaims.HandlerName as name\r\nFROM BaggageClaims\r\nUNION\r\nSELECT SecurityChecks.OfficerName as name\r\nFROM SecurityChecks\r\nWHERE SecurityChecks.Location = \"Terminal 2\"",
-        "interpretation1": "Who are the staff working at the baggage claims at terminal 2 and at the security checks in the same location?",
-        "interpretation2": "Provide a list of all baggage claim staff and also provide a list of security staff in terminal 2."
-    }
-]

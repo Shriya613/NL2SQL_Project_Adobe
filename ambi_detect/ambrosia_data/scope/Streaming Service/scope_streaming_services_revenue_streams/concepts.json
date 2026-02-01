@@ -1,6 +1,0 @@
-{
-    "template": "Each Streaming Services has many different Revenue Streams. Among them, Advertising Revenue is common to many Streaming Services.",
-    "specific_component": "Advertising Revenue",
-    "components": "Revenue Streams",
-    "entities": "Streaming Services"
-}

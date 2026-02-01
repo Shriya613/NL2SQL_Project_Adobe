@@ -1,9 +1,0 @@
-[
-    {
-        "question": "Give me the project descriptions corresponding to each firm.",
-        "sql_query1": "SELECT Project_Types.Description  from Design_Build_Firms_Project_Types join Project_Types on Design_Build_Firms_Project_Types.TypeID = Project_Types.TypeID join Design_Build_Firms on Design_Build_Firms_Project_Types.FirmID = Design_Build_Firms.FirmID   GROUP BY Design_Build_Firms_Project_Types.TypeID HAVING COUNT(DISTINCT Design_Build_Firms_Project_Types.FirmID) = (SELECT COUNT(*) FROM  Design_Build_Firms)",
-        "sql_query2": "select design_build_firms.name , project_types.description from Design_Build_Firms_Project_Types join Project_Types on Design_Build_Firms_Project_Types.TypeID = Project_Types.TypeID join Design_Build_Firms on Design_Build_Firms_Project_Types.FirmID = Design_Build_Firms.FirmID",
-        "interpretation1": "What project description is in common for all firms?",
-        "interpretation2": "For each firm, give me the corresponding project description."
-    }
-]

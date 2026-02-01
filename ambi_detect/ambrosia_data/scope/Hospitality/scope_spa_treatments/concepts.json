@@ -1,6 +1,0 @@
-{
-    "template": "Each Spa has many different Treatments. Among them, Massage is common to many Spa.",
-    "specific_component": "Massage",
-    "components": "Treatments",
-    "entities": "Spa"
-}

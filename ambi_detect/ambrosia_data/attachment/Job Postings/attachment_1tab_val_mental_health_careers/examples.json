@@ -1,9 +1,0 @@
-[
-    {
-        "question": "Show me psychologists and psychiatrists from Harmony Wellness Center.",
-        "sql_query1": "SELECT Employees.FullName\r\nFROM Employees\r\nWHERE (Employees.Mental_Health_Career = \"Psychologist\" OR Employees.Mental_Health_Career = \"Psychiatrist\") AND Employees.Clinic = \"Harmony Wellness Center\"",
-        "sql_query2": "SELECT Employees.FullName\r\nFROM Employees\r\nWHERE Employees.Mental_Health_Career = \"Psychologist\" OR Employees.Mental_Health_Career = \"Psychiatrist\" AND Employees.Clinic = \"Harmony Wellness Center\"",
-        "interpretation1": "What psychologists are from Harmony Wellness Center and what psychiatrists are from the same clinic?",
-        "interpretation2": "Provide a list of all psychologists and also provide a list of psychiatrists from Harmony Wellness Center."
-    }
-]

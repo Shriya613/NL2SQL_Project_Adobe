@@ -1,9 +1,0 @@
-[
-    {
-        "question": "Show me the services that every clinic provides.",
-        "sql_query1": "SELECT Services.service_name  from Clinics_Services join Services on Clinics_Services.service_id = Services.service_id join Clinics on Clinics_Services.clinic_id = Clinics.clinic_id   GROUP BY Clinics_Services.service_id HAVING COUNT(DISTINCT Clinics_Services.clinic_id) = (SELECT COUNT(*) FROM  Clinics)",
-        "sql_query2": "select clinics.name , services.service_name from Clinics_Services join Services on Clinics_Services.service_id = Services.service_id join Clinics on Clinics_Services.clinic_id = Clinics.clinic_id",
-        "interpretation1": "What services do all clinics provide at the same time?",
-        "interpretation2": "For each clinic, list the services they provide."
-    }
-]

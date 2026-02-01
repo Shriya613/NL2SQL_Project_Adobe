@@ -1,9 +1,0 @@
-[
-    {
-        "question": "Show autobiographies and historical accounts from the 19th century.",
-        "sql_query1": "SELECT Narratives.title \r\nFROM NarrativeForms JOIN Narratives ON NarrativeForms.id = Narratives.narrative_form_id JOIN Epochs ON Narratives.epoch_id = Epochs.id\r\nWHERE (NarrativeForms.Narrative_Form = \"Autobiography\" OR NarrativeForms.Narrative_Form = \"Historical Account\") AND Epochs.Epoch = \"19th Century\"",
-        "sql_query2": "SELECT Narratives.title \r\nFROM NarrativeForms JOIN Narratives ON NarrativeForms.id = Narratives.narrative_form_id JOIN Epochs ON Narratives.epoch_id = Epochs.id\r\nWHERE NarrativeForms.Narrative_Form = \"Autobiography\" OR NarrativeForms.Narrative_Form = \"Historical Account\" AND Epochs.Epoch = \"19th Century\"",
-        "interpretation1": "What autobiographies are from the 19th century and what historical accounts are from the same epoch?",
-        "interpretation2": "List all autobiographies and also list historical accounts from the 19th century."
-    }
-]

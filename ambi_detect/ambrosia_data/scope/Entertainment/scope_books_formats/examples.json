@@ -1,9 +1,0 @@
-[
-    {
-        "question": "Which formats are associated with each book?",
-        "sql_query1": "SELECT Formats.name  from Book_Formats join Formats on Book_Formats.format_id = Formats.id join Books on Book_Formats.book_id = Books.id   GROUP BY Book_Formats.format_id HAVING COUNT(DISTINCT Book_Formats.book_id) = (SELECT COUNT(*) FROM  Books)",
-        "sql_query2": "select books.title , formats.name from Book_Formats join Formats on Book_Formats.format_id = Formats.id join Books on Book_Formats.book_id = Books.id",
-        "interpretation1": "Which format is shared among all books?",
-        "interpretation2": "For each book, could you provide the corresponding format?"
-    }
-]

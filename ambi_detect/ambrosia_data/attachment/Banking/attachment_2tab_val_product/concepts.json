@@ -1,8 +1,0 @@
-{
-    "template": "Savings Account and Checking Account fall under the category of Financial Products. Both can offer an 'Interest Rate', sometimes identical, like a 1% annual rate.",
-    "general_class": "Product",
-    "class1": "Savings Account",
-    "class2": "Checking Account",
-    "common_property": "Interest Rate",
-    "common_value": "1%"
-}

@@ -1,7 +1,0 @@
-{
-    "template": "Question: Who approved the plans for this engineering project? Subject of Inquiry: Engineering Project\nFocus: Approving Authority Possible answer types: 1. Government Agency 2. Regulatory Board",
-    "subject": "Engineering Project",
-    "focus": "Approving Authority",
-    "general_category1": "Government Agency",
-    "general_category2": "Regulatory Board"
-}

@@ -1,9 +1,0 @@
-[
-    {
-        "question": "Provide breaking news and news analysis articles about the Turkey-Syria earthquakes.",
-        "sql_query1": "SELECT Articles.Title \r\nFROM Articles\r\nWHERE (Articles.NewsType = \"Breaking News\" OR Articles.NewsType = \"News Analysis\") AND Articles.Event = \"Turkey\u2013Syria earthquakes\"",
-        "sql_query2": "SELECT Articles.Title \r\nFROM Articles\r\nWHERE Articles.NewsType = \"Breaking News\" OR Articles.NewsType = \"News Analysis\" AND Articles.Event = \"Turkey\u2013Syria earthquakes\"",
-        "interpretation1": "What breaking news articles are about the Turkey-Syria earthquakes and what news analysis articles are about the same event?",
-        "interpretation2": "Provide a list of all breaking news articles and also provide a list of news analysis articles about the Turkey-Syria earthquakes."
-    }
-]

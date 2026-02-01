@@ -1,9 +1,0 @@
-[
-    {
-        "question": "Show textbooks and e-books with a publisher email address of pearson@email.com.",
-        "sql_query1": "SELECT Books.Title \r\nFROM Books JOIN Publishers ON Books.PublisherID = Publishers.PublisherID\r\nWHERE (Books.Educational_Materials = 'Textbook' OR Books.Educational_Materials = 'E-Book') AND Publishers.email = \"pearson@email.com\"",
-        "sql_query2": "SELECT Books.Title \r\nFROM Books JOIN Publishers ON Books.PublisherID = Publishers.PublisherID\r\nWHERE Books.Educational_Materials = 'Textbook' OR Books.Educational_Materials = 'E-Book' AND Publishers.email = \"pearson@email.com\"",
-        "interpretation1": "What textbooks have a publisher email address of pearson@email.com and what e-books have the same publisher email?",
-        "interpretation2": "List all textbooks and also list e-books with a publisher email address of pearson@email.com."
-    }
-]

@@ -1,9 +1,0 @@
-[
-    {
-        "question": "Show me the types of questions every exam asks.",
-        "sql_query1": "SELECT Type_Of_Question.questionType  from Exam_Type_Of_Question join Type_Of_Question on Exam_Type_Of_Question.questionTypeID = Type_Of_Question.id join Exam on Exam_Type_Of_Question.examID = Exam.id   GROUP BY Exam_Type_Of_Question.questionTypeID HAVING COUNT(DISTINCT Exam_Type_Of_Question.examID) = (SELECT COUNT(*) FROM  Exam)",
-        "sql_query2": "select exam.examname , type_of_question.questiontype from Exam_Type_Of_Question join Type_Of_Question on Exam_Type_Of_Question.questionTypeID = Type_Of_Question.id join Exam on Exam_Type_Of_Question.examID = Exam.id",
-        "interpretation1": "What type of questions are common to all exams?",
-        "interpretation2": "For each exam, list the types of questions asked."
-    }
-]

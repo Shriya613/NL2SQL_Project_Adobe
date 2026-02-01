@@ -1,6 +1,0 @@
-{
-    "template": "Each Clinics has many different Services. Among them, Vaccination is common to many Clinics.",
-    "specific_component": "Vaccination",
-    "components": "Services",
-    "entities": "Clinics"
-}

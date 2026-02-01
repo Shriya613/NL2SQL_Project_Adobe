@@ -1,9 +1,0 @@
-[
-    {
-        "question": "Show me country singers and bluegrass singers with a guitar.",
-        "sql_query1": "SELECT Songs.song_title \r\nFROM Musicians JOIN MusicianInstrument ON Musicians.id = MusicianInstrument.musician_id JOIN Instruments ON MusicianInstrument.instrument_id = Instruments.id JOIN Albums ON Albums.artist_id = Musicians.id JOIN SongAlbum ON SongAlbum.album_id = Albums.id JOIN Songs ON Songs.id = SongAlbum.song_id\r\nWHERE Musicians.musician_type = \"Country Singer\" AND Instruments.instrument_name = \"Guitar\"\nUNION\nSELECT Songs.song_title \r\nFROM Musicians JOIN MusicianInstrument ON Musicians.id = MusicianInstrument.musician_id JOIN Instruments ON MusicianInstrument.instrument_id = Instruments.id JOIN Albums ON Albums.artist_id = Musicians.id JOIN SongAlbum ON SongAlbum.album_id = Albums.id JOIN Songs ON Songs.id = SongAlbum.song_id\r\nWHERE Musicians.musician_type = \"Bluegrass Singer\" AND Instruments.instrument_name = \"Guitar\"",
-        "sql_query2": "SELECT Songs.song_title \r\nFROM Songs JOIN SongAlbum ON Songs.id = SongAlbum.song_id JOIN Albums ON SongAlbum.album_id = Albums.id JOIN Musicians ON Albums.artist_id = Musicians.id WHERE Musicians.musician_type = \"Country Singer\"\nUNION\nSELECT Songs.song_title \r\nFROM Musicians JOIN MusicianInstrument ON Musicians.id = MusicianInstrument.musician_id JOIN Instruments ON MusicianInstrument.instrument_id = Instruments.id JOIN Albums ON Albums.artist_id = Musicians.id JOIN SongAlbum ON SongAlbum.album_id = Albums.id JOIN Songs ON Songs.id = SongAlbum.song_id\r\nWHERE Musicians.musician_type = \"Bluegrass Singer\" AND Instruments.instrument_name = \"Guitar\"",
-        "interpretation1": "Which country singers play guitar and which bluegrass singers play the same instrument?",
-        "interpretation2": "Provide a list of all country singers and also provide a list of bluegrass singers with a guitar."
-    }
-]

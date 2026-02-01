@@ -1,6 +1,0 @@
-{
-    "template": "Each Bed and Breakfast has many different Rooms. Among them, Double Room is common to many Bed and Breakfast.",
-    "specific_component": "Double Room",
-    "components": "Rooms",
-    "entities": "Bed and Breakfast"
-}

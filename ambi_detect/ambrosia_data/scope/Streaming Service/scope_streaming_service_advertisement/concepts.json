@@ -1,6 +1,0 @@
-{
-    "template": "Each Streaming Service has many different Advertisement. Among them, Pre-Roll Ads is common to many Streaming Service.",
-    "specific_component": "Pre-Roll Ads",
-    "components": "Advertisement",
-    "entities": "Streaming Service"
-}

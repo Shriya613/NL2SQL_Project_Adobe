@@ -1,8 +1,0 @@
-{
-    "template": "Museum and Planetarium are subclasses of Educational Venues. All Museums and Planetariums have property \"Tickets\". There might be a Museum and a Planetarium that both have \"Tickets\" with similar pricing.",
-    "general_class": "Educational Venues",
-    "class1": "Museum",
-    "class2": "Planetarium",
-    "common_property": "Tickets",
-    "common_value": "$15"
-}

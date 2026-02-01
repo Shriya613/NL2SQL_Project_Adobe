@@ -1,7 +1,0 @@
-{
-    "template": "Question: How many languages are spoken in this community? Subject of Inquiry: Community\nFocus: Languages Possible answer types: 1. Official Languages 2. Spoken Languages",
-    "subject": "Community",
-    "focus": "Languages",
-    "general_category1": "Official Languages",
-    "general_category2": "Spoken Languages"
-}

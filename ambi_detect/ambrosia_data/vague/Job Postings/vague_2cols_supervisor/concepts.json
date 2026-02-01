@@ -1,7 +1,0 @@
-{
-    "template": "Question: Who will be the direct supervisor for this role? Subject of Inquiry: Role\nFocus: Supervisor Possible answer types: 1. Department Head 2. Team Leader",
-    "subject": "Role",
-    "focus": "Supervisor",
-    "general_category1": "Department Head",
-    "general_category2": "Team Leader"
-}

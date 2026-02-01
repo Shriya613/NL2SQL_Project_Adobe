@@ -1,6 +1,0 @@
-{
-    "template": "Each Aquaculture Facility has many different Fish Species. Among them, Salmon is common to many Aquaculture Facility.",
-    "specific_component": "Salmon",
-    "components": "Fish Species",
-    "entities": "Aquaculture Facility"
-}

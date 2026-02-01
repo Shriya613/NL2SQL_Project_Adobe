@@ -1,9 +1,0 @@
-[
-    {
-        "question": "What are the amusement parks and water parks in Orlando, Florida?",
-        "sql_query1": "SELECT ThemeParks.parkName \r\nFROM ThemeParks JOIN Locations ON ThemeParks.locationId = Locations.id\r\nWHERE ThemeParks.familyEntertainment = \"Amusement Park\" AND Locations.name = \"Orlando, Florida\"\nUNION\nSELECT ThemeParks.parkName \r\nFROM ThemeParks JOIN Locations ON ThemeParks.locationId = Locations.id\r\nWHERE ThemeParks.familyEntertainment = \"Water Park\" AND Locations.name = \"Orlando, Florida\"",
-        "sql_query2": "SELECT ThemeParks.parkName \r\nFROM ThemeParks WHERE ThemeParks.familyEntertainment = \"Amusement Park\"\nUNION\nSELECT ThemeParks.parkName \r\nFROM ThemeParks JOIN Locations ON ThemeParks.locationId = Locations.id\r\nWHERE ThemeParks.familyEntertainment = \"Water Park\" AND Locations.name = \"Orlando, Florida\"",
-        "interpretation1": "What are the amusement parks in Orlando, Florida? What are the water parks in the same place?",
-        "interpretation2": "List all the amusement parks, also list the water parks but only those in Orlando, Florida."
-    }
-]

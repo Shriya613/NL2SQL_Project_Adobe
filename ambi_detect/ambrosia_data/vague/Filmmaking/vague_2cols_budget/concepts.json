@@ -1,7 +1,0 @@
-{
-    "template": "Question: What was the budget of this film? Subject of Inquiry: Film\nFocus: Budget Possible answer types: 1. Production Cost 2. Marketing Expense",
-    "subject": "Film",
-    "focus": "Budget",
-    "general_category1": "Production Cost",
-    "general_category2": "Marketing Expense"
-}

@@ -1,9 +1,0 @@
-[
-    {
-        "question": "Show graphic designer positions and web developer positions at 2/7 London Street offices.",
-        "sql_query1": "SELECT Position.title \r\nFROM Position\r\nWHERE (Position.creative_industry_profession = \"Graphic Designer\" OR Position.creative_industry_profession = \"Web Developer\") AND Position.office = \"2/7 London Street\"",
-        "sql_query2": "SELECT Position.title \r\nFROM Position\r\nWHERE Position.creative_industry_profession = \"Graphic Designer\" OR Position.creative_industry_profession = \"Web Developer\" AND Position.office = \"2/7 London Street\"",
-        "interpretation1": "What graphic designer positions are at 2/7 London Street offices and what web developer positions are at the same location?",
-        "interpretation2": "List all graphic designer positions and also list web developer positions at 2/7 London Street offices."
-    }
-]

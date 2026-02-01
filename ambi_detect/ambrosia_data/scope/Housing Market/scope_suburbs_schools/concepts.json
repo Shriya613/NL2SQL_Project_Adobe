@@ -1,6 +1,0 @@
-{
-    "template": "Each Suburbs has many different Schools. Among them, Elementary School is common to many Suburbs.",
-    "specific_component": "Elementary School",
-    "components": "Schools",
-    "entities": "Suburbs"
-}

@@ -1,9 +1,0 @@
-[
-    {
-        "question": "What payment types are there for each movie streamed?",
-        "sql_query1": "SELECT Payments.payment_type  from streamings_payments join streamings  ON Streamings_Payments.streaming_id = streamings.streaming_id join payments  ON Streamings_Payments.payment_id = payments.payment_id GROUP BY Streamings_Payments.payment_id HAVING COUNT(DISTINCT Streamings_Payments.streaming_id) = (SELECT COUNT(*) FROM  Streamings)",
-        "sql_query2": "select streamings.streaming_id , payments.payment_type from streamings_payments join streamings  ON Streamings_Payments.streaming_id = streamings.streaming_id join payments  ON Streamings_Payments.payment_id = payments.payment_id",
-        "interpretation1": "What payment type is used at least once for every streaming?",
-        "interpretation2": "For every streaming, list the associated payment type that was used."
-    }
-]

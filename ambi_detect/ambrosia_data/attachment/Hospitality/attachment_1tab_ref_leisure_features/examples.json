@@ -1,9 +1,0 @@
-[
-    {
-        "question": "Show hotels with swimming pools or hot tubs in New York.",
-        "sql_query1": "SELECT Hotel.name \r\nFROM LeisureFeature JOIN FeatureInRoom ON LeisureFeature.id = FeatureInRoom.leisurefeature_id JOIN RoomType ON FeatureInRoom.roomtype_id = RoomType.id JOIN Hotel ON RoomType.hotel_id = Hotel.id JOIN City ON Hotel.city_id = City.id\r\nWHERE (LeisureFeature.feature = \"Swimming Pool\" OR LeisureFeature.feature = \"Hot Tub\") AND City.name = \"New York\"",
-        "sql_query2": "SELECT Hotel.name \r\nFROM LeisureFeature JOIN FeatureInRoom ON LeisureFeature.id = FeatureInRoom.leisurefeature_id JOIN RoomType ON FeatureInRoom.roomtype_id = RoomType.id JOIN Hotel ON RoomType.hotel_id = Hotel.id JOIN City ON Hotel.city_id = City.id\r\nWHERE LeisureFeature.feature = \"Swimming Pool\" OR LeisureFeature.feature = \"Hot Tub\" AND City.name = \"New York\"",
-        "interpretation1": "What hotels with swimming pools are in New York and what hotels with hot tubs are in the same location?",
-        "interpretation2": "List all hotels with swimming pools and also list hotels with hot tubs in New York."
-    }
-]

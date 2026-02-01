@@ -1,9 +1,0 @@
-[
-    {
-        "question": "Give me all country singers and bluegrass singers who play guitar.",
-        "sql_query1": "SELECT Musician.Name \r\nFROM Musician\r\nWHERE (Musician.Genre = \"Country Singer\" OR Musician.Genre = \"Bluegrass Singer\") AND Musician.Instrument = \"Guitar\"",
-        "sql_query2": "SELECT Musician.Name \r\nFROM Musician\r\nWHERE Musician.Genre = \"Country Singer\" OR Musician.Genre = \"Bluegrass Singer\" AND Musician.Instrument = \"Guitar\"",
-        "interpretation1": "Show all the country and bluegrass singers who play guitar.",
-        "interpretation2": "Give me all the country singers, also show the guitar playing bluegrass singers."
-    }
-]

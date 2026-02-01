@@ -1,8 +1,0 @@
-{
-    "template": "Screenwriter and Editor are film production roles. All Screenwriters and Editors have a property \"Number of Projects Completed\". There might be a Screenwriter and an Editor who have both completed \"15\" projects while others in these roles have completed a different number of projects.",
-    "general_class": "Film Production Role",
-    "class1": "Screenwriter",
-    "class2": "Editor",
-    "common_property": "Number of Projects Completed",
-    "common_value": "15"
-}

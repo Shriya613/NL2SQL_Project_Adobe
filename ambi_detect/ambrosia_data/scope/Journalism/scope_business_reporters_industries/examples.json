@@ -1,9 +1,0 @@
-[
-    {
-        "question": "Give me the name of the industry each business reporter is in.",
-        "sql_query1": "SELECT Industries.name  from Business_Reporters_Industries join Industries on Business_Reporters_Industries.industryID = Industries.industryID join Business_Reporters on Business_Reporters_Industries.businessReporterID = Business_Reporters.reporterID   GROUP BY Business_Reporters_Industries.industryID HAVING COUNT(DISTINCT Business_Reporters_Industries.businessReporterID) = (SELECT COUNT(*) FROM  Business_Reporters)",
-        "sql_query2": "select business_reporters.fullname , industries.name from Business_Reporters_Industries join Industries on Business_Reporters_Industries.industryID = Industries.industryID join Business_Reporters on Business_Reporters_Industries.businessReporterID = Business_Reporters.reporterID",
-        "interpretation1": "Which industries are common to all reporters?",
-        "interpretation2": "For each business reporter, show their industry name."
-    }
-]

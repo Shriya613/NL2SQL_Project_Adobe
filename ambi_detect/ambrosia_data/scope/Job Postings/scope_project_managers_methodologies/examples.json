@@ -1,9 +1,0 @@
-[
-    {
-        "question": "Show me the methodologies that every project manager uses.",
-        "sql_query1": "SELECT Methodologies.name  from Project_Managers_Methodologies join Methodologies on Project_Managers_Methodologies.methodology_id = Methodologies.methodology_id join Project_Managers on Project_Managers_Methodologies.project_manager_id = Project_Managers.id   GROUP BY Project_Managers_Methodologies.methodology_id HAVING COUNT(DISTINCT Project_Managers_Methodologies.project_manager_id) = (SELECT COUNT(*) FROM  Project_Managers)",
-        "sql_query2": "select project_managers.name , methodologies.name from Project_Managers_Methodologies join Methodologies on Project_Managers_Methodologies.methodology_id = Methodologies.methodology_id join Project_Managers on Project_Managers_Methodologies.project_manager_id = Project_Managers.id",
-        "interpretation1": "What methodologies are common to all project managers?",
-        "interpretation2": "For each project manager, list the methodologies they use."
-    }
-]

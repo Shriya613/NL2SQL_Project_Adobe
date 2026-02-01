@@ -1,9 +1,0 @@
-[
-    {
-        "question": "Give me the facilities that all airports offer.",
-        "sql_query1": "SELECT Facilities.Type  from Airports_Facilities join Facilities on Airports_Facilities.FacilityID = Facilities.FacilityID join Airports on Airports_Facilities.AirportID = Airports.AirportID   GROUP BY Airports_Facilities.FacilityID HAVING COUNT(DISTINCT Airports_Facilities.AirportID) = (SELECT COUNT(*) FROM  Airports)",
-        "sql_query2": "select airports.name , facilities.type from Airports_Facilities join Facilities on Airports_Facilities.FacilityID = Facilities.FacilityID join Airports on Airports_Facilities.AirportID = Airports.AirportID",
-        "interpretation1": "Which facilities are common to all airports?",
-        "interpretation2": "For each airport, show the facilities that they offer."
-    }
-]

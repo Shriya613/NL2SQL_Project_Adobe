@@ -1,6 +1,0 @@
-{
-    "template": "Each Graphic Designers has many different Programs. Among them, Illustrator is common to many Graphic Designers.",
-    "specific_component": "Illustrator",
-    "components": "Programs",
-    "entities": "Graphic Designers"
-}

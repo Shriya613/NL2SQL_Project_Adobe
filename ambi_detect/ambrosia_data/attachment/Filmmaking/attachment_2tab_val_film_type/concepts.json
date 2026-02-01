@@ -1,8 +1,0 @@
-{
-    "template": "Documentary and Short Film are subclasses of Film Type. All Documentaries and Short Films have a property \"Budget\". There might be a Documentary and a Short Film both produced with a budget of \"500,000 USD\" while others in these categories have different budgets.",
-    "general_class": "Film Type",
-    "class1": "Documentary",
-    "class2": "Short Film",
-    "common_property": "Budget",
-    "common_value": "500000"
-}

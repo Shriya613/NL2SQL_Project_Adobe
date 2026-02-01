@@ -1,9 +1,0 @@
-[
-    {
-        "question": "List all ETPs and UITs where the exit fee is 0.01.",
-        "sql_query1": "SELECT Products.Name \r\nFROM Products\r\nWHERE (Products.Category = \"ETP\" OR Products.Category = \"UIT\") AND Products.ExitFee = 0.01",
-        "sql_query2": "SELECT Products.Name \r\nFROM Products\r\nWHERE Products.Category = \"ETP\" OR Products.Category = \"UIT\" AND Products.ExitFee = 0.01",
-        "interpretation1": "List all entries for both ETPs and UITs where the exit fee is 0.01.",
-        "interpretation2": "Show all the ETP records, in addition show the UIT records with an exit fee of 0.01."
-    }
-]

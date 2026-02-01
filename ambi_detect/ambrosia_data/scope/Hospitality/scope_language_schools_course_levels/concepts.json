@@ -1,6 +1,0 @@
-{
-    "template": "Each Language Schools has many different Course Levels. Among them, Beginner Level is common to many Language Schools.",
-    "specific_component": "Beginner Level",
-    "components": "Course Levels",
-    "entities": "Language Schools"
-}

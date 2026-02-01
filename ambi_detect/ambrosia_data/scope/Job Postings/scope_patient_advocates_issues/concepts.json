@@ -1,6 +1,0 @@
-{
-    "template": "Each Patient Advocates has many different Issues. Among them, Billing is common to many Patient Advocates.",
-    "specific_component": "Billing",
-    "components": "Issues",
-    "entities": "Patient Advocates"
-}

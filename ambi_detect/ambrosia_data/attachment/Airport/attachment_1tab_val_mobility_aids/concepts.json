@@ -1,8 +1,0 @@
-{
-    "template": "Wheelchair Assistance and Mobility Scooter are subclasses of Mobility Aids. All Wheelchair Assistance and Mobility Scooter services have the property \"Pick-Up/Drop-Off Location\". There might be a Wheelchair Assistance service and a Mobility Scooter service that both have a \"Pick-Up/Drop-Off Location\" at \"Entrance A\".",
-    "general_class": "Mobility Aids",
-    "class1": "Wheelchair Assistance",
-    "class2": "Mobility Scooter",
-    "common_property": "Pick-Up/Drop-Off Location",
-    "common_value": "Entrance A"
-}

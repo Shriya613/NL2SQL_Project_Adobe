@@ -1,9 +1,0 @@
-[
-    {
-        "question": "Show me documentaries and mini-series that have 10 episodes.",
-        "sql_query1": "SELECT TVShows.Title \r\nFROM TVShows JOIN EpisodeCounts ON TVShows.Id = EpisodeCounts.Show_ID\r\nWHERE (TVShows.Type = \"Documentary Series\" OR TVShows.Type = \"Mini-Series\") AND EpisodeCounts.Number_of_Episodes = 10",
-        "sql_query2": "SELECT TVShows.Title \r\nFROM TVShows JOIN EpisodeCounts ON TVShows.Id = EpisodeCounts.Show_ID\r\nWHERE TVShows.Type = \"Documentary Series\" OR TVShows.Type = \"Mini-Series\" AND EpisodeCounts.Number_of_Episodes = 10",
-        "interpretation1": "Which documentary series have 10 episodes and which mini-series have the same number of episodes?",
-        "interpretation2": "Provide a list of all documentary series and also provide a list of mini-series that have 10 episodes."
-    }
-]

@@ -1,9 +1,0 @@
-[
-    {
-        "question": "Show me Airbus aircrafts and Boeing aircrafts with 180 seats.",
-        "sql_query1": "SELECT Manufactures.aircraftModel \r\nFROM Manufactures\r\nWHERE (Manufactures.manufacturers = \"Airbus\" OR Manufactures.manufacturers = \"Boeing\") AND Manufactures.numberOfSeats = 180",
-        "sql_query2": "SELECT Manufactures.aircraftModel \r\nFROM Manufactures\r\nWHERE Manufactures.manufacturers = \"Airbus\" OR Manufactures.manufacturers = \"Boeing\" AND Manufactures.numberOfSeats = 180",
-        "interpretation1": "What Airbus aircrafts have 180 seats and what Boeing aircrafts have the same number of seats?",
-        "interpretation2": "Provide a list of all Airbus aircrafts and also provide a list of Boeing aircrafts with 180 seats."
-    }
-]

@@ -1,8 +1,0 @@
-{
-    "template": "Cruise Ship and All-Inclusive Resort are subclasses of Vacation Option. All Cruise ships and All-inclusive resorts have property \"Activities\". There might be a Cruise Ship and a All-Inclusive Resort that both have \"Activities\" equal to \"Dance Class\".",
-    "general_class": "Vacation Option",
-    "class1": "Cruise Ship",
-    "class2": "All-Inclusive Resort",
-    "common_property": "Activities",
-    "common_value": "Dance Class"
-}

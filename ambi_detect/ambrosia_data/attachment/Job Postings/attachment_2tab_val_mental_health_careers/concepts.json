@@ -1,8 +1,0 @@
-{
-    "template": "Psychologist and Psychiatrist are subclasses of Mental Health Careers. All Psychologists and Psychiatrists have property \"Clinic\". There might be a Psychologist and a Psychiatrist that both have \"Clinic\" equal to \"Harmony Wellness Center\".",
-    "general_class": "Mental Health Careers",
-    "class1": "Psychologist",
-    "class2": "Psychiatrist",
-    "common_property": "Clinic",
-    "common_value": "Harmony Wellness Center"
-}

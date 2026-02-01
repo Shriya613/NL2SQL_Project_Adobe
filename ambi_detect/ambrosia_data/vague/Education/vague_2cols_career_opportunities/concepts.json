@@ -1,7 +1,0 @@
-{
-    "template": "Question: What are the career opportunities after completing this major? Subject of Inquiry: Major\nFocus: Career Opportunities Possible answer types: 1. Job Roles 2. Industries",
-    "subject": "Major",
-    "focus": "Career Opportunities",
-    "general_category1": "Job Roles",
-    "general_category2": "Industries"
-}

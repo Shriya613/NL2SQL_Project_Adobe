@@ -1,7 +1,0 @@
-{
-    "template": "Question: What are the critical reviews of this film? Subject of Inquiry: Film\nFocus: Review Possible answer types: 1. Film Critic Opinion 2. Audience Reviews",
-    "subject": "Film",
-    "focus": "Review",
-    "general_category1": "Film Critic Opinion",
-    "general_category2": "Audience Reviews"
-}

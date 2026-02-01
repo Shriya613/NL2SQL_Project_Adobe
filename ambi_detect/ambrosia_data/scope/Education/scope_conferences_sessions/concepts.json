@@ -1,6 +1,0 @@
-{
-    "template": "Each Conferences has many different Sessions. Among them, Keynote Speech is common to many Conferences.",
-    "specific_component": "Keynote Speech",
-    "components": "Sessions",
-    "entities": "Conferences"
-}

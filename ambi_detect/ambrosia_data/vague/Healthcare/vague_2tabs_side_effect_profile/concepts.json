@@ -1,7 +1,0 @@
-{
-    "template": "Question: What are the side effects of this antibiotic? Subject of Inquiry: Antibiotic\nFocus: Side Effect Profile Possible answer types: 1. Common Side Effects 2. Serious Side Effects",
-    "subject": "Antibiotic",
-    "focus": "Side Effect Profile",
-    "general_category1": "Common Side Effects",
-    "general_category2": "Serious Side Effects"
-}

@@ -1,9 +1,0 @@
-[
-    {
-        "question": "Give me the metrics corresponding to each financial analyst.",
-        "sql_query1": "SELECT Metrics.metric_name  from Financial_Analysts_Metrics join Metrics on Financial_Analysts_Metrics.metric_id = Metrics.metric_id join Financial_Analysts on Financial_Analysts_Metrics.financial_analyst_id = Financial_Analysts.id   GROUP BY Financial_Analysts_Metrics.metric_id HAVING COUNT(DISTINCT Financial_Analysts_Metrics.financial_analyst_id) = (SELECT COUNT(*) FROM  Financial_Analysts)",
-        "sql_query2": "select financial_analysts.name , metrics.metric_name from Financial_Analysts_Metrics join Metrics on Financial_Analysts_Metrics.metric_id = Metrics.metric_id join Financial_Analysts on Financial_Analysts_Metrics.financial_analyst_id = Financial_Analysts.id",
-        "interpretation1": "Show me the metric that all financial analysts have in common.",
-        "interpretation2": "Give me the financial analysts and the corresponding metrics"
-    }
-]

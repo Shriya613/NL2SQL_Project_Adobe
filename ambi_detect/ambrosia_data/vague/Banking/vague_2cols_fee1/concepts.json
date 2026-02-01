@@ -1,7 +1,0 @@
-{
-    "template": "Question: What are the fees associated with this service? Subject of Inquiry: Banking Services\nFocus: Fee Possible answer types: 1. Transaction Fee 2. Maintenance Fee",
-    "subject": "Banking Services",
-    "focus": "Fee",
-    "general_category1": "Transaction Fee",
-    "general_category2": "Maintenance Fee"
-}

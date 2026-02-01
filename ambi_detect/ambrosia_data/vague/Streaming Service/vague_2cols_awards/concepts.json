@@ -1,7 +1,0 @@
-{
-    "template": "Question: What awards has this film won? Subject of Inquiry: Film\nFocus: Awards Possible answer types: 1. Award Name 2. Winning Category",
-    "subject": "Film",
-    "focus": "Awards",
-    "general_category1": "Award Name",
-    "general_category2": "Winning Category"
-}

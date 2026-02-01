@@ -1,9 +1,0 @@
-[
-    {
-        "question": "Show me all central banks and commercial banks in the UK.",
-        "sql_query1": "SELECT Banks.Name \r\nFROM Banks\r\nWHERE (Banks.types_of_bank = \"Central Bank\" OR Banks.types_of_bank = \"Commercial Bank\") AND Banks.country = \"UK\"",
-        "sql_query2": "SELECT Banks.Name \r\nFROM Banks\r\nWHERE Banks.types_of_bank = \"Central Bank\" OR Banks.types_of_bank = \"Commercial Bank\" AND Banks.country = \"UK\"",
-        "interpretation1": "Show both central and commercial banks based in the UK.",
-        "interpretation2": "Show all the central banks, in addition show the UK-based commercial banks."
-    }
-]

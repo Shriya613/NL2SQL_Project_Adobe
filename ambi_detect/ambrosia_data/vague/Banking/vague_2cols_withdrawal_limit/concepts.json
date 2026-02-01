@@ -1,7 +1,0 @@
-{
-    "template": "Question: How much cash can I withdraw using this ATM? Subject of Inquiry: ATMs\nFocus: Withdrawal Limit Possible answer types: 1. Daily Limit 2. Transaction Limit",
-    "subject": "ATMs",
-    "focus": "Withdrawal Limit",
-    "general_category1": "Daily Limit",
-    "general_category2": "Transaction Limit"
-}

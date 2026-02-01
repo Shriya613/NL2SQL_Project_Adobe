@@ -1,9 +1,0 @@
-[
-    {
-        "question": "Show scriptwriters and editors who worked on projects with a deadline of May 10th 2021.",
-        "sql_query1": "SELECT Scriptwriters.name\r\nFROM Projects JOIN Assignments ON Projects.ID = Assignments.ProjectID JOIN Scriptwriters ON Assignments.ScriptwriterID = Scriptwriters.ID\r\nWHERE Projects.Deadline = \"2021-05-10\"\r\nUNION\r\nSELECT Editors.name\r\nFROM Projects JOIN Assignments ON Projects.ID = Assignments.ProjectID JOIN Editors ON Assignments.EditorID = Editors.ID\r\nWHERE Projects.Deadline = \"2021-05-10\"",
-        "sql_query2": "SELECT Scriptwriters.name\r\nFROM Projects JOIN Assignments ON Projects.ID = Assignments.ProjectID JOIN Scriptwriters ON Assignments.ScriptwriterID = Scriptwriters.ID\r\nUNION\r\nSELECT Editors.name\r\nFROM Projects JOIN Assignments ON Projects.ID = Assignments.ProjectID JOIN Editors ON Assignments.EditorID = Editors.ID\r\nWHERE Projects.Deadline = \"2021-05-10\"",
-        "interpretation1": "Provide scriptwriters and editors both of whom worked on projects with a deadline of May 10th 2021.",
-        "interpretation2": "Display all scriptwriters and only those editors who worked on projects with a deadline of May 10th 2021."
-    }
-]

@@ -1,9 +1,0 @@
-[
-    {
-        "question": "Which challenges are associated with each continuity coordinator?",
-        "sql_query1": "SELECT Challenges.ChallengeName  from Continuity_Coordinators_Challenges join Challenges on Continuity_Coordinators_Challenges.ChallengeID = Challenges.ChallengeID join Continuity_Coordinators on Continuity_Coordinators_Challenges.CoordinatorID = Continuity_Coordinators.ID   GROUP BY Continuity_Coordinators_Challenges.ChallengeID HAVING COUNT(DISTINCT Continuity_Coordinators_Challenges.CoordinatorID) = (SELECT COUNT(*) FROM  Continuity_Coordinators)",
-        "sql_query2": "select continuity_coordinators.name , challenges.challengename from Continuity_Coordinators_Challenges join Challenges on Continuity_Coordinators_Challenges.ChallengeID = Challenges.ChallengeID join Continuity_Coordinators on Continuity_Coordinators_Challenges.CoordinatorID = Continuity_Coordinators.ID",
-        "interpretation1": "Which challenges are shared among all continuity coordinators?",
-        "interpretation2": "Could you provide the continuity coordinators and the corresponding challenges?"
-    }
-]

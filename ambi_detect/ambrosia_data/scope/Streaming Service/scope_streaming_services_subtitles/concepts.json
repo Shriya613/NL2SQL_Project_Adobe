@@ -1,6 +1,0 @@
-{
-    "template": "Each Streaming Services has many different Subtitles. Among them, English is common to many Streaming Services.",
-    "specific_component": "English",
-    "components": "Subtitles",
-    "entities": "Streaming Services"
-}

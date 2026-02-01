@@ -1,6 +1,0 @@
-{
-    "template": "Each Mountain Resorts has many different Winter Sports. Among them, Snowboarding is common to many Mountain Resorts.",
-    "specific_component": "Snowboarding",
-    "components": "Winter Sports",
-    "entities": "Mountain Resorts"
-}

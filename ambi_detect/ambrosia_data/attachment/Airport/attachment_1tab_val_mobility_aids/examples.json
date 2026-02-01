@@ -1,9 +1,0 @@
-[
-    {
-        "question": "Show me the wheelchair assistance and mobility scooters available at entrance A.",
-        "sql_query1": "SELECT Passenger.FullName\r\nFROM Passenger\r\nWHERE (Passenger.mobilityAids = \"Wheelchair Assistance\" OR Passenger.mobilityAids = \"Mobility Scooter\") AND Passenger.pickUpDropOffLocation = \"Entrance A\"",
-        "sql_query2": "SELECT Passenger.FullName\r\nFROM Passenger\r\nWHERE Passenger.mobilityAids = \"Wheelchair Assistance\" OR Passenger.mobilityAids = \"Mobility Scooter\" AND Passenger.pickUpDropOffLocation = \"Entrance A\"",
-        "interpretation1": "What wheelchair assistance is available at entrance A and what mobility scooters are available at the same location?",
-        "interpretation2": "List all wheelchair assistance locations and also list mobility scooters available at location A."
-    }
-]

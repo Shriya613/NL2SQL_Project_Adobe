@@ -1,9 +1,0 @@
-[
-    {
-        "question": "Show scores of all exams and quizzes marked by Ms. Brown.",
-        "sql_query1": "SELECT Exams.marks as score\r\nFROM Assessors JOIN Subjects ON Assessors.id = Subjects.assessor_id JOIN StudentSubjects ON Subjects.id = StudentSubjects.subject_id JOIN Students ON StudentSubjects.student_id = Students.id JOIN Exams ON Students.id = Exams.student_id\r\nWHERE Assessors.name = \"Ms. Brown\"\r\nUNION\r\nSELECT Quizzes.points as score\r\nFROM Assessors JOIN Subjects ON Assessors.id = Subjects.assessor_id JOIN StudentSubjects ON Subjects.id = StudentSubjects.subject_id JOIN Students ON StudentSubjects.student_id = Students.id JOIN Quizzes ON Students.id = Quizzes.student_id\r\nWHERE Assessors.name = \"Ms. Brown\"",
-        "sql_query2": "SELECT Exams.marks as score\r\nFROM Assessors JOIN Subjects ON Assessors.id = Subjects.assessor_id JOIN StudentSubjects ON Subjects.id = StudentSubjects.subject_id JOIN Students ON StudentSubjects.student_id = Students.id JOIN Exams ON Students.id = Exams.student_id\r\nUNION\r\nSELECT Quizzes.points as score\r\nFROM Assessors JOIN Subjects ON Assessors.id = Subjects.assessor_id JOIN StudentSubjects ON Subjects.id = StudentSubjects.subject_id JOIN Students ON StudentSubjects.student_id = Students.id JOIN Quizzes ON Students.id = Quizzes.student_id\r\nWHERE Assessors.name = \"Ms. Brown\"",
-        "interpretation1": "What are the scores on exams marked by Ms. Brown, and on quizzes also marked by her?",
-        "interpretation2": "List scores of all exams and also scores of quizzes marked by Ms. Brown."
-    }
-]

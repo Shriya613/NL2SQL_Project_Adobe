@@ -1,6 +1,0 @@
-{
-    "template": "Each Streaming Services has many different Third-Party Apps. Among them, Spotify Connect is common to many Streaming Services.",
-    "specific_component": "Spotify Connect",
-    "components": "Third-Party Apps",
-    "entities": "Streaming Services"
-}

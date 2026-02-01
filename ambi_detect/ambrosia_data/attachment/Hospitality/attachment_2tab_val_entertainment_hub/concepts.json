@@ -1,8 +1,0 @@
-{
-    "template": "Cocktail Lounge and Sports Bar are subclasses of Entertainment Hub. All Cocktail lounges and Sports bars have property \"Hours\". There might be a Cocktail Lounge and a Sports Bar that both have \"Hours\" equal to \"open from 5 PM to 2 AM\".",
-    "general_class": "Entertainment Hub",
-    "class1": "Cocktail Lounge",
-    "class2": "Sports Bar",
-    "common_property": "Hours",
-    "common_value": "open from 5 PM to 2 AM"
-}

@@ -1,9 +1,0 @@
-[
-    {
-        "question": "What options do we have for every insurance",
-        "sql_query1": "SELECT Options.option_name  from Insurance_Options join Options on Insurance_Options.option_id = Options.id join Insurances on Insurance_Options.insurance_id = Insurances.id   GROUP BY Insurance_Options.option_id HAVING COUNT(DISTINCT Insurance_Options.insurance_id) = (SELECT COUNT(*) FROM  Insurances)",
-        "sql_query2": "select insurances.policy_holder , options.option_name from Insurance_Options join Options on Insurance_Options.option_id = Options.id join Insurances on Insurance_Options.insurance_id = Insurances.id",
-        "interpretation1": "What option is common to all insurances",
-        "interpretation2": "For each insurance, give the list of options covered"
-    }
-]

@@ -1,9 +1,0 @@
-[
-    {
-        "question": "Show me the fields that each physicist works in.",
-        "sql_query1": "SELECT Fields.fieldName  from Physicist_Fields join Fields on Physicist_Fields.fieldId = Fields.id join Physicists on Physicist_Fields.physicistId = Physicists.id   GROUP BY Physicist_Fields.fieldId HAVING COUNT(DISTINCT Physicist_Fields.physicistId) = (SELECT COUNT(*) FROM  Physicists)",
-        "sql_query2": "select physicists.name , fields.fieldname from Physicist_Fields join Fields on Physicist_Fields.fieldId = Fields.id join Physicists on Physicist_Fields.physicistId = Physicists.id",
-        "interpretation1": "What fields are studied equally by all physicists?",
-        "interpretation2": "For each physicist, list the fields they are working in."
-    }
-]

@@ -1,9 +1,0 @@
-[
-    {
-        "question": "Give me the clubs that every high school has.",
-        "sql_query1": "SELECT Clubs.club_name  from High_Schools_Clubs join Clubs on High_Schools_Clubs.club_id = Clubs.id join High_Schools on High_Schools_Clubs.high_school_id = High_Schools.id   GROUP BY High_Schools_Clubs.club_id HAVING COUNT(DISTINCT High_Schools_Clubs.high_school_id) = (SELECT COUNT(*) FROM  High_Schools)",
-        "sql_query2": "select high_schools.name , clubs.club_name from High_Schools_Clubs join Clubs on High_Schools_Clubs.club_id = Clubs.id join High_Schools on High_Schools_Clubs.high_school_id = High_Schools.id",
-        "interpretation1": "Which clubs do all high schools have in common?",
-        "interpretation2": "For each high school, show the clubs that they have."
-    }
-]

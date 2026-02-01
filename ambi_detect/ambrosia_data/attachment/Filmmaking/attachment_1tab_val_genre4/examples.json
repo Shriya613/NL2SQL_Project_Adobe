@@ -1,9 +1,0 @@
-[
-    {
-        "question": "Show blockbusters and indie films that were screened at Sundance.",
-        "sql_query1": "SELECT Movies.Title \r\nFROM Movies\r\nWHERE (Movies.Genre = \"Blockbuster\" OR Movies.Genre = \"Indie Film\") AND Movies.FilmFestival = \"Sundance Film Festival\"",
-        "sql_query2": "SELECT Movies.Title \r\nFROM Movies\r\nWHERE Movies.Genre = \"Blockbuster\" OR Movies.Genre = \"Indie Film\" AND Movies.FilmFestival = \"Sundance Film Festival\"",
-        "interpretation1": "What blockbusters were screened at Sundance and what indie films were also screened there?",
-        "interpretation2": "List all blockbusters and also list indie films that were screened at Sundance."
-    }
-]

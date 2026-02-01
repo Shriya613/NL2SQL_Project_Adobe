@@ -1,9 +1,0 @@
-[
-    {
-        "question": "What is the description of each activity for each farm stay?",
-        "sql_query1": "SELECT Activities.description  from Farm_Stays_Activities join Activities on Farm_Stays_Activities.activity_id = Activities.activity_id join Farm_Stays on Farm_Stays_Activities.farm_stay_id = Farm_Stays.id   GROUP BY Farm_Stays_Activities.activity_id HAVING COUNT(DISTINCT Farm_Stays_Activities.farm_stay_id) = (SELECT COUNT(*) FROM  Farm_Stays)",
-        "sql_query2": "select farm_stays.name , activities.description from Farm_Stays_Activities join Activities on Farm_Stays_Activities.activity_id = Activities.activity_id join Farm_Stays on Farm_Stays_Activities.farm_stay_id = Farm_Stays.id",
-        "interpretation1": "What is the common description of each activity for all farm stays?",
-        "interpretation2": "For each farm stay, show the activity descriptions it offers."
-    }
-]

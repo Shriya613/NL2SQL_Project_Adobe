@@ -1,7 +1,0 @@
-{
-    "template": "Question: Why was this drug discontinued? Subject of Inquiry: Drug\nFocus: Effects Possible answer types: 1. Side Effects 2. Effectiveness",
-    "subject": "Drug",
-    "focus": "Effects",
-    "general_category1": "Side Effects",
-    "general_category2": "Effectiveness"
-}

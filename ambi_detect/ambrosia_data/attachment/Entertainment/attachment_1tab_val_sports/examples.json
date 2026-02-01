@@ -1,9 +1,0 @@
-[
-    {
-        "question": "List all baseball teams and basketball teams playing for USA.",
-        "sql_query1": "SELECT sports_team.name \r\nFROM sports_team\r\nWHERE (sports_team.sport = \"Baseball Team\" OR sports_team.sport = \"Basketball Team\") AND sports_team.country = \"USA\"",
-        "sql_query2": "SELECT sports_team.name \r\nFROM sports_team\r\nWHERE sports_team.sport = \"Baseball Team\" OR sports_team.sport = \"Basketball Team\" AND sports_team.country = \"USA\"",
-        "interpretation1": "Which baseball teams play for USA and which basketball teams play for the same country?",
-        "interpretation2": "Provide a list of all baseball teams and also provide a list of USA's basketball teams."
-    }
-]

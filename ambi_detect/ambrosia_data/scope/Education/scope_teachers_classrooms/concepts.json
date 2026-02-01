@@ -1,6 +1,0 @@
-{
-    "template": "Each Teachers has many different Classrooms. Among them, Classroom 7 is common to many Teachers.",
-    "specific_component": "Classroom 7",
-    "components": "Classrooms",
-    "entities": "Teachers"
-}

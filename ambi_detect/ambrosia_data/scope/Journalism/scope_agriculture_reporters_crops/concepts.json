@@ -1,6 +1,0 @@
-{
-    "template": "Each Agriculture Reporters has many different Crops. Among them, Corn is common to many Agriculture Reporters.",
-    "specific_component": "Corn",
-    "components": "Crops",
-    "entities": "Agriculture Reporters"
-}

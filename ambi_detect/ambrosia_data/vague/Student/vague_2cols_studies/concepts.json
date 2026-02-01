@@ -1,7 +1,0 @@
-{
-    "template": "Question: What does this student study? Subject of Inquiry: Student\nFocus: Studies Possible answer types: 1. Field of Study 2. Degree Program",
-    "subject": "Student",
-    "focus": "Studies",
-    "general_category1": "Field of Study",
-    "general_category2": "Degree Program"
-}

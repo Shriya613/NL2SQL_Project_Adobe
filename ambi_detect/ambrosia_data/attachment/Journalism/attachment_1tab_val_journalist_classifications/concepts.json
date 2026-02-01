@@ -1,8 +1,0 @@
-{
-    "template": "Stringer and Editor are subclasses of Journalist Classifications. All Stringers and Editors have property \"Payment\". There might be a Stringer and a Editor that both have \"Payment\" equal to \"2000\".",
-    "general_class": "Journalist Classifications",
-    "class1": "Stringer",
-    "class2": "Editor",
-    "common_property": "Payment",
-    "common_value": "2000"
-}

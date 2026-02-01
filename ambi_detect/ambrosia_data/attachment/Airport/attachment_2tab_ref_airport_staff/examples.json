@@ -1,9 +1,0 @@
-[
-    {
-        "question": "Show me the names of gate agents and pilots who speak Japanese.",
-        "sql_query1": "SELECT GateAgents.name\r\nFROM Languages JOIN GateAgents ON Languages.id = GateAgents.speaksId\r\nWHERE Languages.language = \"Japanese\"\r\nUNION\r\nSELECT Pilots.name\r\nFROM Languages JOIN Pilots ON Languages.id = Pilots.speaksId\r\nWHERE Languages.language = \"Japanese\"",
-        "sql_query2": "SELECT GateAgents.name\r\nFROM Languages JOIN GateAgents ON Languages.id = GateAgents.speaksId\r\nUNION\r\nSELECT Pilots.name\r\nFROM Languages JOIN Pilots ON Languages.id = Pilots.speaksId\r\nWHERE Languages.language = \"Japanese\"",
-        "interpretation1": "What are the names of gate agents who speak Japanese and also the names of Japanese-speaking pilots?",
-        "interpretation2": "List the names of gate agents and also list the names of Japanese speaking pilots."
-    }
-]

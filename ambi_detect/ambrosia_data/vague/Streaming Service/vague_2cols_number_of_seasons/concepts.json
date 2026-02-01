@@ -1,7 +1,0 @@
-{
-    "template": "Question: How many seasons are planned for this series? Subject of Inquiry: Series\nFocus: Number of Seasons Possible answer types: 1. Released Seasons 2. Planned Seasons",
-    "subject": "Series",
-    "focus": "Number of Seasons",
-    "general_category1": "Released Seasons",
-    "general_category2": "Planned Seasons"
-}

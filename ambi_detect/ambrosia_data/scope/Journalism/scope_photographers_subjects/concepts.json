@@ -1,6 +1,0 @@
-{
-    "template": "Each Photographers has many different Subjects. Among them, Portraits is common to many Photographers.",
-    "specific_component": "Portraits",
-    "components": "Subjects",
-    "entities": "Photographers"
-}

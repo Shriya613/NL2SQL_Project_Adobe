@@ -1,8 +1,0 @@
-{
-    "template": "Tablet and Laptop are subclasses of Portable Computer. All Tablets and Laptops have property \"Operating System\". There might be a Tablet and a Laptop that both have \"Operating System\" equal to \"Windows 10\".",
-    "general_class": "Portable Computer",
-    "class1": "Tablet",
-    "class2": "Laptop",
-    "common_property": "Operating System",
-    "common_value": "Windows 10"
-}

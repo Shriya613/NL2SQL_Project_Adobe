@@ -1,9 +1,0 @@
-[
-    {
-        "question": "What risk names are associated with each bank product?",
-        "sql_query1": "SELECT Risks.RiskName  from Bank_Products_Risks join Risks on Bank_Products_Risks.RiskID = Risks.RiskID join Bank_Products on Bank_Products_Risks.ProductID = Bank_Products.ProductID   GROUP BY Bank_Products_Risks.RiskID HAVING COUNT(DISTINCT Bank_Products_Risks.ProductID) = (SELECT COUNT(*) FROM  Bank_Products)",
-        "sql_query2": "select bank_products.productname , risks.riskname from Bank_Products_Risks join Risks on Bank_Products_Risks.RiskID = Risks.RiskID join Bank_Products on Bank_Products_Risks.ProductID = Bank_Products.ProductID",
-        "interpretation1": "Please provide the risk name that is common for all bank products.",
-        "interpretation2": "For each bank product, what are the corresponding risk names?"
-    }
-]

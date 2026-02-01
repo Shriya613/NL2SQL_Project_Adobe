@@ -1,8 +1,0 @@
-{
-    "template": "Gate Agent and Pilot are subclasses of Airport Staff. All Gate Agents and Pilots have the property \"Language\". There might be a Gate Agent and a Pilot that both speak \"English\".",
-    "general_class": "Airport Staff",
-    "class1": "Gate Agent",
-    "class2": "Pilot",
-    "common_property": "Language",
-    "common_value": "Spanish"
-}

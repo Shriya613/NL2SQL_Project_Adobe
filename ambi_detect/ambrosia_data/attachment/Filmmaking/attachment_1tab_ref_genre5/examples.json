@@ -1,9 +1,0 @@
-[
-    {
-        "question": "Show all animations and comedies released in 2021.",
-        "sql_query1": "SELECT Films.title \r\nFROM FilmGenres JOIN Films ON FilmGenres.film_id = Films.id\r\nWHERE (FilmGenres.genre = \"Animation\" OR FilmGenres.genre = \"Comedy\") AND Films.release_year = 2021",
-        "sql_query2": "SELECT Films.title \r\nFROM FilmGenres JOIN Films ON FilmGenres.film_id = Films.id\r\nWHERE FilmGenres.genre = \"Animation\" OR FilmGenres.genre = \"Comedy\" AND Films.release_year = 2021",
-        "interpretation1": "Show films released in 2021 that are either animations or comedies.",
-        "interpretation2": "Show all the animated films, also show the comedies, but just those released in 2021."
-    }
-]

@@ -1,9 +1,0 @@
-[
-    {
-        "question": "Describe case studies and interviews focused on Environmental Science.",
-        "sql_query1": "SELECT Case_Studies.description\r\nFROM Case_Studies\r\nWHERE Case_Studies.Topic = \"Environmental Science\"\r\nUNION\r\nSELECT Interviews.description\r\nFROM Interviews\r\nWHERE Interviews.Topic = \"Environmental Science\"",
-        "sql_query2": "SELECT Case_Studies.description\r\nFROM Case_Studies\r\nUNION\r\nSELECT Interviews.description\r\nFROM Interviews\r\nWHERE Interviews.Topic = \"Environmental Science\"",
-        "interpretation1": "Can you show the descriptions of both case studies discussing Environmental science and interviews discussing the same topic?",
-        "interpretation2": "Describe all case studies and also describe interviews focused on Environmental science."
-    }
-]

@@ -1,9 +1,0 @@
-[
-    {
-        "question": "Show construction positions and electrician positions in yourcompany1.",
-        "sql_query1": "SELECT Position.position_title \r\nFROM Position JOIN Company ON Position.company_id = Company.id\r\nWHERE (Position.trades_jobs = \"Construction worker\" OR Position.trades_jobs = \"Electrician\") AND Company.name = \"yourcompany1\"",
-        "sql_query2": "SELECT Position.position_title \r\nFROM Position JOIN Company ON Position.company_id = Company.id\r\nWHERE Position.trades_jobs = \"Construction worker\" OR Position.trades_jobs = \"Electrician\" AND Company.name = \"yourcompany1\"",
-        "interpretation1": "Which construction positions are associated with yourcompany1 and which electrician positions are from the same company?",
-        "interpretation2": "Provide a list of all construction positions and also provide a list of electrician positions in yourcompany1."
-    }
-]

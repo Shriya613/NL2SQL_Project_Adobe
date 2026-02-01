@@ -1,9 +1,0 @@
-[
-    {
-        "question": "Please list horrors and thrillers with a $20M budget.",
-        "sql_query1": "SELECT Movies.Title \r\nFROM Movies\r\nWHERE (Movies.Genre = \"Horror\" OR Movies.Genre = \"Thriller\") AND Movies.Budget = \"20 million USD\"",
-        "sql_query2": "SELECT Movies.Title \r\nFROM Movies\r\nWHERE Movies.Genre = \"Horror\" OR Movies.Genre = \"Thriller\" AND Movies.Budget = \"20 million USD\"",
-        "interpretation1": "List both horror and thriller films where either have a $20M budget.",
-        "interpretation2": "Show all horror films, also show just the thrillers with a $20M budget."
-    }
-]

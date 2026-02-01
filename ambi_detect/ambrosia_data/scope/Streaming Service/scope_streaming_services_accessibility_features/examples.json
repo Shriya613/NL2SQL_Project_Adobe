@@ -1,9 +1,0 @@
-[
-    {
-        "question": "Which accessibility features are available for each streaming service?",
-        "sql_query1": "SELECT Accessibility_Features.featureName  from Streaming_Services_Accessibility_Features join Accessibility_Features on Streaming_Services_Accessibility_Features.accessibilityFeatureId = Accessibility_Features.id join Streaming_Services on Streaming_Services_Accessibility_Features.streamingServiceId = Streaming_Services.id   GROUP BY Streaming_Services_Accessibility_Features.accessibilityFeatureId HAVING COUNT(DISTINCT Streaming_Services_Accessibility_Features.streamingServiceId) = (SELECT COUNT(*) FROM  Streaming_Services)",
-        "sql_query2": "select streaming_services.servicename , accessibility_features.featurename from Streaming_Services_Accessibility_Features join Accessibility_Features on Streaming_Services_Accessibility_Features.accessibilityFeatureId = Accessibility_Features.id join Streaming_Services on Streaming_Services_Accessibility_Features.streamingServiceId = Streaming_Services.id",
-        "interpretation1": "Which accessibility feature is common across all streaming services?",
-        "interpretation2": "For each streaming service, what are the associated feature names of accessibility features?"
-    }
-]

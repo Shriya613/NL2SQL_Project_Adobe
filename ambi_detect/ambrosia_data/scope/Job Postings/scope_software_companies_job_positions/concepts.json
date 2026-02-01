@@ -1,6 +1,0 @@
-{
-    "template": "Each Software Companies has many different Job Positions. Among them, Software Engineer is common to many Software Companies.",
-    "specific_component": "Software Engineer",
-    "components": "Job Positions",
-    "entities": "Software Companies"
-}

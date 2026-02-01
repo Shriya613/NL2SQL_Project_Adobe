@@ -1,7 +1,0 @@
-{
-    "template": "Question: When will this film be released? Subject of Inquiry: Movies\nFocus: Release Date Possible answer types: 1. Streaming Release Date 2. Theatrical Release Date",
-    "subject": "Movies",
-    "focus": "Release Date",
-    "general_category1": "Streaming Release Date",
-    "general_category2": "Theatrical Release Date"
-}

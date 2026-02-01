@@ -1,9 +1,0 @@
-[
-    {
-        "question": "Show all casting directors and location scouts whose salary equals $80,000.",
-        "sql_query1": "SELECT Casting_Directors.name\r\nFROM Casting_Directors\r\nWHERE Casting_Directors.Salary = 80000.0\r\nUNION\r\nSELECT Location_Scouts.name\r\nFROM Location_Scouts\r\nWHERE Location_Scouts.Salary = 80000.0",
-        "sql_query2": "SELECT Casting_Directors.name\r\nFROM Casting_Directors\r\nUNION\r\nSELECT Location_Scouts.name\r\nFROM Location_Scouts\r\nWHERE Location_Scouts.Salary = 80000.0",
-        "interpretation1": "Can you display both casting directors and location scouts whose salary is $80,000?",
-        "interpretation2": "List all casting directors and also show location scouts with a salary of $80,000."
-    }
-]

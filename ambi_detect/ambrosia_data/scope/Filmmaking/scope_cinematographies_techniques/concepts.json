@@ -1,6 +1,0 @@
-{
-    "template": "Each Cinematographies has many different Techniques. Among them, Wide Shot is common to many Cinematographies.",
-    "specific_component": "Wide Shot",
-    "components": "Techniques",
-    "entities": "Cinematographies"
-}

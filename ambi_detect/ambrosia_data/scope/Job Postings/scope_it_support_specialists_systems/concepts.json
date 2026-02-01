@@ -1,6 +1,0 @@
-{
-    "template": "Each IT Support Specialists has many different Systems. Among them, Windows is common to many IT Support Specialists.",
-    "specific_component": "Windows",
-    "components": "Systems",
-    "entities": "IT Support Specialists"
-}

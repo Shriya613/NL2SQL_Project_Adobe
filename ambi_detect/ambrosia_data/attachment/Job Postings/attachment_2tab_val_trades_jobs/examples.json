@@ -1,9 +1,0 @@
-[
-    {
-        "question": "Provide all construction workers and electricians who work for Derek Brown.",
-        "sql_query1": "SELECT Construction_Workers.name\r\nFROM Construction_Workers\r\nWHERE Construction_Workers.company_owner = \"Derek Brown\"\r\nUNION\r\nSELECT Electricians.name\r\nFROM Electricians\r\nWHERE Electricians.company_owner = \"Derek Brown\"",
-        "sql_query2": "SELECT Construction_Workers.name\r\nFROM Construction_Workers\r\nUNION\r\nSELECT Electricians.name\r\nFROM Electricians\r\nWHERE Electricians.company_owner = \"Derek Brown\"",
-        "interpretation1": "Show all employees of Derek Brown from the construction workers and electricians.",
-        "interpretation2": "Show me all the construction workers listed and also just those electricians who work for Derek Brown."
-    }
-]

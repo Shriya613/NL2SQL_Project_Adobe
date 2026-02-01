@@ -1,8 +1,0 @@
-{
-    "template": "Pixar and DreamWorks are subclasses of Animation Studio. All films produced by these studios have a property \"Awards\". There might be a Pixar and a DreamWorks film that both won the \"Academy Award for Best Animated Feature\".",
-    "general_class": "Animation Studio",
-    "class1": "Pixar",
-    "class2": "DreamWorks",
-    "common_property": "Awards",
-    "common_value": "Golden Globe"
-}

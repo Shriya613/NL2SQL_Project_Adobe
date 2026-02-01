@@ -1,9 +1,0 @@
-[
-    {
-        "question": "Show debt obligations and mortgage obligations with a price of 1000.",
-        "sql_query1": "SELECT Structured_Financial_Products.Name \r\nFROM Structured_Financial_Products\r\nWHERE (Structured_Financial_Products.Type = \"Collateralized Debt Obligation\" OR Structured_Financial_Products.Type = \"Collateralized Mortgage Obligation\") AND Structured_Financial_Products.Price = 1000.0",
-        "sql_query2": "SELECT Structured_Financial_Products.Name \r\nFROM Structured_Financial_Products\r\nWHERE Structured_Financial_Products.Type = \"Collateralized Debt Obligation\" OR Structured_Financial_Products.Type = \"Collateralized Mortgage Obligation\" AND Structured_Financial_Products.Price = 1000.0",
-        "interpretation1": "What debt obligations have a price of 1000 and what mortgage obligations have the same price?",
-        "interpretation2": "Provide a list of all debt obligations and also provide a list of all mortgage obligations with a price of 1000."
-    }
-]

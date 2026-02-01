@@ -1,9 +1,0 @@
-[
-    {
-        "question": "List all chemists and geoscientists from MIT.",
-        "sql_query1": "SELECT Employees.FullName\r\nFROM Employees\r\nWHERE (Employees.title = \"Chemist\" OR Employees.title = \"Geoscientist\") AND Employees.university = \"MIT\"",
-        "sql_query2": "SELECT Employees.FullName\r\nFROM Employees\r\nWHERE Employees.title = \"Chemist\" OR Employees.title = \"Geoscientist\" AND Employees.university = \"MIT\"",
-        "interpretation1": "Show all chemists from MIT, also show all the geoscientists from the same university.",
-        "interpretation2": "List all of the chemists, in addition show just the geoscientists from MIT."
-    }
-]

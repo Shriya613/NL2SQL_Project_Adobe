@@ -1,7 +1,0 @@
-{
-    "template": "Question: Where does this flight depart from? Subject of Inquiry: Flight\nFocus: Departure Point Possible answer types: 1. Terminal 2. City",
-    "subject": "Flight",
-    "focus": "Departure Point",
-    "general_category1": "Terminal",
-    "general_category2": "City"
-}

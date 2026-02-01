@@ -1,6 +1,0 @@
-{
-    "template": "Each Duty Free Shops has many different Products. Among them, Perfume is common to many Duty Free Shops.",
-    "specific_component": "Perfume",
-    "components": "Products",
-    "entities": "Duty Free Shops"
-}

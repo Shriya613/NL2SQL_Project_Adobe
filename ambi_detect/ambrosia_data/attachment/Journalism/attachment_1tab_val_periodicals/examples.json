@@ -1,9 +1,0 @@
-[
-    {
-        "question": "Show all newspapers and magazines with a 20k circulation.",
-        "sql_query1": "SELECT Periodicals.name \r\nFROM Periodicals\r\nWHERE (Periodicals.type = \"Newspaper\" OR Periodicals.type = \"Magazine\") AND Periodicals.circulation_numbers = 20000",
-        "sql_query2": "SELECT Periodicals.name \r\nFROM Periodicals\r\nWHERE Periodicals.type = \"Newspaper\" OR Periodicals.type = \"Magazine\" AND Periodicals.circulation_numbers = 20000",
-        "interpretation1": "Show both newspapers and magazines where either have a 20k circulation.",
-        "interpretation2": "Show all the newspapers, also show the magazines with a 20k circulation."
-    }
-]

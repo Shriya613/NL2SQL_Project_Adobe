@@ -1,6 +1,0 @@
-{
-    "template": "Each Airlines has many different Fleets. Among them, Boeing 737 is common to many Airlines.",
-    "specific_component": "Boeing 737",
-    "components": "Fleets",
-    "entities": "Airlines"
-}

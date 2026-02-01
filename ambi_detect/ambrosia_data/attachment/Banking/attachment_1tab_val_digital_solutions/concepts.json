@@ -1,8 +1,0 @@
-{
-    "template": "Mobile Banking App and Internet Banking Platform are subclasses of Digital Solutions. All Mobile banking apps and Internet banking platforms have property \"Sign-In Options\". There might be a Mobile Banking App and a Internet Banking Platform that both have \"Sign-In Options\" equal to \"Biometric Authentication\".",
-    "general_class": "Digital Solutions",
-    "class1": "Mobile Banking App",
-    "class2": "Internet Banking Platform",
-    "common_property": "Sign-In Options",
-    "common_value": "Biometric Authentication"
-}

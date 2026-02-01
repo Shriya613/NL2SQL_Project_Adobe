@@ -1,8 +1,0 @@
-{
-    "template": "Research Scientist and Laboratory Technician are subclasses of Lab Positions. All Research scientists and Laboratory technicians have property \"Gender\". There might be a Research Scientist and a Laboratory Technician that both have \"Gender\" equal to \"Female\".",
-    "general_class": "Lab Positions",
-    "class1": "Research Scientist",
-    "class2": "Laboratory Technician",
-    "common_property": "Gender",
-    "common_value": "Female"
-}

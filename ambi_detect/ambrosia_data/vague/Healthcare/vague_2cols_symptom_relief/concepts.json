@@ -1,7 +1,0 @@
-{
-    "template": "Question: What symptoms does this medication treat? Subject of Inquiry: Medication\nFocus: Symptom Relief Possible answer types: 1. Condition Name 2. Body Part Affected",
-    "subject": "Medication",
-    "focus": "Symptom Relief",
-    "general_category1": "Condition Name",
-    "general_category2": "Body Part Affected"
-}

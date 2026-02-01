@@ -1,6 +1,0 @@
-{
-    "template": "Each Coffee Plantations has many different Processing Techniques. Among them, Wet processing is common to many Coffee Plantations.",
-    "specific_component": "Wet processing",
-    "components": "Processing Techniques",
-    "entities": "Coffee Plantations"
-}

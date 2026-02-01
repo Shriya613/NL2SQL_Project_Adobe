@@ -1,6 +1,0 @@
-{
-    "template": "Each Legal Affairs Reporters has many different Jurisdictions. Among them, Federal Courts is common to many Legal Affairs Reporters.",
-    "specific_component": "Federal Courts",
-    "components": "Jurisdictions",
-    "entities": "Legal Affairs Reporters"
-}

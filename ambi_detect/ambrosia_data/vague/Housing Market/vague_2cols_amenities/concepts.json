@@ -1,7 +1,0 @@
-{
-    "template": "Question: What are the amenities in this condo? Subject of Inquiry: Condos\nFocus: Amenities Possible answer types: 1. Facilities 2. Services",
-    "subject": "Condos",
-    "focus": "Amenities",
-    "general_category1": "Facilities",
-    "general_category2": "Services"
-}

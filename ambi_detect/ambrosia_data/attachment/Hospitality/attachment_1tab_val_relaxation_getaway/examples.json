@@ -1,9 +1,0 @@
-[
-    {
-        "question": "Display day spas and wellness retreats that cost 150.0.",
-        "sql_query1": "SELECT Relaxation_spot.Name \r\nFROM Relaxation_spot\r\nWHERE (Relaxation_spot.type = \"Day Spa\" OR Relaxation_spot.type = \"Wellness Retreat\") AND Relaxation_spot.price = 150.0",
-        "sql_query2": "SELECT Relaxation_spot.Name \r\nFROM Relaxation_spot\r\nWHERE Relaxation_spot.type = \"Day Spa\" OR Relaxation_spot.type = \"Wellness Retreat\" AND Relaxation_spot.price = 150.0",
-        "interpretation1": "Which day spas cost 150.0 and which wellness retreats cost the same amount?",
-        "interpretation2": "Provide a list of all day spas and also provide a list of wellness retreats that cost 150.0."
-    }
-]

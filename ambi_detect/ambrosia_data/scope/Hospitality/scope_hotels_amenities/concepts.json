@@ -1,6 +1,0 @@
-{
-    "template": "Each Hotels has many different Amenities. Among them, Spa is common to many Hotels.",
-    "specific_component": "Spa",
-    "components": "Amenities",
-    "entities": "Hotels"
-}

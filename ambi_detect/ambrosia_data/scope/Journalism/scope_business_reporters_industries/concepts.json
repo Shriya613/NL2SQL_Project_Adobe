@@ -1,6 +1,0 @@
-{
-    "template": "Each Business Reporters has many different Industries. Among them, Technology is common to many Business Reporters.",
-    "specific_component": "Technology",
-    "components": "Industries",
-    "entities": "Business Reporters"
-}

@@ -1,9 +1,0 @@
-[
-    {
-        "question": "Show me the platforms each content creator uses.",
-        "sql_query1": "SELECT Platforms.platform_name  from Content_Creators_Platforms join Platforms on Content_Creators_Platforms.platform_id = Platforms.id join Content_Creators on Content_Creators_Platforms.content_creator_id = Content_Creators.id   GROUP BY Content_Creators_Platforms.platform_id HAVING COUNT(DISTINCT Content_Creators_Platforms.content_creator_id) = (SELECT COUNT(*) FROM  Content_Creators)",
-        "sql_query2": "select content_creators.name , platforms.platform_name from Content_Creators_Platforms join Platforms on Content_Creators_Platforms.platform_id = Platforms.id join Content_Creators on Content_Creators_Platforms.content_creator_id = Content_Creators.id",
-        "interpretation1": "What platforms are shared between all content creators?",
-        "interpretation2": "For every content creator, list the platforms used."
-    }
-]

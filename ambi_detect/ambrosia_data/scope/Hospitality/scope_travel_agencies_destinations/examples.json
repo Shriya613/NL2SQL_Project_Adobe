@@ -1,9 +1,0 @@
-[
-    {
-        "question": "What destination names are associated with each travel agency?",
-        "sql_query1": "SELECT Destinations.destination_name  from Travel_Agencies_Destinations join Destinations on Travel_Agencies_Destinations.destination_id = Destinations.id join Travel_Agencies on Travel_Agencies_Destinations.travel_agency_id = Travel_Agencies.id   GROUP BY Travel_Agencies_Destinations.destination_id HAVING COUNT(DISTINCT Travel_Agencies_Destinations.travel_agency_id) = (SELECT COUNT(*) FROM  Travel_Agencies)",
-        "sql_query2": "select travel_agencies.name , destinations.destination_name from Travel_Agencies_Destinations join Destinations on Travel_Agencies_Destinations.destination_id = Destinations.id join Travel_Agencies on Travel_Agencies_Destinations.travel_agency_id = Travel_Agencies.id",
-        "interpretation1": "Which destination name is shared by all travel agencies?",
-        "interpretation2": "For each travel agency, provide the corresponding destination names of destinations."
-    }
-]

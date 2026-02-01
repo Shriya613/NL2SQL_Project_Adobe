@@ -1,9 +1,0 @@
-[
-    {
-        "question": "Show textbooks and ebooks that are published by McGraw-Hill.",
-        "sql_query1": "SELECT Textbooks.title\r\nFROM Publisher JOIN Textbooks ON Publisher.id = Textbooks.publisherId\r\nWHERE Publisher.name = \"McGraw-Hill\"\r\nUNION\r\nSELECT EBooks.title\r\nFROM Publisher JOIN EBooks ON Publisher.id = EBooks.publisherId\r\nWHERE Publisher.name = \"McGraw-Hill\"",
-        "sql_query2": "SELECT Textbooks.title\r\nFROM Publisher JOIN Textbooks ON Publisher.id = Textbooks.publisherId\r\nUNION\r\nSELECT EBooks.title\r\nFROM Publisher JOIN EBooks ON Publisher.id = EBooks.publisherId\r\nWHERE Publisher.name = \"McGraw-Hill\"",
-        "interpretation1": "What textbooks are published by McGraw-Hill and what ebooks are also published by them?",
-        "interpretation2": "Provide a list of all textbooks and also provide a list of all ebooks that are published by McGraw-Hill."
-    }
-]

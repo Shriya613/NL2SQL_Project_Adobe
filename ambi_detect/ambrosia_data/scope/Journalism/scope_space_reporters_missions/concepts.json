@@ -1,6 +1,0 @@
-{
-    "template": "Each Space Reporters has many different Missions. Among them, Mars Exploration is common to many Space Reporters.",
-    "specific_component": "Mars Exploration",
-    "components": "Missions",
-    "entities": "Space Reporters"
-}

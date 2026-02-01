@@ -1,9 +1,0 @@
-[
-    {
-        "question": "Show marine biologists and zoologists with 5 years of experience.",
-        "sql_query1": "SELECT Marine_Biologists.name\r\nFROM Marine_Biologists\r\nWHERE Marine_Biologists.Experience = \"5 years\"\r\nUNION\r\nSELECT Zoologists.name\r\nFROM Zoologists\r\nWHERE Zoologists.Experience = \"5 years\"",
-        "sql_query2": "SELECT Marine_Biologists.name\r\nFROM Marine_Biologists\r\nUNION\r\nSELECT Zoologists.name\r\nFROM Zoologists\r\nWHERE Zoologists.Experience = \"5 years\"",
-        "interpretation1": "Show both marine biologists with 5 years of experience and zoologists with the same experience.",
-        "interpretation2": "Show all marine biologists and also show zoologists with 5 years of experience."
-    }
-]

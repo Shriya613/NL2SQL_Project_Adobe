@@ -1,9 +1,0 @@
-[
-    {
-        "question": "Show me the type of rooms each house has.",
-        "sql_query1": "SELECT Rooms.roomType  from Houses join Houses_Rooms on Houses.id = Houses_Rooms.houseId join Rooms on Houses_Rooms.roomId = Rooms.id   GROUP BY Houses_Rooms.roomId HAVING COUNT(DISTINCT Houses_Rooms.houseId) = (SELECT COUNT(*) FROM  Houses)",
-        "sql_query2": "select houses.address , rooms.roomtype from Houses join Houses_Rooms on Houses.id = Houses_Rooms.houseId join Rooms on Houses_Rooms.roomId = Rooms.id",
-        "interpretation1": "What type of rooms do all houses have in common?",
-        "interpretation2": "For every house, list the type of rooms they have."
-    }
-]

@@ -1,9 +1,0 @@
-[
-    {
-        "question": "Which requirements are associated with each loan application?",
-        "sql_query1": "SELECT Requirements.RequirementDescription  from Loan_Applications_Requirements join Requirements on Loan_Applications_Requirements.ReqID = Requirements.RequirementID join Loan_Applications on Loan_Applications_Requirements.AppID = Loan_Applications.ApplicationID   GROUP BY Loan_Applications_Requirements.ReqID HAVING COUNT(DISTINCT Loan_Applications_Requirements.AppID) = (SELECT COUNT(*) FROM  Loan_Applications)",
-        "sql_query2": "select loan_applications.customername , requirements.requirementdescription from Loan_Applications_Requirements join Requirements on Loan_Applications_Requirements.ReqID = Requirements.RequirementID join Loan_Applications on Loan_Applications_Requirements.AppID = Loan_Applications.ApplicationID",
-        "interpretation1": "Provide the recommendation description that is common to all loan applications.",
-        "interpretation2": "For each loan application, what are the corresponding requirement descriptions?"
-    }
-]

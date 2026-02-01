@@ -1,6 +1,0 @@
-{
-    "template": "Each Community Development Corporations has many different Initiatives. Among them, Homeless Shelter is common to many Community Development Corporations.",
-    "specific_component": "Homeless Shelter",
-    "components": "Initiatives",
-    "entities": "Community Development Corporations"
-}

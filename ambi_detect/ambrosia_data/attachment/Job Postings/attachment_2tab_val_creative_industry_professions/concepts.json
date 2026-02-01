@@ -1,8 +1,0 @@
-{
-    "template": "Graphic Designer and Web Developer are subclasses of Creative Industry Professions. All Graphic designers and Web developers have property \"Office\". There might be a Graphic Designer and a Web Developer that both have \"Office\" equal to \"2/7 London Street\".",
-    "general_class": "Creative Industry Professions",
-    "class1": "Graphic Designer",
-    "class2": "Web Developer",
-    "common_property": "Office",
-    "common_value": "2/7 London Street"
-}

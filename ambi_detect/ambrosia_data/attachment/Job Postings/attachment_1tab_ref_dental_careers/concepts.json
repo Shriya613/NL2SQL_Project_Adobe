@@ -1,8 +1,0 @@
-{
-    "template": "Orthodontist and Periodontist are subclasses of Dental Careers. All Orthodontists and Periodontists have property \"Education\". There might be a Orthodontist and a Periodontist that both have \"Education\" equal to \"Doctor of Dental Surgery\".",
-    "general_class": "Dental Careers",
-    "class1": "Orthodontist",
-    "class2": "Periodontist",
-    "common_property": "Education",
-    "common_value": "Doctor of Dental Surgery"
-}

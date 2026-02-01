@@ -1,7 +1,0 @@
-{
-    "template": "Question: What does this professor teach? Subject of Inquiry: Professors\nFocus: Teaching Subject Possible answer types: 1. Discipline 2. Course Name",
-    "subject": "Professors",
-    "focus": "Teaching Subject",
-    "general_category1": "Discipline",
-    "general_category2": "Course Name"
-}

@@ -1,8 +1,0 @@
-{
-    "template": "Civil Engineer and Architect are subclasses of Construction Jobs. All Civil Engineers and Architects have property \"Design Software Expertise\". There might be a Civil Engineer and an Architect that both have \"Design Software Expertise\" equal to \"AutoCAD\".",
-    "general_class": "Construction Jobs",
-    "class1": "Civil Engineer",
-    "class2": "Architect",
-    "common_property": "Design Software Expertise",
-    "common_value": "AutoCAD"
-}

@@ -1,6 +1,0 @@
-{
-    "template": "Each Photojournalists has many different Equipment. Among them, DSLR Camera is common to many Photojournalists.",
-    "specific_component": "DSLR Camera",
-    "components": "Equipment",
-    "entities": "Photojournalists"
-}

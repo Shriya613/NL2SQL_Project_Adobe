@@ -1,9 +1,0 @@
-[
-    {
-        "question": "Show directors and producers who have won Oscar.",
-        "sql_query1": "SELECT Production.FullName\r\nFROM Production\r\nWHERE (Production.Film_Profession = \"Director\" OR Production.Film_Profession = \"Producer\") AND Production.Award = \"Oscar\"",
-        "sql_query2": "SELECT Production.FullName\r\nFROM Production\r\nWHERE Production.Film_Profession = \"Director\" OR Production.Film_Profession = \"Producer\" AND Production.Award = \"Oscar\"",
-        "interpretation1": "Which directors have won an Oscar award and which producers have won the same award?",
-        "interpretation2": "Provide a list of all directors and also provide a list of producers who have won an Oscar award."
-    }
-]

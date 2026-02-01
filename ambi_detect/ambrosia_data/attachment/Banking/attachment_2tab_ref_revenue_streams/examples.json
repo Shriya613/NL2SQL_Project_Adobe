@@ -1,9 +1,0 @@
-[
-    {
-        "question": "Give me all fees and interest rates for the account's product called checking.",
-        "sql_query1": "SELECT Fees.cardfee AS AMOUNT\r\nFROM Accounts JOIN Fees ON Accounts.AccountID = Fees.AccountID\r\nWHERE Accounts.Product = \"Checking\"\r\nUNION\r\nSELECT InterestRates.monthlyinterestrate\r\nFROM Accounts JOIN InterestRates ON Accounts.AccountID = InterestRates.AccountID\r\nWHERE Accounts.Product = \"Checking\"",
-        "sql_query2": "SELECT Fees.cardfee AS AMOUNT\r\nFROM Accounts JOIN Fees ON Accounts.AccountID = Fees.AccountID\r\nUNION\r\nSELECT InterestRates.monthlyinterestrate AS AMOUNT\r\nFROM Accounts JOIN InterestRates ON Accounts.AccountID = InterestRates.AccountID\r\nWHERE Accounts.Product = \"Checking\"",
-        "interpretation1": "What is the fee of accounts where the product is called checking and what is the interest rate of the accounts with the same product name.",
-        "interpretation2": "Provide a list of all account fees and also provide a list of all account interest rates where the product is called checking."
-    }
-]

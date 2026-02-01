@@ -1,6 +1,0 @@
-{
-    "template": "Each Boutique Hotels has many different Themes. Among them, Art-themed is common to many Boutique Hotels.",
-    "specific_component": "Art-themed",
-    "components": "Themes",
-    "entities": "Boutique Hotels"
-}

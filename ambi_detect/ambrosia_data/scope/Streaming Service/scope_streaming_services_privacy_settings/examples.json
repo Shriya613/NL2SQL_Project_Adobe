@@ -1,9 +1,0 @@
-[
-    {
-        "question": "Give me the privacy setting value for each streaming service.",
-        "sql_query1": "SELECT Privacy_Settings.setting_value  from Streaming_Services_Privacy_Settings join Privacy_Settings on Streaming_Services_Privacy_Settings.privacy_settings_id = Privacy_Settings.setting_id join Streaming_Services on Streaming_Services_Privacy_Settings.streaming_service_id = Streaming_Services.id   GROUP BY Streaming_Services_Privacy_Settings.privacy_settings_id HAVING COUNT(DISTINCT Streaming_Services_Privacy_Settings.streaming_service_id) = (SELECT COUNT(*) FROM  Streaming_Services)",
-        "sql_query2": "select streaming_services.service_name , privacy_settings.setting_value from Streaming_Services_Privacy_Settings join Privacy_Settings on Streaming_Services_Privacy_Settings.privacy_settings_id = Privacy_Settings.setting_id join Streaming_Services on Streaming_Services_Privacy_Settings.streaming_service_id = Streaming_Services.id",
-        "interpretation1": "What is the privacy setting value that is in common for all streaming services?",
-        "interpretation2": "For each streaming service, what is the corresponding privacy setting value?"
-    }
-]

@@ -1,6 +1,0 @@
-{
-    "template": "Each Broadcasts has many different Formats. Among them, Live is common to many Broadcasts.",
-    "specific_component": "Live",
-    "components": "Formats",
-    "entities": "Broadcasts"
-}

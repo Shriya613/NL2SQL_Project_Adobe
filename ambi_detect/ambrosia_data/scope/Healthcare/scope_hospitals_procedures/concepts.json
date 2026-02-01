@@ -1,6 +1,0 @@
-{
-    "template": "Each Hospitals has many different Procedures. Among them, MRI Scans is common to many Hospitals.",
-    "specific_component": "MRI Scans",
-    "components": "Procedures",
-    "entities": "Hospitals"
-}

@@ -1,9 +1,0 @@
-[
-    {
-        "question": "Show currency exchange and ATM machines located near gate 10.",
-        "sql_query1": "SELECT Financial_Services.Name \r\nFROM Financial_Services\r\nWHERE (Financial_Services.Type = \"Currency Exchange Service\" OR Financial_Services.Type = \"ATM Machine\") AND Financial_Services.Location_Within_Terminal = \"Near Gate 10\"",
-        "sql_query2": "SELECT Financial_Services.Name \r\nFROM Financial_Services\r\nWHERE Financial_Services.Type = \"Currency Exchange Service\" OR Financial_Services.Type = \"ATM Machine\" AND Financial_Services.Location_Within_Terminal = \"Near Gate 10\"",
-        "interpretation1": "What currency exchange services are located near gate 10 and what ATM machines are in the same location?",
-        "interpretation2": "Provide a list of all currency exchange services and also provide a list of all ATM machines located near gate 10."
-    }
-]

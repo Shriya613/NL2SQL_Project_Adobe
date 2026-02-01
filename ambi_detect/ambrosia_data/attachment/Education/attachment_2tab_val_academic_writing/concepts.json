@@ -1,8 +1,0 @@
-{
-    "template": "Dissertation and Thesis Proposal are subclasses of Academic Writing. All Dissertations and Thesis Proposals have property \"Academic Supervisor\". There might be a Dissertation and a Thesis Proposal that both have \"Academic Supervisor\" being the same person.",
-    "general_class": "Academic Writing",
-    "class1": "Dissertation",
-    "class2": "Thesis Proposal",
-    "common_property": "Academic Supervisor",
-    "common_value": "Dr. Jane Smith"
-}

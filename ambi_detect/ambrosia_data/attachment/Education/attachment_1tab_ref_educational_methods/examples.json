@@ -1,9 +1,0 @@
-[
-    {
-        "question": "Show the content of online lessons and classroom lessons taught by Emily Williams.",
-        "sql_query1": "SELECT Lessons.content \r\nFROM Lessons JOIN Curriculums ON Lessons.curriculumID = Curriculums.curriculumID JOIN Educators ON Educators.educatorID =  Curriculums.EducatorID\r\nWHERE (Lessons.educationalMethod = 'Online Learning' OR Lessons.educationalMethod = 'Classroom Teaching') AND Educators.firstName = 'Emily' AND Educators.lastName = 'Williams'",
-        "sql_query2": "SELECT Lessons.content \r\nFROM Lessons JOIN Curriculums ON Lessons.curriculumID = Curriculums.curriculumID JOIN Educators ON Educators.educatorID =  Curriculums.EducatorID\r\nWHERE Lessons.educationalMethod = 'Online Learning' OR Lessons.educationalMethod = 'Classroom Teaching' AND Educators.firstName = 'Emily' AND Educators.lastName = 'Williams'",
-        "interpretation1": "What is the content of online and classroom lessons taught by Emily Williams?",
-        "interpretation2": "Provide content for all the online learning lessons and also the content of classroom teaching lessons taught by Emily Williams."
-    }
-]

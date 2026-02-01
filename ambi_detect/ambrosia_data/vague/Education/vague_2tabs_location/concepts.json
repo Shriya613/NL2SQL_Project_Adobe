@@ -1,7 +1,0 @@
-{
-    "template": "Question: Where is this campus located? Subject of Inquiry: Campus\nFocus: Location Possible answer types: 1. City 2. State",
-    "subject": "Campus",
-    "focus": "Location",
-    "general_category1": "City",
-    "general_category2": "State"
-}

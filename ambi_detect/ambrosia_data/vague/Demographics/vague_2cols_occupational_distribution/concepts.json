@@ -1,7 +1,0 @@
-{
-    "template": "Question: What is the most common occupation among workers in this region? Subject of Inquiry: Region\nFocus: Occupational Distribution Possible answer types: 1. Primary Industry 2. Most Common Job",
-    "subject": "Region",
-    "focus": "Occupational Distribution",
-    "general_category1": "Primary Industry",
-    "general_category2": "Most Common Job"
-}

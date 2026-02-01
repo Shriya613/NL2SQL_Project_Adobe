@@ -1,9 +1,0 @@
-[
-    {
-        "question": "List the amenities available in each hotel.",
-        "sql_query1": "SELECT Amenities.amenityName  from Hotel_Amenities join Amenities on Hotel_Amenities.amenityId = Amenities.amenityId join Hotels on Hotel_Amenities.hotelId = Hotels.id   GROUP BY Hotel_Amenities.amenityId HAVING COUNT(DISTINCT Hotel_Amenities.hotelId) = (SELECT COUNT(*) FROM  Hotels)",
-        "sql_query2": "select hotels.name , amenities.amenityname from Hotel_Amenities join Amenities on Hotel_Amenities.amenityId = Amenities.amenityId join Hotels on Hotel_Amenities.hotelId = Hotels.id",
-        "interpretation1": "Display amenities that are common to all hotels.",
-        "interpretation2": "For each hotel, list the corresponding amenities."
-    }
-]

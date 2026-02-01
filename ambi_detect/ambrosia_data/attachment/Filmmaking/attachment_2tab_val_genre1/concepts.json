@@ -1,8 +1,0 @@
-{
-    "template": "Action and Adventure are subclasses of Genre. All Action and Adventure films have a property \"Stars\". There might be an Action and an Adventure film that both star \"Tom Cruise\".",
-    "general_class": "Genre",
-    "class1": "Action",
-    "class2": "Adventure",
-    "common_property": "Stars",
-    "common_value": "Tom Cruise"
-}

@@ -1,8 +1,0 @@
-{
-    "template": "Club and Leadership Program are subclasses of Extracurricular Activities. All Clubs and Leadership Programs have property \"Participants\". There might be a Club and a Leadership Program that both have \"Participants\" equal to a specific number.",
-    "general_class": "Extracurricular Activities",
-    "class1": "Club",
-    "class2": "Leadership Program",
-    "common_property": "Participants",
-    "common_value": "30"
-}

@@ -1,7 +1,0 @@
-{
-    "template": "Question: What is a topic of this internship? Subject of Inquiry: Internships\nFocus: Topic Possible answer types: 1. Industry Sector 2. Project Name",
-    "subject": "Internships",
-    "focus": "Topic",
-    "general_category1": "Industry Sector",
-    "general_category2": "Project Name"
-}

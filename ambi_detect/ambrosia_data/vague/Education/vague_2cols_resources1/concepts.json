@@ -1,7 +1,0 @@
-{
-    "template": "Question: What materials are needed for this project? Subject of Inquiry: Project\nFocus: Resources Possible answer types: 1. Textbooks 2. Supplies",
-    "subject": "Project",
-    "focus": "Resources",
-    "general_category1": "Textbooks",
-    "general_category2": "Supplies"
-}

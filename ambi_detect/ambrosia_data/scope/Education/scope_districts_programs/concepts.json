@@ -1,6 +1,0 @@
-{
-    "template": "Each Districts has many different Programs. Among them, Special Education is common to many Districts.",
-    "specific_component": "Special Education",
-    "components": "Programs",
-    "entities": "Districts"
-}

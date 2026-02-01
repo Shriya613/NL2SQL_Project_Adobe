@@ -1,8 +1,0 @@
-{
-    "template": "Cooking Show and Reality TV Show are subclasses of Television Format. All Cooking shows and Reality tv shows have property \"Audience Score\". There might be a Cooking Show and a Reality TV Show that both have \"Audience Score\" equal to \"7.5\".",
-    "general_class": "Television Format",
-    "class1": "Cooking Show",
-    "class2": "Reality TV Show",
-    "common_property": "Audience Score",
-    "common_value": "7.5"
-}

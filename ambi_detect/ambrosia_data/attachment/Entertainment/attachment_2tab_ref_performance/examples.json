@@ -1,9 +1,0 @@
-[
-    {
-        "question": "Show improvised theatres and musicals that take place in Cambridge Theatre.",
-        "sql_query1": "SELECT Improvised_Theatres.name\r\nFROM Venues JOIN Improvised_Theatres ON Venues.id = Improvised_Theatres.venueID\r\nWHERE Venues.Name = \"Cambridge Theatre\"\r\nUNION\r\nSELECT Musicals.name\r\nFROM Venues JOIN Musicals ON Venues.id = Musicals.venueID\r\nWHERE Venues.Name = \"Cambridge Theatre\"",
-        "sql_query2": "SELECT Improvised_Theatres.name\r\nFROM Venues JOIN Improvised_Theatres ON Venues.id = Improvised_Theatres.venueID\r\nUNION\r\nSELECT Musicals.name\r\nFROM Venues JOIN Musicals ON Venues.id = Musicals.venueID\r\nWHERE Venues.Name = \"Cambridge Theatre\"",
-        "interpretation1": "Which improvised theatres' venue is Cambridge Theatre and which musicals have the same venue?",
-        "interpretation2": "Provide a list of all improvised theatres and also provide a list of musicals that take place in Cambridge Theatre."
-    }
-]

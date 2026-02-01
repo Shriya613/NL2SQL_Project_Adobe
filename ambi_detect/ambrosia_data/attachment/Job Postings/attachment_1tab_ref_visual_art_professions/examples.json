@@ -1,9 +1,0 @@
-[
-    {
-        "question": "Show photographers and videographers with a pricing of 700.",
-        "sql_query1": "SELECT JobPostings.title \r\nFROM JobPostings JOIN Pricing ON JobPostings.pricingID = Pricing.pricingID\r\nWHERE (JobPostings.visualArtProfession = \"Photographer\" OR JobPostings.visualArtProfession = \"Videographer\") AND Pricing.price = 700",
-        "sql_query2": "SELECT JobPostings.title \r\nFROM JobPostings JOIN Pricing ON JobPostings.pricingID = Pricing.pricingID\r\nWHERE JobPostings.visualArtProfession = \"Photographer\" OR JobPostings.visualArtProfession = \"Videographer\" AND Pricing.price = 700",
-        "interpretation1": "Which photographers have a pricing of 700 and which videographers have the same pricing?",
-        "interpretation2": "Provide a list of all photographers and also provide a list of videographers with a pricing of 700."
-    }
-]

@@ -1,9 +1,0 @@
-[
-    {
-        "question": "Display action films and adventure films which star Tom Cruise.",
-        "sql_query1": "SELECT Films.title \r\nFROM Genres JOIN Film_Genres ON Genres.id = Film_Genres.film_genre_id JOIN Films ON Film_Genres.film_id = Films.film_id JOIN Film_Stars ON Films.film_id = Film_Stars.film_id JOIN Stars ON Film_Stars.film_star_id = Stars.id\r\nWHERE (Genres.genre = \"Action\" OR Genres.genre = \"Adventure\") AND Stars.star_name = \"Tom Cruise\"",
-        "sql_query2": "SELECT Films.title \r\nFROM Genres JOIN Film_Genres ON Genres.id = Film_Genres.film_genre_id JOIN Films ON Film_Genres.film_id = Films.film_id JOIN Film_Stars ON Films.film_id = Film_Stars.film_id JOIN Stars ON Film_Stars.film_star_id = Stars.id\r\nWHERE Genres.genre = \"Action\" OR Genres.genre = \"Adventure\" AND Stars.star_name = \"Tom Cruise\"",
-        "interpretation1": "Give me the Tom Cruise films classed in either action or adventure genre.",
-        "interpretation2": "Provide all the action films, in addition, show the adventure films starring Tom Cruise."
-    }
-]

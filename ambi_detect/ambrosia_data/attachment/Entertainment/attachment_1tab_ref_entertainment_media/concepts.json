@@ -1,8 +1,0 @@
-{
-    "template": "Action Films and Romantic Novels are subclasses of Entertainment Media. All Action Films and Romantic Novels have the property \"Release Year\". There might be an Action Film and a Romantic Novel that both have \"Release Year\" equal to \"2020\".",
-    "general_class": "Entertainment Media",
-    "class1": "Film",
-    "class2": "Novel",
-    "common_property": "Release Year",
-    "common_value": "2020"
-}

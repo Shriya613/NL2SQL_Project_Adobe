@@ -1,9 +1,0 @@
-[
-    {
-        "question": "Describe field trips and study groups organised to develop problem-solving skills.",
-        "sql_query1": "SELECT LearningActivity.Description \r\nFROM LearningActivity JOIN Purpose ON LearningActivity.PurposeID = Purpose.ID\r\nWHERE (LearningActivity.ActivityType = \"Field Trip\" OR LearningActivity.ActivityType = \"Study Group\") AND Purpose.Name = \"Problem Solving Skills Development\"",
-        "sql_query2": "SELECT LearningActivity.Description \r\nFROM LearningActivity JOIN Purpose ON LearningActivity.PurposeID = Purpose.ID\r\nWHERE LearningActivity.ActivityType = \"Field Trip\" OR LearningActivity.ActivityType = \"Study Group\" AND Purpose.Name = \"Problem Solving Skills Development\"",
-        "interpretation1": "What field trips are organised to develop problem-solving skills and what study groups have the same purpose?",
-        "interpretation2": "Describe all field trips and also describe study groups organised to develop problem-solving skills."
-    }
-]

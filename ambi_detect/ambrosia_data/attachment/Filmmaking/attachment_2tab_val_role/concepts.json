@@ -1,8 +1,0 @@
-{
-    "template": "Script Supervisor and Costume Designer are roles in film production. All Script Supervisors and Costume Designers have a property \"Age\". There might be a Script Supervisor and a Costume Designer that are both \"45 years\" old while others in these roles have different ages.",
-    "general_class": "Role",
-    "class1": "Script Supervisor",
-    "class2": "Costume Designer",
-    "common_property": "Age",
-    "common_value": "45"
-}

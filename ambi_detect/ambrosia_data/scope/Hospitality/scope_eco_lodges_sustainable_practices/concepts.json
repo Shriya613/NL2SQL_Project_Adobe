@@ -1,6 +1,0 @@
-{
-    "template": "Each Eco Lodges has many different Sustainable Practices. Among them, Solar Power is common to many Eco Lodges.",
-    "specific_component": "Solar Power",
-    "components": "Sustainable Practices",
-    "entities": "Eco Lodges"
-}

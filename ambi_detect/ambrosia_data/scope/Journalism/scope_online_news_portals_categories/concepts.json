@@ -1,6 +1,0 @@
-{
-    "template": "Each Online News Portals has many different Categories. Among them, Breaking News is common to many Online News Portals.",
-    "specific_component": "Breaking News",
-    "components": "Categories",
-    "entities": "Online News Portals"
-}

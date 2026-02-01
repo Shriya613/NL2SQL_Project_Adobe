@@ -1,9 +1,0 @@
-[
-    {
-        "question": "What game platforms are there for all the games listed?",
-        "sql_query1": "SELECT Platforms.name  from Games_Platforms join Platforms on Games_Platforms.platformsID = Platforms.platformID join Games on Games_Platforms.gamesID = Games.gameID   GROUP BY Games_Platforms.platformsID HAVING COUNT(DISTINCT Games_Platforms.gamesID) = (SELECT COUNT(*) FROM  Games)",
-        "sql_query2": "select games.title , platforms.name from Games_Platforms join Platforms on Games_Platforms.platformsID = Platforms.platformID join Games on Games_Platforms.gamesID = Games.gameID",
-        "interpretation1": "What platform is used by all games at the same time?",
-        "interpretation2": "For every game what platforms can they each be played on?"
-    }
-]

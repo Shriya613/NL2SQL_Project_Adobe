@@ -1,9 +1,0 @@
-[
-    {
-        "question": "What section names do we have for every statement",
-        "sql_query1": "SELECT Sections.SectionName  from Financial_Statements_Sections join Sections on Financial_Statements_Sections.Section_id = Sections.id join Financial_Statements on Financial_Statements_Sections.Financial_Statement_id = Financial_Statements.id   GROUP BY Financial_Statements_Sections.Section_id HAVING COUNT(DISTINCT Financial_Statements_Sections.Financial_Statement_id) = (SELECT COUNT(*) FROM  Financial_Statements)",
-        "sql_query2": "select financial_statements.name , sections.sectionname from Financial_Statements_Sections join Sections on Financial_Statements_Sections.Section_id = Sections.id join Financial_Statements on Financial_Statements_Sections.Financial_Statement_id = Financial_Statements.id",
-        "interpretation1": "Provide me the section names which are common to all statements",
-        "interpretation2": "For each statement, provide me the section names it contains"
-    }
-]

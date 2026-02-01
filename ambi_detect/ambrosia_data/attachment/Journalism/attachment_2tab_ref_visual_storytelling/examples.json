@@ -1,9 +1,0 @@
-[
-    {
-        "question": "Show all photos and videos of article with the content of \"A look at the growing popularity of electric cars and their implications for the automotive industry...\"",
-        "sql_query1": "SELECT photos.photo as multimedia\r\nFROM articles JOIN photos ON articles.articleID = photos.articleID\r\nWHERE articles.content = \"A look at the growing popularity of electric cars and their implications for the automotive industry...\"\r\nUNION\r\nSELECT videos.video as multimedia\r\nFROM articles JOIN videos ON articles.articleID = videos.articleID\r\nWHERE articles.content = \"A look at the growing popularity of electric cars and their implications for the automotive industry...\"",
-        "sql_query2": "SELECT photos.photo as multimedia\r\nFROM articles JOIN photos ON articles.articleID = photos.articleID\r\nUNION\r\nSELECT videos.video as multimedia\r\nFROM articles JOIN videos ON articles.articleID = videos.articleID\r\nWHERE articles.content = \"A look at the growing popularity of electric cars and their implications for the automotive industry...\"",
-        "interpretation1": "Which photos are from the article that has the content of \"A look at the growing popularity of electric cars and their implications for the automotive industry...\" and which videos are from the same article?",
-        "interpretation2": "Provide a list of all photos and also a list of videos for the article with the content of \"A look at the growing popularity of electric cars and their implications for the automotive industry...\"."
-    }
-]

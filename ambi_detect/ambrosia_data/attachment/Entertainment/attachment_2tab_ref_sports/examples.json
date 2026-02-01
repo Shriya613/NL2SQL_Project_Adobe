@@ -1,9 +1,0 @@
-[
-    {
-        "question": "Show me baseball teams and basketball teams from the United States.",
-        "sql_query1": "SELECT BaseballTeams.teamname\r\nFROM Countries JOIN BaseballTeams ON Countries.id = BaseballTeams.countryId\r\nWHERE Countries.name = \"United States\"\r\nUNION\r\nSELECT BasketballTeams.teamname\r\nFROM Countries JOIN BasketballTeams ON Countries.id = BasketballTeams.countryId\r\nWHERE Countries.name = \"United States\"",
-        "sql_query2": "SELECT BaseballTeams.teamname\r\nFROM Countries JOIN BaseballTeams ON Countries.id = BaseballTeams.countryId\r\nUNION\r\nSELECT BasketballTeams.teamname\r\nFROM Countries JOIN BasketballTeams ON Countries.id = BasketballTeams.countryId\r\nWHERE Countries.name = \"United States\"",
-        "interpretation1": "What baseball teams are from the United States, and what basketball teams are also from there?",
-        "interpretation2": "List all baseball teams and also list basketball teams from the United States."
-    }
-]

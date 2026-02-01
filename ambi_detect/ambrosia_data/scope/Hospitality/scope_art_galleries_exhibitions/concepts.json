@@ -1,6 +1,0 @@
-{
-    "template": "Each Art Galleries has many different Exhibitions. Among them, Painting Exhibitions is common to many Art Galleries.",
-    "specific_component": "Painting Exhibitions",
-    "components": "Exhibitions",
-    "entities": "Art Galleries"
-}

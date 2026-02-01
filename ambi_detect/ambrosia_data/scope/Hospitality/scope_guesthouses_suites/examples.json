@@ -1,9 +1,0 @@
-[
-    {
-        "question": "What suite types are there for all guest houses?",
-        "sql_query1": "SELECT Suites.suiteType  from GuestHouseSuites join Suites on GuestHouseSuites.suiteType = Suites.suiteType join GuestHouses on GuestHouseSuites.guesthouseID = GuestHouses.houseID   GROUP BY GuestHouseSuites.suiteType HAVING COUNT(DISTINCT GuestHouseSuites.guesthouseID) = (SELECT COUNT(*) FROM  GuestHouses)",
-        "sql_query2": "select guesthouses.housename , suites.suitetype from GuestHouseSuites join Suites on GuestHouseSuites.suiteType = Suites.suiteType join GuestHouses on GuestHouseSuites.guesthouseID = GuestHouses.houseID",
-        "interpretation1": "What suite types are there in common across all guest houses?",
-        "interpretation2": "For all guest houses list all of the available suite types."
-    }
-]

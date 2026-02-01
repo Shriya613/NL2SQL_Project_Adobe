@@ -1,9 +1,0 @@
-[
-    {
-        "question": "List all field trip classes and study group classes that are for real-world applications.",
-        "sql_query1": "SELECT Classes.Name \r\nFROM LearningActivities JOIN Classes ON Classes.ClassID = LearningActivities.ClassID\r\nWHERE (LearningActivities.ActivityType = \"Field Trip\" OR LearningActivities.ActivityType = \"Study Group\") AND LearningActivities.Purpose = \"Real-world Application\"",
-        "sql_query2": "SELECT Classes.Name \r\nFROM LearningActivities JOIN Classes ON Classes.ClassID = LearningActivities.ClassID\r\nWHERE LearningActivities.ActivityType = \"Field Trip\" OR LearningActivities.ActivityType = \"Study Group\" AND LearningActivities.Purpose = \"Real-world Application\"",
-        "interpretation1": "List all field trip and study group classes where either is for a real-world application.",
-        "interpretation2": "Show all the field trips available, also show just those study group classes categorised as being for a real-world application."
-    }
-]

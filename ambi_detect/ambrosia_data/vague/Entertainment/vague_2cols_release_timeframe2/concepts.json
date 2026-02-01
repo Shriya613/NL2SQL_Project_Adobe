@@ -1,7 +1,0 @@
-{
-    "template": "Question: When was this video game released? Subject of Inquiry: Video Game\nFocus: Release Timeframe Possible answer types: 1. Release Year 2. Release Date",
-    "subject": "Video Game",
-    "focus": "Release Timeframe",
-    "general_category1": "Release Year",
-    "general_category2": "Release Date"
-}

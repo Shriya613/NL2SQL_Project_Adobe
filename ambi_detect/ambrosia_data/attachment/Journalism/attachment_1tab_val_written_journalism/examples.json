@@ -1,9 +1,0 @@
-[
-    {
-        "question": "Give me all news articles and featured articles that are 2000 words long.",
-        "sql_query1": "SELECT Articles.title \r\nFROM Articles\r\nWHERE (Articles.Written_Journalism = \"News Article\" OR Articles.Written_Journalism = \"Feature Article\") AND Articles.Word_Count = \"2000 words\"",
-        "sql_query2": "SELECT Articles.title \r\nFROM Articles\r\nWHERE Articles.Written_Journalism = \"News Article\" OR Articles.Written_Journalism = \"Feature Article\" AND Articles.Word_Count = \"2000 words\"",
-        "interpretation1": "List all news and featured articles with a 2000 word count.",
-        "interpretation2": "Show all the news articles and, in addition, only the featured articles that are 2000 words long."
-    }
-]

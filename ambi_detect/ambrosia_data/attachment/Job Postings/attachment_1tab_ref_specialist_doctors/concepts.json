@@ -1,8 +1,0 @@
-{
-    "template": "Radiologist and Ultrasound Technician are subclasses of Specialist Doctors. All Radiologists and Ultrasound technicians have property \"Hospital\". There might be a Radiologist and a Ultrasound Technician that both have \"Hospital\" equal to \"Western Medical Center\".",
-    "general_class": "Specialist Doctors",
-    "class1": "Radiologist",
-    "class2": "Ultrasound Technician",
-    "common_property": "Hospital",
-    "common_value": "Western Medical Center"
-}

@@ -1,9 +1,0 @@
-[
-    {
-        "question": "Display adventure movies and action movies directed by Sofia Martinez.",
-        "sql_query1": "SELECT Adventure_Movies.title\r\nFROM Adventure_Movies\r\nWHERE Adventure_Movies.Director = \"Sofia Martinez\"\r\nUNION\r\nSELECT Action_Movies.title\r\nFROM Action_Movies\r\nWHERE Action_Movies.Director = \"Sofia Martinez\"",
-        "sql_query2": "SELECT Adventure_Movies.title\r\nFROM Adventure_Movies\r\nUNION\r\nSELECT Action_Movies.title\r\nFROM Action_Movies\r\nWHERE Action_Movies.Director = \"Sofia Martinez\"",
-        "interpretation1": "What adventure movies and action movies are directed by Sofia Martinez?",
-        "interpretation2": "List all adventure movies and also show action movies directed by Sofia Martinez."
-    }
-]

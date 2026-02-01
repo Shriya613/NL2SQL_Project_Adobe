@@ -1,7 +1,0 @@
-{
-    "template": "Question: What is the conference's focus? Subject of Inquiry: Conference\nFocus: Focus Possible answer types: 1. Theme Track 2. Submission Topics",
-    "subject": "Conference",
-    "focus": "Focus",
-    "general_category1": "Theme Track",
-    "general_category2": "Submission Topics"
-}

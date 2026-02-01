@@ -1,6 +1,0 @@
-{
-    "template": "Each Culinary Schools has many different Cuisine Types. Among them, French Cuisine is common to many Culinary Schools.",
-    "specific_component": "French Cuisine",
-    "components": "Cuisine Types",
-    "entities": "Culinary Schools"
-}

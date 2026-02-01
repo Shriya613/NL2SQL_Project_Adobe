@@ -1,8 +1,0 @@
-{
-    "template": "Comic Book and Graphic Novel are subclasses of Sequential Art. All Comic books and Graphic novels have property \"Publisher\". There might be a Comic Book and a Graphic Novel that both have \"Publisher\" equal to \"BOOM Studios\".",
-    "general_class": "Sequential Art",
-    "class1": "Comic Book",
-    "class2": "Graphic Novel",
-    "common_property": "Publisher",
-    "common_value": "BOOM Studios"
-}

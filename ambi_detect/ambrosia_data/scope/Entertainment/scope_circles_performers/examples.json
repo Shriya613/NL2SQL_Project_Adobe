@@ -1,9 +1,0 @@
-[
-    {
-        "question": "What performer is there in every circus?",
-        "sql_query1": "SELECT Performers.type  from CirclePerformers join Performers on CirclePerformers.performer_id = Performers.id join Circles on CirclePerformers.circle_id = Circles.id   GROUP BY CirclePerformers.performer_id HAVING COUNT(DISTINCT CirclePerformers.circle_id) = (SELECT COUNT(*) FROM  Circles)",
-        "sql_query2": "select circles.name , performers.type from CirclePerformers join Performers on CirclePerformers.performer_id = Performers.id join Circles on CirclePerformers.circle_id = Circles.id",
-        "interpretation1": "What performer is common to all circles?",
-        "interpretation2": "For every circle, show the performer there."
-    }
-]

@@ -1,6 +1,0 @@
-{
-    "template": "Each Libraries has many different Collections. Among them, Children's Books is common to many Libraries.",
-    "specific_component": "Children's Books",
-    "components": "Collections",
-    "entities": "Libraries"
-}

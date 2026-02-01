@@ -1,9 +1,0 @@
-[
-    {
-        "question": "Tell me the platforms each journalist uses.",
-        "sql_query1": "SELECT Platforms.platform_name  from Multimedia_Journalists_Platforms join Platforms on Multimedia_Journalists_Platforms.platforms_id = Platforms.id join Multimedia_Journalists on Multimedia_Journalists_Platforms.multimedia_journalist_id = Multimedia_Journalists.id   GROUP BY Multimedia_Journalists_Platforms.platforms_id HAVING COUNT(DISTINCT Multimedia_Journalists_Platforms.multimedia_journalist_id) = (SELECT COUNT(*) FROM  Multimedia_Journalists)",
-        "sql_query2": "select multimedia_journalists.name , platforms.platform_name from Multimedia_Journalists_Platforms join Platforms on Multimedia_Journalists_Platforms.platforms_id = Platforms.id join Multimedia_Journalists on Multimedia_Journalists_Platforms.multimedia_journalist_id = Multimedia_Journalists.id",
-        "interpretation1": "What platforms are common to all journalists?",
-        "interpretation2": "For every journalist, list the platforms used."
-    }
-]

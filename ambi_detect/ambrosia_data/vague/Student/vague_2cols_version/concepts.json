@@ -1,7 +1,0 @@
-{
-    "template": "Question: What is the version of this textbook? Subject of Inquiry: Textbooks\nFocus: Version Possible answer types: 1. Edition Number 2. Year Published",
-    "subject": "Textbooks",
-    "focus": "Version",
-    "general_category1": "Edition Number",
-    "general_category2": "Year Published"
-}

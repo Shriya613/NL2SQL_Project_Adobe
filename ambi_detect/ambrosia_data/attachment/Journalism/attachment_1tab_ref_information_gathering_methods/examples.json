@@ -1,9 +1,0 @@
-[
-    {
-        "question": "Show press conferences and interviews attended by politicians.",
-        "sql_query1": "SELECT News_Article.Title \r\nFROM Information_Gathering_Method JOIN News_Article ON Information_Gathering_Method.id = News_Article.information_gathering_method_id JOIN Participant_Type ON News_Article.participant_type_id = Participant_Type.id\r\nWHERE (Information_Gathering_Method.method = \"Press Conference\" OR Information_Gathering_Method.method = \"Interview\") AND Participant_Type.type = \"Politician\"",
-        "sql_query2": "SELECT News_Article.Title \r\nFROM Information_Gathering_Method JOIN News_Article ON Information_Gathering_Method.id = News_Article.information_gathering_method_id JOIN Participant_Type ON News_Article.participant_type_id = Participant_Type.id\r\nWHERE Information_Gathering_Method.method = \"Press Conference\" OR Information_Gathering_Method.method = \"Interview\" AND Participant_Type.type = \"Politician\"",
-        "interpretation1": "What press conferences were attended by politicians and what interviews did they also attend?",
-        "interpretation2": "List all press conferences and also list interviews attended by politicians."
-    }
-]

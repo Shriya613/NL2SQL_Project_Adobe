@@ -1,9 +1,0 @@
-[
-    {
-        "question": "Show me the programs every graphic designer uses.",
-        "sql_query1": "SELECT Programs.programName  from Graphic_Designers_Programs join Programs on Graphic_Designers_Programs.programId = Programs.id join Graphic_Designers on Graphic_Designers_Programs.graphicDesignerId = Graphic_Designers.id   GROUP BY Graphic_Designers_Programs.programId HAVING COUNT(DISTINCT Graphic_Designers_Programs.graphicDesignerId) = (SELECT COUNT(*) FROM  Graphic_Designers)",
-        "sql_query2": "select graphic_designers.name , programs.programname from Graphic_Designers_Programs join Programs on Graphic_Designers_Programs.programId = Programs.id join Graphic_Designers on Graphic_Designers_Programs.graphicDesignerId = Graphic_Designers.id",
-        "interpretation1": "What programs are common to all graphic designers?",
-        "interpretation2": "For each graphic designer, list programs they use."
-    }
-]

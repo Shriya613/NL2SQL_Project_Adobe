@@ -1,9 +1,0 @@
-[
-    {
-        "question": "What are the prices of tablets and laptops that come with Windows 10?",
-        "sql_query1": "SELECT Devices.Price \r\nFROM Devices\r\nWHERE (Devices.Portable_Computer = \"Tablet\" OR Devices.Portable_Computer = \"Laptop\") AND Devices.Operating_System = \"Windows 10\"",
-        "sql_query2": "SELECT Devices.Price \r\nFROM Devices\r\nWHERE Devices.Portable_Computer = \"Tablet\" OR Devices.Portable_Computer = \"Laptop\" AND Devices.Operating_System = \"Windows 10\"",
-        "interpretation1": "What are the prices of Windows 10 tablets and prices of laptops with same operating system?",
-        "interpretation2": "List all tablet prices and also list prices of laptops that come with Windows 10."
-    }
-]

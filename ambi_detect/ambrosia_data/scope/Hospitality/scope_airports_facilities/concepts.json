@@ -1,6 +1,0 @@
-{
-    "template": "Each Airports has many different Facilities. Among them, Duty-Free Shopping is common to many Airports.",
-    "specific_component": "Duty-Free Shopping",
-    "components": "Facilities",
-    "entities": "Airports"
-}

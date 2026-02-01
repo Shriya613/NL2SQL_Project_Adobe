@@ -1,8 +1,0 @@
-{
-    "template": "Children's Book and Young Adult Book are subclasses of Age Group. All Children's books and Young adult books have property \"Illustrator\". There might be a Children's Book and a Young Adult Book that both have \"Illustrator\" equal to \"Jane Smith\".",
-    "general_class": "Age Group",
-    "class1": "Children's Book",
-    "class2": "Young Adult Book",
-    "common_property": "Illustrator",
-    "common_value": "Jane Smith"
-}

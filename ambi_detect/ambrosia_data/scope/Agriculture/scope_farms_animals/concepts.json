@@ -1,6 +1,0 @@
-{
-    "template": "Each Farms has many different Animals. Among them, Cows is common to many Farms.",
-    "specific_component": "Cows",
-    "components": "Animals",
-    "entities": "Farms"
-}

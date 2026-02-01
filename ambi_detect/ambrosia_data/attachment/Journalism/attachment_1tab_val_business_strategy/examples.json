@@ -1,9 +1,0 @@
-[
-    {
-        "question": "Display media franchises and cross-platform expansions with liberals as the target audience.",
-        "sql_query1": "SELECT MediaFranchises.name \r\nFROM MediaFranchises\r\nWHERE (MediaFranchises.Business_Strategy = \"Media Franchise\" OR MediaFranchises.Business_Strategy = \"Cross-Platform Expansion\") AND MediaFranchises.Audience = \"Liberals\"",
-        "sql_query2": "SELECT MediaFranchises.name \r\nFROM MediaFranchises\r\nWHERE MediaFranchises.Business_Strategy = \"Media Franchise\" OR MediaFranchises.Business_Strategy = \"Cross-Platform Expansion\" AND MediaFranchises.Audience = \"Liberals\"",
-        "interpretation1": "Which media franchises target liberals as audience and which cross-platform expansions have the same target audience?",
-        "interpretation2": "Provide a list of all media franchises and also provide a list of cross-platform expansions with liberals as the target audience."
-    }
-]

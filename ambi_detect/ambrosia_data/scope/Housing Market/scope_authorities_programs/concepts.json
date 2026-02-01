@@ -1,6 +1,0 @@
-{
-    "template": "Each Authorities has many different Programs. Among them, Public Housing is common to many Authorities.",
-    "specific_component": "Public Housing",
-    "components": "Programs",
-    "entities": "Authorities"
-}

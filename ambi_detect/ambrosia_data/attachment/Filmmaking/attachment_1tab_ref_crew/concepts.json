@@ -1,8 +1,0 @@
-{
-    "template": "Director and Editor are subclasses of Crew. All Directors and Editors have a property \"Episode\". There might be a Director and an Editor who both worked on the \"Pilot Episode\" while others in these roles have worked on different episodes.",
-    "general_class": "Crew",
-    "class1": "Director",
-    "class2": "Editor",
-    "common_property": "Episode",
-    "common_value": "Pilot Episode"
-}

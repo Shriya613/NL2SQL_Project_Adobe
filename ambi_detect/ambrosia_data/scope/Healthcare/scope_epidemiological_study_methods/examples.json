@@ -1,9 +1,0 @@
-[
-    {
-        "question": "What methods are associated with every epidemiological study?",
-        "sql_query1": "SELECT Methods.method_name  from Epidemiological_Study_Methods join Methods on Epidemiological_Study_Methods.method_id = Methods.method_id join Epidemiological_Study on Epidemiological_Study_Methods.epidemiological_study_id = Epidemiological_Study.study_id   GROUP BY Epidemiological_Study_Methods.method_id HAVING COUNT(DISTINCT Epidemiological_Study_Methods.epidemiological_study_id) = (SELECT COUNT(*) FROM  Epidemiological_Study)",
-        "sql_query2": "select epidemiological_study.name , methods.method_name from Epidemiological_Study_Methods join Methods on Epidemiological_Study_Methods.method_id = Methods.method_id join Epidemiological_Study on Epidemiological_Study_Methods.epidemiological_study_id = Epidemiological_Study.study_id",
-        "interpretation1": "Provide the methods that are common across all epidemiological studies.",
-        "interpretation2": "For each epidemiological study, list the corresponding methods."
-    }
-]

@@ -1,6 +1,0 @@
-{
-    "template": "Each Routes has many different Restrictions. Among them, Weight Limit is common to many Routes.",
-    "specific_component": "Weight Limit",
-    "components": "Restrictions",
-    "entities": "Routes"
-}

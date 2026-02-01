@@ -1,9 +1,0 @@
-[
-    {
-        "question": "Show podcasts and radio shows with 45-minute-long episodes.",
-        "sql_query1": "SELECT Audio_Media.title \r\nFROM Audio_Media JOIN Episode_Details ON Audio_Media.MediaID = Episode_Details.AudioMediaID\r\nWHERE Audio_Media.Category = \"Podcast\" AND Episode_Details.Length = 45\nUNION\nSELECT Audio_Media.title \r\nFROM Audio_Media JOIN Episode_Details ON Audio_Media.MediaID = Episode_Details.AudioMediaID\r\nWHERE Audio_Media.Category = \"Radio Show\" AND Episode_Details.Length = 45",
-        "sql_query2": "SELECT Audio_Media.title \r\nFROM Audio_Media WHERE Audio_Media.Category = \"Podcast\"\nUNION\nSELECT Audio_Media.title \r\nFROM Audio_Media JOIN Episode_Details ON Audio_Media.MediaID = Episode_Details.AudioMediaID\r\nWHERE Audio_Media.Category = \"Radio Show\" AND Episode_Details.Length = 45",
-        "interpretation1": "Which radio shows have 45-minute-long episodes and which podcasts have episodes with the same duration?",
-        "interpretation2": "Provide a list of all podcasts and also provide a list of all radio shows with 45-minute-long episodes."
-    }
-]

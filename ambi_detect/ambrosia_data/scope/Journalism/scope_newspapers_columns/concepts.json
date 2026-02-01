@@ -1,6 +1,0 @@
-{
-    "template": "Each Newspapers has many different Columns. Among them, Opinion is common to many Newspapers.",
-    "specific_component": "Opinion",
-    "components": "Columns",
-    "entities": "Newspapers"
-}

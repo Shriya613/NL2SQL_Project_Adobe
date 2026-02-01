@@ -1,6 +1,0 @@
-{
-    "template": "Each Magazines has many different Columns. Among them, Editor's Letter is common to many Magazines.",
-    "specific_component": "Editor's Letter",
-    "components": "Columns",
-    "entities": "Magazines"
-}

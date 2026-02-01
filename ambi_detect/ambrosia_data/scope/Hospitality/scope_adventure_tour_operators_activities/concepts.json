@@ -1,6 +1,0 @@
-{
-    "template": "Each Adventure Tour Operators has many different Activities. Among them, Zipline is common to many Adventure Tour Operators.",
-    "specific_component": "Zipline",
-    "components": "Activities",
-    "entities": "Adventure Tour Operators"
-}

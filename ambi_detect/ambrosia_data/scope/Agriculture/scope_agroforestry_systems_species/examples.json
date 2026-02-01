@@ -1,9 +1,0 @@
-[
-    {
-        "question": "Give me the species that each agroforestry system contains.",
-        "sql_query1": "SELECT Species.name  from System_Species join Species on System_Species.species_id = Species.id join Agroforestry_Systems on System_Species.agroforestry_system_id = Agroforestry_Systems.id   GROUP BY System_Species.species_id HAVING COUNT(DISTINCT System_Species.agroforestry_system_id) = (SELECT COUNT(*) FROM  Agroforestry_Systems)",
-        "sql_query2": "select agroforestry_systems.system_name , species.name from System_Species join Species on System_Species.species_id = Species.id join Agroforestry_Systems on System_Species.agroforestry_system_id = Agroforestry_Systems.id",
-        "interpretation1": "Which species are the same for all agroforestry systems?",
-        "interpretation2": "For every agroforestry system, show the species that they contain."
-    }
-]

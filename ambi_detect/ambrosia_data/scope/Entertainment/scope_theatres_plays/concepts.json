@@ -1,6 +1,0 @@
-{
-    "template": "Each Theatres has many different Plays. Among them, Hamlet is common to many Theatres.",
-    "specific_component": "Hamlet",
-    "components": "Plays",
-    "entities": "Theatres"
-}

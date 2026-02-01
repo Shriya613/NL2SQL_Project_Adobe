@@ -1,8 +1,0 @@
-{
-    "template": "Frequent Flyer Lounge and VIP Lounge are subclasses of Exclusive Areas. All Frequent Flyer Lounges and VIP Lounges have the property \"Amenities\". There might be a Frequent Flyer Lounge and a VIP Lounge that both offer \"Complimentary Wi-Fi\".",
-    "general_class": "Exclusive Areas",
-    "class1": "Frequent Flyer Lounge",
-    "class2": "VIP Lounge",
-    "common_property": "Amenities",
-    "common_value": "Complimentary Wi-Fi"
-}

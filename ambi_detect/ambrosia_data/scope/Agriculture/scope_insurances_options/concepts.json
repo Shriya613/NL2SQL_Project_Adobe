@@ -1,6 +1,0 @@
-{
-    "template": "Each Insurances has many different Options. Among them, Revenue insurance is common to many Insurances.",
-    "specific_component": "Revenue insurance",
-    "components": "Options",
-    "entities": "Insurances"
-}

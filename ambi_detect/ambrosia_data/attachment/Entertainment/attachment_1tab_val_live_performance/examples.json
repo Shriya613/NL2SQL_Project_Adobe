@@ -1,9 +1,0 @@
-[
-    {
-        "question": "Show concerts and theater plays taking place in a venue with a capacity of 500.",
-        "sql_query1": "SELECT Live_Event.Title \r\nFROM Live_Event\r\nWHERE (Live_Event.Live_Performance = \"Concert\" OR Live_Event.Live_Performance = \"Theater Play\") AND Live_Event.Venue_Capacity = 500",
-        "sql_query2": "SELECT Live_Event.Title \r\nFROM Live_Event\r\nWHERE Live_Event.Live_Performance = \"Concert\" OR Live_Event.Live_Performance = \"Theater Play\" AND Live_Event.Venue_Capacity = 500",
-        "interpretation1": "Which concerts are in a venue that has a capacity of 500 and which theater plays are in a venue with the same capacity?",
-        "interpretation2": "Provide a list of all concerts and also provide a list of theater play with a venue with a capacity of 500."
-    }
-]

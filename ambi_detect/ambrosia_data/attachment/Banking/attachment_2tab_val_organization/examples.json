@@ -1,9 +1,0 @@
-[
-    {
-        "question": "List currency exchange services and commodity trading firms established in 2000.",
-        "sql_query1": "SELECT Currency_Exchange_Service.name\r\nFROM Currency_Exchange_Service\r\nWHERE Currency_Exchange_Service.Year_of_establishment = 2000\r\nUNION\r\nSELECT Commodity_Trading_Firm.name\r\nFROM Commodity_Trading_Firm\r\nWHERE Commodity_Trading_Firm.Year_of_establishment = 2000",
-        "sql_query2": "SELECT Currency_Exchange_Service.name\r\nFROM Currency_Exchange_Service\r\nUNION\r\nSELECT Commodity_Trading_Firm.name\r\nFROM Commodity_Trading_Firm\r\nWHERE Commodity_Trading_Firm.Year_of_establishment = 2000",
-        "interpretation1": "Which currency exchange services were established in 2000 and which commodity trading firms were established in the same year.",
-        "interpretation2": "Provide a list of all currency exchange services and also provide a list of commodity trading firms established in 2000."
-    }
-]

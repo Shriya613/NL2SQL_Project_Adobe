@@ -1,9 +1,0 @@
-[
-    {
-        "question": "Give me the genres that each music critic reviews.",
-        "sql_query1": "SELECT Genres.name  from Music_Critics_Genres join Genres on Music_Critics_Genres.genre_id = Genres.genre_id join Music_Critics on Music_Critics_Genres.music_critic_id = Music_Critics.critic_id   GROUP BY Music_Critics_Genres.genre_id HAVING COUNT(DISTINCT Music_Critics_Genres.music_critic_id) = (SELECT COUNT(*) FROM  Music_Critics)",
-        "sql_query2": "select music_critics.name , genres.name from Music_Critics_Genres join Genres on Music_Critics_Genres.genre_id = Genres.genre_id join Music_Critics on Music_Critics_Genres.music_critic_id = Music_Critics.critic_id",
-        "interpretation1": "Which genres are the same for all music critics?",
-        "interpretation2": "For every music critic, show the genres that they review."
-    }
-]

@@ -1,9 +1,0 @@
-[
-    {
-        "question": "Give me the components for each fertilizer.",
-        "sql_query1": "SELECT Components.componentName  from Fertilizers_Components join Components on Fertilizers_Components.componentId = Components.id join Fertilizers on Fertilizers_Components.fertilizerId = Fertilizers.id   GROUP BY Fertilizers_Components.componentId HAVING COUNT(DISTINCT Fertilizers_Components.fertilizerId) = (SELECT COUNT(*) FROM  Fertilizers)",
-        "sql_query2": "select fertilizers.name , components.componentname from Fertilizers_Components join Components on Fertilizers_Components.componentId = Components.id join Fertilizers on Fertilizers_Components.fertilizerId = Fertilizers.id",
-        "interpretation1": "What components are common to all fertilizers?",
-        "interpretation2": "For every fertilizer, show the components that they contain."
-    }
-]

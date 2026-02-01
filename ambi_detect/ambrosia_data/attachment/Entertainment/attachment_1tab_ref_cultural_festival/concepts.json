@@ -1,8 +1,0 @@
-{
-    "template": "Music Festivals and Film Festivals are subclasses of Cultural Festivals. All Music Festivals and Film Festivals have the property \"Annual Attendance\". There might be a Music Festival and a Film Festival that both have \"Annual Attendance\" equal to \"50,000 people\".",
-    "general_class": "Cultural Festival",
-    "class1": "Music Festival",
-    "class2": "Film Festival",
-    "common_property": "Annual Attendance",
-    "common_value": "50000"
-}

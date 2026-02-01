@@ -1,7 +1,0 @@
-{
-    "template": "Question: What is the history of this healthcare facility? Subject of Inquiry: Healthcare Facility\nFocus: Hospital History Possible answer types: 1. Founding Year 2. Past Owners",
-    "subject": "Healthcare Facility",
-    "focus": "Hospital History",
-    "general_category1": "Founding Year",
-    "general_category2": "Past Owners"
-}

@@ -1,9 +1,0 @@
-[
-    {
-        "question": "Show me the services every bank offers.",
-        "sql_query1": "SELECT Services.serviceName  from Banks_Services join Services on Banks_Services.serviceId = Services.id join Banks on Banks_Services.bankId = Banks.id   GROUP BY Banks_Services.serviceId HAVING COUNT(DISTINCT Banks_Services.bankId) = (SELECT COUNT(*) FROM  Banks)",
-        "sql_query2": "select banks.name , services.servicename from Banks_Services join Services on Banks_Services.serviceId = Services.id join Banks on Banks_Services.bankId = Banks.id",
-        "interpretation1": "What services do all banks have in common?",
-        "interpretation2": "For each bank, list the services offered."
-    }
-]

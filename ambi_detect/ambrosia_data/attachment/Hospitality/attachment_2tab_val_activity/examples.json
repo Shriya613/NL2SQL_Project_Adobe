@@ -1,9 +1,0 @@
-[
-    {
-        "question": "Show tourist attractions and local markets in London.",
-        "sql_query1": "SELECT Tourist_Attractions.name\r\nFROM Tourist_Attractions\r\nWHERE Tourist_Attractions.Location = \"London\"\r\nUNION\r\nSELECT Local_Markets.name\r\nFROM Local_Markets\r\nWHERE Local_Markets.Location = \"London\"",
-        "sql_query2": "SELECT Tourist_Attractions.name\r\nFROM Tourist_Attractions\r\nUNION\r\nSELECT Local_Markets.name\r\nFROM Local_Markets\r\nWHERE Local_Markets.Location = \"London\"",
-        "interpretation1": "What tourist attractions are in London and what local markets are in the same location?",
-        "interpretation2": "Provide a list of all tourist attractions and also provide a list of local markets in London."
-    }
-]

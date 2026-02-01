@@ -1,8 +1,0 @@
-{
-    "template": "Software Developer and Data Analyst are subclasses of Technology Careers. All Software developers and Data analysts have property \"Grade\". There might be a Software Developer and a Data Analyst that both have \"Grade\" equal to \"Middle\".",
-    "general_class": "Technology Careers",
-    "class1": "Software Developer",
-    "class2": "Data Analyst",
-    "common_property": "Grade",
-    "common_value": "Middle"
-}

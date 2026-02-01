@@ -1,9 +1,0 @@
-[
-    {
-        "question": "Give me attendance dates and grades of Alice Johnson.",
-        "sql_query1": "SELECT Attendance.Date\r\nFROM Attendance JOIN Student ON Attendance.StudentID = Student.ID\r\nWHERE Student.name = 'Alice Johnson' AND Attendance.Status = 'Present'\r\nUNION\r\nSELECT Grades.Score\r\nFROM Grades JOIN Student ON Grades.StudentID = Student.ID\r\nWHERE Student.name = 'Alice Johnson'",
-        "sql_query2": "SELECT Attendance.Date\r\nFROM Attendance JOIN Student ON Attendance.StudentID = Student.ID WHERE Attendance.Status = 'Present'\r\nUNION\r\nSELECT Grades.Score\r\nFROM Grades JOIN Student ON Grades.StudentID = Student.ID\r\nWHERE Student.name = 'Alice Johnson'",
-        "interpretation1": "What are the attendance dates of Alice Johnson and what are her grades?",
-        "interpretation2": "Provide a list of the attendance dates of all students and also provide a list of grades for Alice Johnson."
-    }
-]

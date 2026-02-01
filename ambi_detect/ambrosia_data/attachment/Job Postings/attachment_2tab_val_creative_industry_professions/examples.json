@@ -1,9 +1,0 @@
-[
-    {
-        "question": "Show graphic designers and web developers working at 2/7 London Street.",
-        "sql_query1": "SELECT Graphic_Designers.name\r\nFROM Graphic_Designers\r\nWHERE Graphic_Designers.office = \"2/7 London Street\"\r\nUNION\r\nSELECT Web_Developers.name\r\nFROM Web_Developers\r\nWHERE Web_Developers.office = \"2/7 London Street\"",
-        "sql_query2": "SELECT Graphic_Designers.name\r\nFROM Graphic_Designers\r\nUNION\r\nSELECT Web_Developers.name\r\nFROM Web_Developers\r\nWHERE Web_Developers.office = \"2/7 London Street\"",
-        "interpretation1": "What graphic designers work at 2/7 London Street and what web developers also work there?",
-        "interpretation2": "List all graphic designers and also list web developers working at 2/7 London Street."
-    }
-]

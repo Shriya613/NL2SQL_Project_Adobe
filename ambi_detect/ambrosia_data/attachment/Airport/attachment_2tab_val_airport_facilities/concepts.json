@@ -1,8 +1,0 @@
-{
-    "template": "Baggage Claim and Security Check are subclasses of Airport Facilities. All Baggage Claim areas and Security Checks have the property \"Location\". There might be a Baggage Claim area and a Security Check that both are located at \"Terminal 2\".",
-    "general_class": "Airport Facilities",
-    "class1": "Baggage Claim",
-    "class2": "Security Check",
-    "common_property": "Location",
-    "common_value": "Terminal 2"
-}

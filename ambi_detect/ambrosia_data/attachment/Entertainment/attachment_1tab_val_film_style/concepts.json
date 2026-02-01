@@ -1,8 +1,0 @@
-{
-    "template": "Adventure Movie and Action Movie are subclasses of Film Style. All Adventure movies and Action movies have property \"Director\". There might be a Adventure Movie and a Action Movie that both have \"Director\" equal to \"Sofia Martinez\".",
-    "general_class": "Film Style",
-    "class1": "Adventure Movie",
-    "class2": "Action Movie",
-    "common_property": "Director",
-    "common_value": "Sofia Martinez"
-}

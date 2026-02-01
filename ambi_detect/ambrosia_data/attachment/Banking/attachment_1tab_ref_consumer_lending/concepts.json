@@ -1,8 +1,0 @@
-{
-    "template": "Credit Card and Personal Loan are subclasses of Consumer Lending. All Credit cards and Personal loans have property \"Interest Rate\". There might be a Credit Card and a Personal Loan that both have \"Interest Rate\" equal to \"15%\".",
-    "general_class": "Consumer Lending",
-    "class1": "Credit Card",
-    "class2": "Personal Loan",
-    "common_property": "Interest Rate",
-    "common_value": "15%"
-}

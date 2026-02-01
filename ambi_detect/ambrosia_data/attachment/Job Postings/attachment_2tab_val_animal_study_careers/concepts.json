@@ -1,8 +1,0 @@
-{
-    "template": "Marine Biologist and Zoologist are subclasses of Animal Study Careers. All Marine biologists and Zoologists have property \"Experience\". There might be a Marine Biologist and a Zoologist that both have \"Experience\" equal to \"5 years\".",
-    "general_class": "Animal Study Careers",
-    "class1": "Marine Biologist",
-    "class2": "Zoologist",
-    "common_property": "Experience",
-    "common_value": "5 years"
-}

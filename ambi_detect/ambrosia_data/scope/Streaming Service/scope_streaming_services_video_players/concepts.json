@@ -1,6 +1,0 @@
-{
-    "template": "Each Streaming Services has many different Video Players. Among them, HTML5 is common to many Streaming Services.",
-    "specific_component": "HTML5",
-    "components": "Video Players",
-    "entities": "Streaming Services"
-}

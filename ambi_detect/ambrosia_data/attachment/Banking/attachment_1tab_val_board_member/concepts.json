@@ -1,8 +1,0 @@
-{
-    "template": "Independent Director and Executive Manager are subclasses of Board Governance Structures. Both roles typically interact with the 'Organization' in different capacities. For instance, both might be involved with an organization named 'Global Corp.'",
-    "general_class": "Board Member",
-    "class1": "Independent Director",
-    "class2": "Executive Manager",
-    "common_property": "Organization",
-    "common_value": "Global Corp"
-}

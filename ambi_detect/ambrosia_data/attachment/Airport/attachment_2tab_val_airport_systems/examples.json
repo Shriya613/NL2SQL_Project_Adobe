@@ -1,9 +1,0 @@
-[
-    {
-        "question": "Display navigation systems and communication systems used at Heathrow Airport.",
-        "sql_query1": "SELECT Navigation_Systems.TypeOfSystem\r\nFROM Navigation_Systems\r\nWHERE Navigation_Systems.Airport = \"Heathrow\"\r\nUNION\r\nSELECT Communication_Systems.TypeOfSystem\r\nFROM Communication_Systems\r\nWHERE Communication_Systems.Airport = \"Heathrow\"",
-        "sql_query2": "SELECT Navigation_Systems.TypeOfSystem\r\nFROM Navigation_Systems\r\nUNION\r\nSELECT Communication_Systems.TypeOfSystem\r\nFROM Communication_Systems\r\nWHERE Communication_Systems.Airport = \"Heathrow\"",
-        "interpretation1": "Can you show navigation and communication systems used at Heathrow Airport?",
-        "interpretation2": "List all navigation systems and also display communication systems used at Heathrow Airport."
-    }
-]

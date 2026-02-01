@@ -1,9 +1,0 @@
-[
-    {
-        "question": "Show news articles and feature articles with 1000 word count.",
-        "sql_query1": "SELECT News_Articles.title\r\nFROM News_Articles\r\nWHERE News_Articles.Word_Count = 1000\r\nUNION\r\nSELECT Feature_Articles.title\r\nFROM Feature_Articles\r\nWHERE Feature_Articles.Word_Count = 1000",
-        "sql_query2": "SELECT News_Articles.title\r\nFROM News_Articles\r\nUNION\r\nSELECT Feature_Articles.title\r\nFROM Feature_Articles\r\nWHERE Feature_Articles.Word_Count = 1000",
-        "interpretation1": "What news articles have 1000 word count and what feature articles have same word count?",
-        "interpretation2": "List all news articles and also list feature articles with word count of 1000."
-    }
-]

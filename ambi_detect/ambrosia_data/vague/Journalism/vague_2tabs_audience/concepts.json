@@ -1,7 +1,0 @@
-{
-    "template": "Question: What is the target audience of this magazine? Subject of Inquiry: Magazine\nFocus: Audience Possible answer types: 1. Demographic Group 2. Professional Field",
-    "subject": "Magazine",
-    "focus": "Audience",
-    "general_category1": "Demographic Group",
-    "general_category2": "Professional Field"
-}

@@ -1,9 +1,0 @@
-[
-    {
-        "question": "Display all ballrooms and greenrooms for 100 people.",
-        "sql_query1": "SELECT Ballrooms.name\r\nFROM Ballrooms\r\nWHERE Ballrooms.seating_capacity = 100\r\nUNION\r\nSELECT GreenRooms.name\r\nFROM GreenRooms\r\nWHERE GreenRooms.seating_capacity = 100",
-        "sql_query2": "SELECT Ballrooms.name\r\nFROM Ballrooms\r\nUNION\r\nSELECT GreenRooms.name\r\nFROM GreenRooms\r\nWHERE GreenRooms.seating_capacity = 100",
-        "interpretation1": "ballrooms can accommodate 100 people and which greenrooms have the same capacity?",
-        "interpretation2": "Provide a list of all ballrooms and also provide a list of greenrooms for 100 people."
-    }
-]

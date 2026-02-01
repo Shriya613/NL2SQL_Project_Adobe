@@ -1,9 +1,0 @@
-[
-    {
-        "question": "What are the capacities of jet bridges and stairways in Terminal 2?",
-        "sql_query1": "SELECT Jet_bridge.Capacity\r\nFROM Terminals JOIN Jet_bridge ON Terminals.Id = Jet_bridge.Terminal_id\r\nWHERE Terminals.Name = \"Terminal 2\"\r\nUNION\r\nSELECT Staircar.Capacity\r\nFROM Terminals JOIN Staircar ON Terminals.Id = Staircar.Terminal_id\r\nWHERE Terminals.Name = \"Terminal 2\"",
-        "sql_query2": "SELECT Jet_bridge.Capacity\r\nFROM Terminals JOIN Jet_bridge ON Terminals.Id = Jet_bridge.Terminal_id\r\nUNION\r\nSELECT Staircar.Capacity\r\nFROM Terminals JOIN Staircar ON Terminals.Id = Staircar.Terminal_id\r\nWHERE Terminals.Name = \"Terminal 2\"",
-        "interpretation1": "What are the capacities of jet bridges used at terminal 2 and what are the capacities of the stair cars also used there?",
-        "interpretation2": "Provide a list of all jet bridge capacities and also provide the capacities of all stair cars used at terminal 2."
-    }
-]

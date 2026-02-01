@@ -1,9 +1,0 @@
-[
-    {
-        "question": "What categories are associated with each film festival?",
-        "sql_query1": "SELECT Categories.category_name  from Film_Festivals_Categories join Categories on Film_Festivals_Categories.category_id = Categories.id join Film_Festivals on Film_Festivals_Categories.film_festival_id = Film_Festivals.id   GROUP BY Film_Festivals_Categories.category_id HAVING COUNT(DISTINCT Film_Festivals_Categories.film_festival_id) = (SELECT COUNT(*) FROM  Film_Festivals)",
-        "sql_query2": "select film_festivals.name , categories.category_name from Film_Festivals_Categories join Categories on Film_Festivals_Categories.category_id = Categories.id join Film_Festivals on Film_Festivals_Categories.film_festival_id = Film_Festivals.id",
-        "interpretation1": "Please provide categories that are shared across all film festivals",
-        "interpretation2": "Could you provide the categories for all film festivals?"
-    }
-]

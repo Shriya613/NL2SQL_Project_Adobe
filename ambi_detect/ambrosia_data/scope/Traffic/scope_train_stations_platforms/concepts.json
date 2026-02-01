@@ -1,6 +1,0 @@
-{
-    "template": "Each Train Stations has many different Platforms. Among them, Platform 1 is common to many Train Stations.",
-    "specific_component": "Platform 1",
-    "components": "Platforms",
-    "entities": "Train Stations"
-}

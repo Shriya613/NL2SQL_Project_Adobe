@@ -1,8 +1,0 @@
-{
-    "template": "Reporter and Photographer are subclasses of Newsroom Roles. All Reporters and Photographers have property \"Deadline\". There might be a Reporter and a Photographer that both have \"Deadline\" equal to \"25 April 2020\".",
-    "general_class": "Newsroom Roles",
-    "class1": "Reporter",
-    "class2": "Photographer",
-    "common_property": "Deadline",
-    "common_value": "25 April 2020"
-}

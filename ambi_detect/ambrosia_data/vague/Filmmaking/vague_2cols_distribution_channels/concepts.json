@@ -1,7 +1,0 @@
-{
-    "template": "Question: Where was this film be released? Subject of Inquiry: Movies\nFocus: Distribution Channels Possible answer types: 1. Streaming Platforms 2. Countries",
-    "subject": "Movies",
-    "focus": "Distribution Channels",
-    "general_category1": "Streaming Platforms",
-    "general_category2": "Countries"
-}

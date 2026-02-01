@@ -1,7 +1,0 @@
-{
-    "template": "Question: How is waste managed at this construction site? Subject of Inquiry: Construction Site\nFocus: Waste Management Possible answer types: 1. Waste Disposal Method 2. Recycling Program",
-    "subject": "Construction Site",
-    "focus": "Waste Management",
-    "general_category1": "Waste Disposal Method",
-    "general_category2": "Recycling Program"
-}

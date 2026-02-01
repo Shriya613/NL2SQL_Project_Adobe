@@ -1,9 +1,0 @@
-[
-    {
-        "question": "List the services provided by every hotel.",
-        "sql_query1": "SELECT Services.ServiceName  from Hotels_Services join Services on Hotels_Services.Service_ID = Services.ServiceID join Hotels on Hotels_Services.Hotels_ID = Hotels.HotelID   GROUP BY Hotels_Services.Service_ID HAVING COUNT(DISTINCT Hotels_Services.Hotels_ID) = (SELECT COUNT(*) FROM  Hotels)",
-        "sql_query2": "select hotels.name , services.servicename from Hotels_Services join Services on Hotels_Services.Service_ID = Services.ServiceID join Hotels on Hotels_Services.Hotels_ID = Hotels.HotelID",
-        "interpretation1": "List the common services for all hotels.",
-        "interpretation2": "At each hotel, list the corresponding services."
-    }
-]

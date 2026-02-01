@@ -1,9 +1,0 @@
-[
-    {
-        "question": "What is the type of tool for each editing suite?",
-        "sql_query1": "SELECT Tools.Type  from Editing_Suites_Tools join Tools on Editing_Suites_Tools.ToolID = Tools.ToolID join Editing_Suites on Editing_Suites_Tools.SuiteID = Editing_Suites.SuiteID   GROUP BY Editing_Suites_Tools.ToolID HAVING COUNT(DISTINCT Editing_Suites_Tools.SuiteID) = (SELECT COUNT(*) FROM  Editing_Suites)",
-        "sql_query2": "select editing_suites.name , tools.type from Editing_Suites_Tools join Tools on Editing_Suites_Tools.ToolID = Tools.ToolID join Editing_Suites on Editing_Suites_Tools.SuiteID = Editing_Suites.SuiteID",
-        "interpretation1": "Show me the type of tool common to all editing suites.",
-        "interpretation2": "For each editing suite, show what type of tools they provide"
-    }
-]

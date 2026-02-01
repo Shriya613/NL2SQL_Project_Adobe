@@ -1,9 +1,0 @@
-[
-    {
-        "question": "List the countries for every immigration reporter.",
-        "sql_query1": "SELECT Countries.countryName  from Immigration_Reporters_Countries join Countries on Immigration_Reporters_Countries.countryId = Countries.id join Immigration_Reporters on Immigration_Reporters_Countries.immigrationReporterId = Immigration_Reporters.id   GROUP BY Immigration_Reporters_Countries.countryId HAVING COUNT(DISTINCT Immigration_Reporters_Countries.immigrationReporterId) = (SELECT COUNT(*) FROM  Immigration_Reporters)",
-        "sql_query2": "select immigration_reporters.reportername , countries.countryname from Immigration_Reporters_Countries join Countries on Immigration_Reporters_Countries.countryId = Countries.id join Immigration_Reporters on Immigration_Reporters_Countries.immigrationReporterId = Immigration_Reporters.id",
-        "interpretation1": "List the countries that occur for all of the immigration reporters.",
-        "interpretation2": "For all of the immigration reporters list the countries they report on"
-    }
-]

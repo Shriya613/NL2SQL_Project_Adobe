@@ -1,9 +1,0 @@
-[
-    {
-        "question": "Show all comedies and tragedies written by William Shakespeare.",
-        "sql_query1": "SELECT Play.Title \r\nFROM Play\r\nWHERE (Play.Theatrical_Form = \"Comedy\" OR Play.Theatrical_Form = \"Tragedy\") AND Play.Author = \"William Shakespeare\"",
-        "sql_query2": "SELECT Play.Title \r\nFROM Play\r\nWHERE Play.Theatrical_Form = \"Comedy\" OR Play.Theatrical_Form = \"Tragedy\" AND Play.Author = \"William Shakespeare\"",
-        "interpretation1": "Show me all the William Shakespeare plays classed as either comedy or tragedy.",
-        "interpretation2": "Give me all the comedies, also show the Shakespeare tragedies."
-    }
-]

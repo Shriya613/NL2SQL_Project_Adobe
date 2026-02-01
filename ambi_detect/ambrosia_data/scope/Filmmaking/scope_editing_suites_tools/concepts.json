@@ -1,6 +1,0 @@
-{
-    "template": "Each Editing Suites has many different Tools. Among them, Cutting Software is common to many Editing Suites.",
-    "specific_component": "Cutting Software",
-    "components": "Tools",
-    "entities": "Editing Suites"
-}

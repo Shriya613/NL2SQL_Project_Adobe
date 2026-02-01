@@ -1,9 +1,0 @@
-[
-    {
-        "question": "Give me the platform names that are at each train station.",
-        "sql_query1": "SELECT Platforms.Name  from Train_Stations_Platforms join Platforms on Train_Stations_Platforms.PlatformID = Platforms.PlatformID join Train_Stations on Train_Stations_Platforms.StationID = Train_Stations.StationID   GROUP BY Train_Stations_Platforms.PlatformID HAVING COUNT(DISTINCT Train_Stations_Platforms.StationID) = (SELECT COUNT(*) FROM  Train_Stations)",
-        "sql_query2": "select train_stations.name , platforms.name from Train_Stations_Platforms join Platforms on Train_Stations_Platforms.PlatformID = Platforms.PlatformID join Train_Stations on Train_Stations_Platforms.StationID = Train_Stations.StationID",
-        "interpretation1": "What platform names are in common for all train stations?",
-        "interpretation2": "For every train station, what platform names are there?"
-    }
-]

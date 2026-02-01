@@ -1,9 +1,0 @@
-[
-    {
-        "question": "Give me descriptions of fixtures each technician uses.",
-        "sql_query1": "SELECT Fixtures.description  from Lighting_Technicians_Fixtures join Fixtures on Lighting_Technicians_Fixtures.fixtureType = Fixtures.fixtureType join Lighting_Technicians on Lighting_Technicians_Fixtures.technicianID = Lighting_Technicians.technicianID   GROUP BY Lighting_Technicians_Fixtures.fixtureType HAVING COUNT(DISTINCT Lighting_Technicians_Fixtures.technicianID) = (SELECT COUNT(*) FROM  Lighting_Technicians)",
-        "sql_query2": "select lighting_technicians.name , fixtures.description from Lighting_Technicians_Fixtures join Fixtures on Lighting_Technicians_Fixtures.fixtureType = Fixtures.fixtureType join Lighting_Technicians on Lighting_Technicians_Fixtures.technicianID = Lighting_Technicians.technicianID",
-        "interpretation1": "What are descriptions of fixtures common to all technicians?",
-        "interpretation2": "For every technician, list descriptions on fixtures used."
-    }
-]

@@ -1,7 +1,0 @@
-{
-    "template": "Question: Where was this reality show filmed? Subject of Inquiry: Reality Show\nFocus: Filming Location Possible answer types: 1. City 2. Country",
-    "subject": "Reality Show",
-    "focus": "Filming Location",
-    "general_category1": "City",
-    "general_category2": "Country"
-}

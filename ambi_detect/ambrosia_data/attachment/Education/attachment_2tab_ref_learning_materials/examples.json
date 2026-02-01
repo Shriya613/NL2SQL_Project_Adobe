@@ -1,9 +1,0 @@
-[
-    {
-        "question": "Show advanced online courses and textbooks.",
-        "sql_query1": "SELECT Textbooks.title as title\r\nFROM Difficulty_Level JOIN Subjects ON Difficulty_Level.ID = Subjects.DifficultyID JOIN Textbooks ON Subjects.ID = Textbooks.SubjectID\r\nWHERE Difficulty_Level.Level = \"Advanced\"\r\nUNION\r\nSELECT Online_Courses.coursename as title\r\nFROM Difficulty_Level JOIN Subjects ON Difficulty_Level.ID = Subjects.DifficultyID JOIN Online_Courses ON Subjects.ID = Online_Courses.SubjectID\r\nWHERE Difficulty_Level.Level = \"Advanced\"",
-        "sql_query2": "SELECT Textbooks.title as title\r\nFROM Difficulty_Level JOIN Subjects ON Difficulty_Level.ID = Subjects.DifficultyID JOIN Textbooks ON Subjects.ID = Textbooks.SubjectID\r\nUNION\r\nSELECT Online_Courses.coursename as title\r\nFROM Difficulty_Level JOIN Subjects ON Difficulty_Level.ID = Subjects.DifficultyID JOIN Online_Courses ON Subjects.ID = Online_Courses.SubjectID\r\nWHERE Difficulty_Level.Level = \"Advanced\"",
-        "interpretation1": "What textbooks are advanced and what online courses are the same difficulty?",
-        "interpretation2": "Provide a list of all textbooks and also provide a list of advanced online courses."
-    }
-]

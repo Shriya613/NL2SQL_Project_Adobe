@@ -1,6 +1,0 @@
-{
-    "template": "Each Books has many different Formats. Among them, Paperback is common to many Books.",
-    "specific_component": "Paperback",
-    "components": "Formats",
-    "entities": "Books"
-}

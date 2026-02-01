@@ -1,6 +1,0 @@
-{
-    "template": "Each HOA Boards has many different Meetings. Among them, Annual Meeting is common to many HOA Boards.",
-    "specific_component": "Annual Meeting",
-    "components": "Meetings",
-    "entities": "HOA Boards"
-}

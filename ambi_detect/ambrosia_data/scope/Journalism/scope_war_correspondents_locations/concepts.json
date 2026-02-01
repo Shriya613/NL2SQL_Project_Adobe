@@ -1,6 +1,0 @@
-{
-    "template": "Each War Correspondents has many different Locations. Among them, Battlefield is common to many War Correspondents.",
-    "specific_component": "Battlefield",
-    "components": "Locations",
-    "entities": "War Correspondents"
-}

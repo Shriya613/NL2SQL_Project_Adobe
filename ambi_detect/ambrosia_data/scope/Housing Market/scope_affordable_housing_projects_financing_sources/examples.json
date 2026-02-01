@@ -1,9 +1,0 @@
-[
-    {
-        "question": "What source value of financing sources do we have for every affordable housing project?",
-        "sql_query1": "SELECT Financing_Sources.source_value  from Affordable_Housing_Projects_Financing_Sources join Financing_Sources on Affordable_Housing_Projects_Financing_Sources.financing_source_id = Financing_Sources.source_id join Affordable_Housing_Projects on Affordable_Housing_Projects_Financing_Sources.housing_project_id = Affordable_Housing_Projects.project_id   GROUP BY Affordable_Housing_Projects_Financing_Sources.financing_source_id HAVING COUNT(DISTINCT Affordable_Housing_Projects_Financing_Sources.housing_project_id) = (SELECT COUNT(*) FROM  Affordable_Housing_Projects)",
-        "sql_query2": "select affordable_housing_projects.project_name , financing_sources.source_value from Affordable_Housing_Projects_Financing_Sources join Financing_Sources on Affordable_Housing_Projects_Financing_Sources.financing_source_id = Financing_Sources.source_id join Affordable_Housing_Projects on Affordable_Housing_Projects_Financing_Sources.housing_project_id = Affordable_Housing_Projects.project_id",
-        "interpretation1": "What source value of financing sources is common for all affordable housing projects?",
-        "interpretation2": "For every affordable housing project, provide the corresponding source value of financing sources."
-    }
-]

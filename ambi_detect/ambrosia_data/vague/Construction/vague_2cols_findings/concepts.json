@@ -1,7 +1,0 @@
-{
-    "template": "Question: What archaeological findings have been discovered during the excavation process of this site? Subject of Inquiry: Archaeological Site\nFocus: Findings Possible answer types: 1. Artifacts Uncovered 2. Ancient Remains",
-    "subject": "Archaeological Site",
-    "focus": "Findings",
-    "general_category1": "Artifacts Uncovered",
-    "general_category2": "Ancient Remains"
-}

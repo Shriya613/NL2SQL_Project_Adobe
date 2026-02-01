@@ -1,9 +1,0 @@
-[
-    {
-        "question": "Give me opinion pieces and feature articles where they have 3 volumes.",
-        "sql_query1": "SELECT Opinion_Pieces.title\r\nFROM Volumes JOIN Opinion_Pieces ON Volumes.volume_id = Opinion_Pieces.volume_id\r\nWHERE Volumes.number = \"03\"\r\nUNION\r\nSELECT Feature_Articles.title\r\nFROM Volumes JOIN Feature_Articles ON Volumes.volume_id = Feature_Articles.volume_id\r\nWHERE Volumes.number = \"03\"",
-        "sql_query2": "SELECT Opinion_Pieces.title\r\nFROM Volumes JOIN Opinion_Pieces ON Volumes.volume_id = Opinion_Pieces.volume_id\r\nUNION\r\nSELECT Feature_Articles.title\r\nFROM Volumes JOIN Feature_Articles ON Volumes.volume_id = Feature_Articles.volume_id\r\nWHERE Volumes.number = \"03\"",
-        "interpretation1": "What opinion pieces have 3 volumes and what feature articles have the same number of volumes?",
-        "interpretation2": "Provide a list of all opinion pieces and also provide a list of all feature articles where they have 3 volumes."
-    }
-]

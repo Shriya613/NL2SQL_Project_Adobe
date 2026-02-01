@@ -1,9 +1,0 @@
-[
-    {
-        "question": "Display all 2-hour-long romantic comedies and action movies.",
-        "sql_query1": "SELECT Movies.title \r\nFROM Genres JOIN Movies ON Genres.id = Movies.genre_id JOIN MovieDurations ON Movies.id = MovieDurations.movie_id JOIN Durations ON MovieDurations.duration_id = Durations.id\r\nWHERE (Genres.name = \"Action Movie\" OR Genres.name = \"Romantic Comedy\") AND Durations.minutes = 120",
-        "sql_query2": "SELECT Movies.title \r\nFROM Genres JOIN Movies ON Genres.id = Movies.genre_id JOIN MovieDurations ON Movies.id = MovieDurations.movie_id JOIN Durations ON MovieDurations.duration_id = Durations.id\r\nWHERE Genres.name = \"Action Movie\" OR Genres.name = \"Romantic Comedy\" AND Durations.minutes = 120",
-        "interpretation1": "Display all the 2-hour-long movies that are action or romantic comedies.",
-        "interpretation2": "Show all the action movies and show just the 2-hour-long romantic comedies."
-    }
-]

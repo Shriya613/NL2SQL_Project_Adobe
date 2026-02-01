@@ -1,9 +1,0 @@
-[
-    {
-        "question": "What is the amount of all the pet insurance and disability insurance which are charged monthly?",
-        "sql_query1": "SELECT Insurance.PremiumAmount \r\nFROM Insurance\r\nWHERE (Insurance.InsuranceType = \"Pet Insurance\" OR Insurance.InsuranceType = \"Disability Insurance\") AND Insurance.PaymentFrequency = \"Monthly\"",
-        "sql_query2": "SELECT Insurance.PremiumAmount \r\nFROM Insurance\r\nWHERE Insurance.InsuranceType = \"Pet Insurance\" OR Insurance.InsuranceType = \"Disability Insurance\" AND Insurance.PaymentFrequency = \"Monthly\"",
-        "interpretation1": "Show all the premium amount, for both pet and disability insurance plans, with monthly payments.",
-        "interpretation2": "Show all the pet insurance premium amounts, also show the monthly disability insurance amounts."
-    }
-]

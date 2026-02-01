@@ -1,7 +1,0 @@
-{
-    "template": "Question: Where will this concert tour start? Subject of Inquiry: Concert\nFocus: Location Possible answer types: 1. City 2. Country",
-    "subject": "Concert",
-    "focus": "Location",
-    "general_category1": "City",
-    "general_category2": "Country"
-}

@@ -1,9 +1,0 @@
-[
-    {
-        "question": "Show me the level of courses each language school offers.",
-        "sql_query1": "SELECT Course_Levels.level  from Language_Schools_Course_Levels join Course_Levels on Language_Schools_Course_Levels.course_levels_id = Course_Levels.id join Language_Schools on Language_Schools_Course_Levels.language_schools_id = Language_Schools.id   GROUP BY Language_Schools_Course_Levels.course_levels_id HAVING COUNT(DISTINCT Language_Schools_Course_Levels.language_schools_id) = (SELECT COUNT(*) FROM  Language_Schools)",
-        "sql_query2": "select language_schools.name , course_levels.level from Language_Schools_Course_Levels join Course_Levels on Language_Schools_Course_Levels.course_levels_id = Course_Levels.id join Language_Schools on Language_Schools_Course_Levels.language_schools_id = Language_Schools.id",
-        "interpretation1": "What are the levels of courses that are available at all language schools?",
-        "interpretation2": "For each language school, list the course levels available."
-    }
-]

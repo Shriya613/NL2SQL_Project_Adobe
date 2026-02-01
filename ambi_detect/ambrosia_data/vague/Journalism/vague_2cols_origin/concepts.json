@@ -1,7 +1,0 @@
-{
-    "template": "Question: What is the origin of this photograph? Subject of Inquiry: Photo\nFocus: Origin Possible answer types: 1. Photojournalist 2. Event",
-    "subject": "Photo",
-    "focus": "Origin",
-    "general_category1": "Photojournalist",
-    "general_category2": "Event"
-}

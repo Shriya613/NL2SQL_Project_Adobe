@@ -1,9 +1,0 @@
-[
-    {
-        "question": "Show me customer service advisors and IT support technicians who speak Chinese.",
-        "sql_query1": "SELECT Customer_Service_Advisors.advisor_name AS name\r\nFROM Languages JOIN Customer_Service_Advisors ON Languages.id = Customer_Service_Advisors.language_id\r\nWHERE Languages.name = \"Chinese\"\r\nUNION\r\nSELECT IT_Support_Technicians.technician_name AS name\r\nFROM Languages JOIN IT_Support_Technicians ON Languages.id = IT_Support_Technicians.language_id\r\nWHERE Languages.name = \"Chinese\"",
-        "sql_query2": "SELECT Customer_Service_Advisors.advisor_name AS name\r\nFROM Languages JOIN Customer_Service_Advisors ON Languages.id = Customer_Service_Advisors.language_id\r\nUNION\r\nSELECT IT_Support_Technicians.technician_name AS name\r\nFROM Languages JOIN IT_Support_Technicians ON Languages.id = IT_Support_Technicians.language_id\r\nWHERE Languages.name = \"Chinese\"",
-        "interpretation1": "What customer service advisors speak Chinese and what IT support technicians also speak it?",
-        "interpretation2": "Provide a list of all customer service advisors and also provide a list of IT support technicians that speak Chinese."
-    }
-]

@@ -1,9 +1,0 @@
-[
-    {
-        "question": "Display newspapers and magazines with a circulation of 20,000.",
-        "sql_query1": "SELECT Newspapers.name\r\nFROM Newspapers\r\nWHERE Newspapers.Circulation_Numbers = 20000\r\nUNION\r\nSELECT Magazines.name\r\nFROM Magazines\r\nWHERE Magazines.Circulation_Numbers = 20000",
-        "sql_query2": "SELECT Newspapers.name\r\nFROM Newspapers\r\nUNION\r\nSELECT Magazines.name\r\nFROM Magazines\r\nWHERE Magazines.Circulation_Numbers = 20000",
-        "interpretation1": "What newspapers and magazines have a circulation of 20,000?",
-        "interpretation2": "List all newspapers and also display magazines with a circulation of 20,000."
-    }
-]

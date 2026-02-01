@@ -1,7 +1,0 @@
-{
-    "template": "Question: What is the name of the protagonist in this story? Subject of Inquiry: Story\nFocus: Name Possible answer types: 1. Real Name 2. Alias",
-    "subject": "Story",
-    "focus": "Name",
-    "general_category1": "Real Name",
-    "general_category2": "Alias"
-}

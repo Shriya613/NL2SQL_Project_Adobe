@@ -1,8 +1,0 @@
-{
-    "template": "Construction Worker and Electrician are subclasses of Trades Jobs. All Construction workers and Electricians have property \"Company Owner\". There might be a Construction Worker and a Electrician that both have \"Company Owner\" equal to \"Derek Brown\".",
-    "general_class": "Trades Jobs",
-    "class1": "Construction Worker",
-    "class2": "Electrician",
-    "common_property": "Company Owner",
-    "common_value": "Derek Brown"
-}

@@ -1,6 +1,0 @@
-{
-    "template": "Each Traffic Engineers has many different Tools. Among them, Software Modeling is common to many Traffic Engineers.",
-    "specific_component": "Software Modeling",
-    "components": "Tools",
-    "entities": "Traffic Engineers"
-}

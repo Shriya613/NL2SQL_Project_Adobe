@@ -1,9 +1,0 @@
-[
-    {
-        "question": "Display event planners and wedding coordinators from Events Unlimited.",
-        "sql_query1": "SELECT Event_Planner.Position\r\nFROM Event_Planner JOIN Company ON Event_Planner.companyId = Company.id\r\nWHERE Company.name = \"Events Unlimited\"\r\nUNION\r\nSELECT Wedding_Coordinator.Position\r\nFROM Wedding_Coordinator JOIN Company ON Wedding_Coordinator.companyId = Company.id\r\nWHERE Company.name = \"Events Unlimited\"",
-        "sql_query2": "SELECT Event_Planner.Position\r\nFROM Event_Planner JOIN Company ON Event_Planner.companyId = Company.id\r\nUNION\r\nSELECT Wedding_Coordinator.Position\r\nFROM Wedding_Coordinator JOIN Company ON Wedding_Coordinator.companyId = Company.id\r\nWHERE Company.name = \"Events Unlimited\"",
-        "interpretation1": "Which event planners and wedding coordinators work for Events Unlimited?",
-        "interpretation2": "List all event planners and also show wedding coordinators employed by Events Unlimited."
-    }
-]

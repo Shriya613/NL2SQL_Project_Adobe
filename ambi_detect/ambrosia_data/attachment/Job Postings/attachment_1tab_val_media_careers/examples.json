@@ -1,9 +1,0 @@
-[
-    {
-        "question": "Show journalist postings and editor postings for English and Spanish languages.",
-        "sql_query1": "SELECT JobPosting.title \r\nFROM JobPosting\r\nWHERE (JobPosting.mediaCareer = \"Journalist\" OR JobPosting.mediaCareer = \"Editor\") AND JobPosting.languages = \"English and Spanish\"",
-        "sql_query2": "SELECT JobPosting.title \r\nFROM JobPosting\r\nWHERE JobPosting.mediaCareer = \"Journalist\" OR JobPosting.mediaCareer = \"Editor\" AND JobPosting.languages = \"English and Spanish\"",
-        "interpretation1": "Which journalist job postings require English and Spanish languages and which editor job postings have the same requirement?",
-        "interpretation2": "Provide a list of all journalist job postings and also provide a list of editor job postings for English and Spanish languages."
-    }
-]

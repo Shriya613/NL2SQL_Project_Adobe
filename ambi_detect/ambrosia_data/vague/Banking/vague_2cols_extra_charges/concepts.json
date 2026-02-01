@@ -1,7 +1,0 @@
-{
-    "template": "Question: How much will I be charged for each overdraft transaction? Subject of Inquiry: Transactions\nFocus: Extra Charges Possible answer types: 1. Fee Amount 2. Commission Percentage",
-    "subject": "Transactions",
-    "focus": "Extra Charges",
-    "general_category1": "Fee Amount",
-    "general_category2": "Commission Percentage"
-}

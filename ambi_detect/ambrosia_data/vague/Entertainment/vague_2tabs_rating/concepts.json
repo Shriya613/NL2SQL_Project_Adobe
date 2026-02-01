@@ -1,7 +1,0 @@
-{
-    "template": "Question: How is this TV show rated? Subject of Inquiry: TV Show\nFocus: Rating Possible answer types: 1. Age Rating 2. Critical Rating",
-    "subject": "TV Show",
-    "focus": "Rating",
-    "general_category1": "Age Rating",
-    "general_category2": "Critical Rating"
-}

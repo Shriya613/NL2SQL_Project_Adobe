@@ -1,9 +1,0 @@
-[
-    {
-        "question": "Give me cooking shows and reality TV shows with an audience score of 7.5.",
-        "sql_query1": "SELECT TelevisionShows.Name \r\nFROM TelevisionShows\r\nWHERE (TelevisionShows.Genre = \"Cooking Show\" OR TelevisionShows.Genre = \"Reality TV Show\") AND TelevisionShows.Audience_Score = 7.5",
-        "sql_query2": "SELECT TelevisionShows.Name \r\nFROM TelevisionShows\r\nWHERE TelevisionShows.Genre = \"Cooking Show\" OR TelevisionShows.Genre = \"Reality TV Show\" AND TelevisionShows.Audience_Score = 7.5",
-        "interpretation1": "What cooking shows have an audience score of 7.5 and what reality TV shows have the same score?",
-        "interpretation2": "List all cooking shows and also list reality TV shows with an audience score of 7.5."
-    }
-]

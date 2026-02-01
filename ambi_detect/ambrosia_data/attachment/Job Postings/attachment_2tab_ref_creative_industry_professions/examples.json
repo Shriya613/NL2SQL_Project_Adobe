@@ -1,9 +1,0 @@
-[
-    {
-        "question": "Show graphic designers and web developers working at 3/10 New York Avenue.",
-        "sql_query1": "SELECT Graphic_Designers.name\r\nFROM Office JOIN Graphic_Designers ON Office.id = Graphic_Designers.officeId\r\nWHERE Office.address = \"3/10 New York Avenue\"\r\nUNION\r\nSELECT Web_Developers.name\r\nFROM Office JOIN Web_Developers ON Office.id = Web_Developers.officeId\r\nWHERE Office.address = \"3/10 New York Avenue\"",
-        "sql_query2": "SELECT Graphic_Designers.name\r\nFROM Office JOIN Graphic_Designers ON Office.id = Graphic_Designers.officeId\r\nUNION\r\nSELECT Web_Developers.name\r\nFROM Office JOIN Web_Developers ON Office.id = Web_Developers.officeId\r\nWHERE Office.address = \"3/10 New York Avenue\"",
-        "interpretation1": "What graphic designers work at 3/10 New York Avenue and what web developers also work there?",
-        "interpretation2": "Provide a list of all graphic designers and also provide a list of web developers who work at 3/10 New York Avenue."
-    }
-]

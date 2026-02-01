@@ -1,9 +1,0 @@
-[
-    {
-        "question": "Display podcasts and radio shows with hosts with 10 years of experience.",
-        "sql_query1": "SELECT Shows.title \r\nFROM Shows JOIN Podcasters ON Shows.host = Podcasters.name\r\nWHERE (Shows.audio_format = 'Podcast' OR Shows.audio_format = 'Radio Show') AND Podcasters.years_experience = 10",
-        "sql_query2": "SELECT Shows.title \r\nFROM Shows JOIN Podcasters ON Shows.host = Podcasters.name\r\nWHERE Shows.audio_format = 'Podcast' OR Shows.audio_format = 'Radio Show' AND Podcasters.years_experience = 10",
-        "interpretation1": "Which podcasts are by podcasters with 10 years of experience and which radio shows are by hosts with the same years of experience?",
-        "interpretation2": "Show a list of all podcasts and also provide a list of radio shows with hosts with 10 years of experience."
-    }
-]

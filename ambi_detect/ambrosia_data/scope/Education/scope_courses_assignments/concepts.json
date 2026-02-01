@@ -1,6 +1,0 @@
-{
-    "template": "Each Courses has many different Assignments. Among them, Final Project is common to many Courses.",
-    "specific_component": "Final Project",
-    "components": "Assignments",
-    "entities": "Courses"
-}

@@ -1,9 +1,0 @@
-[
-    {
-        "question": "Give me all the articles with photos and videos related to technology.",
-        "sql_query1": "SELECT Articles.title \r\nFROM Articles\r\nWHERE (Articles.visualStorytelling = \"Photo\" OR Articles.visualStorytelling = \"Video\") AND Articles.articleType = \"Technology\"",
-        "sql_query2": "SELECT Articles.title \r\nFROM Articles\r\nWHERE Articles.visualStorytelling = \"Photo\" OR Articles.visualStorytelling = \"Video\" AND Articles.articleType = \"Technology\"",
-        "interpretation1": "List both articles with photos and articles with videos where any are on the subject of technology.",
-        "interpretation2": "Show all of the articles with photos, also show the articles with videos but just those about technology."
-    }
-]

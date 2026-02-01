@@ -1,6 +1,0 @@
-{
-    "template": "Each Job Postings has many different Requirements. Among them, Education is common to many Job Postings.",
-    "specific_component": "Education",
-    "components": "Requirements",
-    "entities": "Job Postings"
-}

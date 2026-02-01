@@ -1,9 +1,0 @@
-[
-    {
-        "question": "Show me the topics each development program has.",
-        "sql_query1": "SELECT Topics.topic_name  from Professional_Development_Programs_Topics join Topics on Professional_Development_Programs_Topics.topics_id = Topics.id join Professional_Development_Programs on Professional_Development_Programs_Topics.pdp_topics_id = Professional_Development_Programs.program_id   GROUP BY Professional_Development_Programs_Topics.topics_id HAVING COUNT(DISTINCT Professional_Development_Programs_Topics.pdp_topics_id) = (SELECT COUNT(*) FROM  Professional_Development_Programs)",
-        "sql_query2": "select professional_development_programs.program_name , topics.topic_name from Professional_Development_Programs_Topics join Topics on Professional_Development_Programs_Topics.topics_id = Topics.id join Professional_Development_Programs on Professional_Development_Programs_Topics.pdp_topics_id = Professional_Development_Programs.program_id",
-        "interpretation1": "What topics do all development programs have in common?",
-        "interpretation2": "For each development program, list the topics studied."
-    }
-]

@@ -1,9 +1,0 @@
-[
-    {
-        "question": "List orthodontists and periodontists with a Master of Science in Dentistry degree.",
-        "sql_query1": "SELECT Dentists.FullName\r\nFROM Dentists JOIN Education ON Dentists.EducationID = Education.ID\r\nWHERE (Dentists.DentalSpecialty = \"Orthodontist\" OR Dentists.DentalSpecialty = \"Periodontist\") AND Education.Degree = \"Master of Science in Dentistry\"",
-        "sql_query2": "SELECT Dentists.FullName\r\nFROM Dentists JOIN Education ON Dentists.EducationID = Education.ID\r\nWHERE Dentists.DentalSpecialty = \"Orthodontist\" OR Dentists.DentalSpecialty = \"Periodontist\" AND Education.Degree = \"Master of Science in Dentistry\"",
-        "interpretation1": "What orthodontists have a Master of Science in Dentistry degree and what periodontists have the same degree?",
-        "interpretation2": "List all orthodontists and also list periodontists with a Master of Science in Dentistry degree."
-    }
-]

@@ -1,9 +1,0 @@
-[
-    {
-        "question": "Show me the video quality that every streaming service offers.",
-        "sql_query1": "SELECT Video_Quality.quality  from Streaming_Service_Video_Quality join Video_Quality on Streaming_Service_Video_Quality.video_quality_id = Video_Quality.id join Streaming_Service on Streaming_Service_Video_Quality.streaming_service_id = Streaming_Service.id   GROUP BY Streaming_Service_Video_Quality.video_quality_id HAVING COUNT(DISTINCT Streaming_Service_Video_Quality.streaming_service_id) = (SELECT COUNT(*) FROM  Streaming_Service)",
-        "sql_query2": "select streaming_service.name , video_quality.quality from Streaming_Service_Video_Quality join Video_Quality on Streaming_Service_Video_Quality.video_quality_id = Video_Quality.id join Streaming_Service on Streaming_Service_Video_Quality.streaming_service_id = Streaming_Service.id",
-        "interpretation1": "What video quality is common across all streaming services?",
-        "interpretation2": "For every streaming service, list the video quality offered."
-    }
-]

@@ -1,6 +1,0 @@
-{
-    "template": "Each Maritime Villages has many different Boat Tours. Among them, Whale Watching is common to many Maritime Villages.",
-    "specific_component": "Whale Watching",
-    "components": "Boat Tours",
-    "entities": "Maritime Villages"
-}

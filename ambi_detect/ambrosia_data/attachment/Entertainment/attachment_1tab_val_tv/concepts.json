@@ -1,8 +1,0 @@
-{
-    "template": "Documentary Series and Mini-Series are subclasses of TV. All Documentary series and Mini-sery have property \"Number of Episodes\". There might be a Documentary Series and a Mini-Series that both have \"Number of Episodes\" equal to \"10\".",
-    "general_class": "TV",
-    "class1": "Documentary Series",
-    "class2": "Mini-Series",
-    "common_property": "Number of Episodes",
-    "common_value": "10"
-}

@@ -1,9 +1,0 @@
-[
-    {
-        "question": "What events have dance recitals and talent shows been held in room 101?",
-        "sql_query1": "SELECT Events.Name \r\nFROM Performances JOIN Events ON Events.EventID = Performances.EventID\r\nWHERE (Performances.PerformanceEvent = \"Dance Recital\" OR Performances.PerformanceEvent = \"Talent Show\") AND Performances.AuditionRoom = \"Room 101\"",
-        "sql_query2": "SELECT Events.Name \r\nFROM Performances JOIN Events ON Events.EventID = Performances.EventID\r\nWHERE Performances.PerformanceEvent = \"Dance Recital\" OR Performances.PerformanceEvent = \"Talent Show\" AND Performances.AuditionRoom = \"Room 101\"",
-        "interpretation1": "Show all events that had both dance recitals in room 101 and talent shows in room 101",
-        "interpretation2": "Show all events that had dance recitals and also show all events that had talent shows in room 101."
-    }
-]

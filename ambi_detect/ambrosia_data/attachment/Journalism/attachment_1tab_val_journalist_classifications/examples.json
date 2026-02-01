@@ -1,9 +1,0 @@
-[
-    {
-        "question": "Give me all stringers and editors paid 2000.",
-        "sql_query1": "SELECT Authors.Name \r\nFROM Authors\r\nWHERE (Authors.Classification = \"Stringer\" OR Authors.Classification = \"Editor\") AND Authors.Payment = 2000",
-        "sql_query2": "SELECT Authors.Name \r\nFROM Authors\r\nWHERE Authors.Classification = \"Stringer\" OR Authors.Classification = \"Editor\" AND Authors.Payment = 2000",
-        "interpretation1": "Show all stringers paid 2000, also show the editors paid the same amount.",
-        "interpretation2": "Show all the stringers listed, then show the editors, but only those paid 2000."
-    }
-]

@@ -1,9 +1,0 @@
-[
-    {
-        "question": "Give me all jet bridges and staircars assigned to terminal 1.",
-        "sql_query1": "SELECT Jet_Bridges.BridgeName as Name\r\nFROM Jet_Bridges JOIN Terminals ON Jet_Bridges.TerminalID = Terminals.ID\r\nWHERE Terminals.name = \"Terminal 1\"\r\nUNION\r\nSELECT Staircars.CarName as Name\r\nFROM Staircars JOIN Terminals ON Staircars.TerminalID = Terminals.ID\r\nWHERE Terminals.name = \"Terminal 1\"",
-        "sql_query2": "SELECT Jet_Bridges.BridgeName as Name\r\nFROM Jet_Bridges JOIN Terminals ON Jet_Bridges.TerminalID = Terminals.ID\r\nUNION\r\nSELECT Staircars.CarName as Name\r\nFROM Staircars JOIN Terminals ON Staircars.TerminalID = Terminals.ID\r\nWHERE Terminals.name = \"Terminal 1\"",
-        "interpretation1": "Provide both the jet bridges and staircars assigned to terminal 1.",
-        "interpretation2": "Show every single jet bridge and just the staircars assigned to terminal 1."
-    }
-]

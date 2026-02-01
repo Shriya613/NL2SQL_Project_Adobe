@@ -1,9 +1,0 @@
-[
-    {
-        "question": "Show science fiction books and romance books published in 2018.",
-        "sql_query1": "SELECT Science_Fiction_Book.title\r\nFROM Science_Fiction_Book\r\nWHERE Science_Fiction_Book.Year_of_publication = 2018\r\nUNION\r\nSELECT Romance_Book.title\r\nFROM Romance_Book\r\nWHERE Romance_Book.Year_of_publication = 2018",
-        "sql_query2": "SELECT Science_Fiction_Book.title\r\nFROM Science_Fiction_Book\r\nUNION\r\nSELECT Romance_Book.title\r\nFROM Romance_Book\r\nWHERE Romance_Book.Year_of_publication = 2018",
-        "interpretation1": "Which science fiction books are published in 2018 and which romance books are published in the same year?",
-        "interpretation2": "Provide a list of all science fiction books and also provide a list of romance books published in 2018."
-    }
-]

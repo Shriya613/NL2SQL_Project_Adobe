@@ -1,8 +1,0 @@
-{
-    "template": "Movies and TV Shows are subclasses of Visual Media. All Movies and TV Shows have the property \"Genre\". There might be a Movie and a TV Show that both have \"Genre\" equal to \"Comedy\".",
-    "general_class": "Visual Media",
-    "class1": "Movie",
-    "class2": "TV Show",
-    "common_property": "Genre",
-    "common_value": "Comedy"
-}

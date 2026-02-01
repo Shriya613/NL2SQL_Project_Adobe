@@ -1,9 +1,0 @@
-[
-    {
-        "question": "Display all essays and letters for authors born on June 23rd 1970.",
-        "sql_query1": "SELECT WrittenWorks.Title \r\nFROM TypesOfWork JOIN WrittenWorks ON TypesOfWork.Type = WrittenWorks.TypeOfWork JOIN Writes ON WrittenWorks.WorkID = Writes.WorkID JOIN Authors ON Writes.AuthorID = Authors.AuthorID\r\nWHERE (TypesOfWork.Type = \"Essay\" OR TypesOfWork.Type = \"Letter\") AND Authors.BirthDate = \"1970-06-23\"",
-        "sql_query2": "SELECT WrittenWorks.Title \r\nFROM TypesOfWork JOIN WrittenWorks ON TypesOfWork.Type = WrittenWorks.TypeOfWork JOIN Writes ON WrittenWorks.WorkID = Writes.WorkID JOIN Authors ON Writes.AuthorID = Authors.AuthorID\r\nWHERE TypesOfWork.Type = \"Essay\" OR TypesOfWork.Type = \"Letter\" AND Authors.BirthDate = \"1970-06-23\"",
-        "interpretation1": "Show both the essays written by authors born on June 23rd 1970 and letters written by authors born on the same day.",
-        "interpretation2": "Show records for all of the essays and also just the letters written by authors born on June 23rd 1970."
-    }
-]

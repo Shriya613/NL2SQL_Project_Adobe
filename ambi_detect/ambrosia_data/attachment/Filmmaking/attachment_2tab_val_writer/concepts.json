@@ -1,8 +1,0 @@
-{
-    "template": "Screenwriter and Playwright are subclasses of Writer. All Screenwriters and Playwrights have a property \"Education\". There might be a Screenwriter and a Playwright both educated at \"New York University\" while others in these roles have different educational backgrounds.",
-    "general_class": "Writer",
-    "class1": "Screenwriter",
-    "class2": "Playwright",
-    "common_property": "Education",
-    "common_value": "New York University"
-}

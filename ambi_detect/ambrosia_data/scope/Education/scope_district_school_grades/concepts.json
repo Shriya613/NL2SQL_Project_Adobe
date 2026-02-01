@@ -1,6 +1,0 @@
-{
-    "template": "Each District has many different School Grades. Among them, Kindergarten is common to many District.",
-    "specific_component": "Kindergarten",
-    "components": "School Grades",
-    "entities": "District"
-}

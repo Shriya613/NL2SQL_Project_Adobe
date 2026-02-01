@@ -1,9 +1,0 @@
-[
-    {
-        "question": "Display field trips and study halls with 50 students.",
-        "sql_query1": "SELECT FieldTrips.trip as name\r\nFROM FieldTrips\r\nWHERE FieldTrips.number_of_students = 50\r\nUNION\r\nSELECT StudyHalls.building as name\r\nFROM StudyHalls\r\nWHERE StudyHalls.number_of_students = 50",
-        "sql_query2": "SELECT FieldTrips.trip as name\r\nFROM FieldTrips\r\nUNION\r\nSELECT StudyHalls.building as name\r\nFROM StudyHalls\r\nWHERE StudyHalls.number_of_students = 50",
-        "interpretation1": "Which field trips have 50 students and which study halls have the same number of students?",
-        "interpretation2": "Provide a list of all field trips and also provide a list of study halls with 50 students."
-    }
-]

@@ -1,8 +1,0 @@
-{
-    "template": "Pension Plan and Brokerage Account are subclasses of Retirement Savings. All Pension plans and Brokerage accounts have property \"Rate of Return\". There might be a Pension Plan and a Brokerage Account that both have \"Rate of Return\" equal to \"5%\".",
-    "general_class": "Retirement Savings",
-    "class1": "Pension Plan",
-    "class2": "Brokerage Account",
-    "common_property": "Rate of Return",
-    "common_value": "5%"
-}

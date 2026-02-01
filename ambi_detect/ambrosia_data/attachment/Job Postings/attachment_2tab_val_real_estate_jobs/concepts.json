@@ -1,8 +1,0 @@
-{
-    "template": "Real Estate Agent and Property Manager are subclasses of Real Estate Jobs. All Real estate agents and Property managers have property \"Commission\". There might be a Real Estate Agent and a Property Manager that both have \"Commission\" equal to \"5%\".",
-    "general_class": "Real Estate Jobs",
-    "class1": "Real Estate Agent",
-    "class2": "Property Manager",
-    "common_property": "Commission",
-    "common_value": "5%"
-}

@@ -1,7 +1,0 @@
-{
-    "template": "Question: What kind of aircraft is it? Subject of Inquiry: Plane\nFocus: Aircraft Family Possible answer types: 1. Manufacturer Name 2. Model Name",
-    "subject": "Plane",
-    "focus": "Aircraft Family",
-    "general_category1": "Manufacturer Name",
-    "general_category2": "Model Name"
-}

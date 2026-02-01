@@ -1,8 +1,0 @@
-{
-    "template": "Family Suite and Single Room are subclasses of Accommodation. All Family suites and Single rooms have property \"Price Per Night\". There might be a Family Suite and a Single Room that both have \"Price Per Night\" equal to \"150\".",
-    "general_class": "Accommodation",
-    "class1": "Family Suite",
-    "class2": "Single Room",
-    "common_property": "Price Per Night",
-    "common_value": "150"
-}

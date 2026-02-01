@@ -1,9 +1,0 @@
-[
-    {
-        "question": "Give me the mortgage amounts and home equity loan amounts with 30 years of repayment.",
-        "sql_query1": "SELECT Mortgages.principalAmount \r\nFROM Mortgages\r\nWHERE (Mortgages.loanType = \"Mortgage\" OR Mortgages.loanType = \"Home Equity Loan\") AND Mortgages.repaymentPeriod = \"30\"",
-        "sql_query2": "SELECT Mortgages.principalAmount \r\nFROM Mortgages\r\nWHERE Mortgages.loanType = \"Mortgage\" OR Mortgages.loanType = \"Home Equity Loan\" AND Mortgages.repaymentPeriod = \"30\"",
-        "interpretation1": "What is the principal amount of a mortgage with 30 years of repayment and what is the principal amount of a home equity loan with the same repayment period?",
-        "interpretation2": "Provide a list of all mortgage principal amounts combined with a list of principal amounts of home equity loans with 30 years of repayment."
-    }
-]

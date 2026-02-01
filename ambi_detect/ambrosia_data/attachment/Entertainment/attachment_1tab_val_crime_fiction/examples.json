@@ -1,9 +1,0 @@
-[
-    {
-        "question": "Provide me with the mysteries and thrillers from Warner Bros studio.",
-        "sql_query1": "SELECT Movie.Title \r\nFROM Movie\r\nWHERE (Movie.Crime_Fiction = \"Mystery\" OR Movie.Crime_Fiction = \"Thriller\") AND Movie.Studio = \"Warner Bros\"",
-        "sql_query2": "SELECT Movie.Title \r\nFROM Movie\r\nWHERE Movie.Crime_Fiction = \"Mystery\" OR Movie.Crime_Fiction = \"Thriller\" AND Movie.Studio = \"Warner Bros\"",
-        "interpretation1": "Show the Warner Bros produced films that are either mysteries or thrillers.",
-        "interpretation2": "Show all the mystery films, then also show the thrillers from Warner Bros."
-    }
-]

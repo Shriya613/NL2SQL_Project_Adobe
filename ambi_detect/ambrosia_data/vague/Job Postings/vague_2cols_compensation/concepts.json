@@ -1,7 +1,0 @@
-{
-    "template": "Question: How much is the salary for this position? Subject of Inquiry: Position\nFocus: Compensation Possible answer types: 1. Salary Range 2. Hourly Rate",
-    "subject": "Position",
-    "focus": "Compensation",
-    "general_category1": "Salary Range",
-    "general_category2": "Hourly Rate"
-}

@@ -1,9 +1,0 @@
-[
-    {
-        "question": "Show me the monetization models that each streaming service uses.",
-        "sql_query1": "SELECT Monetization_Model.model_name  from Streaming_Service_Monetization_Model join Monetization_Model on Streaming_Service_Monetization_Model.monetization_model_id = Monetization_Model.id join Streaming_Service on Streaming_Service_Monetization_Model.streaming_service_id = Streaming_Service.id   GROUP BY Streaming_Service_Monetization_Model.monetization_model_id HAVING COUNT(DISTINCT Streaming_Service_Monetization_Model.streaming_service_id) = (SELECT COUNT(*) FROM  Streaming_Service)",
-        "sql_query2": "select streaming_service.name , monetization_model.model_name from Streaming_Service_Monetization_Model join Monetization_Model on Streaming_Service_Monetization_Model.monetization_model_id = Monetization_Model.id join Streaming_Service on Streaming_Service_Monetization_Model.streaming_service_id = Streaming_Service.id",
-        "interpretation1": "What monetization model is common to all streaming services?",
-        "interpretation2": "For every streaming service, list the monetization models they use."
-    }
-]

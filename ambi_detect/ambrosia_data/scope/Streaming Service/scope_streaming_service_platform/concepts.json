@@ -1,6 +1,0 @@
-{
-    "template": "Each Streaming Service has many different Platform. Among them, Web Browser is common to many Streaming Service.",
-    "specific_component": "Web Browser",
-    "components": "Platform",
-    "entities": "Streaming Service"
-}

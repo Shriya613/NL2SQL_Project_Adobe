@@ -1,8 +1,0 @@
-{
-    "template": "Exam and Quiz are subclasses of Assessment Methods. All Exams and Quizzes have property \"Assessor\". There might be an Exam and a Quiz that both have \"Assessor\" being the same teacher.",
-    "general_class": "Assessment Methods",
-    "class1": "Exam",
-    "class2": "Quiz",
-    "common_property": "Assessor",
-    "common_value": "Professor Smith"
-}

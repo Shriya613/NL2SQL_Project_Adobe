@@ -1,7 +1,0 @@
-{
-    "template": "Question: Where will this lecture take place? Subject of Inquiry: Lectures\nFocus: Location Possible answer types: 1. Room Number 2. Building Name",
-    "subject": "Lectures",
-    "focus": "Location",
-    "general_category1": "Room Number",
-    "general_category2": "Building Name"
-}

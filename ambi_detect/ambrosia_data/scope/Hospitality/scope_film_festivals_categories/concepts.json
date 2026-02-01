@@ -1,6 +1,0 @@
-{
-    "template": "Each Film Festivals has many different Categories. Among them, Documentary Films is common to many Film Festivals.",
-    "specific_component": "Documentary Films",
-    "components": "Categories",
-    "entities": "Film Festivals"
-}

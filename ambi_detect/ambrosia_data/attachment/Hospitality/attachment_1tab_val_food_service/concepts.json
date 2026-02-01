@@ -1,8 +1,0 @@
-{
-    "template": "Restaurant and Caf\u00e9 are subclasses of Food Service. All Restaurants and Caf\u00e9s have property \"Cuisine\". There might be a Restaurant and a Caf\u00e9 that both have \"Cuisine\" equal to \"Italian\".",
-    "general_class": "Food Service",
-    "class1": "Restaurant",
-    "class2": "Caf\u00e9",
-    "common_property": "Cuisine",
-    "common_value": "Italian"
-}

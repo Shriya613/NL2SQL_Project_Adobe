@@ -1,9 +1,0 @@
-[
-    {
-        "question": "List all banquet halls and conference rooms with a 200 person capacity.",
-        "sql_query1": "SELECT EventSpaces.Name \r\nFROM EventSpaces\r\nWHERE (EventSpaces.Event_Space = \"Banquet Hall\" OR EventSpaces.Event_Space = \"Conference Room\") AND EventSpaces.Capacity = 200",
-        "sql_query2": "SELECT EventSpaces.Name \r\nFROM EventSpaces\r\nWHERE EventSpaces.Event_Space = \"Banquet Hall\" OR EventSpaces.Event_Space = \"Conference Room\" AND EventSpaces.Capacity = 200",
-        "interpretation1": "Show all banquet halls and conference rooms where either can hold 200 people.",
-        "interpretation2": "List all of the banquet halls, in addition show the 200 capacity conference rooms."
-    }
-]

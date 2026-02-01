@@ -1,6 +1,0 @@
-{
-    "template": "Each Costume Designers has many different Eras. Among them, Victorian Era is common to many Costume Designers.",
-    "specific_component": "Victorian Era",
-    "components": "Eras",
-    "entities": "Costume Designers"
-}

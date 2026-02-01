@@ -1,9 +1,0 @@
-[
-    {
-        "question": "List the cuisines that every food critic reviews.",
-        "sql_query1": "SELECT Cuisines.cuisine_name  from Food_Critics_Cuisines join Cuisines on Food_Critics_Cuisines.cuisine_id = Cuisines.id join Food_Critics on Food_Critics_Cuisines.food_critic_id = Food_Critics.id   GROUP BY Food_Critics_Cuisines.cuisine_id HAVING COUNT(DISTINCT Food_Critics_Cuisines.food_critic_id) = (SELECT COUNT(*) FROM  Food_Critics)",
-        "sql_query2": "select food_critics.critic_name , cuisines.cuisine_name from Food_Critics_Cuisines join Cuisines on Food_Critics_Cuisines.cuisine_id = Cuisines.id join Food_Critics on Food_Critics_Cuisines.food_critic_id = Food_Critics.id",
-        "interpretation1": "List the cuisines that are common to all of the food critics.",
-        "interpretation2": "For each of the food critics, list the corresponding cuisine."
-    }
-]

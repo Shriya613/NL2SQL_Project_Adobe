@@ -1,6 +1,0 @@
-{
-    "template": "Each Gate has many different Facility. Among them, Baggage Claim is common to many Gate.",
-    "specific_component": "Baggage Claim",
-    "components": "Facility",
-    "entities": "Gate"
-}

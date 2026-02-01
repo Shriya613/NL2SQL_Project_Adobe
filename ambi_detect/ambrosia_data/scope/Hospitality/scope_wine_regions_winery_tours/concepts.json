@@ -1,6 +1,0 @@
-{
-    "template": "Each Wine Regions has many different Winery Tours. Among them, Self-guided Tours is common to many Wine Regions.",
-    "specific_component": "Self-guided Tours",
-    "components": "Winery Tours",
-    "entities": "Wine Regions"
-}

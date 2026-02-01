@@ -1,7 +1,0 @@
-{
-    "template": "Question: What is the historical context of this documentary? Subject of Inquiry: Documentary\nFocus: Context Possible answer types: 1. Historical Era 2. Event",
-    "subject": "Documentary",
-    "focus": "Context",
-    "general_category1": "Historical Era",
-    "general_category2": "Event"
-}

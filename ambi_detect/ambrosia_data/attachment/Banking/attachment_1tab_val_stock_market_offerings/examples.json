@@ -1,9 +1,0 @@
-[
-    {
-        "question": "Give me all the IPO rates and secondary offering rates with 50M of raised capital.",
-        "sql_query1": "SELECT Loans.InterestRate \r\nFROM Loans\r\nWHERE (Loans.StockMarketOfferings = \"IPO\" OR Loans.StockMarketOfferings = \"Secondary Offering\") AND Loans.RaisedCapitalAmount = \"50000000\"",
-        "sql_query2": "SELECT Loans.InterestRate \r\nFROM Loans\r\nWHERE Loans.StockMarketOfferings = \"IPO\" OR Loans.StockMarketOfferings = \"Secondary Offering\" AND Loans.RaisedCapitalAmount = \"50000000\"",
-        "interpretation1": "Show the interest rates for both IPOs and secondary offerings where the capital raised for either is 50M.",
-        "interpretation2": "Show the interest rates of all the IPOs, and combine them with all the secondary offering interest rates where 50M capital has been raised."
-    }
-]

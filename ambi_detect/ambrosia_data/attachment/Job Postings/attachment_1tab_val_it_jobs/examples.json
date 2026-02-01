@@ -1,9 +1,0 @@
-[
-    {
-        "question": "Show network admin jobs and IT consultant jobs with a $70k salary.",
-        "sql_query1": "SELECT JobPostings.title \r\nFROM JobPostings\r\nWHERE (JobPostings.itJobs = \"Network Administrator\" OR JobPostings.itJobs = \"IT Consultant\") AND JobPostings.salary = \"$70,000\"",
-        "sql_query2": "SELECT JobPostings.title \r\nFROM JobPostings\r\nWHERE JobPostings.itJobs = \"Network Administrator\" OR JobPostings.itJobs = \"IT Consultant\" AND JobPostings.salary = \"$70,000\"",
-        "interpretation1": "Show all jobs with a $70k salary for either the network admin or IT consultant role.",
-        "interpretation2": "Show all the network admin job postings, also show the IT consultant jobs with a $70k salary."
-    }
-]

@@ -1,6 +1,0 @@
-{
-    "template": "Each Medical Centers has many different Specialties. Among them, Emergency Medicine is common to many Medical Centers.",
-    "specific_component": "Emergency Medicine",
-    "components": "Specialties",
-    "entities": "Medical Centers"
-}

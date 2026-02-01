@@ -1,9 +1,0 @@
-[
-    {
-        "question": "Show all the action movies and romantic comedies lasting 2 hours.",
-        "sql_query1": "SELECT Movies.Title \r\nFROM Movies\r\nWHERE (Movies.genre = \"Action Movie\" OR Movies.genre = \"Romantic Comedy\") AND Movies.duration = 120",
-        "sql_query2": "SELECT Movies.Title \r\nFROM Movies\r\nWHERE Movies.genre = \"Action Movie\" OR Movies.genre = \"Romantic Comedy\" AND Movies.duration = 120",
-        "interpretation1": "Show all the 2 hour films that are classed as either action or romantic comedy.",
-        "interpretation2": "Show all the action movies, in addition show only the 2 hour long romantic comedy films."
-    }
-]

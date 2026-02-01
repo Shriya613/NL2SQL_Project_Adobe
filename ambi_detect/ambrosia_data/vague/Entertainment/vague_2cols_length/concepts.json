@@ -1,7 +1,0 @@
-{
-    "template": "Question: How is this show? Subject of Inquiry: Show\nFocus: Length Possible answer types: 1. Number of Seasons 2. Number of Episodes",
-    "subject": "Show",
-    "focus": "Length",
-    "general_category1": "Number of Seasons",
-    "general_category2": "Number of Episodes"
-}

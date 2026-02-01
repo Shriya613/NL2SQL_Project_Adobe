@@ -1,8 +1,0 @@
-{
-    "template": "Chemist and Geoscientist are subclasses of Earth Science Careers. All Chemists and Geoscientists have property \"University\". There might be a Chemist and a Geoscientist that both have \"University\" equal to \"MIT\".",
-    "general_class": "Earth Science Careers",
-    "class1": "Chemist",
-    "class2": "Geoscientist",
-    "common_property": "University",
-    "common_value": "MIT"
-}

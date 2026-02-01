@@ -1,9 +1,0 @@
-[
-    {
-        "question": "Show opinion pieces and feature articles with volume of 01.",
-        "sql_query1": "SELECT Opinion_Pieces.title\r\nFROM Opinion_Pieces\r\nWHERE Opinion_Pieces.Volume = \"01\"\r\nUNION\r\nSELECT Feature_Articles.title\r\nFROM Feature_Articles\r\nWHERE Feature_Articles.Volume = \"01\"",
-        "sql_query2": "SELECT Opinion_Pieces.title\r\nFROM Opinion_Pieces\r\nUNION\r\nSELECT Feature_Articles.title\r\nFROM Feature_Articles\r\nWHERE Feature_Articles.Volume = \"01\"",
-        "interpretation1": "What opinion pieces are volume 01 and what feature articles are the same volume?",
-        "interpretation2": "Provide a list of all opinion pieces and also provide a list of feature articles with volume of 01."
-    }
-]

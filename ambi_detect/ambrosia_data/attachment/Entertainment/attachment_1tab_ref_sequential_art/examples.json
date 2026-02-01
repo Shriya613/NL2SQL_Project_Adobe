@@ -1,9 +1,0 @@
-[
-    {
-        "question": "Show all comic books and graphic novels published by BOOM Studios.",
-        "sql_query1": "SELECT ArtWork.Title \r\nFROM SequentialArtType JOIN ArtWork ON SequentialArtType.id = ArtWork.sequentialArtTypeId JOIN Publisher ON ArtWork.publisherId = Publisher.id\r\nWHERE (SequentialArtType.type = \"Comic Book\" OR SequentialArtType.type = \"Graphic Novel\") AND Publisher.name = \"BOOM Studios\"",
-        "sql_query2": "SELECT ArtWork.Title \r\nFROM SequentialArtType JOIN ArtWork ON SequentialArtType.id = ArtWork.sequentialArtTypeId JOIN Publisher ON ArtWork.publisherId = Publisher.id\r\nWHERE SequentialArtType.type = \"\" OR SequentialArtType.type = \"Graphic Novel\" AND Publisher.name = \"BOOM Studios\"",
-        "interpretation1": "Show publications by BOOM Studios that are either comic books or graphic novels.",
-        "interpretation2": "Show all comic books and in addition show graphic novels published by BOOM Studios."
-    }
-]

@@ -1,9 +1,0 @@
-[
-    {
-        "question": "I need the luggage trolley IDs and porter IDs available at the departure hall.",
-        "sql_query1": "SELECT Luggage_trolleys.TrolleyID as ID\r\nFROM Available_locations JOIN Luggage_trolleys ON Available_locations.id = Luggage_trolleys.availableLocation\r\nWHERE Available_locations.location = \"Departure Hall\"\r\nUNION\r\nSELECT Porters.PorterID as ID\r\nFROM Available_locations JOIN Porters ON Available_locations.id = Porters.availableLocation\r\nWHERE Available_locations.location = \"Departure Hall\"",
-        "sql_query2": "SELECT Luggage_trolleys.TrolleyID as ID\r\nFROM Available_locations JOIN Luggage_trolleys ON Available_locations.id = Luggage_trolleys.availableLocation\r\nUNION\r\nSELECT Porters.PorterID as ID\r\nFROM Available_locations JOIN Porters ON Available_locations.id = Porters.availableLocation\r\nWHERE Available_locations.location = \"Departure Hall\"",
-        "interpretation1": "Could you show me the IDs of the luggage trolleys located at the departure hall and the ids of the porters located there?",
-        "interpretation2": "Provide the luggage trolley IDs and also provide the IDs of the porters, but only if they are located at the departure hall."
-    }
-]

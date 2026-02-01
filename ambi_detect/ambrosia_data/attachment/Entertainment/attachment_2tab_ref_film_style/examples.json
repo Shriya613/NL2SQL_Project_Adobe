@@ -1,9 +1,0 @@
-[
-    {
-        "question": "What are the IDs of action movies and adventure movies directed by Sofia Martinez?",
-        "sql_query1": "SELECT Action_Movie.movieId\r\nFROM Director JOIN Movie ON Director.id = Movie.directorId JOIN Action_Movie ON Movie.id = Action_Movie.movieId\r\nWHERE Director.name = 'Sofia Martinez'\r\nUNION\r\nSELECT Adventure_Movie.movieId\r\nFROM Director JOIN Movie ON Director.id = Movie.directorId JOIN Adventure_Movie ON Movie.id = Adventure_Movie.movieId\r\nWHERE Director.name = 'Sofia Martinez'",
-        "sql_query2": "SELECT Action_Movie.movieId\r\nFROM Director JOIN Movie ON Director.id = Movie.directorId JOIN Action_Movie ON Movie.id = Action_Movie.movieId\r\nUNION\r\nSELECT Adventure_Movie.movieId\r\nFROM Director JOIN Movie ON Director.id = Movie.directorId JOIN Adventure_Movie ON Movie.id = Adventure_Movie.movieId\r\nWHERE Director.name = 'Sofia Martinez'",
-        "interpretation1": "Show action and adventure movie IDs directed by Sofia Martinez",
-        "interpretation2": "Show the IDs of all action movies and also just the IDs of adventure movies directed by Sofia Martinez."
-    }
-]

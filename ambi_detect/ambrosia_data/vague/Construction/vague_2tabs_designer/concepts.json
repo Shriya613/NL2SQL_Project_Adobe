@@ -1,7 +1,0 @@
-{
-    "template": "Question: Who designed this building? Subject of Inquiry: Building\nFocus: Designer Possible answer types: 1. Architect 2. Firm",
-    "subject": "Building",
-    "focus": "Designer",
-    "general_category1": "Architect",
-    "general_category2": "Firm"
-}

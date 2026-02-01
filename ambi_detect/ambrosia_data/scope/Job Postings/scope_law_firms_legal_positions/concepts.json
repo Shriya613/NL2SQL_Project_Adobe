@@ -1,6 +1,0 @@
-{
-    "template": "Each Law Firms has many different Legal Positions. Among them, Paralegal is common to many Law Firms.",
-    "specific_component": "Paralegal",
-    "components": "Legal Positions",
-    "entities": "Law Firms"
-}

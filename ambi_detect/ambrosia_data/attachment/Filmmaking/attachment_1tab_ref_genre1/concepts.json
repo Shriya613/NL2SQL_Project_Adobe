@@ -1,8 +1,0 @@
-{
-    "template": "Action Movie and Romantic Comedy are subclasses of Genre. All Action Movies and Romantic Comedies have a property \"Duration\". There might be an Action Movie and a Romantic Comedy both with a duration of \"120 minutes\".",
-    "general_class": "Genre",
-    "class1": "Action Movie",
-    "class2": "Romantic Comedy",
-    "common_property": "Duration",
-    "common_value": "120"
-}

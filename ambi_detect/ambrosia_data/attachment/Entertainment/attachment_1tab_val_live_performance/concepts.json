@@ -1,8 +1,0 @@
-{
-    "template": "Concerts and Theater Plays are subclasses of Live Performances. All Concerts and Theater Plays have the property \"Venue Capacity\". There might be a Concert and a Theater Play that both have \"Venue Capacity\" equal to \"500 Seats\".",
-    "general_class": "Live Performance",
-    "class1": "Concert",
-    "class2": "Theater Play",
-    "common_property": "Venue Capacity",
-    "common_value": "500"
-}

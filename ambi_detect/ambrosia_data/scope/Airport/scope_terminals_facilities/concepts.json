@@ -1,6 +1,0 @@
-{
-    "template": "Each Terminals has many different Facilities. Among them, Restrooms is common to many Terminals.",
-    "specific_component": "Restrooms",
-    "components": "Facilities",
-    "entities": "Terminals"
-}

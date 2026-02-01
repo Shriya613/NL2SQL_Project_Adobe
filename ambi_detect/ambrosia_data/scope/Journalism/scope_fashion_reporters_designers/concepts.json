@@ -1,6 +1,0 @@
-{
-    "template": "Each Fashion Reporters has many different Designers. Among them, Christian Dior is common to many Fashion Reporters.",
-    "specific_component": "Christian Dior",
-    "components": "Designers",
-    "entities": "Fashion Reporters"
-}

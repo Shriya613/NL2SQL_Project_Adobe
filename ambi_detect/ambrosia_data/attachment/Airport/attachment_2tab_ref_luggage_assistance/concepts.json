@@ -1,8 +1,0 @@
-{
-    "template": "Luggage Trolley and Porter Service are subclasses of Luggage Assistance. All Luggage Trolleys and Porter Services have the property \"Available Locations\". There might be a Luggage Trolley station and a Porter Service desk that both are located at \"Entrance B\".",
-    "general_class": "Luggage Assistance",
-    "class1": "Luggage Trolley",
-    "class2": "Porter Service",
-    "common_property": "Available Locations",
-    "common_value": "Entrance B"
-}

@@ -1,9 +1,0 @@
-[
-    {
-        "question": "What type of equipment do we have for each facility",
-        "sql_query1": "SELECT Equipment.type  from Maintenance_Facilities_Equipment join Equipment on Maintenance_Facilities_Equipment.equipmentTypeId = Equipment.equipmentId join Maintenance_Facilities on Maintenance_Facilities_Equipment.maintenanceId = Maintenance_Facilities.id   GROUP BY Maintenance_Facilities_Equipment.equipmentTypeId HAVING COUNT(DISTINCT Maintenance_Facilities_Equipment.maintenanceId) = (SELECT COUNT(*) FROM  Maintenance_Facilities)",
-        "sql_query2": "select maintenance_facilities.name , equipment.type from Maintenance_Facilities_Equipment join Equipment on Maintenance_Facilities_Equipment.equipmentTypeId = Equipment.equipmentId join Maintenance_Facilities on Maintenance_Facilities_Equipment.maintenanceId = Maintenance_Facilities.id",
-        "interpretation1": "Give me the equipment that is common across all facilities",
-        "interpretation2": "For all facilities, give me the type of equipment available"
-    }
-]

@@ -1,9 +1,0 @@
-[
-    {
-        "question": "Who booked a guest room or suite with air conditioning?",
-        "sql_query1": "SELECT Guests.FullName \r\nFROM Rooms JOIN Services ON Rooms.ServiceID = Services.ServiceID JOIN Bookings ON Bookings.ROOMID = Rooms.RoomID JOIN Guests ON Guests.ID = Bookings.GuestID\r\nWHERE (Rooms.TypeOfRoom = 'Guestroom' OR Rooms.TypeOfRoom = 'Suite') AND Services.Amenity = 'Air Conditioning'",
-        "sql_query2": "SELECT Guests.FullName \r\nFROM Rooms JOIN Services ON Rooms.ServiceID = Services.ServiceID JOIN Bookings ON Bookings.ROOMID = Rooms.RoomID JOIN Guests ON Guests.ID = Bookings.GuestID\r\nWHERE Rooms.TypeOfRoom = 'Guestroom' OR Rooms.TypeOfRoom = 'Suite' AND Services.Amenity = 'Air Conditioning'",
-        "interpretation1": "Who booked air-conditioned guest rooms and who booked air-conditioned suites?",
-        "interpretation2": "Provide a list of people who have booked guest rooms, as well as a list of people who have booked air-conditioned suites."
-    }
-]

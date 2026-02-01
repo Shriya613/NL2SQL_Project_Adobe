@@ -1,9 +1,0 @@
-[
-    {
-        "question": "Show expansions and renovations that increased capacity to 1500 passengers per day.",
-        "sql_query1": "SELECT Expansions.Airport_Expansion as Modernization\r\nFROM Expansions\r\nWHERE Expansions.Increased_Capacity = \"1500 Passengers per day\"\r\nUNION\r\nSELECT Renovations.Renovation as Modernization\r\nFROM Renovations\r\nWHERE Renovations.Increased_Capacity = \"1500 Passengers per day\"",
-        "sql_query2": "SELECT Expansions.Airport_Expansion as Modernization\r\nFROM Expansions\r\nUNION\r\nSELECT Renovations.Renovation as Modernization\r\nFROM Renovations\r\nWHERE Renovations.Increased_Capacity = \"1500 Passengers per day\"",
-        "interpretation1": "Which expansions increased capacity to 1500 passengers per day and which renovations made the same capacity per day?",
-        "interpretation2": "Provide a list of all expansions and also provide a list of renovations that increased capacity to 1500 passengers per day."
-    }
-]

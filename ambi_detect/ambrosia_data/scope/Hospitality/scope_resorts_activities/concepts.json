@@ -1,6 +1,0 @@
-{
-    "template": "Each Resorts has many different Activities. Among them, Swimming Pool is common to many Resorts.",
-    "specific_component": "Swimming Pool",
-    "components": "Activities",
-    "entities": "Resorts"
-}

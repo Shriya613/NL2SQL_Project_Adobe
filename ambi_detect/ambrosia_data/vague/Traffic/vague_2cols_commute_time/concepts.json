@@ -1,7 +1,0 @@
-{
-    "template": "Question: What is the average commute time for residents in this neighborhood? Subject of Inquiry: Neighborhood\nFocus: Commute Time Possible answer types: 1. Mean Commute Time 2. Median Commute Time",
-    "subject": "Neighborhood",
-    "focus": "Commute Time",
-    "general_category1": "Mean Commute Time",
-    "general_category2": "Median Commute Time"
-}

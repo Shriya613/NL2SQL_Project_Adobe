@@ -1,6 +1,0 @@
-{
-    "template": "Each Vineyards has many different Wines. Among them, Cabernet Sauvignon is common to many Vineyards.",
-    "specific_component": "Cabernet Sauvignon",
-    "components": "Wines",
-    "entities": "Vineyards"
-}

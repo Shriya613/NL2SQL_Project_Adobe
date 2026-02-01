@@ -1,8 +1,0 @@
-{
-    "template": "Glamping Pod and Treehouse are subclasses of Accommodation. All Glamping pods and Treehouses have property \"Location\". There might be a Glamping Pod and a Treehouse that both have \"Location\" equal to \"Snowdonia\".",
-    "general_class": "Accommodation",
-    "class1": "Glamping Pod",
-    "class2": "Treehouse",
-    "common_property": "Location",
-    "common_value": "Snowdonia"
-}

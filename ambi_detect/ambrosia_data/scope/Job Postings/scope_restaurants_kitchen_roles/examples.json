@@ -1,9 +1,0 @@
-[
-    {
-        "question": "What kitchen roles are there in each restaurant?",
-        "sql_query1": "SELECT Kitchen_Roles.role_name  from Restaurants_Kitchen_Roles join Kitchen_Roles on Restaurants_Kitchen_Roles.kitchen_role_id = Kitchen_Roles.role_id join Restaurants on Restaurants_Kitchen_Roles.restaurant_id = Restaurants.id   GROUP BY Restaurants_Kitchen_Roles.kitchen_role_id HAVING COUNT(DISTINCT Restaurants_Kitchen_Roles.restaurant_id) = (SELECT COUNT(*) FROM  Restaurants)",
-        "sql_query2": "select restaurants.name , kitchen_roles.role_name from Restaurants_Kitchen_Roles join Kitchen_Roles on Restaurants_Kitchen_Roles.kitchen_role_id = Kitchen_Roles.role_id join Restaurants on Restaurants_Kitchen_Roles.restaurant_id = Restaurants.id",
-        "interpretation1": "List the kitchen roles that are common for all restaurants.",
-        "interpretation2": "For each restaurant, list the kitchen roles it has."
-    }
-]

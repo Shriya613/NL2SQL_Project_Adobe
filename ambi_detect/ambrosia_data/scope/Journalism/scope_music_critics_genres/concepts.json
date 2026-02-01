@@ -1,6 +1,0 @@
-{
-    "template": "Each Music Critics has many different Genres. Among them, Jazz is common to many Music Critics.",
-    "specific_component": "Jazz",
-    "components": "Genres",
-    "entities": "Music Critics"
-}

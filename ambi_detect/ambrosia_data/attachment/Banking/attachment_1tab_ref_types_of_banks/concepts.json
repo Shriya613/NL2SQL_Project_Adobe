@@ -1,8 +1,0 @@
-{
-    "template": "Central Bank and Commercial Bank are subclasses of Types of Banks. All Central banks and Commercial banks have property \"Country\". There might be a Central Bank and a Commercial Bank that both have \"Country\" equal to \"USA\".",
-    "general_class": "Types of Banks",
-    "class1": "Central Bank",
-    "class2": "Commercial Bank",
-    "common_property": "Country",
-    "common_value": "USA"
-}

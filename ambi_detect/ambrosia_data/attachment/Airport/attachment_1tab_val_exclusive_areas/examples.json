@@ -1,9 +1,0 @@
-[
-    {
-        "question": "Show me frequent flyer lounges and VIP lounges with complimentary Wi-Fi.",
-        "sql_query1": "SELECT Lounge.Name \r\nFROM Lounge\r\nWHERE (Lounge.exclusiveArea = \"Frequent Flyer Lounge\" OR Lounge.exclusiveArea = \"VIP Lounge\") AND Lounge.amenities = \"Complimentary Wi-Fi\"",
-        "sql_query2": "SELECT Lounge.Name \r\nFROM Lounge\r\nWHERE Lounge.exclusiveArea = \"Frequent Flyer Lounge\" OR Lounge.exclusiveArea = \"VIP Lounge\" AND Lounge.amenities = \"Complimentary Wi-Fi\"",
-        "interpretation1": "Which frequent flyer lounges have complimentary Wi-Fi and which VIP lounges have the same amenity?",
-        "interpretation2": "Provide a list of all frequent flyer lounges and also provide a list of VIP lounges with complimentary Wi-Fi."
-    }
-]

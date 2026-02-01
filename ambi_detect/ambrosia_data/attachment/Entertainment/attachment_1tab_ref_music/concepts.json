@@ -1,8 +1,0 @@
-{
-    "template": "Blues Song and Folk Song are subclasses of Music. All Blues songs and Folk songs have property \"Singer\". There might be a Blues Song and a Folk Song that both have \"Singer\" equal to \"John Hurt\".",
-    "general_class": "Music",
-    "class1": "Blues Song",
-    "class2": "Folk Song",
-    "common_property": "Singer",
-    "common_value": "John Hurt"
-}

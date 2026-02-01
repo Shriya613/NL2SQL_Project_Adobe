@@ -1,9 +1,0 @@
-[
-    {
-        "question": "Provide beach clubs and water sport rentals where their beach's phone number is 555-555-5555.",
-        "sql_query1": "SELECT Beach_Clubs.name\r\nFROM Beach_Clubs JOIN Beaches ON Beach_Clubs.Beach_id = Beaches.id\r\nWHERE Beaches.phonenumber = \"555-555-5555\"\r\nUNION\r\nSELECT Watersports_Rentals.name\r\nFROM Watersports_Rentals JOIN Beaches ON Watersports_Rentals.Beach_id = Beaches.id\r\nWHERE Beaches.phonenumber = \"555-555-5555\"",
-        "sql_query2": "SELECT Beach_Clubs.name\r\nFROM Beach_Clubs JOIN Beaches ON Beach_Clubs.Beach_id = Beaches.id\r\nUNION\r\nSELECT Watersports_Rentals.name\r\nFROM Watersports_Rentals JOIN Beaches ON Watersports_Rentals.Beach_id = Beaches.id\r\nWHERE Beaches.phonenumber = \"555-555-5555\"",
-        "interpretation1": "Which water sport rentals' beach phone number is 555-555-5555 and which beach clubs have a beach with the same phone number.",
-        "interpretation2": "Provide a list of all beach clubs and also provide a list of water sport rentals that their beach's phone number is 555-555-5555."
-    }
-]

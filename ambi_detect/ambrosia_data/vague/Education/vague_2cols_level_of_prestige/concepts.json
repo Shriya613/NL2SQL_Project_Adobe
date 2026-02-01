@@ -1,7 +1,0 @@
-{
-    "template": "Question: What is the acceptance rate of this university? Subject of Inquiry: University\nFocus: Level of Prestige Possible answer types: 1. Admission Rate 2. Ranking",
-    "subject": "University",
-    "focus": "Level of Prestige",
-    "general_category1": "Admission Rate",
-    "general_category2": "Ranking"
-}

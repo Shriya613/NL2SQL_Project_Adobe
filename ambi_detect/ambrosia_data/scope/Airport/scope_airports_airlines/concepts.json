@@ -1,6 +1,0 @@
-{
-    "template": "Each Airports has many different Airlines. Among them, American Airlines is common to many Airports.",
-    "specific_component": "American Airlines",
-    "components": "Airlines",
-    "entities": "Airports"
-}

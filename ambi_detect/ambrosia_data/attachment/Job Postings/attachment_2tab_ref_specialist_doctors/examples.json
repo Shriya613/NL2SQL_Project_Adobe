@@ -1,9 +1,0 @@
-[
-    {
-        "question": "Give me radiologists and ultrasound techs who are in Central Valley Clinic.",
-        "sql_query1": "SELECT Radiologist.FullName\r\nFROM Hospital JOIN Radiologist ON Hospital.id = Radiologist.hospital_id\r\nWHERE Hospital.name = \"Central Valley Clinic\"\r\nUNION\r\nSELECT Ultrasound_Tech.FullName\r\nFROM Hospital JOIN Ultrasound_Tech ON Hospital.id = Ultrasound_Tech.hospital_id\r\nWHERE Hospital.name = \"Central Valley Clinic\"",
-        "sql_query2": "SELECT Radiologist.FullName\r\nFROM Hospital JOIN Radiologist ON Hospital.id = Radiologist.hospital_id\r\nUNION\r\nSELECT Ultrasound_Tech.FullName\r\nFROM Hospital JOIN Ultrasound_Tech ON Hospital.id = Ultrasound_Tech.hospital_id\r\nWHERE Hospital.name = \"Central Valley Clinic\"",
-        "interpretation1": "What radiologists are in Central Valley Clinic, and what ultrasound Techs are also there?",
-        "interpretation2": "List all radiologists and also list ultrasound Techs in Central Valley Clinic."
-    }
-]

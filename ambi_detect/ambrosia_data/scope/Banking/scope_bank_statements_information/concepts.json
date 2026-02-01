@@ -1,6 +1,0 @@
-{
-    "template": "Each Bank Statement has many different Information. Among them, Transaction History is common to many Bank Statement.",
-    "specific_component": "Transaction History",
-    "components": "Information",
-    "entities": "Bank Statement"
-}

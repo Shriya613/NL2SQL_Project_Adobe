@@ -1,7 +1,0 @@
-{
-    "template": "Question: With which camera did the cinematographer shoot this film? Subject of Inquiry: Cinematographer\nFocus: Camera Model Possible answer types: 1. Brand Name 2. Camera Type",
-    "subject": "Cinematographer",
-    "focus": "Camera Model",
-    "general_category1": "Brand Name",
-    "general_category2": "Camera Type"
-}

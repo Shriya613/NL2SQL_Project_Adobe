@@ -1,7 +1,0 @@
-{
-    "template": "Question: Who offers this course? Subject of Inquiry: Courses\nFocus: Offering Department Possible answer types: 1. College 2. University",
-    "subject": "Courses",
-    "focus": "Offering Department",
-    "general_category1": "College",
-    "general_category2": "University"
-}

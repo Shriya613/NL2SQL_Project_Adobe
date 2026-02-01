@@ -1,9 +1,0 @@
-[
-    {
-        "question": "Display all photographs and paintings exhibited at the MoMA.",
-        "sql_query1": "SELECT VisualArt.Title \r\nFROM ArtType JOIN VisualArt ON ArtType.id = VisualArt.ArtTypeId JOIN ArtworkInExhibition ON VisualArt.id = ArtworkInExhibition.VisualArtId JOIN Exhibit ON ArtworkInExhibition.ExhibitId = Exhibit.id JOIN Gallery ON Exhibit.GalleryId = Gallery.id\r\nWHERE (ArtType.TypeName = \"Photography\" OR ArtType.TypeName = \"Painting\") AND Gallery.Name = \"MoMA\"",
-        "sql_query2": "SELECT VisualArt.Title \r\nFROM ArtType JOIN VisualArt ON ArtType.id = VisualArt.ArtTypeId JOIN ArtworkInExhibition ON VisualArt.id = ArtworkInExhibition.VisualArtId JOIN Exhibit ON ArtworkInExhibition.ExhibitId = Exhibit.id JOIN Gallery ON Exhibit.GalleryId = Gallery.id\r\nWHERE ArtType.TypeName = \"Photography\" OR ArtType.TypeName = \"Painting\" AND Gallery.Name = \"MoMA\"",
-        "interpretation1": "Show all the visual art in MoMA categorised as photography or paintings.",
-        "interpretation2": "Show all the photography pieces, also show all the paintings hosted at MoMA."
-    }
-]

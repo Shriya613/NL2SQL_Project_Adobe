@@ -1,9 +1,0 @@
-[
-    {
-        "question": "Show jazz bands and rock bands founded in 1985.",
-        "sql_query1": "SELECT Music_Bands.Name \r\nFROM Music_Bands\r\nWHERE (Music_Bands.Genre = \"Jazz\" OR Music_Bands.Genre = \"Rock\") AND Music_Bands.Founding_Year = 1985",
-        "sql_query2": "SELECT Music_Bands.Name \r\nFROM Music_Bands\r\nWHERE Music_Bands.Genre = \"Jazz\" OR Music_Bands.Genre = \"Rock\" AND Music_Bands.Founding_Year = 1985",
-        "interpretation1": "What jazz bands were founded in 1985 and what rock bands were founded in the same year?",
-        "interpretation2": "List all jazz bands and also list rock bands that were founded in 1985."
-    }
-]

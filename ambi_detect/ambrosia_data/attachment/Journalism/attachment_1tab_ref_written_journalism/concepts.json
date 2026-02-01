@@ -1,8 +1,0 @@
-{
-    "template": "News Article and Feature Article are subclasses of Written Journalism. All News articles and Feature articles have property \"Word Count\". There might be a News Article and a Feature Article that both have \"Word Count\" equal to \"1,000 words\".",
-    "general_class": "Written Journalism",
-    "class1": "News Article",
-    "class2": "Feature Article",
-    "common_property": "Word Count",
-    "common_value": "1,000 words"
-}

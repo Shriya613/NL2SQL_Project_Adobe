@@ -1,9 +1,0 @@
-[
-    {
-        "question": "Provide all directors and producers who won an Oscar.",
-        "sql_query1": "SELECT Director.name\r\nFROM Director\r\nWHERE Director.Award = \"Oscar\"\r\nUNION\r\nSELECT Producer.name\r\nFROM Producer\r\nWHERE Producer.Award = \"Oscar\"",
-        "sql_query2": "SELECT Director.name\r\nFROM Director\r\nUNION\r\nSELECT Producer.name\r\nFROM Producer\r\nWHERE Producer.Award = \"Oscar\"",
-        "interpretation1": "What directors won an Oscar and what producers also won it?",
-        "interpretation2": "List all directors and also list producers who won an Oscar."
-    }
-]

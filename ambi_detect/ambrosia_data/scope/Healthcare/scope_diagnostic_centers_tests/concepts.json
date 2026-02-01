@@ -1,6 +1,0 @@
-{
-    "template": "Each Diagnostic Centers has many different Tests. Among them, Blood Test is common to many Diagnostic Centers.",
-    "specific_component": "Blood Test",
-    "components": "Tests",
-    "entities": "Diagnostic Centers"
-}

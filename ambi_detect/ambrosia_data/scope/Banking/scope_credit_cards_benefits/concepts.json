@@ -1,6 +1,0 @@
-{
-    "template": "Each Credit Cards has many different Benefits. Among them, Rewards Program is common to many Credit Cards.",
-    "specific_component": "Rewards Program",
-    "components": "Benefits",
-    "entities": "Credit Cards"
-}

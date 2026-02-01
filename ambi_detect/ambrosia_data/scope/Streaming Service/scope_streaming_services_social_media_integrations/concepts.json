@@ -1,6 +1,0 @@
-{
-    "template": "Each Streaming Services has many different Social Media Integrations. Among them, Share Button is common to many Streaming Services.",
-    "specific_component": "Share Button",
-    "components": "Social Media Integrations",
-    "entities": "Streaming Services"
-}

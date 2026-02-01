@@ -1,9 +1,0 @@
-[
-    {
-        "question": "Show diplomas and certificates that require a passing exam for completion.",
-        "sql_query1": "SELECT Diplomas.title\r\nFROM Diplomas\r\nWHERE Diplomas.CompletionRequirements = \"Passing Exam\"\r\nUNION\r\nSELECT Certificates.title\r\nFROM Certificates\r\nWHERE Certificates.CompletionRequirements = \"Passing Exam\"",
-        "sql_query2": "SELECT Diplomas.title\r\nFROM Diplomas\r\nUNION\r\nSELECT Certificates.title\r\nFROM Certificates\r\nWHERE Certificates.CompletionRequirements = \"Passing Exam\"",
-        "interpretation1": "Which diplomas require a passing exam for completion and which certificates have the same requirement?",
-        "interpretation2": "Provide a list of all diplomas and also provide a list of certificates that require a passing exam for completion."
-    }
-]

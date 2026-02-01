@@ -1,6 +1,0 @@
-{
-    "template": "Each Gates has many different Services. Among them, Baggage Claim is common to many Gates.",
-    "specific_component": "Baggage Claim",
-    "components": "Services",
-    "entities": "Gates"
-}

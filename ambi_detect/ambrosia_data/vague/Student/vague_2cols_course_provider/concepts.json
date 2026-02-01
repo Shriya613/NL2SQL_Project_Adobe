@@ -1,7 +1,0 @@
-{
-    "template": "Question: Where is this online course taught? Subject of Inquiry: Online Course\nFocus: Course Provider Possible answer types: 1. Platform Name 2. University",
-    "subject": "Online Course",
-    "focus": "Course Provider",
-    "general_category1": "Platform Name",
-    "general_category2": "University"
-}

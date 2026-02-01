@@ -1,9 +1,0 @@
-[
-    {
-        "question": "What are the software developer roles and data analyst roles that are entry level?",
-        "sql_query1": "SELECT Roles.title \r\nFROM Roles\r\nWHERE (Roles.Technology_Career = \"Software Developer\" OR Roles.Technology_Career = \"Data Analyst\") AND Roles.Grade = \"Entry\"",
-        "sql_query2": "SELECT Roles.title \r\nFROM Roles\r\nWHERE Roles.Technology_Career = \"Software Developer\" OR Roles.Technology_Career = \"Data Analyst\" AND Roles.Grade = \"Entry\"",
-        "interpretation1": "What software developer roles are entry level and what data analyst roles have the same grade?",
-        "interpretation2": "Provide a list of all software developer roles and also provide a list of all data analyst roles with a entry level grade."
-    }
-]

@@ -1,8 +1,0 @@
-{
-    "template": "Beach Club and Watersports Rental are subclasses of Amenity. All Beach clubs and Watersports rentals have property \"Beach\". There might be a Beach Club and a Watersports Rental that both have \"Beach\" equal to \"White Sands Beach\".",
-    "general_class": "Amenity",
-    "class1": "Beach Club",
-    "class2": "Watersports Rental",
-    "common_property": "Beach",
-    "common_value": "White Sands Beach"
-}

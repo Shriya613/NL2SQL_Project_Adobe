@@ -1,7 +1,0 @@
-{
-    "template": "Question: When were these tickets available for purchase? Subject of Inquiry: Tickets\nFocus: Sale Date Possible answer types: 1. On Sale Date 2. Pre-Sale Date",
-    "subject": "Tickets",
-    "focus": "Sale Date",
-    "general_category1": "On Sale Date",
-    "general_category2": "Pre-Sale Date"
-}

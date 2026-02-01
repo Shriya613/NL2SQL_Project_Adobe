@@ -1,8 +1,0 @@
-{
-    "template": "Director and Producer are subclasses of Film Profession. All Directors and Producers have property \"Award\". There might be a Director and a Producer that both have \"Award\" equal to \"Oscar\".",
-    "general_class": "Film Profession",
-    "class1": "Director",
-    "class2": "Producer",
-    "common_property": "Award",
-    "common_value": "Oscar"
-}

@@ -1,9 +1,0 @@
-[
-    {
-        "question": "Show me all alliance airlines and independent carriers with flights using the Airbus A320.",
-        "sql_query1": "SELECT Airlines.airline_name \r\nFROM Airlines JOIN Flights ON Airlines.id = Flights.airline_id\r\nWHERE (Airlines.type_of_alliance = \"Airline Alliance\" OR Airlines.type_of_alliance = \"Independent Carrier\") AND Flights.aircraft_model = \"Airbus A320\"",
-        "sql_query2": "SELECT Airlines.airline_name \r\nFROM Airlines JOIN Flights ON Airlines.id = Flights.airline_id\r\nWHERE Airlines.type_of_alliance = \"Airline Alliance\" OR Airlines.type_of_alliance = \"Independent Carrier\" AND Flights.aircraft_model = \"Airbus A320\"",
-        "interpretation1": "Show all the flights using an Airbus A320 for airlines that are either with the alliance airlines or are independent carriers.",
-        "interpretation2": "Show all the alliance airlines and also show the independent carriers but only with flights using the Airbus A320."
-    }
-]

@@ -1,8 +1,0 @@
-{
-    "template": "Podcast and Audio Documentary are subclasses of Emerging Media Formats.",
-    "general_class": "Media Formats",
-    "class1": "Podcast",
-    "class2": "Audio Documentary",
-    "common_property": "Length",
-    "common_value": "10"
-}

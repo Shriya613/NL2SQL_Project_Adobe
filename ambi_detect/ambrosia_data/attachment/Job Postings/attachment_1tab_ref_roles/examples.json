@@ -1,9 +1,0 @@
-[
-    {
-        "question": "List economist positions and statistician positions that require financial analysis.",
-        "sql_query1": "SELECT Jobs.title \r\nFROM Roles JOIN Jobs ON Roles.RoleID = Jobs.ROLEID JOIN DataTypes ON Jobs.DATAID = DataTypes.DataTypeID\r\nWHERE (Roles.RoleName = \"Economist\" OR Roles.RoleName = \"Statistician\") AND DataTypes.DataTypeName = \"Financial Analysis\"",
-        "sql_query2": "SELECT Jobs.title \r\nFROM Roles JOIN Jobs ON Roles.RoleID = Jobs.ROLEID JOIN DataTypes ON Jobs.DATAID = DataTypes.DataTypeID\r\nWHERE Roles.RoleName = \"Economist\" OR Roles.RoleName = \"Statistician\" AND DataTypes.DataTypeName = \"Financial Analysis\"",
-        "interpretation1": "Show both economist positions  that require financial analysis and statistician positions that require the same.",
-        "interpretation2": "Show all economist positions and also show statistician positions that require financial analysis."
-    }
-]

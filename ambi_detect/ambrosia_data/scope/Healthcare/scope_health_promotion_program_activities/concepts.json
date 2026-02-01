@@ -1,6 +1,0 @@
-{
-    "template": "Each Health Promotion Program has many different Activities. Among them, Exercise Classes is common to many Health Promotion Program.",
-    "specific_component": "Exercise Classes",
-    "components": "Activities",
-    "entities": "Health Promotion Program"
-}

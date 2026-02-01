@@ -1,8 +1,0 @@
-{
-    "template": "Research Paper and Review Article are subclasses of Academic Papers. All Research Papers and Review Articles have property \"Citation Style\". There might be a Research Paper and a Review Article that both have \"Citation Style\" equal to \"APA\".",
-    "general_class": "Academic Papers",
-    "class1": "Research Paper",
-    "class2": "Review Article",
-    "common_property": "Citation Style",
-    "common_value": "APA"
-}

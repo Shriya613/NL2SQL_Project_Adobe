@@ -1,8 +1,0 @@
-{
-    "template": "Photographer and Videographer are subclasses of Visual Art Professions. All Photographers and Videographers have property \"Price\". There might be a Photographer and a Videographer that both have \"Price\" equal to \"500\".",
-    "general_class": "Visual Art Professions",
-    "class1": "Photographer",
-    "class2": "Videographer",
-    "common_property": "Price",
-    "common_value": "500"
-}

@@ -1,6 +1,0 @@
-{
-    "template": "Each Finance Apps has many different Tools. Among them, Budget Tracker is common to many Finance Apps.",
-    "specific_component": "Budget Tracker",
-    "components": "Tools",
-    "entities": "Finance Apps"
-}

@@ -1,9 +1,0 @@
-[
-    {
-        "question": "What genres are available on each streaming service?",
-        "sql_query1": "SELECT Genres.name  from Streaming_Services_Genres join Genres on Streaming_Services_Genres.genres_id = Genres.id join Streaming_Services on Streaming_Services_Genres.streaming_services_id = Streaming_Services.id   GROUP BY Streaming_Services_Genres.genres_id HAVING COUNT(DISTINCT Streaming_Services_Genres.streaming_services_id) = (SELECT COUNT(*) FROM  Streaming_Services)",
-        "sql_query2": "select streaming_services.service_name , genres.name from Streaming_Services_Genres join Genres on Streaming_Services_Genres.genres_id = Genres.id join Streaming_Services on Streaming_Services_Genres.streaming_services_id = Streaming_Services.id",
-        "interpretation1": "Provide me with the genre that is common across all streaming services.",
-        "interpretation2": "For each streaming service, list the genres it offers."
-    }
-]

@@ -1,8 +1,0 @@
-{
-    "template": "Housekeeper and Laundry Attendant are subclasses of Cleaning Professional. All Housekeepers and Laundry attendants have property \"Hotel\". There might be a Housekeeper and a Laundry Attendant that both have \"Hotel\" equal to \"The Grand Hotel\".",
-    "general_class": "Cleaning Professional",
-    "class1": "Housekeeper",
-    "class2": "Laundry Attendant",
-    "common_property": "Hotel",
-    "common_value": "The Grand Hotel"
-}

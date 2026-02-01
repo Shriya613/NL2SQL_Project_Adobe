@@ -1,9 +1,0 @@
-[
-    {
-        "question": "Display buffets and coffee shops operating from 7:30 a.m. to 4 p.m.",
-        "sql_query1": "SELECT Buffet.name\r\nFROM Buffet\r\nWHERE Buffet.Hours = \"7.30 a.m. - 4 p.m.\"\r\nUNION\r\nSELECT Coffee_Shop.name\r\nFROM Coffee_Shop\r\nWHERE Coffee_Shop.Hours = \"7.30 a.m. - 4 p.m.\"",
-        "sql_query2": "SELECT Buffet.name\r\nFROM Buffet\r\nUNION\r\nSELECT Coffee_Shop.name\r\nFROM Coffee_Shop\r\nWHERE Coffee_Shop.Hours = \"7.30 a.m. - 4 p.m.\"",
-        "interpretation1": "Can you show buffet and coffee shop options with hours from 7:30 a.m. to 4 p.m.?",
-        "interpretation2": "List all buffet options and also display coffee shops open from 7:30 a.m. to 4 p.m."
-    }
-]

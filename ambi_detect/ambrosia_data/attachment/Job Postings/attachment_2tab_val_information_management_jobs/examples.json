@@ -1,9 +1,0 @@
-[
-    {
-        "question": "List librarians and archivists that are located at University's main library.",
-        "sql_query1": "SELECT Librarians.name\r\nFROM Librarians\r\nWHERE Librarians.location = \"University's Main Library\"\r\nUNION\r\nSELECT Archivists.name\r\nFROM Archivists\r\nWHERE Archivists.location = \"University's Main Library\"",
-        "sql_query2": "SELECT Librarians.name\r\nFROM Librarians\r\nUNION\r\nSELECT Archivists.name\r\nFROM Archivists\r\nWHERE Archivists.location = \"University's Main Library\"",
-        "interpretation1": "Which librarians are located at University's main library and which archivists are located at the same place?",
-        "interpretation2": "Provide a list of all librarians and also provide a list of archivists that are located at University's main library."
-    }
-]

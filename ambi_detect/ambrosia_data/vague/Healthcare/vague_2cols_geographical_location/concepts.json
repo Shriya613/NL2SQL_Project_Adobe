@@ -1,7 +1,0 @@
-{
-    "template": "Question: Where is this hospital located? Subject of Inquiry: Hospital\nFocus: Geographical Location Possible answer types: 1. Neighborhood 2. City",
-    "subject": "Hospital",
-    "focus": "Geographical Location",
-    "general_category1": "Neighborhood",
-    "general_category2": "City"
-}

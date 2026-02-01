@@ -1,7 +1,0 @@
-{
-    "template": "Question: What is the median age of this population group? Subject of Inquiry: Population Group\nFocus: Age Possible answer types: 1. Median Age 2. Age Range",
-    "subject": "Population Group",
-    "focus": "Age",
-    "general_category1": "Median Age",
-    "general_category2": "Age Range"
-}

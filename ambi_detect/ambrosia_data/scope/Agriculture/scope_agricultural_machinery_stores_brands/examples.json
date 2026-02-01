@@ -1,9 +1,0 @@
-[
-    {
-        "question": "What brands of agricultural machinery are available in each machinery store",
-        "sql_query1": "SELECT Brands.brand_name  from Stores_Brands join Brands on Stores_Brands.brand_id = Brands.id join Agricultural_Machinery_Stores on Stores_Brands.store_id = Agricultural_Machinery_Stores.store_id   GROUP BY Stores_Brands.brand_id HAVING COUNT(DISTINCT Stores_Brands.store_id) = (SELECT COUNT(*) FROM  Agricultural_Machinery_Stores)",
-        "sql_query2": "select agricultural_machinery_stores.store_name , brands.brand_name from Stores_Brands join Brands on Stores_Brands.brand_id = Brands.id join Agricultural_Machinery_Stores on Stores_Brands.store_id = Agricultural_Machinery_Stores.store_id",
-        "interpretation1": "Which brands of machinery are equally available in all agricultural machinery stores?",
-        "interpretation2": "For each agricultural machinery store, show which brands of machinery are available?"
-    }
-]

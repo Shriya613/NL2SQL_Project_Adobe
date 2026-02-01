@@ -1,6 +1,0 @@
-{
-    "template": "Each Courts Reporters has many different Trials. Among them, High-Profile Criminal Cases is common to many Courts Reporters.",
-    "specific_component": "High-Profile Criminal Cases",
-    "components": "Trials",
-    "entities": "Courts Reporters"
-}

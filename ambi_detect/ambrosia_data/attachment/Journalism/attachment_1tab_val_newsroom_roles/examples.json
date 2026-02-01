@@ -1,9 +1,0 @@
-[
-    {
-        "question": "Show me all reports and photographers with a deadline of 2021-03-18 16:30:00.",
-        "sql_query1": "SELECT reporters.Name \r\nFROM reporters\r\nWHERE (reporters.role = \"Reporter\" OR reporters.role = \"Photographer\") AND reporters.deadline = \"2021-03-18 16:30:00\"",
-        "sql_query2": "SELECT reporters.Name \r\nFROM reporters\r\nWHERE reporters.role = \"Reporter\" OR reporters.role = \"Photographer\" AND reporters.deadline = \"2021-03-18 16:30:00\"",
-        "interpretation1": "Give me both reports and photographers where either has a 2021-03-18 16:30:00 deadline.",
-        "interpretation2": "Show all the reports, then also show the photographers working to a 2021-03-18 16:30:00 deadline."
-    }
-]

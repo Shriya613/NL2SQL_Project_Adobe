@@ -1,8 +1,0 @@
-{
-    "template": "Credit Card and Debit Card are subclasses of  Bank Cards. All Credit cards and Debit cards have property \"Card Limit\". There might be a Credit Card and a Debit Card that both have \"Card Limit\" equal to \"10000\".",
-    "general_class": " Bank Cards",
-    "class1": "Credit Card",
-    "class2": "Debit Card",
-    "common_property": "Card Limit",
-    "common_value": "10000"
-}

@@ -1,6 +1,0 @@
-{
-    "template": "Each Airports has many different Terminals. Among them, International Terminal is common to many Airports.",
-    "specific_component": "International Terminal",
-    "components": "Terminals",
-    "entities": "Airports"
-}

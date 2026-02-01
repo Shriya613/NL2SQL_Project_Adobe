@@ -1,6 +1,0 @@
-{
-    "template": "Each Health Reporters has many different Topics. Among them, Nutrition is common to many Health Reporters.",
-    "specific_component": "Nutrition",
-    "components": "Topics",
-    "entities": "Health Reporters"
-}

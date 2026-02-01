@@ -1,9 +1,0 @@
-[
-    {
-        "question": "Show intermediate online courses and textbooks.",
-        "sql_query1": "SELECT Textbooks.Title as Title\r\nFROM Textbooks\r\nWHERE Textbooks.Difficulty_Level = \"Intermediate\"\r\nUNION\r\nSELECT Online_Courses.Course_Name as Title\r\nFROM Online_Courses\r\nWHERE Online_Courses.Difficulty_Level = \"Intermediate\"",
-        "sql_query2": "SELECT Textbooks.Title as Title\r\nFROM Textbooks\r\nUNION\r\nSELECT Online_Courses.Course_Name as Title\r\nFROM Online_Courses\r\nWHERE Online_Courses.Difficulty_Level = \"Intermediate\"",
-        "interpretation1": "What textbooks are intermediate and what online courses are the same difficulty?",
-        "interpretation2": "Provide a list of all textbooks and also provide a list of intermediate online courses."
-    }
-]

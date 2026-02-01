@@ -1,8 +1,0 @@
-{
-    "template": "Engineering Class and Design Class are subclasses of Academic Courses. All Engineering Classes and Design Classes have property \"Projects\". There might be an Engineering Class and a Design Class that both have \"Projects\" of similar nature.",
-    "general_class": "Academic Courses",
-    "class1": "Engineering Class",
-    "class2": "Design Class",
-    "common_property": "Projects",
-    "common_value": "Sustainability Project"
-}

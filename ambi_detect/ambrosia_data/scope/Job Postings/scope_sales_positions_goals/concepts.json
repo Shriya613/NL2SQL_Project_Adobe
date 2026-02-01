@@ -1,6 +1,0 @@
-{
-    "template": "Each Sales Positions has many different Goals. Among them, Quota is common to many Sales Positions.",
-    "specific_component": "Quota",
-    "components": "Goals",
-    "entities": "Sales Positions"
-}

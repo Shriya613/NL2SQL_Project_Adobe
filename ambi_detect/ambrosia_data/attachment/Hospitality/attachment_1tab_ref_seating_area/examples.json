@@ -1,9 +1,0 @@
-[
-    {
-        "question": "Display bookings for the patios and verandas where 40 people can be seated.",
-        "sql_query1": "SELECT Customers.FullName\r\nFROM Tables JOIN FloorPlan ON Tables.TableID = FloorPlan.TableId JOIN Reservations ON Reservations.TableId = Tables.TableID JOIN Customers ON Customers.CustomerID = Reservations.CustomerID\r\nWHERE (Tables.SeatingArea = \"Patio\" OR Tables.SeatingArea = \"Veranda\") AND FloorPlan.NumberOfSeats = 40",
-        "sql_query2": "SELECT Customers.FullName\r\nFROM Tables JOIN FloorPlan ON Tables.TableID = FloorPlan.TableId JOIN Reservations ON Reservations.TableId = Tables.TableID JOIN Customers ON Customers.CustomerID = Reservations.CustomerID\r\nWHERE Tables.SeatingArea = \"Patio\" OR Tables.SeatingArea = \"Veranda\" AND FloorPlan.NumberOfSeats = 40",
-        "interpretation1": "Show bookings for both patios and verandas that seat 40 people.",
-        "interpretation2": "Show all the patio bookings and only those veranda bookings which seat 40 people."
-    }
-]

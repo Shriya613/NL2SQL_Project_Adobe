@@ -1,9 +1,0 @@
-[
-    {
-        "question": "List the activities offered by every resort.",
-        "sql_query1": "SELECT Activities.activityName  from Resorts_Activities join Activities on Resorts_Activities.activityID = Activities.activityID join Resorts on Resorts_Activities.resortID = Resorts.id   GROUP BY Resorts_Activities.activityID HAVING COUNT(DISTINCT Resorts_Activities.resortID) = (SELECT COUNT(*) FROM  Resorts)",
-        "sql_query2": "select resorts.name , activities.activityname from Resorts_Activities join Activities on Resorts_Activities.activityID = Activities.activityID join Resorts on Resorts_Activities.resortID = Resorts.id",
-        "interpretation1": "List the activities that are common to all resorts.",
-        "interpretation2": "List the activities for each resort."
-    }
-]

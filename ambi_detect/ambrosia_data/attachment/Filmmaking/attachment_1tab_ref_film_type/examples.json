@@ -1,9 +1,0 @@
-[
-    {
-        "question": "Display documentaries and short films with a budget of 700000.0.",
-        "sql_query1": "SELECT filmmaking.name \r\nFROM film_type JOIN film_details ON film_type.id = film_details.film_typeId JOIN budget ON film_details.budgetId = budget.id JOIN filmmaking ON filmmaking.id = film_details.filmmakingId\r\nWHERE (film_type.type = \"Documentary\" OR film_type.type = \"Short Film\") AND budget.amount = 700000.0",
-        "sql_query2": "SELECT filmmaking.name \r\nFROM film_type JOIN film_details ON film_type.id = film_details.film_typeId JOIN budget ON film_details.budgetId = budget.id JOIN filmmaking ON filmmaking.id = film_details.filmmakingId\r\nWHERE film_type.type = \"Documentary\" OR film_type.type = \"Short Film\" AND budget.amount = 700000.0",
-        "interpretation1": "Which documentaries had a budget of 700000.0 and which short films had the same amount of budget?",
-        "interpretation2": "Provide a list of all documentaries and also provide a list of short films with a budget of 700000.0."
-    }
-]

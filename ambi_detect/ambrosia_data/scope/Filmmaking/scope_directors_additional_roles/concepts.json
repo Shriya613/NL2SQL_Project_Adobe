@@ -1,6 +1,0 @@
-{
-    "template": "Each Directors has many different Collaborators. Among them, Producer is common to many Directors.",
-    "specific_component": "Producer",
-    "components": "Collaborators",
-    "entities": "Directors"
-}

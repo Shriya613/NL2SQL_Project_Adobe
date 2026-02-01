@@ -1,8 +1,0 @@
-{
-    "template": "Novel and Poem are subclasses of Literature Type. All Novels and Poems have property \"Language\". There might be a Novel and a Poem that both have \"Language\" equal to \"Italian\".",
-    "general_class": "Literature Type",
-    "class1": "Novel",
-    "class2": "Poem",
-    "common_property": "Language",
-    "common_value": "Italian"
-}

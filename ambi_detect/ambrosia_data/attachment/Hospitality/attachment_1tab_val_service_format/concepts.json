@@ -1,8 +1,0 @@
-{
-    "template": "Buffet and Coffee Shop are subclasses of Service Format. All Buffets and Coffee shops have property \"Hours\". There might be a Buffet and a Coffee Shop that both have \"Hours\" equal to \"7.30 a.m. - 4 p.m.\".",
-    "general_class": "Service Format",
-    "class1": "Buffet",
-    "class2": "Coffee Shop",
-    "common_property": "Hours",
-    "common_value": "7.30 a.m. - 4 p.m."
-}

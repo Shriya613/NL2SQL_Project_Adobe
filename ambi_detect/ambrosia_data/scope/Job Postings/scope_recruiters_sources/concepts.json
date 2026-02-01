@@ -1,6 +1,0 @@
-{
-    "template": "Each Recruiters has many different Sources. Among them, LinkedIn is common to many Recruiters.",
-    "specific_component": "LinkedIn",
-    "components": "Sources",
-    "entities": "Recruiters"
-}

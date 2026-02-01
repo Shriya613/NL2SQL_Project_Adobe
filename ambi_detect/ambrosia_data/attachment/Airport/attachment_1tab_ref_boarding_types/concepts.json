@@ -1,8 +1,0 @@
-{
-    "template": "Priority Boarding and Family Boarding are subclasses of Boarding Types. All Priority Boarding and Family Boarding methods have the property \"Airline\". There might be a Priority Boarding service and a Family Boarding service that both have \"Airline\" equal to \"Airline A\".",
-    "general_class": "Boarding Types",
-    "class1": "Priority Boarding",
-    "class2": "Family Boarding",
-    "common_property": "Airline",
-    "common_value": "Alaskan Airlines"
-}

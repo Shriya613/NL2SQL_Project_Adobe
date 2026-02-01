@@ -1,9 +1,0 @@
-[
-    {
-        "question": "Please display all tablets and laptops that run on Windows 10.",
-        "sql_query1": "SELECT Tablets.model\r\nFROM Operating_System JOIN Tablets ON Operating_System.OS_ID = Tablets.OS_ID\r\nWHERE Operating_System.Name = \"Windows 10\"\r\nUNION\r\nSELECT Laptops.model\r\nFROM Operating_System JOIN Laptops ON Operating_System.OS_ID = Laptops.OS_ID\r\nWHERE Operating_System.Name = \"Windows 10\"",
-        "sql_query2": "SELECT Tablets.model\r\nFROM Operating_System JOIN Tablets ON Operating_System.OS_ID = Tablets.OS_ID\r\nUNION\r\nSELECT Laptops.model\r\nFROM Operating_System JOIN Laptops ON Operating_System.OS_ID = Laptops.OS_ID\r\nWHERE Operating_System.Name = \"Windows 10\"",
-        "interpretation1": "Can you show me which tablet and laptop models run on Windows 10?",
-        "interpretation2": "Display the tablet models and also the laptop models, but only if they run on windows 10."
-    }
-]

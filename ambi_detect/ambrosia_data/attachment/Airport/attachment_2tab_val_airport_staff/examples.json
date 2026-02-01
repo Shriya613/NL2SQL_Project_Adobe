@@ -1,9 +1,0 @@
-[
-    {
-        "question": "Show Spanish-speaking pilots and gate agents.",
-        "sql_query1": "SELECT Gate_Agents.name\r\nFROM Gate_Agents\r\nWHERE Gate_Agents.Language = \"Spanish\"\r\nUNION\r\nSELECT Pilots.name\r\nFROM Pilots\r\nWHERE Pilots.Language = \"Spanish\"",
-        "sql_query2": "SELECT Gate_Agents.name\r\nFROM Gate_Agents\r\nUNION\r\nSELECT Pilots.name\r\nFROM Pilots\r\nWHERE Pilots.Language = \"Spanish\"",
-        "interpretation1": "Show both the Spanish-speaking gate agents and pilots.",
-        "interpretation2": "Show all the gate agents and just the Spanish-speaking pilots."
-    }
-]

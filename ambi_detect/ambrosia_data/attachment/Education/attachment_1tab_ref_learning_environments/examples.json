@@ -1,9 +1,0 @@
-[
-    {
-        "question": "Display classrooms and virtual rooms with a capacity of 30.",
-        "sql_query1": "SELECT Classrooms.Name \r\nFROM LearningEnvironments JOIN Classrooms ON LearningEnvironments.Environmentid = Classrooms.TypeOfEnvironment\r\nWHERE (LearningEnvironments.Value = \"Classroom\" OR LearningEnvironments.Value = \"Virtual Room\") AND Classrooms.Capacity = 30",
-        "sql_query2": "SELECT Classrooms.Name \r\nFROM LearningEnvironments JOIN Classrooms ON LearningEnvironments.Environmentid = Classrooms.TypeOfEnvironment\r\nWHERE LearningEnvironments.Value = \"Classroom\" OR LearningEnvironments.Value = \"Virtual Room\" AND Classrooms.Capacity = 30",
-        "interpretation1": "Which virtual rooms have a capacity of 30 and which class rooms have the same capacity?",
-        "interpretation2": "Provide a list of all class rooms and also provide a list of virtual rooms with a capacity of 30."
-    }
-]

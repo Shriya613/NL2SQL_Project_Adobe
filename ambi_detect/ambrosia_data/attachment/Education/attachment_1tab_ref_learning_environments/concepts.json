@@ -1,8 +1,0 @@
-{
-    "template": "Classroom and Virtual Room are subclasses of Learning Environments. All Classrooms and Virtual Rooms have the property \"Capacity\". There might be a Classroom and a Virtual Room that both have \"Capacity\" equal to \"30 Students\".",
-    "general_class": "Learning Environments",
-    "class1": "Classroom",
-    "class2": "Virtual Room",
-    "common_property": "Capacity",
-    "common_value": "30"
-}

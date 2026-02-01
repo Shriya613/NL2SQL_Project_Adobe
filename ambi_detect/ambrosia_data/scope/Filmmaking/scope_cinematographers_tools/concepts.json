@@ -1,6 +1,0 @@
-{
-    "template": "Each Cinematographers has many different Tools. Among them, Camera is common to many Cinematographers.",
-    "specific_component": "Camera",
-    "components": "Tools",
-    "entities": "Cinematographers"
-}

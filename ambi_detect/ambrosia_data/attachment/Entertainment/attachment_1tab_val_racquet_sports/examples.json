@@ -1,9 +1,0 @@
-[
-    {
-        "question": "Show me all tennis tournaments and golf tournaments sponsored by Nike.",
-        "sql_query1": "SELECT RacquetsAndTournaments.EventName \r\nFROM RacquetsAndTournaments \r\nWHERE (RacquetsAndTournaments.EventType = 'Tennis Tournament' OR RacquetsAndTournaments.EventType = 'Golf Tournament') AND RacquetsAndTournaments.sponsor = 'Nike'",
-        "sql_query2": "SELECT RacquetsAndTournaments.EventName \r\nFROM RacquetsAndTournaments \r\nWHERE RacquetsAndTournaments.EventType = 'Tennis Tournament' OR RacquetsAndTournaments.EventType = 'Golf Tournament' AND RacquetsAndTournaments.sponsor = 'Nike'",
-        "interpretation1": "Give me all the competitions sponsored by Nike in both tennis and golf.",
-        "interpretation2": "Show all the tennis tournaments, then also show the Nike-sponsored golf tournaments."
-    }
-]

@@ -1,9 +1,0 @@
-[
-    {
-        "question": "Show me press releases and interviews for \"Britain Is Cutting Taxes Again. Why Now?\".",
-        "sql_query1": "SELECT PressReleases.title as title\r\nFROM PressReleases JOIN Articles ON PressReleases.FK_articleID = Articles.articleID\r\nWHERE Articles.title = \"Britain Is Cutting Taxes Again. Why Now?\"\r\nUNION\r\nSELECT Interviews.intervieweeName as title\r\nFROM Interviews JOIN Articles ON Interviews.FK_articleID = Articles.articleID\r\nWHERE Articles.title = \"Britain Is Cutting Taxes Again. Why Now?\"",
-        "sql_query2": "SELECT PressReleases.title as title\r\nFROM PressReleases JOIN Articles ON PressReleases.FK_articleID = Articles.articleID\r\nUNION\r\nSELECT Interviews.intervieweeName as title\r\nFROM Interviews JOIN Articles ON Interviews.FK_articleID = Articles.articleID\r\nWHERE Articles.title = \"Britain Is Cutting Taxes Again. Why Now?\"",
-        "interpretation1": "Which press releases are for \"Britain Is Cutting Taxes Again. Why Now?\" and what interviews are for the same article?",
-        "interpretation2": "Provide a list of all interviews and also provide a list of press releases for \"Britain Is Cutting Taxes Again. Why Now?\"."
-    }
-]

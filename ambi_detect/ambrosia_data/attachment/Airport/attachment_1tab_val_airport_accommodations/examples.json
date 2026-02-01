@@ -1,9 +1,0 @@
-[
-    {
-        "question": "List all hotels and pods that cost 150.",
-        "sql_query1": "SELECT Hotels.Name \r\nFROM Hotels\r\nWHERE (Hotels.AccomodationType = \"Hotel\" OR Hotels.AccomodationType = \"Pod\") AND Hotels.Price = 150",
-        "sql_query2": "SELECT Hotels.Name \r\nFROM Hotels\r\nWHERE Hotels.AccomodationType = \"Hotel\" OR Hotels.AccomodationType = \"Pod\" AND Hotels.Price = 150",
-        "interpretation1": "Which hotels that cost 150 and which pods have the same price?",
-        "interpretation2": "Provide a list of all hotels and also provide a list of pods that cost 150."
-    }
-]

@@ -1,8 +1,0 @@
-{
-    "template": "Patio and Veranda are subclasses of Seating Area. All Patios and Verandas have property \"Number of Seats\". There might be a Patio and a Veranda that both have \"Number of Seats\" equal to \"50\".",
-    "general_class": "Seating Area",
-    "class1": "Patio",
-    "class2": "Veranda",
-    "common_property": "Number of Seats",
-    "common_value": "50"
-}

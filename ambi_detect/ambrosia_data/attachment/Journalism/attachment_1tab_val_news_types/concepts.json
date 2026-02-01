@@ -1,8 +1,0 @@
-{
-    "template": "Breaking News and News Analysis are subclasses of News Types. All Breaking news and News analyses have property \"Event\". There might be a Breaking News and a News Analysis that both have \"Event\" equal to \"Turkey\u2013Syria earthquakes\".",
-    "general_class": "News Types",
-    "class1": "Breaking News",
-    "class2": "News Analysis",
-    "common_property": "Event",
-    "common_value": "Turkey\u2013Syria earthquakes"
-}

@@ -1,9 +1,0 @@
-[
-    {
-        "question": "Provide me the names of practices that we have for every eco lodge",
-        "sql_query1": "SELECT Sustainable_Practices.practice_name  from Eco_Lodges_Sustainable_Practices join Sustainable_Practices on Eco_Lodges_Sustainable_Practices.practice_id = Sustainable_Practices.practice_id join Eco_Lodges on Eco_Lodges_Sustainable_Practices.eco_lodge_id = Eco_Lodges.id   GROUP BY Eco_Lodges_Sustainable_Practices.practice_id HAVING COUNT(DISTINCT Eco_Lodges_Sustainable_Practices.eco_lodge_id) = (SELECT COUNT(*) FROM  Eco_Lodges)",
-        "sql_query2": "select eco_lodges.name , sustainable_practices.practice_name from Eco_Lodges_Sustainable_Practices join Sustainable_Practices on Eco_Lodges_Sustainable_Practices.practice_id = Sustainable_Practices.practice_id join Eco_Lodges on Eco_Lodges_Sustainable_Practices.eco_lodge_id = Eco_Lodges.id",
-        "interpretation1": "Provide me the names of the practices that are common to all eco lodges",
-        "interpretation2": "For each eco lodge, provide me the names of the practices available at that lodge"
-    }
-]

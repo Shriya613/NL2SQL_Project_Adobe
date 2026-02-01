@@ -1,6 +1,0 @@
-{
-    "template": "Each Boarding Areas has many different Gates. Among them, Gate A1 is common to many Boarding Areas.",
-    "specific_component": "Gate A1",
-    "components": "Gates",
-    "entities": "Boarding Areas"
-}

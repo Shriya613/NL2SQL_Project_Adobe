@@ -1,6 +1,0 @@
-{
-    "template": "Each Streaming Service has many different Monetization Model. Among them, Subscription is common to many Streaming Service.",
-    "specific_component": "Subscription",
-    "components": "Monetization Model",
-    "entities": "Streaming Service"
-}

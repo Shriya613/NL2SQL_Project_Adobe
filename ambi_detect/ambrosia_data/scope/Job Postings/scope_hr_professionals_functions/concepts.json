@@ -1,6 +1,0 @@
-{
-    "template": "Each HR Professionals has many different Functions. Among them, Recruitment is common to many HR Professionals.",
-    "specific_component": "Recruitment",
-    "components": "Functions",
-    "entities": "HR Professionals"
-}

@@ -1,9 +1,0 @@
-[
-    {
-        "question": "Show me tour guides and travel agents from the Expedia agency.",
-        "sql_query1": "SELECT JobPosting.title \r\nFROM HospitalityJobType JOIN JobPosting ON HospitalityJobType.id = JobPosting.hospitality_job_type_id JOIN Agency ON JobPosting.agency_id = Agency.id\r\nWHERE (HospitalityJobType.job_type = \"Tour Guide\" OR HospitalityJobType.job_type = \"Travel Agent\") AND Agency.name = \"Expedia\"",
-        "sql_query2": "SELECT JobPosting.title \r\nFROM HospitalityJobType JOIN JobPosting ON HospitalityJobType.id = JobPosting.hospitality_job_type_id JOIN Agency ON JobPosting.agency_id = Agency.id\r\nWHERE HospitalityJobType.job_type = \"Tour Guide\" OR HospitalityJobType.job_type = \"Travel Agent\" AND Agency.name = \"Expedia\"",
-        "interpretation1": "What tour guides are from Expedia and what travel agents are from the same agency?",
-        "interpretation2": "List all tour guides and also list travel agents from Expedia."
-    }
-]

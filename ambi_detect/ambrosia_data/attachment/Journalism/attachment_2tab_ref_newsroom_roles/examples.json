@@ -1,9 +1,0 @@
-[
-    {
-        "question": "Give me reporters and photographers who worked on articles with a deadline of April 28th 2020.",
-        "sql_query1": "SELECT Reporters.name\r\nFROM Articles JOIN Reporters ON Articles.reporter_id = Reporters.id\r\nWHERE Articles.deadline = \"2020-04-28\"\r\nUNION\r\nSELECT Photographers.name\r\nFROM Articles JOIN Photographers ON Articles.photographer_id = Photographers.id\r\nWHERE Articles.deadline = \"2020-04-28\"",
-        "sql_query2": "SELECT Reporters.name\r\nFROM Articles JOIN Reporters ON Articles.reporter_id = Reporters.id\r\nUNION\r\nSELECT Photographers.name\r\nFROM Articles JOIN Photographers ON Articles.photographer_id = Photographers.id\r\nWHERE Articles.deadline = \"2020-04-28\"",
-        "interpretation1": "Show reporters and photographers both who worked on articles with a deadline of April 28th 2020.",
-        "interpretation2": "Show all reporters and only those photographers who worked on articles with a deadline of April 28th 2020."
-    }
-]

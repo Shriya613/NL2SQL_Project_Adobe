@@ -1,9 +1,0 @@
-[
-    {
-        "question": "Show growth equity firms and venture capital trusts with funding of 5 million.",
-        "sql_query1": "SELECT growth_equity.firm_name as name\r\nFROM growth_equity\r\nWHERE growth_equity.funding_amount = 5000000.0\r\nUNION\r\nSELECT venture_capital.trust_name as name\r\nFROM venture_capital\r\nWHERE venture_capital.funding_amount = 5000000.0",
-        "sql_query2": "SELECT growth_equity.firm_name as name\r\nFROM growth_equity\r\nUNION\r\nSELECT venture_capital.trust_name as name\r\nFROM venture_capital\r\nWHERE venture_capital.funding_amount = 5000000.0",
-        "interpretation1": "What growth equity firms have 5 million in funding and venture capital trusts have the same funding?",
-        "interpretation2": "List all growth equity firms and also list venture capital trusts with 5 million in funding."
-    }
-]

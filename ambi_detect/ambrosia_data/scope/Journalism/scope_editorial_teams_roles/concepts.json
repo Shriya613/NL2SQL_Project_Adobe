@@ -1,6 +1,0 @@
-{
-    "template": "Each Editorial Teams has many different Roles. Among them, Copy Editor is common to many Editorial Teams.",
-    "specific_component": "Copy Editor",
-    "components": "Roles",
-    "entities": "Editorial Teams"
-}

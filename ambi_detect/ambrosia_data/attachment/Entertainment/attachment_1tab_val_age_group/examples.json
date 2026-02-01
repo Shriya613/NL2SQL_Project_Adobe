@@ -1,9 +1,0 @@
-[
-    {
-        "question": "Show me children's books and young adult books illustrated by Jane Smith.",
-        "sql_query1": "SELECT Book.title \r\nFROM Book\r\nWHERE (Book.age_group = \"Children's Book\" OR Book.age_group = \"Young Adult Book\") AND Book.illustrator = \"Jane Smith\"",
-        "sql_query2": "SELECT Book.title \r\nFROM Book\r\nWHERE Book.age_group = \"Children's Book\" OR Book.age_group = \"Young Adult Book\" AND Book.illustrator = \"Jane Smith\"",
-        "interpretation1": "What children's books were illustrated by Jane Smith and what young adult books were also illustrated by her?",
-        "interpretation2": "List all children's books and also list young adult books illustrated by Jane Smith."
-    }
-]

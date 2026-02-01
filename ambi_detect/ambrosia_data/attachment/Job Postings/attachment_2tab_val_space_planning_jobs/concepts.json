@@ -1,8 +1,0 @@
-{
-    "template": "Interior Designer and Landscape Architect are subclasses of Space Planning Jobs. All Interior designers and Landscape architects have property \"Style\". There might be a Interior Designer and a Landscape Architect that both have \"Style\" equal to \"Minimalism\".",
-    "general_class": "Space Planning Jobs",
-    "class1": "Interior Designer",
-    "class2": "Landscape Architect",
-    "common_property": "Style",
-    "common_value": "Minimalism"
-}

@@ -1,7 +1,0 @@
-{
-    "template": "Question: What is the focus of this research project? Subject of Inquiry: Project\nFocus: Focus Area Possible answer types: 1. Topic 2. Field of Study",
-    "subject": "Project",
-    "focus": "Focus Area",
-    "general_category1": "Topic",
-    "general_category2": "Field of Study"
-}

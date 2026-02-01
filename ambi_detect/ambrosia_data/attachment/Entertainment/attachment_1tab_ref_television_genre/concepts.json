@@ -1,8 +1,0 @@
-{
-    "template": "Sitcom and Drama are subclasses of Television Genre. All Sitcoms and Dramas have property \"Number of Seasons\". There might be a Sitcom and a Drama that both have \"Number of Seasons\" equal to \"5\".",
-    "general_class": "Television Genre",
-    "class1": "Sitcom",
-    "class2": "Drama",
-    "common_property": "Number of Seasons",
-    "common_value": "5"
-}

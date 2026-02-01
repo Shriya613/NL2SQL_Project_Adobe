@@ -1,9 +1,0 @@
-[
-    {
-        "question": "Show me the elements each report has.",
-        "sql_query1": "SELECT Elements.element_value  from Investigative_Reports_Elements join Investigative_Reports on Investigative_Reports_Elements.investigative_report_id = Investigative_Reports.id join Elements on Investigative_Reports_Elements.element_id = Elements.element_id   GROUP BY Investigative_Reports_Elements.element_id HAVING COUNT(DISTINCT Investigative_Reports_Elements.investigative_report_id) = (SELECT COUNT(*) FROM  Investigative_Reports)",
-        "sql_query2": "select investigative_reports.report_name , elements.element_value from Investigative_Reports_Elements join Investigative_Reports on Investigative_Reports_Elements.investigative_report_id = Investigative_Reports.id join Elements on Investigative_Reports_Elements.element_id = Elements.element_id",
-        "interpretation1": "What elements do all reports have in common?",
-        "interpretation2": "For each report, list the elements it has."
-    }
-]

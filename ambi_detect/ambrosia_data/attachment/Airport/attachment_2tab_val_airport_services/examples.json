@@ -1,9 +1,0 @@
-[
-    {
-        "question": "Who lost something or wrote a complaint on January 5, 2024?",
-        "sql_query1": "SELECT Lost_Property.Owner as FullName\r\nFROM Lost_Property\r\nWHERE Lost_Property.Date = \"January 5, 2024\"\r\nUNION\r\nSELECT Customer_Complaints.CustomerName as FullName\r\nFROM Customer_Complaints\r\nWHERE Customer_Complaints.Date = \"January 5, 2024\"",
-        "sql_query2": "SELECT Lost_Property.Owner as FullName\r\nFROM Lost_Property\r\nUNION\r\nSELECT Customer_Complaints.CustomerName as FullName\r\nFROM Customer_Complaints\r\nWHERE Customer_Complaints.Date = \"January 5, 2024\"",
-        "interpretation1": "Who reported the loss of property on January 5, 2024 and who wrote complaints at the same day?",
-        "interpretation2": "List all people who have ever lost property and also list customers who filed complaints on January 5, 2024."
-    }
-]

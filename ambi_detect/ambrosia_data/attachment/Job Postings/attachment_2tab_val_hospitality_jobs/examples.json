@@ -1,9 +1,0 @@
-[
-    {
-        "question": "Show Expedia's travel agents and tour guides.",
-        "sql_query1": "SELECT Tour_Guide.guideName as name\r\nFROM Tour_Guide JOIN Agency ON Tour_Guide.agencyId = Agency.id\r\nWHERE Agency.name = \"Expedia\"\r\nUNION\r\nSELECT Travel_Agent.agentName as name\r\nFROM Travel_Agent JOIN Agency ON Travel_Agent.agencyId = Agency.id\r\nWHERE Agency.name = \"Expedia\"",
-        "sql_query2": "SELECT Tour_Guide.guideName as name\r\nFROM Tour_Guide JOIN Agency ON Tour_Guide.agencyId = Agency.id\r\nUNION\r\nSELECT Travel_Agent.agentName as name\r\nFROM Travel_Agent JOIN Agency ON Travel_Agent.agencyId = Agency.id\r\nWHERE Agency.name = \"Expedia\"",
-        "interpretation1": "Which tour guides work in Expedia and which travel agents work there?",
-        "interpretation2": "Provide a list of all tour guides and also provide a list of Expedia's travel agents."
-    }
-]

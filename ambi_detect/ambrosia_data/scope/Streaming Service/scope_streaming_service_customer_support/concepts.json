@@ -1,6 +1,0 @@
-{
-    "template": "Each Streaming Service has many different Customer Support. Among them, Live Chat is common to many Streaming Service.",
-    "specific_component": "Live Chat",
-    "components": "Customer Support",
-    "entities": "Streaming Service"
-}

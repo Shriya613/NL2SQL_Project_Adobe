@@ -1,9 +1,0 @@
-[
-    {
-        "question": "Show articles that won Pulitzer Prize or George Polk Award in 2010.",
-        "sql_query1": "SELECT Articles.Title \r\nFROM Awards JOIN Winners ON Awards.AwardID = Winners.AwardID JOIN Articles ON Articles.ArticleID = Winners.WinningArticleID\r\nWHERE (Awards.AwardType = \"Pulitzer Prize\" OR Awards.AwardType = \"George Polk Award\") AND Winners.Year = 2010",
-        "sql_query2": "SELECT Articles.Title \r\nFROM Awards JOIN Winners ON Awards.AwardID = Winners.AwardID JOIN Articles ON Articles.ArticleID = Winners.WinningArticleID\r\nWHERE Awards.AwardType = \"Pulitzer Prize\" OR Awards.AwardType = \"George Polk Award\" AND Winners.Year = 2010",
-        "interpretation1": "Which articles won Pulitzer Prizes in 2010 and which articles won George Polk Awards in the same year?",
-        "interpretation2": "Provide a list of all the articles that won the Pulitzer Prize and also provide a list of articles that won the George Polk Awards in 2010."
-    }
-]

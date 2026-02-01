@@ -1,9 +1,0 @@
-[
-    {
-        "question": "Give me publications in print media and online media with an audience size of 100,000.",
-        "sql_query1": "SELECT Publications.Name \r\nFROM DistributionPlatforms JOIN PublishesIn ON DistributionPlatforms.PlatformID = PublishesIn.PlatformID JOIN Publications ON Publications.PublicationID = PublishesIn.PublicationID\r\nWHERE (DistributionPlatforms.Type = \"Print Media\" OR DistributionPlatforms.Type = \"Online Media\") AND PublishesIn.AudienceSize = 100000",
-        "sql_query2": "SELECT Publications.Name \r\nFROM DistributionPlatforms JOIN PublishesIn ON DistributionPlatforms.PlatformID = PublishesIn.PlatformID JOIN Publications ON Publications.PublicationID = PublishesIn.PublicationID\r\nWHERE DistributionPlatforms.Type = \"Print Media\" OR DistributionPlatforms.Type = \"Online Media\" AND PublishesIn.AudienceSize = 100000",
-        "interpretation1": "What print media publications have an audience size of 100,000 and what online media publications have the same audience size?",
-        "interpretation2": "List all print media publications and also list online media publications with an audience size of 100,000."
-    }
-]

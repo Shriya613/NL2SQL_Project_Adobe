@@ -1,9 +1,0 @@
-[
-    {
-        "question": "Show novels and short stories about John Smith.",
-        "sql_query1": "SELECT Novels.title\r\nFROM Novels\r\nWHERE Novels.Character = \"John Smith\"\r\nUNION\r\nSELECT ShortStories.title\r\nFROM ShortStories\r\nWHERE ShortStories.Character = \"John Smith\"",
-        "sql_query2": "SELECT Novels.title\r\nFROM Novels\r\nUNION\r\nSELECT ShortStories.title\r\nFROM ShortStories\r\nWHERE ShortStories.Character = \"John Smith\"",
-        "interpretation1": "What novels have John Smith and what short stories have the same character?",
-        "interpretation2": "Provide a list of all novels and also provide a list of short stories with the character John Smith."
-    }
-]

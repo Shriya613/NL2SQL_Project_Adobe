@@ -1,9 +1,0 @@
-[
-    {
-        "question": "Show me the opportunities each career pathway has available.",
-        "sql_query1": "SELECT Opportunities.Value  from Career_Pathways_Opportunities join Opportunities on Career_Pathways_Opportunities.OpportunityID = Opportunities.OpportunityID join Career_Pathways on Career_Pathways_Opportunities.CareerPathwayID = Career_Pathways.PathwayID   GROUP BY Career_Pathways_Opportunities.OpportunityID HAVING COUNT(DISTINCT Career_Pathways_Opportunities.CareerPathwayID) = (SELECT COUNT(*) FROM  Career_Pathways)",
-        "sql_query2": "select career_pathways.name , opportunities.value from Career_Pathways_Opportunities join Opportunities on Career_Pathways_Opportunities.OpportunityID = Opportunities.OpportunityID join Career_Pathways on Career_Pathways_Opportunities.CareerPathwayID = Career_Pathways.PathwayID",
-        "interpretation1": "Which opportunities are common to all career pathways?",
-        "interpretation2": "For every career pathway, what opportunities are available?"
-    }
-]

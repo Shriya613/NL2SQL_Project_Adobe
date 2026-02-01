@@ -1,8 +1,0 @@
-{
-    "template": "Animation and Comedy are subclasses of Genre. All Animation and Comedy films have a property \"Release Year\". There might be an Animation and a Comedy film both released in \"2021\".",
-    "general_class": "Genre",
-    "class1": "Animation",
-    "class2": "Comedy",
-    "common_property": "Release Year",
-    "common_value": "2021"
-}

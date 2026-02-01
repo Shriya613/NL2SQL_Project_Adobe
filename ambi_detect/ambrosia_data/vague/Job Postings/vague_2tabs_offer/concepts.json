@@ -1,7 +1,0 @@
-{
-    "template": "Question: What does this job offer? Subject of Inquiry: Job Post\nFocus: Offer Possible answer types: 1. Base Pay Range 2. Benefits",
-    "subject": "Job Post",
-    "focus": "Offer",
-    "general_category1": "Base Pay Range",
-    "general_category2": "Benefits"
-}

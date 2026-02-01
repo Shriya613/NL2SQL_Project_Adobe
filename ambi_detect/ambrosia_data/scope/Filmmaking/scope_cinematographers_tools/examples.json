@@ -1,9 +1,0 @@
-[
-    {
-        "question": "Which tool names are associated with each cinematographer?",
-        "sql_query1": "SELECT Tools.toolName  from Cinematographers_Tools join Tools on Cinematographers_Tools.toolId = Tools.id join Cinematographers on Cinematographers_Tools.cinematographerId = Cinematographers.id   GROUP BY Cinematographers_Tools.toolId HAVING COUNT(DISTINCT Cinematographers_Tools.cinematographerId) = (SELECT COUNT(*) FROM  Cinematographers)",
-        "sql_query2": "select cinematographers.name , tools.toolname from Cinematographers_Tools join Tools on Cinematographers_Tools.toolId = Tools.id join Cinematographers on Cinematographers_Tools.cinematographerId = Cinematographers.id",
-        "interpretation1": "Show me the tool name that is common for all cinematographers.",
-        "interpretation2": "For every cinematographer, show me the corresponding tool names."
-    }
-]

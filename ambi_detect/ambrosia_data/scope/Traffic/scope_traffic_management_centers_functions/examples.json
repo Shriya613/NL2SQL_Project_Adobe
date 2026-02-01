@@ -1,9 +1,0 @@
-[
-    {
-        "question": "Show me the functions each traffic management center uses.",
-        "sql_query1": "SELECT Functions.functionName  from Traffic_Management_Centers_Functions join Functions on Traffic_Management_Centers_Functions.Function_id = Functions.id join Traffic_Management_Centers on Traffic_Management_Centers_Functions.TMC_id = Traffic_Management_Centers.centerID   GROUP BY Traffic_Management_Centers_Functions.Function_id HAVING COUNT(DISTINCT Traffic_Management_Centers_Functions.TMC_id) = (SELECT COUNT(*) FROM  Traffic_Management_Centers)",
-        "sql_query2": "select traffic_management_centers.name , functions.functionname from Traffic_Management_Centers_Functions join Functions on Traffic_Management_Centers_Functions.Function_id = Functions.id join Traffic_Management_Centers on Traffic_Management_Centers_Functions.TMC_id = Traffic_Management_Centers.centerID",
-        "interpretation1": "What functions are the same for all traffic management centers?",
-        "interpretation2": "For every traffic management center, list functions they use."
-    }
-]

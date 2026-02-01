@@ -1,9 +1,0 @@
-[
-    {
-        "question": "Provide the customer service advisors and IT support technicians who are bilingual.",
-        "sql_query1": "SELECT Employees.FullName\r\nFROM Customer_Facing_Roles JOIN Employees ON Customer_Facing_Roles.id = Employees.customer_role_id JOIN Language_Proficiencies ON Employees.language_proficiency_id = Language_Proficiencies.id\r\nWHERE (Customer_Facing_Roles.role = \"Customer Service Advisor\" OR Customer_Facing_Roles.role = \"IT Support Technician\") AND Language_Proficiencies.language = \"Bilingual\"",
-        "sql_query2": "SELECT Employees.FullName\r\nFROM Customer_Facing_Roles JOIN Employees ON Customer_Facing_Roles.id = Employees.customer_role_id JOIN Language_Proficiencies ON Employees.language_proficiency_id = Language_Proficiencies.id\r\nWHERE Customer_Facing_Roles.role = \"Customer Service Advisor\" OR Customer_Facing_Roles.role = \"IT Support Technician\" AND Language_Proficiencies.language = \"Bilingual\"",
-        "interpretation1": "Display all of the bilingual employees working as either customer service advisors or IT support technicians.",
-        "interpretation2": "Show all of the customer service advisor details, also show the bilingual IT support technicians."
-    }
-]

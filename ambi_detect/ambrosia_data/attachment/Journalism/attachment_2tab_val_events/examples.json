@@ -1,9 +1,0 @@
-[
-    {
-        "question": "What are the topics of all press conferences and media scrums with Jack Layton?",
-        "sql_query1": "SELECT Press_Conferences.topic\r\nFROM Press_Conferences\r\nWHERE Press_Conferences.person = \"Jack Layton\"\r\nUNION\r\nSELECT Media_Scrums.topic\r\nFROM Media_Scrums\r\nWHERE Media_Scrums.person = \"Jack Layton\"",
-        "sql_query2": "SELECT Press_Conferences.topic\r\nFROM Press_Conferences\r\nUNION\r\nSELECT Media_Scrums.topic\r\nFROM Media_Scrums\r\nWHERE Media_Scrums.person = \"Jack Layton\"",
-        "interpretation1": "What are the topics of the press conference with Jack Layton and what are the topics of media scrums with him?",
-        "interpretation2": "List all press conference topics and also display the topics of media scrums involving Jack Layton."
-    }
-]

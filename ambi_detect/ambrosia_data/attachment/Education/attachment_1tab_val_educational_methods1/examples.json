@@ -1,9 +1,0 @@
-[
-    {
-        "question": "Give me all online learning courses and classroom teaching courses for Mathematics.",
-        "sql_query1": "SELECT Courses.Name \r\nFROM Courses\r\nWHERE (Courses.EducationalMethod = \"Online Learning\" OR Courses.EducationalMethod = \"Classroom Teaching\") AND Courses.CurriculumContent = \"Mathematics\"",
-        "sql_query2": "SELECT Courses.Name \r\nFROM Courses\r\nWHERE Courses.EducationalMethod = \"Online Learning\" OR Courses.EducationalMethod = \"Classroom Teaching\" AND Courses.CurriculumContent = \"Mathematics\"",
-        "interpretation1": "Show all the Mathematics curriculum courses delivered by either online learning or in classroom teaching methods.",
-        "interpretation2": "Show all the online learning courses, also show the Mathematics courses delivered by classroom teaching."
-    }
-]

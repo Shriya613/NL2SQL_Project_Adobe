@@ -1,9 +1,0 @@
-[
-    {
-        "question": "what are the types of vendors associated with each craft fair?",
-        "sql_query1": "SELECT Vendors.type  from Craft_Fairs_Vendors join Vendors on Craft_Fairs_Vendors.vendor_type_id = Vendors.id join Craft_Fairs on Craft_Fairs_Vendors.craft_fair_id = Craft_Fairs.id   GROUP BY Craft_Fairs_Vendors.vendor_type_id HAVING COUNT(DISTINCT Craft_Fairs_Vendors.craft_fair_id) = (SELECT COUNT(*) FROM  Craft_Fairs)",
-        "sql_query2": "select craft_fairs.name , vendors.type from Craft_Fairs_Vendors join Vendors on Craft_Fairs_Vendors.vendor_type_id = Vendors.id join Craft_Fairs on Craft_Fairs_Vendors.craft_fair_id = Craft_Fairs.id",
-        "interpretation1": "what type of vendors are present at every craft fair at least once?",
-        "interpretation2": "for each craft fair, what is the corresponding vendor type?"
-    }
-]

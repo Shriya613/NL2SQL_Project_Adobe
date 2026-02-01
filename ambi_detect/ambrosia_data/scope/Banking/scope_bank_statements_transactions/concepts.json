@@ -1,6 +1,0 @@
-{
-    "template": "Each Bank Statements has many different Transactions. Among them, Subscription Payments is common to many Bank Statements.",
-    "specific_component": "Subscription Payments",
-    "components": "Transactions",
-    "entities": "Bank Statements"
-}

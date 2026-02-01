@@ -1,8 +1,0 @@
-{
-    "template": "Dance Recital and Talent Show are subclasses of Performance Event. All Dance recitals and Talent shows have property \"Audition Room\". There might be a Dance Recital and a Talent Show that both have \"Audition Room\" equal to \"Room 101\".",
-    "general_class": "Performance Event",
-    "class1": "Dance Recital",
-    "class2": "Talent Show",
-    "common_property": "Audition Room",
-    "common_value": "Room 101"
-}

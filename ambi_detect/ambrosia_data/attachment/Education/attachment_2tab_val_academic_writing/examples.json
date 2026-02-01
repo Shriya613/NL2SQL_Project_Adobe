@@ -1,9 +1,0 @@
-[
-    {
-        "question": "Give me dissertations and thesis proposals supervised by Dr. Jane Smith.",
-        "sql_query1": "SELECT Dissertations.title\r\nFROM Dissertations\r\nWHERE Dissertations.Academic_Supervisor = \"Dr. Jane Smith\"\r\nUNION\r\nSELECT Thesis_Proposals.title\r\nFROM Thesis_Proposals\r\nWHERE Thesis_Proposals.Academic_Supervisor = \"Dr. Jane Smith\"",
-        "sql_query2": "SELECT Dissertations.title\r\nFROM Dissertations\r\nUNION\r\nSELECT Thesis_Proposals.title\r\nFROM Thesis_Proposals\r\nWHERE Thesis_Proposals.Academic_Supervisor = \"Dr. Jane Smith\"",
-        "interpretation1": "What dissertations were supervised by Dr. Jane Smith and what thesis proposals did she also supervise?",
-        "interpretation2": "List all dissertations and also list thesis proposals supervised by Dr. Jane Smith."
-    }
-]

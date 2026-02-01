@@ -1,8 +1,0 @@
-{
-    "template": "Swimming Pool and Hot Tub are subclasses of Leisure Features. All Swimming pools and Hot tubs have property \"City\". There might be a Swimming Pool and a Hot Tub that both have \"City\" equal to \"Miami\".",
-    "general_class": "Leisure Features",
-    "class1": "Swimming Pool",
-    "class2": "Hot Tub",
-    "common_property": "City",
-    "common_value": "Miami"
-}

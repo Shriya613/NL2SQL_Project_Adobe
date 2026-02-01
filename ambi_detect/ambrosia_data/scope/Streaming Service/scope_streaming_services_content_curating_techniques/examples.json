@@ -1,9 +1,0 @@
-[
-    {
-        "question": "What content curation techniques are utilized by each streaming service?",
-        "sql_query1": "SELECT Content_Curating_Techniques.technique  from Streaming_Services_Content_Curating_Techniques join Content_Curating_Techniques on Streaming_Services_Content_Curating_Techniques.content_curating_technique_id = Content_Curating_Techniques.id join Streaming_Services on Streaming_Services_Content_Curating_Techniques.streaming_service_id = Streaming_Services.service_id   GROUP BY Streaming_Services_Content_Curating_Techniques.content_curating_technique_id HAVING COUNT(DISTINCT Streaming_Services_Content_Curating_Techniques.streaming_service_id) = (SELECT COUNT(*) FROM  Streaming_Services)",
-        "sql_query2": "select streaming_services.name , content_curating_techniques.technique from Streaming_Services_Content_Curating_Techniques join Content_Curating_Techniques on Streaming_Services_Content_Curating_Techniques.content_curating_technique_id = Content_Curating_Techniques.id join Streaming_Services on Streaming_Services_Content_Curating_Techniques.streaming_service_id = Streaming_Services.service_id",
-        "interpretation1": "Which content curation technique is shared by all streaming services?",
-        "interpretation2": "For each streaming service, what are the associated content curation techniques?"
-    }
-]

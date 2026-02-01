@@ -1,9 +1,0 @@
-[
-    {
-        "question": "Can you list the sourcing platforms each recruiter uses?",
-        "sql_query1": "SELECT Sources.source_name  from Recruiters_Sources join Sources on Recruiters_Sources.source_id = Sources.source_id join Recruiters on Recruiters_Sources.recruiter_id = Recruiters.recruiter_id   GROUP BY Recruiters_Sources.source_id HAVING COUNT(DISTINCT Recruiters_Sources.recruiter_id) = (SELECT COUNT(*) FROM  Recruiters)",
-        "sql_query2": "select recruiters.name , sources.source_name from Recruiters_Sources join Sources on Recruiters_Sources.source_id = Sources.source_id join Recruiters on Recruiters_Sources.recruiter_id = Recruiters.recruiter_id",
-        "interpretation1": "What sourcing platform is shared across all recruiters?",
-        "interpretation2": "Can you list the recruiters and the corresponding sourcing platforms?"
-    }
-]

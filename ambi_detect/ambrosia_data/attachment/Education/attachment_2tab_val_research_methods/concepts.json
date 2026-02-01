@@ -1,8 +1,0 @@
-{
-    "template": "Case Study and Interview are subclasses of Research Methods. All Case Studies and Interviews have property \"Topic\". There might be a Case Study and an Interview that both have \"Topic\" equal to \"Environmental Science\".",
-    "general_class": "Research Methods",
-    "class1": "Case Study",
-    "class2": "Interview",
-    "common_property": "Topic",
-    "common_value": "Environmental Science"
-}

@@ -1,6 +1,0 @@
-{
-    "template": "Each Streaming Services has many different Genres. Among them, Drama is common to many Streaming Services.",
-    "specific_component": "Drama",
-    "components": "Genres",
-    "entities": "Streaming Services"
-}

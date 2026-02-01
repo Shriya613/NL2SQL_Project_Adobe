@@ -1,9 +1,0 @@
-[
-    {
-        "question": "Show me the applications each traffic simulator uses.",
-        "sql_query1": "SELECT Applications.application_name  from Traffic_Simulators join Traffic_Simulators_Applications on Traffic_Simulators.simulator_id = Traffic_Simulators_Applications.traffic_simulator_id join Applications on Traffic_Simulators_Applications.application_id = Applications.application_id   GROUP BY Traffic_Simulators_Applications.application_id HAVING COUNT(DISTINCT Traffic_Simulators_Applications.traffic_simulator_id) = (SELECT COUNT(*) FROM  Traffic_Simulators)",
-        "sql_query2": "select traffic_simulators.simulator_name , applications.application_name from Traffic_Simulators join Traffic_Simulators_Applications on Traffic_Simulators.simulator_id = Traffic_Simulators_Applications.traffic_simulator_id join Applications on Traffic_Simulators_Applications.application_id = Applications.application_id",
-        "interpretation1": "What applications are common to all traffic simulators?",
-        "interpretation2": "For every traffic simulator, list the applications used."
-    }
-]

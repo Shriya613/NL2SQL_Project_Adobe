@@ -1,7 +1,0 @@
-{
-    "template": "Question: Who designed these costumes? Subject of Inquiry: Costumes\nFocus: Costumier Possible answer types: 1. Costume Designer 2. Costume Supervisor",
-    "subject": "Costumes",
-    "focus": "Costumier",
-    "general_category1": "Costume Designer",
-    "general_category2": "Costume Supervisor"
-}

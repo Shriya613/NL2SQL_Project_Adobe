@@ -1,8 +1,0 @@
-{
-    "template": "Currency Exchange Service and Commodity Trading Firm are subclasses of Organization. All Currency exchange services and Commodity trading firms have property \"Year of Establishment\". There might be a Currency Exchange Service and a Commodity Trading Firm that both have \"Year of Establishment\" equal to \"2000\".",
-    "general_class": "Organization",
-    "class1": "Currency Exchange Service",
-    "class2": "Commodity Trading Firm",
-    "common_property": "Year of Establishment",
-    "common_value": "2000"
-}

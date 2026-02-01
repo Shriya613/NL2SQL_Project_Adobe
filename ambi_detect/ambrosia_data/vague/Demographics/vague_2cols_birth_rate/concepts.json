@@ -1,7 +1,0 @@
-{
-    "template": "Question: How many children are born each year in this city? Subject of Inquiry: City\nFocus: Birth Rate Possible answer types: 1. Number of Births 2. Crude birth rate",
-    "subject": "City",
-    "focus": "Birth Rate",
-    "general_category1": "Number of Births",
-    "general_category2": "Crude birth rate"
-}

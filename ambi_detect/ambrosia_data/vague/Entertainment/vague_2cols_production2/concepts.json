@@ -1,7 +1,0 @@
-{
-    "template": "Question: Who produced this documentary? Subject of Inquiry: Documentary\nFocus: Production Possible answer types: 1. Producer 2. Company",
-    "subject": "Documentary",
-    "focus": "Production",
-    "general_category1": "Producer",
-    "general_category2": "Company"
-}

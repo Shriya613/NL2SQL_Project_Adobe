@@ -1,6 +1,0 @@
-{
-    "template": "Each Zoo has many different Animals. Among them, Elephant is common to many Zoo.",
-    "specific_component": "Elephant",
-    "components": "Animals",
-    "entities": "Zoo"
-}

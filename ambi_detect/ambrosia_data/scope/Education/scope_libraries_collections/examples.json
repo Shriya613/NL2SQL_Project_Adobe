@@ -1,9 +1,0 @@
-[
-    {
-        "question": "Give me the collections corresponding to each library?",
-        "sql_query1": "SELECT Collections.collection_name  from Libraries_Collections join Collections on Libraries_Collections.collection_id = Collections.collection_id join Libraries on Libraries_Collections.library_id = Libraries.id   GROUP BY Libraries_Collections.collection_id HAVING COUNT(DISTINCT Libraries_Collections.library_id) = (SELECT COUNT(*) FROM  Libraries)",
-        "sql_query2": "select libraries.name , collections.collection_name from Libraries_Collections join Collections on Libraries_Collections.collection_id = Collections.collection_id join Libraries on Libraries_Collections.library_id = Libraries.id",
-        "interpretation1": "Show me the collection that is in common for all libraries.",
-        "interpretation2": "For each library, please show me the corresponding collections."
-    }
-]

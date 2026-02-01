@@ -1,9 +1,0 @@
-[
-    {
-        "question": "List tennis tournaments and golf tournaments where Nike is the sponsor.",
-        "sql_query1": "SELECT Tennis_Tournaments.tournamentname\r\nFROM Sponsors JOIN Tennis_Tournaments ON Sponsors.id = Tennis_Tournaments.sponsorID\r\nWHERE Sponsors.name = 'Nike'\r\nUNION\r\nSELECT Golf_Tournaments.tournamentname\r\nFROM Sponsors JOIN Golf_Tournaments ON Sponsors.id = Golf_Tournaments.sponsorID\r\nWHERE Sponsors.name = 'Nike'",
-        "sql_query2": "SELECT Tennis_Tournaments.tournamentname\r\nFROM Sponsors JOIN Tennis_Tournaments ON Sponsors.id = Tennis_Tournaments.sponsorID\r\nUNION\r\nSELECT Golf_Tournaments.tournamentname\r\nFROM Sponsors JOIN Golf_Tournaments ON Sponsors.id = Golf_Tournaments.sponsorID\r\nWHERE Sponsors.name = 'Nike'",
-        "interpretation1": "What tennis tournaments are sponsored by Nike and what golf tournaments are sponsored by the same sponsor?",
-        "interpretation2": "Provide a list of all tennis tournaments and also provide a list of all golf tournaments where Nike is the sponsor."
-    }
-]

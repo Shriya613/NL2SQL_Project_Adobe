@@ -1,6 +1,0 @@
-{
-    "template": "Each Productions has many different Locations. Among them, Studio Sets is common to many Productions.",
-    "specific_component": "Studio Sets",
-    "components": "Locations",
-    "entities": "Productions"
-}

@@ -1,7 +1,0 @@
-{
-    "template": "Question: Who is hiring for this position? Subject of Inquiry: Position\nFocus: Recruiter Possible answer types: 1. Company 2. Recruitment Agency",
-    "subject": "Position",
-    "focus": "Recruiter",
-    "general_category1": "Company",
-    "general_category2": "Recruitment Agency"
-}

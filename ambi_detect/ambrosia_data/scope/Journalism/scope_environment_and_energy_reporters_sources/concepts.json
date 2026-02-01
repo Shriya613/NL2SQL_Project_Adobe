@@ -1,6 +1,0 @@
-{
-    "template": "Each Environment and Energy Reporters has many different Sources. Among them, Solar Power is common to many Environment and Energy Reporters.",
-    "specific_component": "Solar Power",
-    "components": "Sources",
-    "entities": "Environment and Energy Reporters"
-}

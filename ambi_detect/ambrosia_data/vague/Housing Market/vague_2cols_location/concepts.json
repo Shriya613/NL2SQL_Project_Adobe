@@ -1,7 +1,0 @@
-{
-    "template": "Question: Where is this real estate office located? Subject of Inquiry: Real Estate Offices\nFocus: Location Possible answer types: 1. Street Address 2. City",
-    "subject": "Real Estate Offices",
-    "focus": "Location",
-    "general_category1": "Street Address",
-    "general_category2": "City"
-}

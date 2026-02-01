@@ -1,6 +1,0 @@
-{
-    "template": "Each Communities has many different Features. Among them, Golf Course is common to many Communities.",
-    "specific_component": "Golf Course",
-    "components": "Features",
-    "entities": "Communities"
-}

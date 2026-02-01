@@ -1,9 +1,0 @@
-[
-    {
-        "question": "Display chefs and servers fluent in Spanish.",
-        "sql_query1": "SELECT Chefs.name\r\nFROM Chefs\r\nWHERE Chefs.language = \"Spanish\"\r\nUNION\r\nSELECT Servers.name\r\nFROM Servers\r\nWHERE Servers.language = \"Spanish\"",
-        "sql_query2": "SELECT Chefs.name\r\nFROM Chefs\r\nUNION\r\nSELECT Servers.name\r\nFROM Servers\r\nWHERE Servers.language = \"Spanish\"",
-        "interpretation1": "Which chefs and servers are fluent in Spanish?",
-        "interpretation2": "List all chefs and also display servers fluent in Spanish."
-    }
-]

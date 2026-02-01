@@ -1,9 +1,0 @@
-[
-    {
-        "question": "Show youth hostels and hotels where rooms cost 50.",
-        "sql_query1": "SELECT hotels.name \r\nFROM hotels JOIN rooms ON hotels.id = rooms.hotel_id\r\nWHERE (hotels.accommodation_type = \"Youth Hostel\" OR hotels.accommodation_type = \"Hotel\") AND rooms.price = 50.0",
-        "sql_query2": "SELECT hotels.name \r\nFROM hotels JOIN rooms ON hotels.id = rooms.hotel_id\r\nWHERE hotels.accommodation_type = \"Youth Hostel\" OR hotels.accommodation_type = \"Hotel\" AND rooms.price = 50.0",
-        "interpretation1": "List both youth hostels and hotels with rooms that cost 50.",
-        "interpretation2": "Show all youth hostels and also show the hotels, but only those with 50-priced rooms."
-    }
-]

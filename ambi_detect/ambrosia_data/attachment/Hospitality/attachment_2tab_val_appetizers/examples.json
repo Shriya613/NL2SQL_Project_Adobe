@@ -1,9 +1,0 @@
-[
-    {
-        "question": "Show me salads and soups served at the Hilton.",
-        "sql_query1": "SELECT Salads.name\r\nFROM Salads\r\nWHERE Salads.BuffetName = \"Hilton\"\r\nUNION\r\nSELECT Soups.name\r\nFROM Soups\r\nWHERE Soups.BuffetName = \"Hilton\"",
-        "sql_query2": "SELECT Salads.name\r\nFROM Salads\r\nUNION\r\nSELECT Soups.name\r\nFROM Soups\r\nWHERE Soups.BuffetName = \"Hilton\"",
-        "interpretation1": "What salads are served at the Hilton and what soups are served at the same buffet?",
-        "interpretation2": "List all salads and also list soups served at the Hilton buffet."
-    }
-]

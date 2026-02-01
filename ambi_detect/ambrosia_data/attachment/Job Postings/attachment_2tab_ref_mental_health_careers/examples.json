@@ -1,9 +1,0 @@
-[
-    {
-        "question": "Show psychologists and psychiatrists of Harmony Wellness Center.",
-        "sql_query1": "SELECT Psychologists.name\r\nFROM Clinics JOIN Psychologists ON Clinics.id = Psychologists.clinic_id\r\nWHERE Clinics.name = \"Harmony Wellness Center\"\r\nUNION\r\nSELECT Psychiatrists.name\r\nFROM Clinics JOIN Psychiatrists ON Clinics.id = Psychiatrists.clinic_id\r\nWHERE Clinics.name = \"Harmony Wellness Center\"",
-        "sql_query2": "SELECT Psychologists.name\r\nFROM Clinics JOIN Psychologists ON Clinics.id = Psychologists.clinic_id\r\nUNION\r\nSELECT Psychiatrists.name\r\nFROM Clinics JOIN Psychiatrists ON Clinics.id = Psychiatrists.clinic_id\r\nWHERE Clinics.name = \"Harmony Wellness Center\"",
-        "interpretation1": "What psychologists work in Harmony Wellness Center and what psychiatrists work in the clinic with the same name?",
-        "interpretation2": "Provide a list of all psychologists and also provide a list of all psychiatrists working in the clinic called Harmony Wellness Center."
-    }
-]

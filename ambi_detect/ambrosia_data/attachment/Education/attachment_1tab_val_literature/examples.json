@@ -1,9 +1,0 @@
-[
-    {
-        "question": "Show fiction books and non-fiction books with a rating of 2.5.",
-        "sql_query1": "SELECT Books.Title \r\nFROM Books\r\nWHERE (Books.Literature = \"Fiction Book\" OR Books.Literature = \"Non-fiction Book\") AND Books.Rating = 2.5",
-        "sql_query2": "SELECT Books.Title \r\nFROM Books\r\nWHERE Books.Literature = \"Fiction Book\" OR Books.Literature = \"Non-fiction Book\" AND Books.Rating = 2.5",
-        "interpretation1": "Which fiction books have a rating of 2.5 and which non-fiction books have the same rating?",
-        "interpretation2": "Provide a list of all fiction books and also provide a list of non-fiction books with a rating of 2.5."
-    }
-]

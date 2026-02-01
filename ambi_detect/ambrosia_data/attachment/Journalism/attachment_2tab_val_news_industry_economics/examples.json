@@ -1,9 +1,0 @@
-[
-    {
-        "question": "Show all types of advertising and subscriptions for Good Housekeeping magazine.",
-        "sql_query1": "SELECT Advertising.Type\r\nFROM Advertising\r\nWHERE Advertising.Magazine = \"Good Housekeeping\"\r\nUNION\r\nSELECT Subscriptions.Type\r\nFROM Subscriptions\r\nWHERE Subscriptions.Magazine = \"Good Housekeeping\"",
-        "sql_query2": "SELECT Advertising.Type\r\nFROM Advertising\r\nUNION\r\nSELECT Subscriptions.Type\r\nFROM Subscriptions\r\nWHERE Subscriptions.Magazine = \"Good Housekeeping\"",
-        "interpretation1": "Show the advertising and subscription types where either are listed for Good Housekeeping magazine.",
-        "interpretation2": "Show all the advertising types and also show the subscriptions types but just for Good Housekeeping magazine."
-    }
-]

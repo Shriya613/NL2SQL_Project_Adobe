@@ -1,6 +1,0 @@
-{
-    "template": "Each Craft Services has many different Menus. Among them, Vegan is common to many Craft Services.",
-    "specific_component": "Vegan",
-    "components": "Menus",
-    "entities": "Craft Services"
-}

@@ -1,8 +1,0 @@
-{
-    "template": "Mortgage and Home Equity Loan are subclasses of Loan Types. All Mortgages and Home equity loans have property \"Repayment Period\". There might be a Mortgage and a Home Equity Loan that both have \"Repayment Period\" equal to \"30 years\".",
-    "general_class": "Loan Types",
-    "class1": "Mortgage",
-    "class2": "Home Equity Loan",
-    "common_property": "Repayment Period",
-    "common_value": "30 years"
-}

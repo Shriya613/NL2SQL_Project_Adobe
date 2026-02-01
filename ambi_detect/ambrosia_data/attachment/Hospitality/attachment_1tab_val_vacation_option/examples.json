@@ -1,9 +1,0 @@
-[
-    {
-        "question": "Show cruise ship customers and resort customers that went to a dance class.",
-        "sql_query1": "SELECT Customers.Name \r\nFROM Customers\r\nWHERE (Customers.Vacation_Option = \"Cruise Ship\" OR Customers.Vacation_Option = \"All-Inclusive Resort\") AND Customers.Activities = \"Dance Class\"",
-        "sql_query2": "SELECT Customers.Name \r\nFROM Customers\r\nWHERE Customers.Vacation_Option = \"Cruise Ship\" OR Customers.Vacation_Option = \"All-Inclusive Resort\" AND Customers.Activities = \"Dance Class\"",
-        "interpretation1": "What cruise ship customers went to a dance class and what resort customers also went to one?",
-        "interpretation2": "List all cruise ship customers and also list resort customers that went to a dance class."
-    }
-]

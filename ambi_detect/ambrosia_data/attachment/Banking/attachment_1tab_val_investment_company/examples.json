@@ -1,9 +1,0 @@
-[
-    {
-        "question": "Show all growth equity firms and venture capital trusts with 5M funding.",
-        "sql_query1": "SELECT InvestmentCompanies.Name \r\nFROM InvestmentCompanies\r\nWHERE (InvestmentCompanies.Type = \"Growth Equity Firm\" OR InvestmentCompanies.Type = \"Venture Capital Trust\") AND InvestmentCompanies.FundingAmount = 5000000.0",
-        "sql_query2": "SELECT InvestmentCompanies.Name \r\nFROM InvestmentCompanies\r\nWHERE InvestmentCompanies.Type = \"Growth Equity Firm\" OR InvestmentCompanies.Type = \"Venture Capital Trust\" AND InvestmentCompanies.FundingAmount = 5000000.0",
-        "interpretation1": "Show all of the growth equity firms and the venture capital trusts where either have 5M funding.",
-        "interpretation2": "Show all the growth equity firms, also show the venture capital trusts, but just those with 5M of funding."
-    }
-]

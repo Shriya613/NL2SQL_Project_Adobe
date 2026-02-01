@@ -1,8 +1,0 @@
-{
-    "template": "Print Media and Online Media are subclasses of Distribution Platforms. All Print medias and Online medias have property \"Audience Size\". There might be a Print Media and a Online Media that both have \"Audience Size\" equal to \"300000\".",
-    "general_class": "Distribution Platforms",
-    "class1": "Print Media",
-    "class2": "Online Media",
-    "common_property": "Audience Size",
-    "common_value": "300000"
-}

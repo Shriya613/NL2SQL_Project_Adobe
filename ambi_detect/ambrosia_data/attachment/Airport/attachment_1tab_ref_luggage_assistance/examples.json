@@ -1,9 +1,0 @@
-[
-    {
-        "question": "Which passengers request luggage trolleys and porter services from Exit A?",
-        "sql_query1": "SELECT Passengers.Name \r\nFROM LuggageRequests JOIN Bookings ON LuggageRequests.RequestID = Bookings.LuggageRequestID JOIN Locations ON Bookings.LocationID = Locations.LocationID JOIN Passengers ON Passengers.PassengerID = LuggageRequests.PassengerID\r\nWHERE (LuggageRequests.AssistanceType = 'Luggage Trolley' OR LuggageRequests.AssistanceType = 'Porter Service') AND Locations.LocationName = 'Exit A'",
-        "sql_query2": "SELECT Passengers.Name \r\nFROM LuggageRequests JOIN Bookings ON LuggageRequests.RequestID = Bookings.LuggageRequestID JOIN Locations ON Bookings.LocationID = Locations.LocationID JOIN Passengers ON Passengers.PassengerID = LuggageRequests.PassengerID\r\nWHERE LuggageRequests.AssistanceType = 'Luggage Trolley' OR LuggageRequests.AssistanceType = 'Porter Service' AND Locations.LocationName = 'Exit A'",
-        "interpretation1": "Show passengers who have requested either a luggage trolleys or the porter service, either being from Exit A.",
-        "interpretation2": "Show all passengers who've requested a luggage trolley, also show only those passengers who've requested the porter service from Exit A."
-    }
-]

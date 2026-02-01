@@ -1,6 +1,0 @@
-{
-    "template": "Each Orchestras has many different Instruments. Among them, Violin is common to many Orchestras.",
-    "specific_component": "Violin",
-    "components": "Instruments",
-    "entities": "Orchestras"
-}

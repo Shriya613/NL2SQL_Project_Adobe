@@ -1,6 +1,0 @@
-{
-    "template": "Each Radio Stations has many different Programs. Among them, Morning Show is common to many Radio Stations.",
-    "specific_component": "Morning Show",
-    "components": "Programs",
-    "entities": "Radio Stations"
-}

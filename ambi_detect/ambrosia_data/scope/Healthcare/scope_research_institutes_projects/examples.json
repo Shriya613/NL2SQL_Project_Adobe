@@ -1,9 +1,0 @@
-[
-    {
-        "question": "What project names are associated with each research institute?",
-        "sql_query1": "SELECT Projects.Name  from Research_Institutes_Projects join Projects on Research_Institutes_Projects.ProjectID = Projects.ProjectID join Research_Institutes on Research_Institutes_Projects.InstituteID = Research_Institutes.InstituteID   GROUP BY Research_Institutes_Projects.ProjectID HAVING COUNT(DISTINCT Research_Institutes_Projects.InstituteID) = (SELECT COUNT(*) FROM  Research_Institutes)",
-        "sql_query2": "select research_institutes.name , projects.name from Research_Institutes_Projects join Projects on Research_Institutes_Projects.ProjectID = Projects.ProjectID join Research_Institutes on Research_Institutes_Projects.InstituteID = Research_Institutes.InstituteID",
-        "interpretation1": "which project name is shared by all research institutes?",
-        "interpretation2": "For each research institute, what are the respective names of their projects?"
-    }
-]

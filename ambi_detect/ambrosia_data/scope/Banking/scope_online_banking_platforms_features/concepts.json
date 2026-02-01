@@ -1,6 +1,0 @@
-{
-    "template": "Each Online Banking Platforms has many different Features. Among them, Bill Pay is common to many Online Banking Platforms.",
-    "specific_component": "Bill Pay",
-    "components": "Features",
-    "entities": "Online Banking Platforms"
-}

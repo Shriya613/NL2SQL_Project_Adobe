@@ -1,7 +1,0 @@
-{
-    "template": "Question: How is this hotel rated? Subject of Inquiry: Hotel\nFocus: Rating Possible answer types: 1. Customer Reviews 2. Number of Stars",
-    "subject": "Hotel",
-    "focus": "Rating",
-    "general_category1": "Customer Reviews",
-    "general_category2": "Number of Stars"
-}

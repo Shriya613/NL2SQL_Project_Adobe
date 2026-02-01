@@ -1,6 +1,0 @@
-{
-    "template": "Each Makeup Artists has many different Techniques. Among them, Age Progression is common to many Makeup Artists.",
-    "specific_component": "Age Progression",
-    "components": "Techniques",
-    "entities": "Makeup Artists"
-}

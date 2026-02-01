@@ -1,9 +1,0 @@
-[
-    {
-        "question": "Give me the departments that each hospital has.",
-        "sql_query1": "SELECT Departments.departmentName  from Hospitals_Departments join Departments on Hospitals_Departments.departmentId = Departments.id join Hospitals on Hospitals_Departments.hospitalId = Hospitals.id   GROUP BY Hospitals_Departments.departmentId HAVING COUNT(DISTINCT Hospitals_Departments.hospitalId) = (SELECT COUNT(*) FROM  Hospitals)",
-        "sql_query2": "select hospitals.name , departments.departmentname from Hospitals_Departments join Departments on Hospitals_Departments.departmentId = Departments.id join Hospitals on Hospitals_Departments.hospitalId = Hospitals.id",
-        "interpretation1": "What department does every hospital have in common?",
-        "interpretation2": "For each hospital, show the departments it has."
-    }
-]

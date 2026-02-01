@@ -1,8 +1,0 @@
-{
-    "template": "Guestroom and Suite are subclasses of Overnight Stay. All Guestrooms and Suites have property \"Amenities\". There might be a Guestroom and a Suite that both have \"Amenities\" equal to \"Air Conditioning\".",
-    "general_class": "Overnight Stay",
-    "class1": "Guestroom",
-    "class2": "Suite",
-    "common_property": "Amenities",
-    "common_value": "Air Conditioning"
-}

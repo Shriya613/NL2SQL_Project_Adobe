@@ -1,9 +1,0 @@
-[
-    {
-        "question": "Show me the formats that every advertisement has.",
-        "sql_query1": "SELECT Formats.format_name  from Advertisements_Formats join Formats on Advertisements_Formats.format_id = Formats.id join Advertisements on Advertisements_Formats.advertisement_id = Advertisements.id   GROUP BY Advertisements_Formats.format_id HAVING COUNT(DISTINCT Advertisements_Formats.advertisement_id) = (SELECT COUNT(*) FROM  Advertisements)",
-        "sql_query2": "select advertisements.title , formats.format_name from Advertisements_Formats join Formats on Advertisements_Formats.format_id = Formats.id join Advertisements on Advertisements_Formats.advertisement_id = Advertisements.id",
-        "interpretation1": "What formats are common to all advertisements?",
-        "interpretation2": "For each advertisement, list the formats they have."
-    }
-]

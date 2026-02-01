@@ -1,6 +1,0 @@
-{
-    "template": "Each Bank Training has many different Topics. Among them, Customer Service Skills is common to many Bank Training.",
-    "specific_component": "Customer Service Skills",
-    "components": "Topics",
-    "entities": "Bank Training"
-}

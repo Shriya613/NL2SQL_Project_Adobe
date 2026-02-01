@@ -1,9 +1,0 @@
-[
-    {
-        "question": "Show chemists and geoscientists from MIT.",
-        "sql_query1": "SELECT Chemist.FullName\r\nFROM University JOIN Chemist ON University.id = Chemist.university_id\r\nWHERE University.name = \"MIT\"\r\nUNION\r\nSELECT Geoscientist.FullName\r\nFROM University JOIN Geoscientist ON University.id = Geoscientist.university_id\r\nWHERE University.name = \"MIT\"",
-        "sql_query2": "SELECT Chemist.FullName\r\nFROM University JOIN Chemist ON University.id = Chemist.university_id\r\nUNION\r\nSELECT Geoscientist.FullName\r\nFROM University JOIN Geoscientist ON University.id = Geoscientist.university_id\r\nWHERE University.name = \"MIT\"",
-        "interpretation1": "What chemists are from MIT and what geoscientists are also from there?",
-        "interpretation2": "Provide a list of all chemists and also provide a list of geoscientists from MIT."
-    }
-]

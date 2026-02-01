@@ -1,9 +1,0 @@
-[
-    {
-        "question": "Show all gate agents and pilots that speak English.",
-        "sql_query1": "SELECT Staff.FullName\r\nFROM Staff JOIN Languages ON Staff.LanguageID = Languages.LanguageID\r\nWHERE (Staff.Position = 'Gate Agent' OR Staff.Position = 'Pilot') AND Languages.name = \"English\"",
-        "sql_query2": "SELECT Staff.FullName\r\nFROM Staff JOIN Languages ON Staff.LanguageID = Languages.LanguageID\r\nWHERE Staff.Position = 'Gate Agent' OR Staff.Position = 'Pilot' AND Languages.name = \"English\"",
-        "interpretation1": "Show all English speaking airline employees who work as either gate agents or pilots.",
-        "interpretation2": "Show all the gate agents, also show the English-speaking pilots."
-    }
-]

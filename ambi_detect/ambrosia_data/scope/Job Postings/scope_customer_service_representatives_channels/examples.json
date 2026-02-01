@@ -1,9 +1,0 @@
-[
-    {
-        "question": "which communication channels are assigned to each customer service representative?",
-        "sql_query1": "SELECT Channels.channel_value  from Customer_Service_Representatives_Channels join Channels on Customer_Service_Representatives_Channels.channel_id = Channels.channel_id join Customer_Service_Representatives on Customer_Service_Representatives_Channels.representative_id = Customer_Service_Representatives.id   GROUP BY Customer_Service_Representatives_Channels.channel_id HAVING COUNT(DISTINCT Customer_Service_Representatives_Channels.representative_id) = (SELECT COUNT(*) FROM  Customer_Service_Representatives)",
-        "sql_query2": "select customer_service_representatives.email , channels.channel_value from Customer_Service_Representatives_Channels join Channels on Customer_Service_Representatives_Channels.channel_id = Channels.channel_id join Customer_Service_Representatives on Customer_Service_Representatives_Channels.representative_id = Customer_Service_Representatives.id",
-        "interpretation1": "provide the communication channel that is common to all customer service representatives",
-        "interpretation2": "For each customer service representative, what are the corresponding communication channels?"
-    }
-]

@@ -1,9 +1,0 @@
-[
-    {
-        "question": "What coverage do we have for each insurance plan?",
-        "sql_query1": "SELECT Coverage.Description  from Insurance_Plan_Coverage join Coverage on Insurance_Plan_Coverage.CoverageID = Coverage.CoverageID join Insurance_Plan on Insurance_Plan_Coverage.PlanID = Insurance_Plan.PlanID   GROUP BY Insurance_Plan_Coverage.CoverageID HAVING COUNT(DISTINCT Insurance_Plan_Coverage.PlanID) = (SELECT COUNT(*) FROM  Insurance_Plan)",
-        "sql_query2": "select insurance_plan.planname , coverage.description from Insurance_Plan_Coverage join Coverage on Insurance_Plan_Coverage.CoverageID = Coverage.CoverageID join Insurance_Plan on Insurance_Plan_Coverage.PlanID = Insurance_Plan.PlanID",
-        "interpretation1": "Show me the coverage that is common for all insurance plans",
-        "interpretation2": "For each insurance plan, list all of the coverage we offer"
-    }
-]

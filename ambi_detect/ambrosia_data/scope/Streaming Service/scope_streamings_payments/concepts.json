@@ -1,6 +1,0 @@
-{
-    "template": "Each Streamings has many different Payments. Among them, Credit Card is common to many Streamings.",
-    "specific_component": "Credit Card",
-    "components": "Payments",
-    "entities": "Streamings"
-}

@@ -1,7 +1,0 @@
-{
-    "template": "Question: Who prepares the meals at this restaurant? Subject of Inquiry: Restaurant\nFocus: Chef Possible answer types: 1. Executive Chef 2. Sous Chef",
-    "subject": "Restaurant",
-    "focus": "Chef",
-    "general_category1": "Executive Chef",
-    "general_category2": "Sous Chef"
-}

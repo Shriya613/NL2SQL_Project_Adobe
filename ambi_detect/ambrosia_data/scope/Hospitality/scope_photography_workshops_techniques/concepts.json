@@ -1,6 +1,0 @@
-{
-    "template": "Each Photography Workshops has many different Techniques. Among them, Portrait Photography is common to many Photography Workshops.",
-    "specific_component": "Portrait Photography",
-    "components": "Techniques",
-    "entities": "Photography Workshops"
-}

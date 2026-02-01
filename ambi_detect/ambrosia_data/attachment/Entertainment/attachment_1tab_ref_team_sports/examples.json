@@ -1,9 +1,0 @@
-[
-    {
-        "question": "List all the football players and rugby players who play at the intermediate level.",
-        "sql_query1": "SELECT Players.Name \r\nFROM Sports JOIN Players ON Sports.id = Players.SportId JOIN PlayerStats ON Players.id = PlayerStats.PlayerId JOIN FitnessLevels ON PlayerStats.FitnessLevelId = FitnessLevels.id\r\nWHERE (Sports.SportName = \"Football\" OR Sports.SportName = \"Rugby\") AND FitnessLevels.LevelName = \"Intermediate\"",
-        "sql_query2": "SELECT Players.Name \r\nFROM Sports JOIN Players ON Sports.id = Players.SportId JOIN PlayerStats ON Players.id = PlayerStats.PlayerId JOIN FitnessLevels ON PlayerStats.FitnessLevelId = FitnessLevels.id\r\nWHERE Sports.SportName = \"Football\" OR Sports.SportName = \"Rugby\" AND FitnessLevels.LevelName = \"Intermediate\"",
-        "interpretation1": "Give me all the players, for both rugby and football, who play at an intermediate level.",
-        "interpretation2": "Show all the football players as well as the intermediate-level rugby players."
-    }
-]

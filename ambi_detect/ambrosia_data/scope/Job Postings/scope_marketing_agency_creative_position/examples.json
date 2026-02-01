@@ -1,9 +1,0 @@
-[
-    {
-        "question": "Give me the creative position for each marketing agency.",
-        "sql_query1": "SELECT Creative_Position.position  from Marketing_Agency_Creative_Positions join Creative_Position on Marketing_Agency_Creative_Positions.position_id = Creative_Position.id join Marketing_Agency on Marketing_Agency_Creative_Positions.agency_id = Marketing_Agency.id   GROUP BY Marketing_Agency_Creative_Positions.position_id HAVING COUNT(DISTINCT Marketing_Agency_Creative_Positions.agency_id) = (SELECT COUNT(*) FROM  Marketing_Agency)",
-        "sql_query2": "select marketing_agency.name , creative_position.position from Marketing_Agency_Creative_Positions join Creative_Position on Marketing_Agency_Creative_Positions.position_id = Creative_Position.id join Marketing_Agency on Marketing_Agency_Creative_Positions.agency_id = Marketing_Agency.id",
-        "interpretation1": "What creative position is common to all marketing agencies?",
-        "interpretation2": "For each marketing agency, give me the creative position it offers."
-    }
-]

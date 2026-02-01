@@ -1,9 +1,0 @@
-[
-    {
-        "question": "Show press conferences and media scrums from Jack Layton.",
-        "sql_query1": "SELECT Sources.name \r\nFROM Sources\r\nWHERE (Sources.event = \"Press Conference\" OR Sources.event = \"Media Scrum\") AND Sources.person = \"Jack Layton\"",
-        "sql_query2": "SELECT Sources.name \r\nFROM Sources\r\nWHERE Sources.event = \"Press Conference\" OR Sources.event = \"Media Scrum\" AND Sources.person = \"Jack Layton\"",
-        "interpretation1": "Which press conferences are from Jack Layton and which media scrums are from the same person?",
-        "interpretation2": "Provide a list of all press conferences and also provide a list of media scrums from Jack Layton."
-    }
-]

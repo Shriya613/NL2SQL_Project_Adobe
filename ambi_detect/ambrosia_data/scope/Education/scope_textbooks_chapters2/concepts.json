@@ -1,6 +1,0 @@
-{
-    "template": "Each Textbooks has many different Chapters. Among them, History is common to many Textbooks.",
-    "specific_component": "History",
-    "components": "Chapters",
-    "entities": "Textbooks"
-}

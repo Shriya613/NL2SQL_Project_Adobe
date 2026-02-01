@@ -1,9 +1,0 @@
-[
-    {
-        "question": "Show me the programs every radio station broadcasts.",
-        "sql_query1": "SELECT Programs.program_type_name  from Radio_Stations_Programs join Programs on Radio_Stations_Programs.program_type_id = Programs.program_type_id join Radio_Stations on Radio_Stations_Programs.radio_station_id = Radio_Stations.station_id   GROUP BY Radio_Stations_Programs.program_type_id HAVING COUNT(DISTINCT Radio_Stations_Programs.radio_station_id) = (SELECT COUNT(*) FROM  Radio_Stations)",
-        "sql_query2": "select radio_stations.station_name , programs.program_type_name from Radio_Stations_Programs join Programs on Radio_Stations_Programs.program_type_id = Programs.program_type_id join Radio_Stations on Radio_Stations_Programs.radio_station_id = Radio_Stations.station_id",
-        "interpretation1": "What programs are the same for all radio stations?",
-        "interpretation2": "For each radio station, list the programs they broadcast."
-    }
-]

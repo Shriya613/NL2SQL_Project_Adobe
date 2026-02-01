@@ -1,8 +1,0 @@
-{
-    "template": "Social Worker and Counselor are subclasses of Helping Professions. All Social workers and Counselors have property \"Area\". There might be a Social Worker and a Counselor that both have \"Area\" equal to \"East End\".",
-    "general_class": "Helping Professions",
-    "class1": "Social Worker",
-    "class2": "Counselor",
-    "common_property": "Area",
-    "common_value": "East End"
-}

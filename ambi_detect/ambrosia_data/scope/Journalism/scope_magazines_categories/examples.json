@@ -1,9 +1,0 @@
-[
-    {
-        "question": "Give me the categories that every magazine has.",
-        "sql_query1": "SELECT Categories.categoryName  from Magazines_Categories join Categories on Magazines_Categories.categoryId = Categories.id join Magazines on Magazines_Categories.magazineId = Magazines.magazineId   GROUP BY Magazines_Categories.categoryId HAVING COUNT(DISTINCT Magazines_Categories.magazineId) = (SELECT COUNT(*) FROM  Magazines)",
-        "sql_query2": "select magazines.magazinetitle , categories.categoryname from Magazines_Categories join Categories on Magazines_Categories.categoryId = Categories.id join Magazines on Magazines_Categories.magazineId = Magazines.magazineId",
-        "interpretation1": "Which categories do all magazines have in common?",
-        "interpretation2": "For each magazine, show the categories that they have."
-    }
-]

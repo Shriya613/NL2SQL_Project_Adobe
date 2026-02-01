@@ -1,6 +1,0 @@
-{
-    "template": "Each Summer Camp has many different Themes. Among them, Sports is common to many Summer Camp.",
-    "specific_component": "Sports",
-    "components": "Themes",
-    "entities": "Summer Camp"
-}

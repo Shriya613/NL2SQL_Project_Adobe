@@ -1,6 +1,0 @@
-{
-    "template": "Each Nutritionists has many different Diets. Among them, Vegan is common to many Nutritionists.",
-    "specific_component": "Vegan",
-    "components": "Diets",
-    "entities": "Nutritionists"
-}

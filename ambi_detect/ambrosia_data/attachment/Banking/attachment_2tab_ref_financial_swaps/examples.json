@@ -1,9 +1,0 @@
-[
-    {
-        "question": "When do the currency swaps and interest rate swaps offered by Royal Bank expire?",
-        "sql_query1": "SELECT Currency_Swaps.maturity_date\r\nFROM Banks JOIN Currency_Swaps ON Banks.name = Currency_Swaps.bank_name\r\nWHERE Banks.name = \"Royal Bank\"\r\nUNION\r\nSELECT Interest_Rate_Swaps.end_date\r\nFROM Banks JOIN Interest_Rate_Swaps ON Banks.name = Interest_Rate_Swaps.bank_name\r\nWHERE Banks.name = \"Royal Bank\"",
-        "sql_query2": "SELECT Currency_Swaps.maturity_date\r\nFROM Banks JOIN Currency_Swaps ON Banks.name = Currency_Swaps.bank_name\r\nUNION\r\nSELECT Interest_Rate_Swaps.end_date\r\nFROM Banks JOIN Interest_Rate_Swaps ON Banks.name = Interest_Rate_Swaps.bank_name\r\nWHERE Banks.name = \"Royal Bank\"",
-        "interpretation1": "When do currency and interest rate swaps offered by Royal Bank expire?",
-        "interpretation2": "When do all currency swap expire and when do interest rate swaps offered by Royal Bank expire?"
-    }
-]

@@ -1,9 +1,0 @@
-[
-    {
-        "question": "Give me Pixar films and DreamWorks films that won Golden Globe.",
-        "sql_query1": "SELECT Film.title \r\nFROM Film\r\nWHERE (Film.animationStudio = \"Pixar\" OR Film.animationStudio = \"DreamWorks\") AND Film.awards = \"Golden Globe\"",
-        "sql_query2": "SELECT Film.title \r\nFROM Film\r\nWHERE Film.animationStudio = \"Pixar\" OR Film.animationStudio = \"DreamWorks\" AND Film.awards = \"Golden Globe\"",
-        "interpretation1": "What Pixar films won a Golden Globe and what DreamWorks films won the same award?",
-        "interpretation2": "Provide a list of all Pixar films and also provide a list of all DreamWorks films that won a Golden Globe."
-    }
-]

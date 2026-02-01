@@ -1,7 +1,0 @@
-{
-    "template": "Question: What is the capacity of this airport? Subject of Inquiry: Airport\nFocus: Capacity Possible answer types: 1. Passenger Throughput 2. Number of Aircrafts",
-    "subject": "Airport",
-    "focus": "Capacity",
-    "general_category1": "Passenger Throughput",
-    "general_category2": "Number of Aircrafts"
-}

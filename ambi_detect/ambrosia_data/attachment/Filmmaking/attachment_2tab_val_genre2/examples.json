@@ -1,9 +1,0 @@
-[
-    {
-        "question": "Display sci-fi movies and fantasy movies filmed in New Zealand.",
-        "sql_query1": "SELECT SciFiMovies.title\r\nFROM SciFiMovies\r\nWHERE SciFiMovies.filmingLocation = \"New Zealand\"\r\nUNION\r\nSELECT FantasyMovies.title\r\nFROM FantasyMovies\r\nWHERE FantasyMovies.filmingLocation = \"New Zealand\"",
-        "sql_query2": "SELECT SciFiMovies.title\r\nFROM SciFiMovies\r\nUNION\r\nSELECT FantasyMovies.title\r\nFROM FantasyMovies\r\nWHERE FantasyMovies.filmingLocation = \"New Zealand\"",
-        "interpretation1": "Can you show sci-fi movies and fantasy movies that were filmed in New Zealand?",
-        "interpretation2": "List all sci-fi movies and also show fantasy movies filmed in New Zealand."
-    }
-]

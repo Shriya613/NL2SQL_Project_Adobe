@@ -1,6 +1,0 @@
-{
-    "template": "Each Craft Fairs has many different Vendors. Among them, Jewelry Makers is common to many Craft Fairs.",
-    "specific_component": "Jewelry Makers",
-    "components": "Vendors",
-    "entities": "Craft Fairs"
-}

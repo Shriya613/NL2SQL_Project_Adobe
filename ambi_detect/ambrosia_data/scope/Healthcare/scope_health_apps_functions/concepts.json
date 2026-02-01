@@ -1,6 +1,0 @@
-{
-    "template": "Each Health Apps has many different Functions. Among them, Activity Tracking is common to many Health Apps.",
-    "specific_component": "Activity Tracking",
-    "components": "Functions",
-    "entities": "Health Apps"
-}

@@ -1,6 +1,0 @@
-{
-    "template": "Each Lab Technicians has many different Instruments. Among them, Microscope is common to many Lab Technicians.",
-    "specific_component": "Microscope",
-    "components": "Instruments",
-    "entities": "Lab Technicians"
-}

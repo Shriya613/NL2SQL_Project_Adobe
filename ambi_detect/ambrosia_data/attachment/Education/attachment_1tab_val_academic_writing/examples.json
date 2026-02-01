@@ -1,9 +1,0 @@
-[
-    {
-        "question": "Give me all dissertations and thesis proposals supervised by Dr. Jane Smith.",
-        "sql_query1": "SELECT Students.FullName\r\nFROM Students\r\nWHERE (Students.Academic_Writing = \"Dissertation\" OR Students.Academic_Writing = \"Thesis Proposal\") AND Students.Academic_Supervisor = \"Dr. Jane Smith\"",
-        "sql_query2": "SELECT Students.FullName\r\nFROM Students\r\nWHERE Students.Academic_Writing = \"Dissertation\" OR Students.Academic_Writing = \"Thesis Proposal\" AND Students.Academic_Supervisor = \"Dr. Jane Smith\"",
-        "interpretation1": "Show all the dissertations supervised by Dr. Jane Smith, also show the thesis proposals she has supervised.",
-        "interpretation2": "List all the dissertations, also show the thesis proposals supervised by Dr. Jane Smith."
-    }
-]

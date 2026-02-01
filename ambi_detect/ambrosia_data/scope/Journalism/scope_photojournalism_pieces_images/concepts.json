@@ -1,6 +1,0 @@
-{
-    "template": "Each Photojournalism Pieces has many different Images. Among them, Candid Shots is common to many Photojournalism Pieces.",
-    "specific_component": "Candid Shots",
-    "components": "Images",
-    "entities": "Photojournalism Pieces"
-}

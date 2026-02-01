@@ -1,9 +1,0 @@
-[
-    {
-        "question": "Display screenwriters and playwrights who graduated from New York University.",
-        "sql_query1": "SELECT Screenwriters.name\r\nFROM Screenwriters\r\nWHERE Screenwriters.Education = \"New York University\"\r\nUNION\r\nSELECT Playwrights.name\r\nFROM Playwrights\r\nWHERE Playwrights.Education = \"New York University\"",
-        "sql_query2": "SELECT Screenwriters.name\r\nFROM Screenwriters\r\nUNION\r\nSELECT Playwrights.name\r\nFROM Playwrights\r\nWHERE Playwrights.Education = \"New York University\"",
-        "interpretation1": "Which screenwriters and playwrights graduated from New York University?",
-        "interpretation2": "List all screenwriters and also display playwrights graduated from New York University."
-    }
-]

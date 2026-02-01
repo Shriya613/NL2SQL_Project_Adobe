@@ -1,9 +1,0 @@
-[
-    {
-        "question": "Display all directors and editors of Episode 2.",
-        "sql_query1": "SELECT Directors.name\r\nFROM Episodes JOIN Directors ON Episodes.DirectorID = Directors.ID\r\nWHERE Episodes.DirectorID = 2\r\nUNION\r\nSELECT Editors.name\r\nFROM Episodes JOIN Editors ON Episodes.EditorID = Editors.ID\r\nWHERE Episodes.Title = 'Episode 2'",
-        "sql_query2": "SELECT Directors.name\r\nFROM Episodes JOIN Directors ON Episodes.DirectorID = Directors.ID\r\nUNION\r\nSELECT Editors.name\r\nFROM Episodes JOIN Editors ON Episodes.EditorID = Editors.ID\r\nWHERE Episodes.Title = 'Episode 2'",
-        "interpretation1": "Which directors and editors are associated with Episode 2?",
-        "interpretation2": "Can you list all directors and also all editors of Episode 2?"
-    }
-]

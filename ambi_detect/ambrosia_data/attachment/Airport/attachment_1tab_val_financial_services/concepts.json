@@ -1,8 +1,0 @@
-{
-    "template": "Currency Exchange Service and ATM Machine are subclasses of Financial Services. All Currency Exchange Services and ATM Machines have the property \"Location within Terminal\". There might be a Currency Exchange Service and an ATM Machine that both have \"Location within Terminal\" equal to \"Near Gate 10\".",
-    "general_class": "Financial Services",
-    "class1": "Currency Exchange Service",
-    "class2": "ATM Machine",
-    "common_property": "Location within Terminal",
-    "common_value": "Near Gate 10"
-}

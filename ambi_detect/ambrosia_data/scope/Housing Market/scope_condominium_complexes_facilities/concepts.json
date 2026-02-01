@@ -1,6 +1,0 @@
-{
-    "template": "Each Condominium Complexes has many different Facilities. Among them, Fitness Center is common to many Condominium Complexes.",
-    "specific_component": "Fitness Center",
-    "components": "Facilities",
-    "entities": "Condominium Complexes"
-}

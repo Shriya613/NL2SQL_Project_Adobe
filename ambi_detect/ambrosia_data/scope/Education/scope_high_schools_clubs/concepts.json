@@ -1,6 +1,0 @@
-{
-    "template": "Each High Schools has many different Clubs. Among them, Drama Club is common to many High Schools.",
-    "specific_component": "Drama Club",
-    "components": "Clubs",
-    "entities": "High Schools"
-}

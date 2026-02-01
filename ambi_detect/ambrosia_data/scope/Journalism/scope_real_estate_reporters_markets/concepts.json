@@ -1,6 +1,0 @@
-{
-    "template": "Each Real Estate Reporters has many different Markets. Among them, Luxury Homes is common to many Real Estate Reporters.",
-    "specific_component": "Luxury Homes",
-    "components": "Markets",
-    "entities": "Real Estate Reporters"
-}

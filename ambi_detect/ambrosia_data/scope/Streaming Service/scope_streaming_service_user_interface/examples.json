@@ -1,9 +1,0 @@
-[
-    {
-        "question": "What user interface types are there for every streaming service?",
-        "sql_query1": "SELECT User_Interface.interface_type  from Streaming_Service_User_Interface join User_Interface on Streaming_Service_User_Interface.user_interface_id = User_Interface.id join Streaming_Service on Streaming_Service_User_Interface.streaming_service_id = Streaming_Service.id   GROUP BY Streaming_Service_User_Interface.user_interface_id HAVING COUNT(DISTINCT Streaming_Service_User_Interface.streaming_service_id) = (SELECT COUNT(*) FROM  Streaming_Service)",
-        "sql_query2": "select streaming_service.name , user_interface.interface_type from Streaming_Service_User_Interface join User_Interface on Streaming_Service_User_Interface.user_interface_id = User_Interface.id join Streaming_Service on Streaming_Service_User_Interface.streaming_service_id = Streaming_Service.id",
-        "interpretation1": "What interface types are the same for all streaming services?",
-        "interpretation2": "For all streaming services list the available user interface types."
-    }
-]

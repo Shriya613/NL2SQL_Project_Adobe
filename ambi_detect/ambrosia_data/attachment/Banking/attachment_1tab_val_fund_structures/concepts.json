@@ -1,8 +1,0 @@
-{
-    "template": "Hedge Fund and Mutual Fund are subclasses of Fund Structures. All Hedge funds and Mutual funds have property \"Market Share\". There might be a Hedge Fund and a Mutual Fund that both have \"Market Share\" equal to \"2%\".",
-    "general_class": "Fund Structures",
-    "class1": "Hedge Fund",
-    "class2": "Mutual Fund",
-    "common_property": "Market Share",
-    "common_value": "2%"
-}

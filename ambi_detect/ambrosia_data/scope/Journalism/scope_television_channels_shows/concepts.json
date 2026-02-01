@@ -1,6 +1,0 @@
-{
-    "template": "Each Television Channels has many different Shows. Among them, Sitcom is common to many Television Channels.",
-    "specific_component": "Sitcom",
-    "components": "Shows",
-    "entities": "Television Channels"
-}

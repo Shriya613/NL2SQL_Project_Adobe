@@ -1,9 +1,0 @@
-[
-    {
-        "question": "Give me the music genres that each music festival includes.",
-        "sql_query1": "SELECT Genres.genre_name  from Music_Festivals_Genres join Genres on Music_Festivals_Genres.genre_id = Genres.genre_id join Music_Festivals on Music_Festivals_Genres.music_festival_id = Music_Festivals.festival_id   GROUP BY Music_Festivals_Genres.genre_id HAVING COUNT(DISTINCT Music_Festivals_Genres.music_festival_id) = (SELECT COUNT(*) FROM  Music_Festivals)",
-        "sql_query2": "select music_festivals.festival_name , genres.genre_name from Music_Festivals_Genres join Genres on Music_Festivals_Genres.genre_id = Genres.genre_id join Music_Festivals on Music_Festivals_Genres.music_festival_id = Music_Festivals.festival_id",
-        "interpretation1": "Which music genre do all music festivals include?",
-        "interpretation2": "For each music festival, show the music genres that they include."
-    }
-]

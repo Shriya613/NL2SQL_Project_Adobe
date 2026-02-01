@@ -1,9 +1,0 @@
-[
-    {
-        "question": "Show all the production companies and distribution companies with 500 employees.",
-        "sql_query1": "SELECT Companies.Name \r\nFROM Companies\r\nWHERE (Companies.Film_Industry_Type = \"Production Company\" OR Companies.Film_Industry_Type = \"Distribution Company\") AND Companies.Number_Of_Employees = 500",
-        "sql_query2": "SELECT Companies.Name \r\nFROM Companies\r\nWHERE Companies.Film_Industry_Type = \"Production Company\" OR Companies.Film_Industry_Type = \"Distribution Company\" AND Companies.Number_Of_Employees = 500",
-        "interpretation1": "Show both production and distribution companies with 500 employees.",
-        "interpretation2": "Show all the production companies and add just the distribution companies with 500 employees."
-    }
-]

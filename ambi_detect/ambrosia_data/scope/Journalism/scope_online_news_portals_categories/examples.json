@@ -1,9 +1,0 @@
-[
-    {
-        "question": "What categories do we have for every news portal?",
-        "sql_query1": "SELECT Categories.category_name  from Online_News_Portals_Categories join Categories on Online_News_Portals_Categories.category_id = Categories.id join Online_News_Portals on Online_News_Portals_Categories.online_news_portal_id = Online_News_Portals.id   GROUP BY Online_News_Portals_Categories.category_id HAVING COUNT(DISTINCT Online_News_Portals_Categories.online_news_portal_id) = (SELECT COUNT(*) FROM  Online_News_Portals)",
-        "sql_query2": "select online_news_portals.name , categories.category_name from Online_News_Portals_Categories join Categories on Online_News_Portals_Categories.category_id = Categories.id join Online_News_Portals on Online_News_Portals_Categories.online_news_portal_id = Online_News_Portals.id",
-        "interpretation1": "Show me the categories that are common to all news portals",
-        "interpretation2": "For every news portal, show me the categories they show"
-    }
-]

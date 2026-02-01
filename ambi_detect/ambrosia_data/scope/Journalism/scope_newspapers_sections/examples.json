@@ -1,9 +1,0 @@
-[
-    {
-        "question": "What sections are there in each newspaper?",
-        "sql_query1": "SELECT Sections.section_name  from Newspapers_Sections join Sections on Newspapers_Sections.section_id = Sections.id join Newspapers on Newspapers_Sections.newspaper_id = Newspapers.id   GROUP BY Newspapers_Sections.section_id HAVING COUNT(DISTINCT Newspapers_Sections.newspaper_id) = (SELECT COUNT(*) FROM  Newspapers)",
-        "sql_query2": "select newspapers.newspaper_name , sections.section_name from Newspapers_Sections join Sections on Newspapers_Sections.section_id = Sections.id join Newspapers on Newspapers_Sections.newspaper_id = Newspapers.id",
-        "interpretation1": "Provide me with the section that is common for all newspapers.",
-        "interpretation2": "For each newspaper, give me the corresponding sections."
-    }
-]

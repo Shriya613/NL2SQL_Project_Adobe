@@ -1,9 +1,0 @@
-[
-    {
-        "question": "Display country singers and bluegrass singers who play the piano.",
-        "sql_query1": "SELECT CountrySingers.singername\r\nFROM Instruments JOIN CountrySingers ON Instruments.id = CountrySingers.foreignKey\r\nWHERE Instruments.instrumentName = \"Piano\"\r\nUNION\r\nSELECT BluegrassSingers.singername\r\nFROM Instruments JOIN BluegrassSingers ON Instruments.id = BluegrassSingers.foreignKey\r\nWHERE Instruments.instrumentName = \"Piano\"",
-        "sql_query2": "SELECT CountrySingers.singername\r\nFROM Instruments JOIN CountrySingers ON Instruments.id = CountrySingers.foreignKey\r\nUNION\r\nSELECT BluegrassSingers.singername\r\nFROM Instruments JOIN BluegrassSingers ON Instruments.id = BluegrassSingers.foreignKey\r\nWHERE Instruments.instrumentName = \"Piano\"",
-        "interpretation1": "What country singers play the piano and what bluegrass singers also play?",
-        "interpretation2": "Provide a list of all country singers and also provide a list of bluegrass singers who play the piano."
-    }
-]

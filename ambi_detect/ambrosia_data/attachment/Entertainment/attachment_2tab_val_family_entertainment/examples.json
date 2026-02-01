@@ -1,9 +1,0 @@
-[
-    {
-        "question": "Display amusement parks and water parks in Orlando, Florida.",
-        "sql_query1": "SELECT Amusement_Parks.name\r\nFROM Amusement_Parks\r\nWHERE Amusement_Parks.Location = \"Orlando, Florida\"\r\nUNION\r\nSELECT Water_Parks.name\r\nFROM Water_Parks\r\nWHERE Water_Parks.Location = \"Orlando, Florida\"",
-        "sql_query2": "SELECT Amusement_Parks.name\r\nFROM Amusement_Parks\r\nUNION\r\nSELECT Water_Parks.name\r\nFROM Water_Parks\r\nWHERE Water_Parks.Location = \"Orlando, Florida\"",
-        "interpretation1": "Can you show both amusement parks in Orlando, Florida and water parks located there?",
-        "interpretation2": "List all amusement parks and also display water parks located in Orlando Florida."
-    }
-]

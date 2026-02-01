@@ -1,7 +1,0 @@
-{
-    "template": "Question: Where was this concert held? Subject of Inquiry: Concert\nFocus: Location Possible answer types: 1. City 2. Concert Hall",
-    "subject": "Concert",
-    "focus": "Location",
-    "general_category1": "City",
-    "general_category2": "Concert Hall"
-}
